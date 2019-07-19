@@ -1,0 +1,135 @@
+1
+00:00:03,330 --> 00:00:09,299
+描述图像中灰度级的一种非常有用和简洁的方法是使用a
+A very useful and concise way of describing the grey levels within an image is using a
+
+2
+00:00:09,299 --> 00:00:13,830
+工具称为直方图。在这里，我有一个人为的低分辨率
+tool called a histogram. Here I have a contrived and low resolution
+
+3
+00:00:13,830 --> 00:00:21,140
+图像，其中像素灰度值在0（黑色）和10（白色）之间变化。
+image, where the pixel grey values vary between 0, which is black, and 10, which is white.
+
+4
+00:00:21,140 --> 00:00:25,350
+我们可以将直方图过程视为排序过程。我要去拿
+We can consider the histogramming process as a sorting process. I am going to take the
+
+5
+00:00:25,350 --> 00:00:29,849
+第一个像素，其灰度值为6，我将把它放入垃圾箱
+first pixel, which has got a grey scale value of 6, and I am going to drop it into the bin
+
+6
+00:00:29,849 --> 00:00:34,370
+对于值为6的像素。我将采用下一个有值的像素
+for pixels with a value of 6. And I am going to take the next pixel which has got a value
+
+7
+00:00:34,370 --> 00:00:38,650
+10，我打算将它放入bin中，以获得值为10的像素，依此类推。
+of 10, and I am going to drop it into the bin for pixels of value of 10, and so on.
+
+8
+00:00:38,650 --> 00:00:42,370
+我们一直重复这个过程，直到我们为其中的所有像素着色
+And we repeat this process on and on until we have coloured all of the pixels in the
+
+9
+00:00:42,370 --> 00:00:46,140
+图片。我们有这个直方图。一目了然
+image. And we have this histogram. At a glance this
+
+10
+00:00:46,140 --> 00:00:50,330
+直方图告诉我们关于图像的一些非常有趣的事情。如果所有像素都是
+histogram tells us some very interesting things about the image. If all of the pixels are
+
+11
+00:00:50,330 --> 00:00:56,049
+在直方图的左侧，这告诉我们它是一个非常暗的图像。反过来，
+at the left-hand side of the histogram, this tells us that it is a very dark image. Conversely,
+
+12
+00:00:56,049 --> 00:00:59,089
+如果所有像素都在直方图的右侧，这告诉我们
+if all of the pixels are at the right-hand side of the histogram, this tells us that
+
+13
+00:00:59,089 --> 00:01:04,559
+这是一个非常明亮的形象。您很可能遇到直方图。
+it is a very bright image. You have very likely encountered histograms.
+
+14
+00:01:04,559 --> 00:01:10,420
+它们通常显示在相机的取景器中。我们在这里看到的是
+They are commonly displayed in the viewfinder of a camera. What we are seeing here is the
+
+15
+00:01:10,420 --> 00:01:16,100
+iPhone相机应用程序的取景器，我们可以在显示屏上看到直方图。
+viewfinder of an iPhone camera app and we can see the histogram here on the display.
+
+16
+00:01:16,100 --> 00:01:19,930
+直方图的左侧对应于暗像素，右侧对应于右侧
+The left-hand side of the histogram corresponds to the dark pixels, and the right-hand side
+
+17
+00:01:19,930 --> 00:01:25,860
+直方图的对应于亮像素。如果我将相机从此视图移动到下方
+of the histogram corresponds to bright pixels. If I move the camera from this view to down
+
+18
+00:01:25,860 --> 00:01:29,460
+在我的办公桌下面，一切都很暗，我们可以看到有越来越多的人
+underneath my desk where it is all very dark, we can see that there are an increasing number
+
+19
+00:01:29,460 --> 00:01:34,310
+场景中的暗像素。当我从桌子下面拿起相机并指出时
+of dark pixels in the scene. As I bring the camera up from underneath the desk and point
+
+20
+00:01:34,310 --> 00:01:38,110
+它在窗外非常明亮，我们看到像素的分布更加移动
+it out the window where it is very bright, we see the distribution of pixels moving more
+
+21
+00:01:38,110 --> 00:01:42,590
+朝着直方图的明亮端。如果我重复这个过程，但这次我有
+towards the bright end of the histogram. If I repeat the process, but this time I have
+
+22
+00:01:42,590 --> 00:01:48,640
+相机设置为自动曝光控制，现在发生的是内部的软件
+the camera set to automatic exposure control, what happens now is that the software within
+
+23
+00:01:48,640 --> 00:01:53,390
+相机试图保持直方图平衡。它试图保持均匀的混合
+the camera is trying to keep the histogram balanced. It is trying to keep an even mixture
+
+24
+00:01:53,390 --> 00:01:58,010
+暗像素和亮像素，使平均值位于中间的某个位置。和
+of dark pixels and bright pixels, so that the average is somewhere in the middle. And
+
+25
+00:01:58,010 --> 00:02:01,860
+这一次的行为是完全不同的，当我们在桌子底下看时，我们可以看到
+the behaviour this time is quite different, when we look under the desk, we can see the
+
+26
+00:02:01,860 --> 00:02:03,120
+电线和地毯。
+wires and the carpet.
+
+27
+00:02:06,040 --> 00:02:09,820
+当我们向窗外望去时，我们现在可以清楚地看到外面的世界。
+When we look out the window, we can now quite clearly see the world outside.
+

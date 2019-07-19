@@ -1,0 +1,405 @@
+1
+00:00:03,860 --> 00:00:09,219
+我们为机器人关节设计的控制系统具有很长的血统。
+The control systems that we design for the joints of our robot have got a long ancestry.
+
+2
+00:00:09,219 --> 00:00:14,219
+人类长期以来一直在设计控制系统。这是我们正在进行中的一部分
+Human beings have been devising control systems for a long time. It’s been part of our ongoing
+
+3
+00:00:14,219 --> 00:00:17,100
+利用自然力量的过程。
+process to harness the power of nature.
+
+4
+00:00:17,100 --> 00:00:22,410
+这是大约2000年前HeroofAlexandria发明的装置示意图
+Here’s the schematic of a device invented by Hero of Alexandria around 2000 years ago
+
+5
+00:00:22,410 --> 00:00:27,890
+其目的是在最右边的船只中保持恒定的水位。一个常数
+and its purpose was to maintain a constant water level in the right most vessel. A constant
+
+6
+00:00:27,890 --> 00:00:32,780
+水位导致恒定压力，这对于准确的时间保持很重要
+water level result in a constant pressure and that was important for accurate time keeping
+
+7
+00:00:32,780 --> 00:00:34,860
+用水驱动的时钟。
+with a water powered clock.
+
+8
+00:00:34,860 --> 00:00:39,900
+相关但最近的一个例子是a的系统中的水位控制
+A related but more recent instance of this is the control of water level in the system of a
+
+9
+00:00:39,900 --> 00:00:44,890
+抽水马桶。一个非常简单的机制，如果水位低于理想水平，
+flush toilet. A very simple mechanism, if the water level is less than the desired level,
+
+10
+00:00:44,890 --> 00:00:48,880
+如果水位大于或等于所需水量，则水流入水箱
+water flows into the tank and if the water level is greater than or equal to the desired
+
+11
+00:00:48,880 --> 00:00:51,600
+然后它停止流入油箱。
+level then it stops flowing into the tank.
+
+12
+00:00:51,600 --> 00:00:56,239
+这是一项在利用风力发电方面非常重要的创新。如果主刀片
+Here’s an innovation that was important in harnessing wind power. If the main blades
+
+13
+00:00:56,239 --> 00:01:00,710
+没有直接指向风，然后一些风将通过小风扇
+are not pointing directly into the wind then some wind will pass through the small fan
+
+14
+00:01:00,710 --> 00:01:05,199
+尾巴。这将导致风车的整个顶部旋转，因此它指向
+tail. And that will cause the whole top of the windmill to rotate so it points
+
+15
+00:01:05,199 --> 00:01:07,750
+主叶片直接进风。
+the main blades directly into the wind.
+
+16
+00:01:07,750 --> 00:01:12,710
+一个非常重要的发明，也许是在工业革命的基础上，是离心的
+A really important invention, perhaps under pinned the industrial revolution, is the centrifugal
+
+17
+00:01:12,710 --> 00:01:17,710
+州长发明或至少由詹姆斯瓦特完善。如果蒸汽机正在运转
+governor invented or at least perfected by James Watt. If the steam engine is running
+
+18
+00:01:17,710 --> 00:01:22,460
+离心调速器过快会减少进入发动机的蒸汽量。
+too fast then the centrifugal governor reduces the amount of steam going into the engine.
+
+19
+00:01:22,460 --> 00:01:26,850
+同样，如果发动机运转得太慢，它会让更多的蒸汽进入发动机
+And similarly if the engine is going too slowly it allows more steam into the engine and it
+
+20
+00:01:26,850 --> 00:01:32,510
+即使发动机上的负载可能变化，也允许发动机以恒定速度运转。
+allows the engine to run at constant speed even though the load on the engine may be varying.
+
+21
+00:01:32,510 --> 00:01:38,229
+花了很长时间才提出一般的控制理论和很多非常聪明的理论
+It took a long time to come up with a general theory of control and a lot of very smart
+
+22
+00:01:38,229 --> 00:01:44,000
+人们在很长一段时间内为此做出了贡献。哈拉尔德布莱克，在这里显示
+people contributed to this over a long period of time. Harald Black, shown here in the
+
+23
+00:01:44,000 --> 00:01:49,920
+中间，真正形式化负反馈理论，即你减去输出
+middle, really formalized the theory of negative feedback and that is you subtract the output
+
+24
+00:01:49,920 --> 00:01:55,520
+从所需输入到系统的系统。这项技术获得了Black的专利
+of the system from the desired input to the system. This technique was patented by Black
+
+25
+00:01:55,520 --> 00:02:01,130
+改善长途电话网络中使用的放大器的性能。
+to improve the performance of amplifiers used in long distance telephone networks.
+
+26
+00:02:01,130 --> 00:02:07,650
+随着小额数字产品的推出，控制方面的一项重大创新也随之而来
+A really big innovation in control came with the introduction of affordable small digital
+
+27
+00:02:07,650 --> 00:02:11,790
+计算机，也许是第一个也许是最着名的例子之一
+computers and perhaps one of the first and perhaps best known examples of this was the
+
+28
+00:02:11,790 --> 00:02:16,670
+小型数字计算机，用于将阿波罗宇宙飞船导航到月球并引导
+small digital computer that was built to navigate Apollo spacecraft to the moon and to guide
+
+29
+00:02:16,670 --> 00:02:21,000
+月球模块从轨道上到月球表面。
+the lunar module from orbit onto the moon’s surface.
+
+30
+00:02:21,000 --> 00:02:26,709
+这里再次是显示典型机器人关节控制系统的组件的图表
+Here again is the diagram that shows the components of a typical robot joint control system and
+
+31
+00:02:26,709 --> 00:02:32,640
+我们在这里看到负反馈回路，其中我们有所需的位置和反馈
+we see here the negative feedback loop where we have the desired position and also feedback
+
+32
+00:02:32,640 --> 00:02:34,500
+实际位置
+of the actual position.
+
+33
+00:02:34,500 --> 00:02:38,500
+我们还没有谈到的系统的一部分是位置传感器。最普遍的
+One part of the system that we haven’t yet talked about is the position sensor. The most common
+
+34
+00:02:38,500 --> 00:02:43,849
+用于感测电模型的角度的技术曾被称为增量编码器。
+technique for sensing the angle of an electric model is once called an incremental encoder.
+
+35
+00:02:43,849 --> 00:02:48,510
+在这里，我们可以看到增量编码器的一些示例，通常还有增量编码器
+Here we can see some examples of incremental encoders and typically the incremental encoder
+
+36
+00:02:48,510 --> 00:02:51,959
+安装在电动机总成的一端。
+is fitted to one end of the motor assembly.
+
+37
+00:02:51,959 --> 00:02:55,849
+所以现在你买了一个集成电机组件，它是一个电动机。它的
+So these days you buy an integrated motor assembly it’s an electric motor. It’s
+
+38
+00:02:55,849 --> 00:03:02,369
+有一个齿轮箱，它有一个编码器，提供信号告诉你电机轴的角度。
+got a gear box and it’s got an encoder which provides signals to tell you the angle of the motor shaft.
+
+39
+00:03:02,369 --> 00:03:07,080
+增量编码器的原理非常简单。我们有一个开槽磁盘
+The principle of an incremental encoder is pretty simple. We have a slotted disk on the
+
+40
+00:03:07,080 --> 00:03:12,790
+电机轴和一对LED通过插槽照射光线，并由一对拾取
+motor shaft and a pair of LEDs shine light through the slots and that are picked up by a pair
+
+41
+00:03:12,790 --> 00:03:18,730
+照片探测器。这两个LED位于半槽之间，因此输出信号来自
+of photo detectors. The two LEDs are positioned a half slot apart, so the output signals from
+
+42
+00:03:18,730 --> 00:03:22,750
+当电机顺时针旋转时，探测器看起来像这样
+the detectors looks something like this when the motor is spinning in the clockwise direction
+
+43
+00:03:22,750 --> 00:03:27,069
+当电机逆时针旋转时，它看起来像这样。
+and it looks something like this when the motor is spinning in the counter clockwise direction.
+
+44
+00:03:27,069 --> 00:03:31,349
+为了确定电机角度，我们需要做的就是对脉冲进行计数，但它是
+In order to determine the motor angle all we need to do is to count the pulses but it’s
+
+45
+00:03:31,349 --> 00:03:36,519
+重要的是要知道我们是在向上还是向下计数，这取决于旋转方向。
+important to know whether we’re counting up or down and that depends on the direction of rotation.
+
+46
+00:03:36,519 --> 00:03:40,720
+旋转方向实际上很容易确定。我们看看上升的边缘
+The direction of rotation is actually very easy to determine. We look at the rising edge
+
+47
+00:03:40,720 --> 00:03:46,060
+在A信号中，我们测量B信号的值。如果B信号为零
+of the A signal and we measure the value of the B signal. If the B signal is zero on the
+
+48
+00:03:46,060 --> 00:03:50,769
+然后我们正在顺时针移动，如果B信号在上升沿是1
+rising edge then we’re moving clockwise and if the B signal is one on the rising edge
+
+49
+00:03:50,769 --> 00:03:54,599
+然后电机逆时针旋转。
+then the motor is rotating in the counter clockwise direction.
+
+50
+00:03:54,599 --> 00:03:58,330
+增量编码器简单而便宜。它们为我们提供了旋转方向
+Incremental encoders are simple and cheap. They give us the direction of rotation and
+
+51
+00:03:58,330 --> 00:04:02,690
+还有来自每秒脉冲数的转速。如果我们算数
+also the rotational speed that comes from the number of pulses per second. If we count
+
+52
+00:04:02,690 --> 00:04:07,879
+由于输出信号，脉冲我们可以确定电机轴的角位置
+the pulses we can determine the angular position of the motor shaft because the output signals
+
+53
+00:04:07,879 --> 00:04:13,519
+光电探测器是二进制的，很容易与廉价的微控制器接口。
+of the photo detectors are binary, very easy to interface to a cheap micro controller.
+
+54
+00:04:13,519 --> 00:04:18,739
+机器人关节控制系统的另一个重要组成部分是微控制器。现代
+Another important component in the robot joint control system is the micro controller. Modern
+
+55
+00:04:18,739 --> 00:04:24,639
+微控制器将非常多的功能集成到一个非常小的包中。他们有类似的
+micro controllers pack an awful lot of functionality into a very small package. They have analogue
+
+56
+00:04:24,639 --> 00:04:29,499
+输入和输出，数字输入和输出，也许他们有串口。
+input and output, digital input and output, perhaps they've got serial ports.
+
+57
+00:04:29,499 --> 00:04:34,490
+在内部，它们具有大量计数器和定时器以及带调制发生器的脉冲
+Internally they have a large number of counters and timers and pulse with modulation generators
+
+58
+00:04:34,490 --> 00:04:40,469
+除了带有RAM的小型计算机，有时还有非易失性存储器。他们是
+in addition to a small computer with RAM and sometimes non-volatile memory as well. They’re
+
+59
+00:04:40,469 --> 00:04:45,699
+易于与网络连接到键盘和显示器;今天非常非常多才多艺
+easy to interface to a network to a keyboard and a display; very, very versatile and today
+
+60
+00:04:45,699 --> 00:04:48,129
+非常非常低成本的设备。
+very, very low cost devices.
+
+61
+00:04:48,129 --> 00:04:52,889
+最后机器人关节控制器看起来像这样。我们有联合控制器本身
+Finally the robot joint controller looks something like this. We have the joint controller itself
+
+62
+00:04:52,889 --> 00:04:58,919
+这是一种在嵌入式微处理器内的联合控制器中运行的算法。
+which is an algorithm running in the joint controller inside an embedded micro processor.
+
+63
+00:04:58,919 --> 00:05:03,439
+通常，它将脉冲宽度调制信号输出到电机驱动器，即H
+Typically it outputs a pulse-width-modulated signal to the motor drive, which is this H
+
+64
+00:05:03,439 --> 00:05:09,379
+驱动执行器的桥接电路，小型电动机。有一个变速箱
+bridge circuit that drives the actuator, a small electric motor. There is a gearbox which
+
+65
+00:05:09,379 --> 00:05:15,009
+将电动机连接到机器人关节，我们使用变速箱相对放大
+connects the electric motor to the robot joint and we use a gearbox to amplify the relatively
+
+66
+00:05:15,009 --> 00:05:19,129
+电动机的低扭矩到移动所需的较大扭矩
+low torque from the electric motor to the larger torque which is needed to move the
+
+67
+00:05:19,129 --> 00:05:20,800
+机器人的链接。
+link of the robot.
+
+68
+00:05:20,800 --> 00:05:25,939
+我们使用增量编码器来测量电机轴的位置，我们可以配对
+We use an incremental encoder to measure the position of the motor shaft and we can pair
+
+69
+00:05:25,939 --> 00:05:30,969
+具有所需位置的我们希望关节进入关节
+that with the desired position that we want the joint to have that goes into the joint
+
+70
+00:05:30,969 --> 00:05:33,719
+控制器和循环关闭。
+controller and the loop is closed.
+
+71
+00:05:33,719 --> 00:05:39,180
+我们可以创建该机器人关节控制器系统的动态模型。关键部分
+We can create a dynamic model of that robot joint controller system. A critical part of
+
+72
+00:05:39,180 --> 00:05:43,869
+这是求和点。这是我们输入机器人所需位置的地方
+this is the summing junction. This is where we input the desired position of the robot
+
+73
+00:05:43,869 --> 00:05:46,860
+联合，我们从实际位置减去。
+joint and we subtract from that actual position.
+
+74
+00:05:46,860 --> 00:05:52,589
+这是负反馈系统的本质，期望的位置减去实际
+This is the essence of a negative feedback system, the desired position minus the actual
+
+75
+00:05:52,589 --> 00:05:57,719
+位置。结果是位置错误，并进入控制律。
+position. The result of that is the error in position and that goes into a control law.
+
+76
+00:05:57,719 --> 00:06:01,069
+控制律的输出是一个发送给电机驱动器并应用的信号
+The output of the control law is a signal that goes to the motor driver and applies
+
+77
+00:06:01,069 --> 00:06:07,089
+一些任意增益我称之为KD并产生一个电流应用于传递函数
+some arbitrary gain I call it KD and generates a current is applied to the transfer function
+
+78
+00:06:07,089 --> 00:06:09,099
+对于执行器，这里显示。
+for the actuator, which is shown here.
+
+79
+00:06:09,099 --> 00:06:13,659
+其结果是电机的位置。我们有一个传感器，可以测量位置
+The result of which is position of the motor. We have a sensor, which measures the position
+
+80
+00:06:13,659 --> 00:06:18,219
+电动机和我们的模型，增益为1，这是信号，减去
+of the motor and our model that by a gain of one and this is the signal, which is subtracted
+
+81
+00:06:18,219 --> 00:06:19,519
+从理想的位置。
+from the desired position.
+

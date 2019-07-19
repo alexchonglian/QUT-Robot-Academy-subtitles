@@ -1,0 +1,225 @@
+1
+00:00:03,960 --> 00:00:08,820
+惯性测量单元的最后一个部件是测量角速度的传感器，
+The final component of the inertia measurement unit are the sensors that measure angular velocity,
+
+2
+00:00:08,820 --> 00:00:13,540
+这些通常被称为陀螺仪。你可能有一个陀螺仪
+and these are commonly referred to as gyroscopes. You might have had a gyroscope
+
+3
+00:00:13,550 --> 00:00:17,260
+作为一个玩具，当你还是个孩子的时候，很难理解它们之间的关系
+as a toy when you were a child, and it is difficult to understand the relationship between
+
+4
+00:00:17,260 --> 00:00:22,089
+这个玩具陀螺仪，可以在铅笔的末端与可以测量的设备平衡
+this toy gyroscope, which can balance on the end of a pencil with a device that can measure
+
+5
+00:00:22,089 --> 00:00:27,099
+角速度。要了解我们如何将陀螺仪用作角速度传感器，
+angular velocity. To understand how we can use a gyroscope as an angular velocity sensor,
+
+6
+00:00:27,099 --> 00:00:31,880
+我们需要回到纺纱机构的基本原理。在这里，我们有一张光盘
+we need to get right back to fundamentals of spinning bodies. Here, we have a disc which
+
+7
+00:00:31,880 --> 00:00:37,110
+围绕虚线所示的轴旋转，它以角速度旋转，
+is spinning about the axis shown by the dotted line, and it is spinning with an angular velocity,
+
+8
+00:00:37,110 --> 00:00:43,250
+欧米茄和圆盘有转动惯量，j。我们指的是角动量
+omega g and the disc has got a rotational inertia, j. We refer to the angular momentum
+
+9
+00:00:43,250 --> 00:00:48,570
+这个光盘，并给出符号h。h是j次欧米茄。现在，我们来吧
+of this disc and give that the symbol h. h is j times omega g. Now, let's
+
+10
+00:00:48,570 --> 00:00:54,730
+想象一下，我对这个旋转盘施加扭矩。如果我这样做，光盘想要旋转
+imagine that I apply a torque to this rotating disc. If I do that, the disc wants to rotate
+
+11
+00:00:54,730 --> 00:01:00,380
+关于蓝色箭头所示的轴。它是矢量h和的交叉积
+about the axis shown by the blue arrow. It's the cross product of the vector h and
+
+12
+00:01:00,380 --> 00:01:01,970
+矢量Tau。
+the vector Tau.
+
+13
+00:01:01,970 --> 00:01:06,572
+我们这里有一个陀螺仪，目前，我们可以旋转设备
+What we have here is a gyroscope and at the moment, the device is not spinning we can
+
+14
+00:01:06,572 --> 00:01:13,060
+看到它在万向节机构内部非常自由和漂亮地移动。如果我转动电机
+see that it moves very freely and nicely inside its gimbal mechanism. If I turn the motor
+
+15
+00:01:13,060 --> 00:01:18,970
+现在，需要一点时间才能达到速度，现在表现得非常不同。
+on, it takes a little moment to come up to speed, it now behaves very very differently.
+
+16
+00:01:18,970 --> 00:01:24,700
+现在，我将围绕蓝色箭头转动旋转盘组件，现在;该
+Now, I'm going to rotate the spinning disc assembly about the blue arrow and now; the
+
+17
+00:01:24,700 --> 00:01:29,060
+旋转盘将围绕红色箭头施加扭矩，并且该扭矩是十字形
+spinning disc is going to exert a torque about the red arrow, and that torque is the cross
+
+18
+00:01:29,060 --> 00:01:34,850
+矢量欧米茄和h的产物。那么，我该如何测量扭矩呢？如果光盘
+product of the vectors omega and h. So, how do I measure the torque? If the disc
+
+19
+00:01:34,850 --> 00:01:40,549
+然后，轴由两个轴承支撑，该扭矩将在一个轴承上施加一个力
+axis is supported by two bearings then, this torque will exert a force up on one bearing
+
+20
+00:01:40,549 --> 00:01:45,700
+并且在另一个轴承上，可以测量这些力。旋转盘然后有
+and down on the other bearing, and those forces can be measured. The spinning disc then has
+
+21
+00:01:45,700 --> 00:01:50,979
+将角速度Ω转换成扭矩，然后用力测量
+converted the angular velocity omega into a torque which is then, measured using force
+
+22
+00:01:50,979 --> 00:01:51,979
+传感器。
+sensors.
+
+23
+00:01:51,979 --> 00:01:57,570
+重要的是，如果我用橡皮筋拉动陀螺仪的这个轴，我基本上就是这样
+Importantly, if I pull on this axis of the gyroscope with a rubber band, I am basically
+
+24
+00:01:57,570 --> 00:02:01,710
+要对它施加压力。所以，我拉着这个方向。你会看到陀螺仪
+going to exert a force on it. And so, I pull in this direction. You will see that the gyroscope
+
+25
+00:02:01,710 --> 00:02:06,310
+试图绕这样的轴旋转。
+is trying to rotate about an axis like this.
+
+26
+00:02:06,310 --> 00:02:10,220
+基于旋转盘的角速度传感器不再常见。他们倾向于
+Angular velocity sensors based on spinning discs are not very common anymore. They tend
+
+27
+00:02:10,220 --> 00:02:14,870
+相当笨重，需要很大的力量来保持光盘旋转。传感器今天
+to be rather bulky and require a lot of power to keep that disc spinning. Sensors today
+
+28
+00:02:14,870 --> 00:02:20,400
+是基于振动而不是旋转元件，但我们仍倾向于称它们为陀螺仪
+are based on vibrating rather than rotating element, but we still tend to call them gyroscopes
+
+29
+00:02:20,400 --> 00:02:25,490
+或陀螺仪传感器。振动元件采用“MEMS”技术制造。
+or gyroscopic sensors. The vibrating elements are fabricated using ‘MEMS’ technology.
+
+30
+00:02:25,490 --> 00:02:31,190
+因此，传感元件本身的尺寸是微观的，但其基本原理是
+So, the sensing elements themselves are microscopic in size but the underlying principle is the
+
+31
+00:02:31,190 --> 00:02:36,900
+相同。传感器中的角速度导致力或力矩施加在微型上
+same. Angular velocity in the sensor causes forces or torques to be exerted on the micro
+
+32
+00:02:36,900 --> 00:02:42,950
+尺度元素，导致位移，可以测量和放大产生
+scale elements and that leads to displacements, which can be measured and amplified to produce
+
+33
+00:02:42,950 --> 00:02:48,620
+角速度信号。与加速度计和磁力计一样，包装也很常见
+an angular velocity signal. As with accelerometers and magnetometers it is very common to package
+
+34
+00:02:48,620 --> 00:02:53,430
+三个陀螺仪传感器组成一个芯片，它们再次正交排列
+three gyroscope sensors into a single chip, and they are arranged orthogonally again so
+
+35
+00:02:53,430 --> 00:03:00,630
+它们测量角速度矢量的三个分量。就像你有加速度计一样
+they measure the three components of the angular velocity vector. Just as you have accelerometers
+
+36
+00:03:00,630 --> 00:03:04,989
+在你的脑海里，你的头上也有陀螺仪，再一次，这些都在你的头上
+in your head, you also have gyroscopes in your head and once again, these are in the
+
+37
+00:03:04,989 --> 00:03:11,050
+内耳组件。特别是三个非常有特色的元素称为半圆形
+inner ear assembly. In particular, the three very distinctive elements known as the semi-circular
+
+38
+00:03:11,050 --> 00:03:17,489
+运河。这些是非常细的管子，充满了液体和头部的旋转运动
+canals. These are very thin tubes filled with fluid and rotational motion of your head causes
+
+39
+00:03:17,489 --> 00:03:23,010
+这些管中的液体移动。微小的毛细胞检测到液体的运动
+the liquid in those tubes to move. The motion of a fluid is detected by tiny hair cells
+
+40
+00:03:23,010 --> 00:03:28,569
+在运河内，这会导致大脑出现角速度信号。角度
+within the canals, and this leads to an angular velocity signal to your brain. The angular
+
+41
+00:03:28,569 --> 00:03:33,769
+速度信号与来自您眼睛的运动信息相结合。如果这两个信号
+velocity signal is combined with motion information that comes from your eyes. If these two signals
+
+42
+00:03:33,769 --> 00:03:38,240
+不一致，它导致我们作为晕动病的问题，那就是
+are not consistent, it leads to a problem which we experience as motion sickness, that's
+
+43
+00:03:38,240 --> 00:03:42,319
+当我们的内耳告诉我们我们的身体在某种程度上正在移动时，但我们的眼睛却在说
+when our inner ear is telling us that our body is moving in one way, but our eyes tell
+
+44
+00:03:42,319 --> 00:03:47,720
+我们，我们的身体以不同的方式运动。所以，这是晕车病或晕船病，
+us that our body is moving in a different way. So, this is motion sickness or sea sickness,
+
+45
+00:03:47,720 --> 00:03:51,290
+我们的身体想要让我们呕吐，反应不合逻辑。
+and our body responds rather illogically by wanting us to throw up.
+

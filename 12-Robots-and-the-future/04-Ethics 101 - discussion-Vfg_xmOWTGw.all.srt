@@ -1,0 +1,565 @@
+1
+00:00:03,770 --> 00:00:08,900
+彼得：我想我们都对道德是什么有一个相当朦胧的想法。我们相信本质上
+Peter: I think we all have a fairly hazy idea about what ethics is. We believe intrinsically
+
+2
+00:00:08,900 --> 00:00:13,920
+道德是一件好事。我对这个主题的了解非常有限，所以我会
+that ethics is a good thing. My knowledge of the topic is incredibly limited, so I'd
+
+3
+00:00:13,920 --> 00:00:18,039
+我想介绍我的同事教授道格贝克，他更了解道德而不是道德
+like to introduce my colleague professor Doug Baker, who knows way more about ethics than
+
+4
+00:00:18,039 --> 00:00:19,039
+我做。欢迎道格！
+I do. Welcome Doug!
+
+5
+00:00:19,039 --> 00:00:21,280
+道格：谢谢你，彼得。很高兴来到这里。
+Doug: Thank you, Peter. A pleasure to be here.
+
+6
+00:00:21,280 --> 00:00:26,700
+彼得：道格，我对道德是什么没有清醒的认识。当我听到道德这个词时，
+Peter: So Doug, I don't have a crisp sense of what ethics is. When I hear the word ethics,
+
+7
+00:00:26,700 --> 00:00:32,520
+我想到各种各样的事情;是非，善与恶，道德，价值观，行为。
+I think of all kinds of things; right and wrong, good and evil, morals, values, behaviors.
+
+8
+00:00:32,520 --> 00:00:35,719
+你能为我解开一些这些事吗？
+Can you untangle some of these things for me?
+
+9
+00:00:35,719 --> 00:00:43,730
+道格：是的。我认为彼得，当我教授道德时，我想首先开始教授什么
+Doug: Yes. I think Peter, when I teach ethics, I like to first start off with teaching what
+
+10
+00:00:43,730 --> 00:00:44,829
+道德不是。
+ethics is not.
+
+11
+00:00:44,829 --> 00:00:45,680
+彼得：好的。
+Peter: Okay.
+
+12
+00:00:45,680 --> 00:00:49,440
+道格：要开始消极，通常这不是一件好事，但我开始吧
+Doug: To start off on the negative, usually that's not a good thing, but I start off on
+
+13
+00:00:49,440 --> 00:00:57,030
+否定的。它不是什么;是不是价值观。这不是宗教。这是件事
+the negative. What it is not; is that it's not values. It is not religion. It is something
+
+14
+00:00:57,030 --> 00:01:05,500
+从根本上说，它构成了整个社会的基础，它是所有宗教的基础，它超越了文化。
+fundamentally, that underlies all of society, it underlies all of religion and it transcends culture.
+
+15
+00:01:05,500 --> 00:01:11,280
+彼得：所有社会，所有宗教，所有文化？这是一个全球性的事情？
+Peter: So all societies, all religions, all cultures? It's a global thing?
+
+16
+00:01:11,280 --> 00:01:18,109
+道格：它的全球性。它实际上是道德哲学，它为我们提供了指导。伦理
+Doug: Its global. It is actually the philosophy of morality and it offers us a guide. Ethics
+
+17
+00:01:18,109 --> 00:01:22,369
+为我们提供正确的指导。
+offers us a guide as to the right thing to do.
+
+18
+00:01:22,369 --> 00:01:23,729
+彼得：好的。
+Peter: Okay.
+
+19
+00:01:23,729 --> 00:01:33,340
+道格：所以，价值观是一个信仰的星座，是我们是谁，是它的混合体
+Doug: And so, values are a constellation of beliefs, an amalgam of who we are, and it's
+
+20
+00:01:33,340 --> 00:01:40,099
+具有文化特色的价值观及其具体情境。换句话说，其中的值
+culturally specific values and it's contextually specific. In other words, the values within
+
+21
+00:01:40,099 --> 00:01:47,899
+1800年的澳大利亚文化与现在澳大利亚文化的价值观完全不同。
+Australian culture in say 1800 are quite different than the values in Australian culture now.
+
+22
+00:01:47,899 --> 00:01:50,779
+彼得：但随着时间的推移道德有变化吗？
+Peter: But have ethics changed over the time?
+
+23
+00:01:50,779 --> 00:01:52,679
+道格：不，但价值观会发生变化。
+Doug: No, but values change.
+
+24
+00:01:52,679 --> 00:01:55,039
+彼得：所以这是一种解释？
+Peter: So it's an interpretation?
+
+25
+00:01:55,039 --> 00:02:02,989
+道格：价值观树立了文化的规范，它们是一种执行道德的方式。但
+Doug: Values set the norms of the culture, and they are a way of enforcing ethics. But
+
+26
+00:02:02,989 --> 00:02:09,050
+正如我所说，伦理学超越了它们，超越了所有文化。因此，价值再次持续到
+ethics transcends them, to all cultures as I said. So, values again are continuous to
+
+27
+00:02:09,050 --> 00:02:15,070
+时间，但这在道德方面没有变化。什么应该是正确的
+time, but that doesn't change in terms of ethics. What ought to be the right thing to
+
+28
+00:02:15,070 --> 00:02:19,780
+做什么，做正确的事情是由道德推理决定的。
+do, what is the right thing to do is determined by moral reasoning.
+
+29
+00:02:19,780 --> 00:02:25,260
+彼得：所以人们长期以来一直在思考道德，也许是最长的道德
+Peter: So people have been thinking about ethics for a long, long time, maybe the longest
+
+30
+00:02:25,260 --> 00:02:29,950
+人们想过的活动或主题。他们都同意吗？
+activity or topic that people have thought about. Do they all agree?
+
+31
+00:02:29,950 --> 00:02:37,610
+道格：没有。但是，请听，道德理论有一定程度。这是一个巨大的领域和方面
+Doug: No. But, listen, there are degrees in ethical theory. It is a huge area and in terms
+
+32
+00:02:37,610 --> 00:02:43,150
+我们如何以道德的方式进行，通常有两种不同的思想流派。有
+of how we proceed ethically, there's generally two different schools of thought. There's
+
+33
+00:02:43,150 --> 00:02:50,220
+目的论和那里的道义论，如果我们看看这两种不同的思想流派
+teleology and there's deontology, and if we look at those two different schools of thought
+
+34
+00:02:50,220 --> 00:02:55,740
+在道德推理方面，他们会谈到我们应该如何进行以及我们应该如何进行
+in terms of moral reasoning, they'd come to how we should proceed and how we ought to
+
+35
+00:02:55,740 --> 00:02:56,790
+行为不同。
+act differently.
+
+36
+00:02:56,790 --> 00:02:59,500
+彼得：好的，让我经历这两个。
+Peter: Okay so run me through these two.
+
+37
+00:02:59,500 --> 00:03:09,080
+道格：好的。所以第一次目的论看好事，做正确的事;什么是
+Doug: Okay. So first teleology looks at the good thing, the right thing to do; what's
+
+38
+00:03:09,080 --> 00:03:16,290
+好到最后，它看着获得好的过程，以及与之争论
+good in the end, and it looks at the process of getting what's good, and the argument with
+
+39
+00:03:16,290 --> 00:03:23,790
+目的论是，我们通过做正确的事情并产生最大的东西来进入未来
+teleology is, we proceed into the future by doing the right thing and producing the greatest
+
+40
+00:03:23,790 --> 00:03:31,080
+好。因此，它的论点是，它不是过程而是产品，而且它是
+good. And so, the argument in it is, it's not the process but the product, and it's
+
+41
+00:03:31,080 --> 00:03:37,390
+也称为结果主义。就功利主义者边沁和米尔而言
+also called consequentialism. And in terms of the utilitarians Bentham and Mill in the
+
+42
+00:03:37,390 --> 00:03:46,340
+1840年代，1850年代和1860年代，功利主义通过观察引入了这一道德分支
+1840's, 1850's and 1860's, utilitarianism is brought in this branch of ethics by looking
+
+43
+00:03:46,340 --> 00:03:52,819
+最大的好处是最大的。所以，无论你做什么，都应该建立最大的
+at the greatest good for the greatest number. So, whatever you do should build the largest
+
+44
+00:03:52,819 --> 00:03:56,390
+幸福的程度，所以最终的结果是来了。
+degree of happiness, so the end result is what comes.
+
+45
+00:03:56,390 --> 00:03:59,319
+彼得：那不是关于个人，而是关于更大的利益？
+Peter: So it's not about the individual, it's about the greater good?
+
+46
+00:03:59,319 --> 00:03:59,720
+道格：正确。
+Doug: Correct.
+
+47
+00:03:59,720 --> 00:04:00,120
+彼得：好的。
+Peter: Okay.
+
+48
+00:04:00,120 --> 00:04:08,380
+道格：是的，完全正确。因此，如果我们建造一座电力大坝，目标就是建设
+Doug: Yeah, exactly right. So, if we build a dam for power, the objective is to build
+
+49
+00:04:08,380 --> 00:04:16,590
+为一个国家的工业化提供动力的工业水库，事实
+an industrial reservoir for power for the industrialisation of a nation, and the fact
+
+50
+00:04:16,590 --> 00:04:22,699
+我们不得不搬出两百个农民或几个村民并不重要。
+that we have to move out two hundred farmers or a couple of villagers doesn't matter.
+
+51
+00:04:22,699 --> 00:04:24,340
+彼得：因为更大的好处？
+Peter: Because of the greater good?
+
+52
+00:04:24,340 --> 00:04:25,400
+道格：重要的是。
+Doug: It's what counts.
+
+53
+00:04:25,400 --> 00:04:30,080
+彼得：好的。因此，在工程术语中，您会说这将取决于您的成本函数。
+Peter: Okay. So, in an engineering term then, you'd say that would depend on your cost function.
+
+54
+00:04:30,080 --> 00:04:35,340
+这取决于你施加在电力和村庄幸福的重量。
+It would depend on the weights that you applied to electricity and to the happiness of the village.
+
+55
+00:04:35,349 --> 00:04:40,240
+道格：当然。因此，它成为衡量市场和非市场变量的案例。
+Doug: Absolutely. And so, it becomes a case of measuring market and non market variables.
+
+56
+00:04:40,240 --> 00:04:44,499
+但最大数量的最大好处通常是你在很多方面看到的论点
+But the greatest good for the greatest number is often the argument you see in a lot of
+
+57
+00:04:44,499 --> 00:04:48,919
+大型项目。那是的，我们知道，我们知道我们必须在这里影响你，我们知道这一点
+mega projects. That, yeah we know, we know we have to affect you here and we know this
+
+58
+00:04:48,919 --> 00:04:53,639
+社区受到影响但是，对于更多的人来说，这很重要。
+community's getting impacted but, for the greater number, it's important.
+
+59
+00:04:53,639 --> 00:04:55,629
+彼得：告诉我另一个分支。
+Peter: Tell me about the other branch.
+
+60
+00:04:55,629 --> 00:05:08,479
+道格：另一个分支真的看着这个过程。道义论是一个完整的思想领域，
+Doug: The other branch really looks at the process. Deontology is a whole area of thought,
+
+61
+00:05:08,479 --> 00:05:15,620
+从不能开始向右前进，看着这个过程，
+starting with can't and moving forward right through the rolls, that looks at the process,
+
+62
+00:05:15,620 --> 00:05:21,990
+而论证是过程与善是分开的。所以好的是分开的
+and the argument is that the process and the good are separated. So what is good is separate
+
+63
+00:05:21,990 --> 00:05:24,379
+从过程的正确性。
+from the correctness of the process.
+
+64
+00:05:24,379 --> 00:05:25,509
+彼得：你是怎么到达那里的？
+Peter: It's how you get there?
+
+65
+00:05:25,509 --> 00:05:25,999
+道格：正确。
+Doug: Correct.
+
+66
+00:05:25,999 --> 00:05:26,419
+彼得：好的
+Peter: Okay
+
+67
+00:05:26,419 --> 00:05:35,020
+道格：所以这个论点实际上是我们如何做到的，它是至关重要的，以及道德指导
+Doug: So the argument is in fact how we do it, it's critical, and that moral guidance
+
+68
+00:05:35,020 --> 00:05:37,909
+至于我们如何做到这一点有所不同。
+as to how we do it makes the difference.
+
+69
+00:05:37,909 --> 00:05:39,439
+彼得：你能举个例子吗？
+Peter: Can you give me an example.
+
+70
+00:05:39,439 --> 00:05:47,110
+道格：所以在公众参与方面，这个论点是，例如，任何政府
+Doug: So in terms of public participation, the argument is, for example, any government
+
+71
+00:05:47,110 --> 00:05:54,330
+实际上，当他们心中有一个大型项目时，请继续进行。
+would actually, when they have a large project in their mind go ahead and do it in the past.
+
+72
+00:05:54,330 --> 00:06:00,110
+但现在我们有一个过程，通过这个过程来告知公众，使公众融入社会
+But now we have a process by which to inform the public, to integrate the public, to make
+
+73
+00:06:00,110 --> 00:06:04,830
+关于这是否是最佳途径，以及更多人参与的决定
+the decisions as to whether this is the best path to go, and more people are involved in
+
+74
+00:06:04,830 --> 00:06:09,680
+决策过程，以及公众参与和利益相关者的参与
+the decision making process, and as a result public participation and stakeholder participation
+
+75
+00:06:09,680 --> 00:06:17,860
+因此而蓬勃发展。但这个分支的关键-道义论;约翰罗尔斯
+is bloomed as a result of this. But the key with this branch - deontology; John Rawls
+
+76
+00:06:17,860 --> 00:06:24,559
+可能是20世纪最着名的哲学家，真正看过一个理论
+is probably the most well known philosopher of the 20th Century, really looked at a theory
+
+77
+00:06:24,559 --> 00:06:29,319
+正义和论点是，这里重要的是对个人和我们的正义
+of justice, and the argument was, what counts here is justice for the individual, and we
+
+78
+00:06:29,319 --> 00:06:33,400
+我们的决定基于什么是适合个人的，而不是伤害个人。
+base our decisions on what's right for the individual and not to harm the individual.
+
+79
+00:06:33,400 --> 00:06:38,749
+彼得：好的，那么一个分支就是更大的好处，但是我们可能会定义其他分支
+Peter: Okay so one branch then is the greater good of however we might define that, other
+
+80
+00:06:38,749 --> 00:06:41,309
+分支对个人来说是最好的。
+branch is what's best for the individual.
+
+81
+00:06:41,309 --> 00:06:42,069
+道格：当然。
+Doug: Absolutely.
+
+82
+00:06:42,069 --> 00:06:48,719
+彼得：我可以挑选吗？这两种道德都没有比另一种好吗？
+Peter: So I can pick and choose? No one of both ethics is better than the other?
+
+83
+00:06:48,719 --> 00:06:53,139
+道格：正确。你可以相应地证明它的合理性。例如，在你的结果主义中
+Doug: Correct. And you can justify it accordingly. For example, in consequentialism when you
+
+84
+00:06:53,139 --> 00:07:02,210
+看看积极的歧视，换句话说，首先是优先聘用
+look at positive discrimination, in other words a preferential hiring of say, first
+
+85
+00:07:02,210 --> 00:07:08,819
+国家或原住民超过其他申请人，或雇用妇女超过其他申请人
+nations or aboriginal people over top of other applicants, or the hiring of women over the
+
+86
+00:07:08,819 --> 00:07:15,639
+男人最喜欢男人。现在的争论是积极的歧视是
+top of men, in preference to men. Now the argument is that positive discrimination is
+
+87
+00:07:15,639 --> 00:07:23,059
+在结果主义论证中证明是合理的，因为过去存在问题
+justified in a consequentialist argument, in that there has been problems in the past
+
+88
+00:07:23,059 --> 00:07:29,319
+关于我们如何对待女性以及如何解雇她们。我们现在可以纠正这个问题
+with respect to how we treated women and how we fired. We can rectify that in the present
+
+89
+00:07:29,319 --> 00:07:36,119
+特别注重雇用他们并违反正义原则，但是
+by specifically focusing on hiring them and violating the principle of justice, but the
+
+90
+00:07:36,119 --> 00:07:39,099
+最终的结果是，我们将有50％的女性在工作场所。
+end result is that we'll have 50% women in the work place.
+
+91
+00:07:39,099 --> 00:07:39,639
+彼得：是的。
+Peter: Yeah.
+
+92
+00:07:39,639 --> 00:07:43,819
+道格：你和我在一起？所以这是一个结果论证。现在，牙医学家会冒犯他人
+Doug: You're with me? So that's a consequentialist argument. Now a deontologist would take offence
+
+93
+00:07:43,819 --> 00:07:50,919
+因为你违反了公平。因此，一个结果主义者的观点
+to that, because you're violating fairness. And so, a consequentialist's perspective then
+
+94
+00:07:50,919 --> 00:07:58,519
+记住了最终的结果，并再次考虑到了更大的利益。所以你可以从双方争论。
+has the end result in mind, and again the greater good in mind. So you can argue from both sides.
+
+95
+00:07:58,520 --> 00:08:03,699
+彼得：道格，所有这一切，我如何将道德思维付诸实践？
+Peter: So Doug, given all of that, how do I put ethical thinking into practice?
+
+96
+00:08:03,699 --> 00:08:10,369
+道格：没有公式，但所有道德准则都有一个基本的基础。
+Doug: There's no formula but there's a fundamental kind of basis for all moral codes.
+
+97
+00:08:10,369 --> 00:08:11,349
+彼得：好的。
+Peter: Okay.
+
+98
+00:08:11,349 --> 00:08:18,860
+道格：它再次取决于个人和个人的权利。首先是
+Doug: It hinges around again, the individual and the rights of the individual. First there's
+
+99
+00:08:18,860 --> 00:08:25,189
+自治的结构-个人自己选择而不是自己选择的权利
+the construct of autonomy - the right of the individual to make their own choice and not
+
+100
+00:08:25,189 --> 00:08:31,169
+违反这一点。其次，有一种男性的结构-没有伤害。
+to violate that. Secondly, there's a construct of maleficence - to do no harm.
+
+101
+00:08:31,169 --> 00:08:32,039
+彼得：好的。
+Peter: Okay.
+
+102
+00:08:32,039 --> 00:08:38,350
+道格：这是围绕着医生的道德准则。它是围绕非恶意形成的。
+Doug: And it's the ethical code that surrounds doctors. It's formed around non-maleficence.
+
+103
+00:08:38,350 --> 00:08:45,040
+然后是有益的，即帮助，帮助。其次，或者最后，就是这个
+Then there's beneficence, which is to help, to aid. Secondly, or lastly, there's this
+
+104
+00:08:45,040 --> 00:08:51,960
+正义的概念和那是罗尔斯的方法。你必须公平。公平原则至关重要。
+notion of justice and that's Rawls approach. You must have fairness. The fairness principle is critical.
+
+105
+00:08:51,960 --> 00:08:54,600
+彼得：公平是一个绝对的概念吗？
+Peter: Is fairness an absolute concept?
+
+106
+00:08:54,600 --> 00:09:00,350
+道格：是的，确实如此。如果你看一下功利主义理论和帕累托，它就可以被权衡
+Doug: Yes, it is. And it can be weighed if you look at the utilitarian theory and Pareto
+
+107
+00:09:00,350 --> 00:09:07,330
+经济学-他们在这种结构中公平，在公平和不公平方面
+economics - they lay fairness in that construct, in terms of what is fair and what isn't and
+
+108
+00:09:07,330 --> 00:09:13,930
+我们如何确定公平性。因此，它翻译，大部分伦理理论直接翻译
+how do we determine fairness. So, it translates, much of this ethical theory translates directly
+
+109
+00:09:13,930 --> 00:09:18,810
+进入经济理论和功利主义理论。所以引入它是如此令人着迷
+into economic theory and utilitarian theory. So it's fascinating how it's all brought in
+
+110
+00:09:18,810 --> 00:09:22,700
+并通过它了解我们如何看待世界以及我们如何评估世界。
+and through it into the how we see the world and how we evaluate the world.
+
+111
+00:09:22,700 --> 00:09:27,380
+彼得：所以这不仅仅是一些抽象的概念，它可以付诸实践而且是它的基础
+Peter: So it's not just some abstract notion, it can be put into practice and it underpins
+
+112
+00:09:27,380 --> 00:09:29,800
+我们社会中非常重要的事情。
+really important things in our society.
+
+113
+00:09:29,800 --> 00:09:34,580
+道格：绝对是！没有什么比良好的道德理论更有用了。
+Doug: Absolutely! There's nothing more applied than a good ethical theory.
+

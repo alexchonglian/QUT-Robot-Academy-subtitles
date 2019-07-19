@@ -1,0 +1,235 @@
+1
+00:00:03,419 --> 00:00:07,700
+在本讲座开始时，我们会考虑为什么如果我拿着一张纸的问题
+At the beginning of this lecture, we consider the problem of why if I hold a sheet of paper
+
+2
+00:00:07,700 --> 00:00:12,769
+在场景前面，我在那张纸上看不到图像。原因
+up in front of the scene, I do not see an image on that sheet of paper. And the reason
+
+3
+00:00:12,769 --> 00:00:18,300
+因为我们谈到的是，在论文的任何特定点，我们记录了
+for that as we talked about was that at any particular point on the paper, we record the
+
+4
+00:00:18,300 --> 00:00:23,220
+落在那个特定点并且光线来自的总光量
+total amount of light that's falling on that particular point and that light has come from
+
+5
+00:00:23,220 --> 00:00:28,990
+现实世界中非常非常多的要点。我们记录了那里的总光量。
+very, very many points in the real world itself. We've recorded the total amount of light there.
+
+6
+00:00:28,990 --> 00:00:32,739
+我们没有谈到光线来自的方向。
+We didn't say anything about the direction that the light rays came from.
+
+7
+00:00:32,739 --> 00:00:37,219
+那么，如果我们能够在每个点实际记录的不仅仅是光量，而且还有
+So, what if we could actually record at each point not just the amount of light but the
+
+8
+00:00:37,219 --> 00:00:41,480
+光的来源方向？这让我们进入所谓的光之区
+direction that the light came from? This gets us into the area of what's called a light
+
+9
+00:00:41,480 --> 00:00:47,890
+领域。现在，一个光场，在数学上，它是一个描述光的功能
+field. Now, a light field is, mathematically, it's a function that describes the light that's
+
+10
+00:00:47,890 --> 00:00:52,120
+在空间的每一个点上向每一个方向行进。
+travelling in every single direction at every single point in space.
+
+11
+00:00:52,120 --> 00:00:56,930
+想想你现在所处的房间。考虑其中的任何特定点
+Think about the room that you're in at the moment. Consider any particular point in that
+
+12
+00:00:56,930 --> 00:01:01,730
+房间里会有大量的光线穿过那个点，他们会
+room and there'll be a large number of light rays passing through that point and they will
+
+13
+00:01:01,730 --> 00:01:05,019
+来自房间内的许多其他点。
+have come from many many other points within the room.
+
+14
+00:01:05,019 --> 00:01:10,680
+因此，非常非常复杂的光线，都会向不同的方向发展
+So, very, very complex lots of light rays, all going different directions and coming
+
+15
+00:01:10,680 --> 00:01:12,159
+来自不同的地方。
+from different places.
+
+16
+00:01:12,159 --> 00:01:18,729
+因此，光场传感器试图捕获其中的一些，以捕获颜色和强度
+So, a light field sensor attempts to capture some of that, to capture the color, the intensity
+
+17
+00:01:18,729 --> 00:01:25,000
+和所有这些光线的矢量方向。传统相机简单地加起来
+and the vector direction of all these rays of light. Traditional camera simply adds up
+
+18
+00:01:25,000 --> 00:01:30,479
+所有的光线并记录总和。光场相机尝试记录
+all the rays of light and records the sum total. Light field cameras try to record the
+
+19
+00:01:30,479 --> 00:01:36,619
+方向也是方向非常重要。再考虑这个例子
+directions as well and the direction is really important. Consider this example again of
+
+20
+00:01:36,619 --> 00:01:41,259
+薄透镜模型。我们在世界上有一个对象。这是一大堆光线
+the thin lens model. We have an object in the world. It's a whole bunch of light rays
+
+21
+00:01:41,259 --> 00:01:46,579
+让物体通过镜头并穿过焦平面。
+leaving the object passing through the lens and passing through the focal plane.
+
+22
+00:01:46,579 --> 00:01:51,520
+我在这里展示了一个像素，进入该像素的光线来自
+I've shown here a pixel and the light rays that are entering that pixel are coming from
+
+23
+00:01:51,520 --> 00:01:58,479
+大量不同的方向。让我们动画这个，你可以看到那个对象
+a large number of different directions. Let’s animate this, you can see that the object
+
+24
+00:01:58,479 --> 00:02:04,740
+正在移动，我们可以看到来自该物体尖端的光线穿过像素阵列。
+is moving and we can see the light rays from the tip of that object moving across the array of pixels.
+
+25
+00:02:05,540 --> 00:02:10,479
+因此，当它真正接近镜头时，它将成为传统的焦点
+So, the object when it's really close to the lens would be well out of focus in the traditional
+
+26
+00:02:10,479 --> 00:02:15,540
+相机。然而，正在发生的是那些光线现在正在一个范围内
+camera. What's happening though is that those light rays are now following across a range
+
+27
+00:02:15,540 --> 00:02:20,150
+像素和每个像素，这些光线以不同的角度进入。
+of pixels and that each pixel, those light rays are entering at a different angle.
+
+28
+00:02:20,150 --> 00:02:24,670
+因此，如果这些像素不仅能够记录光量而且能够记录方向
+So, if those pixels were able to record not just the amount of light but the direction
+
+29
+00:02:24,670 --> 00:02:30,060
+他们来自哪里，甚至可以计算图像
+at which they are coming from as well, it would be possible to compute the image even
+
+30
+00:02:30,060 --> 00:02:35,410
+虽然它非常非常失焦，但这是一种开始出现的技术
+though it is very, very out of focus and this is a technology that's starting to emerge
+
+31
+00:02:35,410 --> 00:02:38,500
+现在在所谓的光场相机。
+now in what's called light field cameras.
+
+32
+00:02:38,500 --> 00:02:43,580
+现在，市场上第一个，消费级别的光场相机，这一个产生
+Now, one of the first on the market, the consumer level of light field cameras, this one produced
+
+33
+00:02:43,580 --> 00:02:49,620
+通过Lytro和本幻灯片的右侧，我们可以看到的是光场
+by Lytro and in the right hand side of this slide, what we can see is the light field
+
+34
+00:02:49,620 --> 00:02:56,370
+正在对图像进行后处理以使图像的特定部分成为焦点。所以，这个人
+image being post-processed to bring a particular part of the image into focus. So, the person
+
+35
+00:02:56,370 --> 00:03:02,069
+点击图像中的特定点并使用来自的所有原始信息
+is clicking on a particular point in the image and using all the raw information from the
+
+36
+00:03:02,069 --> 00:03:09,190
+光场，光量及其方向，我们可以计算出适当的焦点图像。
+light field, the amount of light and its direction, we can compute the appropriate in focus image.
+
+37
+00:03:09,190 --> 00:03:14,750
+我们不能让图像中的每个点始终聚焦，但我们现在可以选择
+We cant let every point in the image in focus at all the time but we can now select after
+
+38
+00:03:14,750 --> 00:03:20,260
+我们拍摄了我们想要关注的部分，这是向前迈出的一大步。
+we took the picture which part we would like to have in focus and that's a big step forward.
+
+39
+00:03:20,260 --> 00:03:24,590
+早期版本的光场相机，其研究版本非常非常
+Early versions of light field cameras, the research versions of these were very very
+
+40
+00:03:24,590 --> 00:03:30,420
+大量的相机，非常昂贵，远非便携式。这是一个例子
+massive arrays of cameras, very expensive and far from portable. Here's an example of
+
+41
+00:03:30,420 --> 00:03:36,409
+早期的便携式光场相机。再一次，一系列试图捕捉的相机
+an early portable light field camera. Again, an array of cameras, which are trying to capture
+
+42
+00:03:36,409 --> 00:03:41,409
+来自世界的光线以及它们来自的各个方向。
+the light rays coming from the world and the various directions at which they've come from.
+
+43
+00:03:41,409 --> 00:03:45,709
+这是一项现在的技术，随着手机的成本变得越来越容易获得
+This is a technology now, which is becoming quite accessible as the cost of phones is
+
+44
+00:03:45,709 --> 00:03:50,640
+减少。现在可以创建大量的摄像机和这些视频
+being reduced. It's now possible to create enormous arrays of cameras and these videos
+
+45
+00:03:50,640 --> 00:03:57,420
+展示一些使用商用手机相机，廉价数码相机完成的工作
+show some work that's being done using commodity mobile phone cameras, cheap digital cameras
+
+46
+00:03:57,420 --> 00:04:01,409
+为了能够捕获光场，一旦你有一个捕获的光场，那么，
+in order to be able to capture light fields and once you have a captured light field then,
+
+47
+00:04:01,409 --> 00:04:07,099
+你可以执行一些非常惊人的视觉效果，停止动作效果等。
+you can perform some very amazing visual effects, stop motion effects and so on.
+

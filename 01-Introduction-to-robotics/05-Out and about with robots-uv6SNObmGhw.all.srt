@@ -1,0 +1,700 @@
+1
+00:00:20,640 --> 00:00:26,020
+像大多数人一样，我从像LostinSpace这样的机器人图像中长大，
+Like most people I’ve grown up with images of robots like this one from Lost in Space,
+
+2
+00:00:26,020 --> 00:00:30,900
+但真正的机器人不是这样的。真正的机器人和我们将要看到的机器人
+but real robots are not like this. The real robots and the ones we are going to see in
+
+3
+00:00:30,900 --> 00:00:36,400
+接下来的几分钟，形式和功能都有很大差异。我们要看
+the next few minutes have got a great diversity of form and function. We are going to see
+
+4
+00:00:36,400 --> 00:00:40,220
+可以穿过走廊的机器人，我们将会看到可以游泳的机器人
+robots that can move through corridors, we are going to see robots that can swim under
+
+5
+00:00:40,220 --> 00:00:45,580
+水，可以飞行的机器人，可以组装工作的机器人。它们看起来都很不一样
+water, robots that can fly, robots that can do assembly work. They all look very different
+
+6
+00:00:45,580 --> 00:00:50,710
+它们就像我们在电视和电影中长大的机器人一样。
+and they are nothing like the robots that we have grown up with on TV and in the movies.
+
+7
+00:00:50,710 --> 00:00:55,290
+所有这些机器人的共同点虽然不同，但共同的特点是
+What’s common to all these robots although they are different, the common feature is
+
+8
+00:00:55,290 --> 00:01:00,600
+他们从根本上执行三项行动。他们感知世界，我们将会看到
+that they perform fundamentally three actions. They sense the world and we are going to look
+
+9
+00:01:00,600 --> 00:01:05,690
+在机器人用来感知世界的各种传感器上然后他们做出一些计划，
+at a variety of sensors that robots use to sense the world and then they make some plan,
+
+10
+00:01:05,690 --> 00:01:09,540
+他们通过感官获取他们对世界的看法，并且他们有一个目标
+they take what they perceive about the world through their senses and they have got a goal
+
+11
+00:01:09,540 --> 00:01:14,470
+他们正在努力实现这一目标。所以他们计划如何更接近目标。
+that they are trying to achieve. So they plan on how to move a bit closer towards the goal.
+
+12
+00:01:14,470 --> 00:01:18,910
+然后他们执行一个动作。可能是向前游泳，也可能是飞行，它
+And then they perform an action. It might be to swim forward, it might be to fly, it
+
+13
+00:01:18,910 --> 00:01:23,330
+可能是走下走廊。然后它重复;它再次感觉世界是怎样的
+might be to move down the corridor. And then it repeats; it senses again how the world’s
+
+14
+00:01:23,330 --> 00:01:28,280
+改变了，它更新了计划并进行了更多操作。因此机器人不断进行感应
+changed, it updates its plan and moves some more. So robots are continually doing sensing
+
+15
+00:01:28,280 --> 00:01:32,600
+规划和连续循环。那么我们来看看一些真正的机器人吧。
+planning and acting in a continuous loop. So let’s go and look at some real robots.
+
+16
+00:01:45,420 --> 00:01:47,680
+这是工业机器人的一个例子。
+This is an example of an industrial robot.
+
+17
+00:01:48,900 --> 00:01:50,900
+像这样的机器是直接的后代
+Machines like this are direct descendants
+
+18
+00:01:50,910 --> 00:01:56,590
+在1950年代投入使用的第一批机器人。这是一个非常大的工业
+of the first robots that went into service in the 1950's. This is a very big industrial
+
+19
+00:01:56,590 --> 00:02:00,830
+机器人。像这样的机器人通常会在汽车工厂找到像喷雾这样的工作
+robot. Robots like these you will typically find in a car factory doing jobs like spray
+
+20
+00:02:00,830 --> 00:02:05,060
+汽车车身的涂漆，焊接或提升部件。这个特殊的机器人可以举起
+painting, welding, or lifting parts of car bodies. This particular robot can lift up
+
+21
+00:02:05,060 --> 00:02:11,260
+到60公斤。它由6个电动机驱动，它们使机器绕不同的方向旋转
+to 60kgs. It's driven by 6 electric motors and they rotate the machine around different
+
+22
+00:02:11,260 --> 00:02:16,730
+轴。因此，第一个电机围绕这样的轴旋转机器人;下一个电机旋转
+axes. So, the first motor rotates the robot about an axis like this; the next motor rotates
+
+23
+00:02:16,730 --> 00:02:22,580
+关于像这样的轴;下一个电机围绕这样的轴旋转。我们在这里
+it about an axis like this; next motor rotates it about an axis like this. Down here we have
+
+24
+00:02:22,580 --> 00:02:27,380
+我们称之为腕部机制。这个组装在这里;那包含三个电机和它们
+what we call the wrist mechanism. This assembly here; and that contains three motors and they
+
+25
+00:02:27,380 --> 00:02:32,540
+旋转机器人的末端执行器;做这项工作的那一点;他们旋转它
+rotate the end effector of the robot; the bit that does the work; they rotate it about
+
+26
+00:02:32,540 --> 00:02:39,389
+像这样的轴，像这样，另一个像这样。所以这六个电机允许结束
+an axis like this, like this and another one like this. So these six motors allow the end
+
+27
+00:02:39,389 --> 00:02:45,299
+机器人的效应器在X方向，Y方向和X方向上独立移动
+effector of the robot to move independently in the X direction, the Y direction and the
+
+28
+00:02:45,299 --> 00:02:51,139
+Z方向。并且也像这样独立地围绕X轴旋转;关于Y轴
+Z direction. And also to rotate independently about the X axis like that; about the Y axis
+
+29
+00:02:51,139 --> 00:02:55,939
+就是这样的动作;并且关于像这样的运动的Z轴。
+which is motion like that; and about the Z axis which is motion like that.
+
+30
+00:03:15,310 --> 00:03:19,820
+这是Guiabot。这是一个移动机器人。不像我们看到的最后一个机器人
+This is the Guiabot. This is a mobile robot. Unlike the last robot that we looked at this
+
+31
+00:03:19,820 --> 00:03:25,579
+机器人能够在环境中自动移动。要使它能够做到
+robot has the ability to autonomously move through an environment. To enable it to do
+
+32
+00:03:25,579 --> 00:03:29,880
+它拥有丰富的传感器。这个传感器对你来说可能很熟悉
+that, it has a rich collection of sensors. This sensor is probably familiar to you, it’s
+
+33
+00:03:29,880 --> 00:03:35,840
+一个Kinect相机。我们称之为3D相机。它输出三维结构
+a Kinect camera. We call it a 3D camera. It outputs the three dimensional structure of
+
+34
+00:03:35,840 --> 00:03:39,989
+机器人周围的世界。它需要三维结构才能实现
+the world around the robot. And it needs that three dimensional structure so that it can
+
+35
+00:03:39,989 --> 00:03:44,209
+确定什么是障碍-它不应该驱动的地方-以及什么是自由空间
+determine what's an obstacle - a place that it shouldn't drive - and what's free space
+
+36
+00:03:44,209 --> 00:03:49,169
+-这是可以开车的空间。机器人也有这对
+– that’s space where it is okay for it to drive. The robot also has got this pair
+
+37
+00:03:49,169 --> 00:03:53,660
+这里的相机，我们称之为立体相机对，它模仿我们自己的功能
+of cameras here, we call this a stereo camera pair, and it mimics the function of our own
+
+38
+00:03:53,660 --> 00:03:58,820
+两只眼睛。我们用两只眼睛来确定世界的3D结构。所以机器人
+two eyes. We use our two eyes to determine the 3D structure of the world. So the robot
+
+39
+00:03:58,820 --> 00:04:04,660
+使用它来提供有关其世界的增强3D信息。机器人也得到了
+uses this to provide augmented 3D information about its world. The robot’s also got a
+
+40
+00:04:04,660 --> 00:04:09,010
+顶部非常有趣的相机。我们称之为全方位相机。实际上
+very interesting camera on the top. We call this an omnidirectional camera. It's actually
+
+41
+00:04:09,010 --> 00:04:13,760
+由六个单独的摄像头组成，这些摄像头也可以看到所有这些不同的方向
+made up of six individual cameras which look in all these different directions as well
+
+42
+00:04:13,760 --> 00:04:18,530
+垂直的它将它们整合在一起，几乎呈现出半球形的视角
+as vertically. It integrates that together to give almost a hemispherical view of the
+
+43
+00:04:18,530 --> 00:04:22,250
+世界。一个非常非常广角的视图。
+world. A very, very wide angle view.
+
+44
+00:04:22,250 --> 00:04:26,030
+这个机器人的其他功能也很有趣。在这里，我们有一个传感器，我们称之为
+Other features of this robot are also interesting. Down here we have a sensor that we call a
+
+45
+00:04:26,030 --> 00:04:31,870
+激光扫描仪。这基本上是一个光学保险杠。它是最后的传感器
+laser scanner. This is essentially an optical bumper bar. It is the sensor of last resort
+
+46
+00:04:31,870 --> 00:04:36,190
+阻止机器人撞到不应撞到的东西。机器人也有
+to stop the robot bumping into something that it shouldn't bump into. The robot has also
+
+47
+00:04:36,190 --> 00:04:40,230
+掌上了很多计算能力。我们在这里看到我们还有两台MacMinis
+got a lot of computing power onboard. We see here we have got two Mac Minis in addition
+
+48
+00:04:40,230 --> 00:04:45,190
+到基础中的计算机并提供处理的计算能力
+to a computer which is in the base and that provides the computational power to process
+
+49
+00:04:45,190 --> 00:04:50,540
+来自所有传感器的信息，以计划它应该如何移动和控制运动
+the information from all the sensors to plan how it should move and to control the motion
+
+50
+00:04:50,540 --> 00:04:56,100
+的轮子。这个机器人对它的位置有很强的感觉;它实际上建立起来了
+of the wheels. This robot has got a very strong sense of where it is; it actually builds up
+
+51
+00:04:56,100 --> 00:05:01,100
+它的世界地图;二维和三维地图。它知道它在哪里
+a map of its world; a two dimensional and a 3 dimensional map. It knows where it is
+
+52
+00:05:01,100 --> 00:05:05,570
+在这个世界中，它需要的基本信息才能实现
+within that world and the fundamental information it needs in order to be able to achieve a
+
+53
+00:05:05,570 --> 00:05:10,690
+目标。所以它可以感觉到，它在这里规划计算机并将动作发送到
+goal. So it can sense, it's got planning computers here and that sends actions through to the
+
+54
+00:05:10,690 --> 00:05:15,650
+电机和它不断重复这种传感，规划，行动范式。
+motors and it continually repeats this sensing, planning, acting paradigm.
+
+55
+00:05:23,240 --> 00:05:27,640
+在这里，我们有另一个移动机器人，这是一个巨大的。像这样的机器被称为
+Here we have another mobile robot and this is a giant one. Machines like these are called
+
+56
+00:05:27,680 --> 00:05:32,210
+热金属载体。他们是叉车的亲戚。他们通常被发现
+hot metal carriers. They are a relative of the forklift truck. They are typically found
+
+57
+00:05:32,210 --> 00:05:36,870
+在铝冶炼设施和他们的工作是拿起非常大的水桶像
+in aluminium smelting facilities and their job is to pick up very large buckets like
+
+58
+00:05:36,870 --> 00:05:40,690
+这个你可以在前景中看到这里将填充熔融铝
+this one you can see in the foreground here which will be filled with molten aluminium
+
+59
+00:05:40,690 --> 00:05:46,020
+-8吨熔铝。他们的工作是拿起这个水桶，抬起它并随身携带
+- 8 tonnes of molten aluminium. Their job is to pick up this bucket, lift it and carry
+
+60
+00:05:46,020 --> 00:05:50,340
+它沿着一个公路网络到达这个冶炼综合体内的另一个地方。
+it along a road network to another place within this smelting complex.
+
+61
+00:05:57,240 --> 00:06:01,470
+这台机器最初是由一个坐在驾驶室里操纵的人驾驶的
+This machine was originally driven by a person who would sit in a cab here and manipulate
+
+62
+00:06:01,470 --> 00:06:06,710
+控件，但这台特殊的机器已经变成了一个机器人。为了
+the controls, but this particular machine has been turned into a robot. In order for
+
+63
+00:06:06,710 --> 00:06:11,560
+它是一个有效的机器人，它需要使用许多不同的传感器，以避免它
+it to be an effective robot, it needs to use a number of different sensors so that it avoids
+
+64
+00:06:11,560 --> 00:06:16,030
+击中它不应击中的东西或人，它可以确定它在哪里
+hitting things or people that it shouldn't hit, that it can determine where it is within
+
+65
+00:06:16,030 --> 00:06:20,610
+冶炼厂的复杂，也能够成功地拿起坩埚。
+the smelter complex, and also to be able to successfully pick up the crucible.
+
+66
+00:06:20,610 --> 00:06:25,240
+现在，让我们来看看提货过程。车辆本身就有这个钩子
+Now, let's look at the pick up process. The vehicle itself has got this hook which it
+
+67
+00:06:25,240 --> 00:06:30,890
+需要通过这个句柄输入。所以这是一个相对精确的定位问题
+needs to put in through this handle. So it's a relatively precise positioning problem that
+
+68
+00:06:30,890 --> 00:06:35,250
+机器人需要解决。现在它通过使用一个在这里的相机来做到这一点
+the robot needs to solve. Now it does that by using a camera which is up here on the
+
+69
+00:06:35,250 --> 00:06:40,510
+机器人的桅杆，向下看，并找出这个桶相对于它的位置
+mast of the robot, which looks down and works out where this bucket is with respect to the
+
+70
+00:06:40,510 --> 00:06:44,990
+机器人，机器人移动，以便通过此手柄将此钩子带入。
+robot, and the robot moves so as to bring this hook in through this handle.
+
+71
+00:06:56,360 --> 00:07:00,520
+这个机器人上另一个非常重要的传感器是这个黄色激光扫描设备，和
+Another really important sensor on this robot is this yellow laser scanning device, and
+
+72
+00:07:00,520 --> 00:07:04,070
+实际上有四个，一个在机器人的每个角落，所以它可以看到所有
+there’s actually four of them, one on each corner of the robot so that it can see all
+
+73
+00:07:04,070 --> 00:07:08,750
+绕道而行。这执行两个功能。一个是激光束可以检测到的东西
+the way around. This performs two functions. One is the laser beams can detect something
+
+74
+00:07:08,750 --> 00:07:14,610
+像我一样，一个障碍，它会停止，所以它不会与我发生碰撞。但它也
+like me, an obstacle, and it would then stop so it wouldn't collide with me. But it also
+
+75
+00:07:14,610 --> 00:07:19,690
+执行一项非常重要的导航任务。这就是机器人知道它在哪里的方式
+performs a really important navigation task. This is how the robot knows where it is within
+
+76
+00:07:19,690 --> 00:07:23,750
+复杂的。因此，要了解它是如何工作的，我们将走出去看一个
+the complex. So to understand how that works we are going to go outside and look at one
+
+77
+00:07:23,750 --> 00:07:26,310
+该传感器拾取的导航标记。
+of the navigation markers that this sensor picks up.
+
+78
+00:07:33,900 --> 00:07:38,120
+机器人使用标记系统在环境中工作。在这个特别的
+The robot works out where it is in the environment using a system of markers. In this particular
+
+79
+00:07:38,120 --> 00:07:43,730
+这些反光带条在激光扫描仪上给出了非常明亮的回报
+case these strips of reflective tape which give really bright returns on the laser scanners
+
+80
+00:07:43,730 --> 00:07:49,090
+我们在热金属载体的角落看到的那些黄色装置。现在机器人了
+those yellow devices that we saw on the corners of the hot metal carrier. Now the robot has
+
+81
+00:07:49,090 --> 00:07:54,660
+得到了一张地图，告诉它所有这些标记都位于复合体内。然后呢
+got a map that tells it whereabouts all these markers are within the complex. And then it
+
+82
+00:07:54,660 --> 00:08:00,200
+使用有关机器人感知这些标记的位置的信息，并将其组合在一起
+uses the information about where the robot perceives these markers to be and it combines
+
+83
+00:08:00,200 --> 00:08:04,680
+两者共同确定机器人相对于地图的位置。
+both of those together to determine where the robot is with respect to the map.
+
+84
+00:08:18,120 --> 00:08:22,520
+在这里，我们有另一种移动机器人。这个可以在空中移动。这是一个小的
+Here we have another kind of mobile robot. This one is mobile in the air. It's a small
+
+85
+00:08:22,529 --> 00:08:26,899
+规模直升机-这是业余爱好者所拥有的一种东西。有点像他们的东西
+scale helicopter - it's a sort of thing that a hobbyist would own. Sort of thing that they
+
+86
+00:08:26,899 --> 00:08:32,839
+可能会在周末飞行，他们使用操纵杆控制飞行它需要相当多
+might fly on the weekend and they fly it using joystick controls that requires quite a lot
+
+87
+00:08:32,839 --> 00:08:37,709
+他们的技能，以保持在空中，并去他们想要的地方。
+of skill on their part in order to keep it in the air and go where they want it to go.
+
+88
+00:08:37,709 --> 00:08:41,540
+这台特殊的机器已经转换成机器人，但在我们谈论之前
+This particular machine has been converted into a robot but before we talk about the
+
+89
+00:08:41,540 --> 00:08:45,709
+机器人部分，让我们谈谈直升机机器本身，因为
+robotic part, let’s just talk a little bit about the helicopter machine itself because
+
+90
+00:08:45,709 --> 00:08:47,639
+它们是令人着迷的东西。
+they are fascinating things.
+
+91
+00:08:47,639 --> 00:08:51,370
+这是由一个小型汽油发动机提供动力;这里有一个燃料箱
+This is powered by a small petrol engine; there is a fuel tank down here that carries
+
+92
+00:08:51,370 --> 00:08:57,670
+燃料。主升力来自提供力矢量的主转子
+the fuel. And the main lift force comes from the main rotor that provides a force vector
+
+93
+00:08:57,670 --> 00:09:02,910
+垂直向上，抵消车辆的重量-抵消重力。
+vertically upwards, which counteracts the weight of the vehicle - counteracts gravity.
+
+94
+00:09:02,910 --> 00:09:06,899
+直升机的惊人之处在于它可以将力矢量指向不同的方向。
+The amazing thing with the helicopter is it can point the force vector in different directions.
+
+95
+00:09:06,899 --> 00:09:11,120
+它可以指向前方，它可以指向它，它可以指向侧面，这一切都已完成
+It can point it forward, it can point it backwards, it can point it sideways and that's all done
+
+96
+00:09:11,120 --> 00:09:16,339
+通过这种机制，这里称为旋转斜盘，每次刀片都是这样做的
+by this mechanism here called the swash plate and what that does is every time the blades
+
+97
+00:09:16,339 --> 00:09:21,809
+旋转，它们也围绕它们的轴旋转，以便允许这个力矢量
+rotate, they also rotate this way about their axis so that allows this force vector to be
+
+98
+00:09:21,809 --> 00:09:27,360
+控制并使其具有向前，向后，侧向和悬停的能力。
+controlled and that gives it the ability to move forward, backwards, sideways and hover.
+
+99
+00:09:27,360 --> 00:09:32,100
+在这里的背面还有另一个螺旋桨，它提供了一个阻止整体的力量
+There is another propeller on the back here and that provides a force to stop the whole
+
+100
+00:09:32,100 --> 00:09:35,639
+直升机的身体旋转。
+body of the helicopter rotating around.
+
+101
+00:09:35,639 --> 00:09:40,970
+为了将其变成机器人，我们需要为它添加一些传感器。所以在这个盒子里
+In order to turn it into a robot, we need to add some sensors to it. So in this box
+
+102
+00:09:40,970 --> 00:09:45,769
+在这里，有一些传感器，如GPS，它告诉它在哪里尊重
+down here, there are some sensors such as GPS which tells it where it is with respect
+
+103
+00:09:45,769 --> 00:09:50,410
+致全世界。有一些加速度计和陀螺仪可以告诉它它的方向
+to the world. There are some accelerometers and gyroscopes that tell it its orientation
+
+104
+00:09:50,410 --> 00:09:55,779
+在太空。这里有一个激光高度计，它可以告诉它高于地面的高度
+in space. There is a laser altimeter here which tells it its height above the ground
+
+105
+00:09:55,779 --> 00:10:00,579
+在前面是一个雷达探测它可能飞入的障碍物。
+and in the front is a radar which detects obstacles that it might fly into.
+
+106
+00:10:00,680 --> 00:10:07,880
+因此，像这样的机器人直升机对于许多类型的任务都很有用。它对自动检测很有用：
+So, a robotic helicopter like this is useful for many kinds of tasks. It's useful for automated inspection:
+
+107
+00:10:07,910 --> 00:10:13,120
+也许在农场，它可以检查作物的质量，它可以沿着小溪和水道飞行，
+perhaps on a farm it could inspect the quality of crops, it could fly along creeks and waterways,
+
+108
+00:10:13,120 --> 00:10:16,400
+它可以沿着电线或沿着栅栏线飞行。
+it could fly along electricity lines or along fence lines.
+
+109
+00:10:22,680 --> 00:10:26,200
+在这里我们有另一种类型的移动机器人，但这个机器人可以通过水移动。
+Here we have another type of mobile robot but this robot is mobile through water.
+
+110
+00:10:27,720 --> 00:10:32,840
+我们使用这样的机器人对湖泊等大量水进行科学测量
+We use robots like this to make scientific measurements about large volumes of water like lakes
+
+111
+00:10:32,860 --> 00:10:38,780
+或沿海地区。它看起来很简单，但实际上是一个非常复杂和复杂的机器。
+or coastal zones. It looks quite simple but is actually quite a complex and sophisticated machine.
+
+112
+00:10:40,600 --> 00:10:44,589
+让我们来看看吧。在这一端，我们有一个螺旋桨推动
+Let’s walk through it. Down at this end we have a propeller that pushes the
+
+113
+00:10:44,589 --> 00:10:49,240
+整个机器人穿过水面。它有一些控制鳍，方向舵在这里引导它
+whole robot through the water. It's got some control fins, rudder is here to steer it through
+
+114
+00:10:49,240 --> 00:10:54,319
+水体和这些飞机在这里使它在水柱中上下移动。这个
+the water body and these planes here make it move up and down in the water column. This
+
+115
+00:10:54,319 --> 00:10:58,329
+这里的天线堆栈有一个GPS接收器，所以当它在水面上时就知道了
+antenna stack here has got a GPS receiver so when it's on the water surface it knows
+
+116
+00:10:58,329 --> 00:11:02,069
+在哪里，它有一些其他天线，允许我们与它进行通信
+where it is, and it has got some other antennas that allow us to communicate with it when
+
+117
+00:11:02,069 --> 00:11:07,079
+它出海了。这里我们有声纳传感器-侧扫声纳-它使用声波
+it is out at sea. Here we have sonar sensors - side scan sonar - which uses sound waves
+
+118
+00:11:07,079 --> 00:11:12,860
+当机器人经过时，建立海床的三维地图。上面这儿
+to build up a three dimensional map of the sea bed as the robot passes over it. Up here
+
+119
+00:11:12,860 --> 00:11:17,079
+我们有一些测量海流速度的传感器。即使是机器人
+we have some sensors that measure the speed of the ocean current. Even though the robot
+
+120
+00:11:17,079 --> 00:11:20,759
+正在移动，他们可以测量水柱的速度。在下面还有另一个
+is moving, they can measure the speed of the water column. Underneath there is another
+
+121
+00:11:20,759 --> 00:11:26,470
+传感器测量机器人相对于水柱的速度。在前面
+sensor that measures the speed of the robot with respect to the water column. Up the front
+
+122
+00:11:26,470 --> 00:11:31,389
+这是科学有效载荷，这是我们想要推动的仪器
+here is the scientific payload and this is the instrumentation that we want to push through
+
+123
+00:11:31,389 --> 00:11:36,339
+水可以测量正在发生的事情。所以这里有我们测量的传感器
+the water to make measurements about what's going on. So here we have sensors that measure
+
+124
+00:11:36,339 --> 00:11:40,639
+水的电导率和pH值;测量溶解氧的量;那
+the conductivity and pH of the water; that measure the amount of dissolved oxygen; that
+
+125
+00:11:40,639 --> 00:11:45,439
+测量叶绿素的量;测量蓝绿藻的数量。所以这个科学
+measure the amount of chlorophyll; measures the amount of blue green algae. So this scientific
+
+126
+00:11:45,439 --> 00:11:49,949
+数据与来自其他传感器的导航数据合并
+data is merged with navigational data which comes from the other sensors on board the
+
+127
+00:11:49,960 --> 00:11:52,920
+机器人，所以我们知道这些测量的位置。
+robot, so we know where these measurements have been taken.
+
+128
+00:11:55,960 --> 00:12:00,840
+这个特殊的机器人运行时间长达8小时，每秒移动约2米，
+This particular robot has got a runtime of up to 8 hours, moves about 2 meters per second,
+
+129
+00:12:01,000 --> 00:12:05,000
+所以我们可以一次性测量水中约30公里。
+so we can survey about 30 kilometres in water in a single run.
+
+130
+00:12:10,730 --> 00:12:16,559
+所以我们刚刚看到的是一些非常有趣，令人兴奋和明显有用的东西
+So what we have just seen are a number of really interesting, exciting and clearly useful
+
+131
+00:12:16,559 --> 00:12:21,839
+机器人。这些机器人的形式和功能各不相同，但在这些机器人内部
+robots. These robots differ in their form and in their function, but inside these robots
+
+132
+00:12:21,839 --> 00:12:26,470
+都在做同样的事情。他们正在感知他们的世界，他们正在制定计划
+are all doing the same thing. They are sensing their world, they are making plans and then
+
+133
+00:12:26,470 --> 00:12:31,490
+他们正在为实现目标而采取行动。某些
+they are they are carrying out actions in order to achieve their goals. Some of the
+
+134
+00:12:31,490 --> 00:12:36,779
+我们看到的机器人显然是研究原型，但其他机器人是商业产品。还有这个
+robots that we saw were clearly research prototypes, but others were commercial products. And this
+
+135
+00:12:36,779 --> 00:12:41,959
+真是令人兴奋，因为这是一个全新的技术浪潮的开始，我们有
+is really exciting because this is the beginning of a whole new technological wave and we have
+
+136
+00:12:41,959 --> 00:12:47,290
+在过去见证了许多技术浪潮。引入蒸汽动力，电力，
+witnessed many technological waves in the past. The introduction of steam power, electricity,
+
+137
+00:12:47,290 --> 00:12:53,089
+飞行器，汽车，电力，计算机;所有这些都令人惊讶
+flying machines, automobiles, electricity, computers; all these things were surprising
+
+138
+00:12:53,089 --> 00:12:58,740
+给我们的祖父母和我们的父母。机器人将成为下一个技术
+to our grandparents and to our parents. Robots are just going to be the next technological
+
+139
+00:12:58,740 --> 00:13:03,850
+挥之不去，在不久的将来，我们将在我们的网站上看到它们并不令人惊讶
+wave and in the near future, we are going to be quite unsurprised to see them in our
+
+140
+00:13:03,850 --> 00:13:09,370
+工作场所和我们的家园。所以前方显然非常有趣。
+workplaces and in our homes. So there are clearly really interesting times ahead.
+

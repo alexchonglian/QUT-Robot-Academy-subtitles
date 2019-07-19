@@ -1,0 +1,140 @@
+1
+00:00:04,560 --> 00:00:10,379
+现在让我们看看我们所说的边缘问题。如果我尝试计算像素值
+Let’s look now at what we call the edge problem. If I try and compute the pixel value
+
+2
+00:00:10,379 --> 00:00:16,260
+在该特定坐标处，输入图像中的像素窗口必须看起来像
+at this particular coordinate the window of pixels in the input image has to look like
+
+3
+00:00:16,260 --> 00:00:22,460
+这个。而问题在于，一些输入窗口已经脱离了边缘
+this. And the problem is that some of the input window has fallen off the edge of the
+
+4
+00:00:22,460 --> 00:00:27,429
+图片。因此，有些像素值未定义：窗口需要像素值
+image. So there are pixel values that are undefined: the window requires pixel values
+
+5
+00:00:27,429 --> 00:00:32,970
+在输入图像中不存在。这有几个解决方案：一个解决方案
+that do not exist in the input image. There’s a couple of solutions to this: one solution
+
+6
+00:00:32,970 --> 00:00:38,110
+当窗口从边缘掉落时，我们只是不计算输出值。那
+is we simply don’t compute the output value whenever the window falls off the edge. That
+
+7
+00:00:38,110 --> 00:00:42,760
+将是所有指示的像素，在右侧图像中进行散列。我们刚刚
+would be all the pixels that are indicated, hashed out in the right-hand image. We just
+
+8
+00:00:42,760 --> 00:00:47,700
+无法计算那些。另一种选择是假设图像
+wouldn’t be able to compute those. Another option is to assume that the image
+
+9
+00:00:47,700 --> 00:00:52,900
+由全部设置为零的像素包围。如果我们放一层零像素全部
+is surrounded by pixels that are all set to zero. If we put a layer of zero pixels all
+
+10
+00:00:52,900 --> 00:00:58,060
+然后我们可以在图像边缘确定一个有效的窗口并从有效窗口中确定
+around the edge of the image then we can determine a valid window and from the valid window we
+
+11
+00:00:58,060 --> 00:01:02,970
+可以计算我们的功能。问题是零点有点人为而且它们
+can compute our function. The problem is that the zeros are somewhat artificial and they
+
+12
+00:01:02,970 --> 00:01:09,479
+当然会影响函数返回的结果。另一种技术是复制
+will, of course, influence the result returned by the function. Another technique is to replicate
+
+13
+00:01:09,479 --> 00:01:14,890
+边缘像素。在边缘周围复制这些像素;将它们堆叠在图像周围
+the edge pixels. Make copies of those pixels around the edge; stack them around the image
+
+14
+00:01:14,890 --> 00:01:19,549
+这样我们总是有有效的像素值进入窗口。
+so that we always have valid pixel values going into the window.
+
+15
+00:01:19,549 --> 00:01:24,749
+所有这些选择都有不同的优点和缺点;只是要意识到这个问题
+All of these options have different advantages and disadvantages; just be aware of the problem
+
+16
+00:01:24,749 --> 00:01:29,670
+当您在图像上执行空间操作时，在某些环境中可能会执行空间操作
+when you are performing spatial operations on images and in some environments there may
+
+17
+00:01:29,670 --> 00:01:35,560
+是您可以传递给软件的选项，告诉它如何处理这种边界条件。
+be options you can pass into the software to tell it how to handle this boundary condition.
+
+18
+00:01:35,560 --> 00:01:40,119
+我们可以看到窗口从输入图像边缘掉落的效果为暗
+We can see the effect of the window falling off the edge of the input image as a dark
+
+19
+00:01:40,119 --> 00:01:46,450
+我们的输出图像边缘周围的边框。我们来看看我们计算出的这个图像
+border around the edge of our output image. Let’s have a look at this image we computed
+
+20
+00:01:46,450 --> 00:01:55,319
+不久之前。如果我们在这里放大边缘，我们可以看到相当快速的下降
+a short time ago. If we zoom in on the edge here, we can see quite a rapid drop off in
+
+21
+00:01:55,319 --> 00:02:00,840
+当我们接近图像的边缘时灰度级，这是由于邻域
+grey level as we approach the edge of the image, and this is due to the neighbourhood
+
+22
+00:02:00,840 --> 00:02:08,399
+窗口从输入图像的边缘掉下来。另一件需要注意的是窗口
+window falling off the edge of the input image. Another thing to be aware of is that the window
+
+23
+00:02:08,399 --> 00:02:14,040
+大小总是奇数-它是一个方形窗口，宽度和高度总是奇数
+size is always odd—it is a square window and the width and the height are always odd
+
+24
+00:02:14,040 --> 00:02:20,170
+数字。原因如下：窗口是方形的，它始终居中
+numbers. The reason for this is the following: the window is square and it is always centred
+
+25
+00:02:20,170 --> 00:02:26,720
+在输入像素上。假设边缘大多数像素距离中心H像素。
+on the input pixel. Let’s say that the edge most pixel is H pixels away from the centre.
+
+26
+00:02:26,720 --> 00:02:31,340
+在这种特殊情况下，H将等于2.从中间像素移动，我们步进
+In this particular case, H would be equal to 2. Move from the middle pixel, we step
+
+27
+00:02:31,340 --> 00:02:36,900
+右边两个像素，我们位于窗口边缘的像素处。以便
+two pixels to the right and we are at a pixel which is on the edge of the window. So that
+
+28
+00:02:36,900 --> 00:02:44,820
+然后，窗口宽度是2H+1.H是整数;2H+1总是奇数。
+means, then, that the window width is 2H + 1. H is an integer; 2H + 1 is always an odd number.
+

@@ -1,0 +1,565 @@
+1
+00:00:03,240 --> 00:00:06,839
+让我们想象一下，我们有一个机器人，我们想要根据它来定位它的抓手
+Let’s imagine we have a robot and we want to position its gripper with respect to this
+
+2
+00:00:06,839 --> 00:00:10,740
+紫色三角形，想象一下我们想把夹子直接放在中心上方
+purple triangle and imagine that we want to have the gripper directly above the centre
+
+3
+00:00:10,740 --> 00:00:12,990
+三角形和高度这样的东西。
+of the triangle and at a height something like this.
+
+4
+00:00:12,990 --> 00:00:18,119
+因此，如果我们在机器人的抓手上有一个摄像头，它会看到类似这样的视图。在
+So if we had a camera on the robot’s gripper, it would see a view something like this. In
+
+5
+00:00:18,119 --> 00:00:22,590
+机器人从这里看到的特殊视图，抓手的姿势
+the particular view that the robot is seeing from here, the pose of the gripper with respect
+
+6
+00:00:22,590 --> 00:00:27,250
+对象是隐含的。例如，如果机器人抓手最初处于某个位置
+to the object is implicit. For instance, if the robot gripper was initially in a position
+
+7
+00:00:27,250 --> 00:00:32,000
+像这样，我们可以看到相机获取的图像是完全不同的。所以，如果我们
+like this, we can see that the image acquired by the camera is quite different. So if we
+
+8
+00:00:32,000 --> 00:00:37,450
+可以想出一个控制算法，将视图从此更改为此
+could come up with a control algorithm that would change the view from this to this, then
+
+9
+00:00:37,450 --> 00:00:42,760
+隐含地，机器人将在世界坐标系中执行期望的运动。
+implicitly the robot is going to perform the desired motion in the world coordinate frame.
+
+10
+00:00:42,760 --> 00:00:47,270
+这是我们刚刚讨论过的问题的图形表示。我们有
+Here’s a graphical representation of the problem that we just discussed. We have the
+
+11
+00:00:47,270 --> 00:00:52,260
+对象的初始视图。在这种情况下，我们的对象是一个三角形，它的定义很明确
+initial view of the object. In this case, our object is a triangle and it’s well-defined
+
+12
+00:00:52,260 --> 00:00:57,500
+通过其三个角的坐标。这是对象最初的样子。但
+by the coordinates of its three corners. This is what the object looks like initially. But
+
+13
+00:00:57,500 --> 00:01:00,320
+我希望三角形在我的图像中看起来像这样。
+I want the triangle to look like this in my image.
+
+14
+00:01:00,320 --> 00:01:05,830
+它的三个角的坐标也很明确。所以我们可以定义我们的
+It’s also well-defined by the coordinates of its three corners. So we can define our
+
+15
+00:01:05,830 --> 00:01:12,810
+将对象的视图从此更改为此问题。我们想做的是
+problem as changing the view of the object from this to this. What we want to do is to
+
+16
+00:01:12,810 --> 00:01:19,030
+将黄色圆圈移动到红色圆圈所在的位置。像这样。
+move the yellow circles to where the red circles are. Just like this.
+
+17
+00:01:19,030 --> 00:01:23,790
+为了移动，这些黄色圆圈需要有一定的速度。他们需要有一个
+In order to move, these yellow circles need to have some velocity. They need to have a
+
+18
+00:01:23,790 --> 00:01:29,670
+速度朝向相应的红色圆圈。所以这里是一个黄色的坐标
+velocity towards the corresponding red circle. So here is the coordinate of one of the yellow
+
+19
+00:01:29,670 --> 00:01:34,850
+圆圈，这是它的速度。它需要具有这种速度，这将成为它
+circles and here is its velocity. It needs to have this velocity, which would make it
+
+20
+00:01:34,850 --> 00:01:37,350
+从它所在的地方移动到它需要去的地方。
+move from where it is to where it needs to go.
+
+21
+00:01:37,350 --> 00:01:42,829
+我们已经讨论了像素速度和相机速度之间的关系。它的
+We’ve already discussed a relationship between pixel velocity and camera velocity. It’s
+
+22
+00:01:42,829 --> 00:01:48,780
+由雅可比矩阵图像给出。我们可以将矩阵编写为函数。我叫它
+given by the image Jacobian Matrix. We can write the matrix as a function. I call it
+
+23
+00:01:48,780 --> 00:01:55,470
+Jp和它代表Jacobian的点特征，它是像素的函数
+Jp and that stands for Jacobian for a point feature and it’s a function of the pixel
+
+24
+00:01:55,470 --> 00:02:02,299
+坐标，u和v，这个点在世界上的距离是多少，由资本Z给出。
+coordinate, u and v, also how far the point is away in the world, which is given by capital Z.
+
+25
+00:02:02,299 --> 00:02:08,099
+我们称之为深度。对于三点，请记住我们有一点
+We refer to that as the depth of the point. For three points, remember we have a point
+
+26
+00:02:08,099 --> 00:02:13,940
+在三角形的每个角上，我们可以描述我们想要点一的速度，
+on each corner of the triangle, we can describe the velocity that we want point one to have,
+
+27
+00:02:13,940 --> 00:02:18,560
+点二有三点就有了。我们所做的只是堆叠三个
+point two to have and point three to have. All that we’re doing is just stacking three
+
+28
+00:02:18,560 --> 00:02:24,239
+方程组，一个在另一个之上，并作为公共因子，即相机速度。
+sets of equations, one above the other and as a common factor, which is the camera velocity.
+
+29
+00:02:24,239 --> 00:02:31,480
+在中间，我们有一堆这些图像雅各比人。所以对于三点，关系
+In the middle, we have a stack of these image Jacobians. So for three points, the relationship
+
+30
+00:02:31,480 --> 00:02:37,430
+在像素速度，相机速度之间，看起来像这样。这个中间矩阵，堆栈
+between the pixel velocities, camera velocity, looks like this. This middle matrix, the stack
+
+31
+00:02:37,430 --> 00:02:40,730
+图像雅可比人，现在是六乘六矩阵。
+of image Jacobians, is now a six by six matrix.
+
+32
+00:02:40,730 --> 00:02:44,890
+他们每个人都是二乘六。将它们中的三个堆叠在一起。结果是
+Each of them is two by six. Stack three of them on top of each other. The result is a
+
+33
+00:02:44,890 --> 00:02:50,930
+六乘六矩阵。因为这个矩阵是方形的，我们可以反转它。我们有一段感情
+six by six matrix. Because this matrix is square, we can invert it. We have a relationship
+
+34
+00:02:50,930 --> 00:02:56,310
+看起来像这样。这是所需的相机速度。如果相机移动了
+that looks like this. This is the desired camera velocity. If the camera moved like
+
+35
+00:02:56,310 --> 00:03:02,580
+这样，所有点都将具有所需的像素速度。他们会从哪里搬家
+this, then all the points would have the desired pixel velocity. They would move from where
+
+36
+00:03:02,580 --> 00:03:07,700
+它们是黄色圆圈所示，表示您希望它们用红色圆圈表示的位置。
+they are, shown by the yellow circle, to where you want them to be indicated by the red circle.
+
+37
+00:03:07,700 --> 00:03:12,159
+所以这是我们想要的速度和相机的速度之间的关系
+So this is a relationship between the velocity that we want and the velocity that the camera
+
+38
+00:03:12,159 --> 00:03:17,670
+需要具有以使图像中的更改看起来像这样。这是计算出来的
+needs to have in order to make the change in the image look like this. It’s computed
+
+39
+00:03:17,670 --> 00:03:22,180
+通过图像雅可比矩阵的逆序。
+via the inverse of the stack of image Jacobian matrices.
+
+40
+00:03:22,180 --> 00:03:27,180
+现在让我们看看如何计算所需的像素速度。我们要介绍一下
+Let’s look now at how we might compute the desired pixel velocity. We’re going to introduce
+
+41
+00:03:27,180 --> 00:03:32,920
+一些额外的符号。我将使用星号或星号来表示所需的值
+some extra notation. I’m going to use the asterisk or star to indicate the desired value
+
+42
+00:03:32,920 --> 00:03:38,340
+一定数量。所以我们想要的像素是由U*和V*表示的
+of a quantity. So where we want the pixel to be is indicated by U* and V* and where
+
+43
+00:03:38,340 --> 00:03:44,209
+它当前是，由坐标U，V表示。所以如果我只是区分它们
+it currently is, is indicated by the coordinate U, V. So if I simply take the difference between
+
+44
+00:03:44,209 --> 00:03:49,590
+我希望它在哪里以及它现在在哪里，并以任意比例乘以它
+where I want it to be and where it is now and multiply that by some arbitrary scale
+
+45
+00:03:49,590 --> 00:03:55,480
+因子lambda，我有一个方程，它描述了所需的像素速度。
+factor lambda, I have an equation, which describes the desired pixel velocity.
+
+46
+00:03:55,480 --> 00:04:01,299
+它是一个平行于我所在位置和我想要位置之间的线的向量。我用
+It’s a vector parallel to a line between where I am and where I want to be. I use the
+
+47
+00:04:01,299 --> 00:04:06,030
+下标“我”，因为这是我们可以应用于任何一个的一般关系
+subscript “I” because this is a general relationship that we can apply to any of the
+
+48
+00:04:06,030 --> 00:04:10,930
+我们对象的角点。在这种情况下，它是一个三角形物体，所以“我”变化
+corner points of our object. In this case, it’s a triangular object so “I” varies
+
+49
+00:04:10,930 --> 00:04:13,099
+从一到三。
+from one to three.
+
+50
+00:04:13,099 --> 00:04:17,870
+我介绍一点符号。我用符号“P”表示矢量
+I introduce a bit more notation. I use the symbol “P” which is a vector to represent
+
+51
+00:04:17,870 --> 00:04:22,889
+一个点的坐标，并将其替换为先前的关系，现在我
+the coordinate of a point and substituting that into the previous relationship, now I
+
+52
+00:04:22,889 --> 00:04:27,610
+有一个表达式告诉我相机所需的速度，如此所示
+have an expression that tells me the desired velocity of the camera as indicated by this
+
+53
+00:04:27,610 --> 00:04:34,130
+star下标等于lambda，一个任意游戏，乘以堆栈的倒数
+star subscript is equal to lambda, an arbitrary game, multiplied by the inverse of the stack
+
+54
+00:04:34,130 --> 00:04:39,710
+图像雅可比人，乘以另一个矢量，由另一个矢量组成
+of image Jacobians, multiplied by another vector which is made up of a difference between
+
+55
+00:04:39,710 --> 00:04:42,690
+重点在哪里以及我想要的地方。
+where the point is and where I’d like the point to be.
+
+56
+00:04:42,690 --> 00:04:50,030
+我们来看看这个的模拟。在左边，我们有一个模拟的图像平面。
+Let’s have a look at a simulation of this. On the left, we have a simulated image plane.
+
+57
+00:04:50,030 --> 00:04:56,310
+因此，圆圈表示当前投影对象的位置，星号表示
+So the circles indicate where the object is currently projected and the asterisks indicate
+
+58
+00:04:56,310 --> 00:05:01,400
+在哪里，我希望这些点被投射到。星号是
+where it is that I would like those points to be projected to. The asterisks are the
+
+59
+00:05:01,400 --> 00:05:06,770
+目的地坐标。在右侧，我们可以看到正在发生的事情
+destination coordinates. On the right hand side, we have a 3D view of what’s going
+
+60
+00:05:06,770 --> 00:05:12,550
+上。三个红色球体表示三维空间中的点，即角落
+on. The three red spheres indicate the points in three-dimensional space, the corners of
+
+61
+00:05:12,550 --> 00:05:19,210
+三角形。在蓝色中，我们有一个附加的相机的简单3D表示
+the triangle. In blue, we have a simple 3D representation of a camera with an attached
+
+62
+00:05:19,210 --> 00:05:21,199
+相机坐标框架。
+camera coordinate frame.
+
+63
+00:05:21,199 --> 00:05:25,910
+当我开始模拟时，我们可以看到相机正朝着三个点移动
+When I start the simulation, we can see that the camera is moving towards the three points
+
+64
+00:05:25,910 --> 00:05:29,729
+在世界上，最初它移动很快，然后放慢速度。
+in the world and initially it moves quite quickly and then slows down.
+
+65
+00:05:29,729 --> 00:05:34,350
+这是我们使用的比例控制器的一个特征
+This is a characteristic of the proportional controller that we’re using demonstrates
+
+66
+00:05:34,350 --> 00:05:40,160
+渐近收敛，我们可以看到圆圈，那些世界的当前观点
+asymptotic convergence and we can see that the circles, the current view of those world
+
+67
+00:05:40,160 --> 00:05:45,580
+图像平面上的点移动缓慢但肯定朝着期望的目标移动。
+points on the image plane moving slowly but surely towards the desired goals.
+
+68
+00:05:45,580 --> 00:05:50,759
+发生的事情是简单地指定在图像平面上需要发生的事情
+What’s happened is by simply specifying what needs to happen on the image plane that
+
+69
+00:05:50,759 --> 00:05:55,259
+这个坐标需要移动到这个坐标，在现实世界中，在三维中
+this coordinate needs to move to this coordinate, in the real world, in the three-dimensional
+
+70
+00:05:55,259 --> 00:05:59,919
+世界，任务已经完成。相机已移动到所需的姿势。
+world, the task has been completed. The camera has moved to a desired pose.
+
+71
+00:05:59,919 --> 00:06:04,620
+但是在实现这一任务时，我们没有必要说出任何关于姿势的事情
+But notice in achieving that task, we haven’t had to say anything about the pose of the
+
+72
+00:06:04,620 --> 00:06:10,680
+相机或现实世界中物体的姿势。整个任务已经完成
+camera or the pose of the objects in the real world. This whole task has been completed
+
+73
+00:06:10,680 --> 00:06:15,729
+只需将图像平面上的误差驱动为零即可。
+simply by driving to zero the error on the image plane.
+
+74
+00:06:15,729 --> 00:06:20,060
+这是我们所谓的基于图像的视觉伺服的重要特征。
+This is an important characteristic of what we call image-based visual servoing.
+
+75
+00:06:20,060 --> 00:06:24,690
+我们来看一个具体的例子。这是我初始化的MATLAB工作区
+Let’s look at a concrete example here. This is my MATLAB workspace which I've initialized
+
+76
+00:06:24,690 --> 00:06:26,030
+有一些变数。
+with a few variables.
+
+77
+00:06:26,030 --> 00:06:30,630
+我用我们以前见过的默认设置创建了一个相机对象。我已定义了
+I've created a camera object with the default settings we've seen before. I've defined the
+
+78
+00:06:30,630 --> 00:06:36,530
+世界坐标中三角形的顶点，它们由列的代表
+vertices of a triangle in world coordinates and they’re represented by the columns of
+
+79
+00:06:36,530 --> 00:06:41,340
+矩阵“P”和我创造了一个均匀的变换，代表了姿势
+the matrix “P” and I have created a homogeneous transformation which represents the pose of
+
+80
+00:06:41,340 --> 00:06:47,449
+世界空间内的摄像机，我通过定义位置和旋转来完成
+the camera within the world space and I've done that by defining a position and rotation
+
+81
+00:06:47,449 --> 00:06:52,910
+在这里通过这种均匀变换给出的X，Y和Z轴周围。
+around the X, Y and Z axes given by this homogeneous transformation here.
+
+82
+00:06:52,910 --> 00:06:58,360
+因此，我可以使用绘图将世界点的投影绘制到图像平面上
+So I can plot the projection of the world points on to the image plane, using the plot
+
+83
+00:06:58,360 --> 00:07:03,650
+相机对象的方法，传递三个世界点的坐标，
+method of the camera object, pass in the coordinates of the three world points, the
+
+84
+00:07:03,650 --> 00:07:10,669
+矩阵P的列和我将告诉对象相机姿势处于
+columns of the matrix P and I’m going to tell the object that the camera pose is at
+
+85
+00:07:10,669 --> 00:07:18,210
+这个变量在这里，T-cam。现在我们看到这三个点在图像上的投影
+this variable here, T-cam. Now we see the projection of those three points on the image
+
+86
+00:07:18,210 --> 00:07:22,710
+平面。我们可以看到相机离三角形有一段距离了
+plane. We can see that the camera is some distance away from the triangle and it’s
+
+87
+00:07:22,710 --> 00:07:25,479
+有点倾斜地看着三角形。
+looking at the triangle somewhat obliquely.
+
+88
+00:07:25,479 --> 00:07:29,930
+绘图方法返回了图像平面上的投影，并由它们给出
+The plot method has returned the projections on the image plane and they’re given by
+
+89
+00:07:29,930 --> 00:07:35,930
+矩阵的列很少b。现在我可以用这三个来计算雅可比图像
+the columns of the matrix little b. Now I can compute an image Jacobian from these three
+
+90
+00:07:35,930 --> 00:07:44,710
+点。我通过再次使用visjac_p方法，视觉雅可比行为点特征来做到这一点
+points. I do that by again using the visjac_p method, visual Jacobian for point features
+
+91
+00:07:44,710 --> 00:07:50,930
+而且我要传递点特征，小p，这包含三点和
+and I’m going to pass in the point features, little p and this contains three points and
+
+92
+00:07:50,930 --> 00:07:55,360
+我要指出所有的点都距离相机5米。
+I’m going to specify that all the points are five meters away from the camera.
+
+93
+00:07:55,360 --> 00:07:59,550
+这不是严格意义上的。我实际上并不知道这些点有多远，但对于
+This is not strictly true. I don’t actually know how far away the points are but for the
+
+94
+00:07:59,550 --> 00:08:03,039
+那个时刻和我在一起，我们只会把它放在第五位。
+moment bare with me and we’ll just put in the number five.
+
+95
+00:08:03,039 --> 00:08:08,300
+现在我们为三个点中的每个点都有视觉雅可比。每个点都有两个
+Now we have the visual Jacobian’s for each of the three points. Each point has a two
+
+96
+00:08:08,300 --> 00:08:14,199
+通过六个图像雅可比行列式，现在它们都被堆叠起来，结果是六乘六矩阵
+by six image Jacobian and now they’re all stacked up so the result is a six by six matrix
+
+97
+00:08:14,199 --> 00:08:19,970
+在工作区中。这是我可以反转的矩阵。这是一个方阵。如果我
+in the workspace. This is a matrix that I could invert. It’s a square matrix. If I
+
+98
+00:08:19,970 --> 00:08:26,780
+使用此矩阵乘以所需图像平面速度的矢量，结果将是
+use this matrix to multiply a vector of desired image plane velocities, the result will be
+
+99
+00:08:26,780 --> 00:08:32,700
+相机为实现这一目标所需的空间速度。
+the spatial velocity that the camera needs in order to achieve that.
+
+100
+00:08:32,700 --> 00:08:38,390
+总而言之，基于图像的视觉伺服就是用来描述任务
+So in summary, image-based visual servoing is all about describing a task in terms of
+
+101
+00:08:38,390 --> 00:08:44,169
+我们希望点如何在图像中移动。然后我们构造一个移动的简单控制器
+how we want points to move in the image. We then construct a simple controller that moves
+
+102
+00:08:44,169 --> 00:08:49,019
+相机，以创建我们需要的点运动。
+the camera so as to create the point motion that we require.
+
+103
+00:08:49,019 --> 00:08:52,990
+随着这些点从现在的位置移动到我们想要的位置，这是有用的
+As the points move from where they are now to where we’d like them to be, the useful
+
+104
+00:08:52,990 --> 00:08:59,709
+任务是在3D世界中实现的。但是这个任务没有用姿势来描述
+task is achieved in the 3D world. But the task is not described in terms of pose of
+
+105
+00:08:59,709 --> 00:09:07,019
+物体或机器人。事实上，任务隐含在我们在图像平面上所需的运动中。
+objects or of the robot. The task is in fact implicit in the motion that we require on the image plane.
+
+106
+00:09:07,019 --> 00:09:11,430
+在某些方面，我们谈论的是相机的相对运动。我们正在指导
+In some ways, we’re talking about relative motion of the camera. We’re steering the
+
+107
+00:09:11,430 --> 00:09:16,480
+相机朝向目标位置。它没有用绝对值来定义。我们没有
+camera towards the goal location. It’s not defined in terms of absolutes. We don’t
+
+108
+00:09:16,480 --> 00:09:21,430
+需要知道相机的姿势或物体相对于任何类型的姿势
+need to know the pose of the camera or the pose of the objects with respect to any kind
+
+109
+00:09:21,430 --> 00:09:23,570
+世界坐标系。
+of world coordinate frame.
+
+110
+00:09:23,570 --> 00:09:27,940
+这种技术在我们得到三分的特殊情况下非常有效
+This technique works really well in this particular case where we have got three points in the
+
+111
+00:09:27,940 --> 00:09:33,570
+现场。它不仅仅适用于一两点，而且在一个案例中要复杂得多
+scene. It doesn't work for just one or two points and it’s much more complex in a case
+
+112
+00:09:33,570 --> 00:09:35,740
+我们有四个或更多点。
+where we have four or more points.
+
+113
+00:09:35,740 --> 00:09:41,020
+这肯定是可行的，但有点复杂，超出了这个特定讲座的范围。
+It’s certainly doable but a little more complicated and beyond the scope of this particular lecture.
+

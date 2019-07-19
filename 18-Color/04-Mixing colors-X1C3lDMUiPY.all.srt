@@ -1,0 +1,400 @@
+1
+00:00:03,250 --> 00:00:07,470
+在我们很小的时候，我们都开始混合颜色，我们学会了如何结合
+We all started mixing colors when we were very young, and we learned how to combine
+
+2
+00:00:07,470 --> 00:00:12,559
+不同颜色的油漆，以产生我们想要的颜色。
+different colors of paint to produce colors that we wanted.
+
+3
+00:00:12,559 --> 00:00:15,170
+对于光明，规则有点不同。
+For light the rules are a little bit different.
+
+4
+00:00:15,170 --> 00:00:20,020
+如果我发出红光和蓝光，那两盏灯相交的地方我会去
+If I shine a red light and a blue light, where those two lights intersect I’m going to
+
+5
+00:00:20,020 --> 00:00:22,010
+有一种紫色。
+have a sort of purply color.
+
+6
+00:00:22,010 --> 00:00:26,699
+红灯与绿灯相交的地方，红灯和绿灯混合在一起，我是
+Where the red light intersects a green light, where the red and green lights mix, I’m
+
+7
+00:00:26,699 --> 00:00:29,220
+将形成黄色。
+going to form the color yellow.
+
+8
+00:00:29,220 --> 00:00:33,500
+绿光和蓝光重叠的地方，我将形成一种颜色
+And where the green light and the blue light overlap I’m going to form a color we might
+
+9
+00:00:33,500 --> 00:00:34,550
+打电话给aqua。
+call aqua.
+
+10
+00:00:34,550 --> 00:00:38,800
+所有三种颜色重叠的地方都有白色。
+Where all three colors overlap we have white.
+
+11
+00:00:38,800 --> 00:00:44,770
+如果我们将这些红色，绿色和蓝色灯光视为我们的主要光源，那么通过混合
+If we consider these red, green and blue lights as our primary light sources then by mixing
+
+12
+00:00:44,770 --> 00:00:49,239
+它们以不同的组合形成不同的颜色。
+them in different combinations we can form different colors.
+
+13
+00:00:49,239 --> 00:00:52,180
+在这里，我们只看了几个简单的组合。
+Here we’ve looked at just a few simple combinations.
+
+14
+00:00:52,180 --> 00:00:59,059
+让我们来看看我们的红色，绿色和蓝色原色的一些更复杂的组合。
+Let’s look at some more sophisticated combinations of our red, green and blue primary colors.
+
+15
+00:00:59,059 --> 00:01:04,931
+此表显示了我们如何从特定数量的文件中创建多个命名颜色
+This table shows how we can create a number of named colors from certain amounts of the
+
+16
+00:01:04,931 --> 00:01:07,450
+红色，绿色和蓝色的原色。
+red, green and blue primaries.
+
+17
+00:01:07,450 --> 00:01:12,060
+这里表示的数字是我们的无符号8位整数
+The numbers that are represented here are our unsigned 8-bit integer numbers that we’ve
+
+18
+00:01:12,060 --> 00:01:16,830
+之前遇到过，所以它们的范围在0到255之间。
+encountered previously, so they range between 0 and 255.
+
+19
+00:01:16,830 --> 00:01:22,530
+因此，例如，如果我们想要创建一种名为镉红深的颜色，我们需要
+So, for instance, if we wanted to create the color called cadmium red deep, we’d need
+
+20
+00:01:22,530 --> 00:01:24,860
+红色227。
+a red amount of 227.
+
+21
+00:01:24,860 --> 00:01:31,170
+因为最大值是255，所以这是相当多的红色;绿色只有23个
+So that’s a fair amount of red, given that the maximum value is 255; only 23 of green
+
+22
+00:01:31,170 --> 00:01:32,590
+和蓝色的13。
+and 13 of blue.
+
+23
+00:01:32,590 --> 00:01:35,920
+所以这是一种主要由红色构成的颜色。
+So this is a color that’s made up dominantly of red.
+
+24
+00:01:35,920 --> 00:01:40,119
+让我们来看看这里可能更平衡的另一种颜色......让我们来吧
+Let’s have a look at another color here that’s perhaps a bit more balanced … let’s
+
+25
+00:01:40,119 --> 00:01:41,180
+看看粉红色。
+look at hot pink.
+
+26
+00:01:41,180 --> 00:01:46,590
+它包含最大可能的红色，以及相当数量的绿色和公平
+It contains the maximum possible amount of red, and a fair amount of green and a fair
+
+27
+00:01:46,590 --> 00:01:48,020
+蓝色的量。
+amount of blue.
+
+28
+00:01:48,020 --> 00:01:49,270
+所以这是一个调色板。
+So this is a palette.
+
+29
+00:01:49,270 --> 00:01:56,369
+我们可以混合来自任意数量的红色，绿色和蓝色的任意颜色，并且经常
+We can mix an arbitrary color from an arbitrary amount of red, green and blue, and frequently
+
+30
+00:01:56,369 --> 00:01:59,490
+我们想给那个颜色一个人性化的名字。
+we’d like to give that color a human friendly name.
+
+31
+00:01:59,490 --> 00:02:04,270
+我们可以使用工具箱函数colorname演示颜色名称查找。
+We can demonstrate color name lookup using the toolbox function colorname.
+
+32
+00:02:04,270 --> 00:02:11,870
+让我们查看颜色栗色的定义，在这里我们看到红色的数量，
+Let’s look up the definition of the color maroon, and here we see the amount of red,
+
+33
+00:02:11,870 --> 00:02:15,480
+绿色和蓝色需要创建颜色栗色。
+green and blue required to create the color maroon.
+
+34
+00:02:15,480 --> 00:02:19,209
+这里的这些数字就是我们所说的标准化三刺激值。
+These numbers here are what we call normalised tri-stimulus values.
+
+35
+00:02:19,209 --> 00:02:21,730
+也就是说，它们介于0和1之间。
+That is, they lie between 0 and 1.
+
+36
+00:02:21,730 --> 00:02:29,340
+所以在这种情况下，红色通道中的0.4表示红色为40％，绿色只有2％，
+So in this case, 0.4 in the red channel means there’s 40% red, there’s only 2 % green,
+
+37
+00:02:29,340 --> 00:02:30,420
+也许28％是蓝色的。
+and perhaps 28 % blue.
+
+38
+00:02:30,420 --> 00:02:34,540
+该功能也可以执行反函数。
+This function can perform the inverse function as well.
+
+39
+00:02:34,540 --> 00:02:42,910
+例如，如果我的颜色为0.1的红色，0.2的绿色和0.3的蓝色，那就是
+For instance, if I had a color that had 0.1 of red, 0.2 of green and 0.3 of blue, it’s
+
+40
+00:02:42,910 --> 00:02:45,540
+颜色相当深，略带蓝色。
+a fairly dark color and a bit bluish.
+
+41
+00:02:45,540 --> 00:02:51,370
+它正在抬头，它告诉我这是一种叫午夜蓝的颜色。
+It’s looking up and it’s telling me it’s the color called midnight blue.
+
+42
+00:02:51,370 --> 00:02:56,520
+此函数有一个包含八到九百种不同颜色的数据库文件。
+This function has got a database file that contains eight to nine hundred different colors.
+
+43
+00:02:56,520 --> 00:03:02,340
+我们也可以使用这种机制来创建彩色图像，为此我们需要拉动
+We could also use this mechanism to create a color image, and to do that we need to pull
+
+44
+00:03:02,340 --> 00:03:03,420
+一点点技巧。
+a little bit of a trick.
+
+45
+00:03:03,420 --> 00:03:06,489
+所以我要创建一个像素图像。
+So I’m going to create a single pixel image.
+
+46
+00:03:06,489 --> 00:03:08,930
+使用MATLAB函数。
+Use the MATLAB function ones.
+
+47
+00:03:08,930 --> 00:03:12,890
+我要创建一个包含一行一列和三个平面的图像。
+I’m going to create an image with one row and one column, and three planes.
+
+48
+00:03:12,890 --> 00:03:15,830
+它看起来像这样。
+And it looks something like this.
+
+49
+00:03:15,830 --> 00:03:26,879
+要设置像素，我要将第1行，第1列和所有平面设置为栗色。
+To set the pixel, I’m going to set row 1, column 1, and all planes to the color of maroon.
+
+50
+00:03:26,879 --> 00:03:33,580
+所以就是这样，我创造了一个像素图像，如果我现在显示，我有我的
+So there it is, I’ve created a single pixel image, and if I display that now, I have my
+
+51
+00:03:33,580 --> 00:03:37,010
+单像素图像，一个坚固的栗色大块。
+single pixel image, a big solid block of maroon.
+
+52
+00:03:37,010 --> 00:03:43,150
+一种非常常见的方式可视化我们混合红色，绿色和蓝色原色的方式是什么
+A very common way of visualising the way we mix red, green and blue primaries is what
+
+53
+00:03:43,150 --> 00:03:45,049
+我们称之为彩色立方体。
+we call the color cube.
+
+54
+00:03:45,049 --> 00:03:48,940
+所以想象我们有一个三维坐标系。
+So imagine that we have a three dimensional coordinate system.
+
+55
+00:03:48,940 --> 00:03:51,940
+三个轴：红色轴，绿色轴和蓝色轴。
+Three axes: a red axis, a green axis and a blue axis.
+
+56
+00:03:51,940 --> 00:03:57,019
+我们将在这里介绍彩色立方体，以及我们在这个角落看到的内容
+We’re going to introduce here the color cube, and what we see here in this corner
+
+57
+00:03:57,019 --> 00:04:01,940
+当我们有最大量的红色但没有蓝色或没有绿色时，我们就像你一样
+is when we have the maximum amount of red but no blue or no green, and we see, as you
+
+58
+00:04:01,940 --> 00:04:03,909
+期待，红色。
+would expect, red.
+
+59
+00:04:03,909 --> 00:04:09,110
+在这里，我们有最大量的蓝色，但没有红色或没有绿色，我们有
+Up here, where we have the maximum amount of blue but no red or no green, we have the
+
+60
+00:04:09,110 --> 00:04:10,610
+颜色蓝色。
+color blue.
+
+61
+00:04:10,610 --> 00:04:14,360
+这个角落我们有最大的绿色，没有红色，没有蓝色。
+This corner we have maximum green, no red, no blue.
+
+62
+00:04:14,360 --> 00:04:16,239
+我们看到颜色为绿色。
+We see the color green.
+
+63
+00:04:16,239 --> 00:04:21,880
+工具箱中有一个文件允许我们显示颜色立方体：函数
+There is a file in the toolbox that allows us to display the color cube: the function
+
+64
+00:04:21,880 --> 00:04:23,389
+被称为rgbcube。
+is called rgbcube.
+
+65
+00:04:23,389 --> 00:04:24,810
+在这里。
+And here it is.
+
+66
+00:04:24,810 --> 00:04:29,070
+现在这是一个三维结构，所以我们想用鼠标进行旋转。
+Now this is a three dimensional structure so we want to do a rotation with a mouse.
+
+67
+00:04:29,070 --> 00:04:34,000
+我要向上移动并选择3D旋转按钮，然后用鼠标抓住它
+I’m going to move up here and select the 3d rotate button, and I grab it with my mouse
+
+68
+00:04:34,000 --> 00:04:36,270
+我可以旋转它。
+and I can rotate it.
+
+69
+00:04:36,270 --> 00:04:41,770
+所以它是一个三维坐标系，这里是原点。
+So it is a three dimensional coordinate system, and down here is the origin.
+
+70
+00:04:41,770 --> 00:04:44,900
+这是红色，绿色和蓝色都为0的地方。
+This is where the amounts of red, green and blue are all 0.
+
+71
+00:04:44,900 --> 00:04:49,720
+所以我们可以在这里看到这个黑暗的角落，那里有0量的红色，绿色和
+So we can see this dark corner here, that’s where there is 0 amount of red, green and
+
+72
+00:04:49,720 --> 00:04:50,720
+蓝色。
+blue.
+
+73
+00:04:50,720 --> 00:04:54,370
+在斜对角的角落，我们可以看到最大量的红色，绿色，
+On the diagonally opposite corner we can see where there is a maximum amount of red, green,
+
+74
+00:04:54,370 --> 00:04:57,120
+和蓝色，那是白色的角落。
+and blue, and that’s the white corner.
+
+75
+00:04:57,120 --> 00:05:02,690
+如果我们看一下这个立方体的不同面，我们可以看到这里的面貌基本上就是这样
+If we look at the different faces of this cube, we can see that this face here is basically
+
+76
+00:05:02,690 --> 00:05:06,120
+看着红色和蓝色的混合物。
+looking at mixtures of red and blue.
+
+77
+00:05:06,120 --> 00:05:10,560
+这张脸在这里看着蓝色和绿色的混合物。
+This face here is looking at mixtures of blue and green.
+
+78
+00:05:10,560 --> 00:05:13,610
+当然，这只是立方体的表面。
+Of course, this is just the surface of the cube.
+
+79
+00:05:13,610 --> 00:05:19,140
+如果我们能够看到立方体内部，我们会发现无数的颜色
+If we were able to look inside the cube we would find an infinite number of colors in
+
+80
+00:05:19,140 --> 00:05:22,990
+那里也是;我们从外面看不到的颜色。
+there as well; colors that we can’t see from the outside.
+

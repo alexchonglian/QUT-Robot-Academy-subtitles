@@ -1,0 +1,500 @@
+1
+00:00:03,340 --> 00:00:07,319
+现在我们将考虑相机正在观察一堆点和这些点的情况
+Now we will consider the case where a camera is looking at a bunch of points and these
+
+2
+00:00:07,319 --> 00:00:12,480
+所有点都在飞机上。飞机有自己的坐标系，我们用它来表示
+points all lie on a plane. The plane has got its own coordinate system which we denote
+
+3
+00:00:12,480 --> 00:00:18,250
+通过坐标框架零。显然，这个平面上的每个点都有一个Z坐标
+by coordinate frame zero. Clearly every point that lies on this plane has got a Z coordinate
+
+4
+00:00:18,250 --> 00:00:23,880
+零，这在这里显示。坐标大写Z乘以所有元素
+of zero, which is shown down here. The coordinate capital Z multiples all of the elements in
+
+5
+00:00:23,880 --> 00:00:28,859
+我们的相机矩阵的第三列，但因为它是零，我们可以有效地删除
+the third column of our camera matrix but because it's zero we can effectively remove
+
+6
+00:00:28,859 --> 00:00:34,649
+矩阵中的那一列，我们可以从世界坐标向量中删除该行。
+that column from the matrix and we can remove that row from the world coordinate vector.
+
+7
+00:00:34,649 --> 00:00:39,770
+我们现在剩下的是一个三乘三矩阵，我们将这三个三个参考
+What we're left with now is a three by three matrix and we'll refer to this three by three
+
+8
+00:00:39,770 --> 00:00:42,750
+矩阵作为“平面同构”。
+matrix as a "Planar Homography".
+
+9
+00:00:42,750 --> 00:00:47,879
+就像相机矩阵一样，有一个任意比例因子，我们可以再次
+Just as for the camera matrix, there is an arbitrary scale factor and once again we can
+
+10
+00:00:47,879 --> 00:00:52,270
+通过选择我们要去的一个特定元素来标准化单应矩阵
+normalize the homography matrix by choosing one particular element that we're going to
+
+11
+00:00:52,270 --> 00:00:57,850
+设置为值1。所以这三个三个矩阵，我们有一个元素
+set to the value of one. So this three by three matrix, it's got one element that we've
+
+12
+00:00:57,850 --> 00:01:03,090
+设置为1，单应矩阵中剩余8个唯一数字。和我们
+set to one, there are eight unique numbers remaining in the homography matrix. And we
+
+13
+00:01:03,090 --> 00:01:09,380
+如果我们有四个世界点和相应的位置，则可以估计单应矩阵
+can estimate the homography matrix if we have four world points and the corresponding position
+
+14
+00:01:09,380 --> 00:01:13,080
+这些点在我们相机的图像平面上。
+of those points on the image plane of our camera.
+
+15
+00:01:13,080 --> 00:01:18,299
+所以对应点的概念，想象我有两架飞机，其中一架也许是
+So the concept of corresponding points, imagine that I've got two planes, one is perhaps the
+
+16
+00:01:18,299 --> 00:01:22,380
+相机的图像平面，另一个可能是世界上的物理平面那个
+image plane of the camera, the other might be a physical plane in the world that the
+
+17
+00:01:22,380 --> 00:01:28,460
+相机正在看着。或者，第一个可以是世界上飞机的视图
+camera is looking at. Alternatively the first could be a view of a plane in the world and
+
+18
+00:01:28,460 --> 00:01:33,710
+第二幅图像可能是世界上同一平面的另一个视图，我们已经移动了
+the second image could be another view of the same plane in the world, where we've moved
+
+19
+00:01:33,710 --> 00:01:35,680
+两个视图之间的摄像头。
+the camera between the two views.
+
+20
+00:01:35,680 --> 00:01:41,290
+现在我们在每个飞机上都有四个点，我将用下标来表示
+Now we've got four points in each of these planes, which I'm going to denote by the subscripts
+
+21
+00:01:41,290 --> 00:01:45,860
+一到四，我打算将这些点的坐标安排到
+one through four and I'm going to arrange the coordinates of those points into the
+
+22
+00:01:45,860 --> 00:01:51,720
+矩阵的列。但是这里真正重要的是这些列的排序。我们
+columns of a matrix. But what's really important here is the ordering of these columns. We
+
+23
+00:01:51,720 --> 00:01:58,040
+必须确保所谓的通信。P1和Q1必须对应于同一点
+have to ensure what's called correspondence. P1 and Q1 must correspond to the same point
+
+24
+00:01:58,040 --> 00:02:04,939
+在世界上，它适用于P2，P3和P4。每个点P和对应点
+in the world and so it goes for P2, P3 and P4. Each point P and the corresponding point
+
+25
+00:02:04,939 --> 00:02:08,800
+Q必须指向世界上的同一点。
+Q must refer to the same point in the world.
+
+26
+00:02:08,800 --> 00:02:12,450
+让我们看看如何使用这种技术来执行某些操作的实际示例
+Let's look at a practical example of how we can use this technique to perform something
+
+27
+00:02:12,450 --> 00:02:17,220
+称为“透视矫正”。现在这是我拍摄的巴黎圣母院的照片
+called "Perspective Rectification". Now this is a picture that I took of the Notre Dame
+
+28
+00:02:17,220 --> 00:02:19,239
+在巴黎的大教堂。
+Cathedral in Paris.
+
+29
+00:02:19,239 --> 00:02:23,760
+这是一个非常高的大教堂，所以我在前面的地面上，仰视并拍照。
+It's a very tall cathedral, so I'm on the ground in front, looking up and taking a picture.
+
+30
+00:02:23,760 --> 00:02:28,629
+很明显，因为我的相机向上倾斜，我的前方视野非常扭曲
+And clearly because my camera is tilted upwards I've got a very distorted view of the front
+
+31
+00:02:28,629 --> 00:02:33,060
+大教堂但我知道有关大教堂的一些事情，特别是我知道
+of the cathedral. But I know some things about cathedrals and particularly I know that the
+
+32
+00:02:33,060 --> 00:02:36,550
+大教堂前面最有可能是一架飞机。
+front of the cathedral is most likely to be a plane.
+
+33
+00:02:36,550 --> 00:02:41,489
+因此，如果我在大教堂前面选择四个点，我相信所有这些都在一个单一的位置
+So if I pick four points on the front of the cathedral that I believe all lie in a single
+
+34
+00:02:41,489 --> 00:02:48,670
+我可以将它们标记为P1到P4。但我知道那些点在非扭曲
+plane and I can label them P1 through to P4. But I know that those points in a non-distorted
+
+35
+00:02:48,670 --> 00:02:54,860
+图像将在图像平面中形成一个矩形，而不是一个梯形。我可以计算图像平面
+image will form a rectangle in the image plane, not a trapezoid. I can compute the image plane
+
+36
+00:02:54,860 --> 00:03:02,099
+坐标Q1，Q2，Q3和Q4，以便在图像中有一个矩形。所以，如果我有
+coordinates Q1, Q2, Q3 and Q4 in order to have a rectangle in the image. So if I have
+
+37
+00:03:02,099 --> 00:03:08,590
+现在有两套对应点;我有积分P1到P4，我有积分
+now two sets of corresponding points; I have the points P1 through P4 and I have the points
+
+38
+00:03:08,590 --> 00:03:12,569
+从Q1到Q4，我可以计算出单应性。
+Q1 through Q4, then I can compute a homography.
+
+39
+00:03:12,569 --> 00:03:18,620
+因此，如果我建立一个矩阵P，其中包含点P1到P4和列的列
+So if I build up a matrix P that contains as columns the points P1 through P4 and the
+
+40
+00:03:18,620 --> 00:03:25,799
+矩阵Q，其列是Q1到Q4的点，然后我可以计算单应性。
+matrix Q, whose columns are the points Q1 through Q4, then I can compute a homography.
+
+41
+00:03:25,799 --> 00:03:30,580
+它在这里显示，在MATLAB中非常简单。现在我有了这个单应性
+And it's shown here and very simple to do in MATLAB. Now that I have this homography
+
+42
+00:03:30,580 --> 00:03:37,450
+矩阵H，我可以用它来将我原始图像中的任何点P转换为任意点，Qin
+matrix H, I can use it to transform any point, P, in my original image, to any point, Q in
+
+43
+00:03:37,450 --> 00:03:39,290
+第二张图片。
+a second image.
+
+44
+00:03:39,290 --> 00:03:43,909
+这就是第二张图片的样子。我们看到大教堂已被拉直了
+And this is what the second image looks like. We see that the cathedral has been straightened
+
+45
+00:03:43,909 --> 00:03:48,739
+起来。我们可以看到大教堂的垂直边缘实际上是垂直线
+up. We can see that the vertical edges of the cathedral are in fact vertical lines in
+
+46
+00:03:48,739 --> 00:03:52,879
+图片。重要的是要记住，在这方面做出了非常强烈的假设
+the image. It's important to remember that there's a very strong assumption made in this
+
+47
+00:03:52,879 --> 00:03:57,640
+这个过程就是图像中的所有点都在一个平面上。
+process and that is that all of the points in the image lie on a plane.
+
+48
+00:03:57,640 --> 00:04:02,599
+当然，这张照片中的许多点都位于大教堂的正面，
+Certainly many of the points in this image lay on the frontal plane of the cathedral,
+
+49
+00:04:02,599 --> 00:04:08,269
+但不是全部都这样做。如果我们看看这里的点，这些点位于钟楼的边缘，
+but not all do. If we look at points around here, which are on the edges of the bell towers,
+
+50
+00:04:08,269 --> 00:04:13,580
+那么他们就不会躺在正面上而且转型也不正确
+then they do not lay on the frontal plane and the transformation won't be correct for
+
+51
+00:04:13,580 --> 00:04:18,120
+他们。它会在图像的那一部分引入失真。你无法得到任何东西
+them. It will introduce a distortion in that part of the image. You can't get anything
+
+52
+00:04:18,120 --> 00:04:23,860
+免费，我们当然证明了大教堂的几何正确性。
+for free, we've certainly proved that geometric correctness of the bulk of the cathedral.
+
+53
+00:04:23,860 --> 00:04:28,139
+鉴于我使用MATLAB计算了矩阵H，那么这是一个非常简单的问题
+Given that I've computed the matrix H using MATLAB, then it's a very simple matter to
+
+54
+00:04:28,139 --> 00:04:34,720
+将单应性应用于图像中的每个点。我们通过一个过程来执行
+apply the homography to every single point in the image. And we perform that by a process
+
+55
+00:04:34,720 --> 00:04:37,270
+被称为“形象翘曲”。
+known as "Image Warping".
+
+56
+00:04:37,270 --> 00:04:43,290
+要做图像变形，我们可以看到输出图像和输出中的每个像素
+To do image warping, we can see that every single pixel in the output image and the output
+
+57
+00:04:43,290 --> 00:04:49,240
+在这种情况下，图像是几何校正的，大教堂的矫正图像。
+image in this case is the geometrically correct, the rectified image of the cathedral.
+
+58
+00:04:49,240 --> 00:04:54,750
+为了说明这一点，我将在输出图像中选择一个特定点
+To illustrate this I’m going to choose just one particular point in the output image and
+
+59
+00:04:54,750 --> 00:05:01,330
+它是坐标600,100处的像素。现在，如果我知道像素坐标，我想
+it’s the pixel at coordinate 600,100. Now if I know that pixel coordinate, I want to
+
+60
+00:05:01,330 --> 00:05:06,110
+尝试找出输入图像中相应的像素坐标。
+try and work out what's the corresponding pixel coordinate in the input image.
+
+61
+00:05:06,110 --> 00:05:11,280
+单应性是从原始图像到新图像的映射，因此为了映射
+The homography is a mapping from the original image to the new image, so in order to map
+
+62
+00:05:11,280 --> 00:05:16,180
+这个坐标我需要使用单应性的逆，这给了我坐标
+this coordinate I need to use the inverse of the homography and that gives me the coordinate
+
+63
+00:05:16,180 --> 00:05:23,630
+在输入图像中的对应点，它的坐标为757和51。
+of the corresponding point in the input image and it's got a coordinate of 757 and 51.
+
+64
+00:05:23,630 --> 00:05:31,310
+然后，图像变形的工作方式是在坐标757,51处找到像素
+The way image warping works then is we go and find the pixel at coordinate 757, 51
+
+65
+00:05:31,310 --> 00:05:36,780
+我们取这个像素值，然后将它插入到坐标600处的新图像中，
+and we take that pixel value and we insert it into the new image at coordinate 600,
+
+66
+00:05:36,780 --> 00:05:44,090
+因此，对于输出图像中的每个像素，我们计算出来自哪里
+100. So for every single pixel in the output image, we work out where it comes from in
+
+67
+00:05:44,090 --> 00:05:45,770
+输入图像。
+the input image.
+
+68
+00:05:45,770 --> 00:05:50,949
+您可以在此处看到输入图像中的坐标是小数且需要的
+You can see here that the coordinates in the input image are fractional and that requires
+
+69
+00:05:50,949 --> 00:05:56,530
+一种称为图像插值的技术，用于查找此处的实际像素值
+a technique called image interpolation to find what is the actual pixel value at this
+
+70
+00:05:56,530 --> 00:06:02,449
+特定的分数坐标。简而言之，这是图像变形的过程。
+particular fractional coordinate. In a nutshell, that's the process of image warping.
+
+71
+00:06:02,449 --> 00:06:08,199
+图像变形的另一个应用是现在在游泳电视广播中经常使用的效果，
+Another application of image warping is this often used effect now in swimming telecasts,
+
+72
+00:06:08,199 --> 00:06:14,400
+我们拿旗帜和竞争对手的名字，我们将它们叠加在车道上
+where we take the flag and the name of the competitors and we overlay them on the lanes
+
+73
+00:06:14,400 --> 00:06:19,330
+游泳池。这实际上是一个很容易的技巧，它涉及到这些
+of the swimming pool. It's actually quite an easy trick to do and it involves these
+
+74
+00:06:19,330 --> 00:06:20,190
+单应性。
+homographies.
+
+75
+00:06:20,190 --> 00:06:24,620
+现在形象我可以游得很好，足以进入游泳比赛，所以有
+Now image that I could swim well, well enough to get into a swimming tournament, so there's
+
+76
+00:06:24,620 --> 00:06:29,430
+我的国旗，这是我的名字。现在我有了这个我创建的图像，只是使用普通的
+my flag and there's my name. Now I've got this image that I created, just using ordinary
+
+77
+00:06:29,430 --> 00:06:34,699
+计算机图形学，这很容易。现在我想把那张照片放在我的车道上
+computer graphics, that's the easy bit. Now I want to lay that image into my lane in the
+
+78
+00:06:34,699 --> 00:06:40,259
+游泳池。我需要做的就是找到四个相应的点，所以
+swimming pool. All I need to do that, is to find the four corresponding points, so the
+
+79
+00:06:40,259 --> 00:06:44,840
+这个矩形的四个角，用于保存我想要叠加的图像和四个
+four corners of this rectangle that holds the image that I want to overlay and the four
+
+80
+00:06:44,840 --> 00:06:48,740
+在游泳池里，我希望它被放置。
+points in the swimming pool where I'd like it to be laid.
+
+81
+00:06:48,740 --> 00:06:55,160
+一旦我掌握了这些信息，我就可以将原始图像扭曲成这个非常扭曲的图像
+Once I have that information I can warp that original image into this very distorted image
+
+82
+00:06:55,160 --> 00:07:02,180
+然后我可以插入或叠加到游泳池的原始图像上。
+which I could then insert into or overlay onto the original image of the swimming pool.
+
+83
+00:07:02,180 --> 00:07:06,940
+那些正在做与该课程相关的项目的人，单应性正在进行中
+Those of you who are doing the project associated with this course, the homography is going
+
+84
+00:07:06,940 --> 00:07:12,310
+非常非常有用。你可能已经建立了一个二维机器人，坐在上面
+to be very, very useful. You've probably already built a two dimensional robot, that sits on
+
+85
+00:07:12,310 --> 00:07:18,520
+工作表，可以将其末端效应器移动到机器人上的任何特定XY坐标
+a worksheet and can move its end effector to any particular XY coordinate on the robot
+
+86
+00:07:18,520 --> 00:07:19,289
+工作表。
+worksheet.
+
+87
+00:07:19,289 --> 00:07:25,690
+现在我们拍摄机器人工作表的照片。我有机器人工作表的图像。
+Now image that we take a picture of that robot worksheet. I have an image of the robot worksheet.
+
+88
+00:07:25,690 --> 00:07:30,460
+单应性让我在工作表的图像中创建一个坐标，
+The homography lets me create a mapping between a coordinate in the image of the worksheet,
+
+89
+00:07:30,460 --> 00:07:36,569
+在图像平面上有一个U，V的坐标，我可以将它映射到一个物理
+which has got a coordinate of U,V in the image plane and I can map that to a physical
+
+90
+00:07:36,569 --> 00:07:42,930
+机器人工作表上的坐标X，Y。我可以从图像平面坐标映射
+coordinate, X,Y on the robot's worksheet. I can map from an image plane coordinate
+
+91
+00:07:42,930 --> 00:07:48,190
+到机器人工作表坐标，或者我可以从机器人工作表坐标向后映射
+to a robot worksheet coordinate, or I can map from a robot worksheet coordinate back
+
+92
+00:07:48,190 --> 00:07:51,030
+到相机图像坐标。
+to a camera image coordinate.
+
+93
+00:07:51,030 --> 00:07:55,889
+现在单应性对你完成项目非常非常有帮助。
+Now homography's are going to be very, very helpful for you in completing the project.
+
+94
+00:07:55,889 --> 00:08:02,470
+只是总结工具箱中用于计算和使用单应性的功能。特定
+Just to summaries the capability in the toolbox for computing and using homographies. Given
+
+95
+00:08:02,470 --> 00:08:07,919
+两组对应点P和Q，我们可以计算出三乘三的单应性
+two sets of corresponding points P and Q, we can compute a three by three homography
+
+96
+00:08:07,919 --> 00:08:15,310
+矩阵。P和Q的列代表点。现在P可能是已知的图像坐标
+matrix. The columns of P and Q represent points. Now P might be image coordinates of known
+
+97
+00:08:15,310 --> 00:08:22,110
+在图像中的点，Q可能是机器人物理工作表上的点的坐标。
+points in an image, Q might be coordinates of points on the robot's physical worksheet.
+
+98
+00:08:22,110 --> 00:08:28,220
+或者，P可以是一个图像中的一组图像坐标，Q可以是一组图像
+Alternatively P could be a set of image coordinates in one image and Q could be a set of image
+
+99
+00:08:28,220 --> 00:08:33,400
+坐标在另一个图像。鉴于我有三乘三的单应矩阵
+coordinates in another image. Given that I have the three by three homography matrix
+
+100
+00:08:33,400 --> 00:08:41,400
+然后，我可以在第一平面中将一组点P映射到第二平面中的一组点Q.
+H, I can then map a set of points P, in the first plane, to a set of points Q, in the second plane.
+

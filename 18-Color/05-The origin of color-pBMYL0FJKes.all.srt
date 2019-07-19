@@ -1,0 +1,120 @@
+1
+00:00:03,580 --> 00:00:08,990
+我们已经谈到了颜色对人类的重要性，我们有成千上万的颜色
+We have talked about how important color is to human beings, that we have thousands of
+
+2
+00:00:08,990 --> 00:00:12,960
+用词来形容许多不同深浅的色彩。
+words to describe many, many different shades of color.
+
+3
+00:00:12,960 --> 00:00:18,160
+颜色对我们来说显然很重要;它帮助我们在日常生活中能够描述
+Color is clearly important to us; it helps us in our everyday life to be able to describe
+
+4
+00:00:18,160 --> 00:00:20,110
+物体的颜色。
+objects by their color.
+
+5
+00:00:20,110 --> 00:00:23,120
+那么这种颜色概念从何而来？
+So where does this concept of color come from?
+
+6
+00:00:23,120 --> 00:00:28,660
+这个过程的许多部分导致你对颜色的感知
+There a number of parts of the process that lead to you having a perception of color in
+
+7
+00:00:28,660 --> 00:00:33,430
+你的思想和我们要做的是从头到尾经历那些。
+your mind and what we are going to do is go through those from the beginning to the end.
+
+8
+00:00:33,430 --> 00:00:35,581
+在整个过程开始时，我们拥有所谓的光源。
+At the start of the whole process we have what we call an illuminant.
+
+9
+00:00:35,581 --> 00:00:41,310
+光源是发光的东西，光线照在场景上，闪耀着光芒
+An illuminant is a thing that emits light and the light shines on the scene, shines
+
+10
+00:00:41,310 --> 00:00:45,760
+在我们感兴趣的对象上，我们称之为入射光，我们称之为
+on the object that we are interested in and we call this incoming light, we call that
+
+11
+00:00:45,760 --> 00:00:47,320
+照度。
+the illuminance.
+
+12
+00:00:47,320 --> 00:00:52,440
+所以照度是来自光源的光线落在我们感兴趣的物体上
+So the illuminance is the light from the illuminant that falls on the object that we are interested
+
+13
+00:00:52,440 --> 00:00:53,440
+在。
+in.
+
+14
+00:00:53,440 --> 00:00:58,260
+现在，物体反射了一些光和来自物体的光
+Now the object reflects some of that light and the light that comes from the object we
+
+15
+00:00:58,260 --> 00:01:02,900
+我们称之为亮度，我们谈论对象的亮度。
+refer to as the luminance, we talk about the luminance of the object.
+
+16
+00:01:02,900 --> 00:01:08,930
+在这种情况下，我们将参考苹果的亮度，因此光线来自我们的
+In this case we would refer to the luminance of the apple, so light is coming in from our
+
+17
+00:01:08,930 --> 00:01:15,290
+光亮的，撞击苹果，反射它并进入我们观察者的眼睛。
+illuminant, striking the apple, reflecting off it and entering the eye of our observer.
+
+18
+00:01:15,290 --> 00:01:16,971
+一些非常神奇的事情发生在眼睛里面。
+Some pretty amazing things happen within the eye.
+
+19
+00:01:16,971 --> 00:01:24,670
+进入的光子会触发杆的后部和锥形细胞的化学反应
+The incoming photons trigger a chemical reaction in the rod and cone cells at the back of your
+
+20
+00:01:24,670 --> 00:01:25,730
+眼睛。
+eye.
+
+21
+00:01:25,730 --> 00:01:30,830
+它们又导致通过视神经传播的电脉冲
+They lead, in turn, to electrical impulses which are transmitted through the optic nerve
+
+22
+00:01:30,830 --> 00:01:35,200
+到你大脑的视觉皮层，它位于你的脑后，那个
+to the visual cortex of your brain, which is located in the back of your head, and that
+
+23
+00:01:35,200 --> 00:01:38,120
+导致红色的感知。
+leads to the perception of the color red.
+
+24
+00:01:38,120 --> 00:01:42,000
+您将与您正在查看的对象相关联-在这种情况下，苹果。
+Which you would associate with the object you are looking at—in this case, the apple.
+

@@ -1,0 +1,465 @@
+1
+00:00:03,440 --> 00:00:09,340
+现代机器人是非常精确的机器。它们可以用于例如将芯片放置在其上
+Modern robots are very precise machines. They can be used for example to place chips onto
+
+2
+00:00:09,340 --> 00:00:14,660
+电路板精度高，速度快。但他们如何实际做到这一点呢？
+circuit boards with great precision and at very great speed. But how do they actually do that?
+
+3
+00:00:15,520 --> 00:00:20,520
+永远不会直接测量机器人末端执行器的位置。我们做了什么
+The position of the robot’s end effector is never directly measured. What we do instead
+
+4
+00:00:20,529 --> 00:00:26,039
+测量各种关节角度，我们使用正向运动模型来确定
+is measure the various joint angles and we use a forward kinematic model to determine
+
+5
+00:00:26,039 --> 00:00:29,789
+机器人末端执行器的位置。
+the position of the robot’s end effector.
+
+6
+00:00:29,789 --> 00:00:35,500
+我们假设我们知道机器人工具尖端所在位置的笛卡尔坐标
+We assume that we know the position in Cartesian coordinates of where the robot’s tool tip
+
+7
+00:00:35,500 --> 00:00:40,950
+需要去，然后设计一个采用该工具的控制器是一件简单的事情
+needs to go and then it’s a simple matter of designing a controller that takes the tool
+
+8
+00:00:40,950 --> 00:00:46,300
+提示从它到达的地方。这是基本原则
+tip from where it is to where it needs to go. And this is the fundamental principle
+
+9
+00:00:46,300 --> 00:00:52,649
+支撑着今天所有的现代机器人。它们非常精确，它们非常精确
+underpinning all modern robots today. They are incredibly precise, they have got very
+
+10
+00:00:52,649 --> 00:00:56,289
+精确的传感器，他们有非常好的运动模型，他们能够移动
+accurate sensors, they’ve got very good kinematic models, and they are able to move
+
+11
+00:00:56,289 --> 00:01:00,090
+它需要在工作场所进行的工具提示。
+the tool tip where it needs to go in the workplace.
+
+12
+00:01:00,090 --> 00:01:04,589
+让我们现在考虑这种机器人工具定位方法可能出现的问题。
+Lets consider now what can go wrong with this approach to robot tool positioning.
+
+13
+00:01:04,589 --> 00:01:08,700
+首先;因为工具的位置是由关节传感器和运动学计算的
+Firstly; because the position of the tool is computed from joint sensors and kinematic
+
+14
+00:01:08,700 --> 00:01:12,700
+模型，如果任何传感器中存在错误，如果运动学中存在错误
+models, if there are errors in any of the sensors, if there’s an error in the kinematic
+
+15
+00:01:12,700 --> 00:01:17,950
+模型，或者在我们认为机器人的基础是什么的时候可能存在错误，然后是
+model, or perhaps there is an error in where we think the base of the robot is, then the
+
+16
+00:01:17,950 --> 00:01:22,119
+机器人工具尖端的位置将出错。
+position of the robot tool tip is going to be in error.
+
+17
+00:01:22,119 --> 00:01:26,970
+也许芯片相对于电路板的位置存在误差
+Perhaps there is an error in the location of the chip relative to the board, or perhaps
+
+18
+00:01:26,970 --> 00:01:33,070
+电路板相对于机器人坐标系的位置存在误差。
+there is an error in the position of the board with respect to the robot’s coordinate frame.
+
+19
+00:01:33,070 --> 00:01:37,880
+最后，运动控制系统可能存在错误。它无法驾驶
+Finally there could be an error in the motion control system. It’s not able to drive the
+
+20
+00:01:37,880 --> 00:01:40,689
+机器人工具提示到它需要去的地方。
+robot tool tip to where it needs to go to.
+
+21
+00:01:40,689 --> 00:01:47,869
+尽管如此，在制造机器人的悠久历史中，这些问题已基本得到解决。
+Nevertheless, over the long history of manufacturing robots these problems have largely been ironed out.
+
+22
+00:01:47,909 --> 00:01:53,369
+这种传统的机器人定位方法有其后果。作为一个开始
+There is a consequence for this traditional approach to robot positioning. For a start
+
+23
+00:01:53,369 --> 00:01:58,170
+我们需要在每个关节上都有非常精确的传感器。机器人链接需要
+we need to have very very accurate sensors on each of the joints. The robot links need
+
+24
+00:01:58,170 --> 00:02:03,119
+非常精确地加工，因此它们反映了嵌入在中的运动模型
+to be very very accurately machined so they reflect the kinematic model embedded in the
+
+25
+00:02:03,119 --> 00:02:07,640
+软件。机器人链接也需要非常坚硬，以便机器人改变它
+software. The robot links also need to be very stiff so that as the robot changes its
+
+26
+00:02:07,640 --> 00:02:13,090
+配置链接在重力的影响下不会弯曲和变形。制作它们
+configuration the links don’t bend and deform under the influence of gravity. To make them
+
+27
+00:02:13,090 --> 00:02:17,290
+僵硬，我们必须使用大量的金属，这使他们沉重。然后为了机器人
+stiff we have to use a lot of metal, which makes them heavy. In order for the robot then
+
+28
+00:02:17,290 --> 00:02:21,200
+要快速行动，我们需要拥有更强大的电机。
+to move quickly we need to have much more powerful motors.
+
+29
+00:02:21,200 --> 00:02:26,680
+所有这些问题都推高了现代精密工业机器人的成本。
+All of these issues drive up the cost of the modern precise industrial robot.
+
+30
+00:02:26,680 --> 00:02:31,720
+所以我们假设我们有一个机器人并且它非常精确。我们如何实际使用它？
+So lets assume we have a robot and that it is really precise. How do we actually put it to use?
+
+31
+00:02:31,720 --> 00:02:36,680
+为机器人做有用的东西，它正在使用的对象-它的工件
+For the robot to do useful things the object that it’s working with — its work piece
+
+32
+00:02:36,680 --> 00:02:43,209
+-还必须精确定位。如果机器人能够到x，y，z位置
+— must also be precisely positioned. If the robot is able to go to position x,y,z
+
+33
+00:02:43,209 --> 00:02:47,769
+在一小部分毫米之内，那么它正在使用的对象也需要
+within a small fraction of a millimetre, then the object that it’s working with also needs
+
+34
+00:02:47,769 --> 00:02:54,489
+以相同的准确度定位。当一个机器人安装在一个大的工厂
+to be positioned with that same level of accuracy. When a robot is installed in a factory a large
+
+35
+00:02:54,489 --> 00:02:58,440
+工程量涉及创造我们称之为夹具和固定装置。这些是
+amount of engineering is involved in creating what we call jigs and fixtures. These are
+
+36
+00:02:58,440 --> 00:03:03,290
+将机器人的工件固定在一个非常精确的位置的设备
+pieces of equipment that hold the robot’s work piece at a very precise location in the
+
+37
+00:03:03,290 --> 00:03:08,060
+机器人的工作空间。因此，当机器人使用其精度到达特定坐标时
+robot’s workspace. So when the robot uses its precision to reach to a particular coordinate
+
+38
+00:03:08,060 --> 00:03:11,080
+它需要合作的东西就在那里。
+the thing that it needs to work with is there.
+
+39
+00:03:11,080 --> 00:03:17,040
+下一个问题是机器人需要知道对象在其工作空间内的位置。
+Next issue is that the robot needs to know the position of the object within its workspace.
+
+40
+00:03:17,040 --> 00:03:21,209
+我们需要非常准确地测量它。在实践中，发生的是工件
+We need to measure that very very accurately. In practice what happens is the work piece
+
+41
+00:03:21,209 --> 00:03:26,760
+在工作区中的一个非常一致的位置，我们手动调整机器人的位置
+is held at a very consistent location in the workspace and we manually adjust the robot’s
+
+42
+00:03:26,760 --> 00:03:32,450
+工具尖端位置来完成任务。在这个特定的图片中操作员正在做
+tool tip position to achieve the task. In this particular picture the operator doing
+
+43
+00:03:32,450 --> 00:03:36,019
+这个。操作员手里拿着什么叫教导。它是
+this. The operator is holding in his hand what’s called a teach pendant. It’s a
+
+44
+00:03:36,019 --> 00:03:40,959
+按钮上盖着一个大盒子，通过推动这些按钮，他可以驱动机器人
+large box covered in buttons, and by pushing these buttons he is able to drive the robot’s
+
+45
+00:03:40,959 --> 00:03:45,120
+工具提示到工作区内的所需位置。
+tool tip to the required location within the workspace.
+
+46
+00:03:45,120 --> 00:03:51,760
+这种方法的替代方案完全依赖于机器人的固有精度，
+An alternative to this approach which relies totally on the inherent precision of the robot,
+
+47
+00:03:51,760 --> 00:03:56,120
+是让机器人使用其传感器-例如模仿功能的摄像机
+is to have the robot use its sensors — for instance cameras which mimic the function
+
+48
+00:03:56,120 --> 00:04:01,680
+我们的眼睛-为了引导它执行任务。而这正是我们所做的;
+of our eyes — in order to guide it to perform the task. And that’s exactly what we do;
+
+49
+00:04:01,680 --> 00:04:07,629
+如果我想拿起这个订书机，我会用我的眼睛引导我的手，以便距离
+if I want to pick up this stapler I use my eyes to guide my hand so that the distance
+
+50
+00:04:07,629 --> 00:04:13,069
+在我的指尖和订书机之间变为零。同样，如果我想执行任务
+between my fingertips and the stapler become zero. Similarly if I want to perform a task
+
+51
+00:04:13,069 --> 00:04:18,440
+就像把钥匙放进锁里一样，我再一次用眼睛引导我的手，以便把它的尖端
+like putting a key into a lock, I again use my eyes to guide my hand so that the tip of
+
+52
+00:04:18,440 --> 00:04:21,040
+钥匙进入锁的桶。
+the key enters the barrel of the lock.
+
+53
+00:04:21,040 --> 00:04:26,419
+这是实践中的一个例子。这是我自己的博士研究方法的一些工作
+Here’s an example of this in practice. This is some work from my own PhD research way
+
+54
+00:04:26,419 --> 00:04:32,610
+在这里，机器人手臂被编程为恒定地向上和向下移动
+back in 1993. Here the robot arm is programmed to move upwards and downwards at constant
+
+55
+00:04:32,610 --> 00:04:38,180
+速度，但机器人的水平运动由线的形状控制
+velocity, but the horizontal motion of the robot is controlled by the shape of the line
+
+56
+00:04:38,180 --> 00:04:44,520
+这是在观察。所以在这个意义上，机器人正在对世界上的事物作出反应。
+that it is observing. So in this sense the robot is reacting to what is in the world.
+
+57
+00:04:44,520 --> 00:04:49,820
+所以我可以在机器人前放置任何形状的线条，机器人手臂会移动和跟踪
+So I can put any shaped line in front of the robot, and the robot arm would move and trace
+
+58
+00:04:49,820 --> 00:04:52,509
+沿着那条线的路径。
+a path along that line.
+
+59
+00:04:52,509 --> 00:04:57,280
+在这个更复杂的例子中，机器人正在携带一个摄像头，它正在努力保持
+In this more complex example, the robot is carrying a camera, and it’s trying to keep
+
+60
+00:04:57,280 --> 00:05:02,090
+一个位于其视野中心的物体。现在对象在转盘上，所以它是
+an object in the centre of its field of view. Now the object is on a turntable so it’s
+
+61
+00:05:02,090 --> 00:05:06,880
+以相当复杂的方式移动。事实上，它并没有以恒定的速度移动，而是在加速，
+moving in quite a complex way. In fact it’s not moving at a constant velocity, it is accelerating,
+
+62
+00:05:06,880 --> 00:05:12,509
+在这里，我们看到机器人捕捉物体，锁定它并将其保持在中心
+and here we see the robot capturing the object, locking onto it, and holding it in the centre
+
+63
+00:05:12,509 --> 00:05:15,600
+它的视野。
+of its field of view.
+
+64
+00:05:15,600 --> 00:05:19,979
+然后应用相同的技术来跟踪已投入的乒乓球
+The same technique was then applied to tracking a ping-pong ball, which has been thrown in
+
+65
+00:05:19,979 --> 00:05:24,910
+从场景的一侧，这是慢动作。最终机器人注意到了
+from one side of the scene, and this is in slow motion. Eventually the robot notices
+
+66
+00:05:24,910 --> 00:05:29,490
+乒乓球，锁定它，并开始以保持的方式移动相机
+the ping-pong ball, locks onto it, and starts to move the camera in such a way as to keep
+
+67
+00:05:29,490 --> 00:05:34,600
+乒乓球更接近现场的中心。所以它正在跟踪乒乓球
+the ping-pong ball closer to the centre of the scene. So it’s tracking the ping-pong
+
+68
+00:05:34,600 --> 00:05:39,570
+球在太空中移动。而且这是实时的。我们看到了乒乓球
+ball as it is moving through space. And here it is in real time. We see the ping-pong ball
+
+69
+00:05:39,570 --> 00:05:41,380
+动作非常快。
+moves very very quickly.
+
+70
+00:05:41,380 --> 00:05:47,250
+当我正在考虑使用感觉来控制移动机器人时，这是一些更古老的工作
+Here is some more old work when I was looking at controlling a mobile robot using the sense
+
+71
+00:05:47,250 --> 00:05:53,220
+愿景。所以这个特殊的机器人顶部有一个全方位的摄像头，并且
+of vision. So this particular robot has got an omni-directional camera on the top, and
+
+72
+00:05:53,220 --> 00:05:58,160
+在那个全方位的摄像机视图中，我们可以找到道路的边缘。这是非常的
+in that omni-directional camera view we can find the edges of the roadway. It’s a very
+
+73
+00:05:58,160 --> 00:06:03,410
+明亮的混凝土路面与绿草和棕色泥土之间的明显边界
+distinct boundary between the bright concrete road and the green grass and the brown dirt
+
+74
+00:06:03,410 --> 00:06:08,789
+在路的两边。我们想要做的就是让机器人保持运动
+on either side of the road. What we want to do then is to keep the robot so it’s moving
+
+75
+00:06:08,789 --> 00:06:14,310
+我们能够在视觉上观察到的道路两个边界之间的中间位置。
+midway between the two boundaries of the road that we are able to observe visually.
+
+76
+00:06:14,310 --> 00:06:19,400
+这是另一个涉及移动机器人的例子。在这种情况下，机器人正在使用它
+Here is another example involving a mobile robot. In this case the robot is using its
+
+77
+00:06:19,400 --> 00:06:25,460
+视觉信息-再次来自全方位摄像机-以固定的方式定位自己
+visual information — again from an omni-directional camera — to position itself with a fixed
+
+78
+00:06:25,460 --> 00:06:30,430
+相对于交通锥的姿势偏移。所以，如果我选择交通锥并移动
+pose offset with respect to the traffic cone. So if I pick the traffic cone up and moved
+
+79
+00:06:30,430 --> 00:06:36,150
+它到另一个地方，机器人会移动，以保持固定的姿势
+it to another place, the robot would move in order to maintain that fixed pose with
+
+80
+00:06:36,150 --> 00:06:41,100
+对交通锥的尊重。因此机器人不会相对于坐标进行导航
+respect to the traffic cone. So the robot is not navigating with respect to a coordinate
+
+81
+00:06:41,100 --> 00:06:48,340
+附加到此位置的框架，它相对于其环境中的对象或特征进行导航。
+frame attached to this location, it is navigating with respect to an object or a feature in its environment.
+
+82
+00:06:48,640 --> 00:06:52,840
+这是一辆车，一辆叉车，前面有一个挂钩，正在尝试
+This is a vehicle, a forklift truck, and it’s got a hook on the front, and it’s trying
+
+83
+00:06:52,840 --> 00:06:57,389
+将钩子穿过坩埚的把手。叉车上有一个摄像头
+to put that hook through the handle of the crucible. There is a camera on the forklift
+
+84
+00:06:57,389 --> 00:07:03,800
+卡车，它往下看并用它来识别手柄的位置和控制
+truck and it is looking down and using that to identify where the handle is, and controlling
+
+85
+00:07:03,800 --> 00:07:08,410
+位置-车辆的路径-当它接近坩埚时。在这个特别的
+the position — the path of the vehicle — as it approaches the crucible. In this particular
+
+86
+00:07:08,410 --> 00:07:14,120
+我们不得不在坩埚上添加一些标记，以帮助机器人车辆实现可靠性
+case we had to add some markers to the crucible to help the robot vehicle achieve the reliable
+
+87
+00:07:14,120 --> 00:07:17,620
+拾起。你现在看到的是一部延时电影。我们
+pickup. What you see now is a time-lapse movie. We
+
+88
+00:07:17,620 --> 00:07:23,030
+整整一天都进行了这个实验。在一天的过程中照明条件
+ran this experiment over a whole day. Over the course of the day the lighting conditions
+
+89
+00:07:23,030 --> 00:07:28,840
+改变了：云来了又走了;阴影来了又走了。它显示了整体的稳健性
+changed: clouds came and went; shadows came and went. It showed the overall robustness
+
+90
+00:07:28,840 --> 00:07:34,740
+这种基于愿景的战略的可靠性和可靠性。机器人没有任何知识
+and reliability of this vision-based strategy. The robot didn’t have any knowledge of where
+
+91
+00:07:34,740 --> 00:07:40,840
+坩埚是;它只是移动以减少钩尖和手柄之间的区域。
+the crucible was; it just moved to reduce the area between the tip of the hook and the handle.
+
+92
+00:07:40,849 --> 00:07:45,520
+这是一种非常相似的技术，在这种情况下应用于水下。所以这个水下
+Here’s a very similar technique, in this case applied underwater. So this underwater
+
+93
+00:07:45,520 --> 00:07:51,069
+机器人有一对立体相机，它在海床上方保持恒定的高度。
+robot has got a stereo camera pair and it’s maintaining a constant height above the seabed.
+

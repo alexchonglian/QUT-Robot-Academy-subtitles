@@ -1,0 +1,340 @@
+1
+00:00:03,470 --> 00:00:08,540
+通常当我发表公开讲话时，观众中的某个人会问我人工智能
+Often when I give a public talk, somebody in the audience asks me about artificial intelligence
+
+2
+00:00:08,540 --> 00:00:13,040
+这不是一个我觉得特别舒服的话题。我认为自己
+and it's not a subject I feel particularly comfortable to talk about. I consider myself
+
+3
+00:00:13,040 --> 00:00:17,430
+机器人专家，也就是建造机器的人，而人工智能
+a roboticist, that is, somebody that builds machines, whereas artificial intelligence
+
+4
+00:00:17,430 --> 00:00:22,769
+对我来说，这是一门完全独立的学科，是计算机科学中的一门子学科。
+to me is a completely separate discipline, a sub-discipline within computer science.
+
+5
+00:00:22,769 --> 00:00:29,509
+当然，情报也是一个非常难以理解的概念，我认为也是如此
+Intelligence, of course, is also a very difficult concept to understand and I think it also
+
+6
+00:00:29,509 --> 00:00:35,320
+与历史背景有关。回到第一讲，我们看了
+has something to do with the historical context. Way back in lecture number one, we looked
+
+7
+00:00:35,320 --> 00:00:40,660
+在这张着名的消化鸭的照片。那个时候，人们认为这个
+at this picture of the famous digesting duck. And at that time, people considered that this
+
+8
+00:00:40,660 --> 00:00:46,010
+机器具有逼真的特性。无论它是否聪明，我都不确定，但是
+machine had life-like properties. Whether it was intelligent or not, I'm not sure, but
+
+9
+00:00:46,010 --> 00:00:49,340
+人们认为它很像生活。
+people considered it to be very life-like.
+
+10
+00:00:49,340 --> 00:00:55,460
+后来出现了这些自动机，非常复杂的机器，看起来很聪明
+Later on came these automata, incredibly intricate machines that could do seemingly intelligent
+
+11
+00:00:55,460 --> 00:01:00,190
+的东西。也许在那个时候，人们会看着这些机器并考虑它们
+things. And perhaps at that time, people would look at these machines and consider them to
+
+12
+00:01:00,190 --> 00:01:05,140
+聪明，因为他们做了智能生物或实体的各种事情，
+be intelligent because they did the sorts of things that intelligent beings or entities,
+
+13
+00:01:05,140 --> 00:01:09,080
+比如人类，能够很容易地做到。
+such as humans, are able to do quite readily.
+
+14
+00:01:09,080 --> 00:01:15,220
+在40年代末和50年代初期，WilliamGrayWalter建立了许多控制论设备，
+In the late 40's and early 50's, William Grey Walter built a number of cybernetic devices,
+
+15
+00:01:15,220 --> 00:01:20,940
+最着名的是他的控制论乌龟。这是一台包含继电器和机器的机器
+most famously his cybernetic tortoise. And this was a machine that contained relays and
+
+16
+00:01:20,940 --> 00:01:22,820
+真空管技术。
+vacuum tube technology.
+
+17
+00:01:22,820 --> 00:01:28,120
+它能够展现寻光行为。所以，如果你在地板上放一盏灯，这只乌龟
+It was able to exhibit light-seeking behavior. So if you put a light on the floor, this tortoise
+
+18
+00:01:28,120 --> 00:01:33,830
+当它到达那里时会朝着光线移动并停下来。所以再一次，这似乎是一个
+would move towards the light and stop when it got there. So again, this was a seemingly
+
+19
+00:01:33,830 --> 00:01:40,549
+智能行为。在许多非常简单的生物体中可以看到这种寻光行为。
+intelligent behavior. This light-seeking behavior is seen in many very simple organisms.
+
+20
+00:01:40,549 --> 00:01:47,810
+因此，当时，40年代末，50年代初期，这样的事情被认为是聪明的。
+So at the time, late 40's, early 50's, something like this was perceived as being intelligent.
+
+21
+00:01:47,810 --> 00:01:52,049
+从我们目前的观点来看，它看起来相当原始和悲伤，但就此而言
+Looking at it from our current viewpoint, it looks rather primitive and sad but at that
+
+22
+00:01:52,049 --> 00:01:54,960
+时间，我认为这是一个重大突破。
+time, I think it was a significant breakthrough.
+
+23
+00:01:54,960 --> 00:01:59,939
+人工智能一词可能最初是在本研究提案中引入的
+The term artificial intelligence was probably first introduced in this research proposal
+
+24
+00:01:59,939 --> 00:02:06,409
+从1955年开始，一群非常迫近的人，其中包括JohnMcCarthy和MarvinMinsky，
+from 1955 by a bunch of very imminent people, amongst them John McCarthy and Marvin Minsky,
+
+25
+00:02:06,409 --> 00:02:11,430
+他们是人工智能社区中非常知名的人物。
+who are very very well known names in the artificial intelligence community.
+
+26
+00:02:11,430 --> 00:02:16,870
+到1955年，数字计算机已成为现实，这群科学家对此感兴趣
+By 1955, digital computers had become a reality and this group of scientists were interested
+
+27
+00:02:16,870 --> 00:02:22,599
+试图探索除了简单的数值计算之外他们能做些什么。所以
+in trying to explore what could they do beyond straightforward numerical calculation. So
+
+28
+00:02:22,599 --> 00:02:27,069
+他们对神经网络，计算理论等问题感兴趣
+they were interested in things like neural networks, theories of computation, could we
+
+29
+00:02:27,069 --> 00:02:33,660
+使用计算机进行自然语言处理，他们可以进行创造性的行为吗？
+use computers to do natural language processing, could they perform acts of creativity?
+
+30
+00:02:33,660 --> 00:02:37,380
+通过查看他们建议调查的主题列表，您会注意到什么
+What you'll notice from looking at the list of topics that they proposed to investigate
+
+31
+00:02:37,380 --> 00:02:43,190
+在他们的夏季项目中，没有提到机器人，也没有提到计算机
+in their summer project was there's no mention of robotics and there is no mention of computer
+
+32
+00:02:43,190 --> 00:02:48,520
+视力。原因是这两件事尚未发明。
+vision. The reason for that is that those two things had not yet been invented.
+
+33
+00:02:48,520 --> 00:02:53,020
+我们今天所知的第一台工业机器人是由UnimationInc.开发的。
+The first industrial robot as we know it today was developed by Unimation Inc.
+
+34
+00:02:53,020 --> 00:02:56,380
+直到1956年，该公司才成立，
+and that company wasn't even formed until 1956,
+
+35
+00:02:56,380 --> 00:03:03,280
+人工智能项目和Unimation在1961年交付了第一台机器人一年后。
+one year after the artificial intelligence project and Unimation delivered its first robot in 1961.
+
+36
+00:03:03,280 --> 00:03:07,280
+但此后，其他一些机器人出现了相当快速的连续性。
+But thereafter, a number other robots appeared in quite rapid succession.
+
+37
+00:03:07,280 --> 00:03:12,160
+它们都是在斯坦福大学的人工智能实验室开发的
+They were all developed within artificial intelligence laboratories at Stanford and
+
+38
+00:03:12,160 --> 00:03:18,239
+麻省理工学院和这些机器人设计师中的主要成员是设计ORM的VictorScheinman
+at MIT and chief amongst these robot designers was Victor Scheinman who designed the ORM
+
+39
+00:03:18,239 --> 00:03:25,819
+和ORM我相信，蛇是挪威人，他还在1968年设计了着名的斯坦福大学。
+and ORM I believe, is Norwegian for snake and he also designed the very famous Stanford arm in 1968.
+
+40
+00:03:26,580 --> 00:03:33,160
+1964年，计算机视觉开始于麻省理工学院LarryRoberts的博士学位。
+Computer vision really got its start in 1964 with the PhD work of Larry Roberts at MIT.
+
+41
+00:03:33,170 --> 00:03:38,610
+他有兴趣了解计算机如何解释块世界。所以一台相机
+He was interested in understanding how computers could interpret a blocks world. So a camera
+
+42
+00:03:38,610 --> 00:03:43,660
+连接到计算机将采用场景的灰度图像和各种各样的
+attached to a computer would take a gray-scale image of a scene and with various sorts of
+
+43
+00:03:43,660 --> 00:03:49,110
+早期的图像处理算法，可以找到边缘，然后拟合模型。拉里
+early image processing algorithms, could find the edges and then fit a model to that. Larry
+
+44
+00:03:49,110 --> 00:03:53,450
+罗伯茨继续在创建互联网方面做了很多伟大的事情。
+Roberts went on to do really great things in the creation of the Internet.
+
+45
+00:03:53,450 --> 00:03:58,550
+那么，什么是情报？我可以查看字典并获得定义
+So then, what is intelligence? I can look in the dictionary and get a definition of
+
+46
+00:03:58,550 --> 00:04:04,180
+情报，但对我来说，这不是特别有帮助。我想我们假设是人类
+intelligence, but to me, this is not particularly helpful. I think we assume that human beings
+
+47
+00:04:04,180 --> 00:04:09,920
+因此，人类表现出来的行为就像智慧一样。
+are intelligent so therefore, the behaviors manifest by human beings count as intelligence.
+
+48
+00:04:09,920 --> 00:04:15,129
+但是我们知道有很多动物可以表现出智能行为
+But we know that there are many animals that can exhibit intelligent behavior and it's
+
+49
+00:04:15,129 --> 00:04:19,859
+在越来越多的简单动物中被发现。曾几何时，我们相信也许是这样
+been found in more and more simple animals. Once upon a time, we believed it was perhaps
+
+50
+00:04:19,859 --> 00:04:24,199
+只有能够表现出某种智力的巨猿，但现在科学家才有
+only the great apes that could exhibit some sort of intelligence but now scientists have
+
+51
+00:04:24,199 --> 00:04:29,070
+在各种物种中都发现了相当聪明的行为。即使是鸟类也能够流行
+found quite intelligent behaviors in all manner of species. Even birds are able to fashion
+
+52
+00:04:29,070 --> 00:04:32,240
+简单的工具，帮助他们完成特定的任务。
+simple tools to help them to achieve particular tasks.
+
+53
+00:04:32,240 --> 00:04:37,040
+我特别喜欢的定义来自罗德尼布鲁克斯，那就是情报
+A definition I particularly like comes from Rodney Brooks and that is that intelligence
+
+54
+00:04:37,040 --> 00:04:41,580
+是在旁观者的眼中。所以，如果你正在看一台机器做一些任务而你
+is in the eye of the beholder. So if you're looking at a machine doing some task and you
+
+55
+00:04:41,580 --> 00:04:44,620
+认为它是聪明的，那么它是聪明的。
+think it's intelligent, then it is intelligent.
+
+56
+00:04:44,620 --> 00:04:49,130
+也许最着名的智能定义是图灵测试，它是由提出来的
+Perhaps the best known definition of intelligence is the Turing test and it was proposed by
+
+57
+00:04:49,130 --> 00:04:55,410
+英国数学家艾伦·图灵（AlanTuring）在1950年的一篇名为“计算机械与计算机械”的论文中
+the English mathematician, Alan Turing, in a 1950 paper called Computing Machinery and
+
+58
+00:04:55,410 --> 00:04:59,449
+情报。在那篇特别的论文中，他提出了一种叫做模仿游戏的东西，
+Intelligence. In that particular paper, he proposed something called the imitation game,
+
+59
+00:04:59,449 --> 00:05:05,180
+当然，这是最近关于阿兰图灵生平的电影的名字。
+and of course that's the name of the recent movie about the life of Alan Turing.
+
+60
+00:05:05,180 --> 00:05:10,310
+游戏中有三个玩家：A是正在接受智力测试的计算机，B
+The game has three players: A is a computer which is being tested for intelligence, B
+
+61
+00:05:10,310 --> 00:05:15,990
+是一个真正的人，而C是法官。法官不知道A或B中的哪一个
+is a real human being, and C is the judge. The judge doesn't know which of A or B is
+
+62
+00:05:15,990 --> 00:05:21,550
+计算机，所以问A和B的问题，试图确定哪个是哪个。
+the computer and so asks questions of A and B to try and determine which is which.
+
+63
+00:05:21,550 --> 00:05:26,340
+为了掩盖关于A或B中的哪一个是计算机，游戏的真正明显的线索
+In order to mask the really obvious cues about which one of A or B is the computer, the game
+
+64
+00:05:26,340 --> 00:05:32,000
+通常使用键盘和屏幕通信进行播放，因此没有语言通信。
+is generally played with keyboard and screen communication, so there's no verbal communications.
+
+65
+00:05:32,000 --> 00:05:39,060
+判断器在键盘上键入命令，A或B响应屏幕上显示的信息。
+The judge types commands on a keyboard, A or B respond with information displayed on a screen.
+
+66
+00:05:39,160 --> 00:05:43,820
+现在，如果法官在提出足够的问题后，无法确定哪一项
+Now if the judge, after asking sufficient questions, is unable to determine which of
+
+67
+00:05:43,820 --> 00:05:48,490
+A或B是计算机，然后计算机被认为是智能的，因为法官，
+A or B is the computer, then the computer is deemed to be intelligent because the judge,
+
+68
+00:05:48,490 --> 00:05:53,490
+谁是聪明的，无法区分它和真正的人类。
+who is intelligent, is unable to tell the difference between it and a real human being.
+

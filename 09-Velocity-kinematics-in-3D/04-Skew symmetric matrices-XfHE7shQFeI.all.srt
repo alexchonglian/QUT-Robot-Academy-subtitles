@@ -1,0 +1,115 @@
+1
+00:00:03,399 --> 00:00:08,870
+让我们快速介绍偏斜对称矩阵。这些矩阵有时被称为
+Let’s do a quick introduction to skew symmetric matrices. These matrices are sometimes called
+
+2
+00:00:08,870 --> 00:00:13,160
+反对称矩阵，它们具有转置的有趣特性
+anti-symmetric matrices and they have this interesting property that the transpose is
+
+3
+00:00:13,160 --> 00:00:18,410
+等于原始矩阵的负数。这些矩阵总是单一的。其
+equal to the negative of the original matrix. These matrices are always singular. Their
+
+4
+00:00:18,410 --> 00:00:23,650
+行列式总是等于零。任何矩阵都是对称矩阵的总和
+determinant is always equal to zero. Any matrix is the sum of a symmetric matrix
+
+5
+00:00:23,650 --> 00:00:30,099
+和一个偏斜对称矩阵。在三维中，我们可以编写偏斜对称矩阵
+and a skew symmetric matrix. In three dimensions, we can write the skew symmetric matrix which
+
+6
+00:00:30,099 --> 00:00:35,300
+以这种方式是三元素向量的函数。所以，我们有一个元素的向量
+is a function of a three element vector in this fashion. So, we have a vector whose elements
+
+7
+00:00:35,300 --> 00:00:40,460
+是X，Y和Z.偏斜对称矩阵看起来像这样。显而易见的特征是
+are X, Y, and Z. The skew symmetric matrix looks like this. The obvious features are
+
+8
+00:00:40,460 --> 00:00:45,320
+零的对角线。那里有两个X.两个Y和两个Z.其中一个有
+a diagonal of zeros. There are two X's in there. Two Y's and two Z's. One of them has
+
+9
+00:00:45,320 --> 00:00:49,170
+一个积极的迹象，其中一个有负号。
+a positive sign and one of them has a negative sign.
+
+10
+00:00:49,170 --> 00:00:54,510
+我们还可以将矢量叉积作为矩阵矢量积。其中一个矩阵
+We can also write a vector cross product as a matrix vector product. One of the matrices
+
+11
+00:00:54,510 --> 00:00:58,410
+是从第一个向量计算的偏斜对称矩阵。
+is a skew symmetric matrix computed from the first vector.
+
+12
+00:00:58,410 --> 00:01:02,710
+这是一个偏斜的对称矩阵，我将与你分享一些经验法则
+Here’s a skew symmetric matrix and I am going share with you some rules of thumb for
+
+13
+00:01:02,710 --> 00:01:07,390
+你如何确定哪些元素是你写这个矩阵的地方。开始
+how you work out which elements are where when you write this matrix down. To start
+
+14
+00:01:07,390 --> 00:01:11,970
+用，有一个零对角线。所以，这很容易。你写了三个零
+with, there is a zero diagonal. So, that’s pretty easy. You write three zeros down the
+
+15
+00:01:11,970 --> 00:01:15,000
+对角线。还有我认为的排除
+diagonal. There is also what I think of as an exclusion
+
+16
+00:01:15,000 --> 00:01:21,920
+规则。因此，在行X和列Y中，该元素将不是额外的Y.它将是另一个
+rule. So, in row X and in column Y, that element will not be an extra Y. It will be the other
+
+17
+00:01:21,920 --> 00:01:26,740
+事情。在这种情况下，它将是Z.如果我们考虑循环旋转序列。
+thing. And in this case, it will be a Z. If we consider a cyclic rotation sequence.
+
+18
+00:01:26,740 --> 00:01:33,020
+所以，我们有一个无穷无尽的序列-X，Y，Z，X，Y，Z等。如果我考虑这个元素
+So, we have an endless sequence - X, Y, Z, X, Y, Z and so on. If I consider the element
+
+19
+00:01:33,020 --> 00:01:40,020
+在Y列和X行中，从Y移动到X，它在循环旋转中向后移动
+in column Y and in row X, moving from Y to X, it is going backwards in that cyclic rotation
+
+20
+00:01:40,020 --> 00:01:44,010
+序列。因为我们正在按顺序倒退，所以我要打一个减号
+sequence. Because we are going backwards in the sequence, I am going to put a minus sign
+
+21
+00:01:44,010 --> 00:01:48,090
+在那个特定的元素上。如果我们在这里看一下这个，我们就要去了
+on that particular element. If we look at this one over here, we are going
+
+22
+00:01:48,090 --> 00:01:53,909
+从Z到X.而且，这是循环旋转序列中的前进。所以，我们给出这个
+from Z to X. And, that’s a forward in the cyclic rotation sequence. So, we give this
+
+23
+00:01:53,909 --> 00:01:55,140
+元素一个积极的迹象。
+element a positive sign.
+

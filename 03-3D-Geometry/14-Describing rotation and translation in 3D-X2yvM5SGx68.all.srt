@@ -1,0 +1,240 @@
+1
+00:00:03,800 --> 00:00:08,540
+所以，正如我们现在应该知道的那样，pose有两个组成部分;翻译成分
+So, as we should well know by now, pose has got 2 components; a translational component
+
+2
+00:00:08,540 --> 00:00:13,910
+和旋转部件。我们可以通过几种方式来表现姿势。
+and a rotational component. And there are several ways that we can represent a pose.
+
+3
+00:00:13,910 --> 00:00:17,890
+我们可以将翻译组件表示为向量，然后我们可以表示
+We could represent the translational component as a vector, and then we could represent the
+
+4
+00:00:17,890 --> 00:00:23,230
+旋转分量由一组3个欧拉角组成。或者，我们可以用a代表它
+rotational component by a set of 3 Euler angles. Alternatively, we could represent it by a
+
+5
+00:00:23,230 --> 00:00:28,999
+矢量加上一组3滚，俯仰，偏航角度。或者我们可以将其表示为矢量加
+vector plus a set of 3 roll, pitch, yaw angles. Or we could represent it as a vector plus
+
+6
+00:00:28,999 --> 00:00:34,200
+四元数。第四种选择是将其表示为同质变换
+a quaternion. The fourth option is to represent it as a homogeneous transformation and this
+
+7
+00:00:34,200 --> 00:00:38,590
+是我们为二维案例所做的。正如我们已经多次做过这样的事情
+is what we did for the 2-dimensional case. As we've done several times already in this
+
+8
+00:00:38,590 --> 00:00:42,250
+讲座我们已将概念从二维提升到三维，这就是我们的目标
+lecture we've lifted concepts from 2-dimensions in to 3-dimensions and that's what we're going
+
+9
+00:00:42,250 --> 00:00:47,969
+做下一个。我们将研究如何将姿势描述为均匀变换
+to do next. We are going to work out how we describe pose as a homogeneous transformation
+
+10
+00:00:47,969 --> 00:00:50,510
+在三维。
+in 3-dimensions.
+
+11
+00:00:50,510 --> 00:00:56,269
+考虑两个三维坐标系和一个点P.现在，我将介绍
+Consider two 3-dimensional coordinate frames and a point P. Now, I'm going to introduce
+
+12
+00:00:56,269 --> 00:01:02,989
+一个框架\{V\}。它与坐标系B具有相同的原点，但其轴与坐标平行
+a frame \{V\}. It has the same origin as coordinate frame B but its axes are parallel to coordinate
+
+13
+00:01:02,989 --> 00:01:11,240
+我可以通过旋转来描述相对于坐标系\{V\}的点P，
+frame A. I can describe the point P with respect to the coordinate frame \{V\} by using a rotation,
+
+14
+00:01:11,240 --> 00:01:16,770
+从坐标系\{V\}到坐标框架B的旋转。我可以描述框架的原点
+rotation from coordinate frame \{V\} to coordinate frame B. I can describe the origin of frame
+
+15
+00:01:16,770 --> 00:01:22,940
+\{V\}通过关于帧A和I的向量可以用向量来描述点P.
+\{V\} by a vector with respect to frame A and I can describe the point P in terms of a vector
+
+16
+00:01:22,940 --> 00:01:28,030
+关于坐标框架A.我可以写一个简单的矢量关系。我可以
+with respect to coordinate frame A. I can write a simple vector relationship. I can
+
+17
+00:01:28,030 --> 00:01:35,350
+添加这两个向量，因为坐标系\{V\}的轴与坐标框架A的轴平行。
+add these 2 vectors because coordinate frame \{V\} has its axes parallel to those of coordinate frame A.
+
+18
+00:01:35,400 --> 00:01:41,240
+现在，我可以替换第一个关系，现在我有了一个表达式
+Now, I can substitute the first relationship and I have now an expression for a point with
+
+19
+00:01:41,240 --> 00:01:46,940
+相对于原始坐标系B，相对于帧A的矢量
+respect to frame A in terms of a vector with respect to the original coordinate frame B
+
+20
+00:01:46,940 --> 00:01:54,020
+我可以用A代替\{V\}，因为帧\{V\}和A的轴彼此平行。
+and I can substitute A for \{V\} because the axis of frames \{V\} and A are parallel to each other.
+
+21
+00:01:54,470 --> 00:02:00,630
+我可以用旋转矩阵的元素替换并按照扩展向量
+I can substitute in the elements of the rotation matrix and expand the vectors in terms of
+
+22
+00:02:00,630 --> 00:02:07,420
+他们的元素，然后，我可以通过在它上面添加1来移动矢量来增加矢量
+their elements and then, I can augment the vector by appending a 1 to it and move the
+
+23
+00:02:07,420 --> 00:02:12,990
+坐标框架的起源到矩阵之间的转换。并保持事情
+translation between the origins of the coordinate frames into the matrix. And to keep things
+
+24
+00:02:12,990 --> 00:02:17,310
+整洁，我将增加另一个向量，这意味着我必须打包矩阵
+tidy, I'm going to augment the other vector as well which means I have to pack the matrix
+
+25
+00:02:17,310 --> 00:02:23,250
+用一些零和一些。所以，我们现在拥有的是同质的代表。
+out with some zeroes and ones. So, what we have now is a homogeneous representation.
+
+26
+00:02:23,250 --> 00:02:28,500
+我们有一个齐次变换矩阵和两个齐次向量。我们可以写
+We have a homogeneous transformation matrix and two homogeneous vectors. We can write
+
+27
+00:02:28,500 --> 00:02:33,470
+它以紧凑的形式像这样注意通过放置一个同类向量
+it in compact form like this with the note that the homogeneous vectors by putting a
+
+28
+00:02:33,470 --> 00:02:39,530
+在他们上方。我们可以看到该矩阵包括旋转分量，即平移
+tilde above them. We can see that this matrix comprises a rotation component, a translational
+
+29
+00:02:39,530 --> 00:02:42,520
+组件，3个零和一个。
+component, 3 zeroes and a one.
+
+30
+00:02:42,520 --> 00:02:48,970
+因此，这个单独的4x4矩阵封装了旋转和平移，并允许我们使用
+So, this single 4 x 4 matrix encapsulates rotation and translation and allows us to
+
+31
+00:02:48,970 --> 00:02:55,440
+变换描述从坐标系B到坐标系A的点的向量。
+transform a vector describing a point from coordinate frame B to coordinate frame A.
+
+32
+00:02:55,440 --> 00:03:00,510
+这里的这个4x4矩阵，我们称为均匀变换和这两个矢量
+This 4 x 4 matrix here, we refer to as a homogeneous transformation and these 2 vectors
+
+33
+00:03:00,510 --> 00:03:06,270
+这里是同类向量。只是提醒同类矢量，我们用它来表示它们
+here are homogeneous vectors. And just a reminder on homogeneous vectors, we denote them by
+
+34
+00:03:06,270 --> 00:03:11,280
+在顶部。我们采用笛卡尔向量，在这种情况下因为它是三维空间，
+tilde on top. We take the Cartesian vector, in this case because it's 3-dimensional space,
+
+35
+00:03:11,280 --> 00:03:17,370
+它有3个元素A，B和C.它的同类版本有4个元素A，B，C
+it's got 3 elements A, B and C. The homogeneous version of that has got 4 elements A, B, C
+
+36
+00:03:17,370 --> 00:03:22,800
+我们在它上面添加1。这是一个非常紧凑的形式。我们有一个观点
+and 1. We append a 1 to it. Here it is in a very compact form. We have a point denoted
+
+37
+00:03:22,800 --> 00:03:28,920
+通过关于帧B的均匀向量，我们可以将其转换为所描述的点
+by a homogeneous vector with respect to frame B and we can transform it to a point described
+
+38
+00:03:28,920 --> 00:03:35,870
+通过相对于帧A的均匀矢量。相对姿势由单个4描述
+A. Relative pose is described by single 4
+
+39
+00:03:35,870 --> 00:03:41,069
+x4矩阵。数学家会说这个矩阵属于特殊的欧几里德
+x 4 matrix. A mathematician would say that this matrix belongs to the special Euclidean
+
+40
+00:03:41,069 --> 00:03:48,150
+维度3的组和简写的是T是集合SE（3）的元素;3表明
+group of dimension 3 and the short hand is that T is an element of the set SE(3); 3 indicating
+
+41
+00:03:48,150 --> 00:03:50,349
+这种情况下的维度3。
+the dimension in this case 3.
+
+42
+00:03:50,349 --> 00:03:56,250
+我们可以使用齐次变换矩阵，而不是抽象符号ksi
+Instead of the abstract symbol ksi, we can use a homogeneous transformation matrix, a
+
+43
+00:03:56,250 --> 00:04:03,450
+4x4矩阵。配混或组合物仅仅是基质-基质产品。复合
+4 x 4 matrix. Compounding or composition is simply a matrix-matrix product. To compound
+
+44
+00:04:03,450 --> 00:04:10,500
+2个姿势，我简单地在均匀变换方面将它们的表示相乘。注意
+2 poses, I simply multiply their representation in terms of homogeneous transformations. Note
+
+45
+00:04:10,500 --> 00:04:17,120
+以及均匀变换的倒数不等于它的转置，即该属性
+well that the inverse of a homogeneous transformation is not equal to its transpose, that property
+
+46
+00:04:17,120 --> 00:04:22,999
+仅属于矩阵的旋转分量，矩阵是正交矩阵。该
+only belongs to the rotational component of a matrix which is an orthogonal matrix. The
+
+47
+00:04:22,999 --> 00:04:28,550
+均匀变换矩阵不是正交矩阵。它的反面并不相等
+homogeneous transformation matrix is not an orthogonal matrix. It's inverse is not equal
+
+48
+00:04:28,550 --> 00:04:34,349
+它的转置。最后，矢量变换只是一个矩阵矢量积。
+to its transpose. Finally, vector transformation is simply a matrix-vector product.
+

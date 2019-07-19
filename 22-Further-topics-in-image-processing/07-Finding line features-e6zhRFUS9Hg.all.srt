@@ -1,0 +1,395 @@
+1
+00:00:03,560 --> 00:00:08,620
+我们来谈谈我们如何找到线要素。在这个例子中我们拍了一张照片
+Let's talk about how we find line features. In this example here we've taken a picture
+
+2
+00:00:08,620 --> 00:00:15,230
+一个教堂，并在该图像上叠加了许多线条。这些线条依旧存在
+of a church and have overlaid a number of lines onto that image. These lines lay along
+
+3
+00:00:15,230 --> 00:00:16,930
+场景中明显的界限。
+the obvious boundaries in the scene.
+
+4
+00:00:16,930 --> 00:00:21,350
+天空与屋顶，屋顶和墙壁，边缘和窗户之间的边界等
+The boundary between the sky and the roof, roof and the wall, edges and windows and so
+
+5
+00:00:21,350 --> 00:00:26,449
+上。我们该怎么做呢？第一步是我们采用原始输入图像，
+on. How do we go about doing this? The first step is we take our original input image,
+
+6
+00:00:26,449 --> 00:00:31,859
+我们将其转换为灰度图像，然后我们执行年龄提取操作。
+we convert it to a gray scale image and then we perform an age extraction operation.
+
+7
+00:00:31,859 --> 00:00:37,380
+我们在之前的讲座中讨论过边缘算子。它主要涉及卷积
+We talked about edge operators in a previous lecture. It involved essentially a convolutional
+
+8
+00:00:37,380 --> 00:00:41,910
+确定图像渐变的过程，然后我们应用一些阈值。
+process to determine image gradients and then we apply some threshold to that.
+
+9
+00:00:41,910 --> 00:00:47,270
+这个图像看起来非常令人印象深刻，我们可以清楚地看到所有明显的线条
+This image looks very impressive in a way we can clearly see that all the obvious lines
+
+10
+00:00:47,270 --> 00:00:52,000
+在这里突出显示图像。但请记住，这只是一张图片。它包含一个
+in the image are highlighted here. But remember that this is just an image. It contains a
+
+11
+00:00:52,000 --> 00:00:56,360
+整个像素。有些像素是黑色，有些像素是白色。实际上有
+whole lot of pixels. Some pixels are black and some pixels are white. There is actually
+
+12
+00:00:56,360 --> 00:00:58,600
+这里没有线的概念。
+no concept of line here.
+
+13
+00:00:58,600 --> 00:01:03,039
+我们的眼睛看到了场景中的线条，我们的眼睛和大脑非常非常
+Our eyes are seeing lines within the scene and our eyes and our brain are very, very
+
+14
+00:01:03,039 --> 00:01:08,380
+擅长这样做，但实际上这里没有线条的概念。这只是一堆
+good at doing this but there is actually no notion of lines here. It is simply a bunch
+
+15
+00:01:08,380 --> 00:01:13,990
+白色像素和黑色像素，白色像素突出显示有意义的地方
+of white pixels and black pixels and the white pixels highlight where there is significant
+
+16
+00:01:13,990 --> 00:01:15,400
+场景中的渐变。
+gradient within the scene.
+
+17
+00:01:15,400 --> 00:01:21,530
+那么我们如何在这里找到长线段呢？我们如何将这些白色像素分组为线条
+So how do we find the long line segments here? How do we group these white pixels into lines
+
+18
+00:01:21,530 --> 00:01:28,439
+我们可以通过一个简单的方程来描述。Y=mx+b中。我们这样做的方式是使用图像
+which we can describe by a simple equation. y=mx+b. The way we do this is with an image
+
+19
+00:01:28,439 --> 00:01:33,369
+处理技术称为霍夫变换，它非常非常巧妙，我想尝试
+processing technique called the Hough transform and it's very, very ingenious and I want to try
+
+20
+00:01:33,369 --> 00:01:35,920
+并尽可能简单地解释它。
+and explain it as simply as I can.
+
+21
+00:01:35,920 --> 00:01:41,299
+让我们假设我们有一个优势点。所以这可能是一个沿着像素的像素
+Let's imagine that we have one edge point. So this might be a pixel that's along the
+
+22
+00:01:41,299 --> 00:01:46,659
+我们刚刚看到的教堂的屋顶，一个像素放在边缘。
+roof of the church that we were just looking at, a single pixel which lays on an edge.
+
+23
+00:01:46,659 --> 00:01:51,729
+现在有无限数量的线可以穿过空间中的任何点。这条线
+Now there are infinite number of lines which can go through any point in space. This line
+
+24
+00:01:51,729 --> 00:01:55,790
+例如，经过这一点，这条线没有通过，这条线确实去了
+for instance goes through the point, this line does not go through, this line does go
+
+25
+00:01:55,790 --> 00:02:01,829
+通过，这一个没有，这一个没有，这一个确实，这一个确实和这一个
+through, this one doesn't, this one does, this one does, this one does and this one
+
+26
+00:02:01,829 --> 00:02:03,340
+确实。
+does.
+
+27
+00:02:03,340 --> 00:02:08,080
+现在我们可以考虑这些线路投票。这条线没有通过
+Now we could consider that the lines vote for the point. This line doesn't go through
+
+28
+00:02:08,080 --> 00:02:12,700
+这一点，所以不允许投票。获得零票。然后这行
+the point so it's not allowed to vote for the point. It gets zero votes. Then this line
+
+29
+00:02:12,700 --> 00:02:17,800
+获得零票;它没有经过这一点。但这条线得到投票等等
+gets zero votes as well; it doesn't go through the point. But this line gets a vote and so
+
+30
+00:02:17,800 --> 00:02:21,860
+做这个，这一个，这个和这一个。
+does this one, this one, this one and this one.
+
+31
+00:02:21,860 --> 00:02:27,239
+这些线路投了这一点，红线没有投票。
+These lines voted for the point and the red lines have not voted for the point.
+
+32
+00:02:27,239 --> 00:02:33,290
+现在，让我们考虑一下我们还有另一个沿着边缘铺设的点，也许是这两个黑色
+Now, lets consider we have another point which lays along the edge perhaps these two black
+
+33
+00:02:33,290 --> 00:02:38,459
+现在，我们正在看着教堂的屋顶。再一次在那里
+points now lay along the roof of the church that we were just looking at. Once again there
+
+34
+00:02:38,459 --> 00:02:42,660
+是无限数量的线，可以通过这一点。可能是这条线，
+are an infinite number of lines which could go through that point. Could be this line,
+
+35
+00:02:42,660 --> 00:02:48,129
+或者这一行，或者这一行再一次，我们将允许这些行投票
+or this line, or this line and once again, we are going to allow the lines to vote for
+
+36
+00:02:48,129 --> 00:02:48,780
+一个点。
+a point.
+
+37
+00:02:48,780 --> 00:02:53,349
+所以这条线得到一票，因为它经过一个点，这条线获得投票
+So this line gets one vote because it goes through a point, this line gets a vote as
+
+38
+00:02:53,349 --> 00:02:58,550
+做这一个和这个，但这一行也经历了第一点。
+does this one and this one but this line also goes through that first point.
+
+39
+00:02:58,550 --> 00:03:04,530
+该特定线现在有两票。但是我们看到这里有很多行
+That particular line now has two votes. But we see that there are a lot of lines in this
+
+40
+00:03:04,530 --> 00:03:07,540
+现场，我已经画了一小部分。有无穷无尽的行数
+scene and I have already drawn up a small number. There are a infinite number of lines
+
+41
+00:03:07,540 --> 00:03:11,599
+通过点，无限数量的线不通过点。
+that go through the points, infinite number of lines that don't go through the points.
+
+42
+00:03:11,599 --> 00:03:16,459
+我们可以看到，经过一个点的一些线得到一票但只有一个特别
+We can see that some of the lines that go through a point get one vote but one particular
+
+43
+00:03:16,459 --> 00:03:21,420
+线，经过两分的线获得两票。所以我们使用了简单的投票
+line, the line that goes through two points gets two votes. So we've used a simple voting
+
+44
+00:03:21,420 --> 00:03:26,780
+系统试图确定经过两点的最佳线，我们可以扩展
+system to try and determine the best line that goes through two points and we can extend
+
+45
+00:03:26,780 --> 00:03:31,230
+这对于大量的点来说就是我们在处理图像时会做的事情
+this to a large number of points and that's what we would do when we process an image
+
+46
+00:03:31,230 --> 00:03:35,849
+像教堂一样。通常，当我们表示线时，我们使用这样的等式。这个
+like the church. Normally when we represent lines, we use an equation like this. This
+
+47
+00:03:35,849 --> 00:03:40,650
+是一条线的非常标准的笛卡尔表示。U是我们的水平坐标，
+is the very standard Cartesian representation of a line. U is our horizontal coordinate,
+
+48
+00:03:40,650 --> 00:03:46,790
+V是我们的垂直坐标，M是梯度，C是截距。这个问题
+V is our vertical coordinate, M is the gradient and C is the intercept. A problem with this
+
+49
+00:03:46,790 --> 00:03:52,080
+线的特定表示是垂直线。在行的情况下
+particular representation of a line is for vertical lines. In the case where the line
+
+50
+00:03:52,080 --> 00:03:57,000
+是垂直的，它必须等于无穷大，这有点问题。
+is vertical, it must be equal to infinity and that's slightly problematic.
+
+51
+00:03:57,000 --> 00:04:02,000
+还有另一种方法我们可以描述一条线的方程式，我们就是这样做的
+There is another way we can describe the equation of a line and we do it in this fashion, it's
+
+52
+00:04:02,000 --> 00:04:06,890
+通常称为线的极坐标表示我们有U和V坐标但是
+often called the polar representation of a line that we have a U and V coordinates but
+
+53
+00:04:06,890 --> 00:04:13,250
+该线由两个参数rho和theta描述。Theta是角度
+the line is described by two parameters now rho and theta. Theta is the angle that the
+
+54
+00:04:13,250 --> 00:04:18,280
+线与水平轴和rho之间的垂直距离
+line makes with the horizontal axis and rho is the perpendicular distance between the
+
+55
+00:04:18,280 --> 00:04:25,290
+起源和线上的一点。两个参数rho和theta可以描述更多的线
+origin and a point on the line. Two parameters rho and theta can describe a line in a more
+
+56
+00:04:25,290 --> 00:04:29,870
+比传统的渐变和截距配方更通用的方式。
+versatile way than the traditional gradient and intercept formulation.
+
+57
+00:04:29,870 --> 00:04:34,380
+一个问题是当我们谈论所有那些无限数量的线路时
+One problem is when we are talking about all those infinite number of lines that could
+
+58
+00:04:34,380 --> 00:04:40,509
+经历一个观点是无数次投票难以投票。什么
+go through a point is its going to be difficult for an infinite number of lines to vote. What
+
+59
+00:04:40,509 --> 00:04:47,310
+我们需要做的是量化rho和theta的值。而不是考虑无限
+we need to do is to quantize the values of rho and theta. Instead of considering an infinite
+
+60
+00:04:47,310 --> 00:04:51,380
+我们认为有限行数的行数。
+number of lines we consider a finite number of lines.
+
+61
+00:04:51,380 --> 00:04:57,139
+它是这样工作的，它是一个投票方案，现在我们有一个坐标系，横轴
+It works like this, it's a voting scheme now we have a coordinate system, horizontal axis
+
+62
+00:04:57,139 --> 00:05:02,020
+是theta的线参数，纵轴是rho的线参数。和我们
+is the line parameter of theta, the vertical axis is the line parameter of rho. And we
+
+63
+00:05:02,020 --> 00:05:08,600
+在这上面放了一个网格。每个单元格代表图像中的可能线条。一个特别的
+placed a grid on this. Every single cell represents a possible line in an image. A particular
+
+64
+00:05:08,600 --> 00:05:13,960
+行的值和theta的特定值，表示图像中的一条线。这个
+value of row and a particular value of theta and that represents a line in the image. This
+
+65
+00:05:13,960 --> 00:05:18,900
+在现实世界的例子中，这个网格可能有数百个元素
+is a very course example in a real world example this grid might have hundreds of elements
+
+66
+00:05:18,900 --> 00:05:23,470
+在两个方向。要记住的重要一点是
+in both directions. The important thing to keep in mind is that
+
+67
+00:05:23,470 --> 00:05:26,150
+每个单元格代表图像中的特定线条。
+each cell represents a particular line within the image.
+
+68
+00:05:26,150 --> 00:05:31,380
+对于输入图像中沿边缘放置的任何点，这是坐标U处的像素
+For any point in the input image, that lays along an edge, that's a pixel at coordinate U
+
+69
+00:05:31,380 --> 00:05:37,419
+和V通过该点的线的参数必须满足该特定方程。
+and V the parameters of the lines that go through that point must satisfy this particular equation.
+
+70
+00:05:38,440 --> 00:05:45,310
+现在这是一个将rho与theta联系起来的方程式。对于theta的每个可能的值，
+This is now an equation that relates rho to theta. For every possible value of theta,
+
+71
+00:05:45,310 --> 00:05:50,639
+鉴于我知道U和V，我可以计算出rho的值。所有这些线都得到了
+given that I know U and V, I can computer a value of rho. And so all these lines get
+
+72
+00:05:50,639 --> 00:05:56,850
+投票。他们可以为该特定行投一票。对于这一点，它提出
+to have a vote. They get to vote one for that particular line. For this one point, it puts
+
+73
+00:05:56,850 --> 00:06:02,729
+这些投票进入我们称之为投票数组的投票数组，有时称为霍夫累加器。
+these votes into what we call the voting array sometimes called the Hough accumulator.
+
+74
+00:06:02,729 --> 00:06:08,139
+所以有一点我们已经为大量的线路投了票。现在让我们考虑一下
+So for one point we have made votes for a large number of lines. Now let's consider
+
+75
+00:06:08,139 --> 00:06:13,500
+当我们引入第二点时会发生什么。第二点是对所有人投票
+what happens when we introduce a second point. The second point is voting for all of the
+
+76
+00:06:13,500 --> 00:06:18,880
+通过它的可能线条，它在投票中引入了另一条曲线
+possible lines that pass through it and it's introduced another curve into the voting
+
+77
+00:06:18,880 --> 00:06:22,940
+阵列。我们可以看到，有一些可能的线路得到一票和我们
+array. We can see that there are a number of possible lines that got one vote and we
+
+78
+00:06:22,940 --> 00:06:28,319
+可以看到这里有一条线有两票。这是潜在的
+can see that there is one line here which has got two votes. This is the underlying
+
+79
+00:06:28,319 --> 00:06:30,840
+霍夫变换的原理。
+principle for the Hough transform.
+

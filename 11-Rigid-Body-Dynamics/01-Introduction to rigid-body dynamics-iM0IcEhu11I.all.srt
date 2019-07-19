@@ -1,0 +1,150 @@
+1
+00:00:03,629 --> 00:00:08,619
+在上一次讲座中，我们讨论了机器人关节控制，这就是问题所在
+In the last lecture we talked about robot joint control and that’s the problem of
+
+2
+00:00:08,619 --> 00:00:13,890
+我们如何控制驱动机器人手臂关节角度的电机。
+how do we control the motor which is actuating the joint angle in a robot arm.
+
+3
+00:00:13,890 --> 00:00:18,449
+现在在一个真正的机器人中，这个控制问题比我们谈论的要复杂一点
+Now in a real robot, this control problem is a little bit more complicated than we talked
+
+4
+00:00:18,449 --> 00:00:23,810
+在最后一个讲座中，一个非常简单的例子可以说清楚。
+about in the last lecture and a pretty simple example can make that clear.
+
+5
+00:00:23,810 --> 00:00:28,419
+如果你考虑控制我肩关节的问题，那么我的手臂的重量，
+If you consider in the problem of controlling my shoulder joint, then the weight of my arm,
+
+6
+00:00:28,419 --> 00:00:33,440
+作用在这个臂上的重力将在我的肩膀上施加一个扭矩，所以手臂就是这样
+gravity acting on this arm is going to exert a torque on my shoulder and so the arm is
+
+7
+00:00:33,440 --> 00:00:38,290
+想要摔倒，所以这是我手臂上的肌肉，必须采用相反的方式
+going to want to fall down, so it’s the muscles in my arm, have to apply an opposite
+
+8
+00:00:38,290 --> 00:00:45,100
+扭矩，以保持我的手臂水平。因此，机器人手臂控制中一个非常重要的因素
+torque in order to keep my arm horizontal. So, a really important factor in robot arm control
+
+9
+00:00:45,100 --> 00:00:50,920
+是重力的影响，重力作用于机器人手臂的各个环节。
+is the influence of gravity, the weight force that acts on the various links of a robot’s arm.
+
+10
+00:00:50,920 --> 00:00:56,350
+现在，另一个问题是惯性的变化。正在驱动的电机
+Now, another problem is to do with the change in inertia. The motor, which is driving, for
+
+11
+00:00:56,350 --> 00:01:01,740
+例如，我的肩关节看到了电机本身的惯性，但它也看到了
+instance my shoulder joint sees the inertia of the motor itself, but it also sees the
+
+12
+00:01:01,740 --> 00:01:06,590
+这种联系的惯性，所以为了加速这一点，将不得不加速这一切
+inertia of this link, so in order to accelerate this, going to have to accelerate all this
+
+13
+00:01:06,590 --> 00:01:12,399
+我的手臂的一部分，需要在电机中增加额外的扭矩
+part of my arm and that requires additional torque in the motor in order to
+
+14
+00:01:12,399 --> 00:01:16,179
+实现特定的加速度;它是我手臂惯性的函数。
+achieve a particular acceleration; it’s a function of the inertia of my arm.
+
+15
+00:01:16,179 --> 00:01:21,450
+现在，惯性取决于我的手臂的配置。我的手臂在这里有最大的惯性
+Now, the inertia depends on the configuration of my arm. My arm here is got maximum inertia
+
+16
+00:01:21,450 --> 00:01:24,969
+关于肩轴，但如果手臂处于这样的配置，那就得到了
+about the shoulder axis, but if the arm was in a configuration like this, it’s got
+
+17
+00:01:24,969 --> 00:01:29,100
+惯性较小。如果它是这样的配置，它的惯性仍然较小。
+less inertia. If it was in a configuration like this, it’s got less inertia still.
+
+18
+00:01:29,100 --> 00:01:35,219
+因此，从特定关节向外的链接的配置将受到影响
+So, the configuration of the links outwards from a particular joint are going to affect
+
+19
+00:01:35,219 --> 00:01:40,569
+那个关节看到的惯性。所有这些影响，重力问题
+the inertia that that joint sees. So all of these sorts of effects, the gravity problem
+
+20
+00:01:40,569 --> 00:01:45,780
+惯性问题在我们称之为刚体动力效应的过程中被混为一谈
+and the inertia problem are lumped together in what we call rigid body dynamic effects
+
+21
+00:01:45,780 --> 00:01:49,240
+这就是我们将在这个特定的讲座中谈论的内容。
+and that’s what we’re going to talk about in this particular lecture.
+
+22
+00:01:49,240 --> 00:01:54,639
+现在，在上一个讲座中，我们提出了这个方块图，我们一直在努力完成所有工作
+Now, in the last lecture, we put up this block diagram and we worked our way through all
+
+23
+00:01:54,639 --> 00:01:58,499
+图中的不同块。在这个讲座中，我们要做的是把它
+the different blocks in the diagram. In this lecture, what we’re going to do is put the
+
+24
+00:01:58,499 --> 00:02:06,739
+关注机器人关节本身;这是一个关节与机器人手臂中的其他关节相互作用的地方。
+spotlight on the robot joint itself; this is where one joint interacts with the other joints in the robot arm.
+
+25
+00:02:06,740 --> 00:02:12,230
+这就是改变重力和改变惯性的效果，这些都是机械效应，
+This is where the effects like changing gravity and changing inertia, these are mechanic effects,
+
+26
+00:02:12,230 --> 00:02:18,010
+来自机器人关节，通过齿轮箱返回，它们影响机器人关节内的电机。
+come from the robot joint, back through the gearbox and they influence the motor within the robot joint.
+
+27
+00:02:18,010 --> 00:02:23,670
+所以，这个讲座的目的是尝试解开其中的一些问题，
+So, that’s the purpose of this lecture, is to try and unpack some of these issues,
+
+28
+00:02:23,670 --> 00:02:30,580
+看看这些重力问题和惯性效应如何影响个别电机
+see how these gravity problems and the inertia effects, impact on the individual motors that
+
+29
+00:02:30,580 --> 00:02:32,470
+正在驾驶各个关节。
+are driving the individual joints.
+
+30
+00:02:32,470 --> 00:02:38,030
+如果我们想要对机器人关节运动进行高质量控制，我们不能忽视这些效果。
+We can’t ignore these effects if we want to do high quality control of robot joint motion.
+

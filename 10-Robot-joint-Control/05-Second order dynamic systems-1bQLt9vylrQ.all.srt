@@ -1,0 +1,715 @@
+1
+00:00:03,679 --> 00:00:07,910
+我们将对简单的动态系统进行一些回顾，我们将开始
+We're going to do a bit of a recap of simple dynamical systems and we're going to start
+
+2
+00:00:07,910 --> 00:00:15,330
+这是一个非常经典的系统，它是通过弹簧连接到固定点的轮子上的质量。
+with the very classical system which is a mass on wheels connected by a spring to a fixed point.
+
+3
+00:00:16,280 --> 00:00:22,320
+推车相对于某些数据的位移由变量X给出
+The displacement of the cart with respect to some data is given by the variable X. And
+
+4
+00:00:22,330 --> 00:00:28,640
+X向右增加。如果弹簧被压缩，那么它就会被推动
+X increases positively to the right. If the spring is compressed then it's going to push
+
+5
+00:00:28,640 --> 00:00:34,399
+向左推车。并且箭头和符号Fs表示方向。
+the cart towards the left. And the direction indicated by the arrow and the symbol Fs.
+
+6
+00:00:34,399 --> 00:00:39,780
+这就是弹簧施加的力量。现在我们可以想象今年春天的情况
+That's the force exerted by the spring. Now we can imagine the situation where this spring
+
+7
+00:00:39,780 --> 00:00:44,550
+拉伸，当X为负时就是这种情况。现在春天正在努力
+is stretched and that's the case when X is negative. And now the spring is trying to
+
+8
+00:00:44,550 --> 00:00:50,579
+把车拉向右边。所以现在指示Fs方向的箭头
+pull the cart towards the right. And so the arrow indicating the direction of Fs is now
+
+9
+00:00:50,579 --> 00:00:55,920
+指向右边。因此弹簧可以推动或拉动推车和弹簧
+pointing towards the right. So the spring can either push or pull the cart and the spring
+
+10
+00:00:55,920 --> 00:01:02,469
+force等于X的负K倍，这是我绘制这个特定图表的方式。
+force is equal to minus K times X, the way I've drawn this particular diagram.
+
+11
+00:01:02,469 --> 00:01:08,030
+现在有摩擦操作，摩擦是一种与运动方向相反的力。
+Now there's friction operating and friction is a force that opposes the direction of motion.
+
+12
+00:01:08,030 --> 00:01:12,340
+所以在上图中，如果推车向左移动，那么摩擦力
+So in the top figure, if the cart is moving towards the left, then the friction force
+
+13
+00:01:12,340 --> 00:01:17,770
+对于下图中的数字，将向右移动，反之亦然。和摩擦
+is going to be towards the right and vice versa for the figure below that. And the friction
+
+14
+00:01:17,770 --> 00:01:26,400
+力与速度成正比，与proportional成正比。B是摩擦系数。
+force is proportional to the velocity, proportional to ẋ. And B is the friction coefficient.
+
+15
+00:01:26,400 --> 00:01:30,560
+为了理解这一点，我们将绘制一个自由的体图。所以我在这里
+In order to understand this we're going to draw a free body diagram. So here I have a
+
+16
+00:01:30,560 --> 00:01:35,380
+质量M及其位移X.并且有两个力作用于质量。有
+mass M and its displacement X. And there were two forces acting on the mass. There is the
+
+17
+00:01:35,380 --> 00:01:40,080
+弹簧力Kx和摩擦力Bẋ。
+spring force Kx and the friction force Bẋ.
+
+18
+00:01:40,080 --> 00:01:44,710
+身体的加速度等于作用于它的力的总和。和
+The acceleration of the body is equal to the sum of the forces that are acting on it. And
+
+19
+00:01:44,710 --> 00:01:50,640
+我可以在这里将这个表达式重新排列成这种形式。所以这是二阶线性的
+I can rearrange this expression into this form here. So this is a second order linear
+
+20
+00:01:50,640 --> 00:01:55,140
+描述质量M运动的微分方程。
+differential equation which describes the motion of the mass M.
+
+21
+00:01:55,140 --> 00:01:59,000
+现在，如果你在解决微分方程时有点生疏，那就让我给你
+Now if you're a little bit rusty on solving your differential equation, let me give you
+
+22
+00:01:59,000 --> 00:02:05,640
+一个提示。我们可以提出X等于E到ST。这是一个指数函数
+a hint. We can propose that X is equal to E to the ST. That it is an exponential function
+
+23
+00:02:05,640 --> 00:02:08,390
+时间S是时间常数。
+of time. And S is the time constant.
+
+24
+00:02:08,390 --> 00:02:13,469
+现在我可以采取这个的衍生物，现在我得到了一个表达式ẋ。与
+Now I could take the derivative of this, and I got an expression now for ẋ. And with
+
+25
+00:02:13,469 --> 00:02:20,029
+一些简化我可以看出ẋ等于S乘X倍。我可以采用导数
+some simplification I can see that ẋ is equal to S times X. And I can take the derivative
+
+26
+00:02:20,029 --> 00:02:25,769
+再次在这里得到这个表达。现在我可以将这些替换变成我原来的
+again and get this expression here. Now I can make these substitutions into my original
+
+27
+00:02:25,769 --> 00:02:31,019
+方程式和我最终得到这个表达式，我可以取消X的，我最终
+equation and I end up with this expression and I can cancel out the X's and I end up
+
+28
+00:02:31,019 --> 00:02:36,069
+有了它，这被称为特征方程。现在这是一个二次方程
+with this, which is called the characteristic equation. This is now a quadratic equation
+
+29
+00:02:36,069 --> 00:02:41,049
+在变量S中我们可以很容易地求解S.
+in the variable S. And we can solve for S quite easily.
+
+30
+00:02:41,049 --> 00:02:46,239
+这里再次是二次方程和二次方程的众所周知的解
+Here is the quadratic equation again and the well-known solution to the quadratic equation
+
+31
+00:02:46,239 --> 00:02:54,209
+在这儿。S的这些值被称为系统的极点。他们定义了响应，
+is here. These values of S are known as the poles of the system. And they define the response,
+
+32
+00:02:54,209 --> 00:03:00,199
+质量的位置响应随时间的变化。并记住X是一个指数
+the position response of the mass as a function of time. And remember X is an exponential
+
+33
+00:03:00,199 --> 00:03:02,639
+时间函数和S.
+function of time and S.
+
+34
+00:03:02,639 --> 00:03:08,480
+如果我们考虑这个等式的行列式，那就是平方根内的表达式。
+If we consider the determinant of this equation, that's the expression inside the square root.
+
+35
+00:03:08,480 --> 00:03:13,209
+它有三组有趣的值。如果行列式大于零则
+It has three interesting sets of values. If the determinant is greater than zero then
+
+36
+00:03:13,209 --> 00:03:19,529
+S有两个真实和不同的值。如果行列式等于零，那么S有两个
+S has two real and different values. If the determinant is equal to zero then S has two
+
+37
+00:03:19,529 --> 00:03:24,829
+真实和平等的价值观。S的两个值是相同的。如果决定因素小于
+real and equal values. Two values of S are the same. And if the determinant is less than
+
+38
+00:03:24,829 --> 00:03:28,959
+零，则S是复共轭对。
+zero, then S is a complex conjugate pair.
+
+39
+00:03:28,959 --> 00:03:34,229
+就系统的物理响应而言，这种情况称为阻尼响应。
+In terms of the physical response of the system, this case is referred to as the damped response.
+
+40
+00:03:34,229 --> 00:03:39,639
+这种情况称为临界阻尼。这种情况是一种振荡的反应。该
+This case is called critically damped. And this case is an oscillating response. The
+
+41
+00:03:39,639 --> 00:03:44,629
+总体反应，我们的质量作为时间函数的位置是叠加
+overall response, the position of our mass as the function of time is the superposition
+
+42
+00:03:44,629 --> 00:03:49,669
+由于每个极点的响应。所以它是一些常数，是第一个响应的时间
+of the response due to each pole. So it's some constant, times the response of the first
+
+43
+00:03:49,669 --> 00:03:54,040
+极点，加上一些恒定的时间，由于第二极点的响应。
+pole, plus some constant times the response due to the second pole.
+
+44
+00:03:54,040 --> 00:03:58,999
+一种非常经典的方法来考虑二阶动力系统的响应，如
+A very classical way to consider the response of a second order dynamical system such as
+
+45
+00:03:58,999 --> 00:04:04,609
+我们在这里研究的是看它的阻尼比，这是由这个表达式给出的
+we're studying here is to look at it's damping ratio and that's given by this expression
+
+46
+00:04:04,609 --> 00:04:10,939
+这里。并且该图显示了不同阻尼比值的时间响应。什么时候
+here. And the graph shows the time response for different values of damping ratio. When
+
+47
+00:04:10,939 --> 00:04:15,499
+阻尼比大于1，我们说响应过度阻尼。我们看
+the damping ratio is greater than one, we say that the response is over damped. We see
+
+48
+00:04:15,499 --> 00:04:21,989
+它作为时间的函数非常缓慢地响应。当阻尼比小于
+that it responds very very slowly as a function of time. When the damping ratio is less than
+
+49
+00:04:21,989 --> 00:04:26,770
+一，我们看到反应有点振荡。并且随着阻尼比的增加
+one, we see that the response is somewhat oscillatory. And as the damping ratio get's
+
+50
+00:04:26,770 --> 00:04:31,400
+越来越小，我们看到系统的响应越来越频繁。该
+smaller and smaller we see that the system's response is more and more oscillatory. The
+
+51
+00:04:31,400 --> 00:04:35,310
+过度射击更高，并且有更多的振荡周期。
+over shoot is higher and there are more cycles of oscillation.
+
+52
+00:04:35,310 --> 00:04:39,949
+当阻尼比变为零时，根本没有衰减。系统将继续
+When the damping ratio gets to zero there is no decay at all. And the system will continue
+
+53
+00:04:39,949 --> 00:04:47,340
+在没有任何腐烂的情况下永远振荡。阻尼比1对应于临界值
+to oscillate forever without any kind of decay. The damping ratio 1 corresponds to critical
+
+54
+00:04:47,340 --> 00:04:55,979
+阻尼。它是阻尼比的最小值，不会出现过冲。
+damping. It is the smallest value of the damping ratio for which there will be no overshoot.
+
+55
+00:04:55,979 --> 00:05:01,800
+现在考虑我们想要模拟这个微分方程的响应。我可以重新排列
+Consider now we want to simulate the response of this differential equation. I can rearrange
+
+56
+00:05:01,800 --> 00:05:07,689
+它使ẍ在左侧自行隔离。现在我要开始吧
+it so that ẍ is isolated by itself on the left hand side. And now I am going to start
+
+57
+00:05:07,689 --> 00:05:12,800
+绘制一个系统的框图，该系统具有与我们的差分相同的动态
+to draw of block diagram of a system which has got the same dynamics as our differential
+
+58
+00:05:12,800 --> 00:05:19,259
+方程。我要画一个箭头并标上它ẍ。我要添加一个集成商
+equation. I'm going to draw an arrow and label it ẍ. And I'm going to add an integrator
+
+59
+00:05:19,259 --> 00:05:24,099
+我们整合ẍ。现在我有ẋ。我将再次整合它，现在我
+we integrate ẍ. And now I have ẋ. And I'm going to integrate it again and now I
+
+60
+00:05:24,099 --> 00:05:31,199
+有X.信号ẋ并乘以负数b然后我在这里计算这个术语。
+have X. The signal ẋ and multiply it by minus b then I have compute this term here.
+
+61
+00:05:31,199 --> 00:05:36,939
+三角形表示增益块。它的输出等于输入的负b倍。
+And the triangle indicates a gain block. It's output is equal to minus b times it's input.
+
+62
+00:05:36,939 --> 00:05:43,710
+然后我们在这里引入另一个增益块，增益为负K.如果我添加这两个
+Then we introduce another gain block here with a gain of minus K. If I add these two
+
+63
+00:05:43,710 --> 00:05:48,490
+信号与求和点一起，结果现在显示在此表达式中
+signals together with a summing junction, the result now is this expression shown here
+
+64
+00:05:48,490 --> 00:05:55,900
+黄色如果我将它除以M，即通过在M上应用1的增益，我现在已经计算出来了
+in yellow. And if I divide that by M, that is by applying a gain of 1 on M, I have now computed
+
+65
+00:05:55,900 --> 00:05:58,770
+一个等于ẍ的表达式。
+an expression that is equivalent to ẍ.
+
+66
+00:05:58,770 --> 00:06:04,400
+所以我加入了这个增益块的输出到我开始的信号。所以这
+So I joined the output of this gain block to the signal that I started with. So this
+
+67
+00:06:04,400 --> 00:06:09,539
+是动态系统的框图。如果我在模拟环境中构建它
+is a block diagram of a dynamic system. And if I built this in a simulation environment
+
+68
+00:06:09,539 --> 00:06:15,289
+并模拟它作为时间函数的表现，信号X将给我
+and simulated how it performed as a function of time, the signal X is going to give me
+
+69
+00:06:15,289 --> 00:06:20,530
+我们首先看到的动态系统的位置响应。该
+the position response of the dynamic system that we looked at in the first place. The
+
+70
+00:06:20,530 --> 00:06:23,819
+系统带推车和弹簧以及一些摩擦力。
+system with a cart and a spring and some friction.
+
+71
+00:06:23,819 --> 00:06:29,030
+那么这是我刚才描述的系统，但是我在Simulink建模中实现了它
+Well this is the system that I just described but I implemented it in the Simulink modelling
+
+72
+00:06:29,030 --> 00:06:36,370
+包是MATLAB的一部分。这是两个集成商;集成的集成商
+package that's a part of MATLAB. Here are the two integrators; the integrator that integrates
+
+73
+00:06:36,370 --> 00:06:44,670
+ẍ到ẋ即加速到速度，这个积分器将速度整合到位。
+the ẍ into ẋ that is acceleration to velocity and this integrator which integrates velocity into position.
+
+74
+00:06:45,560 --> 00:06:50,740
+这个特定的积分器的初始条件为1.这是初始值
+This particular integrator has got an initial condition of 1. That's the initial value of
+
+75
+00:06:50,749 --> 00:06:56,460
+位移X.这是购物车的初始位置。所以我们定义坐标的方式
+the displacement X. That's the initial position of the cart. So the way we define our coordinate
+
+76
+00:06:56,460 --> 00:07:01,860
+约定意味着对于X=1，弹簧被压缩。这意味着第一件事
+conventions means that for X=1, the spring is compressed. That means the first thing
+
+77
+00:07:01,860 --> 00:07:05,889
+春天要做的就是推开车。它会推动购物车
+that the spring is going to do is to push the cart away. It's going to push the cart
+
+78
+00:07:05,889 --> 00:07:08,539
+进入-X方向。
+into -X direction.
+
+79
+00:07:08,539 --> 00:07:14,979
+所以让我们在这里模拟模型。在这里我们看到位置响应
+So let's simulate the model as we have it here. And here we see the position response
+
+80
+00:07:14,979 --> 00:07:20,159
+购物车正如我刚才所说的那样，推车正朝-X方向移动。它的
+of the cart. As I just said a moment ago, the cart is moving in the -X direction. It's
+
+81
+00:07:20,159 --> 00:07:24,379
+振荡一点点，但能量从系统中衰退并且稳定下来
+oscillating a little bit but the energy is decaying from the system and it settles out
+
+82
+00:07:24,379 --> 00:07:27,870
+在X=0的位置。
+at a position of X=0.
+
+83
+00:07:27,870 --> 00:07:32,289
+现在我要调整一些参数。此增益块表示反向
+Now I'm going to adjust some of the parameters. This gain block here represents the inverse
+
+84
+00:07:32,289 --> 00:07:37,479
+质量，所以我可以在这里打开参数设置，我将改变质量
+mass so I can open up the parameter settings here and I'm going to change the mass from
+
+85
+00:07:37,479 --> 00:07:44,460
+2公斤至4公斤。我将应用该参数。现在我要模拟
+2 kg to 4 kg. And I'm going to apply that parameter. And now I am going to simulate
+
+86
+00:07:44,460 --> 00:07:49,509
+响应。你会注意到它会改变。我们将看到振荡实际上是
+the response. You'll note that it changes. We'll see that the oscillations are in fact
+
+87
+00:07:49,509 --> 00:07:54,669
+更激烈。那是因为我们的系统从更大的潜力开始
+more intense. And that's because our system starts with a greater amount of potential
+
+88
+00:07:54,669 --> 00:07:59,099
+能源。那就是储存在压缩弹簧中的能量。
+energy. That's the energy stored in that compressed spring.
+
+89
+00:07:59,099 --> 00:08:04,520
+更多的质量将具有更多的初始势能，这将需要更长的时间
+More mass is going to have more initial potential energy, which is going to take longer to be
+
+90
+00:08:04,520 --> 00:08:12,539
+由摩擦消散。如果我进一步增加质量，请将其调高至2千克，然后涂抹
+dissipated by the friction. If I increase the mass even more, turn it up to 2 kg, apply
+
+91
+00:08:12,539 --> 00:08:20,289
+那，我们在这里看到振荡变得慢得多，而且也是速度
+that, and here we see that the oscillation has become much slower and it's also the rate
+
+92
+00:08:20,289 --> 00:08:22,199
+腐烂的程度要小得多。
+of decay is much much less.
+
+93
+00:08:22,199 --> 00:08:28,340
+我现在要做的就是把它重新放回我开始使用的2公斤的值，模拟
+I'm going to do now is to put that back to the value I started with which was 2 kg, simulate
+
+94
+00:08:28,340 --> 00:08:32,340
+原始系统看起来像这样。而现在我要做的就是增加
+the original system that looks like this. And now what I'm going to do is to increase
+
+95
+00:08:32,340 --> 00:08:33,870
+摩擦量。
+the amount of friction.
+
+96
+00:08:33,870 --> 00:08:38,539
+所以最初我们的摩擦系数为2，并将摩擦系数改为
+So originally we had a friction coefficient of 2 and changed the friction coefficient to
+
+97
+00:08:38,539 --> 00:08:43,659
+我们应该看到的是振荡应该因为能量而更快地消亡
+4 and what we should see is that the oscillation should die out more quickly because the energy
+
+98
+00:08:43,659 --> 00:08:49,589
+由于摩擦力增加，消散得更快;增加
+is dissipated much more quickly because there is an increased amount of friction; increase
+
+99
+00:08:49,589 --> 00:08:56,170
+它更多，增加它说8，并应用该参数并再次模拟
+it some more, increase it say to 8, and apply that parameter and simulate again and there
+
+100
+00:08:56,170 --> 00:09:01,290
+我们看。现在绝对没有任何振荡。系统过度阻尼。
+we see. There’s absolutely no oscillation at all now. The system is over damped.
+
+101
+00:09:01,290 --> 00:09:06,510
+因此，让我们回顾一下我们如何将微分方程转换为代数方程。我做
+So let's recap on how we convert differential equation to an algebraic equation. I make
+
+102
+00:09:06,510 --> 00:09:14,310
+X和它们的衍生物ẋ和ẍ在S和X方面的替换。现在是
+these substitutions for X and it's derivative ẋ and ẍ in terms of S and X. Now it's
+
+103
+00:09:14,310 --> 00:09:19,610
+我们可以将S视为运营商。这是一个转换差异的运算符
+possible that we can consider S as an operator. That is it's an operator that converts differential
+
+104
+00:09:19,610 --> 00:09:25,709
+代数方程的方程。一旦我们完成了这个，我们可以解决S，我们称之为
+equation to an algebraic equation. Once we've done this we can solve for S and we call these
+
+105
+00:09:25,709 --> 00:09:30,920
+S系统极点的值。它们表明了动态响应
+values of S the poles of this system. And they indicate the dynamic response of the
+
+106
+00:09:30,920 --> 00:09:36,459
+系统作为时间的函数。如果一个系统有一个以上的杆，我们的系统
+system as a function of time. If a system has got more than one pole, the system we
+
+107
+00:09:36,459 --> 00:09:42,120
+看着有两极，那么响应是叠加，响应的总和
+looked at has two poles, then the response is the superposition, the summation of the response
+
+108
+00:09:42,120 --> 00:09:46,320
+由于S的每个特定值
+due to each particular value of S.
+
+109
+00:09:46,320 --> 00:09:50,959
+我们之前考虑过的是非强制响应。没有其他力量
+What we considered earlier was called the unforced response. There was no other force
+
+110
+00:09:50,959 --> 00:09:55,680
+除了弹簧和摩擦力作用于系统。我们将购物车定位在
+acting on the system apart from the spring and the friction. We position the cart at
+
+111
+00:09:55,680 --> 00:10:02,120
+一些X的初始值不等于零。然后放手观察会发生什么。
+some initial value of X not equal to zero. And then let it go and watched what happens.
+
+112
+00:10:02,120 --> 00:10:06,120
+现在我感兴趣的是所谓的强制响应。现在我要申请了
+Now what I'm interested in is what's called the forced response. Now I'm going to apply
+
+113
+00:10:06,120 --> 00:10:13,000
+一个力F到购物车，我想了解它是如何移动的。所以我绘制了自由体图
+a force F to the cart and I want to understand how it moves. So I draw the free body diagram
+
+114
+00:10:13,000 --> 00:10:17,060
+再次，但现在它有一个额外的力量。这是我应用于购物车的力量
+again but now it's got an extra force. It's got the force that I'm applying to the cart
+
+115
+00:10:17,060 --> 00:10:22,860
+F以及弹簧力和摩擦力。现在我认为力平衡起作用
+F as well as the spring force and the friction force. Now I consider the force balance acting
+
+116
+00:10:22,860 --> 00:10:29,779
+在自由体图中的质量，并重新排列它像这样。现在我要考虑S
+on the mass in the free body diagram and rearrange it like this. Now I'm going to consider S
+
+117
+00:10:29,779 --> 00:10:35,180
+作为运营商。我正在用操作符S替换X的衍生物，现在我要去了
+as an operator. I'm replacing the derivatives of X with the operator S and now I'm going
+
+118
+00:10:35,180 --> 00:10:37,870
+写这个。你会注意到一些差异。
+to write this. And you'll notice a few differences.
+
+119
+00:10:37,870 --> 00:10:43,000
+首先，衍生品已经消失，我已经介绍了我的操作员S.你也会注意到
+Firstly the derivatives have gone and I've introduced my operator S. You'll also notice
+
+120
+00:10:43,000 --> 00:10:48,620
+我已经将小写字母x改为大写字母X，我将小写字母f改为大写字母
+that I've changed the lower case x to a capital X and I've changed the lower case f to a capital
+
+121
+00:10:48,620 --> 00:10:54,250
+F.我所做的是计算我的微分方程的拉普拉斯变换。首都
+F. What I've done is computed the Laplace transform of my differential equation. Capital
+
+122
+00:10:54,250 --> 00:10:59,959
+X表示推车小写字母x和首都的位置的拉普拉斯变换
+X represents the Laplace transform of the position of the cart lower case x and capital
+
+123
+00:10:59,959 --> 00:11:06,579
+F表示施加力的拉普拉斯变换，其为小写f。
+F represents the Laplace transform of the applied force which is lower case f.
+
+124
+00:11:06,579 --> 00:11:12,329
+现在我可以将我的拉普拉斯变换表达式重新排列成一个我们称之为传递函数的比率。
+Now I can rearrange my Laplace transform expression into a ratio which we call a transfer function.
+
+125
+00:11:12,329 --> 00:11:19,649
+它是系统X的输出与系统F的输入的比率
+It is the ratio of the output of the system X to the input of the system F. And to make
+
+126
+00:11:19,649 --> 00:11:24,720
+事情很清楚我已经说过，资本X是运营商和资本的功能
+things very clear I've said that capital X is the function of the operator s and capital
+
+127
+00:11:24,720 --> 00:11:28,940
+F是操作员的功能。
+F is a function of the operator s.
+
+128
+00:11:28,940 --> 00:11:34,079
+让我们将一个非常通用的动态系统视为黑盒子。输入是信号x
+Let's consider a very general dynamic system as a black box. The input is a signal x which
+
+129
+00:11:34,079 --> 00:11:39,660
+是时间的函数，输出是另一个信号y，它是时间的函数。然后
+is a function of time and the output is another signal y which is a function of time. Then
+
+130
+00:11:39,660 --> 00:11:45,940
+在数学上，系统y的输出与系统x的输入相关，进行卷积
+mathematically the output of the system y is related to the input to the system x, convolved
+
+131
+00:11:45,940 --> 00:11:52,520
+利用该动态系统的脉冲响应，其由g表示为时间的函数。
+with the impulse response of that dynamic system, which is denoted by g as a function of time.
+
+132
+00:11:52,620 --> 00:11:57,259
+在我们刚刚运行的拉普拉斯域中，事情变得更简单一些。
+In the Laplace domain where we've just been operating, things are a little bit simpler.
+
+133
+00:11:57,259 --> 00:12:02,500
+输入系统的拉普拉斯变换是大写X.拉普拉斯变换输出是
+The Laplace transform of the input system is capital X. Laplace transform output is
+
+134
+00:12:02,500 --> 00:12:07,290
+资本Y.G是系统的传递函数。
+capital Y. And G is the transfer function of the system.
+
+135
+00:12:07,290 --> 00:12:12,870
+所以现在输出Y只是输入X乘以传递的乘积
+So now the output Y is simply the product of the input X multiplied by the transfer
+
+136
+00:12:12,870 --> 00:12:18,720
+功能。拉普拉斯域中的简单乘法，它是卷积的
+function. The simple multiplication in the Laplace domain where it is a convolution in
+
+137
+00:12:18,720 --> 00:12:19,899
+时域。
+the time domain.
+
+138
+00:12:19,899 --> 00:12:24,620
+我在本节中介绍了很多领域。如果您以前遇到过这些概念，
+I've covered a lot of territory in this section. And if you previously encountered these concepts,
+
+139
+00:12:24,620 --> 00:12:30,319
+我希望它能为你提供一些记忆复习。如果你从未遇到过
+I hope that it served as a bit of a memory refresher for you. If you've never encountered
+
+140
+00:12:30,319 --> 00:12:35,050
+在此之前我所谈论的这些概念可能有点令人困惑。
+these concepts before then what I've been talking about is probably a little bewildering.
+
+141
+00:12:35,050 --> 00:12:39,279
+尝试再次浏览内容可能是值得的。也许联系朋友
+It might be worthwhile trying to go through the content again. Perhaps contact a friend
+
+142
+00:12:39,279 --> 00:12:44,329
+或者可以通过这些材料与您交谈或尝试找到介绍的同事
+or colleague who can talk you through some of this material or try and find an introductory
+
+143
+00:12:44,329 --> 00:12:48,889
+控制系统文本将更详细地介绍这些材料。
+control systems text which will cover this material in much much more detail.
+

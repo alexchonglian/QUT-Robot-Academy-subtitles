@@ -1,0 +1,220 @@
+1
+00:00:03,360 --> 00:00:08,260
+让我们再次考虑我们有一个相机看着一个物体的情况。再来一次
+Let's consider again the situation where we have a camera looking at an object. Once again
+
+2
+00:00:08,260 --> 00:00:13,719
+这是一个球。我们将坐标C附加到相机，我们的坐标为
+it's a ball. We attach a coordinate C to the camera and we have the coordinate of
+
+3
+00:00:13,719 --> 00:00:17,830
+球相对于相机坐标系表示。
+the ball expressed with respect to the camera coordinate frame.
+
+4
+00:00:17,830 --> 00:00:21,920
+我们将介绍一个新的符号，即F帽，它是a的焦距
+We're going to introduce a new symbol, which is F hat, and it is the focal length of a
+
+5
+00:00:21,920 --> 00:00:27,320
+透镜，以米为单位，除以由像素给出的像素的尺寸
+lens, which is in units of meters, divided by the dimensions of the pixel given by the
+
+6
+00:00:27,320 --> 00:00:34,550
+希腊字母Rho。现在Rho具有每像素米的单位，因此该比率具有像素单位。
+Greek letter Rho. Now Rho has units of meters per pixel, so the ratio has got units of pixels.
+
+7
+00:00:34,550 --> 00:00:40,059
+然后，F帽是表示镜头焦距而不是表达的另一种方式
+F hat then is another way of representing the focal length of a lens instead of expressing
+
+8
+00:00:40,059 --> 00:00:45,899
+以米为单位，我们以像素为单位表示，这对我们来说非常有用。
+it in units of meters, we express it in units of pixels and this can be very useful to us shortly.
+
+9
+00:00:45,899 --> 00:00:50,280
+我们可以将球的位置投影到图像平面中，我们将其表示为
+We can project the position of the ball into the image plane, and we represent that by
+
+10
+00:00:50,280 --> 00:00:56,250
+坐标U，V，任何一个都没有新的东西。我要简化表示法
+coordinate U, V, there is nothing new in any of this. I'm going to simplify the notation
+
+11
+00:00:56,250 --> 00:01:01,800
+并将三维空间中球的位置称为大写字母X，大写字母Y，大写字母Z和
+and refer to the position of the ball in 3D space as capital X, capital Y, capital Z and
+
+12
+00:01:01,800 --> 00:01:07,590
+现在我们可以用这种方式在图像平面上写出球投影的坐标，
+now we can write the coordinates of the projection of the ball in the image plane in this fashion,
+
+13
+00:01:07,590 --> 00:01:13,680
+使用符号X，Y和Z以及Fhat，记住是镜头表达的焦距
+using the symbols X, Y and Z and F hat, which remember is the focal length of the lens expressed
+
+14
+00:01:13,680 --> 00:01:15,960
+以像素为单位。
+in units of pixels.
+
+15
+00:01:15,960 --> 00:01:20,729
+现在让我们考虑相机正在移动。我们要把它绑在一只兔子身上。相机
+Now let's consider that the camera is moving. We're going to strap it to a rabbit. The camera
+
+16
+00:01:20,729 --> 00:01:26,840
+现在能够以速度移动，我们可以通过三个向量Vx，Vy和
+now is able to move with a velocity, which we can express by a three vector Vx, Vy and
+
+17
+00:01:26,840 --> 00:01:33,450
+Vz，它也能够旋转。我们可以表达它的旋转速度，因为它是有角度的
+Vz and it's also able to rotate. And we can express its rotational velocity, as it's angular
+
+18
+00:01:33,450 --> 00:01:38,640
+组分OmegaX，OmegaY和OmegaZ的速度。
+velocity with components Omega X, Omega Y and Omega Z.
+
+19
+00:01:38,640 --> 00:01:44,770
+那么现在发生了什么？那么我们现在需要考虑球的投射
+Well what happens now? Well we now need to think about the projection of the ball in
+
+20
+00:01:44,770 --> 00:01:50,630
+图像平面不仅具有位置U，V，而且还具有图像中的速度
+the image plane having not just a location U, V but it's also got a velocity in the image
+
+21
+00:01:50,630 --> 00:01:54,310
+平面，我们用U点和V点代表。
+plane, which we'll represent by U dot and V dot.
+
+22
+00:01:54,310 --> 00:02:00,100
+现在有一个非常着名的表达方式，它将摄像机的速度与摄像机的速度联系起来
+Now there's a very well known expression that relates the velocity of the camera to the
+
+23
+00:02:00,100 --> 00:02:06,030
+像平面中的像素速度和这两个量通过雅可比矩阵相关联
+pixel velocity in the image plane and these two quantities are related by a Jacobian matrix
+
+24
+00:02:06,030 --> 00:02:10,440
+我们之前在机器人MOOC中遇到过JacobianMatrices。
+and we have come across Jacobian Matrices before in the robotics MOOC.
+
+25
+00:02:10,440 --> 00:02:16,440
+这里的雅可比矩阵是一个二乘六矩阵，它与摄像机速度和此相关
+The Jacobian matrix here is a two by six matrix, which relates the camera velocity and this
+
+26
+00:02:16,440 --> 00:02:21,010
+是相机的空间速度，它具有平移分量和旋转
+is the cameras spatial velocity which has got a translational component and a rotational
+
+27
+00:02:21,010 --> 00:02:27,739
+零件。乘以这个二乘六矩阵，给出我们在图像平面上的速度。
+component. Multiplied by this two by six matrix, to give us the velocity in the image plane.
+
+28
+00:02:27,739 --> 00:02:31,480
+图像中该点似乎移动的速度。
+The velocity at which that point in the image appears to move.
+
+29
+00:02:31,480 --> 00:02:36,680
+这是我们的MATLAB工作区，我们已经创建了一个相机对象。我要去计算
+Here's our MATLAB workspace and we have already created a camera object. I'm going to compute
+
+30
+00:02:36,680 --> 00:02:42,650
+将雅可比图像放入工作空间变量J并且这样做我将使用visjac_p
+the image Jacobian into the workspace variable J and to do that I am going to use the visjac_p
+
+31
+00:02:42,650 --> 00:02:48,620
+方法，这是一个点特征的视觉雅可比的简称，它是相机的一种方法
+method, that's short for visual Jacobian for a point feature, it's a method of the camera
+
+32
+00:02:48,620 --> 00:02:53,129
+对象，我将传递我感兴趣的图像平面点的坐标
+object and I'm going to pass in the coordinate of the image plane point that I'm interested
+
+33
+00:02:53,129 --> 00:02:59,010
+in和那是600,600，它必须是列向量，所以我在那里放了一个撇号
+in and that's at 600, 600, its got to be column vector, so I put an apostrophe there and
+
+34
+00:02:59,010 --> 00:03:03,470
+它对应于距离相机5米的世界点。
+it corresponds to a world point that's five meters away from the camera.
+
+35
+00:03:03,470 --> 00:03:10,190
+所以这是视觉雅各布的;它是一个2乘6的矩阵。如果我乘以雅可比图像
+So here's the visual Jacobian; it is a 2 by 6 matrix. If I multiply the image Jacobian
+
+36
+00:03:10,190 --> 00:03:16,300
+通过空间速度矢量，让我们考虑X方向的单位速度，没有速度
+by a spatial velocity vector, let's consider a unit velocity in the X direction, no velocity
+
+37
+00:03:16,300 --> 00:03:22,370
+在Y或Z并且没有旋转并且它是列向量，那么图像平面点将继续
+in Y or Z and no rotation and it's a column vector, then the image plane point is going
+
+38
+00:03:22,370 --> 00:03:28,250
+在负U方向以每秒160像素的速度移动，它不会移动
+to move at 160 pixels per second in the negative U direction and it's not going to move at
+
+39
+00:03:28,250 --> 00:03:31,060
+一切都在V方向。
+all in the V direction.
+
+40
+00:03:31,060 --> 00:03:37,420
+让我们尝试不同的空间速度。让我们来看看如果它在世界上移动会发生什么
+Let's try a different spatial velocity. Let's look at what happens if it moves in the world
+
+41
+00:03:37,420 --> 00:03:45,160
+Y方向，我们看到它在图像平面上以负V方向以每秒160个像素移动。
+Y direction, we see that it moves at 160 pixels per second in the negative V direction on the image plane.
+
+42
+00:03:45,340 --> 00:03:50,799
+让我们再看一个例子，我们将以单位速度移动摄像机
+Let's just look at one more example and we will move the camera at unit velocity in the
+
+43
+00:03:50,799 --> 00:03:56,530
+Z方向;沿着光轴，我们看到现在的图像平面点
+Z direction; that's along the optical axis and we see that now the image plane point
+
+44
+00:03:56,530 --> 00:04:04,650
+在U方向上以每秒17.6像素的速度移动，在V方向上以每秒17.6像素的速度移动。
+is moving at 17.6 pixels per second in the U direction and 17.6 pixels per second in the V direction.
+

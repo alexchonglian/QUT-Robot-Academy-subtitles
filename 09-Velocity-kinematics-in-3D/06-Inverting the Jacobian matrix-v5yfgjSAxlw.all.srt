@@ -1,0 +1,310 @@
+1
+00:00:03,889 --> 00:00:07,839
+我们刚刚找到了一种描述变化率之间关系的方法
+We have just worked out a way to describe the relationship between the rate of change
+
+2
+00:00:07,839 --> 00:00:13,520
+它的关节角度以及机器人末端执行器的平移和角速度。
+of its joint angles and the translational and angular velocity of the robot’s end-effector.
+
+3
+00:00:13,520 --> 00:00:19,340
+空间速度是六向量，包括平移速度v和角度
+Spatial velocity is a six-vector that comprises the translational velocity, v, and the angular
+
+4
+00:00:19,340 --> 00:00:24,730
+速度，欧米茄。并且，我们写了末端效应器的空间速度之间的关系
+velocity, omega. And, we wrote a relationship between spatial velocity of the end-effector
+
+5
+00:00:24,730 --> 00:00:28,039
+和关节角度的速度。
+and the velocity of the joint angles.
+
+6
+00:00:28,039 --> 00:00:33,360
+对于像这样的机器人，雅可比矩阵J是6×6矩阵。这是方形的。所以，我们
+For a robot like this, the Jacobian matrix, J, is a 6 x 6 matrix. It’s square. So, we
+
+7
+00:00:33,360 --> 00:00:39,300
+可以重新排列这个表达式，以获得我们需要的机器人关节角速度
+can rearrange this expression to obtain the robot joint angle velocity that we need in
+
+8
+00:00:39,300 --> 00:00:45,510
+为了达到理想的机器人末端效应器空间速度，我们可以做到这一点，除非
+order to achieve a desired robot end-effector spatial velocity and we can do this unless
+
+9
+00:00:45,510 --> 00:00:49,920
+雅可比是奇异的。这是它的决定因素等于零。
+the Jacobian is singular. That is its determinant is equal to zero.
+
+10
+00:00:49,920 --> 00:00:54,680
+不幸的是，在某些情况下，雅可比人将是单数和一个
+Unfortunately, there are some circumstances where the Jacobian will be singular and one
+
+11
+00:00:54,680 --> 00:01:01,140
+如图所示，当关节角度θ等于零时，出现奇点。要是我们
+of the singularities occurs when joint angle five is equal to zero as shown here. If we
+
+12
+00:01:01,140 --> 00:01:08,110
+旋转关节4，我们可以看到机器人末端执行器是如何移动的。如果我移动关节6，我们就看到了
+rotate joint 4, we can see how the robot end-effector moves. If I move joint 6, we see that the
+
+13
+00:01:08,110 --> 00:01:13,630
+末端执行器的运动完全相同;这是由于关节4.所以，如果我旋转关节
+end-effector motion is exactly the same; it’s that due to joint 4. So, if I rotate joints
+
+14
+00:01:13,630 --> 00:01:18,060
+如图4和6所示，它们在相反的方向上相互抵消。他们都在动，但是
+4 and 6 in opposite directions, they cancel each other out. They are both moving, but
+
+15
+00:01:18,060 --> 00:01:21,390
+末端执行器根本不动。
+the end-effector is not moving at all.
+
+16
+00:01:21,390 --> 00:01:26,200
+继前面的例子之后，我们可以测试雅可比矩阵的行列式
+Following on from the earlier example, we can test the determinant of the Jacobian matrix
+
+17
+00:01:26,200 --> 00:01:31,270
+用于关节角度配置QN。而且，在这里我们可以看到行列式，它就是
+for the joint angle configuration QN. And, here we can see the determinant, and it’s
+
+18
+00:01:31,270 --> 00:01:36,430
+不等于零。这意味着我可以反转雅可比矩阵，这就是逆
+not equal to zero. It means I can then invert the Jacobian matrix and this is what the inverse
+
+19
+00:01:36,430 --> 00:01:41,540
+雅可比人看起来像。如果我们考虑不同的关节角度配置，我会去
+Jacobian looks like. If we consider a different joint angle configuration, I’m going to
+
+20
+00:01:41,540 --> 00:01:46,140
+查看关节配置Q0，即所有关节角度等于零的位置。
+look at the joint configuration Q0 which is where all the joint angles equal to zero.
+
+21
+00:01:46,140 --> 00:01:53,040
+如果我在这里计算雅可比行列并通过QZ，我们可以看到这就是雅可比人的样子
+If I compute the Jacobian here and pass in QZ, we can see this is what the Jacobian looks
+
+22
+00:01:53,040 --> 00:01:57,040
+喜欢和这个特定情况下的决定因素等于零。
+like and the determinant in this particular case is equal to zero.
+
+23
+00:01:57,040 --> 00:02:01,859
+所以，让我们说，我有一个机器人控制问题，我希望机器人末端执行器有
+So, let’s say, I’ve got a robot control problem and I want the robot end-effector to have
+
+24
+00:02:01,859 --> 00:02:07,119
+由希腊字母nu表示的非常特定的空间速度，那么我可以找出什么
+a very specific spatial velocity denoted by the Greek letter nu, then I can work out what
+
+25
+00:02:07,119 --> 00:02:11,050
+我需要的联合速度才能实现这一目标。如果我知道关节角度，那么
+joint velocity I need in order to achieve that. If I know the joint angles, and then
+
+26
+00:02:11,050 --> 00:02:15,710
+我可以计算雅可比矩阵并将其反转。然后，我移动所有关节
+I can compute the Jacobian matrix and invert it. And then, I move all the joints at that
+
+27
+00:02:15,710 --> 00:02:20,170
+特定的速度和机器人末端执行器将以所需的空间速度移动，
+particular speed and the robot end-effector will move with the desired spatial velocity,
+
+28
+00:02:20,170 --> 00:02:25,890
+NU。现在，问题在于，因为机器人关节角度在短时间内发生变化，
+nu. Now, the problem is that because the robot joint angles are changing, after a short while,
+
+29
+00:02:25,890 --> 00:02:30,630
+雅各比派将不再合适，因为雅可比行列式是雅各比派的一个功能
+the Jacobian will be no longer appropriate because the Jacobian is a function of the
+
+30
+00:02:30,630 --> 00:02:35,160
+关节角度。所以，我需要重新计算雅可比矩阵。
+joint angles. So, I will need to recompute the Jacobian matrix.
+
+31
+00:02:35,160 --> 00:02:39,120
+如果我要写一个计算机算法来做这件事，那将是一种离散时间
+If I was to write a computer algorithm to do this, it would be a type of discrete time
+
+32
+00:02:39,120 --> 00:02:44,569
+算法。它将在许多离散时间步骤，时间步骤1，时间计算
+algorithm. It would be computed at a number of discrete time steps, time step 1, time
+
+33
+00:02:44,569 --> 00:02:50,060
+步骤2，时间步骤3，我将其推广到时间步骤k。而且，之间的间隔
+step 2, time step 3, and I’ll generalize that to time step k. And, the interval between
+
+34
+00:02:50,060 --> 00:02:56,320
+时间步长由符号deltaT给出。因此，在时间步长k，我将采用关节角度
+time steps is given by the symbol delta T. So, at time step, k, I will take the joint angles
+
+35
+00:02:56,320 --> 00:03:01,530
+这是在时间测量的，k。我计算雅可比矩阵，将其反转，乘以期望值
+that’s measured at time, k. I compute the Jacobian, invert it, multiply it by the desired
+
+36
+00:03:01,530 --> 00:03:06,970
+空间速度并确定我需要达到的关节角速度。如果我成倍增加
+spatial velocity and determine the joint angle velocity that I need to achieve. If I multiply
+
+37
+00:03:06,970 --> 00:03:12,500
+通过时间间隔ΔT的关节速度，然后我获得关节角度的变化
+the joint velocity by the time interval, delta T, then I obtain the change in joint angles
+
+38
+00:03:12,500 --> 00:03:17,090
+在那个时间步骤。我把它添加到当前的关节角度组中，我最终得到了
+over that time step. I add it to the current set of joint angles and I end up with the
+
+39
+00:03:17,090 --> 00:03:22,849
+我需要在下一个时间步，在时间k+1处拥有的一组关节角度。然后
+set of joint angles that I need to have at the next time step, at time k+1. And, then
+
+40
+00:03:22,849 --> 00:03:30,230
+我告诉我的机器人移动到那组新的关节角度，我重复这个过程。
+I tell my robot to move to that new set of joint angles and I repeat the process.
+
+41
+00:03:30,230 --> 00:03:34,299
+我们现在将研究解决率运动控制。而且，我已经计算了
+We are now going to look at resolved-rate motion control. And, I have already computed the
+
+42
+00:03:34,299 --> 00:03:39,340
+关于角度集的雅可比矩阵，我称之为QN。现在，我想做的是
+Jacobian matrix for the set of joint angles which I call QN. Now, what I want to do is
+
+43
+00:03:39,340 --> 00:03:43,980
+指定我希望机器人拥有的空间速度。我要说的
+to specify the spatial velocity that I want my robot to have. I’m going to put that
+
+44
+00:03:43,980 --> 00:03:49,220
+在一个名为nu的变量中，这是我用来表示空间速度的希腊字母
+in to a variable called, nu, which is the Greek letter that I used to denote spatial velocity
+
+45
+00:03:49,220 --> 00:03:55,190
+我要求x的空间速度为零，y为零，每个单位为1
+and I am going to ask for a spatial velocity of zero in x, zero in the y, one unit per
+
+46
+00:03:55,190 --> 00:04:00,769
+z方向上的第二个并且没有角速度。而且，我将把它放到专栏中
+second in the z direction and no angular velocity. And, I’m going to put that in to a column
+
+47
+00:04:00,769 --> 00:04:06,470
+向量。因此，我们有它。如果我现在将雅可比行列的倒数乘以所需的
+vector. So, there we have it. If I now multiply the inverse of the Jacobian by the desired
+
+48
+00:04:06,470 --> 00:04:12,210
+空间速度，这里我所知的是关节角速度矢量。这是
+spatial velocity, and what I have here is the joint angle velocity vector. This is the
+
+49
+00:04:12,210 --> 00:04:17,570
+一组关节角速度，它将给我所需的空间速度矢量
+set of joint angle velocities that will give me the desired spatial velocity vector that’s
+
+50
+00:04:17,570 --> 00:04:22,920
+在垂直方向或z方向上每秒一个单位的运动。
+a motion of one unit per second in the vertical or z direction.
+
+51
+00:04:22,920 --> 00:04:27,720
+我们可以看到它对于关节1和4完全不涉及运动，并且它确实需要运动
+We can see that it involves no motion at all for joints 1 and 4 and it does require motion
+
+52
+00:04:27,720 --> 00:04:33,150
+关节2和3。这是肩关节和肘关节，也是关节5，其中之一
+of joints 2 and 3. That’s the shoulder and the elbow joint and also joint 5, one of the
+
+53
+00:04:33,150 --> 00:04:37,870
+腕关节。并且，我们可以看到所有关节，它是肘关节，关节3
+wrist joints. And, we can see that of all the joints, it is the elbow joint, joint 3
+
+54
+00:04:37,870 --> 00:04:42,210
+必须移动最快才能达到所需的运动。
+that has to move the fastest in order to achieve the desired motion.
+
+55
+00:04:42,210 --> 00:04:48,620
+这是一个动画，在实践中显示了这一点。我命令机器人垂直移动
+Here is an animation that shows this in practice. I have commanded the robot to move vertically
+
+56
+00:04:48,620 --> 00:04:55,150
+在世界z方向上具有正1的速度。我们观察到机器人末端执行器
+with a velocity of positive 1 in the world z direction. We observed that the robot end-effector
+
+57
+00:04:55,150 --> 00:04:59,480
+以恒定速度移动。但是，如果我们看一下关节角度如何随函数变化
+moved that in constant velocity. But, if we look at how the joint angles change as a function
+
+58
+00:04:59,480 --> 00:05:02,370
+时间，我们看到他们没有线性移动。
+of time, we see that they are not moving linearly.
+
+59
+00:05:02,370 --> 00:05:06,370
+我们也知道一些关节角度的速度正在增加。而且，你注意到了
+We also know that some of the joint angles are increasing in velocity. And, you notice
+
+60
+00:05:06,370 --> 00:05:10,471
+当机器人到达那个动作结束时，它看起来有点尴尬。它
+that as the robot got to the end of that motion, it started to look a little bit awkward. It
+
+61
+00:05:10,471 --> 00:05:14,810
+只能在z方向上移动这么久。最终，它无法做到
+can only move in the z direction for so long. Eventually, it’s not going to be able to
+
+62
+00:05:14,810 --> 00:05:17,250
+达到它需要移动的位置。
+reach the position that it needs to move to.
+

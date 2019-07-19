@@ -1,0 +1,115 @@
+1
+00:00:03,409 --> 00:00:08,459
+我们刚刚看到了如何将存储在计算机上的文件中的图像加载到MATLAB中
+We have just seen how we can load images from files stored on our computer into the MATLAB
+
+2
+00:00:08,459 --> 00:00:13,910
+我们可以开始观察它们并操纵它们的环境，但对于机器人来说
+environment where we can begin to look at them and manipulate them, but for a robot
+
+3
+00:00:13,910 --> 00:00:18,930
+它正如现在一样感知世界，这一点非常重要。所以那些信息
+it is really important that it is sensing the world as it is now. So information that
+
+4
+00:00:18,930 --> 00:00:23,900
+存储在文件中可能不是最新的。我们需要把世界看作它
+is stored in a file may not be sufficiently up to date. We need to see the world as it
+
+5
+00:00:23,900 --> 00:00:28,160
+现在是：我们需要能够从相机中提取图像。
+is now: we need to be able to bring images in from a camera.
+
+6
+00:00:28,160 --> 00:00:34,220
+现在很幸运的是，几乎所有的计算机都连接了一个或多个摄像头
+Now it is really fortunate today that almost all computers have one or more cameras attached
+
+7
+00:00:34,220 --> 00:00:38,809
+给他们。所以我们现在要看的是我们如何从相机获取信息
+to them. So what we are going to look at now is how we get information from a camera on
+
+8
+00:00:38,809 --> 00:00:46,050
+我的电脑进入MATLAB环境。所以我们在MATLAB桌面工作区
+my computer into the MATLAB environment. So here we are in the MATLAB desktop workspace
+
+9
+00:00:46,050 --> 00:00:51,480
+再次，为了从相机中抓取图像，我们首先创建一个对象，一个MATLAB
+again and in order to grab an image from a camera we first create an object, a MATLAB
+
+10
+00:00:51,480 --> 00:00:57,469
+连接到相机的物体，在这种情况下，它是第0相机
+object that is attached to the camera and in this case, it is the zeroth camera—that
+
+11
+00:00:57,469 --> 00:01:04,339
+是我的电脑第一台相机。它在MATLAB中创建了一个新对象
+is the first camera that my computer has. And it creates a new object in the MATLAB
+
+12
+00:01:04,339 --> 00:01:09,521
+workspace，VideoCamera类型的对象。一旦创建了这个对象，就可以了
+workspace, an object of type VideoCamera. As soon as this object has been created, the
+
+13
+00:01:09,521 --> 00:01:13,580
+连接到我电脑的相机已经上线了;一点点红色的记录灯来了
+camera attached to my computer has become live; a little red recording light has come
+
+14
+00:01:13,580 --> 00:01:18,380
+上。该对象支持许多方法，并且是我们目的最重要的方法
+on. This object supports a number of methods, and the most important method for our purposes
+
+15
+00:01:18,380 --> 00:01:22,831
+是抓取方法，从相机抓取图像，最近的图像来自
+is the grab method, which grabs an image from the camera, the most recent image from the
+
+16
+00:01:22,831 --> 00:01:28,400
+相机，并显示它。我们可能对实际推杆感兴趣
+camera, and displays it. We might be interested in actually putting
+
+17
+00:01:28,400 --> 00:01:33,850
+将图像转换为工作空间变量，我们就是这样做的。我们分配输出
+the image into a workspace variable and we do it in this way. We assign the output of
+
+18
+00:01:33,850 --> 00:01:39,040
+工作空间变量的抓取方法，在这种情况下，变量im和图像
+the grab method to a workspace variable and in this case, the variable im, and the image
+
+19
+00:01:39,040 --> 00:01:44,080
+从相机中抓取并放入该工作空间变量中。如果我调用该函数
+is grabbed from the camera and placed into that workspace variable. If I call the function
+
+20
+00:01:44,080 --> 00:01:50,979
+再次它将拍摄另一张照片并以不同的姿势显示它。
+again it will take another picture and display it with my head in a different pose.
+
+21
+00:01:50,979 --> 00:01:57,229
+相机正在连续运行。为了关闭相机，我需要销毁
+The camera is running continuously. In order to turn the camera off I need to destroy the
+
+22
+00:01:57,229 --> 00:02:01,560
+相机对象。你可以使用MATLABclear命令执行此操作，因此如果我从中清除对象
+camera object. You do that with a MATLAB clear command, so if I clear the object from the
+
+23
+00:02:01,560 --> 00:02:06,389
+工作空间对象被破坏，相机关闭。红灯消失。
+workspace the object is destroyed and the camera is turned off. The red light disappears.
+

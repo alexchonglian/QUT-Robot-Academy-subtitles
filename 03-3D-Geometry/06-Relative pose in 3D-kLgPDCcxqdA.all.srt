@@ -1,0 +1,330 @@
+1
+00:00:03,419 --> 00:00:09,580
+这里同样是标记为A和B的两个三维坐标系，以及相对姿势
+Here again are two, 3-dimensional coordinate frames labeled A and B, and the relative pose
+
+2
+00:00:09,580 --> 00:00:15,650
+一个ksiB，它是B相对于A的姿势。我们已经介绍了点P和我们
+A ksi B which is the pose of B with respect to A. We've introduced the point P and we
+
+3
+00:00:15,650 --> 00:00:20,471
+可以根据关于坐标系原点的向量来描述
+can describe that in terms of a vector with respect to the origin of coordinate frame
+
+4
+00:00:20,471 --> 00:00:25,300
+A，我们就像在上一次演讲中为二维案例所做的那样
+A, and we denote that just as we did for the 2-dimensional case in the last lecture in
+
+5
+00:00:25,300 --> 00:00:30,529
+这种方式，其中P表示向量，A是表示该向量的参考帧
+this fashion where P indicates a vector and A is the reference frame that indicates that
+
+6
+00:00:30,529 --> 00:00:35,570
+矢量P是相对于坐标系A定义的。
+the vector P is defined with respect to the coordinate frame A.
+
+7
+00:00:35,570 --> 00:00:40,629
+我们也可以相对于坐标系B定义这个点，就像它一样
+We can also define this point with respect to the coordinate frame B and just as for
+
+8
+00:00:40,629 --> 00:00:45,659
+在二维情况下，我们可以将矢量从一个坐标系转换为另一个坐标系
+the 2-dimensional case, we can transform a vector from one coordinate frame to another
+
+9
+00:00:45,659 --> 00:00:47,289
+使用点运算符。
+using the dot operator.
+
+10
+00:00:47,289 --> 00:00:55,249
+因此，我们采用相对姿势AksiB并使用点将其应用于向量Pwith
+So, we take the relative pose A ksi B and use the dot to apply it to the vector P with
+
+11
+00:00:55,249 --> 00:01:00,019
+尊重B，我们可以想到中间的B取消和结果
+respect to B and we can think of the B's in the middle here cancelling out and the result
+
+12
+00:01:00,019 --> 00:01:06,240
+是我们留下P相对于坐标框架A定义。我们可以扩展它
+is that we are left with P defined with respect to coordinate frame A. We can extend this
+
+13
+00:01:06,240 --> 00:01:07,240
+处理。
+process.
+
+14
+00:01:07,240 --> 00:01:12,090
+现在，我们可以使用符号相对于坐标框B定义坐标系C.
+Now, we can define coordinate frame C with respect to coordinate frame B using the symbol
+
+15
+00:01:12,090 --> 00:01:19,680
+BksiC.我们可以组成2个相对变换，B相对于A和C.
+B ksi C. And we can compose the 2 relative transformations, B with respect to A and C
+
+16
+00:01:19,680 --> 00:01:25,490
+关于B，为了获得C相对于A的相对姿势，我们使用
+with respect to B in order to obtain the relative pose of C with respect to A and we use the
+
+17
+00:01:25,490 --> 00:01:30,570
+合成运算符，它是一个圆圈内的加号，正是这意味着什么
+composition operator which is a plus sign inside a circle and exactly what that means
+
+18
+00:01:30,570 --> 00:01:35,780
+这是我们将在本讲座后期讨论的内容，但这是一个被称为作曲的过程
+is something we'll get to later in this lecture but it's a process referred to as composing
+
+19
+00:01:35,780 --> 00:01:40,749
+或复合，我们可以无限期地扩展这个过程。
+or compounding and we can extend this process indefinitely.
+
+20
+00:01:40,749 --> 00:01:45,330
+一旦我们复合了这两个相对姿势，现在我们就拥有相对的框架姿势
+And once we've compounded these two relative poses, now we have the relative pose of frame
+
+21
+00:01:45,330 --> 00:01:50,679
+C相对于A，我们可以针对帧C和C来编写矢量的表达式
+C with respect to A, we can write an expression for the vector with respect to frame C and
+
+22
+00:01:50,679 --> 00:01:55,679
+关于框架A的向量，我们可以无限延长这种方法。
+the vector with respect to frame A and we can extend this approach indefinitely.
+
+23
+00:01:55,679 --> 00:02:00,639
+我们已经介绍了一个姿势代数，只有一些简单的规则，这些是
+We've introduced a pose algebra and there were just a few simple rules, and these are
+
+24
+00:02:00,639 --> 00:02:04,639
+与二维情况完全相同。
+exactly the same as for the 2-dimensional case.
+
+25
+00:02:04,639 --> 00:02:10,220
+ksi的实际实现在2-D情况和3-D情况之间有所不同，但是当我们这样做时
+The actual implementation of ksi differs between the 2-D case and the 3-D case but when we
+
+26
+00:02:10,220 --> 00:02:16,060
+根据抽象符号ksi和抽象运算符来处理它，规则是
+deal with it in terms of the abstract symbol ksi and abstract operators, the rules are
+
+27
+00:02:16,060 --> 00:02:17,209
+完全相同。
+absolutely identical.
+
+28
+00:02:17,209 --> 00:02:19,670
+所以，第一条规则就是构图。
+So, the first rule is composition.
+
+29
+00:02:19,670 --> 00:02:24,970
+可以复合两个相对姿势以获得第三相对姿势。
+Two relative poses can be compounded to get a third relative pose.
+
+30
+00:02:24,970 --> 00:02:27,569
+当我们这样做时，有一些重要的检查。
+When we do this, there are some important checks.
+
+31
+00:02:27,569 --> 00:02:31,650
+这两个内部指数必须相等，它们才能有效抵消。
+These two inner indices must be equal and they effectively cancel out.
+
+32
+00:02:31,650 --> 00:02:36,099
+领先指数相同，尾随指数相同。
+The leading indices are the same and the trailing indices are the same.
+
+33
+00:02:36,099 --> 00:02:42,420
+通常，组合物不是可交换的，因此意味着ksi1与ksi2复合
+In general, composition is not commutative so that means ksi 1 compounded with ksi 2
+
+34
+00:02:42,420 --> 00:02:46,870
+不同于ksi2与ksi1复合。
+is different to ksi 2 compounded with ksi 1.
+
+35
+00:02:46,870 --> 00:02:52,200
+有一个零相对姿势的概念，这意味着姿势没有变化，我们代表
+There is a notion of a null relative pose, that means no change in the pose and we represent
+
+36
+00:02:52,200 --> 00:02:53,920
+由符号O.
+that by the symbol O.
+
+37
+00:02:53,920 --> 00:02:59,660
+所以，如果我有一个ksi的相对姿势，我将它与空姿势复合，结果
+So, if I have a relative pose of ksi and I compound it with the null pose, the result
+
+38
+00:02:59,660 --> 00:03:00,970
+是原始的姿势。
+is the original pose.
+
+39
+00:03:00,970 --> 00:03:03,549
+它没有改变姿势。
+It's made no change to the pose.
+
+40
+00:03:03,549 --> 00:03:07,720
+如果我将姿势视为从A到B的相对运动，然后我从B回到
+If I consider a pose as a relative motion from A to B, and then I go back from B to
+
+41
+00:03:07,720 --> 00:03:10,709
+A，我回到了我开始的地方，我没有移动任何距离。
+A, I'm back where I started from, I haven't moved any distance.
+
+42
+00:03:10,709 --> 00:03:13,030
+这是空姿势0。
+That's the null pose 0.
+
+43
+00:03:13,030 --> 00:03:17,860
+如果我与空姿势的倒数复合，再次，我留下我的原始
+And if I compound with the inverse of the null pose, again, I'm left with my original
+
+44
+00:03:17,860 --> 00:03:20,120
+姿势。
+pose.
+
+45
+00:03:20,120 --> 00:03:25,620
+现在对于矢量，我们可以将相对姿势应用于矢量，有效地变换矢量
+Now for vectors, we can apply a relative pose to a vector, effectively transforms a vector
+
+46
+00:03:25,620 --> 00:03:28,440
+从一个坐标系到另一个坐标系。
+from one coordinate frame to another.
+
+47
+00:03:28,440 --> 00:03:33,829
+在这种特殊情况下，它将矢量从帧Y变换到帧X，并进行检查
+In this particular case, it transforms the vector from frame Y to frame X, and to check
+
+48
+00:03:33,829 --> 00:03:37,969
+如果我们做得对，这些内在的两个指数必须相同，我们可以想到
+if we've done this right, these inner two indices must be the same, we can think of
+
+49
+00:03:37,969 --> 00:03:40,710
+他们有效地取消了。
+them as effectively cancelling out.
+
+50
+00:03:40,710 --> 00:03:43,610
+这两个主要指数必须相同。
+And these two leading indices must be the same.
+
+51
+00:03:43,610 --> 00:03:47,360
+这些是非常简单的检查，我们可以用来确保我们编写表达式
+These are very simple checks that we can use to ensure that we've written our expressions
+
+52
+00:03:47,360 --> 00:03:49,329
+正确地说。
+down correctly.
+
+53
+00:03:49,329 --> 00:03:53,590
+这是一个非常复杂的例子，我有大量的三维坐标
+Here's a very complex example where I have a large number of 3-dimensional coordinate
+
+54
+00:03:53,590 --> 00:03:56,270
+代表一些机器人场景的帧。
+frames representing some robotics scenario.
+
+55
+00:03:56,270 --> 00:03:58,250
+我有一个世界坐标框架。
+I’ve got a world coordinate frame.
+
+56
+00:03:58,250 --> 00:04:00,439
+我有一台固定在世界上的相机。
+I've got a camera that's fixed in the world.
+
+57
+00:04:00,439 --> 00:04:01,682
+我有一个机器人。
+I've got a robot.
+
+58
+00:04:01,682 --> 00:04:05,189
+机器人上安装了一个摄像头，世界上有一个机器人物体
+There's a camera attached to the robot and there's an object in the world that the robot
+
+59
+00:04:05,189 --> 00:04:08,510
+正在看，可能想要接受。
+is looking at and might want to pick up.
+
+60
+00:04:08,510 --> 00:04:13,060
+就像二维情况一样，我们可以通过姿势图表示这一点。
+Just as for the 2-dimensional case, we can represent this by a pose-graph.
+
+61
+00:04:13,060 --> 00:04:18,650
+每个节点，这里的每个蓝色圆圈代表一个特定的坐标框架和边缘
+Each node, each blue circle here represents a particular coordinate frame and the edges
+
+62
+00:04:18,650 --> 00:04:22,750
+图表表示相对姿势。
+of the graph represent the relative poses.
+
+63
+00:04:22,750 --> 00:04:27,470
+从这个姿势图表示，我可以写一个像这样的表达式
+From this pose graph representation, I can write an expression something like this and
+
+64
+00:04:27,470 --> 00:04:31,310
+为了检查它是否正确，我们可以在姿势图中以图形方式查看它。
+to check that it's correct, we can look at it graphically in the pose-graph.
+
+65
+00:04:31,310 --> 00:04:36,200
+表达式的左侧显示为红色和表达式的右侧
+The left hand side of the expression is shown in red and the right hand side of the expression
+
+66
+00:04:36,200 --> 00:04:37,620
+以蓝色显示。
+is shown in blue.
+

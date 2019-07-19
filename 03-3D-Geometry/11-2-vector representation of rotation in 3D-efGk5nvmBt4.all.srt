@@ -1,0 +1,155 @@
+1
+00:00:03,520 --> 00:00:08,670
+当我们讨论工业型机器人时，描述方向很重要
+When we're discussing industrial type robots, it's important to describe the orientation
+
+2
+00:00:08,670 --> 00:00:12,420
+末端执行器，夹子-通过拾取完成工作的机器人的一部分
+of the end effector, the gripper - the piece of the robot that does the work by picking
+
+3
+00:00:12,420 --> 00:00:18,090
+将物体放下并放下。这类机器人的常见惯例是什么
+objects up and putting them down. The common convention in this type of robotics is what's
+
+4
+00:00:18,090 --> 00:00:24,200
+称为2轴表示。我们首先定义一个名为the的向量
+called the 2-axis representation. We start off by defining a vector which is called the
+
+5
+00:00:24,200 --> 00:00:28,670
+接近矢量，这是与机器人手指平行的矢量。我们定义
+approach vector and that's the vector that's parallel to the fingers of the robot. We define
+
+6
+00:00:28,670 --> 00:00:32,980
+另一个我们称之为方向向量的向量，它是连接的向量
+another vector which we call the orientation vector and that's the vector that joins the
+
+7
+00:00:32,980 --> 00:00:39,220
+两根手指的提示。所以这说明了机器人手指的扭曲
+tips of two fingers. So that says something about the twist of the robot fingers around
+
+8
+00:00:39,220 --> 00:00:45,800
+方法向量。对于很多机器人操作任务，只需了解方法即可
+the approach vector. And for a lot of robotic manipulation tasks, just knowing the approach
+
+9
+00:00:45,800 --> 00:00:51,360
+矢量和方向矢量足以能够描述夹具的方向。
+vector and the orientation vector is sufficient to be able to describe the orientation of the gripper.
+
+10
+00:00:51,800 --> 00:00:57,020
+为了创建一个右手坐标系，我们引入了一个刚刚调用的第三个向量
+In order to create a right-handed coordinate frame we introduce a third vector just called
+
+11
+00:00:57,020 --> 00:01:01,850
+法向量。现在我们可以将夹具的方向表示为正交
+the normal vector. Now we can express the orientation of the gripper as an orthonormal
+
+12
+00:01:01,850 --> 00:01:08,359
+旋转矩阵。我们通过将N向量，O向量和向量堆叠为列来实现
+rotation matrix. We do that by stacking up as columns the N vector, the O vector and
+
+13
+00:01:08,359 --> 00:01:14,659
+A矢量。我们可以将其扩展为3x3矩阵，每列都是元素
+the A vector. We're can expand this out as a 3 x 3 matrix and each column are the elements
+
+14
+00:01:14,659 --> 00:01:21,969
+N，O和A向量。所有这些列必须是正交的。所以，如果我们知道A和
+of the N, O and A vectors. All of these columns must be orthogonal. So if we know the A and
+
+15
+00:01:21,969 --> 00:01:28,799
+在O向量中，我们可以计算N向量作为O和A向量的叉积。
+the O vector, we can compute the N vector as the cross product of the O and the A vector.
+
+16
+00:01:28,799 --> 00:01:35,389
+这里简要回顾一下与正交矩阵相关的规则。一点
+Here's a quick recap on the rules that relate the columns of an orthogonal matrix. A little
+
+17
+00:01:35,389 --> 00:01:42,319
+我用来帮助记忆的技巧是考虑N，O和A写在圆形上
+trick that I use to aid my memory is to consider that N, O and A are written on a circular
+
+18
+00:01:42,319 --> 00:01:46,340
+条纸。我们从我们想知道的符号开始，并且等于十字架
+strip of paper. We start with the symbol that we want to know, and is equal to the cross
+
+19
+00:01:46,340 --> 00:01:49,389
+围绕圈子的下两个产品。
+product of the next two around the circle.
+
+20
+00:01:49,389 --> 00:01:54,340
+在这里，我有一个非常简单的机器人，我们在这里有我们的世界坐标框架
+Here I have a very simple robot and we have our world coordinate frame here, which is
+
+21
+00:01:54,340 --> 00:02:00,729
+我们对位置和方向的参考。而这个机器人将要拿起这个电池。
+our reference for both position and for orientation. And this robot is going to pick up this battery.
+
+22
+00:02:00,729 --> 00:02:05,669
+为此，我们需要描述夹具的位置和方向。
+In order to do that, we need to describe both the position and the orientation of the gripper.
+
+23
+00:02:05,669 --> 00:02:09,170
+可能是因为我们想要像这样或我们这样的抓手方向拿起电池
+It might be that we want to pick up the battery with a gripper orientation like this or we
+
+24
+00:02:09,170 --> 00:02:13,760
+可能想要像这样的抓手方向拿起电池。无论哪种方式我们都需要
+might want to pick up the battery with a gripper orientation like this. Either way we need
+
+25
+00:02:13,760 --> 00:02:17,660
+能够描述夹具的方向。所以我们做了以前做过的事，
+to be able to describe the orientation of the gripper. So we do what we've done before,
+
+26
+00:02:17,660 --> 00:02:23,890
+与其他对象。我们将坐标框架附加到机器人的抓手上。我们定位
+with other objects. We attach a coordinate frame to the gripper of the robot. We orient
+
+27
+00:02:23,890 --> 00:02:28,620
+它使z轴向外指向。我们将此称为接近向量。它的
+it so that the z-axis is pointing outwards. We refer to this as the approach vector. It's
+
+28
+00:02:28,620 --> 00:02:33,130
+通常是抓手接近物体的方向。我们有另一个向量
+generally the direction in which the gripper approaches the object. We have another vector
+
+29
+00:02:33,130 --> 00:02:37,590
+我们称之为方向矢量，并且与夹具坐标的y轴平行
+which we call the orientation vector and is parallel to the y-axis of the gripper's coordinate
+
+30
+00:02:37,590 --> 00:02:42,620
+框架，这是抓手的方向。我们是否希望抓手的手指像这样
+frame and that is the orientation of the gripper. Do we want the gripper's fingers like this
+
+31
+00:02:42,620 --> 00:02:47,950
+或者像这样。第三个向量，x轴我们称为法向量。
+or like this. And the third vector, the x-axis we refer to as the normal vector.
+

@@ -1,0 +1,455 @@
+1
+00:00:04,170 --> 00:00:09,090
+在上一次讲座中，我们考虑了独立的联合控制，这是一种理想化的
+In the last lecture, we considered independent joint control, which is an idealisation of
+
+2
+00:00:09,090 --> 00:00:13,781
+现实中。通过独立的联合控制，电机扭矩有两个组成部分。它
+the real world. With independent joint control, the motor torque has got two components. It
+
+3
+00:00:13,781 --> 00:00:18,750
+由于电机的惯性，它有一个元件，它有一个由电机引起的元件
+has a component due to the motor's inertia, and it has a component due to the motor's
+
+4
+00:00:18,750 --> 00:00:24,380
+粘性摩擦。因此，一个是电机惯量和电机加速度的函数，
+viscous friction. So, one is a function of the motor inertia and the motor's acceleration,
+
+5
+00:00:24,380 --> 00:00:28,270
+电机的粘性摩擦力和电机的角速度。
+the motor's viscous friction and the motor's angular velocity.
+
+6
+00:00:28,270 --> 00:00:33,410
+现在，我们将考虑更加现实的非独立联合控制案例
+Now, we're going to consider the more realistic case of non-independent joint control and
+
+7
+00:00:33,410 --> 00:00:38,070
+我们在这里添加了所谓的刚体动态术语。这意味着扭矩
+we've added the so-called rigid body dynamic terms here. What this means is the torque
+
+8
+00:00:38,070 --> 00:00:43,030
+在关节J上看到的电动机将受到所有加速度的影响
+seen by the motor on joint J is going to be influenced by the acceleration of all
+
+9
+00:00:43,030 --> 00:00:48,280
+关节，所有关节的速度和重力。现在，我已经介绍过了
+of the joints, the velocity of all of the joints, and gravity. Now, I've introduced
+
+10
+00:00:48,280 --> 00:00:53,540
+这里还有一点额外的表示法。这是下标j，这意味着第j个
+a bit of additional notation here. It's the subscript j and what that means is the jth
+
+11
+00:00:53,540 --> 00:00:59,720
+相应矩阵的行。所以，这是矩阵M的第j行，第j行
+row of the corresponding matrix. So, this is the jth row of the matrix M, jth row of
+
+12
+00:00:59,720 --> 00:01:06,200
+向量G的矩阵C或第j个元素。例如，如果我乘以第j行
+the matrix C or the jth element of the vector G. For example, if I multiply the jth row
+
+13
+00:01:06,200 --> 00:01:12,000
+矩阵M的列向量，即所有关节的加速度，
+of the matrix M by the column vector, which is the acceleration of all of the joints,
+
+14
+00:01:12,000 --> 00:01:17,210
+结果将是一个标量。这是一个标量表达式，因为它是关于扭矩作用的
+the result will be a scalar. This is a scalar expression because it's about the torque acting
+
+15
+00:01:17,210 --> 00:01:21,229
+关于J.你会看到这里有两个术语
+on joint J. You'll see that there are two terms here that
+
+16
+00:01:21,229 --> 00:01:27,159
+涉及联合加速。所以，我要做的是考虑两个组件中的向量Mj。
+involve joint acceleration. So, what I'm going to do is consider the vector Mj in two components.
+
+17
+00:01:27,159 --> 00:01:32,170
+有一个与关节J相关的组件，并且有与之关联的组件
+There is the component associated with joint J and there's the component associated with
+
+18
+00:01:32,170 --> 00:01:38,149
+所有其他关节，我用M吧表示。我可以做一些重新排列
+all of the other joints, which I've denoted by M bar. I can do a little bit of rearrangement
+
+19
+00:01:38,149 --> 00:01:43,729
+现在。我们现在所拥有的是关于作用在关节J上的扭矩的表达式
+now. What we have now is an expression for the torque acting on joint J in terms of the
+
+20
+00:01:43,729 --> 00:01:48,579
+电动机自身的惯性和与该关节相关的惯性矩阵的分量，
+motor's own inertia and the component of the inertia matrix associated with this joint,
+
+21
+00:01:48,579 --> 00:01:52,539
+粘性摩擦，然后，我们在最后的所有其他术语是
+the viscous friction, and then, we have all of the other terms at the end which are the
+
+22
+00:01:52,539 --> 00:01:56,310
+干扰扭矩。这个术语是电机的惯性
+disturbance torque. This term here is the inertia of a motor
+
+23
+00:01:56,310 --> 00:02:01,659
+它是驱动关节J.这是一个可变惯性项，我们从机械手中拔出
+which is driving joint J. This is a variable inertia term that we pull out off the manipulator
+
+24
+00:02:01,659 --> 00:02:06,600
+惯性矩阵。我们有电机接头摩擦，这是电机驱动的功能
+inertia matrix. We have the motor joint friction, which is a function just of the motor driving
+
+25
+00:02:06,600 --> 00:02:11,780
+联合，然后我们有这个相当复杂的干扰术语，这是
+the joint, and then we have this rather complex disturbance term on the end, which is the
+
+26
+00:02:11,780 --> 00:02:17,060
+加速所有其他关节，科里奥利和向心项以及引力
+acceleration of all the other joints, the Coriolis and centripetal terms and the gravity
+
+27
+00:02:17,060 --> 00:02:23,349
+术语。我可以进一步简化它，我们现在有一个新的惯性，我称之为Jprime，
+term. I can simplify it even further and we now have a new inertia, I call that J prime,
+
+28
+00:02:23,349 --> 00:02:28,290
+这是机器人配置的一个功能。它是Q的函数。我们有
+which is a function of the configuration of the robot. It's a function of Q. We have our
+
+29
+00:02:28,290 --> 00:02:34,260
+粘性摩擦和我们有tauD，这是一个集中的扰动扭矩
+viscous friction and we have tau D which is the disturbance torque lumped into a single
+
+30
+00:02:34,260 --> 00:02:37,390
+变量。那么，由此产生的问题是什么？
+variable. So, what are the issues that arise from this?
+
+31
+00:02:37,390 --> 00:02:43,140
+首先，我们有一个问题，因为关节经历的惯性随着变化而变化
+Well firstly, we have an issue because the inertia experienced by the joint varies with
+
+32
+00:02:43,140 --> 00:02:47,690
+机器人的配置。在上一课中，我们调整了控制器
+the configuration of the robot. In the last lecture, we tuned our controller so that it
+
+33
+00:02:47,690 --> 00:02:52,750
+在稳定时间和过冲方面有很好的反应，但调整是一个功能
+had a nice response in terms of settling time and overshoot, but the tuning was a function
+
+34
+00:02:52,750 --> 00:02:58,610
+惯性和粘性摩擦的特定值。现在，我们所说的是
+of the particular values of inertia and viscous friction. Now, what we're saying is that the
+
+35
+00:02:58,610 --> 00:03:03,330
+联合控制器看到的惯性是配置的函数。这取决于
+inertia that the joint controller sees is a function of the configuration. It depends
+
+36
+00:03:03,330 --> 00:03:08,030
+在所有的关节角度。因此，这意味着控制系统的响应将会
+on all of the joint angles. So, that means that the response of the control system will
+
+37
+00:03:08,030 --> 00:03:10,620
+取决于机器人的姿势。
+depend on the robot's pose.
+
+38
+00:03:10,620 --> 00:03:16,110
+另一个大问题是扰动扭矩，这是施加在关节J上的扭矩
+The other big issue is the disturbance torque, that's a torque that’s exerted on joint J due
+
+39
+00:03:16,110 --> 00:03:23,709
+所有其他关节的运动，加速度和速度，以及由于重力。这个
+to motion of all the other joints, acceleration and velocity and also, due to gravity. This
+
+40
+00:03:23,709 --> 00:03:28,760
+可能导致关节的不良运动。它可能会导致路径跟踪错误
+may lead to undesirable motion of the joint. It may lead to path following errors, for
+
+41
+00:03:28,760 --> 00:03:33,340
+例。那么，我们可以对这些问题做些什么呢？嗯，真的很简单
+example. So, what can we do about these issues? Well, a really simple technique is really
+
+42
+00:03:33,340 --> 00:03:39,670
+在机器人中广泛使用的是引入变速箱。大多数机器人都有减速箱。所以，
+widely used in robots is to introduce a gearbox. Most robots have a reduction gearbox. So,
+
+43
+00:03:39,670 --> 00:03:45,950
+输出轴比输入轴旋转G倍。G是装备
+the output shaft rotates a factor of G times slower than the input shaft. G is the gear
+
+44
+00:03:45,950 --> 00:03:50,909
+比。通常发生这种情况的原因是电动机能够运转
+ratio. The reason that this typically happens is that electric motors are capable of running
+
+45
+00:03:50,909 --> 00:03:55,900
+非常非常快，能够达到非常非常高的旋转速度，但通常非常
+very, very quickly, capable of very, very high rotational velocity, but generally quite
+
+46
+00:03:55,900 --> 00:04:00,079
+扭矩低。变速箱的作用是什么，它允许我们权衡一些这种高角度
+low in torque. What a gearbox does is it allows us to trade off some of this high angular
+
+47
+00:04:00,079 --> 00:04:05,200
+电机转矩的速度。扭矩实际上比速度更有用。我们在这里可以看到
+velocity for motor torque. Torque is actually more useful than speed. We can see here the
+
+48
+00:04:05,200 --> 00:04:09,069
+指示齿轮箱输出侧的扭矩和速度之间的关系
+relationship between torque and velocity on the output side of the gear box indicated
+
+49
+00:04:09,069 --> 00:04:15,299
+由下标l。L表示负载侧和输入侧的扭矩和速度
+by the subscript l. L meaning the load side and torque and velocity on the input side
+
+50
+00:04:15,299 --> 00:04:19,060
+由下标m表示。如果我们现在解决我们的表达方式
+denoted by the subscript m. If we now address the expression that we had
+
+51
+00:04:19,060 --> 00:04:23,600
+从上一张幻灯片和介绍变速箱，我们看到表达现在看起来有点
+from the previous slide and introduce the gearbox, we see the expression now looks something
+
+52
+00:04:23,600 --> 00:04:28,890
+像这样。我们可以看到这种变量惯性的影响，惯性就是一种功能
+like this. We can see that the effect of this variable inertia, the inertia that's a function
+
+53
+00:04:28,890 --> 00:04:34,220
+Q，现在正在减少G平方因子。如果我考虑过我的情况
+of Q, is now being reduced by a factor of G squared. If I considered the case where I've got
+
+54
+00:04:34,220 --> 00:04:40,850
+减速箱，其中G等于50，这减少了2500.这是一个非常的，
+a reduction gearbox, where G is equal to 50, this is a reduction by 2500. It's a very,
+
+55
+00:04:40,850 --> 00:04:46,100
+这种配置依赖惯性的非常显着的减少。这意味着电机的
+very significant reduction in this configuration dependent inertia. It means that the motor’s
+
+56
+00:04:46,100 --> 00:04:52,090
+自己的惯性，这个术语在这里将占主导地位。惯性看起来会更加稳定。我们可以
+own inertia, this term here, will dominate. The inertia will look more constant. We can
+
+57
+00:04:52,090 --> 00:04:57,900
+还看到我们的干扰项已减少了G倍。再次，如果我有
+also see that our disturbance term has been reduced by a factor of G. Again, if I have
+
+58
+00:04:57,900 --> 00:05:03,790
+减速比为50，这个术语的重要性比它低50倍
+a reduction ratio of 50, this term here is 50 times less significant than it would be
+
+59
+00:05:03,790 --> 00:05:09,140
+没有变速箱。因此，由于许多原因，变速箱很有用，而且非常有效
+without a gearbox. So, a gearbox is useful for many reasons and it's a really effective
+
+60
+00:05:09,140 --> 00:05:15,220
+减少扰动转矩和配置依赖惯性的影响的方法。
+way of reducing the effect of disturbance torques and configuration dependent inertia.
+
+61
+00:05:15,220 --> 00:05:20,590
+处理这种情况的更复杂的技术是计算这种干扰扭矩。
+A more sophisticated technique to deal with this is to compute this disturbance torque.
+
+62
+00:05:20,590 --> 00:05:25,610
+如果我们有一个动态的机器人模型，我们知道位置，速度和加速度
+If we have a dynamic model of our robot and we know the position, velocity and acceleration
+
+63
+00:05:25,610 --> 00:05:30,260
+在所有链接中，我们可以计算这个扰动项。所以，控制就是
+of all of the links, then we can compute this disturbance term. So, the control that is
+
+64
+00:05:30,260 --> 00:05:36,130
+这里显示的是一个P，D控制器。这是P术语。这是D术语，和
+shown here is effectively a P, D controller. This is the P term. This is the D term, and
+
+65
+00:05:36,130 --> 00:05:41,840
+这是前馈术语，前馈，我们可以计算的干扰。当然，
+this is the feedforward term, with the feedforward, the disturbance that we can compute. Of course,
+
+66
+00:05:41,840 --> 00:05:46,590
+这意味着我们需要准确了解机器人手臂的动态参数。
+this means that we need to know accurately the dynamic parameters of our robot arm.
+
+67
+00:05:46,590 --> 00:05:51,060
+我们可以使用的第三种方法称为计算-扭矩控制。它有一些相似之处
+The third approach that we can use is called computed-torque control. It has some similarities
+
+68
+00:05:51,060 --> 00:05:55,810
+而且，前馈控制表达的一些重要差异。在这里，我们可以
+but also, some important differences to the feedforward control expression. Here, we can
+
+69
+00:05:55,810 --> 00:05:59,370
+看一个有效比例控制器的术语。在这里，我们可以看到一个术语
+see a term which is effectively a proportional controller. Here, we can see a term which
+
+70
+00:05:59,370 --> 00:06:04,440
+实际上是一个衍生控制器。它们乘以惯性矩阵，在这里，
+is effectively a derivative controller. They're multiplied by the inertia matrix and here,
+
+71
+00:06:04,440 --> 00:06:08,480
+我们有向心和科里奥利项和重力项。
+we have the centripetal and Coriolis term and the gravity term.
+
+72
+00:06:08,480 --> 00:06:13,050
+这些不同技术的优点和缺点是什么？变速箱既便宜又简单。
+What are the pros and cons of these different techniques? A gearbox is cheap and straightforward.
+
+73
+00:06:13,050 --> 00:06:19,720
+很多时候，我们总是在机器人中使用变速箱，这样我们就可以使用更便宜的低扭矩电机。
+Often times, we use a gearbox in a robot anyway so that we can use a cheaper low torque motor.
+
+74
+00:06:19,720 --> 00:06:25,640
+变速箱确实增加了成本，增加了重量。它们效率低下而且会产生噪音。
+Gearboxes do add cost and they add weight. They do some inefficiency and they make noise.
+
+75
+00:06:25,640 --> 00:06:30,750
+必须计算每个样品的计算扭矩控制。那么，如果我们的机器人控制器
+Computed-torque control has to be computed every single sample. So, if our robot controller
+
+76
+00:06:30,750 --> 00:06:34,360
+正在运行，比如说，一千赫兹，然后是我们之前的表达
+is running, at say, a thousand Hertz, then the expression that we had on the previous
+
+77
+00:06:34,360 --> 00:06:39,830
+幻灯片需要在一千赫兹计算。这涉及到那些的计算
+slide needs to be computed at one thousand Hertz. That involves the computation of those
+
+78
+00:06:39,830 --> 00:06:45,870
+矩阵，M，C和G矩阵以及一些矩阵乘法。所以很多计算
+matrices, the M, the C and the G matrix and some matrix multiplication. So a lot of computation
+
+79
+00:06:45,870 --> 00:06:50,930
+需要做。曾几何时，这真的非常难以做到。在早些时候
+needs to be done. Once upon a time, this was really, really hard to do. In the early days
+
+80
+00:06:50,930 --> 00:06:56,090
+机器人技术，当计算机真的很慢时，这是一件非常困难的事情。各种各样的
+of robotics, when computers were really slow, it was a very hard thing. So, all sorts of
+
+81
+00:06:56,090 --> 00:07:01,300
+引入了近似值，但今天在频率上非常非常容易地做到这一点
+approximations were introduced, but today it's very, very easy to do that at a frequency
+
+82
+00:07:01,300 --> 00:07:05,320
+像一千赫兹。实际上可以计算前馈控制
+like one thousand Hertz. The feedforward control can actually be computed
+
+83
+00:07:05,320 --> 00:07:10,890
+速度缓慢，这反映了动态扭矩实际上没有变化的现实
+at a slow rate, and that reflects the reality that the dynamic torques don't actually change
+
+84
+00:07:10,890 --> 00:07:16,190
+从一个样本时间到下一个样本时间。因此，前馈控制信号可以
+all that much from one sample time to the next. So, the feedforward control signal can
+
+85
+00:07:16,190 --> 00:07:21,360
+在实现主要控制时，可以计算大约五十赫兹或一百赫兹
+be computed at perhaps fifty Hertz or a hundred Hertz, while the main control is implemented
+
+86
+00:07:21,360 --> 00:07:26,470
+就像一千赫兹。它们不必以相同的速率计算。
+at something like one thousand Hertz. They don't have to be computed at the same rate.
+
+87
+00:07:26,470 --> 00:07:30,290
+对于计算转矩控制和前馈控制，存在重要意义
+For the computed-torque control and for the feedforward control, there is a significant
+
+88
+00:07:30,290 --> 00:07:35,660
+知道每个链接的动态参数的实际值的挑战。
+challenge in knowing the actual values of the dynamic parameters of each of the links.
+
+89
+00:07:35,660 --> 00:07:41,350
+对于每个链接，我们前面讨论过有十个动态参数。所以，对于六个链接
+For each link, there are ten dynamic parameters as we discussed earlier. So, for a six link
+
+90
+00:07:41,350 --> 00:07:48,140
+工业机器人，需要确定60个动态参数。你可以通过实验来做
+industrial robot, that's sixty dynamic parameters need to be identified. You can do it experimentally
+
+91
+00:07:48,140 --> 00:07:50,111
+或者你也许可以从机器人的CAD模型中做到这一点。
+or you can perhaps do it from a CAD model of the robot.
+

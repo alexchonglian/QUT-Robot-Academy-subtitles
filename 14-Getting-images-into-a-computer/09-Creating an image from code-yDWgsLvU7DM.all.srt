@@ -1,0 +1,265 @@
+1
+00:00:03,730 --> 00:00:09,219
+我们已经谈了很多关于图像如何在MATLAB中表示为矩阵的讨论。
+We have talked quite a bit about how an image is represented as a matrix inside a MATLAB.
+
+2
+00:00:09,219 --> 00:00:15,570
+相反，我们使用MATLAB工具创建的矩阵可以显示为图像。
+Conversely, a matrix that we create using MATLAB tools can be displayed as an image.
+
+3
+00:00:15,570 --> 00:00:21,460
+所以我们现在要做的是使用一些MATLAB的基本图像创建工具
+So what we are going to do now is use some of MATLAB’s fundamental image creation tools
+
+4
+00:00:21,460 --> 00:00:27,890
+产生一些测试图像。所以我们将纯粹通过代码创建一个新的图像。
+to produce some test images. So we are going to create a new image purely through code.
+
+5
+00:00:27,890 --> 00:00:33,480
+因此，让我们首先分配一个工作空间变量im，即我的图像标准名称。
+So let’s start off by assigning to a workspace variable im, my standard name for an image.
+
+6
+00:00:33,480 --> 00:00:38,710
+我将使用函数零。它的作用是创建一个具有维度的矩阵
+I am going to use the function zeros. And what that does is create a matrix with dimensions
+
+7
+00:00:38,710 --> 00:00:45,309
+200乘200，该矩阵中的所有元素都是零。我要设置一个元素
+200 by 200 and all the elements in that matrix are zeroes. And I am going to set one element
+
+8
+00:00:45,309 --> 00:00:51,690
+它的值为1.现在我可以显示我刚创建的图像矩阵
+of that to the value of 1. Now I can display this matrix that I just created as an image
+
+9
+00:00:51,690 --> 00:00:57,390
+我们可以看到的是这很大程度上是黑色的，因为所有的像素都是零，这代表了
+and what we can see is this largely black, because all the pixels are zero, which represents
+
+10
+00:00:57,390 --> 00:01:03,460
+在最左上角的黑色和上方，你可以看到一小块白色。那
+black and up in the top left-most corner you can see a tiny little patch of white. That
+
+11
+00:01:03,460 --> 00:01:08,600
+是我设置的值为1-1的一个像素，表示白色。
+is the one pixel that I set to the value of 1—1 representing white.
+
+12
+00:01:08,600 --> 00:01:15,330
+现在，我可以在这里创建一个稍大的对象，我将要做的是内部
+Now, I can create a slightly bigger object in this and what I am going to do is, within
+
+13
+00:01:15,330 --> 00:01:24,900
+这个矩阵，我将设置从第150行到第160行的所有像素，以及所有列
+this matrix, I am going to set all the pixels from row 150 to row 160, and all the columns
+
+14
+00:01:24,900 --> 00:01:32,610
+从第60列到第70列，我将把它们设置为0.5。就是这样
+from column 60 to column 70, and I am going to set those to a value of 0.5. So that is
+
+15
+00:01:32,610 --> 00:01:37,970
+黑色和白色之间的灰色。我将设置所有这些元素
+a grey, half way between black and white. And I am going to set all those elements of
+
+16
+00:01:37,970 --> 00:01:45,180
+矩阵的值为0.5，现在我可以再次显示该矩阵，我们看到了
+the matrix to the value of 0.5, now I can display that matrix again and we see we have
+
+17
+00:01:45,180 --> 00:01:51,690
+在图像中创建了一个小灰色方块。所以我们只是通过写作来创建一个图像
+created a small grey square in the image. So we are creating an image simply by writing
+
+18
+00:01:51,690 --> 00:01:54,970
+码。工具箱包含要创建的功能
+code. The toolbox contains a function to create
+
+19
+00:01:54,970 --> 00:01:59,290
+界。我打算这样做，我打算调用circle函数，它被调用
+circles. I am going to do that, I am going to call the circle function, it is called
+
+20
+00:01:59,290 --> 00:02:05,420
+kcircle。而且我要说我想要一个半径为30的圆-我们看到它已经创建了
+kcircle. And I am going to say I want a circle of radius 30—we see that it has created
+
+21
+00:02:05,420 --> 00:02:10,700
+尺寸为61乘61的矩阵。让我们来看看我们刚刚创建的这个东西。
+a matrix of dimensions 61 by 61. Let’s have a look at this thing that we just created.
+
+22
+00:02:10,700 --> 00:02:16,930
+我们在这里可以看到该矩阵的图像表示。我们可以使用idisp来探索它，
+We can see here is the image representation of that matrix. We can explore it using idisp,
+
+23
+00:02:16,930 --> 00:02:21,299
+我们看到这里的所有像素，这些矩阵元素的值都是
+and we see that all these pixels in here, these matrix elements, have got a value of
+
+24
+00:02:21,299 --> 00:02:25,530
+所有这些不在圆圈中的值都是0。
+1. And all these ones which don’t lie in the circle have got a value of 0.
+
+25
+00:02:25,530 --> 00:02:31,010
+所以这个函数返回了一个方形的矩阵，其中的元素也是
+So this function has returned a matrix which is square and the elements in that are either
+
+26
+00:02:31,010 --> 00:02:36,249
+如果它们不属于圆圈，则为0;如果它们属于圆圈，则为白色。
+0 if they don’t belong inside the circle and white if they do belong inside the circle.
+
+27
+00:02:36,249 --> 00:02:42,140
+现在我们现在可以做的是将这个圆圈粘贴到我们之前的图像中，
+Now what we can do now is actually paste this circle into the image that we had before,
+
+28
+00:02:42,140 --> 00:02:45,560
+所以，让我们回到刚才的形象。
+so let’s just go back to the image that we had a moment ago.
+
+29
+00:02:45,560 --> 00:02:56,819
+我要将圆圈粘贴到该图像中，我这样做。我要去
+And I am going to paste the circle into that image and I do it like this. I am going to
+
+30
+00:02:56,819 --> 00:03:03,120
+制作圆圈，而不是明亮的白色，我会使它变得稍微亮一点灰色
+make the circle, not bright white, I am going to make it a slightly brighter grey then the
+
+31
+00:03:03,120 --> 00:03:08,099
+广场是。所以我将乘以圆圈中的所有元素
+square was. So I am going to multiply all of the elements in the circle by the value
+
+32
+00:03:08,099 --> 00:03:13,959
+为0.7，因此它将具有70％的灰度值。而我将用它来圈出圆圈
+of 0.7, so it will have a 70% grey value. And I am going to place the circle with its
+
+33
+00:03:13,959 --> 00:03:21,819
+因此，这是100和100的u坐标
+centre at 100 by 30. So that is the u coordinate of a 100 and the
+
+34
+00:03:21,819 --> 00:03:26,670
+v坐标30.我现在所做的就是更新元素
+v coordinate of 30. All I have done now is updated the elements
+
+35
+00:03:26,670 --> 00:03:32,450
+在矩阵中。我之前拥有的价值，现在它已经粘贴了一个圆圈。
+in the matrix im. The value that I had before and now it has got a circle pasted into it.
+
+36
+00:03:32,450 --> 00:03:37,150
+那么让我们来看看。
+So let’s have a look at that.
+
+37
+00:03:37,150 --> 00:03:46,299
+我们看到图像现在包含一个正方形和一个圆圈。Toolbox还有其他一些功能
+And we see that the image now contains a square and a circle. Toolbox has got some other functions
+
+38
+00:03:46,299 --> 00:03:53,790
+用于在矩阵内创建图形实体。另一个功能是iline，并绘制了一个
+for creating graphical entities within a matrix. Another function is iline and that draws a
+
+39
+00:03:53,790 --> 00:03:58,779
+行成矩阵。所以我要在matixim中划一条线。
+line into a matrix. So I am going to draw a line into the matix im.
+
+40
+00:03:58,779 --> 00:04:06,480
+该线将从坐标30开始40，并且它将在190到190之间，
+The line is going to start at coordinate 30 by 40. And it is going to go to 150 by 190,
+
+41
+00:04:06,480 --> 00:04:12,209
+我将使它的值为90％灰色。
+and I’m going to make it have a value of 90% grey.
+
+42
+00:04:12,209 --> 00:04:20,260
+让我们看一下。我们有一个矩阵，现在包含一个正方形，一条线，
+Let’s display that. And there we have a matrix which now contains a square, a line,
+
+43
+00:04:20,260 --> 00:04:27,000
+一个圆圈和一个明亮的像素。Toolbox有一些功能可以轻微创建
+a circle and a single bright pixel. Toolbox has got some functions to create slightly
+
+44
+00:04:27,000 --> 00:04:34,040
+更精细的测试模式，通过测试模式功能访问。在这里，我要去
+more elaborate test patterns, accessed through the test pattern function. And here I am going
+
+45
+00:04:34,040 --> 00:04:40,180
+创建一个斜坡函数，我将创建一个尺寸为200乘200像素的图像。
+to create a ramp function and I am going to create an image of dimensions 200 by 200 pixels.
+
+46
+00:04:40,180 --> 00:04:48,380
+让我们来看看。在这里，我们有一个所谓的灰度
+And let’s have a look at that. And here we have what is called a grey scale
+
+47
+00:04:48,380 --> 00:04:53,210
+坡道。我们来看看这里的灰度值。它们相当低
+ramp. Let’s have a look at the grey scale values in here. They are quite low, about
+
+48
+00:04:53,210 --> 00:04:57,670
+0.5，当我们水平移动时，它会变得更亮更明亮
+0.5 and as we move horizontally it gets brighter and brighter all the way up
+
+49
+00:04:57,670 --> 00:05:02,950
+因此，如果它是灰度斜坡模式，我们可以创建更精细的测试模式
+to 1. So if it is a grey scale ramp pattern we can create more elaborate test patterns
+
+50
+00:05:02,950 --> 00:05:08,900
+例如正方形或圆形网格。这是一个例子。我们将它分配给输出
+such as grid of squares or circles. Here is an example. We assign it to an output
+
+51
+00:05:08,900 --> 00:05:16,070
+变量im，使用测试模式函数。要求正方形。我们想要输出图像
+variable im, use the test pattern function. Ask for squares. We want the output image
+
+52
+00:05:16,070 --> 00:05:23,460
+为200像素乘200像素。我们希望正方形的间距为50像素
+to be 200 pixels by 200 pixels. We want the squares to be on a 50 pixel spacing and we
+
+53
+00:05:23,460 --> 00:05:33,780
+希望方块是25像素的正方形。让我们显示那个图像。我们有一个16格的网格。
+want the squares to be 25 pixels square. Let’s display that image. And there we have a grid of 16 squares.
+

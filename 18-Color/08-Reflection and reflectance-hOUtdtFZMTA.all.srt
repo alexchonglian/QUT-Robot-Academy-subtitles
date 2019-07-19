@@ -1,0 +1,280 @@
+1
+00:00:03,199 --> 00:00:08,780
+该过程的下一部分是反射。这就是入射照度反映的地方
+The next part of the process is reflectance. That is where the incoming illuminance reflects
+
+2
+00:00:08,780 --> 00:00:14,219
+一个物体。我们非常熟悉有光泽的表面或镜子反射的能力
+off an object. We are very familiar with the ability of shiny surfaces or mirrors to reflect
+
+3
+00:00:14,219 --> 00:00:16,810
+光。在高中物理学中我们学习了
+light. In high school physics we learn about the
+
+4
+00:00:16,810 --> 00:00:21,840
+来自这样一个表面的反射规则，其中入射角等于角度
+rules of reflection from such a surface, where the angle of incidence equals the angle of
+
+5
+00:00:21,840 --> 00:00:26,840
+反射，我们称之为镜面反射。现在这不是说什么
+reflection and we refer to this as specular reflection. Now this is not saying anything
+
+6
+00:00:26,840 --> 00:00:30,730
+关于反射过程中发生的颜色变化，它只是谈论了
+about the color change that occurs during reflection, it is simply talking about the
+
+7
+00:00:30,730 --> 00:00:36,250
+反射过程的几何形状。我们称之为镜面反射
+geometry of the reflection process. We refer to this as specular reflection, which
+
+8
+00:00:36,250 --> 00:00:41,480
+与镜子的拉丁词有关。我们之前见过WilliamHerschel，他是谁
+is related to the Latin word for mirror. We met William Herschel before, who is the guy
+
+9
+00:00:41,480 --> 00:00:47,579
+谁发现了红外辐射，他在望远镜中制造了大镜子
+who discovered infra-red radiation and he made the big mirror in his telescope from
+
+10
+00:00:47,579 --> 00:00:53,600
+一种被称为窥器金属的金属-它是铜和锡的反射合金
+a type of metal that was called speculum metal — it was a reflective alloy of copper and tin and
+
+11
+00:00:53,600 --> 00:00:57,980
+它曾被用于制造望远镜镜子。
+it was used in the old days for making telescope mirrors.
+
+12
+00:00:57,980 --> 00:01:03,790
+光被物体反射的更真实的模型就是所谓的朗伯（Lambertian）
+A more realistic model for the way light is reflected off objects is what is called Lambertian
+
+13
+00:01:03,790 --> 00:01:09,210
+反射和朗伯反射与镜面反射的不同之处在于传入
+reflection, and Lambertian reflection differs from specular reflection in that the incoming
+
+14
+00:01:09,210 --> 00:01:14,759
+光以各种方向反射。这就是发生的那种反思
+light is reflected off in all manner of directions. This is the sort of reflection that occurs
+
+15
+00:01:14,759 --> 00:01:21,749
+从暗淡或无光泽的表面。有时称为漫反射，它以约翰命名
+from a dull or matt surface. Sometimes called diffuse reflection and it is named after Johann
+
+16
+00:01:21,749 --> 00:01:28,369
+兰伯特，他是18世纪的物理学家。被反射的光的强度
+Lambert, who was a physicist in the 1700s. The intensity of the light that is reflected
+
+17
+00:01:28,369 --> 00:01:34,729
+从表面看，它与反射角有关，而Lambertian则有趣
+from the surface is related to the angle of reflection, and what is interesting with Lambertian
+
+18
+00:01:34,729 --> 00:01:40,840
+反射是它导致亮度对观察者的角度不变
+reflection is that it leads to the brightness being invariant to the observer’s angle
+
+19
+00:01:40,840 --> 00:01:44,959
+观点。现在月亮是兰伯蒂亚的一个很好的例子
+of view. Now the moon is a really good example of Lambertian
+
+20
+00:01:44,959 --> 00:01:50,329
+反射。我们知道月球是一个球体，但是当我们看到它时，它似乎是一个球体
+reflection. We know that the moon is a sphere, but when we look at it, it appears to be a
+
+21
+00:01:50,329 --> 00:01:56,409
+除了陨石坑和海洋之外，相当均匀明亮的圆盘。所以它的原因
+fairly uniformly bright disk, apart from the craters and the seas. So the reason that it
+
+22
+00:01:56,409 --> 00:02:01,889
+即使光被反射，看起来也是均匀明亮的，是成比例的
+appears is to be uniformly bright even though the light has been reflected, is proportioned
+
+23
+00:02:01,889 --> 00:02:07,179
+到角度的cos符号，是我们正在看的区域
+to the cos sign of the angle, is that the area of the region that we are looking at
+
+24
+00:02:07,179 --> 00:02:12,760
+似乎改变了大小。这是一个夸张的例子：我采用了这个特殊的补丁
+appears to change in size. Here is an exaggerated example: I take this particular patch of the
+
+25
+00:02:12,760 --> 00:02:17,599
+月亮和来自那个补丁的大部分光被直接反射，它对应
+moon and most of the light from that patch is being reflected directly up, it corresponds
+
+26
+00:02:17,599 --> 00:02:23,060
+到这样的地方。如果我采取靠近杆子的补丁，很明显
+to an area something like this. If I take a patch that is down near the pole it is clearly
+
+27
+00:02:23,060 --> 00:02:28,870
+对我的视野倾向于倾向于。所以它将拥有其中之一
+going to be inclined with respect to my field of view. So it is going to have one of these
+
+28
+00:02:28,870 --> 00:02:33,980
+光线在这里相关联，所以它将反射较少的光，但区域-
+rays down here associated, so it is going to be reflecting less light, but the area—the
+
+29
+00:02:33,980 --> 00:02:39,500
+这个补丁的表观面积较小，因为我倾斜地看着它。所以如果我考虑一下
+apparent area of this patch—is smaller because I am looking at it obliquely. So if I consider
+
+30
+00:02:39,500 --> 00:02:45,250
+亮度是发射到其表面区域的光的比率，这是
+the brightness to be the ratio of the light being emitted to its surface area, this is
+
+31
+00:02:45,250 --> 00:02:49,379
+对视角不变。所以我们刚看了几何
+invariant to the view angle. So we have just looked at the geometry of
+
+32
+00:02:49,379 --> 00:02:53,500
+反射，射线的方向作为一种功能从表面反射
+the reflection, the direction of the rays being reflected form the surface as a function
+
+33
+00:02:53,500 --> 00:02:59,900
+入射光线。现在让我们谈谈反射如何改变传入的颜色
+of the incoming ray. Let’s talk now about how reflection changes the color of incoming
+
+34
+00:02:59,900 --> 00:03:05,969
+光。在这里我们看到一个红房子砖，这里的情节显示了我们所说的反射率
+light. Here we see a red house brick, the plot here shows what we call the reflectance
+
+35
+00:03:05,969 --> 00:03:10,010
+房子砖;也就是说，从砖块反射的光的比例
+of the house brick; that is, the fraction of light that is reflected form the brick
+
+36
+00:03:10,010 --> 00:03:14,920
+作为波长的函数。这是一个非常复杂的曲线，我们看到有一些
+as a function of wavelength. And it is quite a complex curve, we see that there are some
+
+37
+00:03:14,920 --> 00:03:19,060
+频谱的一部分，它反射大量的光，还有其他
+parts of the spectrum where it reflects a large amount of light and there are other
+
+38
+00:03:19,060 --> 00:03:22,659
+光谱中反射很少光的部分。
+parts of the spectrum where it reflects very little light.
+
+39
+00:03:22,659 --> 00:03:27,420
+右侧图表显示了对频谱可见部分的放大。
+The right hand graph shows a zoom into the visible part of the spectrum.
+
+40
+00:03:27,420 --> 00:03:32,939
+现在我们可以看到红砖在该地区反射的蓝光不是很多
+Now we can see that the red brick reflects not very much blue light in the region, say
+
+41
+00:03:32,939 --> 00:03:38,349
+400至500纳米，但它确实反映了相当多的红光正在下降
+400 to 500 nanometers, but it does reflect a fair amount of the red light that is falling
+
+42
+00:03:38,349 --> 00:03:44,200
+它表示600至700纳米之间的光，这就是为什么它看起来对我们来说是红色的
+down, say the light between 600 and 700 nanometers, and that is why it looks red to us, it reflects
+
+43
+00:03:44,200 --> 00:03:49,829
+更多的红光然后它反射蓝光。所以这是红砖的光谱，不同
+more red light then it reflects blue light. So this is the spectrum of a red brick, different
+
+44
+00:03:49,829 --> 00:03:55,799
+矿物质具有不同的反射光谱，在这里我们可以看到反射光谱
+minerals have different reflectance spectrums and here we see the reflectance spectrum for
+
+45
+00:03:55,799 --> 00:04:00,719
+一些矿物质。如果我们有一台可以测量数字反射率的仪器
+a number of minerals. If we have an instrument that can measure the reflectance at a number
+
+46
+00:04:00,719 --> 00:04:05,870
+不同波长的仪器，可能像光谱仪或超光谱相机，
+of different wavelengths, an instrument perhaps like a spectrometer or a hyper spectral camera,
+
+47
+00:04:05,870 --> 00:04:09,889
+然后我们可以测量这些特定曲线中的一条，我们可以将它与库匹配
+then we can measure one of these particular curves and we can match it against a library
+
+48
+00:04:09,889 --> 00:04:14,939
+已知的矿物质，并用它来识别场景中的矿物质。
+of known minerals and use it to identify what minerals are within the scene.
+
+49
+00:04:14,939 --> 00:04:20,530
+所以回顾一下，入射光，我们称之为照度，它有一个光谱E，
+So to recap, incoming light, we refer to as the illuminance and it has got a spectrum E,
+
+50
+00:04:20,530 --> 00:04:25,410
+它具有波长λ的函数，并且我们有反射率
+which has got a function of the wavelength lambda, and we have the reflectance of the
+
+51
+00:04:25,410 --> 00:04:30,890
+对象本身，我们称之为R，它也是lambda的函数。
+object itself which we refer to as R and it is also a function of lambda.
+
+52
+00:04:30,890 --> 00:04:34,870
+离开苹果的光线，我们称之为苹果的照度，
+So the light that leaves the apple, which we refer to as the illuminance of the apple,
+
+53
+00:04:34,870 --> 00:04:41,730
+我将使用符号L，它也是波长的函数，现在是L
+I am going to use the symbol L and it is also a function of the wavelength, now L at any
+
+54
+00:04:41,730 --> 00:04:47,350
+特定的lambda在相同的lambda乘以R时等于E.
+particular lambda is equal to E at that same lambda multiplied by R at that
+
+55
+00:04:47,350 --> 00:04:52,260
+特别是lambda。这就是离开苹果的光谱，即功能
+particular lambda. That is the spectrum of the light that is leaving the apple, the function
+
+56
+00:04:52,260 --> 00:04:57,520
+入射光的光谱，以及苹果反射率的作用。
+of the spectrum of the incoming light, and the function of the reflectance of the apple.
+

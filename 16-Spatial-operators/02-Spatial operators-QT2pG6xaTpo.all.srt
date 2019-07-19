@@ -1,0 +1,385 @@
+1
+00:00:03,149 --> 00:00:07,819
+在上一课中，我们讨论了monadic图像处理，这就是我们所采用的
+In the last lecture we talked about monadic image processing, and that is where we take
+
+2
+00:00:07,819 --> 00:00:12,730
+输入图像中的一个像素，对其应用一个函数并将结果放入相应的图像中
+a pixel from the input image, apply a function to it and put the result into the corresponding
+
+3
+00:00:12,730 --> 00:00:14,539
+输出图像中的像素。
+pixel in the output image.
+
+4
+00:00:14,539 --> 00:00:18,891
+我们研究了许多函数：我们研究了伽玛编码和解码;我们
+And we looked at a number of functions: we looked at gamma encoding and decoding; we
+
+5
+00:00:18,891 --> 00:00:20,830
+看着阈值;等等。
+looked at thresholding; and so on.
+
+6
+00:00:20,830 --> 00:00:25,869
+因此，相同的功能应用于图像中的每个像素。
+So the same function is applied to every single pixel in the image.
+
+7
+00:00:25,869 --> 00:00:31,740
+这里发生的是每个输出像素是方形区域中像素的函数
+What happens here is that every output pixel is a function of the pixels in a square region
+
+8
+00:00:31,740 --> 00:00:34,610
+围绕输入图像中的对应点。
+around the corresponding point in the input image.
+
+9
+00:00:34,610 --> 00:00:41,040
+因此函数的输入是多个像素，输出是单个像素值。
+So the input to the function is a number of pixels, the output is a single pixel value.
+
+10
+00:00:41,040 --> 00:00:45,900
+这样一个基于许多像素的函数可以说出一些关于的东西
+Such a function, which is based on a number of pixels, can then say something either about
+
+11
+00:00:45,900 --> 00:00:51,720
+输入方形区域上的像素的均匀性或变化。
+the uniformity or the variation of the pixels over that input square region.
+
+12
+00:00:51,720 --> 00:00:55,030
+我们称之为窗口，用符号W表示。
+We call this a window and denote it by the symbol W.
+
+13
+00:00:55,030 --> 00:01:00,240
+因此，让我们考虑一下我们可能会使用的示例函数，并考虑一个常见的函数
+So let’s consider an example function we might use and a common one would be to consider
+
+14
+00:01:00,240 --> 00:01:01,240
+平均值。
+the average.
+
+15
+00:01:01,240 --> 00:01:06,370
+那么我们要做的就是该方形输入窗口，取所有像素值，
+So what we are going to do is for that square input window, take all of the pixel values,
+
+16
+00:01:06,370 --> 00:01:11,250
+计算平均值，并将平均值放入输出中的相应像素
+compute the average, and place the average into the corresponding pixel in the output
+
+17
+00:01:11,250 --> 00:01:12,250
+图片。
+image.
+
+18
+00:01:12,250 --> 00:01:15,370
+所以这是原始图像，我们以前见过的蒙娜丽莎图像。
+So here is the original image, the Mona Lisa image that we have seen before.
+
+19
+00:01:15,370 --> 00:01:21,580
+输出是7乘7窗口的平均像素值。
+And the output is the average pixel value over a 7 by 7 window.
+
+20
+00:01:21,580 --> 00:01:26,890
+所以平均值可以做的是它可以减少噪音，但我们也看到它减少了噪音
+So what the average can do is it can reduce noise but we also see that it reduces the
+
+21
+00:01:26,890 --> 00:01:30,500
+分辨率-它使这个图像看起来有点模糊。
+resolution—it has made this image look somewhat blurry.
+
+22
+00:01:30,500 --> 00:01:36,200
+让我们看看这在实践中是如何运作的;我在这里构建了一个玩具示例
+Let’s see how this actually works in practice; and I have constructed a toy example here
+
+23
+00:01:36,200 --> 00:01:40,620
+我们在那里输入灰度图像双精度输入图像。
+where we have an input grey scale image double precision input image.
+
+24
+00:01:40,620 --> 00:01:42,810
+因此像素值在0和1之间变化。
+So the pixel values vary between 0 and 1.
+
+25
+00:01:42,810 --> 00:01:47,650
+所以我们有一个灰色的背景，其值为0.3，中间有一个明亮的正方形
+So we have a grey background with values of 0.3 and a bright square in the middle where
+
+26
+00:01:47,650 --> 00:01:49,460
+像素值为0.8。
+the pixel values are 0.8.
+
+27
+00:01:49,460 --> 00:01:55,290
+我们将启动动画，我们在这里看到的是输入像素窗口，它
+We will start the animation and what we can see here is the input pixel window, which
+
+28
+00:01:55,290 --> 00:02:01,590
+在这里显示为红色并且它正在移动，从左到右，从上到下穿过图像。
+is shown here as red and it is moving, marching across the image left to right, top to bottom.
+
+29
+00:02:01,590 --> 00:02:05,670
+你可以在右侧看到的是存入的平均值
+And what you can see on the right-hand side are the average values being deposited into
+
+30
+00:02:05,670 --> 00:02:07,830
+输出图像。
+the output image.
+
+31
+00:02:07,830 --> 00:02:12,680
+需要注意的事项：首先，请注意我们无法计算像素值
+Couple of things to note: first of all, note that we can’t compute the pixel values in
+
+32
+00:02:12,680 --> 00:02:15,160
+最外面的行和列像素。
+the outer most row and column pixels.
+
+33
+00:02:15,160 --> 00:02:18,060
+我们很快就会讨论这个问题。
+And we will talk about that shortly.
+
+34
+00:02:18,060 --> 00:02:26,329
+另请注意，输入图像中明显明亮的亮白色方块已被涂抹
+Also note that the quite clearly obvious bright white square in the input image has been smeared
+
+35
+00:02:26,329 --> 00:02:27,329
+出。
+out.
+
+36
+00:02:27,329 --> 00:02:31,569
+该值仅为0.8，现在仅存在于输出图像中的单个像素处。
+That value of 0.8 only exists now at a single pixel in the output image.
+
+37
+00:02:31,569 --> 00:02:36,230
+在那周围是一些稍微明亮的价值，除此之外是背景，所以我们
+Around that are some slightly brighter values and beyond that is the background and so we
+
+38
+00:02:36,230 --> 00:02:42,040
+看看我们在拍摄蒙娜丽莎图像的平均值时所看到的-尖锐，清脆，
+see here what we saw when we took the average of the Mona Lisa image—that the sharp, crisp,
+
+39
+00:02:42,040 --> 00:02:46,819
+图像中的边界已被涂抹或模糊。
+boundaries in the image have been smeared out or blurred.
+
+40
+00:02:46,819 --> 00:02:49,280
+现在窗口大小的效果产生了真正的不同。
+Now the effect of the window size makes a real difference.
+
+41
+00:02:49,280 --> 00:02:56,069
+再次，这是我们的输入图像，如果我们用7乘7的窗口移动计算平均值
+So again, here is our input image and if we compute the average with a 7 by 7 window moving
+
+42
+00:02:56,069 --> 00:03:00,409
+在输入图像上，这是结果，如果我们增加窗口的大小，
+over the input image, this is the result, and if we increase the size of the window,
+
+43
+00:03:00,409 --> 00:03:02,849
+现在它是一个21乘21的窗口。
+now it is a 21 by 21 window.
+
+44
+00:03:02,849 --> 00:03:06,269
+我们可以看到它确实非常模糊。
+We can see that it is very blurry indeed.
+
+45
+00:03:06,269 --> 00:03:10,450
+因此，往往会发生图像中任何小于大小的特征
+So what tends to happen is that any feature in the image that is smaller than the size
+
+46
+00:03:10,450 --> 00:03:13,499
+窗户的衰减非常强烈。
+of the window will be very strongly attenuated.
+
+47
+00:03:13,499 --> 00:03:16,470
+它将倾向于在输出图像中消失。
+It will tend to disappear in the output image.
+
+48
+00:03:16,470 --> 00:03:22,629
+我们可能会说输出图像模糊，模糊，分辨率较低等等。
+We might say that the output image is blurry, fuzzy, has a lower resolution or whatever.
+
+49
+00:03:22,629 --> 00:03:28,150
+我们已经模糊了，平滑了图像中的细节。
+We have blurred out, smoothed over fine detail in the image.
+
+50
+00:03:28,150 --> 00:03:32,049
+让我们在全尺寸图像中尝试这个。
+Let’s try this in a full scale image.
+
+51
+00:03:32,049 --> 00:03:36,959
+我们将把我们最喜欢的MonaLisa图像加载到工作区变量im中。
+We are going to load our favourite image the Mona Lisa into the workspace variable im.
+
+52
+00:03:36,959 --> 00:03:44,260
+我将使用工作区变量计算一个新图像，我将调用s7。
+I am going to compute a new image with the workspace variable I am going to call s7.
+
+53
+00:03:44,260 --> 00:03:51,709
+并且每个输出像素是像素的7乘7邻域或窗口的平均值
+And every output pixel is the average of a 7 by 7 neighbourhood or window of the pixels
+
+54
+00:03:51,709 --> 00:03:52,889
+在输入图像中。
+in the input image.
+
+55
+00:03:52,889 --> 00:03:57,349
+要做到这一点，我将使用工具箱功能图标，并将解释这一点
+To do that I am going to use the tool box function icon and will explain about this
+
+56
+00:03:57,349 --> 00:04:01,030
+随着我们的进展，功能会更多。
+function a bit more as we proceed.
+
+57
+00:04:01,030 --> 00:04:04,949
+第一个参数是我要执行平均值的图像
+The first argument is the image that I am going to perform the average on which is the
+
+58
+00:04:04,949 --> 00:04:07,510
+蒙娜丽莎图像在工作区变量im。
+Mona Lisa image in the workspace variable im.
+
+59
+00:04:07,510 --> 00:04:12,779
+第二个参数定义了我们计算平均值的区域。
+The second argument defines the area over which we compute the average.
+
+60
+00:04:12,779 --> 00:04:20,139
+现在我想计算7乘7窗口的平均值，所以为了指定，我通过了
+Now I wanted to compute the average over a 7 by 7 window and so to specify that, I pass
+
+61
+00:04:20,139 --> 00:04:24,139
+在具有函数1的矩阵中（7,7）。
+in a matrix with a function ones(7,7).
+
+62
+00:04:24,139 --> 00:04:29,300
+这产生了一个7乘7的矩阵和该矩阵中的每个元素
+That produces a matrix that is 7 by 7 and every element in that matrix
+
+63
+00:04:29,300 --> 00:04:30,300
+是1。
+is 1.
+
+64
+00:04:30,300 --> 00:04:34,710
+所以第二个参数定义了我将要执行平均值的区域
+So that second argument defines the region over which I am going to perform the average
+
+65
+00:04:34,710 --> 00:04:36,500
+对于每个输入像素。
+for every single input pixel.
+
+66
+00:04:36,500 --> 00:04:41,210
+我将展示原始的蒙娜丽莎图像。
+I am going to display the original Mona Lisa image.
+
+67
+00:04:41,210 --> 00:04:44,050
+而我将创造另一个人物。
+And I am going to create another figure.
+
+68
+00:04:44,050 --> 00:04:50,870
+我将展示它的平均版本，我们可以看到有很多
+I am going to display the averaged version of that and we can see that there is a lot
+
+69
+00:04:50,870 --> 00:04:53,270
+背景细节较少。
+less detail in the background.
+
+70
+00:04:53,270 --> 00:04:59,080
+它更顺畅;你可能会说它比较模糊，你可能会说它的分辨率较低。
+It is much smoother; you might say it is blurrier, you might say it has got lower resolution.
+
+71
+00:04:59,080 --> 00:05:05,490
+现在让我们增加我们进行平均的区域的大小。
+Now let’s increase the size of the region over which we are doing the averaging.
+
+72
+00:05:05,490 --> 00:05:16,430
+所以我现在要关联一个21x21像素大小的窗口。
+So I am going now to correlate with a window which is 21 by 21 pixels in size.
+
+73
+00:05:16,430 --> 00:05:23,900
+现在我将显示该图像，我们可以看到这看起来非常模糊。
+Now I am going to display that image and we can see that this looks very blurry indeed.
+
+74
+00:05:23,900 --> 00:05:29,710
+平均像素区域的效果是消除像素区域内的非常精细的细节
+The effect of averaging over a region of pixels is to eliminate very fine detail within the
+
+75
+00:05:29,710 --> 00:05:36,129
+图像，所以任何细节的大小都小于我们使用的窗口，
+image, so any detail that is of a size that is smaller than the window that we are using,
+
+76
+00:05:36,129 --> 00:05:41,990
+在最后一种情况下，21乘21像素，任何大小为1或2像素的细节
+in this last case, 21 by 21 pixels, any detail that is the order of 1 or 2 pixels in size
+
+77
+00:05:41,990 --> 00:05:44,199
+将被淘汰。
+is going to be eliminated.
+

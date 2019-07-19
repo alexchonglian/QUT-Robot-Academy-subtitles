@@ -1,0 +1,125 @@
+1
+00:00:03,959 --> 00:00:09,380
+我早就提到了人类对我们自己形象的建筑机器的迷恋。这个
+I mentioned early about the human fascination with building machines in our own image. This
+
+2
+00:00:09,380 --> 00:00:14,769
+是大阪大学的一个了不起的项目。其中一个角色是日本机器人
+is an amazing project out of the Osaka University. One of these characters is a Japanese robotic
+
+3
+00:00:14,769 --> 00:00:20,319
+研究员和另一个是机器人。看看你能分辨哪一个是哪一个。也许
+researcher and the other one is a robot. See if you can tell which one is which. Perhaps
+
+4
+00:00:20,319 --> 00:00:25,359
+最着名的人形机器人是由本田汽车公司建造的Asimo。
+the best-known humanoid robot is Asimo built by Honda the car company.
+
+5
+00:00:41,280 --> 00:00:46,360
+在这里，我们看到一对中国大学打乒乓球的人形机器人
+Here we see a pair of humanoid robots out of a Chinese university playing ping-pong
+
+6
+00:00:46,370 --> 00:00:50,679
+相互之间，显然他们能够做到最后一百次的集会
+with each other and apparently they're able to do rallies that last up to a hundred and
+
+7
+00:00:50,679 --> 00:00:57,079
+七十六招。我们在这些类人机器人中看到了一些非常称职的行为
+seventy six strokes. We see some quite competent behaviour in these humanoid robots and in the
+
+8
+00:00:57,079 --> 00:01:03,069
+最后一个，走路的能力，使用手眼控制执行复杂的能力
+last one, the ability to walk, the ability to use hand eye control to perform a complex
+
+9
+00:01:03,069 --> 00:01:05,560
+像乒乓球这样的任务。
+task like ping-pong.
+
+10
+00:01:05,560 --> 00:01:11,200
+机器人研究人员正致力于模仿人类形态的几乎所有方面。人
+Robotic researchers are working on mimicking almost all aspects of the human form. People
+
+11
+00:01:11,200 --> 00:01:17,909
+从事腿部运动，有人在手，操纵和眼睛上工作
+working on legged locomotion, there are people working on hands and manipulation and eyes
+
+12
+00:01:17,909 --> 00:01:24,890
+和头等等，所以我们能够模仿或复制人类的不同部分
+and heads and so on, so bit by bit we're able to mimic or copy different parts of the human
+
+13
+00:01:24,890 --> 00:01:30,450
+身体和我们作为机器人专家的真正重大挑战是我们如何整合所有这些
+body and the really big challenge for us as roboticists is how do we integrate all these
+
+14
+00:01:30,450 --> 00:01:36,990
+在一个可靠的系统中，可以以可承受的成本制造
+into one system that is reliable and can be manufactured for a cost that is affordable
+
+15
+00:01:36,990 --> 00:01:38,909
+对于这个星球上的人们。
+for people on the planet.
+
+16
+00:01:38,909 --> 00:01:45,079
+这是一个非常像人类机器人手的例子。它有四个手指和一个可以对抗的手指
+Here is an example of a very human like robotic hand. It's got four fingers and an opposable
+
+17
+00:01:45,079 --> 00:01:50,759
+拇指。它有力传感器，因此它能够控制它对物体施加的力。
+thumb. It has force sensors so it was able to control the forces that it exerts on an object.
+
+18
+00:01:50,759 --> 00:01:56,430
+所以它能够操纵像这里所示的灯泡这样的微妙的东西。一点点地，
+So it's able to manipulate delicate things like the light bulb shown here. Bit by bit,
+
+19
+00:01:56,430 --> 00:02:02,729
+几十年来，机器人专家已经建立了大量不同的技术。
+over the decades, roboticists have built up a large inventory of different technologies.
+
+20
+00:02:02,729 --> 00:02:07,149
+我们一直在建立手，我们一直在构建模仿人类感觉的视觉系统
+We've been building hands, we've been building vision systems that mimic the human sense
+
+21
+00:02:07,149 --> 00:02:12,330
+视线我们一直在建设头脑，我们一直在建设腿。我们懂得如何走路，
+of sight. We’ve been building heads, we've been building legs. We understand how to walk,
+
+22
+00:02:12,330 --> 00:02:15,470
+我们了解如何操纵对象。
+we understand how to manipulate objects.
+
+23
+00:02:15,470 --> 00:02:19,540
+因此，今天机器人专家面临的巨大挑战是如何整合所有这些组件
+So the big challenge for roboticists today is how do we integrate all this component
+
+24
+00:02:19,540 --> 00:02:25,980
+技术以可靠的方式，价格合理且为我们提供功能
+technology in a way that is reliable, that is affordable and that gives us the functionality
+
+25
+00:02:25,980 --> 00:02:28,380
+接近人类。
+approaching that of a human being.
+

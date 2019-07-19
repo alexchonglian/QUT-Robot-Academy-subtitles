@@ -1,0 +1,105 @@
+1
+00:00:03,620 --> 00:00:08,560
+如果没有那么重要，我们就没有办法抛弃像维度一样重要的东西
+There is no way we can throw away something as important as a dimension without there
+
+2
+00:00:08,570 --> 00:00:12,750
+是一些后果，并有一些非常重要的后果，但我们倾向于
+being some consequences and there are some quite significant consequences, but we tend
+
+3
+00:00:12,750 --> 00:00:13,980
+不要去想他们。
+not to think about them.
+
+4
+00:00:13,980 --> 00:00:19,640
+如果我看一下平行铁路线的这一场景，它们显然会趋同
+If I look at this scene of parallel railway lines, they clearly appear to converge and
+
+5
+00:00:19,640 --> 00:00:24,500
+我们期待着。看着这个场景，我们知道它们是平行线，而这就是它
+we expect that. Looking at this scene we know that they are parallel lines and this comes
+
+6
+00:00:24,500 --> 00:00:30,859
+从我们对三维世界看起来的日常经验来看，但这有点令人惊讶
+from our everyday experience with what a three dimensional world looks like, but it’s kind of surprising
+
+7
+00:00:30,859 --> 00:00:35,520
+世界上平行的事物在我们看来是趋同的，而我们却没有
+that things that are parallel in the world appear to us to be converging and we don’t
+
+8
+00:00:35,520 --> 00:00:38,340
+任何想法都可以。这对我们来说并不令人惊讶。
+give it any thought at all. It is unsurprising to us.
+
+9
+00:00:38,340 --> 00:00:43,210
+这是另一个例子，抬头看着一堆树，它们似乎在融合
+Here is another example, looking up at a bunch of trees and they appear to be converging
+
+10
+00:00:43,210 --> 00:00:47,559
+即使这些树木彼此平行，也是从树木垂直出现的
+even though these trees are all parallel to one another, emerging vertically from the
+
+11
+00:00:47,559 --> 00:00:48,969
+地面平原。
+ground plain.
+
+12
+00:00:48,969 --> 00:00:52,820
+这是摩天轮的另一个例子，我们知道摩天轮是圆形的。
+Here is another example of the ferris wheel and we know that the ferris wheel is round.
+
+13
+00:00:52,820 --> 00:00:56,660
+现在在这个特定的图像中，因为我倾斜地看着它，它显然出现了
+Now in this particular image, because I have looked at it obliquely, it clearly appears
+
+14
+00:00:56,660 --> 00:00:58,739
+是椭圆形的。
+to be elliptical.
+
+15
+00:00:58,739 --> 00:01:05,420
+那么这里发生了什么？嗯，数学上透视投影将线条映射到线条，
+So what’s going on here? Well, mathematically the perspective projection maps lines to lines,
+
+16
+00:01:05,420 --> 00:01:11,909
+但它不保留角度。这意味着世界上的平行线不一定
+but it doesn't preserve angles. That means that parallel lines in the world will not necessarily
+
+17
+00:01:11,909 --> 00:01:16,540
+在图像中看起来是平行的。有些情况会有，但总的来说，
+appear to be parallel in an image. There are cases when there will be, but in general,
+
+18
+00:01:16,540 --> 00:01:20,750
+投影后平行线不保持平行。
+parallel lines do not remain parallel after the projection.
+
+19
+00:01:20,750 --> 00:01:26,950
+映射感知投影的另一种形状是，它将圆锥曲线映射到圆锥曲线。所以一个圆锥形，
+The other shape mapping perceptive projection does, is it maps conics to conics. So a conic,
+
+20
+00:01:26,950 --> 00:01:33,240
+圆锥截面的缩写是通过切割实心锥体得到的形状
+short for conic section is the shape that you get by slicing through a solid cone and
+
+21
+00:01:33,240 --> 00:01:38,439
+虽然形状可以是圆形，椭圆形，抛物线形或双曲线形。
+though shapes can be a circle, an ellipse, a parabola or a hyperbola.
+

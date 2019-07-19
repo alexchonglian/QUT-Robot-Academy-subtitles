@@ -1,0 +1,180 @@
+1
+00:00:03,510 --> 00:00:07,630
+这是我们之前见过很多次的图像。我们希望这个机器人做点什么
+Here's an image that we've seen many times before. We want this robot to do something
+
+2
+00:00:07,630 --> 00:00:12,850
+有用，所以我们对末端执行器在三维空间中的位置感兴趣。
+useful, so we're interested in where the end effector is positioned in 3 dimensional space.
+
+3
+00:00:12,850 --> 00:00:16,620
+我们要求机器人工具移动到特定的姿势。
+We require the robot tool moves to a particular pose.
+
+4
+00:00:16,620 --> 00:00:20,400
+我们已经讨论过如何使用逆运动学来计算出什么是关节
+We've talked about how we can use inverse kinematics to work out what are the joint
+
+5
+00:00:20,400 --> 00:00:25,680
+为了使机器人末端执行器处于我们需要做的姿势所需的角度
+angles required in order for the robots end effector to be at the pose we require to do
+
+6
+00:00:25,680 --> 00:00:30,980
+有用的任务。到目前为止我们还没有讨论的是我们如何控制机器人
+the useful task. What we haven't discussed so far is how we control the robot so that
+
+7
+00:00:30,980 --> 00:00:37,999
+关节移动到所需的关节角度。控制机器人手臂的任何一个关节，
+the joints move to the desired joint angles. The control of any one joint of a robot arm,
+
+8
+00:00:37,999 --> 00:00:42,559
+通常有一个看起来像这样的结构。在此图中我们可以看到
+typically has a structure that looks something like this. In this diagram we can see that
+
+9
+00:00:42,559 --> 00:00:47,239
+这是一个循环，这是架构中非常重要的一部分。我们要走了
+there's a loop and that's a very important part of the architecture. We're going to walk
+
+10
+00:00:47,239 --> 00:00:50,489
+通过这个系统，我们将从执行器开始。
+through this system and we're going to start with the actuator.
+
+11
+00:00:50,489 --> 00:00:55,469
+执行器是实际使机器人关节移动的装置，它是电机。该
+The actuator is the device that actually makes the robot joint move, it's the motor. The
+
+12
+00:00:55,469 --> 00:01:00,159
+电机的输出是某个位置，我们有一个连接的机械传动装置
+output of the motor is some position and we have a mechanical transmission which connects
+
+13
+00:01:00,159 --> 00:01:05,920
+电机输出到机器人关节本身。机械传动本身
+the output of the motor to the robot joint itself. The mechanical transmission itself
+
+14
+00:01:05,920 --> 00:01:11,920
+通常是变速箱，在某些类型的机器人中，它可能是电缆驱动器。
+is commonly a gearbox and in some types of robot it might be a cable drive.
+
+15
+00:01:11,920 --> 00:01:16,230
+电机的位置由位置传感器监控，并给出信号
+The position of the motor is monitored by a position senor and that gives a signal that
+
+16
+00:01:16,230 --> 00:01:22,900
+说什么是机器人关节电机的实际位置。系统的输入是
+says what is the actual position of the robot joint motor. An input to the system is the
+
+17
+00:01:22,900 --> 00:01:27,710
+期望的位置和我们想要做的是将电机移动到实际位置
+desired position and what we want to do is to move the motor until the actual position
+
+18
+00:01:27,710 --> 00:01:32,650
+等于所需的位置，这通常是联合控制器的工作
+is equal to the desired position and that's the job of the joint controller and typically
+
+19
+00:01:32,650 --> 00:01:38,170
+这是一个嵌入式微控制器。它是在微处理器上运行的一段代码
+that's an embedded micro controller. It's a piece of code running on a micro processor
+
+20
+00:01:38,170 --> 00:01:43,290
+它为电机提供适当的命令，使实际位置匹配
+that provides the appropriate commands to the motor so that the actual position matches
+
+21
+00:01:43,290 --> 00:01:47,310
+理想的位置。通常是联合控制器的输出
+the desired position. The output of the joint controller is typically
+
+22
+00:01:47,310 --> 00:01:53,220
+一些电子信号。它可能是电压，也可能是脉冲宽度调制波形。
+some electronic signal. It might be a voltage or it might be a pulse-width-modulated waveform.
+
+23
+00:01:53,220 --> 00:01:57,700
+这是电机驱动器的输入，电机驱动器是许多控制的电力电子设备
+This is input to the motor drive which is a lot of power electronics which controls
+
+24
+00:01:57,700 --> 00:02:01,810
+施加在执行器上的电流或电压。
+the current or the voltage that's applied to the actuator.
+
+25
+00:02:01,810 --> 00:02:06,370
+该机器人关节控制系统最重要的部分是这个反馈回路。它的
+The most important part of this robot joint control system is this feedback loop. It's
+
+26
+00:02:06,370 --> 00:02:12,359
+我们将电机的实际位置与所需位置进行比较并计算
+where we compare the actual position of the motor with the desired position and compute
+
+27
+00:02:12,359 --> 00:02:16,250
+一个控制信号到执行器，使这两件事情相等。
+a control signal to the actuator to make those two things equal.
+
+28
+00:02:16,250 --> 00:02:20,980
+在本讲座的其余部分，我们将查看每个元素
+In the rest of this lecture, we're going to look at each of the individual elements in
+
+29
+00:02:20,980 --> 00:02:25,599
+这个图一个接一个。如果你想从这个讲座中获得最大的收益，那就是了
+this diagram one by one. If you're going to get the most out of this lecture, then it's
+
+30
+00:02:25,599 --> 00:02:30,780
+重要的是你有一些必要的先决条件。如果你完成了它将是最有用的
+important that you've got some necessary pre-requisites. It will be most useful if you've completed
+
+31
+00:02:30,780 --> 00:02:35,719
+第一个控制理论本科课程。如果你已经这样做了，那么你会熟悉的
+a first undergraduate course on control theory. If you've done that, then you'll be familiar
+
+32
+00:02:35,719 --> 00:02:39,819
+使用拉普拉斯变换等概念，您就会熟悉诸如此类的概念
+with concepts such as the Laplace transform and you'd be familiar with concepts such as
+
+33
+00:02:39,819 --> 00:02:44,810
+动态系统的两极。如果你是的话，它也会非常有用
+the poles of a dynamic system. It would also be really useful if you are
+
+34
+00:02:44,810 --> 00:02:49,250
+熟悉机电系统的一些基础知识，你知道什么是电机，
+familiar with some fundamentals of mechatronic systems that is you know what is a motor,
+
+35
+00:02:49,250 --> 00:02:53,629
+你知道变速箱是什么，你知道编码器是什么，并且熟悉它
+you know what a gearbox is, you know what an encoder is and some familiarity with the
+
+36
+00:02:53,629 --> 00:02:55,980
+嵌入式控制器的想法。
+idea of embedded controllers.
+

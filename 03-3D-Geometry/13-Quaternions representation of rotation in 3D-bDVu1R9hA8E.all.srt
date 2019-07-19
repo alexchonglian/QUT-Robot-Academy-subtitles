@@ -1,0 +1,440 @@
+1
+00:00:04,180 --> 00:00:09,260
+在高中或工程数学中，您可能会遇到复杂数字的概念。
+In high school or Engineering Maths, you’ve probably come across the concept of a complex number.
+
+2
+00:00:09,260 --> 00:00:14,340
+一个数字有两个组成部分，一个是真实的组件和一个虚构的组件。
+A number has got two components, a real component and an imaginary component.
+
+3
+00:00:14,350 --> 00:00:20,650
+虚部是真实的标量B乘以虚数i，i是
+The imaginary component is a real scalar B multiplied by the imaginary number i, i being
+
+4
+00:00:20,650 --> 00:00:23,360
+-1的平方根。
+the square root of -1.
+
+5
+00:00:23,360 --> 00:00:27,140
+我们可以将这个概念扩展到所谓的超复数。
+We can extend this concept to what’s called a hypercomplex number.
+
+6
+00:00:27,140 --> 00:00:32,870
+现在，我们不是只有一个虚数i，而是有虚数i，j，
+Now, instead of having just one imaginary number i, we have imaginary numbers i, j,
+
+7
+00:00:32,870 --> 00:00:33,870
+和k。
+and k.
+
+8
+00:00:33,870 --> 00:00:39,350
+它们各自是-1的平方根，它们的乘积等于-1。
+They are each the square root of -1 and their product is equal to -1.
+
+9
+00:00:39,350 --> 00:00:45,780
+因此，超复数的数字有一个实部和三个虚部。
+So, the hypercomplex number has got one real part and three imaginary parts.
+
+10
+00:00:45,780 --> 00:00:50,850
+超复数数字通常写为标量加上向量，s加v。
+Hypercomplex numbers are typically written as a scalar plus a vector, s plus v.
+
+11
+00:00:50,850 --> 00:00:57,640
+超复数的概念可以追溯到爱尔兰数学家威廉
+The concept of hypercomplex numbers can be traced back to the Irish mathematician, William
+
+12
+00:00:57,640 --> 00:00:58,890
+汉密尔顿。
+Hamilton.
+
+13
+00:00:58,890 --> 00:01:03,500
+故事说有一天，他正沿着都柏林的运河走，关键等式，
+The story goes that one day, he was walking along the Canal in Dublin and the key equation,
+
+14
+00:01:03,500 --> 00:01:09,380
+i2=j2=k2=ijk=-1进入了他的大脑。
+i2 = j2 = k2 = ijk = -1 came in to his brain.
+
+15
+00:01:09,380 --> 00:01:14,550
+而且，他将方程式雕刻在桥梁的一块石头上。
+And, he carved the equation in to a stone on the wall of the bridge.
+
+16
+00:01:14,550 --> 00:01:20,450
+而且，今天在这座特殊的桥上有一块铭牌，以纪念这一天才的闪光
+And, there is today a plaque on this particular bridge which commemorates this flash of genius
+
+17
+00:01:20,450 --> 00:01:22,980
+和灵感。
+and inspiration.
+
+18
+00:01:22,980 --> 00:01:28,590
+超复数是我们称之为四元数的数学对象的基础。
+The hypercomplex number is the basis of a mathematical object that we call a quaternion.
+
+19
+00:01:28,590 --> 00:01:32,590
+我将四元数表示为Q，上面有一个小圆圈。
+I denote a quaternion as a Q with a little circle above it.
+
+20
+00:01:32,590 --> 00:01:39,460
+所以，我们在s+v处写它.S是一个真正的标量，v是表示复数的向量
+So, we write it at s + v. S is a real scalar and v is a vector representing the complex
+
+21
+00:01:39,460 --> 00:01:41,660
+这个数字的一​​部分。
+part of this number.
+
+22
+00:01:41,660 --> 00:01:46,810
+四元数通常以这种形式写成，我们有s然后是内角
+Quaternions are often written in this form as well where we have s and then inside angle
+
+23
+00:01:46,810 --> 00:01:51,869
+括号中，我们有三个元素的向量部分，三个虚部
+brackets, we have the three elements of the vector part, the three imaginary parts of
+
+24
+00:01:51,869 --> 00:01:52,869
+四元数。
+the quaternion.
+
+25
+00:01:52,869 --> 00:01:55,740
+编写四元数有很多种不同的方法。
+There are quite a few different ways of writing quaternions.
+
+26
+00:01:55,740 --> 00:02:01,420
+这是我将在本讲座中使用的方式以及机器人工具箱的方式
+This is the way that I will use in this lecture and also the way that the robotics Toolbox
+
+27
+00:02:01,420 --> 00:02:03,899
+表示MATLAB中的四元数。
+represents a quaternion in MATLAB.
+
+28
+00:02:03,899 --> 00:02:08,739
+正如我们可以确定矢量的大小或长度一样，我们可以确定幅度
+Just as we can determine the magnitude or length of a vector, we can determine the magnitude
+
+29
+00:02:08,739 --> 00:02:15,079
+或四元数的长度，它是四个数字元素之和的平方根
+or length of a quaternion and it’s the square root of the sum of the four numeric elements
+
+30
+00:02:15,079 --> 00:02:18,959
+四元数，它是真实的部分和三个虚部。
+of the quaternion, it’s real part and the three imaginary parts.
+
+31
+00:02:18,959 --> 00:02:24,400
+现在，我们得到所谓的单位四元数，这是一个四元数，其大小是
+Now, we get to what’s called a unit quaternion and this is a quaternion whose magnitude is
+
+32
+00:02:24,400 --> 00:02:26,090
+等于1。
+equal to 1.
+
+33
+00:02:26,090 --> 00:02:31,440
+单位四元数特别有用，因为我们可以使用它们来编码三个旋转
+Unit quaternions are particularly useful because we can use them to encode rotation in three
+
+34
+00:02:31,440 --> 00:02:33,120
+维度空间。
+dimensional space.
+
+35
+00:02:33,120 --> 00:02:37,810
+单位四元数与角度和轴表示有很多相似之处
+A unit quaternion has a lot of similarities to the angle and axis representation that
+
+36
+00:02:37,810 --> 00:02:40,150
+我们在上一节讨论过。
+we discussed in the last section.
+
+37
+00:02:40,150 --> 00:02:45,400
+单位四元数的实部等于旋转角的一半的余弦
+The real part of the unit quaternion is equal to the cosine of half the rotation angle and
+
+38
+00:02:45,400 --> 00:02:51,310
+我在这里用n-hat表示的旋转轴与矢量部分有关
+the rotation axis which I have denoted here by n-hat is related to the vector part of
+
+39
+00:02:51,310 --> 00:02:57,269
+这种关系的四元数涉及旋转角度的一半的正弦。
+the quaternion by this relationship which involve sine of half the rotation angle.
+
+40
+00:02:57,269 --> 00:02:59,840
+我可以复合两个单位四元数。
+I can compound two unit quaternions.
+
+41
+00:02:59,840 --> 00:03:06,390
+就像我们可以复合两个旋转矩阵一样，我可以复合两个四元数而且它是
+Just as we can compound two rotation matrices, I can compound two quaternions and it’s
+
+42
+00:03:06,390 --> 00:03:10,500
+通过使用这个，所谓的汉密尔顿主义产品规则。
+done by using this, what’s called the Hamiltonian product rule.
+
+43
+00:03:10,500 --> 00:03:16,650
+因此，四元数1将我从A帧旋转到B帧。四元数2使我从帧旋转
+So, quaternion 1 rotates me from frame A to frame B. Quaternion 2 rotates me from frame
+
+44
+00:03:16,650 --> 00:03:22,709
+B到框架C，然后，产品是从框架A到框架C的旋转。并且，我可以计算
+B to frame C, then, the product is the rotation from frame A to frame C. And, I can compute
+
+45
+00:03:22,709 --> 00:03:24,829
+四元数的倒数。
+the inverse of a quaternion.
+
+46
+00:03:24,829 --> 00:03:29,130
+因此，如果我使用四元数将我从第A帧旋转到第B帧，则反转非常简单。
+So if I use a quaternion to rotate me from frame A to frame B, the inverse is quite simple.
+
+47
+00:03:29,130 --> 00:03:33,780
+这只是四元数的向量部分的否定。
+It’s just the negation of the vector part of the quaternion.
+
+48
+00:03:33,780 --> 00:03:37,390
+再一次，我将创建一个相当随意的旋转矩阵。
+Once again, I’m going to create a fairly arbitrary rotation matrix.
+
+49
+00:03:37,390 --> 00:03:45,331
+从一些欧拉角开始，将它们转换为旋转矩阵0.1,0.2,0.3，只是
+Going to start with some Euler angles, convert them to rotation matrix 0.1, 0.2, 0.3, just
+
+50
+00:03:45,331 --> 00:03:46,370
+为了说明的目的。
+for the purpose of illustration.
+
+51
+00:03:46,370 --> 00:03:48,120
+这里我们有一个旋转矩阵。
+Here we have a rotation matrix.
+
+52
+00:03:48,120 --> 00:03:54,130
+现在，我将创建一个四元数，我使用四元数类，然后传入
+Now, I’m going to create a quaternion and I use the quaternion class and I pass in as
+
+53
+00:03:54,130 --> 00:03:55,770
+一个参数一个旋转矩阵。
+an argument a rotation matrix.
+
+54
+00:03:55,770 --> 00:04:00,410
+并且，结果是一个四元数对象，我们可以在工作区中看到它。
+And, the result is a quaternion object which we can see in our workspace.
+
+55
+00:04:00,410 --> 00:04:06,140
+现在，四元数有一个真实的部分和一个虚部，在里面表示
+Now, the quaternion has got a real part and an imaginary part, which is indicated inside
+
+56
+00:04:06,140 --> 00:04:07,480
+尖括号。
+the angle brackets.
+
+57
+00:04:07,480 --> 00:04:14,540
+我要将四元数放入一个名为Q的永久变量中，让我们看看
+I’m going to park the quaternion into a permanent variable called Q and let’s look
+
+58
+00:04:14,540 --> 00:04:18,790
+在MATLAB中我们可以用这个四元数对象做什么。
+at what we can do with this quaternion object in MATLAB.
+
+59
+00:04:18,790 --> 00:04:24,189
+我可以做的一件事是我可以绘制这个四元数并查看方向
+One of the things that I can do is I can plot this quaternion and look at the orientation
+
+60
+00:04:24,189 --> 00:04:29,820
+它的行为就像我们之前看到的trplot函数一样。
+and it behaves just like the trplot function that we looked at earlier.
+
+61
+00:04:29,820 --> 00:04:34,870
+我可以计算四元数的倒数，这里它就在这里，我们可以看到
+I can compute the inverse of the quaternion, and here it is here, and we can see that the
+
+62
+00:04:34,870 --> 00:04:40,180
+四元数的实部保持不变，但向量部分被否定。
+real part of the quaternion remains unchanged, but the vector part is negated.
+
+63
+00:04:40,180 --> 00:04:47,530
+如果我将四元数乘以其反转，则结果为零四元数。
+If I multiply the quaternion by its inverse, the result is the null quaternion.
+
+64
+00:04:47,530 --> 00:04:51,060
+这有一个矢量分量等于0。
+This has got a vector component equal to 0.
+
+65
+00:04:51,060 --> 00:04:55,270
+所以这表示0转。
+So this indicates a 0 rotation.
+
+66
+00:04:55,270 --> 00:04:58,500
+我也可以使用MATLAB中的除法运算符来计算它。
+I can also compute that using the division operator in MATLAB.
+
+67
+00:04:58,500 --> 00:05:03,789
+所以，如果我采用四元数并有效地将其除以四元数，它就是一样的
+So, if I take a quaternion and effectively divide it by the quaternion, it’s the same
+
+68
+00:05:03,789 --> 00:05:05,250
+乘以其倒数。
+as multiplying by its inverse.
+
+69
+00:05:05,250 --> 00:05:07,650
+我再次获得零旋转。
+I once again get the zero rotation.
+
+70
+00:05:07,650 --> 00:05:14,610
+如果我有一个四元数并且我将它乘以一个向量，那么假设一个向量是一个单位向量
+If I have a quaternion and I multiply it by a vector, let’s say a vector is a unit vector
+
+71
+00:05:14,610 --> 00:05:20,750
+在x方向上，我通过转置它将其转换为列向量，然后是这个符号
+in the x direction and I turn it to a column vector by transposing it, then what this notation
+
+72
+00:05:20,750 --> 00:05:24,969
+在MATLAB中，我们将矢量乘以四元数。
+in MATLAB does is to multiply the vector by the quaternion.
+
+73
+00:05:24,969 --> 00:05:27,520
+实际上，它会旋转矢量。
+Effectively, it rotates the vector.
+
+74
+00:05:27,520 --> 00:05:31,880
+最后，我可以举一个例子来说明插值。
+Finally, I can do an example to illustrate interpolation.
+
+75
+00:05:31,880 --> 00:05:37,120
+如果我调用没有参数的四元数，它将返回一个对应于的四元数
+If I call quaternion with no arguments, it returns a quaternion corresponding to the
+
+76
+00:05:37,120 --> 00:05:38,910
+空旋转。
+null rotation.
+
+77
+00:05:38,910 --> 00:05:47,129
+所以，如果我使用这样的MATLAB语法，我会使用我的零四元数，用它插入它
+So, if I use MATLAB syntax like this, I take my null quaternion, interpolate it with the
+
+78
+00:05:47,129 --> 00:05:53,539
+我有其他四元数，Q和我传入一个告诉我插值的参数
+other quaternion I have, Q, and I pass in an argument which tells me the interpolation
+
+79
+00:05:53,539 --> 00:05:54,539
+分数。
+fraction.
+
+80
+00:05:54,539 --> 00:06:00,340
+因此，这是在四元数Q0，零旋转和四元数之间进行插值
+So, this is interpolating between the quaternion Q0, the null rotation, and the quaternion
+
+81
+00:06:00,340 --> 00:06:04,199
+问：最后一个参数是插值距离。
+Q. The last argument is the interpolation distance.
+
+82
+00:06:04,199 --> 00:06:06,530
+0对应于初始四元数。
+0 corresponds to the initial quaternion.
+
+83
+00:06:06,530 --> 00:06:08,710
+1对应于最终的四元数。
+1 corresponds to the final quaternion.
+
+84
+00:06:08,710 --> 00:06:13,660
+如果我传入0，结果应该是我们的初始四元数。
+If I pass in 0, the result should be our initial quaternion.
+
+85
+00:06:13,660 --> 00:06:16,860
+将其设为1，结果将是我们的最终四元数。
+Make it 1, the result will be our final quaternion.
+
+86
+00:06:16,860 --> 00:06:22,940
+如果我输入类似0.5的东西，这是在初始值之间的插值
+And if I put in something like 0.5, this is an interpolation halfway between the initial
+
+87
+00:06:22,940 --> 00:06:25,419
+四元数和最终四元数。
+quaternion and the final quaternion.
+
+88
+00:06:25,419 --> 00:06:30,669
+因此，这是一种插值表示为四元数的旋转的方法。
+So this is a way to interpolate rotations that are represented as quaternions.
+

@@ -1,0 +1,160 @@
+1
+00:00:03,610 --> 00:00:09,040
+现在我们将讨论3D中旋转的一个更令人困惑的元素。
+Now we're going to talk about one of the more perplexing elements of rotations in 3D.
+
+2
+00:00:09,040 --> 00:00:12,710
+我这里有三个坐标框架，它们最初都是相互平行的。
+I've got three coordinate frames here and they're all initially parallel to each other.
+
+3
+00:00:12,710 --> 00:00:15,669
+x轴，y轴和z轴都是对齐的。
+The x-axes, the y-axes and the z-axes are all aligned.
+
+4
+00:00:15,669 --> 00:00:20,800
+我要拿起第一个，红色的那个，我要将它旋转+90度
+I'm going to pick up the first one, the red one, and I'm going to rotate it by +90 degrees
+
+5
+00:00:20,800 --> 00:00:22,500
+围绕它的x轴。
+around its x-axis.
+
+6
+00:00:22,500 --> 00:00:26,810
+正向是这个方向，所以在x轴上旋转90度后，它看起来像
+Positive is in this direction so after rotating it by 90 degrees in x-axis, it looks like
+
+7
+00:00:26,810 --> 00:00:27,810
+这个。
+this.
+
+8
+00:00:27,810 --> 00:00:31,150
+而现在我要围绕y轴旋转+90度。
+And now I'm going to rotate it by +90 degrees around the y-axis.
+
+9
+00:00:31,150 --> 00:00:33,910
+所以这个框架最终看起来像这样。
+So this frame is going to end up looking like this.
+
+10
+00:00:33,910 --> 00:00:35,470
+这是它的最终定位。
+This is its final orientation.
+
+11
+00:00:35,470 --> 00:00:37,860
+我只想把它放在那里。
+I'm just going to put it down there.
+
+12
+00:00:37,860 --> 00:00:42,579
+我打算拿起蓝框，我将在相反的位置进行旋转
+I'm going to pick up the blue frame and I'm going to do the rotation within the opposite
+
+13
+00:00:42,579 --> 00:00:43,710
+订购。
+order.
+
+14
+00:00:43,710 --> 00:00:48,070
+首先，我要围绕y轴旋转+90度。
+First of all, I'm going to rotate it by +90 degrees around the y-axis.
+
+15
+00:00:48,070 --> 00:00:49,250
+这是积极的方向。
+That's the positive direction.
+
+16
+00:00:49,250 --> 00:00:51,530
+所以它最初看起来像这样。
+So it's initially going to look like this.
+
+17
+00:00:51,530 --> 00:00:55,350
+现在我要围绕x轴旋转+90度。
+And now I'm going to rotate it by +90 degrees around the x-axis.
+
+18
+00:00:55,350 --> 00:00:59,430
+x轴现在指向下方，这是正旋转方向。
+The x-axis is now pointing downwards, that's the positive rotation direction.
+
+19
+00:00:59,430 --> 00:01:02,120
+所以这就是最终定位的样子。
+So this is what the final orientation will look like.
+
+20
+00:01:02,120 --> 00:01:06,840
+我们可以看到这两个框架的方向非常不同。
+And we can see that these two frames have gotten very, very different orientations.
+
+21
+00:01:06,840 --> 00:01:12,000
+因此，当涉及到三维旋转时，您执行它们的顺序
+So when it comes to doing rotations in three dimensions, the order in which you do them
+
+22
+00:01:12,000 --> 00:01:14,430
+至关重要。
+is critically important.
+
+23
+00:01:14,430 --> 00:01:16,330
+轮换不是可交换的。
+Rotations are not to commutative.
+
+24
+00:01:16,330 --> 00:01:21,490
+让我们看一下旋转矩阵乘法的非交换性质。
+Let's look at the non-commutative nature of rotation matrix multiplication.
+
+25
+00:01:21,490 --> 00:01:26,340
+我将围绕x轴旋转90度。
+I'm going to have a rotation of 90 degrees around the x-axis.
+
+26
+00:01:26,340 --> 00:01:31,390
+然后我将围绕y轴旋转90度。
+And then I'm going to rotate by 90 degrees around the y-axis.
+
+27
+00:01:31,390 --> 00:01:34,610
+结果旋转矩阵看起来像这样。
+And the resulting rotation matrix looks like this.
+
+28
+00:01:34,610 --> 00:01:40,430
+如果我以相反的顺序执行此操作，我将首先围绕y轴旋转，然后我将旋转
+If I do this in the opposite order, I'll rotate around the y-axis first, and then I'll rotate
+
+29
+00:01:40,430 --> 00:01:43,880
+在x轴周围，每种情况下都是90度。
+around the x-axis, by 90 degrees in each case.
+
+30
+00:01:43,880 --> 00:01:47,540
+我最终得到了一个看起来像这样的旋转矩阵。
+I end up with a resulting rotation matrix which looks like this.
+
+31
+00:01:47,540 --> 00:01:52,200
+我们可以看到这两个矩阵是完全不同的。
+And we can see that these two matrices are quite different.
+
+32
+00:01:52,200 --> 00:01:55,770
+当您将旋转矩阵相乘时，顺序非常重要。
+When you're multiplying rotation matrices, the order is critically important.
+

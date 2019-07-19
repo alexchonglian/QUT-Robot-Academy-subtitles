@@ -1,0 +1,475 @@
+1
+00:00:03,820 --> 00:00:07,790
+我们已经谈过如何描述位置和方向，一个人的姿势
+We’ve talked about how we can describe the position and orientation, the pose of one
+
+2
+00:00:07,790 --> 00:00:12,499
+相对于另一个坐标框架。在这里，我们有两个标记的坐标框架
+coordinate frame with respect to another. Here, we have two coordinate frames labeled
+
+3
+00:00:12,499 --> 00:00:19,590
+A和B，我们在这里使用这个符号来表示B相对于A的姿势。我已经介绍过了
+A and B, and we use this symbol here to denote the pose of B with respect to A. I've introduced
+
+4
+00:00:19,590 --> 00:00:24,859
+点P和我可以用两个向量来描述它。我可以用协调来描述它
+a point P and I can describe it by two vectors. I can describe it with respect to coordinate
+
+5
+00:00:24,859 --> 00:00:30,640
+框架A;那是蓝色箭头，或者是坐标框架B;那个红色的箭头。
+frame A; that's the blue arrow, or with respect to coordinate frame B; that the red arrow.
+
+6
+00:00:30,640 --> 00:00:37,660
+我可以使用相对于帧B将关于帧A的矢量与矢量相关联
+I can relate the vector with respect to frame A to the vector with respect to frame B using
+
+7
+00:00:37,660 --> 00:00:40,620
+姿势和这个操作符，点。
+the pose and this operator, the dot.
+
+8
+00:00:40,620 --> 00:00:45,809
+现在，让我们考虑引入另一个坐标系，坐标系C和I.
+Now, let's consider that I introduce another coordinate frame, coordinate frame C and I
+
+9
+00:00:45,809 --> 00:00:51,829
+有一个相对于B描述C的姿势。我可以描述这一点
+have a relative pose that describes C with respect to B. And I can describe the point
+
+10
+00:00:51,829 --> 00:00:59,449
+P相对于坐标系C的矢量。因此，这些相对姿势可以复合
+P in terms of a vector with respect to coordinate frame C. So, these relative poses can be compounded
+
+11
+00:00:59,449 --> 00:01:07,290
+或者组成，所以我可以首先到达姿势B，然后到达姿势C.
+or composed, so I can get to the pose C by first of all getting to the pose B and then
+
+12
+00:01:07,290 --> 00:01:12,890
+走向姿势C.所以，有一些方法可以将这两个姿势加在一起，但是
+getting to the pose C. So, there's some way that I can add these two poses together, but
+
+13
+00:01:12,890 --> 00:01:17,710
+我们还没有准确描述一个姿势是什么。我将介绍另一个摘要
+we haven't described yet exactly what a pose is. I'm going to introduce another abstract
+
+14
+00:01:17,710 --> 00:01:24,890
+运营商。这是一个圆圈内的加号，我打算称之为O+。所以，O+运算符
+operator. It is a plus sign inside a circle, I'm going to call that O+. So, the O+ operator
+
+15
+00:01:24,890 --> 00:01:31,310
+允许我们加入或添加这两个姿势。所以，从帧A到帧的相对姿势
+allows us to join or add these two poses. So, the relative pose from frame A to frame
+
+16
+00:01:31,310 --> 00:01:40,170
+B，O+从帧B到帧C的相对姿势给出了C相对的相对姿态
+B, O+ the relative pose from frame B to frame C gives us the relative pose of C with respect
+
+17
+00:01:40,170 --> 00:01:47,990
+到A.这个O+运算符执行所谓的组合。它允许我们组成，复合，
+to A. This O+ operator performs what is called composition. It allows us to compose, to compound,
+
+18
+00:01:47,990 --> 00:01:55,570
+用引号添加两个姿势。然后，我可以使用我的点运算符进行转换
+to add, in inverted commas, two poses together. Then, I can use my dot operator to transform
+
+19
+00:01:55,570 --> 00:02:02,979
+从帧C到帧A的向量，我们可以无限延长这种方法。我可以
+the vector from frame C to frame A, and we can extend this approach indefinitely. I can
+
+20
+00:02:02,979 --> 00:02:07,100
+复合尽可能多的相对姿势。
+compound as many relative poses as I wish.
+
+21
+00:02:07,100 --> 00:02:11,470
+当我们谈论相对运动之类的事情时，记住这一点非常重要
+When we talk about things like relative motions, it's really important to keep in mind that
+
+22
+00:02:11,470 --> 00:02:16,720
+你应用它们的顺序至关重要。现在，考虑一下这里的例子
+the order in which you apply them is critically important. Now, consider the example where
+
+23
+00:02:16,720 --> 00:02:23,140
+我从参考框架移动，并在x中移动一个30厘米的坐标框架
+I move from the reference frame and I move a coordinate frame 30 centimetres in the x
+
+24
+00:02:23,140 --> 00:02:28,800
+方向，然后我旋转45度，我们定义旋转的约定;
+direction and then I rotate it by 45 degrees, and we defined the convention for rotation;
+
+25
+00:02:28,800 --> 00:02:35,090
+这是45度的正旋转。现在，想象一下我在做这些操作
+this is a positive rotation of 45 degrees. Now, imagine that I do these operations in
+
+26
+00:02:35,090 --> 00:02:41,440
+相反的顺序。所以，我采用我的参考坐标框架，并将其旋转45度
+the reverse order. So, I take my reference coordinate frame and I rotate it by 45 degrees
+
+27
+00:02:41,440 --> 00:02:47,020
+然后我在x方向上翻译30厘米。所以，现在我最终得到了
+and then I translate it by 30 centimetres in the x direction. So, now I end up with
+
+28
+00:02:47,020 --> 00:02:52,730
+这里有一个坐标框架。所以，你看到通过改变我申请的顺序
+a coordinate frame over here. So, you see that by changing the order in which I apply
+
+29
+00:02:52,730 --> 00:02:58,050
+这些基本动作，翻译和旋转，我最终都有很大不同
+these elementary motions, the translation and the rotation, I end up with very different
+
+30
+00:02:58,050 --> 00:03:01,670
+坐标框架。订购非常重要。
+coordinate frames. Ordering is really important.
+
+31
+00:03:01,670 --> 00:03:06,460
+让我们看一个更复杂的例子，我在这里介绍了一个世界坐标框架。
+Let's look at a more complex example, and I've introduced here a world coordinate frame.
+
+32
+00:03:06,460 --> 00:03:11,780
+现在，我介绍一个坐标框架，它表示我的机器人在桌子上的姿势。
+Now, I introduce a coordinate frame which represents the pose of my robot on the table.
+
+33
+00:03:11,780 --> 00:03:16,670
+这是一个坐标框架，代表小机器人的姿势。这是
+And here's a coordinate frame which represents the pose of the little robot. And here is
+
+34
+00:03:16,670 --> 00:03:21,010
+另一个坐标框架，代表大机器人的手。我可以形容
+another coordinate frame which represents the hand of the big robot. And I can describe
+
+35
+00:03:21,010 --> 00:03:26,430
+机器人手的姿势与机器人本身的关系。我可以介绍另一个
+the pose of the hand of the robot with respect to the robot itself. I can introduce another
+
+36
+00:03:26,430 --> 00:03:32,230
+坐标框，描述正在查看这两者的相机的姿势
+coordinate frame which describes the pose of a camera which is looking at both of these
+
+37
+00:03:32,230 --> 00:03:37,910
+机器人。而且，我也许可以根据我的世界坐标来描述相机的姿势
+robots. And, I can perhaps describe the pose of the camera with respect to my world coordinate
+
+38
+00:03:37,910 --> 00:03:42,930
+帧。也许相机能够分辨机器人的位置，相对于相机而言
+frame. And perhaps the camera is able to tell where the robot is, with respect to the camera's
+
+39
+00:03:42,930 --> 00:03:48,310
+坐标框架。而且，也许相机也可以告诉我小机器人的姿势
+coordinate frame. And, perhaps the camera can also tell me the pose of the little robot
+
+40
+00:03:48,310 --> 00:03:52,970
+相对于相机的坐标系。现在，我可能有兴趣知道，
+with respect to the camera's coordinate frame. And now, I might be interested in knowing,
+
+41
+00:03:52,970 --> 00:03:57,790
+这个小机器人相对于大机器人的姿势是什么？或者我可能想知道
+what's the pose of the little robot with respect to the big robot? Or I might want to know
+
+42
+00:03:57,790 --> 00:04:02,870
+是的，从大机器人的手到小机器人的相对姿势是什么，万一
+is, what's the relative pose from the hand of the big robot to the little robot, in case
+
+43
+00:04:02,870 --> 00:04:07,340
+这个大机器人想触摸这个小机器人？或者，也许我可能想知道，是什么
+the big robot wanted to touch the little robot? Or, perhaps I might want to know, what's the
+
+44
+00:04:07,340 --> 00:04:12,660
+关于世界坐标框架的大机器人手的姿势？我已经介绍过了
+pose of the hand of the big robot with respect to the world coordinate frame? I've introduced
+
+45
+00:04:12,660 --> 00:04:19,410
+而是很多坐标框架和相对姿势。我们可以通过介绍来简化这个
+rather a lot of coordinate frames and relative poses. We can simplify this by introducing
+
+46
+00:04:19,410 --> 00:04:23,980
+我称之为姿势图。所以，我保持相同的颜色编码，我保持不变
+what I call a pose graph. So, I’ve kept the same colour coding and I kept the same
+
+47
+00:04:23,980 --> 00:04:24,590
+标签。
+labeling.
+
+48
+00:04:24,590 --> 00:04:30,540
+现在，我不是通过二维坐标系表示姿势，而是简单地用它表示
+Now, instead of representing a pose by a two-dimensional coordinate frame, I represent it simply by
+
+49
+00:04:30,540 --> 00:04:37,620
+一张光盘。连接光盘的线代表相对姿势并注意到它们
+a disc. The lines that join the discs represent the relative poses and notice that they are
+
+50
+00:04:37,620 --> 00:04:45,160
+带箭头的线条，所以这个东西是有向图。实线代表相对
+lines with an arrow so this thing is a directed graph. The solid lines represent relative
+
+51
+00:04:45,160 --> 00:04:51,440
+我们知道的姿势和虚线代表我们不知道的姿势，但也许我们可以
+poses that we know and the dashed lines represent poses that we don't know, but perhaps we can
+
+52
+00:04:51,440 --> 00:04:52,320
+计算它们。
+compute them.
+
+53
+00:04:52,320 --> 00:04:57,530
+所以，让我们在这里强调这个特殊的相对姿势，并说我想确定
+So, let's highlight this particular relative pose here and say I want to determine the
+
+54
+00:04:57,530 --> 00:05:02,290
+这个特定相对姿势的价值。我怎么做？好吧，我们要做什么
+value of this particular relative pose. How do I do that? Well, what we’re going to
+
+55
+00:05:02,290 --> 00:05:07,970
+要做的是遵循一条路径，该路径具有相同的起点和相同的结尾
+do is to follow a path through the graph that's got the same starting point and the same ending
+
+56
+00:05:07,970 --> 00:05:14,510
+点。旅程的第一站是这里的箭头，然后我从姿势C走向姿势
+point. The first leg of the journey is this arrow here, and then I go from pose C to pose
+
+57
+00:05:14,510 --> 00:05:22,660
+R然后去摆姿势H.我们可以说这个相对姿势等于构图
+R and then go to pose H. We can say then that this relative pose is equal to the composition
+
+58
+00:05:22,660 --> 00:05:29,420
+这些其他3个相对姿势。如果我加入这个，这个，这一起让我得到了
+of these other 3 relative poses. If I join this, this, and this together it gets me to
+
+59
+00:05:29,420 --> 00:05:34,850
+姿势图中的相同位置。所以，这是一种我可以计算未知的方法
+the same place in the pose graph as this. So, this is a way I can compute an unknown
+
+60
+00:05:34,850 --> 00:05:38,500
+我所知道的相对姿势的相对姿势。
+relative pose in terms of relative poses that I know.
+
+61
+00:05:38,500 --> 00:05:43,940
+我们来看一个更复杂的例子。现在，我想知道这个相对的姿势：在哪里
+Let's have a look at a more complex example. Now, I want to know this relative pose: where
+
+62
+00:05:43,940 --> 00:05:49,990
+是关于大机器人之手的小机器人。同样的规则。我想要
+is the little robot with respect to the hand of the big robot. Same rule again. I want
+
+63
+00:05:49,990 --> 00:05:55,570
+找到通过这个图表的另一条路径，从H到L。我的第一站
+to find another path through this graph that takes me from H to L. The first leg of the
+
+64
+00:05:55,570 --> 00:06:00,720
+旅程将成为这一次。但在这种情况下，我们需要沿着这个箭头倒退，
+journey is going to be this one. But in this case we need to go backwards along this arrow,
+
+65
+00:06:00,720 --> 00:06:05,430
+所以我把它涂成了红色，表明我正沿着这个特殊的方向前进
+so I've coloured it in red to indicate that I'm going backwards along this particular
+
+66
+00:06:05,430 --> 00:06:09,930
+图的一部分。然后我将沿着图的这一部分向后走，然后我就是
+part of the graph. Then I'm going to go backwards along this part of the graph and then I'm
+
+67
+00:06:09,930 --> 00:06:14,860
+沿着图的这一部分前进。而现在，当我写作
+going to go in the forward direction along this part of the graph. And now, when I write
+
+68
+00:06:14,860 --> 00:06:22,090
+姿势表达式，我引入了两个新符号。这是圆圈内的减号
+the pose expression, I've introduced two new symbols. It's a minus sign inside a circle
+
+69
+00:06:22,090 --> 00:06:27,800
+我将把这个运算符称为O-。所以，对于相对姿势的情况
+and I'm going to refer to this operator as O-. So, for the case of the relative poses
+
+70
+00:06:27,800 --> 00:06:33,550
+用红色编码，我们沿着箭头向后移动，我已经为这个姿势加了前缀
+that are coded in red, where we went backwards along the arrow, I've prefixed that pose by
+
+71
+00:06:33,550 --> 00:06:38,960
+一个减号，因为我走向了相反的方向。虽然这个在这里，但我已经习惯了
+a minus sign because I've gone in the reverse direction. Whereas this one here, I've used
+
+72
+00:06:38,960 --> 00:06:44,560
+O+操作符，因为我沿着箭头向前移动。所以，这是一种方式
+the O+ operator because I'm going in the forward direction along the arrow. So, here is a way
+
+73
+00:06:44,560 --> 00:06:49,810
+我可以根据以前已知的姿势定义一个未知的姿势。
+that I can define an unknown pose in terms of previously known poses.
+
+74
+00:06:49,810 --> 00:06:55,680
+我们现在得到的是某种姿势代数，只有一些简单的规则
+What we’ve got now is some kind of pose algebra and there are just a few simple rules
+
+75
+00:06:55,680 --> 00:07:03,460
+用姿势代数。第一条规则涉及O+运算符。我可以结合两个亲戚
+with a pose algebra. The first rule is concerned with the O+ operator. I can combine two relative
+
+76
+00:07:03,460 --> 00:07:08,630
+提出另一个相对姿势，但有一些非常重要的规则相关联
+poses to get another relative pose but there are some really important rules associated
+
+77
+00:07:08,630 --> 00:07:13,340
+这里有所有下标。第一个规则是这两个下标，一个在上面
+with all the subscripts here. The first rule is that these two subscripts, the one on the
+
+78
+00:07:13,340 --> 00:07:18,110
+O+运算符的任一侧必须相同。你可以把它们想象为取消
+either side of the O+ operator, must be the same. And you can think of them as cancelling
+
+79
+00:07:18,110 --> 00:07:25,150
+出。然后，这个前导下标在表达式和下标的两边是相同的
+out. Then, this leading subscript is the same on both sides of the expression and this subscript
+
+80
+00:07:25,150 --> 00:07:31,650
+在表达的两边是相同的。O+运算符不是可交换的
+is the same on both sides of the expression. The O+ operator is not commutative and that
+
+81
+00:07:31,650 --> 00:07:39,070
+意味着，如果我有一个相对姿势1和一个具有相对姿势2的O+，那么，一般来说，
+means that if I have a relative pose 1, and an O+ with relative pose 2, that is, in general,
+
+82
+00:07:39,070 --> 00:07:45,490
+不同于相对姿势2O+相对姿势1.你必须非常小心
+different to relative pose 2 O+ relative pose 1. You have to be really careful about the
+
+83
+00:07:45,490 --> 00:07:52,889
+订单，你不能随意切换它们。另一个规则是应用O-运算符
+order and you can’t arbitrarily switch them around. Another rule is that O- operator applied
+
+84
+00:07:52,889 --> 00:07:58,510
+相对姿势与交换前导和尾随标签相同。另一个规则
+to the relative pose is the same as swapping the leading and trailing labels. Another rule
+
+85
+00:07:58,510 --> 00:08:05,780
+是我姿势O-相同的姿势，结果为零。它对应于没有动作，
+is that I have pose O- the same pose, the result is zero. It corresponds to no motion,
+
+86
+00:08:05,780 --> 00:08:12,660
+没有姿势变化，我们使用符号零来表示。而且，我可以表达的另一种方式
+no pose change and we use symbol zero to represent that. And, another way I can express that
+
+87
+00:08:12,660 --> 00:08:18,960
+是否定姿势然后将其添加到姿势，结果为零。这两个表达方式
+is to negate the pose and then add it to the pose, the result is zero. These two expressions
+
+88
+00:08:18,960 --> 00:08:25,169
+是等价的。最后，如果我将零相对姿势添加到姿势，则不会发生任何变化。
+are equivalent. Finally, if I add the zero relative pose to a pose, it makes no change.
+
+89
+00:08:25,169 --> 00:08:31,169
+而且，如果我从姿势中减去零相对姿势，它就不会改变。
+And, if I subtract the zero relative pose from a pose, it makes no change.
+
+90
+00:08:31,169 --> 00:08:36,539
+这些只是我们可以应用于这些复杂姿势表达式的一些简单代数规则
+These are just a few simple algebraic rules that we can apply to these complex pose expressions
+
+91
+00:08:36,539 --> 00:08:41,839
+这允许我们重新排列它们以确定我们想要的东西
+which allows us to rearrange them to determine the things that we want in terms of the things
+
+92
+00:08:41,839 --> 00:08:48,140
+我们知道。有一些规则也适用于我们合并的这个点运算符
+that we know. There are a few rules also that apply to this dot operator where we combine
+
+93
+00:08:48,140 --> 00:08:54,839
+一个带有向量的姿势。而且，我们在这里有一些适用于标签的规则。一次
+a pose with a vector. And again, we have some rules that apply to the labels here. And once
+
+94
+00:08:54,839 --> 00:09:00,760
+再次，最里面的标签必须是相同的。然后，我们可以将它们视为取消
+again, the innermost labels must be the same. And then, we can think of them as cancelling
+
+95
+00:09:00,760 --> 00:09:03,520
+out和领先的标签是一样的。
+out and the leading labels are the same.
+

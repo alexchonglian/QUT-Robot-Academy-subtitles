@@ -1,0 +1,215 @@
+1
+00:00:03,550 --> 00:00:08,340
+我们来谈谈道德问题。现在我是工程师，我不是道德家，而是
+Let's talk a little bit about ethics. Now I'm an engineer, I'm not an ethicist but to
+
+2
+00:00:08,340 --> 00:00:13,850
+我的道德观有一些是非的概念，当然，对与错并非如此
+me ethics has got some notion of right and wrong and of course, right and wrong are not
+
+3
+00:00:13,850 --> 00:00:20,009
+必然总是明确的，有时答案也许是;它取决于。我也
+necessarily always clear cut, sometimes the answer is perhaps; it does depend. I also
+
+4
+00:00:20,009 --> 00:00:24,519
+认为道德观可能与善恶观念相混淆。这可能是一个更极端的
+think ethics is mixed up perhaps with ideas of good and evil. It's a perhaps a more extreme
+
+5
+00:00:24,519 --> 00:00:31,269
+正确和错误的版本。但我认为还有一些非常以人为中心的方面
+versions of right and wrong. But I think there are also some very human centric aspects to
+
+6
+00:00:31,269 --> 00:00:36,699
+伦理。我认为这是关于对个人的尊重;这是关于个人的正义。我想
+ethics. I think it's about respect to individuals; it's about justice to individuals. And I think
+
+7
+00:00:36,699 --> 00:00:41,829
+那里也许还有一个责任因素。有什么责任
+there's perhaps also an element of responsibility in there. What are the responsibilities of
+
+8
+00:00:41,829 --> 00:00:46,710
+个人对社会以及社会对个人的责任是什么？
+individuals to society and what's the responsibility of society to its individuals?
+
+9
+00:00:46,710 --> 00:00:51,429
+不久，我将和我的一位知之甚多的朋友进行对话
+In a little while, I'm going to have a conversation with a friend of mine who knows much much
+
+10
+00:00:51,429 --> 00:00:55,749
+更多关于道德规范的事情比我更多，我们将围绕道德规范进行一些对话
+more about ethics than I do and we're going to have some conversations around ethics and
+
+11
+00:00:55,749 --> 00:00:58,699
+特别是伦理学，因为它适用于机器人。
+in particular ethics as it applies to robotics.
+
+12
+00:00:58,699 --> 00:01:04,309
+那么道德与机器人技术相交的问题是什么呢？好吧也许就是一个
+So what are some of the issues where ethics and robotics intersect? Well perhaps one is
+
+13
+00:01:04,309 --> 00:01:09,660
+在战争领域。一个有趣的统计数据可能是五十美国战斗机中的一个
+in the area of warfare. An interesting statistic is that perhaps one in fifty U.S war fighters
+
+14
+00:01:09,660 --> 00:01:16,470
+现在是一个机器人。现在围绕机器对士兵造成伤害的道德考虑是什么，
+is now a robot. Now what are the ethical considerations around machines inflicting harm on soldiers,
+
+15
+00:01:16,470 --> 00:01:20,480
+属于敌军的人类士兵？
+human soldiers belonging to enemy forces?
+
+16
+00:01:20,480 --> 00:01:24,670
+另一个问题是隐私问题，最近关于机器人的问题一直存在很多争议
+Another issue is privacy and it's been a lot of controversy lately about how robots in
+
+17
+00:01:24,670 --> 00:01:29,900
+特定的无人机侵犯了人们的隐私。想象一下，如果你感觉如何
+particular drones are infringing on people's privacy. So imagine how you would feel if
+
+18
+00:01:29,900 --> 00:01:36,520
+一架无人机走到你的窗前，凝视着你的房子。另一种情况很多
+a drone came up to your window and peered inside your house. Another scenario is much
+
+19
+00:01:36,520 --> 00:01:41,210
+在最近的新闻中，这是自驾车，或许你可能会认为它们是机器人
+in the news lately and that's self driving cars, perhaps you might think of them as robotic
+
+20
+00:01:41,210 --> 00:01:46,250
+汽车，问题是如果其中一辆汽车发生事故并且可能会造成伤害
+cars, and the issue is that if one of these cars has an accident and perhaps it injures
+
+21
+00:01:46,250 --> 00:01:53,180
+或者杀死机器人汽车的驾驶员或道路上的旁观者或另一个人的驾驶员
+or kills the driver of the robotic car or a bystander on the road or the driver of another
+
+22
+00:01:53,180 --> 00:01:58,130
+汽车;谁的错？这是一个非常复杂的问题。
+car; whose fault is that? That's a pretty complex question.
+
+23
+00:01:58,130 --> 00:02:02,520
+我们可能想要考虑的另一件事是机器人照顾年轻人和
+Another thing that we might like to think about is robots caring for young people and
+
+24
+00:02:02,520 --> 00:02:08,560
+也适合老年人。在许多国家，人口老龄化需要
+also for elderly people. In many countries, with an aging population there is a need for
+
+25
+00:02:08,560 --> 00:02:13,640
+人们帮助老年人，如果没有足够的工作年龄的人这样做，
+people to help the elderly people and if there are not enough working age people to do that,
+
+26
+00:02:13,640 --> 00:02:18,260
+那么机器人可以或者应该完成这项工作吗？
+then is that a job that could be or should be fulfilled by robots?
+
+27
+00:02:18,260 --> 00:02:22,650
+同样的事情可能发生在光谱的另一端。这是正确的还是恰当的
+The same thing perhaps happens at the other end of the spectrum. Is it proper or appropriate
+
+28
+00:02:22,650 --> 00:02:28,150
+拥有我们社会中最年轻的成员，幼儿，由机器抚养长大
+to have the youngest members of our society, young children, raised and nurtured by machines
+
+29
+00:02:28,150 --> 00:02:31,230
+而不是人类？
+rather than by human beings?
+
+30
+00:02:31,230 --> 00:02:36,240
+与机器人谈论很多的另一个问题是工作。想象一个未来
+Another issue that gets talked about a lot with robots is about jobs. Imagine a future
+
+31
+00:02:36,240 --> 00:02:40,620
+当没有人因为机器人正在完成所有工作而必须工作时，我们如何才能获得
+when nobody has to work because robots are doing all the work, then how do we get the
+
+32
+00:02:40,620 --> 00:02:44,980
+我们需要购买食物并将屋顶放在头上的钱吗？
+money that we need to buy food and put a roof over our head?
+
+33
+00:02:44,980 --> 00:02:49,480
+也许我们可以从根本上重组社会，所以所有这些事情都是免费提供给我们的
+Perhaps we could radically restructure society so all of those things come to us for free
+
+34
+00:02:49,480 --> 00:02:55,010
+和机器人做所有的工作。即使我们能够建立那个乌托邦，如果我们能做什么呢？
+and robots do all the work. Even if we could build that Utopia, what would we do if we
+
+35
+00:02:55,010 --> 00:02:59,680
+不需要工作？而我喜欢伏尔泰的这句话;他说工作使我们免于伤害
+didn't need to work? And I love this quote by Voltaire; he says that work spares us from
+
+36
+00:02:59,680 --> 00:03:06,540
+三个邪恶;无聊，厌恶和需要。因此，也许机器人可以提供我们需要的一切
+three evils; boredom, vice and need. So perhaps robots could provide everything that we need
+
+37
+00:03:06,540 --> 00:03:12,040
+但我相信如果他们不必工作，人类会觉得无聊。我知道我
+but I'm sure human beings would get bored if they didn't have to work. I know that I
+
+38
+00:03:12,040 --> 00:03:12,510
+将。
+would.
+
+39
+00:03:12,510 --> 00:03:16,880
+我们在本课程的第一堂课中谈到了艾萨克·阿西莫夫。特别是他的
+We talked about Isaac Asimov in the very first lecture in this course. In particular his
+
+40
+00:03:16,880 --> 00:03:21,550
+机器人学的三个定律，在短篇小说中被称为“跑来跑去”
+three laws of robotics, which were introduced in the short story called 'Run around' in
+
+41
+00:03:21,550 --> 00:03:29,000
+1941年。这三条规则代码中的一套机器人行为，看起来肯定是面子
+1941. These three rules in code a set of robot behaviours and it seems, certainly at face
+
+42
+00:03:29,000 --> 00:03:34,470
+价值，如果机器人遵守这三个法则那么机器人和人类获得的机会
+value, that if robots obeyed these three laws then the chance for robots and humans to get
+
+43
+00:03:34,470 --> 00:03:38,290
+任何形式的冲突或分歧都会非常低落。
+into any kind of strife or disagreement would be very low.
+

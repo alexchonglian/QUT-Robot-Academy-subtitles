@@ -1,0 +1,110 @@
+1
+00:00:03,500 --> 00:00:07,340
+在本讲座中，我们将了解如何将数字图像输入计算机。
+In this lecture we're going to learn about how we get a digital image into a computer.
+
+2
+00:00:07,340 --> 00:00:11,869
+对于机器人视觉，这是必不可少的第一步;我们必须有视觉信息
+For robotic vision, this is the essential first step; we have to have the visual information
+
+3
+00:00:11,869 --> 00:00:16,750
+在计算机内部，以便我们可以操纵它并最终从中提取意义，
+inside the computer, so that we can manipulate it and eventually extract meaning from it,
+
+4
+00:00:16,750 --> 00:00:18,810
+所以这是必不可少的第一步。
+so this is the essential first step.
+
+5
+00:00:18,810 --> 00:00:23,930
+今天的数字图像非常普遍，它们无处不在。通过数十亿和数十亿美元
+Digital images today are really common, they're everywhere. Through billions and billions
+
+6
+00:00:23,930 --> 00:00:28,730
+Facebook和Flickr上的图像，并通过Instagram等应用程序共享。那里
+of images on Facebook and Flickr and shared through applications like Instagram. There
+
+7
+00:00:28,730 --> 00:00:33,039
+数字图像如今如此普遍的几个原因。
+are a few reasons why digital images are so common today.
+
+8
+00:00:33,039 --> 00:00:37,770
+首先是相机无处不在，所以拍照的机会是巨大的。
+The first is that cameras are everywhere so the opportunities to take pictures are enormous.
+
+9
+00:00:37,770 --> 00:00:43,829
+我们的手机，平板电脑，笔记本电脑都有相机。大量的
+We have cameras in our phones, in our tablet computers, in our laptops. A large number
+
+10
+00:00:43,829 --> 00:00:47,550
+人们现在开始在他们的头上戴着相机拍摄所有的东西
+of people are now starting to wear cameras on their heads photographing everything that
+
+11
+00:00:47,550 --> 00:00:54,010
+他们正在看到和体验，或许是24乘7。第二个原因是存储有
+they're seeing and experiencing, 24 by 7 perhaps. The second reason why is that storage has
+
+12
+00:00:54,010 --> 00:00:59,670
+变得如此便宜。我们的手机和笔记本电脑中的低成本闪存
+become so cheap. Low cost flash memory in our phones and in our laptop computers and
+
+13
+00:00:59,670 --> 00:01:05,330
+今天你可以用相对较少的钱购买数TB的硬盘存储空间。它
+terabytes of hard disk storage that you can buy for relatively little money today. It
+
+14
+00:01:05,330 --> 00:01:11,280
+并不总是这样。十年前，我们正在从化学转向数字化
+wasn't always this way. Ten years ago we were making the transition from chemistry to digital
+
+15
+00:01:11,280 --> 00:01:13,439
+拍照技术。
+technology for picture taking.
+
+16
+00:01:13,439 --> 00:01:19,990
+在化学成像的旧时代，我们不得不在我们的电影中曝光一些画面;
+In the bad old days of chemical imaging, we had to expose a number of frames on our film;
+
+17
+00:01:19,990 --> 00:01:24,530
+我们永远无法删除图像。一旦电影充满，我们就把它带到商店，我们会得到
+we could never delete an image. Once the film was full, we'd take it to the shop, we'd get
+
+18
+00:01:24,530 --> 00:01:30,399
+它开发了，我们将我们的照片重新写在纸上。它的灵活性较低。所以呢
+it developed and we'd get our pictures back on paper. It was way less flexible. So what
+
+19
+00:01:30,399 --> 00:01:36,320
+我们在这个讲座中要做的就是解决我们如何从许多人那里获取图像，
+we're going to do in this lecture is work out and discuss how we get images from many,
+
+20
+00:01:36,320 --> 00:01:42,049
+许多数字源，可能来自您的照片库的图像，也许来自网络摄像头
+many digital sources, images from perhaps your photo library, perhaps from the web camera
+
+21
+00:01:42,049 --> 00:01:48,049
+在您的计算机上，也许是从网络上获取这些图像到一个环境中
+on your computer, perhaps from the web and getting those images into an environment where
+
+22
+00:01:48,049 --> 00:01:49,909
+我们可以开始操纵它们了。
+we can begin to manipulate them.
+

@@ -1,0 +1,185 @@
+1
+00:00:03,159 --> 00:00:06,990
+我想区分称为图像处理的技术，和
+I’d like to make a distinction between the techniques known as image processing, and
+
+2
+00:00:06,990 --> 00:00:12,500
+被称为计算机视觉的技术。图像处理是一种需要的技术
+the techniques known as computer vision. Image processing is a technique that takes
+
+3
+00:00:12,500 --> 00:00:17,480
+一个图像，并产生另一个图像。它通常用于图像增强。在这
+an image and produces another image. It’s often used for image enhancement. In this
+
+4
+00:00:17,480 --> 00:00:23,570
+例如，我们看到一个医学图像，其中身体内的特征相当模糊，并且
+example we see a medical image where features within the body are rather indistinct, and
+
+5
+00:00:23,570 --> 00:00:27,380
+通过对其应用图像处理技术，它们得到了增强。他们有
+by applying an image processing technique to it, they have been enhanced. They have
+
+6
+00:00:27,380 --> 00:00:33,440
+更高的对比度，更容易看到身体内的电线和其他结构。
+higher contrast and it is easier to see the wires and other structures inside the body.
+
+7
+00:00:33,440 --> 00:00:37,309
+另一方面，计算机视觉，或者有时被称为机器视觉，需要一个
+Computer vision, on the other hand, or machine vision as it’s sometimes called, takes an
+
+8
+00:00:37,309 --> 00:00:43,789
+图像和生成功能。我们在这里看到的是具有大量彩色的输入图像
+image and produces features. What we see here is an input image with a large number of coloured
+
+9
+00:00:43,789 --> 00:00:47,280
+像素。有些是黄色的，有些是灰色的，有些是蓝色的。它正在生产什么
+pixels. Some are yellow, some are grey, some are blue. And what it’s producing on the
+
+10
+00:00:47,280 --> 00:00:52,920
+右侧是仅描述黄色物体的特征。我们可以在这里看到
+right-hand side are features which describe just the yellow objects. And we can see here
+
+11
+00:00:52,920 --> 00:00:57,690
+我们已经突出了这些物体的中心，我们也放了红框
+that we’ve highlighted the centres of those objects, and we’ve also put red boxes around
+
+12
+00:00:57,690 --> 00:01:03,129
+它们显示了它们的空间范围。所以我们减少了整体信息量
+them that show their spatial extent. So we’ve reduced the amount of information from a whole
+
+13
+00:01:03,129 --> 00:01:10,660
+很多颜色像素到一堆非常简洁的中心和坐标坐标信息
+lot of colour pixels to a bunch of quite succinct information for coordinates of centres and
+
+14
+00:01:10,660 --> 00:01:14,670
+四个边界框角落的坐标。
+the coordinates of the corners of four bounding boxes.
+
+15
+00:01:14,670 --> 00:01:18,860
+我们称之为图像特征的相关信息实际上有三个
+That pertinent information we refer to as image features and there are really three
+
+16
+00:01:18,860 --> 00:01:24,050
+常用的不同类型的图像功能。第一个是地区;该
+different kinds of image features that are in common use. The first one is regions; the
+
+17
+00:01:24,050 --> 00:01:28,670
+我刚刚给出的例子。对于这些黄色物体中的每一个，我可能都有兴趣知道
+example that I just gave. For each of these yellow objects, I might be interested in knowing
+
+18
+00:01:28,670 --> 00:01:32,810
+他们的中心在哪里，他们有多大，他们的形状是什么，方向是什么。
+where’s their centre, how big are they, what shape are they, what’s the orientation.
+
+19
+00:01:32,810 --> 00:01:38,220
+它们是否指向侧面，是否垂直指向。还有其他功能
+Are they pointing sideways, are they pointing vertically. And there are other features that
+
+20
+00:01:38,220 --> 00:01:43,209
+我们可以用它来描述这些黄色物体的形状。
+we could use to describe the shape of these yellow objects.
+
+21
+00:01:43,209 --> 00:01:48,310
+另一种非常常见的特征是线条。线条无处不在。肯定在
+Another kind of very common feature are lines. And lines are everywhere. certainly in the
+
+22
+00:01:48,310 --> 00:01:53,030
+建设环境。所以我们可能会对这些主导的方程式感兴趣
+built environment. So we might be interested in what are the equations of these dominant
+
+23
+00:01:53,030 --> 00:01:58,440
+图像中的线条。我们可能对这些线的起点和终点感兴趣，
+lines in the image. We might be interested in the start and end points of these lines,
+
+24
+00:01:58,440 --> 00:02:04,860
+可能划定屋顶区域或建筑物边缘的线段。
+the line segments that perhaps might delineate an area of a roof or the edge of a building.
+
+25
+00:02:04,860 --> 00:02:10,810
+我们在计算机视觉中使用的最后一种功能是点。我在这里做的是
+The last kind of feature that we use in computer vision are points. Here what I’ve done is
+
+26
+00:02:10,810 --> 00:02:15,910
+覆盖在建筑物的图片上，称为兴趣点。这些是要点
+overlaid onto a picture of a building what are called interest points. These are points
+
+27
+00:02:15,910 --> 00:02:23,050
+它包含大量信息，并且很容易在另一个视图中找到
+that contain a lot of information and would be easy to find in another view of that same
+
+28
+00:02:23,050 --> 00:02:28,500
+建造。所以圆圈表示这些兴趣点的中心和大小
+building. So the circles indicate the centre of these interest points and the size of the
+
+29
+00:02:28,500 --> 00:02:34,550
+圈子说明了这些兴趣点的规模。现在，兴趣点和
+circle says something about the scale of those interest points. Now, interest points and
+
+30
+00:02:34,550 --> 00:02:38,570
+我们将在本系列讲座中介绍积分的规模，但是
+the scale of points is not something we’re going to cover in this lecture series, but
+
+31
+00:02:38,570 --> 00:02:42,750
+当然这是一个关于哪些文献很多的话题，而且它们是非常的
+certainly it’s a topic about which there is a lot of literature, and they are a very
+
+32
+00:02:42,750 --> 00:02:47,730
+现代计算机视觉中的重要概念。让我们再回过头来考虑一下地区
+important concept in modern computer vision. Let’s go back again and consider region
+
+33
+00:02:47,730 --> 00:02:52,400
+功能，这是我们将在本讲座中讨论的内容。你可能会有一个问题
+features, which is what we are going to talk about in this lecture. A question you might
+
+34
+00:02:52,400 --> 00:02:57,080
+想问一下这个标志上的符号在哪里;字母和其他字母在哪里
+like to ask is where are the symbols on this sign; where are the letters and the other
+
+35
+00:02:57,080 --> 00:03:02,290
+图形元素。好吧，如果我们找到区域功能，我们就能解决这个问题。
+graphical elements. Well if we find region features we are able to solve this problem.
+
+36
+00:03:02,290 --> 00:03:08,010
+而我在这里用一些非常简单的代码完成的工作就是放置一个边界框
+And what I’ve done here with a bit of quite simple code, is to put a bounding box around
+
+37
+00:03:08,010 --> 00:03:13,610
+这个黑色标志上的每个不同的白色符号。
+each of the distinct white symbols on this otherwise black sign.
+

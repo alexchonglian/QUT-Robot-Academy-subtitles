@@ -1,0 +1,70 @@
+1
+00:00:03,369 --> 00:00:07,630
+在本讲座中，我们将继续讨论图像处理
+In this lecture we're going to continue an earlier discussion about image processing
+
+2
+00:00:07,630 --> 00:00:13,060
+并学习一些有趣且有用的先进技术。图像处理
+and pick up on a couple of more advance techniques that are interesting and useful. Image processing
+
+3
+00:00:13,060 --> 00:00:14,939
+是一个非常巨大的领域。
+is a really huge area.
+
+4
+00:00:14,939 --> 00:00:19,460
+有一些大量的教科书可以很详细地介绍它。更多细节和
+There are some massive textbooks that cover it in a lot of detail. Much more detail and
+
+5
+00:00:19,460 --> 00:00:23,700
+比我希望在这里做的更多。但我想向您介绍几种技巧
+than I can hope to do here. But I want to just introduce you to a couple of techniques
+
+6
+00:00:23,700 --> 00:00:25,690
+我认为真的很有用。
+that I think really are useful.
+
+7
+00:00:25,690 --> 00:00:29,300
+我们要揭示的第一件事是数学形态学。我们离开的地方
+The first thing we going to reveal is the mathematical morphology. And where we left
+
+8
+00:00:29,300 --> 00:00:34,670
+它，我们可以使用形状滤镜，可以检测不同的正方形或矩形
+it, we could use shape filters that could detect squares or rectangles of different
+
+9
+00:00:34,670 --> 00:00:39,510
+大小。在这里，我们将扩展它并看看我们如何检测可能的形状
+sizes. Here we going to extend that and look at how we can detect shapes that are perhaps
+
+10
+00:00:39,510 --> 00:00:42,640
+对角线或圆圈。
+diagonal lines or circles.
+
+11
+00:00:42,640 --> 00:00:47,280
+我们要访问的第二种技术是我们所谓的图像变形。这是公平的
+The second technique we are going to visit is what we call image warping. This is a fairly
+
+12
+00:00:47,280 --> 00:00:52,030
+一般技术，允许我们改变图像的形状，我们将去
+general technique that allows us to change the shape of an image and we are going to
+
+13
+00:00:52,030 --> 00:00:56,619
+看看我们如何使图像更大或更小的一些例子，关于我们如何做到
+look at some examples about how we can make an image larger or smaller, about how we can
+
+14
+00:00:56,619 --> 00:00:59,780
+旋转图像或我们如何移动图像。
+rotate an image or about how we can shift an image.
+

@@ -1,0 +1,475 @@
+1
+00:00:03,750 --> 00:00:08,799
+在前一讲中，我们研究了双关节机器人的工具提示速度。该
+In the previous lecture, we looked at the tooltip velocity for a two-joint robot. The
+
+2
+00:00:08,799 --> 00:00:14,740
+末端效应器姿势由末端效应器坐标x和y描述，我们想出了表达式
+end-effector pose is described by the end-effector coordinates x and y, and we came up with expressions
+
+3
+00:00:14,740 --> 00:00:19,890
+对于末端效应器姿势的变化率。这是x和x的变化率
+for the rate of change of the end-effector pose. That is the rate of change of x and
+
+4
+00:00:19,890 --> 00:00:25,939
+根据机器人关节角度的变化率，y的变化率。我们做到了
+the rate of change of y in terms of the rate of change of the robot joint angles. We did
+
+5
+00:00:25,939 --> 00:00:31,390
+类似于三关节机器人，其中描述了末端执行器姿势
+a similar thing for the three-joint robot where the end-effector pose is described by
+
+6
+00:00:31,390 --> 00:00:38,420
+坐标x和y，以及方位角θ。并且，我们再次描述了x-dot，y-dot
+a coordinate x and y, and an orientation angle, theta. And, we again described x-dot, y-dot
+
+7
+00:00:38,420 --> 00:00:42,829
+并且就机器人关节角度的变化率而言，θ点。
+and theta-dot in terms of the rate of change of the robot’s joint angles.
+
+8
+00:00:42,829 --> 00:00:48,840
+现在，我们想为像这个Puma560机器人这样的六轴机器人做同样的事情。我们发现
+Now, we want to do the same thing for a six-axis robot like this Puma 560 robot. We found out
+
+9
+00:00:48,840 --> 00:00:53,579
+这非常非常困难。必要的微积分和代数
+that it is very, very difficult to do. The necessary differential calculus and algebra
+
+10
+00:00:53,579 --> 00:00:58,370
+将在我的笔记本中占用页面，页面和页面。这是一件非常困难的事情
+is going to take up pages and pages and pages in my notebook. It is a very difficult thing
+
+11
+00:00:58,370 --> 00:01:02,140
+去做。因此，我们将研究另一种解决此问题的方法。
+to do. So, we are going to look at an alternative way to crack this problem.
+
+12
+00:01:02,140 --> 00:01:07,430
+所以，我们现在想做的是了解关节速度之间的关系
+So, what we want do now is to understand the relationship between the velocity of the joints
+
+13
+00:01:07,430 --> 00:01:11,860
+这个多关节机器人和末端执行器的速度，我们在其中描述
+of this multi-jointed robot and the velocity of the end-effector, which we described in
+
+14
+00:01:11,860 --> 00:01:17,350
+它的x，y和z坐标的变化率和它的方向变化率。
+terms of its rate of change of its x, y and z coordinates and rate of change of its orientation.
+
+15
+00:01:17,350 --> 00:01:21,820
+如果我们只看一个关节，这是我们将在这里使用的方法，
+If we look at just a single joint, which is the approach we are going to use here,
+
+16
+00:01:21,820 --> 00:01:25,810
+我们可以看到，当我调整机器人的第一个关节时，我们可以看到末端效应器
+we can see that as I adjust just the first joint of the robot, we can see that the end-effector
+
+17
+00:01:25,810 --> 00:01:31,670
+以弧线移动。因此，当我稍微调整一个关节时，我们看到x和
+moves in an arc. And so, as I adjust joint one by a small amount, we see that the x and
+
+18
+00:01:31,670 --> 00:01:36,840
+末端效应器的y坐标发生变化。现在，如果我通过一个小调整第二个关节
+y coordinates of the end-effector change. Now, if I adjust the second joint by a small
+
+19
+00:01:36,840 --> 00:01:41,860
+数量，我们可以看到末端效应器在垂直或z方向及其方向上发生变化
+amount, we can see that the end-effector changes in the vertical or z direction and its orientation
+
+20
+00:01:41,860 --> 00:01:46,670
+也略有变化。对于第三个关节，我们可以遵循完全相同的论点
+also changes slightly. We can follow exactly the same argument for the third joint of the
+
+21
+00:01:46,670 --> 00:01:52,259
+机器人，机器人的第四关节等。在你的第一个微积分课中，你会有
+robot, fourth joint of the robot and so on. In your first calculus class, you would have
+
+22
+00:01:52,259 --> 00:01:58,040
+遇到这种关系。我们可以通过采用有限的方法来近似函数的导数
+come across this relationship. We can approximate the derivative of a function by taking a finite
+
+23
+00:01:58,040 --> 00:02:04,150
+区别。在这种情况下，我们将x的值扰动少量deltax。而且，作为三角洲
+difference. In this case, we perturb the value of x by a small amount, delta x. And, as delta
+
+24
+00:02:04,150 --> 00:02:10,229
+当x接近零时，x越来越小，我们有了真正的导数。
+x gets smaller and smaller in the limit as it approaches zero, we have the true derivative.
+
+25
+00:02:10,229 --> 00:02:15,620
+我们要做的是计算正向运动函数的近似导数。
+What we are going to do is to compute an approximate derivative of the forward kinematic function.
+
+26
+00:02:15,620 --> 00:02:21,780
+现在，我们已经介绍了前向运动学作为函数K和函数
+Now, we have introduced previously the forward kinematics as a function K and function of
+
+27
+00:02:21,780 --> 00:02:26,190
+关节角度，它返回末端效应器的姿势。而且，你会注意到我有
+the joint angles and it returns the end-effector pose. And, you will notice here that I have
+
+28
+00:02:26,190 --> 00:02:31,590
+使用偏导数表示法，因为运动函数是a的函数
+used the partial derivative notation because the kinematic function is a function of a
+
+29
+00:02:31,590 --> 00:02:36,849
+向量Q.并且，我们将考虑关于一个特定的偏导数
+vector Q. And, we are going to consider the partial derivative with respect to one particular
+
+30
+00:02:36,849 --> 00:02:41,069
+关节角度。所以，我们要做的是想出一个近似值
+joint angle. So, what we are trying to do is to come up with an approximation for the
+
+31
+00:02:41,069 --> 00:02:46,910
+正向运动学随着单个关节的变化而变化的方式
+way in which the forward kinematics changes as a function of variation of a single joint
+
+32
+00:02:46,910 --> 00:02:49,660
+角度。对于六轴机器人，我们将要治疗
+angle. For the six-axis robot, we are going to treat
+
+33
+00:02:49,660 --> 00:02:53,840
+单独的关节，我们将从第一关节开始。所以，第一个
+the joints individually and we are going to start with joint number one. So, the first
+
+34
+00:02:53,840 --> 00:02:58,260
+我们感兴趣的是，如果我调整第一关节，那有什么效果
+thing that we are interested in is, if I adjust joint number one, what effect does that have
+
+35
+00:02:58,260 --> 00:03:03,660
+关于末端执行器的平移和角速度？在动画上
+on the translational and angular velocity of the end-effector? In the animation on the
+
+36
+00:03:03,660 --> 00:03:09,030
+右手边，我们可以看到末端效应器的姿势随着我们进行小幅调整而改变
+right hand side, we can see the end-effector pose changing as we make small adjustments
+
+37
+00:03:09,030 --> 00:03:15,310
+到第一个关节角度。那是Q1。让我们来看看它如何为Puma工作
+to the first joint angle. That is Q1. Let us look at how this works for the Puma
+
+38
+00:03:15,310 --> 00:03:21,500
+560机器人。我要做的第一件事就是加载Puma560机器人的模型
+560 robot. The first thing I am going to do is to load a model of the Puma 560 robot and
+
+39
+00:03:21,500 --> 00:03:26,840
+我们需要确定机器人将要进入的关节角度配置。您会注意到
+we need to decide what joint angle configuration the robot is going to be in. You will notice
+
+40
+00:03:26,840 --> 00:03:33,520
+在工作区中有许多变量，如Qn，Qr，Qs和Qz以及这些变量
+in the workspace that there are a number of variables like Qn, Qr, Qs and Qz and these
+
+41
+00:03:33,520 --> 00:03:38,530
+只是不同的机器人姿势。我们要使用的是Qn。那是
+are just different robot poses. The one we are going to use is Qn. That is
+
+42
+00:03:38,530 --> 00:03:44,790
+Q名义空头。这是Puma机器人的姿势，有点在中间
+short hand for Q nominal. This is a pose of the Puma robot that is somewhat in the middle
+
+43
+00:03:44,790 --> 00:03:49,670
+它的工作空间和非常灵巧的地方。它可以在很多不同的地方很好地移动
+of its workspace and where it is very dexterous. It is able to move nicely in many different
+
+44
+00:03:49,670 --> 00:03:53,409
+方向。现在，我们要做的就是计算
+directions. Now, we are going to do is to compute the
+
+45
+00:03:53,409 --> 00:03:59,720
+在该特定姿势的前向运动学，我们使用fkine方法来做到这一点。和，
+forward kinematics at that particular pose and we use the fkine method to do that. And,
+
+46
+00:03:59,720 --> 00:04:04,159
+这里是表示为均匀变换矩阵的末端效应器姿势。现在，
+here is the end-effector pose expressed as a homogeneous transformation matrix. Now,
+
+47
+00:04:04,159 --> 00:04:11,239
+我要做的是当我略微打扰关节角度时计算末端效应器的姿势。
+what I am going to do is to compute the end-effector pose when I slightly disturb the joint angles.
+
+48
+00:04:11,239 --> 00:04:18,060
+所以，它将是关于姿势Qn。我要做的是添加一个向量
+So, it is going to be about the pose Qn. What I am going to do is to add a vector to that
+
+49
+00:04:18,060 --> 00:04:20,549
+并且向量中的第一个元素是小位移。
+and the first element in the vector is a small displacement.
+
+50
+00:04:20,549 --> 00:04:26,170
+现在，我将取代联合的一个。所以，我将为其余部分添加零
+Now, I am going to displace joint one. So, I am going to add zero to the rest of the
+
+51
+00:04:26,170 --> 00:04:32,449
+机器人的关节。我们现在拥有的是一个非常小的变化的末端效应器姿势
+robot’s joints. What we have now is the end-effector pose for a very small change
+
+52
+00:04:32,449 --> 00:04:38,500
+在第一关节的角度。我们扰乱了关节一个0.01弧度。和
+in the angle of joint number one. We have disturbed joint one by 0.01 radians. And
+
+53
+00:04:38,500 --> 00:04:43,120
+在这里，我们可以看到末端效应器的姿势略有不同。
+here, we can see that the end-effector pose is slightly different.
+
+54
+00:04:43,120 --> 00:04:48,190
+如果我们总结了我们刚刚在MATLAB中获得的标称关节的结果
+If we summarised the results that we have just obtained in MATLAB for the nominal joint
+
+55
+00:04:48,190 --> 00:04:52,610
+这里由矢量Q给出的角度，这是机器人表达的末端效应器姿势
+angle given here by the vector Q, this is the robot’s end-effector pose expressed
+
+56
+00:04:52,610 --> 00:04:59,300
+作为4×4同质转化基质。我们调整了Q非常小的数量。我们调整了
+as a 4 x 4 homogenous transformation matrix. We adjusted Q by a very small amount. We adjusted
+
+57
+00:04:59,300 --> 00:05:05,090
+它是0.01弧度，大约是半度。当我们这样做时，我们获得了一个
+it by 0.01 radians, which is around half a degree. When we did that, we obtained a
+
+58
+00:05:05,090 --> 00:05:10,509
+机器人的末端效应器姿势略有不同。我们可以看到数字
+slightly different value for the robot’s end-effector pose. We can see that the numbers
+
+59
+00:05:10,509 --> 00:05:14,729
+在这两个矩阵中并不完全相同，这当然是我们所期望的
+in those two matrices are not exactly the same and that is, of course, what we expect
+
+60
+00:05:14,729 --> 00:05:19,180
+因为我们改变了其中一个关节角度。现在的挑战是了解这是怎么回事
+because we have changed one of the joint angles. The challenge now is to understand how this
+
+61
+00:05:19,180 --> 00:05:22,910
+变化与关节角度的变化有关。
+change is related to the change in the joint angle.
+
+62
+00:05:22,910 --> 00:05:26,880
+我们现在要使用我们刚才介绍的表达方式
+We are now going to use the expression we introduced a moment ago which relates the
+
+63
+00:05:26,880 --> 00:05:32,169
+函数的导数到函数的有限差分。如果我计算出有限的差异，
+derivative of a function to a finite difference in a function. If I compute that finite difference,
+
+64
+00:05:32,169 --> 00:05:37,350
+我在这里得到了这个矩阵结果。当然，问题是这实际意味着什么？
+I get this matrix result here. And the question is, of course, what does this actually mean?
+
+65
+00:05:37,350 --> 00:05:42,500
+如果我为同构变换矩阵编写符号表达式，我们记得
+If I write the symbolic expression for a homogeneous transformation matrix, which we recall has
+
+66
+00:05:42,500 --> 00:05:48,880
+有一个3x3旋转组件和一个3x1平移组件，如果我采取
+got a 3 x 3 rotational component and a 3 x 1 translational component, and if I take the
+
+67
+00:05:48,880 --> 00:05:55,210
+关于联合变量Q1的那个矩阵的导数，我可以写这个表达式
+derivative of that matrix with respect to the joint variable Q1, I can write this expression
+
+68
+00:05:55,210 --> 00:05:58,050
+这里。现在，我们可以匹配此符号中的组件
+here. Now, we can match the components in this symbolic
+
+69
+00:05:58,050 --> 00:06:02,920
+使用数值表达式中的组件表达式。所以，这是表达式-a
+expression with the components in the numeric expression. So, this is the expression - a
+
+70
+00:06:02,920 --> 00:06:08,789
+T相对于Q1的偏导数，这里的这个位是偏导数
+partial derivative of T with respect to Q1 and this bit here is the partial derivative
+
+71
+00:06:08,789 --> 00:06:14,319
+相对于Q1的旋转矩阵。让我们首先考虑翻译部分。
+of the rotation matrix with respect to Q1. Let us consider first the translational part.
+
+72
+00:06:14,319 --> 00:06:19,370
+这是机器人末端执行器相对于Q1的偏导数。
+Here is the partial derivative of the robot’s end-effector position with respect to Q1.
+
+73
+00:06:19,370 --> 00:06:24,660
+并且，如果我乘以Q1相对于时间的变化率，我最终会得到
+And, if I multiply that by the rate of change of Q1 with respect to time, I end up with
+
+74
+00:06:24,660 --> 00:06:31,009
+翻译相对于时间的变化率，实际上是最终效应者的
+the rate of change of translation with respect to time, which is in fact is the end-effector’s
+
+75
+00:06:31,009 --> 00:06:35,789
+平移速度。那是x-dot，y-dot和z-dot，我有时也会写
+translational velocity. That is x-dot, y-dot and z-dot which I might also write sometimes
+
+76
+00:06:35,789 --> 00:06:43,370
+作为Vx，Vy或Vz。我可以重新排列这个表达式，我们有一个表达式的末端效应器
+as Vx, Vy or Vz. I can rearrange this expression and we have an expression for the end-effector
+
+77
+00:06:43,370 --> 00:06:49,180
+恒定矢量的速度乘以关节1的速度。
+velocity in terms of a constant vector multiplied by the velocity of joint one.
+
+78
+00:06:49,180 --> 00:06:52,880
+您注意到这里有一个近似符号。重要的是要记住
+You notice that there is an approximation sign in here. It is important to remember
+
+79
+00:06:52,880 --> 00:06:58,100
+我们在这里计算了一个有限差分。它是真实导数的近似值。
+that we have computed a finite difference here. It is an approximation to the true derivative.
+
+80
+00:06:58,100 --> 00:07:04,289
+我们使用了0.01弧度的关节角度变化。而且，当我们在关节角度上做出改变时
+We used a change in joint angle of 0.01 radians. And, as we make that change in joint angle
+
+81
+00:07:04,289 --> 00:07:08,960
+越来越小，我们将得到更接近真实导数的近似值。但，
+smaller and smaller, we will get a better approximation to the true derivative. But,
+
+82
+00:07:08,960 --> 00:07:13,860
+如果我们把它做得太小，我们会因为算术的方式而遇到数值误差
+if we make it too small, we will encounter numerical errors because of the way arithmetic
+
+83
+00:07:13,860 --> 00:07:18,979
+是在数字计算机内完成的，我们需要找到某种平衡。所以，请继续
+is done inside a digital computer and we need to find some sort of balance. So, keep in
+
+84
+00:07:18,979 --> 00:07:24,319
+请记住，我们在这里所做的是对真实关系的近似。
+mind that what we have done here is an approximation to the true relationship.
+
+85
+00:07:24,319 --> 00:07:28,520
+我们有相关的末端效应器翻译速度和Q1的变化率
+We have related end-effector translational velocity to rate of change of Q1 and we can
+
+86
+00:07:28,520 --> 00:07:33,699
+为联合二和联合三一直到第六联合做这个。找到表达式
+do this for joint two and for joint three all the way up to joint six. Find the expressions
+
+87
+00:07:33,699 --> 00:07:37,530
+将关节​​速度与末端效应器平移速度联系起来。
+that relate joint velocity to end-effector translational velocity.
+
+88
+00:07:37,530 --> 00:07:41,880
+现在让我们考虑旋转部分。而且，这并不是那么简单。这里，
+Let us now consider the rotational part. And, this is not quite as straightforward. Here,
+
+89
+00:07:41,880 --> 00:07:47,860
+我已经写出了旋转矩阵相对于关节角度的偏导数
+I have written the partial derivative of a rotation matrix with respect to joint angle
+
+90
+00:07:47,860 --> 00:07:52,920
+一。并且，如果我乘以关节1的变化率与时间相乘，
+one. And, if I multiply that by the rate of change of joint one with respect to time,
+
+91
+00:07:52,920 --> 00:07:59,100
+我最终得到了旋转矩阵相对于时间的变化率。有一个众所周知的
+I end up with the rate of change of the rotation matrix with respect to time. There is a well-known
+
+92
+00:07:59,100 --> 00:08:03,419
+旋转矩阵的变化率，角速度之间的关系
+relationship between the rate of change of the rotation matrix, the angular velocity
+
+93
+00:08:03,419 --> 00:08:09,099
+欧米茄和旋转矩阵本身。而且，我们可以在这里替换它。矩阵
+omega and the rotation matrix itself. And, we can substitute that in here. The matrix
+
+94
+00:08:09,099 --> 00:08:14,240
+S是我们所说的偏斜对称矩阵，它是角速度的函数
+S is what we called a skew symmetric matrix and it is a function of the angular velocity
+
+95
+00:08:14,240 --> 00:08:14,669
+矢量欧米茄。
+vector omega.
+

@@ -1,0 +1,335 @@
+1
+00:00:04,190 --> 00:00:10,510
+这里我们在MATLAB桌面环境中。我已将工作目录设置为该文件夹
+Here we are inside the MATLAB desktop environment. I have set the working directory to the folder
+
+2
+00:00:10,510 --> 00:00:15,469
+包含那些假日快照。所以我们要做的是加载图像
+that contains those holiday snaps. So what we are going to do is load the image
+
+3
+00:00:15,469 --> 00:00:20,860
+我们只是看着MATLAB工作区。我需要将这些数据放入工作空间变量中
+we were just looking at into the MATLAB workspace. I need to put that data into a workspace variable
+
+4
+00:00:20,860 --> 00:00:27,280
+叫我。这是我个人的形象短手。我们使用iread功能。
+called im. That is kind of my personal short hand for image. We use the iread function.
+
+5
+00:00:27,280 --> 00:00:34,370
+图像读取的简称。我们输入了包含该文件的相当神秘的文件名
+Short for image read. And we put in the rather cryptic name of the file that contains the
+
+6
+00:00:34,370 --> 00:00:42,829
+图片。因此我们将图片加载到名为im的工作空间变量中。另一个
+image. And we therefore load the picture into this workspace variable called im. Another
+
+7
+00:00:42,829 --> 00:00:47,519
+工具箱功能允许我们将变量显示为图像。
+toolbox function allows us to display a variable as an image.
+
+8
+00:00:47,519 --> 00:00:52,539
+在这里我们可以看到它;在这里，我们可以看到从MATLAB内部显示的鳄鱼
+And here we can see it; here we can see the crocodile displayed from inside the MATLAB
+
+9
+00:00:52,539 --> 00:00:57,960
+环境。图像文件不仅包含我们正在查看的像素信息
+environment. The image file contains not just the pixel information that we are looking
+
+10
+00:00:57,960 --> 00:01:03,159
+在这儿;它还包含我们称之为元数据的内容。那么让我们回去看看我们是否
+at here; it also contains what we call the metadata. So let’s go back and see if we
+
+11
+00:01:03,159 --> 00:01:09,190
+可以找到元数据。我们将关闭该图像，我们将修改我们的阅读命令
+can find the metadata. We will close that image and we will modify our reading command
+
+12
+00:01:09,190 --> 00:01:16,710
+这样它就会返回两个输出变量。变量im和the中的像素数据
+so that it returns two output variables. The pixel data in the variable im and the
+
+13
+00:01:16,710 --> 00:01:23,210
+元数据到另一个名为meta的变量。我们走了。并显示该变量
+metadata into another variable called meta. There we go. And display that variable called
+
+14
+00:01:23,210 --> 00:01:27,920
+元。我们可以在这里看到有关图像的有趣信息，我们可以看到日期
+meta. And we can see interesting information here about the image, we can see the date
+
+15
+00:01:27,920 --> 00:01:32,590
+它被拍摄，我们可以看到它是用松下相机拍摄的，我们可以看到
+that it was taken, we can see that it was taken with a Panasonic camera and we can see
+
+16
+00:01:32,590 --> 00:01:38,150
+相机的模型。该子结构中有更多详细信息。
+the model of the camera. There is even more detail information in this sub-structure.
+
+17
+00:01:38,150 --> 00:01:45,710
+在这里我们可以看到曝光时间和相机的F值
+And here we can see the exposure time and the F number of the camera when I took that
+
+18
+00:01:45,710 --> 00:01:51,720
+特别的图片，我们可以看到闪光灯没有发射和许多其他信息
+particular picture and we can see that the flash didn’t fire and lots of other information
+
+19
+00:01:51,720 --> 00:01:54,550
+同样。但是，我们正在超越自我
+as well. But we are getting ahead of ourselves, we
+
+20
+00:01:54,550 --> 00:01:57,630
+一直在处理彩色图像和颜色是我们不会去的主题
+have been dealing with a colour image and colour is a topic that we are not going to
+
+21
+00:01:57,630 --> 00:02:01,640
+再访问​​几周。所以让我们从更简单的事情开始吧。
+visit for another couple of weeks. So let’s start with something a little bit simpler.
+
+22
+00:02:01,640 --> 00:02:05,750
+我们将看一些人称之为黑白图像，但更重要的是
+We are going to look at what some people call a black and white image, but what is more
+
+23
+00:02:05,750 --> 00:02:11,480
+正确地称为灰度图像。所以我在这里要做的就是清除所有
+correctly known as a greyscale image. So what I am going to do here is to clear all the
+
+24
+00:02:11,480 --> 00:02:16,420
+工作区中的变量，我将清除控制台。我要加载
+variables in the workspace, I am going to clear the console. And I am going to load
+
+25
+00:02:16,420 --> 00:02:22,410
+一个新的图像，这是一个随软件一起提供的图像，它是一个街道的图像
+a new image and this is an image that is shipped with the software, it is an image of a street
+
+26
+00:02:22,410 --> 00:02:28,220
+在巴黎及其文件中有PNG的扩展，代表便携式网络图形。
+in Paris and its file has got an extension of PNG which stands for portable network graphic.
+
+27
+00:02:28,220 --> 00:02:35,100
+它只是另一种图像文件格式。将其加载到工作空间中的变量中
+It’s just another type of image file format. Load that into the workspace into the variable
+
+28
+00:02:35,100 --> 00:02:42,480
+IM。现在我们可以在这里看到有关变量的信息。它说它是851
+im. Now we can see over here the information about the variable. It says that it is 851
+
+29
+00:02:42,480 --> 00:02:50,420
+行数1280列。MATLAB将此视为矩阵。有一些有趣的
+rows by 1280 columns. MATLAB is considering this as a matrix. There is a few interesting
+
+30
+00:02:50,420 --> 00:02:56,040
+关于这个矩阵的事情。MATLAB提供了检查矩阵元素的工具。
+things about this matrix. MATLAB provides a facility to examine the elements of a matrix.
+
+31
+00:02:56,040 --> 00:03:01,430
+我们通过右键单击变量来做到这一点，让我们最大化视图。
+We do that by right clicking on the variable, and let’s maximise the view.
+
+32
+00:03:01,430 --> 00:03:06,680
+在这里，我们可以看到这个中所有数字的一个小的子部分，
+And here we can see a small, sub-section of all the numbers that are within this very,
+
+33
+00:03:06,680 --> 00:03:11,319
+非常大的矩阵。它是一个电子表格样式显示，它有滚动条，我们可以
+very large matrix. It is a spreadsheet style display, it’s got scroll bars and we can
+
+34
+00:03:11,319 --> 00:03:16,610
+滚下来，看到很多很多数字。你会发现它们都是整数。
+roll down and see lots and lots of numbers. And you will see they’re all integer numbers.
+
+35
+00:03:16,610 --> 00:03:22,069
+你会看到没有负面的，你也会注意到没有
+You will see that there are no negative ones and you will also notice that there are none
+
+36
+00:03:22,069 --> 00:03:25,730
+大于255。
+bigger then 255.
+
+37
+00:03:25,730 --> 00:03:30,709
+另一件需要注意的是，这个变量有一个类型，那个类型是uint8和
+Another thing to notice is that this variable has got a type and that type is uint8 and
+
+38
+00:03:30,709 --> 00:03:37,410
+这是无符号整数8位的简写或代码。所以这个变量中的所有数字
+that is short hand or code for unsigned integer eight bits. So all the numbers in this variable
+
+39
+00:03:37,410 --> 00:03:42,730
+im是8位无符号整数，这意味着它们可以具有的最小值
+im are eight bit unsigned integers, which means the smallest value they could have is
+
+40
+00:03:42,730 --> 00:03:47,050
+0和它们可以拥有的最大值是255。
+0 and the greatest value that they can have is 255.
+
+41
+00:03:47,050 --> 00:03:54,660
+MATLAB变量im包含很多数字，但它们起源于图像所以数字
+The MATLAB variable im contains a lot of numbers, but they originated from an image so the numerical
+
+42
+00:03:54,660 --> 00:03:59,739
+该变量中的信息表示视觉信息。所以让我们展示一下吧
+information within that variable represents visual information. So let’s display it
+
+43
+00:03:59,739 --> 00:04:05,060
+作为一个图像而不是显示为数字，我们使用我们之前使用的函数，
+as an image rather then display it as numbers and we use the function we used earlier, the
+
+44
+00:04:05,060 --> 00:04:11,239
+idisp函数。传递图像。在这里，我们看到一张巴黎街道的照片。
+idisp function. Pass in the image. And here we see a picture of a Parisian street.
+
+45
+00:04:11,239 --> 00:04:18,180
+现在我们可以做的是我们可以检查构成该图像的各种像素。那么我们
+Now what we can do is we can examine the various pixels that comprise this image. So let’s
+
+46
+00:04:18,180 --> 00:04:24,090
+看看这里的一个像素，如果我点击它，它会显示三个
+have a look at a pixel over here and if I click on that, it displays three pieces of
+
+47
+00:04:24,090 --> 00:04:27,800
+信息。第一条信息是该特定像素的坐标
+information. The first piece of information is the coordinate of this particular pixel
+
+48
+00:04:27,800 --> 00:04:33,530
+并且坐标是105-即水平坐标-和87，即
+and the coordinate is a 105—that is the horizontal coordinate—and 87, which is the
+
+49
+00:04:33,530 --> 00:04:39,880
+垂直坐标。现在处理惯例的图像是水平坐标，
+vertical coordinate. Now the image processing the convention is that the horizontal coordinate,
+
+50
+00:04:39,880 --> 00:04:45,550
+我通常将其称为变量u，从左到右和垂直增加
+I refer to that generally as the variable u, increases from left to right and the vertical
+
+51
+00:04:45,550 --> 00:04:51,060
+我通常称为v的坐标从顶部到底部增加。该
+coordinate which I generally refer to as v increases from the top to the bottom. The
+
+52
+00:04:51,060 --> 00:04:55,780
+此处显示的其他信息是所谓的灰度值。
+other piece of information that is displayed here is what is called the greyscale value.
+
+53
+00:04:55,780 --> 00:05:02,150
+这是该特定坐标处的像素的数值，在这种情况下
+That is the numeric value of the pixel at that particular coordinate and in this case
+
+54
+00:05:02,150 --> 00:05:06,630
+它的值为194.我们说像素值可以变化
+it has a value of a 194. And we said that the pixel values can vary
+
+55
+00:05:06,630 --> 00:05:15,240
+在0到255之间。惯例是低数字是暗的而高数字是亮的。
+between 0 and 255. Convention is that a low number is dark and a high number is bright.
+
+56
+00:05:15,240 --> 00:05:21,660
+255是最大值对应亮白色;0，最小值，对应
+255 being the largest value corresponds to bright white; 0, the smallest value, corresponds
+
+57
+00:05:21,660 --> 00:05:28,680
+到了最暗的黑暗。这个特殊值-一个194-相当明亮。如果我点击一个值
+to the darkest dark. This particular value—a 194—is fairly bright. If I click a value
+
+58
+00:05:28,680 --> 00:05:35,889
+在这个黑暗的门口，我们看到它只有12的值。看看它的阴影
+in this dark doorway we see it has got a value only of 12. Look down on the shadow of the
+
+59
+00:05:35,889 --> 00:05:41,340
+街道，我们看到它的值为66.所以像素值反映了强度
+street, we see it has got a value of 66. So the pixel values are reflecting the intensity
+
+60
+00:05:41,340 --> 00:05:47,830
+在场景中的这个特定点上的光。我们还可以访问此像素值
+of light at this particular point in the scene. We can also get access to this pixel value
+
+61
+00:05:47,830 --> 00:05:52,810
+通过直接寻址矩阵内的元素。矩阵是工作空间变量
+by addressing the element within the matrix directly. The matrix is the workspace variable
+
+62
+00:05:52,810 --> 00:06:01,530
+我和我们需要首先提供行坐标，这是653，我们需要
+im and we need to provide first of all the row coordinate, which is 653, and we need
+
+63
+00:06:01,530 --> 00:06:09,100
+提供列坐标，即562.我们访问矩阵的那个元素
+to provide the column coordinate, which is 562. We access that element of the matrix
+
+64
+00:06:09,100 --> 00:06:15,360
+我们看到66的灰度值。现在注意到这里发生的是那个
+and we see the grayscale value of 66. Now notice what has happened here is that the
+
+65
+00:06:15,360 --> 00:06:21,680
+指数已被逆转。当我们索引到矩阵时，我们提供行坐标
+indices have been reversed. When we index into a matrix we provide the row coordinate
+
+66
+00:06:21,680 --> 00:06:26,400
+首先是列坐标。通常，当我们引用图像中的坐标时
+first then the column coordinate. Typically, when we refer to the coordinate in the image
+
+67
+00:06:26,400 --> 00:06:30,930
+我们首先编写水平坐标，然后编写垂直坐标。
+itself, we write the horizontal coordinate first and then the vertical coordinate.
+

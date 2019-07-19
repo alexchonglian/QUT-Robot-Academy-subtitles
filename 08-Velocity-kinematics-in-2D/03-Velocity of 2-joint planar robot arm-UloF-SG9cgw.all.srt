@@ -1,0 +1,255 @@
+1
+00:00:03,990 --> 00:00:09,820
+在本讲座中，我们将考虑单个机器人关节的速度如何影响
+In this lecture we're going to consider how the velocity of a single robot joint affects
+
+2
+00:00:09,820 --> 00:00:15,799
+末端执行器的速度。这里有几个动画显示简单的双链接
+the velocity of the end effector. Here a couple of animations that show a simple two-linked
+
+3
+00:00:15,799 --> 00:00:22,949
+平面机器人。在左侧，我们看到一个示例，其中机器人的关节1正弦变化。
+planar robot. On the left we see an example where joint 1 of the robot is varying sinusoidally.
+
+4
+00:00:22,949 --> 00:00:28,090
+在右侧，我们看到一个示例，其中机器人的关节2正弦变化。但，
+On the right we see an example where joint 2 of the robot is varying sinusoidally. But,
+
+5
+00:00:28,090 --> 00:00:33,530
+我们感兴趣的是各个关节的速度之间的关系
+what we're interested in is the relationship between the velocities of the individual joints
+
+6
+00:00:33,530 --> 00:00:40,800
+Q1或Q2和末端执行器的速度。我们将能够即时显示出来
+Q1 or Q2 and the velocity of the end effector. In what we will be able to show is that instantaneously
+
+7
+00:00:40,800 --> 00:00:46,500
+末端执行器的速度是末端执行器速度分量的总和
+the velocity of the end effector is the sum of the end effector velocity components due
+
+8
+00:00:46,500 --> 00:00:51,370
+关节1的运动和关节的运动2。
+to motion of joint 1 and the motion due to joint 2.
+
+9
+00:00:51,370 --> 00:00:57,200
+这是我们现在应该非常熟悉的双连杆机器人操纵器。我们展示了
+Here's the two-linked robot manipulator which should be very familiar to us now. We showed
+
+10
+00:00:57,200 --> 00:01:02,930
+在之前关于正向运动学的讲座中，我们如何为x和x编写表达式
+in the previous lecture about forward kinematics how we can write an expression for the x and
+
+11
+00:01:02,930 --> 00:01:09,910
+机器人末端执行器的y坐标。这是机器人的二维效应器姿势。
+y coordinate for the robot end effector. That is the robot’s end effector pose in two dimensions.
+
+12
+00:01:10,280 --> 00:01:15,500
+现在，如果我们认为关节角度现在是时间的函数，那么我们就可以
+Now if we consider that the joint angles are now are the function of time, then we can
+
+13
+00:01:15,500 --> 00:01:22,170
+计算x和y相对于时间的导数，这里的点符号表示
+compute the derivative of x and y with respect to time and the dot notation here means the
+
+14
+00:01:22,170 --> 00:01:27,659
+关于时间的衍生物。所以xdot是x相对于时间的导数。
+derivative with respect to time. So xdot is the derivative of x with respect to time.
+
+15
+00:01:27,659 --> 00:01:33,109
+Q1点是关节角度Q1相对于时间的导数。
+Q1 dot is the derivative of the joint angle Q1 with respect to time.
+
+16
+00:01:33,109 --> 00:01:36,990
+计算衍生工具是相当直接的。这几乎是介绍性差异
+Computing the derivative is fairly straight forward. It's pretty much introductory differential
+
+17
+00:01:36,990 --> 00:01:42,249
+微积分，我们需要应用链规则。让我们把前面的方程式带到a
+calculus and we need to apply the chain rule. Let's bring the previous equations on to a
+
+18
+00:01:42,249 --> 00:01:47,829
+新页面。这里再次是xdot和ydot的表达式。
+fresh page. And here again is the expressions for the xdot and ydot.
+
+19
+00:01:47,829 --> 00:01:54,119
+现在在这个表达式中你注意到有许多Q1dot和Qdot术语。什么
+Now in this expressions you notice that there are a number of Q1dot and Qdot terms. What
+
+20
+00:01:54,119 --> 00:01:58,549
+我们能做的就是我们能把它们分解出来。这使我们能够以非常好的方式编写表达式
+we can do is we can factor them out. And that enables us to write the expression in a very
+
+21
+00:01:58,549 --> 00:02:03,579
+紧凑的矩阵形式。如果您对此感到不舒服或者不理解我们是如何得到的
+compact matrix form. If you uncomfortable with this or don't understand how we got from
+
+22
+00:02:03,579 --> 00:02:09,450
+矩阵形式的第一个表达式，乘以矩阵形式。乘以2x2矩阵
+the first expression to the matrix form, multiply out the matrix form. Multiply the 2x2 matrix
+
+23
+00:02:09,450 --> 00:02:14,100
+通过2x1向量并说服自己，它与我们开始时的表达方式相同。
+by 2x1 vector and convince yourself that it's the same expression that we started with.
+
+24
+00:02:14,100 --> 00:02:19,640
+我们现在可以用非常简洁的形式写出来。向量xdot和ydot是速度
+We can now write this in a very succinct form. The vector xdot and ydot is the velocity of
+
+25
+00:02:19,640 --> 00:02:25,800
+机器人末端执行器。通常用符号J表示的矩阵被引用
+the robot end effector. The matrix which is typically denoted by the symbol J is referred
+
+26
+00:02:25,800 --> 00:02:32,660
+作为雅可比矩阵注意，该雅可比矩阵是关节角度Q1的函数
+to as a Jacobian matrix. Note that this Jacobian matrix is a function of the joint angles Q1
+
+27
+00:02:32,660 --> 00:02:39,290
+和Q2。所以我们这里有一个关节角速度，矢量Qdot，
+and Q2. So what we have here is a linear relationship between the joint angle velocity, vector Qdot,
+
+28
+00:02:39,290 --> 00:02:47,750
+其中包括Q1dot和Q2dot以及笛卡尔空间xdot和ydot中的尖端速度。
+which comprises Q1dot and Q2dot and the tip velocity in Cartesian space xdot and ydot.
+
+29
+00:02:47,750 --> 00:02:52,390
+我们刚才介绍的雅可比矩阵是以这位先生的名字命名的。一个19世纪
+The Jacobian matrix that we just introduced is named after this gentleman. A 19th century
+
+30
+00:02:52,390 --> 00:02:57,860
+数学家CarlGustavJacobJacoby。他对功能表达非常熟悉
+mathematician Carl Gustav Jacob Jacoby. He's been very familiar with a functional expression
+
+31
+00:02:57,860 --> 00:03:04,370
+像这样，y是x的函数，x是标量，y是标量。然后我们就可以写了
+like this, y is a function of x, x is a scalar and y is a scalar. And then we could write
+
+32
+00:03:04,370 --> 00:03:09,850
+函数x相对于x的导数。它与y的导数相同
+the derivative of the function x with respect to x. It's the same as the derivative of y
+
+33
+00:03:09,850 --> 00:03:15,360
+关于x。雅可比矩阵就是导数的矩阵等价物。它的
+with respect to x. The Jacobian is simply the matrix equivalent of the derivative. It's
+
+34
+00:03:15,360 --> 00:03:21,570
+函数的导数，其参数是向量，其结果是向量。
+the derivative of a function whose argument is a vector and whose result is a vector.
+
+35
+00:03:21,570 --> 00:03:27,200
+现在这些向量不必具有相同的长度。在这个例子中，x是一个向量
+Now those vectors don't have to be the same length. In this example, x is a vector of
+
+36
+00:03:27,200 --> 00:03:30,910
+n维度和y是m维度的向量。
+n dimensions and y is a vector of m dimensions.
+
+37
+00:03:30,910 --> 00:03:36,860
+所以我所说的雅可比矩阵是一个矩阵，在这种情况下它将是一个n乘m矩阵。
+So the Jacobian as I said is a matrix and it will be in this case an n by m matrix.
+
+38
+00:03:36,860 --> 00:03:41,830
+矩阵的元素是每个输出的偏导数
+The elements of the matrix are the partial derivatives of each of the outputs of the
+
+39
+00:03:41,830 --> 00:03:48,990
+关于函数的每个输入的函数。简而言之，这就是雅可比风格。
+function with respect to each of the inputs to the function. In a nutshell that's what a Jacobian is.
+
+40
+00:03:48,990 --> 00:03:52,360
+当我们谈论运动学时，我们会介绍一种功能形式。
+When we talked about kinematics, we introduce a functional form.
+
+41
+00:03:52,370 --> 00:03:58,080
+我们介绍了在机器人关节角度上运行的函数K并返回
+We introduced the function K which operates on the robot joint angles and returns the
+
+42
+00:03:58,080 --> 00:04:03,360
+机器人姿势。现在我们正在考虑的双连杆机器人，关节角度属于
+robot pose. Now for the two-link robot that we're considering now, the joint angles belong
+
+43
+00:04:03,360 --> 00:04:08,450
+到实数的二维空间和末端效应器的帖子也属于
+to the two dimensional space of real numbers and the end effector post also belongs to
+
+44
+00:04:08,450 --> 00:04:11,060
+二维空间或实数。
+the two dimensional space or real numbers.
+
+45
+00:04:11,060 --> 00:04:15,310
+关节角度向量Q属于二维实数的空间，它是
+The joint angle vector Q belongs to the space of two dimensional real numbers, it's the
+
+46
+00:04:15,310 --> 00:04:21,349
+一组数字Q1和Q2。末端效应器的帖子属于二维空间
+set of numbers Q1 and Q2. And the end effector post belongs to the two dimensional space
+
+47
+00:04:21,349 --> 00:04:25,710
+实数。这就是说末端效应器的帖子由两个实数表示
+of real numbers. That saying that the end effector post is represented by two real numbers
+
+48
+00:04:25,710 --> 00:04:30,889
+x和y。我们刚才介绍的另一个符号是空间速度。和
+x and y. The other symbol that we introduced a moment ago is the spatial velocity. And
+
+49
+00:04:30,889 --> 00:04:35,740
+我们使用希腊字母nu，它看起来像V和它的方便，因为它是一种类型
+we used the Greek letter nu, it looks like a V and its handy because it is a type of
+
+50
+00:04:35,740 --> 00:04:41,360
+速度，但它不仅仅是平原上的速度。它还包括旋转速度，
+velocity but it's not just a velocity in the plain. It also includes rotational velocity,
+
+51
+00:04:41,360 --> 00:04:46,660
+当我们谈论在三维空间上运行的机器人时，这变得非常重要。
+That becomes really important when we talk about robots that operates on three dimensional space.
+

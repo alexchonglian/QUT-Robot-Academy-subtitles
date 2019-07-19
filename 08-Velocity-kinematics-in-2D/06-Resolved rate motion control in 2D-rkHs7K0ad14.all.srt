@@ -1,0 +1,160 @@
+1
+00:00:03,830 --> 00:00:08,930
+我们将介绍一个称为分辨率运动控制的重要概念。听起来
+We're going to introduce an important concept called resolved rate motion control. It sounds
+
+2
+00:00:08,930 --> 00:00:14,440
+很复杂，但它真的很容易理解。对于很多现实世界的问题，我们可能会
+complex but its really quite simple to understand. For a lot of real world problems, we might
+
+3
+00:00:14,440 --> 00:00:20,270
+感兴趣的是机器人末端执行器在笛卡尔空间中沿直线移动。
+be interested in the robot end effector moving along a straight line in Cartesian space.
+
+4
+00:00:20,270 --> 00:00:24,560
+现在我们知道，如果我们移动，例如，关节角度1，我们移动关节角度2，然后
+Now we know that if we move, for instance, joint angle 1, we move joint angle 2, then
+
+5
+00:00:24,560 --> 00:00:29,590
+机器人的末端往往在空间中以弧形移动。我们不希望它在弧形中移动。
+the end of the robot tends to move in arcs in space. We don't want it to move in arcs.
+
+6
+00:00:29,590 --> 00:00:34,090
+我们希望它沿直线移动。所以我们开始指定笛卡尔速度
+We want it to move along a straight a line. So we began to specify the Cartesian velocity
+
+7
+00:00:34,090 --> 00:00:41,070
+我们希望末端效应器跟随。我们想将其转换为所需的关节速度。
+that we want the end effector to follow. We want to convert that then to the required joint velocity.
+
+8
+00:00:41,110 --> 00:00:46,110
+我们已经触及过这一点。我们采用所需的速度nu，我们乘以逆
+We already touched on this. We take the desired velocity nu, we multiply it by the inverse
+
+9
+00:00:46,110 --> 00:00:52,089
+雅可比人，我们得到了我们需要的联合速度。我们计算逆Jacobian，
+Jacobian and we get the joint velocity that we need. We compute that inverse Jacobian,
+
+10
+00:00:52,089 --> 00:00:57,070
+我们可以像在这里一样象征性地写出来。现在我需要做的就是拥有
+we can write it out symbolically as I had done here. Now what I need to do is have the
+
+11
+00:00:57,070 --> 00:01:02,790
+机器人的硬件以所需的速度移动关节。但在机器人移动之后
+robot's hardware move the joints at this desired velocity. But after the robot's been moving
+
+12
+00:01:02,790 --> 00:01:07,600
+在短时间内，关节角度矢量Q将改变为雅可比
+for a short period, the joint angle vector Q will have changed so that that Jacobian
+
+13
+00:01:07,600 --> 00:01:13,140
+我计算过的将不再合适。所以我需要做的是定期
+that I've computed will no longer be appropriate. So what I need to do then is periodically
+
+14
+00:01:13,140 --> 00:01:19,000
+更新雅可比矩阵。当我计算所需的机器人速度矢量时使用它
+update the Jacobian matrix. And use that when I'm computing the desired robot velocity vector
+
+15
+00:01:19,000 --> 00:01:26,440
+Q点。所以这是移动机器人关节，更新雅可比，计算机器人的问题
+Qdot. So it's a matter of moving the robot joints, updating the Jacobian, computing the
+
+16
+00:01:26,440 --> 00:01:33,880
+机器人关节速度，移动关节，更新雅可比等。无限期地重复这个。
+robot joint velocity, moving the joints, updating the Jacobian and so on. Repeat this indefinitely.
+
+17
+00:01:33,880 --> 00:01:39,310
+大多数在数​​字计算机上运行的控制算法通常是离散时间算法。
+Most control algorithms that run on a digital computer a typically discrete time algorithms.
+
+18
+00:01:39,310 --> 00:01:44,390
+那就是他们以离散的时间间隔计算东西。所以我们有一个时间表和
+That is they compute things at discrete time intervals. So here we have a time line and
+
+19
+00:01:44,390 --> 00:01:51,000
+我们指出了一些时间步骤。时间1，时间2，时间3等。持续时间
+we indicated a number of time steps. Time 1, time 2, time 3 and so on . The duration
+
+20
+00:01:51,000 --> 00:01:56,159
+在这些时间步骤中，我将用符号deltaT表示。它可能是1/10
+of these time steps, I’m going to denote by the symbol delta T. It might be 1/10 of
+
+21
+00:01:56,159 --> 00:02:01,450
+一秒钟它可能是千分之一秒。这样的事情。每时每步都是什么
+a second it might be a thousandth of a second. Something like that. At every time step what
+
+22
+00:02:01,450 --> 00:02:07,180
+我要做的是取出关节角度的当前值并称之为QK。那
+I'm going to do is to take the current value of the joint angles and call that QK. That
+
+23
+00:02:07,180 --> 00:02:10,129
+代表K时的关节角度。
+stands for joint angles at the time K.
+
+24
+00:02:10,129 --> 00:02:15,140
+要计算雅可比行列式，请采用逆，乘以我想要的速度
+To compute the Jacobian, take the inverse, multiply it by the velocity that I want to
+
+25
+00:02:15,140 --> 00:02:21,610
+实现并计算在这个特定时间步骤我需要实现的Qdot。什么
+achieve and compute the Qdot that I need to achieve at this particular time step. What
+
+26
+00:02:21,610 --> 00:02:27,980
+我要做的是采取联合速度Qdot我将它乘以deltaT所以
+I'm going to do is take that joint velocity Qdot I'm going to multiply it by delta T so
+
+27
+00:02:27,980 --> 00:02:33,160
+这将给我一个关节角位移;这就是我想要关节多少
+that will give me a joint angle displacement; that is how much I would want the joints to
+
+28
+00:02:33,160 --> 00:02:35,180
+移动到即将到来的时间间隔。
+move over the coming time interval.
+
+29
+00:02:35,180 --> 00:02:42,000
+我将其添加到关节角度QK的当前值。这给了我机器人的机会
+I add that to the current value of the joint angles QK. And that gives me the robot’s
+
+30
+00:02:42,000 --> 00:02:47,740
+目标。这就是我希望机器人关节角度在时间K+1的地方。然后我告诉了
+target. That's where I want the robot joint angles to be at time K +1. Then I tell the
+
+31
+00:02:47,740 --> 00:02:53,000
+机器人硬件随着时间的推移将关节移动到这个新的关节角度配置
+robot hardware to move the joints to this new joint angle configuration over the time
+
+32
+00:02:53,000 --> 00:02:57,599
+间隔deltaT.然后我会在必要时重复这些步骤。
+interval delta T. And then I'll repeat this steps for as long as necessary.
+

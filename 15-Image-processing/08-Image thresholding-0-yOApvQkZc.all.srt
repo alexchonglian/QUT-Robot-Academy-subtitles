@@ -1,0 +1,465 @@
+1
+00:00:03,810 --> 00:00:10,299
+特别重要的一元操作被称为阈值处理。
+A particularly important monadic operation is referred to as thresholding.
+
+2
+00:00:10,299 --> 00:00:16,219
+考虑这里的两个图像。第一个是灰度图像和第二个图像
+Consider the two images here. The first one is a grey scale image and the second image
+
+3
+00:00:16,219 --> 00:00:21,009
+你可以看到更加鲜明的对比;实际上，像素只有两个值-它们
+you can see is much more contrasty; in fact, the pixels have only got two values—they
+
+4
+00:00:21,009 --> 00:00:26,160
+是黑色还是白色。现在我们在这里所做的是合乎逻辑的
+are either black or white. Now what we have done here is made a logical
+
+5
+00:00:26,160 --> 00:00:32,230
+决定每个输入值。如果输入值小于阈值，则参考
+decision on every input value. If the input value is less than the threshold, referred
+
+6
+00:00:32,230 --> 00:00:38,050
+通过符号T，结果是假的，我们通过黑色像素表示
+to by the symbol T, then the result is false and we represent that by a black pixel in
+
+7
+00:00:38,050 --> 00:00:41,950
+输出图像。如果输入像素大于等于
+the output image. If the input pixel is greater than and equal
+
+8
+00:00:41,950 --> 00:00:48,880
+到T，然后我们说结果为真，结果像素显示为白色。
+to T, then we say the result is true and the resulting pixel is displayed as white.
+
+9
+00:00:48,880 --> 00:00:53,920
+如果我们以图形方式显示此函数，我们可以看到它非常非常非线性。
+If we display this function graphically, we can see that it is very, very non-linear.
+
+10
+00:00:53,920 --> 00:01:00,280
+输出为0直到达到T的输入值，然后输出值变为真。
+The output is 0 up until we reach the input value of T, and then the output value becomes true.
+
+11
+00:01:00,280 --> 00:01:03,900
+在MATLAB中我们显示一个像素值
+In MATLAB when we display a pixel value that
+
+12
+00:01:03,900 --> 00:01:08,009
+有一个false值，它显示为黑色，当我们显示一个有值的像素
+has got a value of false, it shows as black, and when we display a pixel that has a value
+
+13
+00:01:08,009 --> 00:01:13,590
+为true，显示为白色。MATLAB支持许多我们称之为逻辑的东西
+of true it is displayed as white. MATLAB supports a number of what we call logical
+
+14
+00:01:13,590 --> 00:01:18,939
+运营商。这是比较两个数字量的方法。就在之前的例子中
+operators. That is the way to compare two numeric quantities. Just in the example before
+
+15
+00:01:18,939 --> 00:01:26,499
+我们查看了>=运算符，我们也查看了<运算符。MATLAB有能力
+we looked at the >= operator, and we also looked at the < operator. MATLAB has the ability
+
+16
+00:01:26,499 --> 00:01:32,539
+确定两个值是否相等;或不平等;比...更棒;少于;等等。
+to determine whether two values are equal; or not equal; greater than; less than; and so on.
+
+17
+00:01:32,540 --> 00:01:35,700
+任何这些逻辑运算符的结果
+The result of any of these logical operators
+
+18
+00:01:35,710 --> 00:01:42,649
+是一个逻辑价值;无论是真是假。现在MATLAB代表了真实的概念
+is a logical value; it is either true or false. Now MATLAB represents the concepts of true
+
+19
+00:01:42,649 --> 00:01:49,729
+和false作为数值。True表示为1，false表示为0。
+and false as numeric values. True is represented by 1 and false is represented by 0.
+
+20
+00:01:49,729 --> 00:01:55,809
+MATLAB还有一些内置的特殊常量，它们的名称为true和false。
+MATLAB also has some special constants that are built in, and they have got the names true and false.
+
+21
+00:01:58,040 --> 00:01:59,680
+让我们从一些非常简单的事情开始。
+Let’s start with something really simple.
+
+22
+00:01:59,689 --> 00:02:04,889
+我们会问“2大于1？”这个问题，我们知道这个结果
+We will ask the question ‘is 2 greater than 1?’, and we know that the outcome of this
+
+23
+00:02:04,889 --> 00:02:09,940
+必须是真的。MATLAB给了我们一个值1.现在
+must be true. And MATLAB has given us a value of 1. Now
+
+24
+00:02:09,940 --> 00:02:15,099
+我们将注意到我们在工作空间中创建了一个名为ans的​​新变量。Ans是自动的
+we will note that we have created a new variable in the workspace called ans. Ans is an automatic
+
+25
+00:02:15,099 --> 00:02:20,920
+MATLAB用来保存最后一个操作或命令的结果的变量
+variable that MATLAB uses to hold always the result of the last operation or command that
+
+26
+00:02:20,920 --> 00:02:24,230
+已经给出了。它是逻辑类型，这意味着它可以
+has been given. It is of logical type, which means it can
+
+27
+00:02:24,230 --> 00:02:30,120
+只有真或假的值。所以我们得到了这个问题的答案
+only have values of true or false. So the answer that we got to this question
+
+28
+00:02:30,120 --> 00:02:35,220
+是1，1是MATLAB用来表示true概念的数值。
+is 1, and 1 is the numerical value that MATLAB uses to represent the concept of true.
+
+29
+00:02:35,220 --> 00:02:39,980
+同样，如果我们问的问题是“1大于2？”，我们就知道这一点
+Similarly, if we ask the question ‘is 1 greater than 2?’, and we know that this
+
+30
+00:02:39,980 --> 00:02:45,970
+是假的，MATLAB返回的数值为0.这是MATLAB代表的方式
+is false, MATLAB has returned as a numerical value of 0. It is how MATLAB represents the
+
+31
+00:02:45,970 --> 00:02:49,510
+虚假的概念。MATLAB有几个内置变量
+concept of false. MATLAB has got a couple of built in variables
+
+32
+00:02:49,510 --> 00:02:55,439
+代表这些价值观。我们可以问它真实的价值。等效数值
+to represent these values. We can ask it the value of true. The equivalent numerical value
+
+33
+00:02:55,439 --> 00:03:01,040
+是1.并且假，等效数值为0。
+is 1. And false, the equivalent numerical value is 0.
+
+34
+00:03:01,040 --> 00:03:07,870
+我们也可以进行相等测试，所以我们可以说'1等于2？'。它不是;它
+We can also do an equality test, so we can say ‘is 1 equal to 2?’. It is not; it
+
+35
+00:03:07,870 --> 00:03:12,170
+是假的。'2等于2吗？'是的，这是真的。
+is false. ‘Is 2 equal to 2?’ Yes that is true.
+
+36
+00:03:12,170 --> 00:03:19,000
+当然，我们可以为变量分配逻辑测试，所以我可以说'a等于2
+We can, of course, assign logical tests to variables, so I can say ‘a is equal to 2
+
+37
+00:03:19,000 --> 00:03:25,480
+等于3？'。我们在该工作空间中创建了一个名为a的新逻辑变量，它有一个值
+equals 3?’. We created a new logical variable in that workspace called a, and it has a value
+
+38
+00:03:25,480 --> 00:03:31,510
+0，或假。之前我们研究过矢量化的概念
+of 0, or false. Earlier we looked at the concept of vectorization
+
+39
+00:03:31,510 --> 00:03:37,680
+当我们在矩阵和标量之间进行算术运算时。逻辑运算符可以
+when we perform arithmetic between a matrix and a scalar. Well the logical operators can
+
+40
+00:03:37,680 --> 00:03:44,629
+也可以以矢量化形式使用。在这种情况下发生的是逻辑测试完成
+also be used in a vectorized form. What happens in this case is that the logical test is done
+
+41
+00:03:44,629 --> 00:03:50,890
+在输入矩阵中的每个元素和标量之间，结果是一个矩阵
+between every element in the input matrix, and the scalar, and the result is a matrix
+
+42
+00:03:50,890 --> 00:03:56,969
+与输入矩阵的大小相同，其中每个元素都是逻辑值。该
+with the same size as the input matrix in which every element is a logical value. The
+
+43
+00:03:56,969 --> 00:04:01,329
+输出矩阵中的元素为true或false。
+elements in the output matrix are either true or false.
+
+44
+00:04:01,329 --> 00:04:06,499
+让我们展示一个具体的例子。我要创建一个矩阵m，它就要开始了
+Let’s show a concrete example of this. I am going to create a matrix m and it is going
+
+45
+00:04:06,499 --> 00:04:13,129
+包含1到10之间的随机整数元素。矩阵将是4乘4。
+to contain random integer elements between 1 and 10. The matrix is going to be 4 by 4.
+
+46
+00:04:13,129 --> 00:04:20,900
+我们有它。现在，如果我对此矩阵应用逻辑测试，
+There we have it. Now if I apply a logical test to this matrix,
+
+47
+00:04:20,900 --> 00:04:26,060
+MATLAB要做的是将矩阵的每个元素与5进行比较。它正在进行中
+what MATLAB is going to do is to compare every element of the matrix with 5. It is going
+
+48
+00:04:26,060 --> 00:04:32,490
+将>5测试应用于每个元素。所以我们可以在这个结果中看到：无论在哪里
+to apply the >5 test to each element. And so what we can see in this result: wherever
+
+49
+00:04:32,490 --> 00:04:36,550
+有一个，这表示一个大于5的元素。
+there are ones, this indicates an element that is greater than 5.
+
+50
+00:04:36,550 --> 00:04:44,400
+您还可以看到此结果是逻辑类型的矩阵;也就是说，每一个元素
+You can also see that this result is a matrix of logical type; that is, every element in
+
+51
+00:04:44,400 --> 00:04:51,430
+此矩阵是一个逻辑值，只能是真或假，由数字表示
+this matrix is a logical value which can only be true or false, represented by the numeric
+
+52
+00:04:51,430 --> 00:04:58,490
+值分别为1或0。我可以对这个矩阵应用相等测试
+values 1 or 0 respectively. I can apply an equality test to this matrix
+
+53
+00:04:58,490 --> 00:05:02,100
+同样，我可以寻找所有相同的元素
+as well, and I can look for all of the elements that are equal
+
+54
+00:05:02,100 --> 00:05:09,130
+我现在发现的是一个矩阵，其中两个表示元素
+to 3. And what I find now is a matrix where the two ones indicate the elements of the
+
+55
+00:05:09,130 --> 00:05:11,910
+原始矩阵等于3.我们将继续前一个
+original matrix that were equal to 3. We are going to follow on from a previous
+
+56
+00:05:11,910 --> 00:05:16,139
+例子，我们要做的是创建一个新变量;在这种情况下它会
+example and what we are going to do is create a new variable; in this case it is going to
+
+57
+00:05:16,139 --> 00:05:22,470
+被称为b。我要做的是对图像中的每个像素应用逻辑测试
+be called b. What I am going to do is to apply a logical test to every pixel in the image
+
+58
+00:05:22,470 --> 00:05:27,900
+即时通讯，这是你可以在上面看到的企鹅标志的形象。我要比较一下
+im, which is the image of the penguin sign you can see above. And I am going to compare
+
+59
+00:05:27,900 --> 00:05:33,520
+所有这些像素值都是数值0.45，它将创建一个新变量
+all of these pixel values to the numeric value 0.45, and it is going to create a new variable
+
+60
+00:05:33,520 --> 00:05:36,360
+在我的工作区中，我们可以看到它是逻辑类型。
+in my workspace and we can see that it is of type logical.
+
+61
+00:05:36,360 --> 00:05:44,729
+我们看到它与原始图像im具有相同的尺寸。它有730行和1047列。
+We see it has the same dimensions as the original image im. It has got 730 rows and 1047 columns.
+
+62
+00:05:44,729 --> 00:05:51,050
+它属于逻辑类型。此新矩阵中的每个元素都具有false值
+It is of type logical. Each element in this new matrix has got a value of either false
+
+63
+00:05:51,050 --> 00:05:54,860
+或者是真的。现在让我们显示这个逻辑图像。
+or true. Now let’s display this logical image.
+
+64
+00:05:54,860 --> 00:06:00,710
+我们走了，现在我们看到的是像素值非常清晰的图像;他们
+Here we go, and what we see now is an image where the pixel values are quite crisp; they
+
+65
+00:06:00,710 --> 00:06:06,530
+是黑色还是白色。黑色值-我点击这里-得到的值为0，他们是
+are either black or white. The black values — I click on here — have got a value of 0, they’re
+
+66
+00:06:06,530 --> 00:06:11,050
+假。这意味着他们没有通过测试-他们不到0.45。哪个像素
+false. That means that they don’t pass the test — they are less than 0.45. Where a pixel
+
+67
+00:06:11,050 --> 00:06:16,590
+这里的值为1，它通过了测试-它大于0.45。
+here has a value of 1, it does pass the test — it is greater than 0.45.
+
+68
+00:06:16,590 --> 00:06:22,349
+现在，您可能会问的问题是0.45的数量来自何处。好吧，我选择了
+Now, the question you might ask is where does this number of 0.45 come from. Well I chose
+
+69
+00:06:22,349 --> 00:06:26,840
+它基于直方图，因为直方图非常清楚地表明存在
+it based on the histogram, because the histogram indicates to me quite clearly that there is
+
+70
+00:06:26,840 --> 00:06:32,680
+一堆像素值小于0.45的像素，对应的是暗色的像素
+a bunch of pixels with a value less then around 0.45, which are the dark ones corresponding
+
+71
+00:06:32,680 --> 00:06:37,819
+到后台。然后有一组明亮的像素通常大于0.45，
+to the background. And then there is a set of bright pixels generally bigger then 0.45,
+
+72
+00:06:37,819 --> 00:06:42,949
+它包括前景或感兴趣的对象，图标和字符
+which comprise the foreground or the objects of interest, the icons and the characters
+
+73
+00:06:42,949 --> 00:06:47,110
+在那个标志上。现在我可以选择不同的值
+on that sign. Now I can choose a different value for the
+
+74
+00:06:47,110 --> 00:06:51,949
+阈。我可以选择，例如，我可以选择使阈值更大一些。
+threshold. I can choose, for instance, I can choose to make the threshold a little bigger.
+
+75
+00:06:51,949 --> 00:07:00,979
+我可以选择说0.6，我可以显示新图像，我们现在看到结果
+I can maybe choose say 0.6, and I can display that new image and we see now that the results
+
+76
+00:07:00,979 --> 00:07:05,830
+有些相似。那个标志顶部的小写字已经解体了
+are somewhat similar. The small writing at the top of that sign has disintegrated and
+
+77
+00:07:05,830 --> 00:07:12,009
+当你更改阈值时经常发生这种情况，一些对象将开始碎片化并消失。
+that often happens as you change the threshold, some objects will start to fragment and disappear.
+
+78
+00:07:12,009 --> 00:07:17,220
+我们可以使用工具箱，而不是以一种笨拙的试错方式做到这一点
+Rather than do this in a kind of clumsy trial and error fashion, we can use the toolbox
+
+79
+00:07:17,220 --> 00:07:22,389
+功能ithresh。在这种情况下，我们传入了我们感兴趣的图像-和
+function ithresh. We pass in the image that we are interested in —im in this case — and
+
+80
+00:07:22,389 --> 00:07:28,069
+我们有一个滑块。在顶部，我们看到当前阈值的指标。
+what we have is a slider. Up the top we see an indicator of the current threshold value.
+
+81
+00:07:28,069 --> 00:07:33,819
+它默认为0.5。如果我来到这里抓住滑杆我可以提高门槛，
+It defaults to 0.5. If I come down here and grab the slider bar I can increase the threshold,
+
+82
+00:07:33,819 --> 00:07:39,840
+现在是0.54。我可以把它做大，我可以逐步看到它，因为我提高了
+now it is 0.54. I can make it bigger, and we can see that progressively as I raise the
+
+83
+00:07:39,840 --> 00:07:45,509
+阈。像素越来越少，其值大于阈值和结果
+threshold. Fewer and fewer pixels have a value greater than the threshold and the result
+
+84
+00:07:45,509 --> 00:07:49,340
+越来越像是黑色的形象。同样，如果我降低阈值
+is increasingly a black image. Similarly, if I reduce the threshold down
+
+85
+00:07:49,340 --> 00:07:55,789
+在这里说一些像0.41的东西，我们当然看到所有的字母都出现在那里
+here to say something like 0.41, we certainly see that all the letters appear there quite
+
+86
+00:07:55,789 --> 00:08:00,479
+完全。随着我进一步降低门槛，我们将看到一些亮点
+completely. As I reduce the threshold even further what we will see is some bright parts
+
+87
+00:08:00,479 --> 00:08:07,069
+当我们应用阈值测试并最终开始变为真实时
+of the background starting to become true when we apply the threshold test and eventually
+
+88
+00:08:07,069 --> 00:08:11,650
+结果不是那么明确。因此，当您选择阈值时，通常会有
+the result is not quite so clear cut. So when you choose a threshold there is generally
+
+89
+00:08:11,650 --> 00:08:17,289
+甜蜜点。太低的结果都是白色，太高，结果都是黑色的。那里
+a sweet spot. Too low the result is all white, too high and the result is all black. There
+
+90
+00:08:17,289 --> 00:08:22,750
+在中间是个好地方。现在选择一个门槛是一件困难的事情;
+is a sweet spot in the middle. Now choosing a threshold is a difficult thing;
+
+91
+00:08:22,750 --> 00:08:28,060
+需要一点技巧，但主要是我们应该通过直方图得知
+requires a bit of skill, but primarily we should be informed by the histogram which
+
+92
+00:08:28,060 --> 00:08:32,380
+告诉我们一些关于灰度值如何在图像中分布的信息。和
+tells us something about how the grey scale values are distributed within an image. And
+
+93
+00:08:32,380 --> 00:08:35,740
+我们用它来做出智能的，首选的门槛。
+we use that to make an intelligent, first choice of the threshold.
+

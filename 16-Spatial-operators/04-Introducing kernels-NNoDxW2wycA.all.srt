@@ -1,0 +1,505 @@
+1
+00:00:03,800 --> 00:00:09,019
+让我们再看看我们在一两代之前引入的平均过程。这里
+Let’s look again at the averaging process that we introduced a segment or two ago. Here
+
+2
+00:00:09,019 --> 00:00:14,100
+我们有蒙娜丽莎的原始形象，在这里我们有蒙娜丽莎的版本
+we have our original image of the Mona Lisa and here we have the version of the Mona Lisa
+
+3
+00:00:14,100 --> 00:00:20,470
+我们在21x21像素输入窗口上应用了平均值。会发生什么
+where we have applied an averaging over a 21 by 21 pixel input window. What can happen
+
+4
+00:00:20,470 --> 00:00:25,419
+当我们在一个方形窗口上执行平均值时，它会导致图像中的人工制品
+when we perform the average over a square window it leads to an artefact in the image
+
+5
+00:00:25,419 --> 00:00:31,710
+叫响了。它引入了非常微弱的垂直和水平线，我们可以看到一些
+called ringing. It introduces very faint vertical and horizontal lines and we can see a few
+
+6
+00:00:31,710 --> 00:00:38,670
+在她的嘴唇之上，在她的眼睛上方和下方。出现这个问题是因为像素中的
+above her lips and above and below her eyes. This problem arises because the pixels in
+
+7
+00:00:38,670 --> 00:00:44,989
+输入窗口距离窗口中心的距离不同。特别是，
+the input window are different distances away from the centre of the window. In particular,
+
+8
+00:00:44,989 --> 00:00:49,579
+这里的这个像素是距离窗口中心2个距离的距离
+this pixel here is the distance of 2 away from the centre of the window where this pixel
+
+9
+00:00:49,579 --> 00:00:55,760
+这里距离市中心2√2。这是一个差不多3个像素的值
+here is a distance 2√2 away from the centre. That is a value of almost 3 pixels away from
+
+10
+00:00:55,760 --> 00:01:01,320
+中心。结果是平均值受像素值的不当影响
+the centre. And the result is that the average is unduly influenced by pixel values that
+
+11
+00:01:01,320 --> 00:01:06,320
+距离市中心很远。我们说这个操作不是各向同性的;那
+are a long way from the centre. And we say that this operation is not isotropic; that
+
+12
+00:01:06,320 --> 00:01:12,320
+意味着它在不同方向上有不同的结果。它不是对称的。
+means that it has different results in different directions. It is not symmetrical.
+
+13
+00:01:12,320 --> 00:01:17,690
+理想情况下，我们想要做的是提取像素的圆形区域;我们想
+Ideally what we would like to do is to extract a circular region of pixels; we would like
+
+14
+00:01:17,690 --> 00:01:23,000
+获取落在此圆盘下方的所有像素。但问题是这个
+to take all of the pixels that fall underneath this circular disk. But the problem with this
+
+15
+00:01:23,000 --> 00:01:27,470
+是磁盘没有完全覆盖所有像素;周围的一些像素
+is that the disk doesn’t fully cover all of the pixels; some of the pixels around the
+
+16
+00:01:27,470 --> 00:01:32,270
+边缘-尤其是角落中的边缘-仅被磁盘部分覆盖。以便
+edge — particularly the ones in the corner — are only partially covered by the disk. So that
+
+17
+00:01:32,270 --> 00:01:37,520
+让我们拍摄一小部分像素。让我们来看看我们可以做到这一点的方式。
+involves us taking a fraction of a pixel. Let’s look at a way we can do this.
+
+18
+00:01:37,520 --> 00:01:43,710
+我们这样做的方式是应用加权。让我们放大这个圆形区域
+And the way we do it is to apply a weighting. Let’s zoom in on this circular region that
+
+19
+00:01:43,710 --> 00:01:49,320
+我们创建了它，它是一个直径为2.5像素的圆。我们想要
+we have created and it’s a circle with a diameter of 2.5 pixels. And we want to take
+
+20
+00:01:49,320 --> 00:01:58,560
+所有这些像素，因为它完全被磁盘覆盖。但我们只想采取一小部分
+all of this pixel because it is fully covered by the disk. But we only want to take a fraction
+
+21
+00:01:58,560 --> 00:02:04,310
+这个像素;我们希望它在平均值上具有较小的重要性或较小的权重
+of this pixel; we want it to have less significance or less weight in the average that we are
+
+22
+00:02:04,310 --> 00:02:08,629
+去计算。所以我们能做的就是计算一组权重。
+going to compute. So what we can do is to compute a set of weights.
+
+23
+00:02:08,629 --> 00:02:13,140
+对于完全被磁盘覆盖的像素，权重等于1.但是如果是磁盘
+For pixels that are fully covered by the disk, the weight is equal to 1. But if the disk
+
+24
+00:02:13,140 --> 00:02:17,670
+只有部分覆盖像素，然后重量小于一，我们可以看到那里
+only partly covers the pixel then the weight is less than one and we can see that there
+
+25
+00:02:17,670 --> 00:02:23,230
+有些像素被磁盘覆盖了98％，在角落里我们可以看到一些像素
+are some pixels 98% covered by the disk and in the corners we can see that some pixels
+
+26
+00:02:23,230 --> 00:02:30,310
+只有14％的磁盘覆盖。然后该矩阵表示不同的影响
+are only 14% covered by the disk. This matrix then represents the influence that the different
+
+27
+00:02:30,310 --> 00:02:36,560
+方形窗口内的像素应该具有得到的平均值。我们如何使用它
+pixels within the square window should have on the resulting average. How do we use this
+
+28
+00:02:36,560 --> 00:02:40,780
+加权矩阵？我们要做的就是全力以赴
+weighting matrix? What we are going to do is to take all of
+
+29
+00:02:40,780 --> 00:02:45,960
+来自输入图像的像素，这里是一组像素值的示例。和我们
+the pixels from the input image and here is an example of a set of pixel values. And we
+
+30
+00:02:45,960 --> 00:02:51,890
+将通过加权矩阵将窗口内的所有像素相乘。还有这个
+are going to multiply all of the pixels within the window by the weighting matrix. And this
+
+31
+00:02:51,890 --> 00:02:57,180
+是元素明智的乘法，有时称为希尔伯特乘法。所以我们采取
+is an element wise multiplication, sometimes called a Hilbert multiplication. So we take
+
+32
+00:02:57,180 --> 00:03:02,709
+来自这两个矩阵的相应元素，将它们相乘，将结果放入
+corresponding elements from these two matrices, multiply them together, put the result into
+
+33
+00:03:02,709 --> 00:03:08,990
+输出矩阵中的对应元素。所以在这里我们有像素值
+the corresponding element in the output matrix. So over here we have the pixel value from
+
+34
+00:03:08,990 --> 00:03:12,990
+原始图像，但我们用加权矩阵乘以它们
+the original image, but we have multiplied them by the weighting matrix so that the ones
+
+35
+00:03:12,990 --> 00:03:18,630
+在角落里有一个较低的价值，不太能够影响平均值。现在
+in the corners have got a lower value, less able to influence the resulting average. Now
+
+36
+00:03:18,630 --> 00:03:23,630
+我们将计算该产品的总和，这是所有像素的乘积
+we will compute the sum over this product and that is the product of all of the pixels
+
+37
+00:03:23,630 --> 00:03:29,630
+在输入窗口中，我们用W和加权矩阵中的所有值表示。
+in the input window which we denote by W and all of the values in the weighting matrix.
+
+38
+00:03:29,630 --> 00:03:33,470
+我现在要将加权矩阵称为内核。
+And I am going to now refer to that weighting matrix as a kernel.
+
+39
+00:03:33,470 --> 00:03:38,310
+内核是一种常用于图像处理的术语。我们要计算
+Kernel is a term that is commonly used in image processing. And we are going to compute
+
+40
+00:03:38,310 --> 00:03:46,880
+这两个小方形图像的元素乘法和结果的总和
+the sum of the element wise multiplication of these two small square images and the result
+
+41
+00:03:46,880 --> 00:03:53,790
+是我们放入输出图像的东西。所以我们的函数f（W）等于
+is what we place into the output image. So our function f(W) is equal to the sum of the
+
+42
+00:03:53,790 --> 00:03:58,290
+元素明智地乘以输入窗口和内核。
+element wise multiplication of the input window and the kernel.
+
+43
+00:03:58,290 --> 00:04:02,930
+现在考虑我有一个输入图像，其中所有像素均匀且等于
+Consider now that I have an input image where all of the pixels are uniform and equal to
+
+44
+00:04:02,930 --> 00:04:08,410
+1.如果我将此内核应用于该图像，结果将是该图像中的每个像素
+1. If I applied this kernel to that image, the result will be that every pixel in the
+
+45
+00:04:08,410 --> 00:04:15,569
+输出图像的值为19.6。输入图像，值均为1，输出图像
+output image would have a value of 19.6. Input image, the values are all 1, output image
+
+46
+00:04:15,569 --> 00:04:22,370
+都是19.6。我们可以通过应用比例因子和比例因子来解决这个问题
+are all 19.6. And we can get around this by applying a scale factor, and a scale factor
+
+47
+00:04:22,370 --> 00:04:27,939
+由内核中所有元素的总和确定;如果我们划分内核
+is determined from the sum of all of the elements within the kernel; if we divide the kernel
+
+48
+00:04:27,939 --> 00:04:33,520
+通过它的所有元素的总和，我们有一个规范化的内核，如果我们应用它
+by the sum of all of its elements we have a normalised kernel and if we apply this to
+
+49
+00:04:33,520 --> 00:04:38,229
+一个图像，其中所有输入像素的值都为1，输出图像将具有
+an image, where all of the input pixels have got a value of 1, the output image will have
+
+50
+00:04:38,229 --> 00:04:44,370
+它的所有像素都等于1。这是一个规范化的内核，所以通常我们尝试和
+all of its pixels equal to one. This is a normalised kernel, so typically we try and
+
+51
+00:04:44,370 --> 00:04:49,240
+计算一个比例因子为1的内核。
+compute a kernel that has got a scale factor of 1.
+
+52
+00:04:49,240 --> 00:04:53,180
+所以我们在本讲座开头就看到了简单的平均值
+So the simple averaging that we looked at right at the beginning of this lecture we
+
+53
+00:04:53,180 --> 00:04:58,729
+也可以把它想象成一个内核。事实上，它是一个非常简单的内核所有的
+can also think of it as a kernel. In fact, it is a very simple kernel where all of the
+
+54
+00:04:58,729 --> 00:05:03,069
+窗口中的元素等于1.所以这是7乘7窗口的示例。该
+elements in the window are equal to 1. So here is the example for a 7 by 7 window. The
+
+55
+00:05:03,069 --> 00:05:10,039
+我们将7乘7的矩阵除以49，使整体比例因子相等
+7 by 7 matrix of ones, we divide it by 49 so that the overall scale factor is equal
+
+56
+00:05:10,039 --> 00:05:17,050
+因此，这是处理空间操作的一种相当统一的方式-它们都可以
+to 1. So this is a fairly uniform way of dealing with spatial operations—they can all be
+
+57
+00:05:17,050 --> 00:05:23,449
+由内核矩阵表示。在MATLAB工具箱中，我们使用一个名为iconv的函数。
+represented by a kernel matrix. And in the MATLAB tool box we use a function called iconv.
+
+58
+00:05:23,449 --> 00:05:28,210
+我们传递了图像，在这种情况下传递了蒙娜丽莎图像。第二个论点是
+We pass in the image and in this case the Mona Lisa image. The second argument is the
+
+59
+00:05:28,210 --> 00:05:33,680
+在这种情况下，核矩阵是一个7乘7的矩阵，其中有一个除以49.该函数
+kernel matrix in this case it is a 7 by 7 matrix full of ones, divided by 49. The function
+
+60
+00:05:33,680 --> 00:05:38,650
+ones是内置的MATLAB函数。另一个在图像中常用的内核
+ones is a built-in MATLAB function. Another kernel that is commonly used in image
+
+61
+00:05:38,650 --> 00:05:44,089
+处理是高斯核心，以着名的德国数学家卡尔-弗里德里希命名
+processing is the Gaussian kernel, named after the very famous German mathematician Carl-Friedrich
+
+62
+00:05:44,089 --> 00:05:49,309
+高斯。您之前可能遇到过此函数的一维版本;
+Gauss. You have perhaps encountered the one dimensional version of this function before;
+
+63
+00:05:49,309 --> 00:05:54,249
+这是我们在统计中看到的正态分布。这个功能很简单
+it is the normal distribution that we see in statistics. This function has got a simple
+
+64
+00:05:54,249 --> 00:05:59,479
+优雅的分析形式，如果我们在三维中绘制它有外观
+and elegant analytic form and if we plot it in three dimensions it has the appearance
+
+65
+00:05:59,479 --> 00:06:05,300
+一个平缓的山丘。相反，如果我们将此功能表示为亮度的图像
+of a gentle hill. If, instead, we represent this function as an image where brightness
+
+66
+00:06:05,300 --> 00:06:09,539
+与左侧显示的函数的高度成正比，我们有一个图像
+is proportional to height of the function shown over on the left, we have an image that
+
+67
+00:06:09,539 --> 00:06:13,659
+看起来像这样。中间是明亮的，我们可以看到强度
+looks something like this. It is bright in the middle and we can see that the intensity
+
+68
+00:06:13,659 --> 00:06:20,069
+在所有方向均匀地脱落。这是各向同性的功能，重量减少
+falls off uniformly in all directions. This is an isotropic function and the weight decreases
+
+69
+00:06:20,069 --> 00:06:26,039
+当我们离开中心时。在MATLAB工具箱中，我们可以使用计算这个内核
+as we move away from the centre. In the MATLAB tool box, we can compute this kernel using
+
+70
+00:06:26,039 --> 00:06:31,509
+功能kgauss。第一个参数是标准差，即符号σ
+the function kgauss. The first argument is the standard deviation, the symbol σ on the
+
+71
+00:06:31,509 --> 00:06:36,520
+left，第二个参数是内核的半宽。在这种情况下，一半
+left, and the second argument is the half width of the kernel. In this case, the half
+
+72
+00:06:36,520 --> 00:06:42,409
+宽度为15因此全宽为2x15+1;也就是说，一个31的内核
+width is 15 so therefore the full width is 2x15 + 1; that is, a kernel that is 31 by
+
+73
+00:06:42,409 --> 00:06:47,779
+31像素。内核的一个重要参数是
+31 pixels. An important parameter of the kernel is the
+
+74
+00:06:47,779 --> 00:06:54,129
+标准偏差，符号σ，在分析表达式中出现两次。它控制着
+standard deviation, the symbol σ, which appears twice in the analytic expression. It controls
+
+75
+00:06:54,129 --> 00:06:59,759
+内核的宽度，因此对于σ为2，我们看到有一个非常高的尖峰;
+the width of the kernels, so for a σ of 2 we see that there is a very tall, pointy peak;
+
+76
+00:06:59,759 --> 00:07:06,809
+对于σ为5，它更广泛;对于σ10，它仍然更广泛。高斯下的区域
+for a σ of 5 it is much broader; for σ 10 it is broader still. The area under the Gaussian
+
+77
+00:07:06,809 --> 00:07:13,349
+功能总是一个。随着它越来越宽，它变得不那么高了。重要的考虑因素
+function is always one. So as it gets wider it becomes less tall. An important consideration
+
+78
+00:07:13,349 --> 00:07:19,159
+当我们使用高斯进行图像处理时，内核应该是多大的。内核
+when we use the Gaussian for image processing is what size should the kernel be. The kernel
+
+79
+00:07:19,159 --> 00:07:24,399
+需要足够大才能保持高斯的大部分，这显然正在发生
+needs to be big enough to hold the bulk of the Gaussian so, and that clearly is going
+
+80
+00:07:24,399 --> 00:07:29,309
+取决于标准偏差。因此，一个非常好的经验法则是制作一半
+to depend on the standard deviation. So a pretty good rule of thumb is to make the half
+
+81
+00:07:29,309 --> 00:07:33,789
+内核的宽度等于标准偏差的三倍。
+width of the kernel equal to three times the standard deviation.
+
+82
+00:07:33,789 --> 00:07:38,129
+让我们创建其中一个高斯内核;我将把它放入一个名为的变量中
+Let’s create one of these Gaussian kernels; I am going to put it into a variable called
+
+83
+00:07:38,129 --> 00:07:45,389
+K.这是kgauss函数，我希望它的标准偏差为5，我想要
+K. It is the kgauss function and I want it to have a standard deviation of 5 and I wanted
+
+84
+00:07:45,389 --> 00:07:52,669
+在一个半宽为15的窗口中。所以这实际上是31个31内核。
+to be in a window with a half width of 15. So that will actually be 31 by 31 kernel.
+
+85
+00:07:52,669 --> 00:07:59,500
+我们走了。我们在工作空间中创建了一个31乘31的矩阵，其中包含高斯核。
+There we go. We have created a 31 by 31 matrix in the workspace which contains the Gaussian kernel.
+
+86
+00:07:59,509 --> 00:08:02,429
+现在我可以将其显示为图像。
+Now I can display this as an image.
+
+87
+00:08:05,600 --> 00:08:08,900
+在那里我们看到它本质上是一个磁盘，
+And there we see it is essentially a disk,
+
+88
+00:08:08,909 --> 00:08:13,129
+它在中间是明亮的，它对窗口中心的值有很高的权重
+it is bright in the middle, it has got a high weighting to values in the centre of the window
+
+89
+00:08:13,129 --> 00:08:19,439
+并且对于远离窗口中心的像素的权重较低。
+and lower weighting for pixels that are further away from the centre of the window.
+
+90
+00:08:19,439 --> 00:08:23,659
+现在我可以创建一个新的数字。我可以用不同的方式看待它;我可以看看
+Now I can create in a new figure. And I can look at it in a different way; I can look
+
+91
+00:08:23,659 --> 00:08:29,219
+通过创建MATLAB曲面图以三维方式实现它。在那里我们看到了
+at it in a three dimensional way by creating a MATLAB surface plot. And there we see the
+
+92
+00:08:29,219 --> 00:08:35,870
+高斯窗口，形状非常鲜明。中间高，价值下降
+Gaussian window, very distinctive shape. Tall in the middle and with the decreasing values
+
+93
+00:08:35,870 --> 00:08:42,920
+因为我们离开中心。让我们将此内核应用于标准测试图像，
+as we go away from the centre. Let’s apply this kernel to a standard test image,
+
+94
+00:08:42,920 --> 00:08:46,940
+所以我们将加载蒙娜丽莎的图像。
+so we will load the Mona Lisa image.
+
+95
+00:08:55,740 --> 00:09:03,400
+我将创建一个名为S的新图像用于平滑，我将它与内核相关联。
+I will create a new image called S for smooth and I will correlate it with the kernel.
+
+96
+00:09:03,700 --> 00:09:08,200
+我们在那里创建了输出图像。我可以显示
+There we have created the output image. I can display
+
+97
+00:09:08,209 --> 00:09:13,680
+那我们可以看到图像已经过平滑处理;我们也可能会说它看起来有点像
+that and we can see that the image has been smoothed; we might also say it looks a bit
+
+98
+00:09:13,680 --> 00:09:17,850
+模糊。看起来它失去了一些解决方案。我们所做的就是顺利完成
+blurry. Looks like it has lost some of its resolution. What we’ve done is smooth out
+
+99
+00:09:17,850 --> 00:09:24,670
+非常精细的比例细节，只留下图像中的粗细节。
+the very fine scale detail and left just the coarse detail in the image.
+
+100
+00:09:24,670 --> 00:09:30,120
+你可以看到，对于Kσ等于2，我们有一个相对较小的内核大小;对于
+And you can see that for the Kσ equals 2, we have a relatively small kernel size; for
+
+101
+00:09:30,120 --> 00:09:33,079
+σ等于5，我们必须使用更大的内核。
+σ equals 5, we have to use a much larger kernel.
+

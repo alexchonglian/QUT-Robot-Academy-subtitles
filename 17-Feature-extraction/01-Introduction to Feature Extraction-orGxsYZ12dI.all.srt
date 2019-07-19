@@ -1,0 +1,65 @@
+1
+00:00:03,500 --> 00:00:08,119
+今天我们要讨论一个问题，这实际上是机器人视觉的核心。
+Today we're going to talk about a problem, which is really at the heart of robotic vision.
+
+2
+00:00:08,119 --> 00:00:13,560
+机器人是相对简单的机器。如果我们考虑工业机器人的情况，
+Robots are relatively simple machines. If we consider the case of an industrial robot,
+
+3
+00:00:13,560 --> 00:00:18,929
+一个有六个关节，我们可以通过简单地指定六个速度来控制它
+one that's got six joints, we can control that by simply specifying six velocities or
+
+4
+00:00:18,929 --> 00:00:25,260
+速度。我们指定每个电机的速度，机器人可以做任何动作。
+speeds. We specify the speed of each of its motors and the robot can do any kind of action.
+
+5
+00:00:25,260 --> 00:00:30,460
+轮式移动机器人，我们通过简单地指定两个速度来控制;这就是速度
+A wheeled mobile robot, we control by specifying simply two velocities; that's the velocity
+
+6
+00:00:30,460 --> 00:00:35,920
+它向前行驶的速度和转弯的速度。所以我们遇到了问题
+at which it drives forward and the velocity at which is turns. So we've got a problem
+
+7
+00:00:35,920 --> 00:00:40,890
+因为从相机发出的数据量大约是数百万的数量级
+because the amount of data that comes out of a camera is of the order of 10's of millions
+
+8
+00:00:40,890 --> 00:00:46,320
+每秒像素数;每秒数百万的数字。但我们只需要两个或者
+of pixels per second; 10's of millions of numbers per second. But we need only two or
+
+9
+00:00:46,320 --> 00:00:50,850
+六，极少数，以实际控制机器人。这就像试着喝酒
+six, a very small number, in order to actually control the robot. It's like trying to drink
+
+10
+00:00:50,850 --> 00:00:54,850
+从消防水带出来;来自相机的大量数据，少量的
+out of a fire hose; massive amount of data coming out of the camera, small amount of
+
+11
+00:00:54,850 --> 00:01:00,150
+控制机器人所需的数据。因此，为了解决这个问题，我们执行了一项技术
+data needed to control the robot. So to get around this problem we perform a technique
+
+12
+00:01:00,150 --> 00:01:05,670
+被称为“特征提取”，我们要做的就是找到图像的本质;
+called "Feature Extraction" and what we're trying to do is find the essence of the image;
+
+13
+00:01:05,670 --> 00:01:09,960
+图像中最重要的信息，我们可以直接喂我们的机器人。
+the most important information in the image, we can feed directly to our robot.
+

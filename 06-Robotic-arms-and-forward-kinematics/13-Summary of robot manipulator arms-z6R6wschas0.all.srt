@@ -1,0 +1,630 @@
+1
+00:00:03,280 --> 00:00:07,160
+让我们总结一下我们在本次讲座中学到的内容，本讲座就是全部
+Let’s summarize what we’ve learned in this lecture and this lecture has been all
+
+2
+00:00:07,160 --> 00:00:08,740
+关于正向运动学。
+about forward kinematics.
+
+3
+00:00:08,740 --> 00:00:13,990
+这是确定机器人尖端或机器人末端执行器姿势的问题
+That’s the problem of determining the pose of the robot tip or the robot’s end effector
+
+4
+00:00:13,990 --> 00:00:20,040
+给定一组关节坐标，随着机器人的移动而变化的东西。
+given a set of the joint coordinates, the things that vary as the robot moves.
+
+5
+00:00:20,040 --> 00:00:26,290
+对于关节内的机器人，我们将末端效应器姿势表示为KsiN，它是一个函数
+For a robot within joints, we denote the end effector pose as Ksi N and it is a function
+
+6
+00:00:26,290 --> 00:00:31,980
+关节坐标，它是长度为N的向量。并且，我们通常表示
+of the joint coordinates, which are vector of length N. And, we typically denote the
+
+7
+00:00:31,980 --> 00:00:38,309
+由符号Q和映射关节角度的函数的关节坐标向量
+vector of joint coordinates by the symbol Q and this function which maps the joint angles
+
+8
+00:00:38,309 --> 00:00:44,870
+对于末端效应器姿势，我们用符号K，K表示运动学，正向运动学
+to the end effector pose, we denote by the symbol K, K for kinematic, the forward kinematic
+
+9
+00:00:44,870 --> 00:00:45,960
+功能。
+function.
+
+10
+00:00:45,960 --> 00:00:52,170
+我们查看了一些关于如何确定机器人工具提示姿势的示例。
+We looked at a number of examples about how to determine the robot tooltip pose.
+
+11
+00:00:52,170 --> 00:00:57,129
+我们通过绘制机器人，通过附加参考坐标框架来实现
+We did that by drawing the robot, by taking a reference coordinate frame attached to the
+
+12
+00:00:57,129 --> 00:01:01,129
+机器人的底座然后穿过机器人机构。
+base of the robot and then walking it through the robot mechanism.
+
+13
+00:01:01,129 --> 00:01:06,350
+我们将它旋转并将其从机器人的基座转换到末端执行器。
+We would rotate it and translate it from the base of the robot through to the end effector.
+
+14
+00:01:06,350 --> 00:01:12,530
+然后我们可以写下一系列基本变换，我们可以扩展它们
+We could then write down a sequence of elementary transformations, which we could expand and
+
+15
+00:01:12,530 --> 00:01:18,680
+乘以得出表示均匀变换的表达式
+multiply out to come up with an expression for a homogeneous transformation which represents
+
+16
+00:01:18,680 --> 00:01:21,250
+机器人末端执行器的姿势。
+the pose of the robot’s end effector.
+
+17
+00:01:21,250 --> 00:01:26,759
+因此，我们为一个只有两个关节的简单平面机器人做了它，我们也为一个机器人做了它
+So, we did it for a simple planar robot with just two joints and we also did it for a robot
+
+18
+00:01:26,759 --> 00:01:31,270
+四个关节，其末端执行器在三维空间中移动。
+with four joints whose end effector moves in three-dimensional space.
+
+19
+00:01:31,270 --> 00:01:35,539
+我们为一些二维和三维移动的机器人做到了这一点，
+We did this for a number of robots that move in two dimensions and in three dimensions,
+
+20
+00:01:35,539 --> 00:01:40,350
+并希望你能够了解如何写下这个转换表达式
+and hope you got the idea about how you can write down this transformation expression
+
+21
+00:01:40,350 --> 00:01:46,240
+几乎通过检查，只需看着机器人，在你的脑海里，走一个坐标
+almost by inspection, just by looking at the robot and, in your mind, walking a coordinate
+
+22
+00:01:46,240 --> 00:01:50,509
+框架从机器人的基座通过每个链接和每个关节直到
+frame from the base of the robot through each of the links and each of the joints until
+
+23
+00:01:50,509 --> 00:01:51,950
+它到达最终效应器。
+it get to the end effector.
+
+24
+00:01:51,950 --> 00:01:58,490
+这是为机器人末端执行器编写表达式的一种非常简单且非常直观的方式
+It’s a very simple and very intuitive way of writing the expression for robot end effector
+
+25
+00:01:58,490 --> 00:01:59,680
+姿势。
+pose.
+
+26
+00:01:59,680 --> 00:02:05,130
+我们介绍了配置空间的相当正式的概念。
+We introduced the rather formal concept of a configuration space.
+
+27
+00:02:05,130 --> 00:02:10,550
+如上所述，具有N个关节的机器人的配置是关节配置
+As just mentioned, the configuration of a robot with N joints is the joint configuration
+
+28
+00:02:10,550 --> 00:02:11,610
+向量。
+vector.
+
+29
+00:02:11,610 --> 00:02:17,129
+该矢量中的元素或角度，如果关节是旋转，旋转和它
+The elements in that vector or an angle if the joint is rotational, revolute, and it
+
+30
+00:02:17,129 --> 00:02:21,710
+如果关节是棱柱形或滑动，则是一个链接。
+is a link if the joint is prismatic or sliding.
+
+31
+00:02:21,710 --> 00:02:27,569
+所有这些向量的集合被称为机器人的配置空间。
+The set of all of these vectors is referred to as the configuration space of the robot.
+
+32
+00:02:27,569 --> 00:02:33,069
+它是实数N维空间的子集，其中N是关节的数量
+It’s a subset of the N dimensional space of real numbers where N is the number of joints
+
+33
+00:02:33,069 --> 00:02:34,370
+在机器人中。
+in the robot.
+
+34
+00:02:34,370 --> 00:02:38,709
+我们介绍的另一个概念是机器人的任务空间，这就是空间
+The other concept that we introduced is the task space of the robot and this is the space
+
+35
+00:02:38,709 --> 00:02:41,459
+所有可能的末端效应器姿势。
+of all possible end effector poses.
+
+36
+00:02:41,459 --> 00:02:46,709
+对于二维机器人，任务空间是SE2的子集，它是所有的集合
+For a two-dimensional robot, the task space is a subset of SE2 which is the set of all
+
+37
+00:02:46,709 --> 00:02:50,739
+飞机上可能的位置和方向。
+possible positions and orientations in the plane.
+
+38
+00:02:50,739 --> 00:02:56,129
+对于三维机器人，任务空间是SE3的子集，所有可能的集合
+For a three-dimensional robot, the task space is a subset of SE3, the set of all possible
+
+39
+00:02:56,129 --> 00:02:59,830
+三维空间中的位置和方向。
+positions and orientations in three-dimensional space.
+
+40
+00:02:59,830 --> 00:03:05,410
+对于这种2自由度的平面机器人手臂，其配置空间是其中的一个子集
+For this 2-degree of freedom planar robot arm, its configuration space is a subset of
+
+41
+00:03:05,410 --> 00:03:10,080
+二维实数的空间，因为可以描述配置
+the space of two-dimensional real numbers because the configuration can be described
+
+42
+00:03:10,080 --> 00:03:12,610
+由两个实数，Q1和Q2组成。
+by two real numbers, Q1 and Q2.
+
+43
+00:03:12,610 --> 00:03:18,500
+它的任务空间也是实数二维空间的一个子集，这是因为
+Its task space is also a subset of the two-dimensional space of real numbers and that’s because
+
+44
+00:03:18,500 --> 00:03:23,689
+它的末端效应器姿势可以用两个实数X和Y来描述。
+its end effector pose can be described by two real numbers, X and Y.
+
+45
+00:03:23,689 --> 00:03:28,099
+我们可以描述三自由度笛卡尔坐标的配置和任务空间
+We can describe the configuration and task space for a 3-degree of freedom Cartesian
+
+46
+00:03:28,099 --> 00:03:33,579
+龙门机器人我们也可以描述它为一个4自由度SCARA机器人的结束
+Gantry robot and we can also describe it for a 4-degree of freedom SCARA robot whose end
+
+47
+00:03:33,579 --> 00:03:36,709
+效应器在三个维度上移动。
+effector moves in three dimensions.
+
+48
+00:03:36,709 --> 00:03:41,200
+大多数功能真实世界的机器人，例如工业机器人，有六个关节。
+Most functional real world robots, for example industrial robots, have got six joints.
+
+49
+00:03:41,200 --> 00:03:44,640
+因此，它们的配置空间是六维的。
+So, their configuration space is six dimensional.
+
+50
+00:03:44,640 --> 00:03:49,860
+任务空间也是六维的，这意味着末端执行器可以采用任意的
+The task space is also six dimensional which means that the end effector can adopt an arbitrary
+
+51
+00:03:49,860 --> 00:03:56,410
+位置和在该特定工作量范围内的任意方向
+position and an arbitrary orientation within the limits of the working volume of that particular
+
+52
+00:03:56,410 --> 00:03:57,410
+机器人。
+robot.
+
+53
+00:03:57,410 --> 00:04:00,989
+配置空间的维度必须有一个重要的约束
+There is an important constraint that the dimension of the configuration space must
+
+54
+00:04:00,989 --> 00:04:05,120
+大于或等于任务空间的维度。
+be greater than or equal to the dimension of the task space.
+
+55
+00:04:05,120 --> 00:04:10,489
+这是一个机器人的例子，配置空间的尺寸要大得多
+Here’s an example of a robot where the dimension of the configuration space is much bigger
+
+56
+00:04:10,489 --> 00:04:12,450
+比任务空间的维度。
+than the dimension of the task space.
+
+57
+00:04:12,450 --> 00:04:16,920
+我们将这样的机器人称为冗余机器人。
+We refer to a robot like this as a redundant robot.
+
+58
+00:04:16,920 --> 00:04:22,079
+因此，虽然它的任务空间与6自由度机器人的任务空间相同
+So, although its task space is the same as that of a 6-degree of freedom robot like the
+
+59
+00:04:22,079 --> 00:04:27,090
+我们之前看过的Puma机器人，它能够采用任何三维姿势
+Puma robot we looked at previously, it’s able to adopt any pose in three-dimensional
+
+60
+00:04:27,090 --> 00:04:28,090
+空间。
+space.
+
+61
+00:04:28,090 --> 00:04:30,890
+它的配置空间要大得多。
+Its configuration space is much bigger.
+
+62
+00:04:30,890 --> 00:04:35,620
+它使用此逻辑配置空间，以便它不仅可以控制末端执行器
+It uses this logic configuration space so that it can control not only the end effector
+
+63
+00:04:35,620 --> 00:04:41,530
+姿势，但也是从基座到末端执行器的臂的形状。
+pose, but also the shape of the arm leading from the base to the end effector.
+
+64
+00:04:41,530 --> 00:04:44,430
+我们介绍了Denavit-Hartenberg符号。
+We introduced Denavit-Hartenberg notation.
+
+65
+00:04:44,430 --> 00:04:49,550
+这涉及将坐标框附加到机器人中每个链接的远端。
+This involves attaching a coordinate frame to the far end of each link in the robot.
+
+66
+00:04:49,550 --> 00:04:55,430
+然后，我们可以为连续链接引用之间的相对姿势编写表达式
+And then, we can write an expression for the relative pose between consecutive link reference
+
+67
+00:04:55,430 --> 00:04:56,430
+帧。
+frames.
+
+68
+00:04:56,430 --> 00:04:59,210
+Denavit-Hartenberg符号非常简洁。
+The Denavit-Hartenberg notation is very concise.
+
+69
+00:04:59,210 --> 00:05:04,750
+我们可以使用简单的四个参数来描述帧之间的关系。
+We can describe the relationship between frames using simply four parameters.
+
+70
+00:05:04,750 --> 00:05:09,300
+虽然我们放置链接坐标框架的位置，但这会产生许多限制。
+This imposes a number of constraints though on where we place the link coordinate frames.
+
+71
+00:05:09,300 --> 00:05:15,130
+并且，链接坐标框架不一定在物理上位于机器人的链路上
+And, the link coordinate frames do not necessarily physically lie on the links of the robots
+
+72
+00:05:15,130 --> 00:05:16,130
+本身。
+itself.
+
+73
+00:05:16,130 --> 00:05:21,160
+Denavit-Hartenberg表示法允许我们非常简洁地描述任何串行链接机制。
+A Denavit-Hartenberg notation allows us to very concisely describe any serial link mechanism.
+
+74
+00:05:21,160 --> 00:05:27,420
+因此，这是一个非常简洁的表格，描述了双连杆机械手的运动学
+So, here is a very concise table which describes the kinematics of the two-link manipulator
+
+75
+00:05:27,420 --> 00:05:28,420
+臂。
+arm.
+
+76
+00:05:28,420 --> 00:05:33,759
+该表有两行，每个关节一行，它有四列，一列为
+The table has got two rows, one per joint, and it has got four columns, one column for
+
+77
+00:05:33,759 --> 00:05:36,740
+每个Denavit-Hartenberg参数。
+each of the Denavit-Hartenberg parameters.
+
+78
+00:05:36,740 --> 00:05:41,430
+因为这个机器人都是旋转的，这意味着它的所有关节都是旋转的。
+Because this robot is all revolute, that means all of its joints are rotational.
+
+79
+00:05:41,430 --> 00:05:45,150
+关节坐标落在Theta列中。
+The joint coordinates fall in the Theta column.
+
+80
+00:05:45,150 --> 00:05:49,070
+我们使用非常相似的表来处理像Puma560这样的更复杂的机器人。
+We use a very similar table for a more complex robot like the Puma 560.
+
+81
+00:05:49,070 --> 00:05:54,800
+该表仍有四列，但现在它有六行，每行一行
+The table still has four columns, but now it has got six rows, one row per joint of
+
+82
+00:05:54,800 --> 00:05:55,800
+机器人。
+the robot.
+
+83
+00:05:55,800 --> 00:06:01,090
+因此，我们可以描述机器人手臂运动学的最常用方法就是使用
+So, the most general way we can describe the kinematics of a robot arm is in terms of the
+
+84
+00:06:01,090 --> 00:06:05,610
+运动功能K和该功能的参数是联合配置
+kinematic function K and the parameters of this function are the joint configuration
+
+85
+00:06:05,610 --> 00:06:06,610
+向量。
+vector.
+
+86
+00:06:06,610 --> 00:06:11,280
+请记住，这是一个包含关节角度或关节偏移的矢量
+And remember, that is a vector that contains either joint angles or joint offsets in the
+
+87
+00:06:11,280 --> 00:06:14,570
+棱柱关节的情况，以及其他一些载体。
+case of a prismatic joint, and a number of other vectors.
+
+88
+00:06:14,570 --> 00:06:19,560
+我们有一个关节角度矢量，链接偏移矢量，链接长度矢量，
+We have a vector of joint angles, a vector of link offsets, a vector of link lengths,
+
+89
+00:06:19,560 --> 00:06:24,580
+链接扭曲的向量，以及其元素描述是否的关节类型的向量
+and a vector of link twists, and a vector of joint types whose elements describe whether
+
+90
+00:06:24,580 --> 00:06:28,480
+相应的关节是旋转或棱柱形的。
+the corresponding joint is revolute or prismatic.
+
+91
+00:06:28,480 --> 00:06:33,169
+Theta，D，A和alpha的大部分元素都是不变的。
+Most of the elements of Theta, D, A and alpha are constant.
+
+92
+00:06:33,169 --> 00:06:38,840
+联合配置向量Q包含系统中的变量，我们替换
+The joint configuration vector Q contains the variables in the system and we substitute
+
+93
+00:06:38,840 --> 00:06:45,770
+根据关节类型，Q的元素到Theta的元素或D的元素
+elements of Q in to elements of Theta, or elements of D according to the joint type
+
+94
+00:06:45,770 --> 00:06:50,260
+由对应的矢量西格玛给出。
+which is given by the corresponding of the vector sigma.
+
+95
+00:06:50,260 --> 00:06:57,160
+Denavit-Hartenberg符号允许我们通过一组四个基本来描述链接和关节
+Denavit-Hartenberg notation allows us to describe links and joints by a group of four elementary
+
+96
+00:06:57,160 --> 00:07:03,039
+同质转换，我们将它们堆叠在一起，每个关节一组
+homogeneous transformations and we stack them in end on end, one group per joint of the
+
+97
+00:07:03,039 --> 00:07:04,039
+机器人。
+robot.
+
+98
+00:07:04,039 --> 00:07:08,419
+在所有关节都是旋转的机器人的情况下，我们替换了元素
+In the case of a robot where all the joints are revolute, we substitute the elements of
+
+99
+00:07:08,419 --> 00:07:14,410
+联合配置向量，向量Q到对应的Theta元素。
+the joint configuration vector, the vector Q in to the corresponding Theta elements.
+
+100
+00:07:14,410 --> 00:07:19,490
+对于具有如此处所示的棱柱关节的机器人的情况。
+For the case of a robot that has got a prismatic joint as shown here.
+
+101
+00:07:19,490 --> 00:07:25,810
+我们将相应的联合配置元素替换为set的相应链接
+We substitute the corresponding joint configuration element in to the corresponding link of set
+
+102
+00:07:25,810 --> 00:07:28,449
+元素，在这种情况下，D2。
+element, in this case, D2.
+
+103
+00:07:28,449 --> 00:07:32,970
+机器人运动功能告诉我们帧0和帧之间的关系
+The robot kinematic function tells us the relationship between the frame 0 and frame
+
+104
+00:07:32,970 --> 00:07:33,970
+6。
+6.
+
+105
+00:07:33,970 --> 00:07:39,650
+通常，我们可能希望将第0帧与某种工厂或世界参考相关联
+And frequently, we might want to relate frame 0 to some sort of factory or world reference
+
+106
+00:07:39,650 --> 00:07:40,650
+帧。
+frame.
+
+107
+00:07:40,650 --> 00:07:45,129
+因此，我们引入了一个基本变换，它可以告诉链接0在哪里与我们的世界相关
+So, we introduce a base transform that tells where link 0 is with respect to our world
+
+108
+00:07:45,129 --> 00:07:50,629
+参考框架，我们用PsiB表示。前向运动功能给了我们
+reference frame, and we denote that by Psi B. The forward kinematic function gives us
+
+109
+00:07:50,629 --> 00:07:56,169
+框架6和框架6的姿势通常连接到某种安装板或
+the pose of frame 6 and frame 6 is typically attached to some sort of mounting plate or
+
+110
+00:07:56,169 --> 00:07:59,009
+机器人末端的法兰。
+flange on the end of the robot.
+
+111
+00:07:59,009 --> 00:08:03,289
+实际工具，即完成工作的工具，连接到特定的法兰上。
+The actual tool, the thing that does the work, is attached to that particular flange.
+
+112
+00:08:03,289 --> 00:08:08,570
+所以，如果我们想知道工具结束的姿势，那就是正在做的事情的结束
+So, if we want to know the pose of the end of a tool, the end of the thing that’s doing
+
+113
+00:08:08,570 --> 00:08:14,539
+我在这里用框架E表示的工作，然后我们引入另一个相对姿势。
+the work which I’ve denoted here by frame E, then we introduce another relative pose.
+
+114
+00:08:14,539 --> 00:08:18,550
+我称之为KsiT，代表工具转换。
+I call this KsiT and that stands for tool transform.
+
+115
+00:08:18,550 --> 00:08:23,120
+我们可以针对世界的末端效应器的姿势编写姿势表达式
+We can write a pose expression for the pose of the end effector with respect to the world
+
+116
+00:08:23,120 --> 00:08:29,850
+框架在基础变换，正向运动学函数和工具变换方面。
+frame in terms of the base transform, the forward kinematic function, and the tool transform.
+
+117
+00:08:29,850 --> 00:08:32,169
+所有机器人都有一个有限的工作空间。
+All robots have got a finite workspace.
+
+118
+00:08:32,169 --> 00:08:36,090
+这是所有可到达终点位置的集合。
+That’s the set of all reachable end point positions.
+
+119
+00:08:36,090 --> 00:08:40,820
+所有工业机器人的数据表都显示了这样的图表
+All industrial robots come with a diagram like this in their data sheet which shows
+
+120
+00:08:40,820 --> 00:08:45,400
+非常清楚他们能够和不能达到的工作区部分。
+quite clearly the parts of the workspace that they can and cannot reach.
+
+121
+00:08:45,400 --> 00:08:48,340
+在机器人技术中，我们对两个运动学问题感兴趣。
+In robotics, we’re interested in two kinematic problems.
+
+122
+00:08:48,340 --> 00:08:52,710
+正向运动学问题一直是本讲座的主题，并给出了这一点
+The forward kinematic problem has been the subject of this lecture, and that is given
+
+123
+00:08:52,710 --> 00:08:58,590
+关节角度，机器人末端执行器的姿势是什么，机器人的工具提示。
+the joint angles, what is the pose of the robot's end effector, the robot’s tooltip.
+
+124
+00:08:58,590 --> 00:09:02,270
+我们下一讲的主题是逆运动学问题。
+The subject of our next lecture is the inverse kinematic problem.
+
+125
+00:09:02,270 --> 00:09:06,790
+当我必须设计机器人的末端执行器的姿势时，会给出什么样的关节
+That is given, when I have to design pose of the robot’s end effector, what joint
+
+126
+00:09:06,790 --> 00:09:08,230
+我需要角度吗？
+angles do I require?
+

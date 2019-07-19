@@ -1,0 +1,45 @@
+1
+00:00:03,420 --> 00:00:08,300
+在上一节课中，我们研究了图像处理操作，其中输出中的每个像素
+In the last lecture we looked at image processing operations, where each pixel in the output
+
+2
+00:00:08,300 --> 00:00:13,730
+从输入图像中的相应像素计算图像;或者来自两个输入图像
+image is computed from the corresponding pixel in the input image; or from two input images
+
+3
+00:00:13,730 --> 00:00:18,109
+在我们所谓的“TheDiadicCase”中。在本讲座中，我们将考虑我们所称的内容
+in what we called "The Diadic Case". In this lecture we're going to consider what we call
+
+4
+00:00:18,109 --> 00:00:23,380
+“空间成像处理操作”和这里的输出像素是一个函数
+"Spatial Imaging Processing Operations" and here the output pixel is a function of the
+
+5
+00:00:23,380 --> 00:00:29,690
+输入图像中的对应像素和该输入像素周围的像素区域。
+corresponding pixel in the input image and a region of pixels around that input pixel.
+
+6
+00:00:29,690 --> 00:00:34,960
+这使我们能够做一些非常有趣的事情。它允许我们平滑图像，它
+And this enables us to do some pretty interesting things. It allows us to smooth an image, it
+
+7
+00:00:34,960 --> 00:00:41,780
+允许我们找到带有图像的边缘，边缘是用于机器人视觉的非常有用的结构。
+allows us to find edges with an image and edges are a very useful structure to use for robotic vision.
+
+8
+00:00:42,240 --> 00:00:46,520
+我们将在本次讲座中讨论的另一种过滤器就是我们所说的“形态学”
+The other sort of filter we're going to talk about in this lecture is what we call "Morphological
+
+9
+00:00:46,520 --> 00:00:52,220
+过滤“和这些过滤器对输入图像中的特定形状敏感。
+Filtering" and these are filters that are sensitive to particular shapes within the input image.
+

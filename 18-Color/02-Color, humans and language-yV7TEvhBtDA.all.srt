@@ -1,0 +1,240 @@
+1
+00:00:03,270 --> 00:00:06,970
+有多少种颜色？这听起来像一个非常简单的问题但是
+How many colors are there? It sounds like a very simple question but
+
+2
+00:00:06,970 --> 00:00:11,699
+答案远非简单。人们普遍认为彩虹中有七种颜色。
+the answer is far from simple. It’s commonly agreed that there are seven colors in a rainbow.
+
+3
+00:00:11,699 --> 00:00:17,960
+他们是红，橙，黄，绿，蓝，靛，紫。如果你问绘儿乐
+They are red, orange, yellow, green, blue, indigo and violet. If you ask the Crayola
+
+4
+00:00:17,960 --> 00:00:22,740
+公司，制作蜡笔的人，他们有120种不同颜色的蜡笔
+Company, the people who make crayons, they’ve got 120 different colored crayons in their
+
+5
+00:00:22,740 --> 00:00:30,289
+范围。描述网页的HTML语言有121种唯一命名的颜色
+range. The HTML language, which describes web pages, has got 121 uniquely named colors
+
+6
+00:00:30,289 --> 00:00:35,910
+我们可以使用。许多基于Unix的操作系统，例如非常流行的Linux
+that we can use. Many Unix-based operating systems, for instance, the very popular Linux
+
+7
+00:00:35,910 --> 00:00:41,220
+操作系统，有一个名为X11的窗口系统，并附带X11发行版
+operating system, have a windowing system called X11, and X11 distributions come with
+
+8
+00:00:41,220 --> 00:00:46,790
+一个名为RGB.text的文件，它列出了一大堆不同颜色，最后一次
+a file called RGB.text, which lists a whole bunch of different colors, and the last time
+
+9
+00:00:46,790 --> 00:00:51,750
+我查看了这个包含881种不同颜色的文件。
+I looked at this file it contained 881 different colors.
+
+10
+00:00:51,750 --> 00:00:55,660
+如果你看一下英语中所有单词的集合，他们称之为
+If you look at a collection of all the words in the English language, what they call the
+
+11
+00:00:55,660 --> 00:01:02,680
+英语语料库，我们用大约4000个不同的单词来描述颜色。
+English Corpus, there are around 4000 different words that we use to describe colors.
+
+12
+00:01:02,680 --> 00:01:06,350
+另一个有一个复杂答案的简单问题是“一种颜色在哪里结束”
+Another simple question that’s got a complex answer is ‘where does one color end and
+
+13
+00:01:06,350 --> 00:01:12,859
+另一种颜色开始？'所以在这里我们可以看到一个包含一系列颜色的图形
+another color start?’. So over here we can see a figure which contains a range of colors
+
+14
+00:01:12,859 --> 00:01:19,159
+来自红色，黄色，绿色，蓝色等。在最近的一次演习中，他们进行了调查
+from reds, yellows, greens, blues, and so on. And in a recent exercise they surveyed
+
+15
+00:01:19,159 --> 00:01:25,200
+大量的网络用户，150万网络用户，并要求他们之间划分界限
+a large number of web users, 1.5 million web users, and asked them to draw boundaries between
+
+16
+00:01:25,200 --> 00:01:30,679
+不同的颜色，并命名他们。这是150万网络的共识
+the different colors, and to name them. And this is a consensus across 1.5 million web
+
+17
+00:01:30,679 --> 00:01:35,599
+用户。它显示了人们倾向于认为绿色和他们认为是蓝色的东西
+users. It shows what people tend to agree as being green and what they think is blue
+
+18
+00:01:35,599 --> 00:01:40,639
+他们认为是青色的等等。这很困难，因为我们试图描绘
+and what they think is teal and so on. This is difficult because we’re trying to delineate
+
+19
+00:01:40,639 --> 00:01:46,310
+颜色和颜色的区域是连续的，我们试图强制执行任意的
+regions in color, and color is a continuum, and we’re trying to enforce sort of arbitrary
+
+20
+00:01:46,310 --> 00:01:51,759
+这种其他连续的颜色概念的界限。
+boundaries across this otherwise continuous notion of color.
+
+21
+00:01:51,759 --> 00:01:57,369
+我们解释颜色的方式也取决于我们的文化背景。在亚洲，橙色是
+The way we interpret color also depends on our cultural background. In Asia, orange is
+
+22
+00:01:57,369 --> 00:02:03,569
+一种非常非常积极的颜色，但在美国，澳大利亚和欧洲部分地区，橙色
+a very, very positive color, but in the United States, Australia and parts of Europe, orange
+
+23
+00:02:03,569 --> 00:02:09,759
+被认为是危险或危险的颜色。例如，一些非洲语言，
+is considered to be a color of danger or of hazard. Some African languages, for example,
+
+24
+00:02:09,759 --> 00:02:14,390
+没有任何区分红色和橙色的词。然而，
+do not have any words which distinguish the color red from the color orange. However,
+
+25
+00:02:14,390 --> 00:02:19,620
+所有语言都有单词来描述黑白，如果语言已经有了
+all of the languages have got words to describe black and white, and if the language has got
+
+26
+00:02:19,620 --> 00:02:24,130
+比这两种更多的颜色，它们将描述的下一个最可能的颜色
+more colors than just those two, the next most likely color that they are going to describe
+
+27
+00:02:24,130 --> 00:02:31,340
+是红色，接下来很可能是黄色或绿色。蓝色经常是第六个命名
+is red, and next most likely is either yellow or green. Blue is frequently the sixth named
+
+28
+00:02:31,340 --> 00:02:37,190
+许多语言的颜色，所以蓝色真的不如红色和绿色，黑色和
+color in many languages, so blue really is not as important as red and green, black and
+
+29
+00:02:37,190 --> 00:02:42,980
+白色。布朗来晚了，然后是我们有名字的所有其他颜色。
+white. Brown comes later and then all of the other colors that we’ve got names for.
+
+30
+00:02:42,980 --> 00:02:48,720
+这个相当复杂的图表显示了文化之间的关系，表示为
+This rather complex graph shows a relationship between the culture, which is indicated by
+
+31
+00:02:48,720 --> 00:02:55,880
+这里的字母和由径向颜色条表示的情感编号
+the letters here, and the emotion, which is indicated by the radial color bars, numbered
+
+32
+00:02:55,880 --> 00:03:03,440
+从1到284.我们可以看到用于表示的非常不同的颜色
+from 1 through 284. What we can see is the very different colors that are used to represent
+
+33
+00:03:03,440 --> 00:03:10,480
+跨文化的不同情感或感受。如果我们看一下颜色术语的出现
+different emotions or feelings across cultures. If we look at the occurrence of color terms
+
+34
+00:03:10,480 --> 00:03:15,970
+例如，英语语料库中包含大量英语单词
+in a big collection of English words, for instance, the Bank of English Corpus contains
+
+35
+00:03:15,970 --> 00:03:19,940
+很多来自美国，英国和澳大利亚的文献，
+a lot of literature from the United States, United Kingdom, and Australia for example,
+
+36
+00:03:19,940 --> 00:03:25,680
+然后我们可以看一下这些颜色词出现的直方图。我们看到黑色
+then we could look at a histogram of the occurrence of those color words. And we see that black
+
+37
+00:03:25,680 --> 00:03:31,370
+是迄今为止最常出现的词，其次是白色，其次是红色，绿色
+is by far the most frequently occurring word, followed by white, followed by red, green
+
+38
+00:03:31,370 --> 00:03:38,390
+蓝色等等，而最少出现的单词就像深蓝色和黄绿色。
+blue and so on, whereas the least occurring words are those like ultramarine and chartreuse.
+
+39
+00:03:38,390 --> 00:03:44,490
+最常见的颜色词也是最古老的。所以1200年前并没有那么多
+The most common color words are also the oldest. So 1200 years ago there weren’t that many
+
+40
+00:03:44,490 --> 00:03:49,680
+不同颜色的单词，但随着时间的推移，我们引入了越来越多的颜色词
+different color words but as time has passed we’ve introduced more and more color words
+
+41
+00:03:49,680 --> 00:03:55,990
+进入我们的词汇。800年左右有一个很大的转折点，我们改变了
+into our vocabulary. There’s a big transition point around the year 800, where we changed
+
+42
+00:03:55,990 --> 00:04:02,350
+从关注亮度，谈论白色，黑色，灰色等，我们开始的地方
+from a focus just on brightness, talking about white, black, grey and so on, where we started
+
+43
+00:04:02,350 --> 00:04:07,950
+对谈论色调，实际的颜色，而不仅仅是
+to get more interested in talking about the hue, the actual color, rather than just the
+
+44
+00:04:07,950 --> 00:04:12,980
+亮度。也许这也是一种技术转变，也许是染料和染料
+brightness. Perhaps this was a technological transition as well, perhaps when dyes and
+
+45
+00:04:12,980 --> 00:04:18,069
+颜料变得更加普遍。Pantone公司的整个生计都是
+pigments became much more common. The Pantone company’s whole livelihood is
+
+46
+00:04:18,069 --> 00:04:24,139
+基于颜色。它们对颜色进行编目，它们使用唯一数字描述所有颜色
+based on color. They catalogue colors, they describe all of the colors using unique numeric
+
+47
+00:04:24,139 --> 00:04:29,969
+代码，它们每年都会推广一年的颜色。所以2013年的颜色
+codes, and they promote every year a color of the year. So the color of the year in 2013
+
+48
+00:04:29,969 --> 00:04:35,229
+这是绿色的。底线是颜色对人类来说真的非常重要。
+is this green. The bottom line is that color is really, really important to humans.
+

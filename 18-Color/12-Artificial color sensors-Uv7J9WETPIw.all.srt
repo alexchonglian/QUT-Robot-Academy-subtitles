@@ -1,0 +1,230 @@
+1
+00:00:03,209 --> 00:00:08,059
+彩色摄像机在功能上等同于我们所拥有的锥体系统
+Color cameras are functionally equivalent to the system of cones that we have in the
+
+2
+00:00:08,059 --> 00:00:10,000
+我们眼睛的视网膜。
+retinas of our eye.
+
+3
+00:00:10,000 --> 00:00:14,250
+来自场景的入射光通过透镜聚焦到人造视网膜上。
+Incoming light from the scene is focused by a lens onto an artificial retina.
+
+4
+00:00:14,250 --> 00:00:19,640
+该人造视网膜包括硅光传感器阵列。
+This artificial retina comprises an array of silicon photo sensors.
+
+5
+00:00:19,640 --> 00:00:23,060
+这些是测量入射光量的固态电路。
+These are solid state circuits that measure the amount of incoming light.
+
+6
+00:00:23,060 --> 00:00:26,880
+它们实际上对相当广泛的光线敏感。
+They are actually sensitive to quite a broad spectrum of light.
+
+7
+00:00:26,880 --> 00:00:33,170
+因此，为了使它们对颜色敏感，我们在这些硅传感器上印刷单独的颜色
+So to make them color sensitive we print on top of these silicon sensors individual color
+
+8
+00:00:33,170 --> 00:00:38,309
+我们打印红色，绿色和蓝色滤镜图案的滤镜。
+filters where we print patterns of red, green and blue filters.
+
+9
+00:00:38,309 --> 00:00:42,989
+这使得单独的硅光电传感器能够测量其数量
+This gives the individual silicon photo sensor then the ability to measure the amount of
+
+10
+00:00:42,989 --> 00:00:49,079
+在人造视网膜上的特定点处进入红色，绿色或蓝色光。
+incoming red, green or blue light at that particular point on the artificial retina.
+
+11
+00:00:49,079 --> 00:00:53,620
+大多数彩色相机使用一系列颜色过滤器，看起来像这样。
+Most color cameras use an array of color filters that looks something like this.
+
+12
+00:00:53,620 --> 00:00:59,250
+这种滤色器模式通常被称为拜耳滤波器阵列，并且是
+This pattern of color filters is frequently referred to as a Bayer filter array, and is
+
+13
+00:00:59,250 --> 00:01:05,330
+以布莱斯拜耳的名字命名，他于1976年发明了这种想法。
+named after Bryce Bayer who invented this idea way back in 1976.
+
+14
+00:01:05,330 --> 00:01:11,140
+拜耳滤波器的基本元素是两个两个网格，它包含两个绿色
+The fundamental element in the Bayer filter is a two by two grid and it contains two green
+
+15
+00:01:11,140 --> 00:01:15,120
+过滤一个红色滤镜和一个蓝色滤镜。
+filters one red filter and one blue filter.
+
+16
+00:01:15,120 --> 00:01:20,750
+出于示例的目的，假设每个底层光传感器正在返回
+For the purpose of example, imagine that each of the underlying photo sensors is returning
+
+17
+00:01:20,750 --> 00:01:26,250
+这些特定值和这些是无符号的八位整数，它们之间有所不同
+these particular values and these are unsigned eight bit integer numbers which vary between
+
+18
+00:01:26,250 --> 00:01:27,600
+0和255。
+0 and 255.
+
+19
+00:01:27,600 --> 00:01:33,549
+而且，让我们考虑一下我们想要测量红色，绿色和蓝色的数量
+And further, let’s consider we want to measure the amount of red, green and blue at this
+
+20
+00:01:33,549 --> 00:01:36,170
+特别关注人造视网膜。
+particular point on the artificial retina.
+
+21
+00:01:36,170 --> 00:01:41,200
+那么红色的答案非常清楚，此时红色的数量是75，它
+Well the answer for red is really pretty clear, the amount of red at this point is 75, it
+
+22
+00:01:41,200 --> 00:01:47,469
+是光线通过覆盖后光电传感器返回的光线
+is what is being returned by the photo sensor after the light has passed through the overlying
+
+23
+00:01:47,469 --> 00:01:48,469
+红色滤镜。
+red filter.
+
+24
+00:01:48,469 --> 00:01:54,049
+但现在让我们说我想知道这个特定位置的绿灯数量
+But let’s say now that I want to know the amount of green light at this particular location
+
+25
+00:01:54,049 --> 00:01:58,909
+这是有问题的，因为这个特殊的传感器上有一个红色的过滤器
+and that is problematic because this particular sensor has got a red filter on it there is
+
+26
+00:01:58,909 --> 00:02:03,920
+我无法测量那里的绿光量，因为有一个红色滤光片
+no way that I can measure the amount of green light there because there is a red filter
+
+27
+00:02:03,920 --> 00:02:05,159
+不是绿色过滤器。
+not a green filter.
+
+28
+00:02:05,159 --> 00:02:10,610
+现在我们所做的只是平均所有邻居的绿色价值，我们说
+Now what we do is simply average the green value of all of the neighbours and we say
+
+29
+00:02:10,610 --> 00:02:15,670
+这是圈出像素的绿光量的良好近似值。
+that this is a good approximation to the amount of green light at the pixel that is circled.
+
+30
+00:02:15,670 --> 00:02:19,680
+同样，如果你想测量这个特定像素的蓝光量我们
+Similarly, if you want to measure the amount of blue light at this particular pixel we
+
+31
+00:02:19,680 --> 00:02:23,020
+取相邻蓝色像素的平均值。
+take the average of the neighbouring blue pixels.
+
+32
+00:02:23,020 --> 00:02:27,910
+因此，对于此阵列中的每个像素，我们可以直接测量一种颜色，我们可以估计两种颜色
+So for every pixel in this array we can measure directly one color and we can estimate two
+
+33
+00:02:27,910 --> 00:02:30,430
+邻居的其他颜色。
+other colors from its neighbours.
+
+34
+00:02:30,430 --> 00:02:36,460
+如果我们的传感器是NxM像素阵列，那么我们可以估计红色，绿色和蓝色值
+If our sensor is an NxM pixel array, then we can estimate the red, green and blue values
+
+35
+00:02:36,460 --> 00:02:37,550
+每个像素。
+of every pixel.
+
+36
+00:02:37,550 --> 00:02:45,110
+这意味着我们从这个人工视网膜返回的总共3xNxM值。
+That means than we have a total of 3xNxM values returned from this artificial retina.
+
+37
+00:02:45,110 --> 00:02:49,650
+但实际上只进行了NxM实际测量。
+But in reality there are only NxM actual measurements being made.
+
+38
+00:02:49,650 --> 00:02:53,580
+只有很多单独的光传感器。
+There are only that many individual photo sensors.
+
+39
+00:02:53,580 --> 00:02:56,110
+剩下的价值已经估算完了。
+The rest of the values have been estimated.
+
+40
+00:02:56,110 --> 00:03:01,280
+因此，另一种方法是存储由照片直接测量的值
+So an alternative approach is just to store the values directly measured by the photo
+
+41
+00:03:01,280 --> 00:03:07,590
+传感器-NxM值-然后还要注意滤色器的属性
+sensors — the NxM value — and then also take note of the properties of the color filters
+
+42
+00:03:07,590 --> 00:03:13,410
+与不同像素相关联的这是另一种表示方式
+that are associated with the different pixels and this is an alternative way of representing
+
+43
+00:03:13,410 --> 00:03:17,470
+图像和这被称为原始图像文件格式。
+the image and this is referred to as a raw image file format.
+
+44
+00:03:17,470 --> 00:03:21,180
+它与普通的红色，绿色和蓝色图像不同。
+It is different to a normal red, green and blue image.
+
+45
+00:03:21,180 --> 00:03:27,110
+我们需要做一些后期处理;我们需要应用过滤器的特性
+We need to do some post processing; we need to apply the characteristics of the filters
+
+46
+00:03:27,110 --> 00:03:30,230
+在相机中存储在文件中的数据。
+in the camera to the data that is stored within the file.
+

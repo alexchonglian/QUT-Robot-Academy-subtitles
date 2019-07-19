@@ -1,0 +1,440 @@
+1
+00:00:03,590 --> 00:00:07,120
+为了使它变得有形，我们将考虑我的手机的例子。
+To make it tangible, we are going to consider the example of my mobile phone.
+
+2
+00:00:07,120 --> 00:00:11,990
+我要做的第一件事是将一个右手坐标框架附加到它上面
+First thing I am going to do is to attach a right handed coordinate frame to it and
+
+3
+00:00:11,990 --> 00:00:14,880
+我将从屏幕的表面取出z轴。
+I am going to have the z-axis out of the face of the screen.
+
+4
+00:00:14,880 --> 00:00:20,850
+y轴在手机上垂直向上，x轴从左到右水平
+The y-axis is vertically upwards on the phone and the x-axis is horizontal from left to
+
+5
+00:00:20,850 --> 00:00:21,850
+对。
+right.
+
+6
+00:00:21,850 --> 00:00:26,710
+我打算称这个框架B代表车身框架或车身固定框架。
+I am going to call this frame B and that stands for the body frame or the body-fixed frame.
+
+7
+00:00:26,710 --> 00:00:31,570
+这是航空航天和机器人技术中非常常见的符号。
+This is a very common notation in aerospace and also in robotics.
+
+8
+00:00:31,570 --> 00:00:36,960
+现在我们要将一个加速度计与我们拥有的每个轴对齐
+Now we are going to place one accelerometer aligned with each of the axes that we have
+
+9
+00:00:36,960 --> 00:00:37,960
+附在电话上。
+attached to the phone.
+
+10
+00:00:37,960 --> 00:00:43,360
+因此，一个加速度计将处于XB方向，一个处于YB方向，一个处于XB方向
+So, one accelerometer would be in XB direction and one in the YB direction and one in the
+
+11
+00:00:43,360 --> 00:00:44,860
+ZB方向。
+ZB direction.
+
+12
+00:00:44,860 --> 00:00:48,180
+现代手机充满了惯性传感器。
+Modern mobile phones, are packed full of inertial sensors.
+
+13
+00:00:48,180 --> 00:00:53,540
+它们包含三个加速度计，三个陀螺仪和三个磁力计。
+They contained three accelerometers, three gyros and three magnetometers.
+
+14
+00:00:53,540 --> 00:00:57,739
+就像我们在本系列讲座中谈到的其他内容一样，我们将附上
+Like everything else that we've talked about in this lecture series, we are going to attach
+
+15
+00:00:57,739 --> 00:00:59,430
+电话的坐标框架。
+a coordinate frame to the phone.
+
+16
+00:00:59,430 --> 00:01:03,761
+您必须深入了解文档才能找到坐标框架
+You have to look reasonably deeply into the documentation to find the coordinate frame
+
+17
+00:01:03,761 --> 00:01:09,049
+手机的惯例，但对于像这样的iPhone，惯例是x轴
+conventions for the phone, but for an iPhone like this, the convention is the x-axis is
+
+18
+00:01:09,049 --> 00:01:14,310
+在右边，y轴是手机的顶部，而z轴是在手机的顶部
+to the right and the y-axis is to the top of the phone and the z-axis is out of the
+
+19
+00:01:14,310 --> 00:01:15,310
+屏幕。
+screen.
+
+20
+00:01:15,310 --> 00:01:19,909
+所以，我打算将一个标准坐标框架固定到手机上，这样我们才能理解它是什么
+So, I am going to fix one of my standard coordinate frames to the phone, so we understand what's
+
+21
+00:01:19,909 --> 00:01:22,409
+什么。
+what.
+
+22
+00:01:22,409 --> 00:01:26,319
+您可以为手机获取许多应用程序，报告加速度测量
+There are many apps that you can get for your phone, that report the acceleration measurement
+
+23
+00:01:26,319 --> 00:01:29,250
+由手机内置的传感器记录。
+recorded by the sensors built into the phone itself.
+
+24
+00:01:29,250 --> 00:01:33,529
+不幸的是，许多这些应用都带来了负面信号。
+Unfortunately, many of these apps introduce a negative sign.
+
+25
+00:01:33,529 --> 00:01:38,350
+这意味着如果手机平放在桌子上，它会报告减去的值
+That means that if the phone is sitting flat on the table, it reports a value of minus
+
+26
+00:01:38,350 --> 00:01:44,520
+1G在负z或向下与方向，但正如我们在上一节中讨论的，
+1G in the negative z or down with the direction but as we discussed in the previous section,
+
+27
+00:01:44,520 --> 00:01:49,799
+平放在桌子上的设备的加速度应该是正向上的1G
+acceleration of a device sitting flat on a table should be 1G in the positive upward
+
+28
+00:01:49,799 --> 00:01:50,799
+x方向。
+x direction.
+
+29
+00:01:50,799 --> 00:01:56,989
+所以，在这里我们有铅锤，它在重力作用下垂下，所以它是
+So, here we have the plumb bob, which is hanging down under the force of gravity, so it is
+
+30
+00:01:56,989 --> 00:02:02,560
+与重力加速度平行对齐，具有相同的重力加速度
+aligned parallel to the gravitational acceleration with the same gravitational acceleration is
+
+31
+00:02:02,560 --> 00:02:04,999
+平行于z轴。
+parallel to the z-axis.
+
+32
+00:02:04,999 --> 00:02:09,179
+如果我像这样旋转手机，那么现在，重力加速度是平行的
+If I rotate the phone like this, so now, the gravitational acceleration is parallel to
+
+33
+00:02:09,179 --> 00:02:14,230
+y轴，现在我可以旋转手机，所以重力加速度是平行的
+the y-axis and now I can rotate the phone, so the gravitational acceleration is parallel
+
+34
+00:02:14,230 --> 00:02:15,540
+到x轴。
+to the x-axis.
+
+35
+00:02:15,540 --> 00:02:20,650
+现在让我们考虑一下确定电话方向的问题
+Let us consider now the problem of determining the orientation of the phone with respect
+
+36
+00:02:20,650 --> 00:02:22,920
+世界坐标系。
+to a world coordinate frame.
+
+37
+00:02:22,920 --> 00:02:27,080
+此处的世界坐标系显示为蓝色，其原点显示为z轴
+The world coordinate frame is shown here in blue and its origin shows that the z-axis
+
+38
+00:02:27,080 --> 00:02:31,140
+向上并平行于重力矢量。
+is upwards and parallel to the gravity vector.
+
+39
+00:02:31,140 --> 00:02:35,459
+框架B，车身框架牢固地连接到手机。
+Frame B, the body frame is attached rigidly to the phone.
+
+40
+00:02:35,459 --> 00:02:41,730
+现在我可以根据世界坐标为手机的方向写一个表达式
+Now I can write an expression for the orientation of the phone with respect to the world coordinate
+
+41
+00:02:41,730 --> 00:02:46,920
+框架和我将在连续的偏航，俯仰和滚转角度方面做到这一点
+frame and I will do that in terms of yaw, pitch and roll angles which are successive
+
+42
+00:02:46,920 --> 00:02:52,030
+围绕z轴，y轴然后是x轴的旋转。
+rotations about the z-axis, the y-axis and then the x-axis.
+
+43
+00:02:52,030 --> 00:02:56,740
+这是世界框架中的重力加速度，因为世界的z轴是
+This is the gravitational acceleration in the world frame because the world z-axis is
+
+44
+00:02:56,740 --> 00:03:00,560
+平行于重力加速度矢量。
+parallel to the gravitational acceleration vector.
+
+45
+00:03:00,560 --> 00:03:02,640
+我们在这里注意到G是正面的。
+We note here that G is positive.
+
+46
+00:03:02,640 --> 00:03:07,739
+我们所说的世界框架中的加速度是G向上的方向。
+We are talking about acceleration in the world frame is G in the upward direction.
+
+47
+00:03:07,739 --> 00:03:14,019
+相对于世界框架旋转这种重力加速度非常容易
+It is very easy to rotate this gravitational acceleration with respect to the world frame
+
+48
+00:03:14,019 --> 00:03:16,200
+进入车身框架。
+into the body frame.
+
+49
+00:03:16,200 --> 00:03:18,900
+这就是手机中的传感器实际测量的内容。
+This is what the sensors in the phone actually measure.
+
+50
+00:03:18,900 --> 00:03:24,150
+他们正在测量相对于框架B的重力。值得注意的是
+They are measuring gravity with respect to frame B. It is really important to note that
+
+51
+00:03:24,150 --> 00:03:26,950
+这假设手机没有加速。
+this assumes that the phone is not accelerating.
+
+52
+00:03:26,950 --> 00:03:30,310
+身体上唯一的加速度是由于重力引起的。
+The only acceleration on the body is that due to gravity.
+
+53
+00:03:30,310 --> 00:03:34,709
+现在，我可以扩展右侧，我可以用左侧替换
+Now, I can expand out the right hand side and I can replace the left hand side with
+
+54
+00:03:34,709 --> 00:03:37,909
+通过手机中的传感器实际测量的重力。
+the gravity actually measured by the sensors in the phone.
+
+55
+00:03:37,909 --> 00:03:40,870
+我有一个非常简单的矢量方程。
+I have a very simple vector equation.
+
+56
+00:03:40,870 --> 00:03:43,340
+如果我在这个向量方程中取第一行。
+If I take the first row in this vector equation.
+
+57
+00:03:43,340 --> 00:03:49,140
+我可以重新排列它以获得俯仰角θ的解决方案。
+I can rearrange it to get a solution for the pitch angle theta.
+
+58
+00:03:49,140 --> 00:03:53,760
+如果我取向量方程中最后两行的商，我得到这个表达式
+If I take the quotient of the last two rows in the vector equation, I get this expression
+
+59
+00:03:53,760 --> 00:03:56,379
+对于手机的滚动角度。
+for the roll angle of the phone.
+
+60
+00:03:56,379 --> 00:04:01,879
+基于测量的加速度的两个非常简单的方程给出了滚转角和俯仰角
+Two very simple equations based on the measured acceleration give me the roll and pitch angle
+
+61
+00:04:01,879 --> 00:04:05,590
+相对于世界坐标系的手机
+of the phone with respect to the world coordinate frame.
+
+62
+00:04:05,590 --> 00:04:09,560
+然后你在这个等式中注意到没有出现偏航角。
+Then you note in this equation that yaw angle does not appear.
+
+63
+00:04:09,560 --> 00:04:14,040
+一个简单的方法来思考为什么会这样，重力矢量有三个
+A simple way to think about why this is the case, is that the gravity vector has got three
+
+64
+00:04:14,040 --> 00:04:20,370
+元素但其长度是固定的，因此我们只能通过两条信息来定义它。
+elements but its length is fixed therefore we can define it by only two pieces of information.
+
+65
+00:04:20,370 --> 00:04:24,729
+重力矢量的第三个元素是多余的。
+The third element of the gravity vector is redundant.
+
+66
+00:04:24,729 --> 00:04:28,289
+在这种情况下，我们需要的两条信息是侧倾角和俯仰角
+In this case, the two pieces of information that we need are the roll angle and the pitch
+
+67
+00:04:28,289 --> 00:04:29,289
+角度。
+angle.
+
+68
+00:04:29,289 --> 00:04:30,699
+我们不需要偏航角。
+We do not need the yaw angle.
+
+69
+00:04:30,699 --> 00:04:35,000
+为了测量偏航角，我们需要使用不同的传感器，实际上是传感器
+To measure the yaw angle, we need to use a different sensor and that sensor is actually
+
+70
+00:04:35,000 --> 00:04:38,050
+罗盘，这是我们下一节的主题。
+a compass and that is the topic of our next section.
+
+71
+00:04:38,050 --> 00:04:43,639
+当我们使用三个加速度计时，一个重要的考虑因素是它仅测量两个
+An important consideration when we use three accelerometers, is that it measures only two
+
+72
+00:04:43,639 --> 00:04:45,139
+自变量。
+independent variables.
+
+73
+00:04:45,139 --> 00:04:50,250
+矢量的长度是固定的，因此，我们可以简单地描述该矢量
+The length of the vector is fixed, so therefore, we can describe that vector just in terms
+
+74
+00:04:50,250 --> 00:04:51,250
+两个角度。
+of two angles.
+
+75
+00:04:51,250 --> 00:04:55,950
+当手机配置如此时，我们可以非常清楚地看到。
+We can see that very clearly when the phone is configured like this.
+
+76
+00:04:55,950 --> 00:04:59,020
+Z和X方向的零加速度。
+Zero acceleration in the Z and the X directions.
+
+77
+00:04:59,020 --> 00:05:02,370
+加速度全部在Y方向。
+The acceleration is all in the Y direction.
+
+78
+00:05:02,370 --> 00:05:07,130
+所以加速计的测量结果与这样的手机完全相同，
+So the accelerometer measurements are exactly the same with the phone orientated like this,
+
+79
+00:05:07,130 --> 00:05:09,150
+或者像这样或者像这样。
+or like this or like this.
+
+80
+00:05:09,150 --> 00:05:13,860
+它完全没有区别。
+It makes absolutely no difference.
+
+81
+00:05:13,860 --> 00:05:17,039
+如今的加速度计成本非常低，但性能非常非常高。
+Accelerometers today have very low cost but very, very high in performance.
+
+82
+00:05:17,039 --> 00:05:21,889
+部分原因是它们大量生产。
+Part of the reason for this is that they are manufactured in enormous quantities.
+
+83
+00:05:21,889 --> 00:05:24,500
+它们用于触发汽车安全气囊。
+They're use to trigger airbags in cars.
+
+84
+00:05:24,500 --> 00:05:28,730
+它们被用在数码相机中，以确定相机是横向还是纵向
+They're used in digital cameras to work out whether the camera is in landscape or portrait
+
+85
+00:05:28,730 --> 00:05:29,730
+模式。
+mode.
+
+86
+00:05:29,730 --> 00:05:33,669
+它们在手机中用于各种不同的应用程序，并且它们正在使用
+They're used in your phone for all sorts of different applications and they're use the
+
+87
+00:05:33,669 --> 00:05:39,129
+从像这样的低成本玩具稳定车辆的无人区域到更多
+stabilization of unmanned area of vehicles from low cost toys like this to much more
+
+88
+00:05:39,129 --> 00:05:40,580
+复杂的系统。
+sophisticated systems.
+

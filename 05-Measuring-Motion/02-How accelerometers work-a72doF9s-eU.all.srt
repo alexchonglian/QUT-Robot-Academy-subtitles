@@ -1,0 +1,495 @@
+1
+00:00:03,800 --> 00:00:07,899
+正如我们刚才提到的，惯性测量单元的关键元件是传感器
+As we just mentioned, the key elements of an inertial measurement unit are sensors that
+
+2
+00:00:07,899 --> 00:00:12,950
+测量加速度，磁场和角速度。现在，我们要谈谈
+measure acceleration, magnetic field and angular velocity. Now, we’re going to talk about
+
+3
+00:00:12,950 --> 00:00:15,140
+我们如何测量加速度。
+how we measure acceleration.
+
+4
+00:00:15,140 --> 00:00:19,699
+我在这里面前的是所谓的四旋翼飞行器。这是一个飞行机器人。
+What I have in front of me here is what’s called a quadrotor. It is a flying robot.
+
+5
+00:00:19,699 --> 00:00:24,939
+它有四个螺旋桨。并且，通过控制各个螺旋桨的速度，我
+It’s got four propellers. And, by controlling the speed of the individual propellers, I
+
+6
+00:00:24,939 --> 00:00:30,470
+可以使机器上，下，左，右等。真的非常重要
+can make the machine go up, down, left, right and so on. Really critically important to
+
+7
+00:00:30,470 --> 00:00:35,940
+在空中控制这样的机器是一种了解它的方向的平衡感
+control a machine like this in the air is a sense of balance knowing its orientation
+
+8
+00:00:35,940 --> 00:00:42,079
+在3D空间。因此，它有一个惯性测量单元。所以，在这个大的里面
+in 3D space. So, it has an inertial measurement unit on board. So, somewhere inside this large
+
+9
+00:00:42,079 --> 00:00:48,010
+堆叠的电子产品，有一块看起来像这样的板子。该板包含
+stack of electronics, there is a board that looks something like this. This board contains
+
+10
+00:00:48,010 --> 00:00:53,660
+三个加速度计，可以确定其在太空中的滚转角和俯仰角。它包含
+three accelerometers, which allow it to determine its roll and pitch angle in space. It contains
+
+11
+00:00:53,660 --> 00:00:58,789
+三个陀螺仪，测量其围绕三个正交轴的旋转速度。和，
+three gyroscopes which measure its rotational velocity around three orthogonal axis. And,
+
+12
+00:00:58,789 --> 00:01:04,640
+它包含一个三轴磁力计，因此它可以确定它的方向
+it contains a three-axis magnetometer, so it can determine its orientation where it’s
+
+13
+00:01:04,640 --> 00:01:07,950
+朝向地球的磁场前进。
+heading with respect to the Earth’s magnetic field.
+
+14
+00:01:07,950 --> 00:01:14,270
+现在，这个小板是为这个特殊的四旋翼飞机定制的。商业产品
+Now, this little board is customised for this particular quadrotor. A commercial product
+
+15
+00:01:14,270 --> 00:01:20,510
+执行完全相同功能的是这样的设备。它有一个插入的USB端口
+that performs exactly the same function is a device like this. It's got a USB port that plugs
+
+16
+00:01:20,510 --> 00:01:25,010
+进入计算机，但在内部，它包含三个加速度计，三个陀螺仪，和
+in to a computer, but internally, it contains three accelerometers, three gyroscopes, and
+
+17
+00:01:25,010 --> 00:01:31,950
+三个磁力计。现在，这个相同的功能几乎以非常紧凑的形式存在
+three magnetometers. Now, this same functionality exists in very compact form inside almost
+
+18
+00:01:31,950 --> 00:01:37,290
+所有现代智能手机。而且，这可以实现智能手机指南针的应用
+all modern smartphones. And, this enables the smartphone compass application so it can
+
+19
+00:01:37,290 --> 00:01:43,170
+找到北方，它可以确定滚转角和俯仰角。它有时用于游戏控制等。
+find north, it can determine roll and pitch angles. It’s sometimes used for game control and so on.
+
+20
+00:01:44,460 --> 00:01:48,240
+想象一下，我站在电梯或电梯里，我有一个非常简单的
+Imagine now that I’m standing in a lift or an elevator, and I’ve got a very simple
+
+21
+00:01:48,240 --> 00:01:53,960
+我身体的动力模型。它由坐在弹簧上的大众组成。质量代表
+dynamical model for my body. It consists of a mass sitting on a spring. The mass represents
+
+22
+00:01:53,960 --> 00:01:59,130
+我的身体的质量位于我的中心质量点，它坐在一个弹簧上
+the mass of my body situated at a point at my centre mass and it’s sitting on a spring
+
+23
+00:01:59,130 --> 00:02:05,270
+这代表了我下半身和腿部的柔软。现在，随着电梯的启动
+which represents the softness of my lower body and my legs. Now, as the lift starts
+
+24
+00:02:05,270 --> 00:02:10,610
+向上移动，我们感觉暂时更重，那就是重量压在弹簧上。
+to move upwards, we feel momentarily heavier, that is the weight pushes down on the spring.
+
+25
+00:02:10,610 --> 00:02:15,940
+而且，当电梯停下来时，我们感觉暂时更轻，这是因为
+And, as the lift comes to a stop, we feel momentarily lighter and this is because of
+
+26
+00:02:15,940 --> 00:02:20,530
+惯性效应。这意味着它想要保持其当前的速度。所以，当我们
+inertial effect. It means that it wants to maintain its current velocity. So, when we
+
+27
+00:02:20,530 --> 00:02:26,220
+开始时，它想保持原来的0速度，这就是导致它的原因
+start off, it wants to maintain its original 0 velocity and that’s what causes it to
+
+28
+00:02:26,220 --> 00:02:30,910
+落后于升降机的人。并且，它压缩了弹簧，它使它们成为现实
+lag behind the person moving up in a lift. And, that compresses the spring, it make them
+
+29
+00:02:30,910 --> 00:02:32,810
+感觉更重。
+feel heavier.
+
+30
+00:02:32,810 --> 00:02:37,420
+随着升力减速，重量想要保持在垂直速度
+As the lift slows down, the weight wants to keep going at the vertical velocity of the
+
+31
+00:02:37,420 --> 00:02:42,210
+升力导致弹簧伸展，使我们感觉轻一点。
+lift and that causes that spring to extend and causes us to feel a little bit lighter.
+
+32
+00:02:42,210 --> 00:02:47,090
+这是一个小型的现代惯性测量单元，这种类型非常常用
+Here is a small modern inertial measurement unit, the type that’s quite commonly used
+
+33
+00:02:47,090 --> 00:02:53,230
+在各种机器人系统中。小盒子里面有许多传感器，包括
+in a variety of robot systems. Inside the little box are a number of sensors including
+
+34
+00:02:53,230 --> 00:03:00,290
+加速度计。那么，让我们看看盒子内部，看看加速度计的工作原理。和，
+accelerometers. So, let’s look inside the box and see how an accelerometer works. And,
+
+35
+00:03:00,290 --> 00:03:05,990
+它看起来就像我们之前研究的例子。它包含一个质量和一个弹簧。如
+it looks just like the example we studied before. It contains a mass and a spring. As
+
+36
+00:03:05,990 --> 00:03:11,500
+加速度计的主体向上加速，重量延伸弹簧。和，
+the body of the accelerometer accelerates upwards, the weight extends the spring. And,
+
+37
+00:03:11,500 --> 00:03:17,510
+当加速度计减速时，弹簧将重量向上拉。所以，扩展
+as the accelerometer decelerates, the spring pulls the weight upwards. So, the extension
+
+38
+00:03:17,510 --> 00:03:23,170
+弹簧的角度与加速度计的主体的加速度线性相关。这是
+of the spring is linearly related to the acceleration of the body of the accelerometer. This is
+
+39
+00:03:23,170 --> 00:03:28,330
+所有加速度传感装置的基本原理。
+the fundamental principle underpinning all acceleration sensing devices.
+
+40
+00:03:28,330 --> 00:03:34,230
+让我们看看盒子内部，再一次，我们看到一个弹簧和一个质量。群众经常
+Let’s look inside the box and, once again, we see a spring and a mass. The mass is often
+
+41
+00:03:34,230 --> 00:03:39,520
+被称为证明质量。而且，在这个例子中，它的质量为m和扩展
+referred to as the proof mass. And, in this example, it’s got a mass of m and the extension
+
+42
+00:03:39,520 --> 00:03:44,740
+弹簧的符号用符号x表示。现在，我要标记质心
+of the spring is denoted by the symbol x. Now, I’m going to mark the center of mass
+
+43
+00:03:44,740 --> 00:03:49,800
+证据质量及其相对于地面的位移，我将表示它
+of the proof mass and its displacement with respect to the ground, I’m going to denote it
+
+44
+00:03:49,800 --> 00:03:54,790
+由xm。并且，加速度计的主体的位移，我将表示
+by xm. And, the displacement of the body of the accelerometer, I’m going to denote by
+
+45
+00:03:54,790 --> 00:04:00,860
+符号xb。而且，身体的加速度等于xb双点，我可以
+the symbol xb. And, so the acceleration of the body is equal to xb double dot and I can
+
+46
+00:04:00,860 --> 00:04:07,150
+写一个xm，xb和x之间的关系。作用在检测质量上的弹簧力，
+write a relationship between xm, xb and x. The spring force acting on the proof mass,
+
+47
+00:04:07,150 --> 00:04:12,459
+我将打电话给fs，作用于检验质量的重力是质量乘以
+I’m going to call fs, and the gravity force acting on the proof mass is the mass multiplied
+
+48
+00:04:12,459 --> 00:04:18,870
+通过重力加速度g。我可以写出牛顿第二定律，它涉及加速度
+by gravitational acceleration g. I can write Newton’s second law which relates the acceleration
+
+49
+00:04:18,870 --> 00:04:25,009
+质量对两个力作用在弹簧力向上和重力向下作用。
+of the mass to the two forces acting on at the spring force upwards and gravity acting downwards.
+
+50
+00:04:25,009 --> 00:04:29,090
+而且，对于弹簧，我们知道力与弹簧的伸展成正比，
+And, for a spring, we know that the force is proportional to the extension of the spring,
+
+51
+00:04:29,090 --> 00:04:33,919
+我们可以想象，当x增加时，我正在伸展弹簧，它向上拉
+and we can imagine that as x increases, I’m extending the spring and it is pulling upwards
+
+52
+00:04:33,919 --> 00:04:38,930
+越来越大的力量。现在，我们可以结合这些方程并做一点
+with a greater and greater force. Now, we can combine these equations and do a little
+
+53
+00:04:38,930 --> 00:04:43,669
+重新排列和简化。而现在，我能写出一个表达式
+bit of rearrangement and simplification. And now, I’m able to write an expression that
+
+54
+00:04:43,669 --> 00:04:49,939
+将弹簧x的延伸与主体的加速度a和重力相关联
+relates the extension of the spring, x, to the acceleration of the body, a, and the gravitational
+
+55
+00:04:49,939 --> 00:04:55,249
+加速度，g。值得注意的是，它无法区分它们，这一点非常重要
+acceleration, g. It’s really important to note that it cannot tell the difference between
+
+56
+00:04:55,249 --> 00:05:00,889
+加速身体，a或重力加速度，g，这是我们要做的
+acceleration of the body, a, or gravitational acceleration, g, and this is something we’ll
+
+57
+00:05:00,889 --> 00:05:03,680
+过了一会儿。
+return to in just a moment.
+
+58
+00:05:03,680 --> 00:05:08,279
+每个加速度计都有一个敏感的方向，通常标记在身体上
+Every accelerometer has a sensitive direction and, typically, that’s marked on the body
+
+59
+00:05:08,279 --> 00:05:12,809
+加速度计包的。现在，在这个特定的例子中，加速度计测量
+of the accelerometer package. Now, in this particular example, the accelerometer measures
+
+60
+00:05:12,809 --> 00:05:18,009
+在垂直方向上加速，但它对水平加速度不敏感
+acceleration in the vertical direction, but it is insensitive to acceleration in the horizontal
+
+61
+00:05:18,009 --> 00:05:23,180
+方向或在屏幕外的方向。如果我把加速度计放在某个地方休息
+direction or in the direction out of the screen. If I place an accelerometer at rest somewhere
+
+62
+00:05:23,180 --> 00:05:29,050
+在地球表面，加速度计在垂直方向上记录1g的加速度
+on the surface of the Earth, the accelerometer records an acceleration of 1g in the vertical
+
+63
+00:05:29,050 --> 00:05:34,279
+或向上方向，这有点不直观。如果我放弃一些东西，它就会发生
+or upward direction and this is a little bit unintuitive. If I drop something, it’s going
+
+64
+00:05:34,279 --> 00:05:39,949
+加速度计在垂直方向上测量1g，向下加速
+to accelerate in the downward direction that the accelerometer measures 1g in the vertical
+
+65
+00:05:39,949 --> 00:05:46,270
+或向上的方向。而且，这是爱因斯坦等效原则的结果。
+or upward direction. And, this is a consequence of Einstein’s Equivalence Principle.
+
+66
+00:05:46,270 --> 00:05:51,680
+并且，就加速度计而言，这两个示例完全相同。该
+And, these two examples are exactly the same as far as an accelerometer is concerned. The
+
+67
+00:05:51,680 --> 00:05:56,249
+加速度计坐在地球表面，或者如果它坐在火箭中
+accelerometer is sitting on the surface of planet Earth, or if it is sitting in a rocket
+
+68
+00:05:56,249 --> 00:06:01,860
+正在加速向上1克。在这两种情况下，加速度计都会注册
+which is accelerating upwards at 1g. In both these cases, the accelerometer will register
+
+69
+00:06:01,860 --> 00:06:08,889
+在垂直方向上加速1g。重力加速度各不相同
+an acceleration of 1g in the vertical direction. Gravitational acceleration varies across the
+
+70
+00:06:08,889 --> 00:06:14,430
+地球表面。地球不是一个完美的球体。它略微压扁，所以直径
+surface of the Earth. The Earth is not a perfect sphere. It’s slightly squashed, so the diameter
+
+71
+00:06:14,430 --> 00:06:19,460
+在赤道处大于通过极点测量的直径。因为这，
+at the equator is greater than the diameter measured through the poles. Because of this,
+
+72
+00:06:19,460 --> 00:06:23,479
+站在赤道上的人离地球中心更远。
+somebody who is standing at the equator is further away from the center of the Earth.
+
+73
+00:06:23,479 --> 00:06:28,749
+因此，他们经历了较低的重力加速度。所以，我们可以很清楚地看到
+So, therefore, they experience a lower gravitational acceleration. So, we can see quite clearly
+
+74
+00:06:28,749 --> 00:06:34,680
+在这个图中，赤道带的重力加速度明显较低
+in this figure here, the gravitational acceleration in the equatorial band is significantly lower
+
+75
+00:06:34,680 --> 00:06:39,839
+而不是地球温带和极地地区的重力加速度。
+than gravitational acceleration in the temperate and Polar Regions of the Earth.
+
+76
+00:06:39,839 --> 00:06:47,520
+标准重力值取为每秒9.80665米的平方，但请注意重要值
+The standard gravity value is taken as 9.80665 meters per second squared, but note the significant
+
+77
+00:06:47,520 --> 00:06:52,430
+变化取决于你在哪里。您拥有的低成本加速度计
+variation depending on where you are. The low cost accelerometers that you have in your
+
+78
+00:06:52,430 --> 00:06:57,139
+手机也许在你车内的导航系统中都是基于微电子机械
+phone and perhaps in the navigation system in your car are based on micro-electromechanical
+
+79
+00:06:57,139 --> 00:07:02,509
+系统技术和整个器件都是用硅蚀刻出来的。惯性质量或
+system technology and the whole device is etched out of silicon. The inertial mass or
+
+80
+00:07:02,509 --> 00:07:08,309
+弹性腿支撑着质量块。在水平加速的情况下，
+proof mass is supported by flexible spring legs. In the case of horizontal acceleration,
+
+81
+00:07:08,309 --> 00:07:14,110
+惯性质量将向侧面移动。而且，位置的变化是有能力的
+the inertial mass will move sideways. And, the change in position is measured capacititively
+
+82
+00:07:14,110 --> 00:07:20,029
+在这里使用这些传感器能够测量三个加速度非常有用
+using these sensors here. It’s really useful to be able to measure acceleration in three
+
+83
+00:07:20,029 --> 00:07:25,229
+正交方向与右手坐标的x，y和z轴对齐
+orthogonal directions aligned with the x, y and z-axis of a right-handed coordinate
+
+84
+00:07:25,229 --> 00:07:32,319
+帧。今天，您可以购买三轴加速度计作为单个芯片。它包含三个MEMS加速度计
+frame. Today, you can buy tri-axial accelerometers as a single chip. It contains three MEMS accelerometer
+
+85
+00:07:32,319 --> 00:07:38,419
+传感器，电子设备，模数转换器，滤波器和串行IO功能
+sensors, electronics, analog to digital converters, filters and a serial IO capability so that
+
+86
+00:07:38,419 --> 00:07:42,369
+您可以非常轻松地将其连接到微控制器。
+you can very easily connect it to a microcontroller.
+
+87
+00:07:42,369 --> 00:07:47,509
+你可能没有意识到你脑子里有加速度计。在内耳组件中
+You may not be aware that you have accelerometers in your head. In the inner ear assembly in
+
+88
+00:07:47,509 --> 00:07:52,949
+我们每只耳朵都有一对加速度计。而且，这些基础的物理原理
+each of our ears, there are a pair of accelerometers. And, the physical principles underlying these
+
+89
+00:07:52,949 --> 00:07:57,339
+生物加速度计与我们已经讨论过的相同。
+biological accelerometers are just the same as those we’ve already been talking about.
+
+90
+00:07:57,339 --> 00:08:02,559
+检验质量是一堆碳酸钙晶体，它们被称为耳石，
+The proof mass is a bunch of calcium carbonate crystals and they are referred to as otoliths,
+
+91
+00:08:02,559 --> 00:08:07,559
+这意味着字面上的耳石。它们坐在凝胶状的膜上
+which means literally ear stones. They are sitting on a gelatinous membrane which serves
+
+92
+00:08:07,559 --> 00:08:12,319
+作为春天。并且，嵌入在凝胶状膜中的是一堆毛细胞和它们
+as the spring. And, embedded in that gelatinous membrane are a bunch of hair cells and they
+
+93
+00:08:12,319 --> 00:08:17,589
+测量耳石相对于内耳的位移。我们有两个
+measure the displacement of the otoliths with respect to the inner ear. We have two of these
+
+94
+00:08:17,589 --> 00:08:21,349
+每只耳朵中的加速度计，一个称为utricle，一个称为saccule。
+accelerometers in each ear, one is called the utricle and one is called the saccule.
+
+95
+00:08:21,349 --> 00:08:25,960
+并且，它们几乎是正交的，因此可以感知水平方向的加速度
+And, they are oriented almost orthogonally, so one senses the acceleration in the horizontal
+
+96
+00:08:25,960 --> 00:08:29,789
+方向，并且感知垂直方向上的加速度。
+direction, and one senses the acceleration in the vertical direction.
+
+97
+00:08:29,789 --> 00:08:34,680
+当你改变头部的方向时，来自utricle的加速度信号
+As you change the orientation of your head, the acceleration signals from the utricle
+
+98
+00:08:34,680 --> 00:08:39,589
+并且球囊变化并且允许您的大脑确定关于取向的某事
+and the saccule vary and allows your brain to determine something about the orientation
+
+99
+00:08:39,589 --> 00:08:43,190
+你的头部相对于世界坐标系。
+of your head with respect to the world coordinate frame.
+

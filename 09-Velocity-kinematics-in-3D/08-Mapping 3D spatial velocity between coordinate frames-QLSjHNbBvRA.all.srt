@@ -1,0 +1,135 @@
+1
+00:00:03,750 --> 00:00:08,210
+在前一讲中，我们研究了从一个坐标系转换空间速度
+In the previous lecture, we looked at transforming spatial velocity from one coordinate frame
+
+2
+00:00:08,210 --> 00:00:13,760
+到另一个。我们为二维案例做了这个，我们了解了这种关系
+to another. We did this for the two-dimensional case and we learned that the relationship
+
+3
+00:00:13,760 --> 00:00:19,240
+在速度之间由雅可比矩阵给出，该矩阵实际上是一个函数
+between velocities is given by a Jacobian matrix which is actually a function of the
+
+4
+00:00:19,240 --> 00:00:23,500
+两个坐标系之间的相对方向。
+relative orientation between the two coordinate frames.
+
+5
+00:00:23,500 --> 00:00:27,519
+对于三个维度，事情实际上非常相似。所以，这是一个三维的
+For three dimensions, things are actually quite similar. So, here is a three-dimensional
+
+6
+00:00:27,519 --> 00:00:32,300
+参考坐标框架，相对于框架具有空间速度的点
+reference coordinate frame, a point which has a spatial velocity with respect to Frame
+
+7
+00:00:32,300 --> 00:00:38,480
+答：这里是框架B，我们可以描述框架A和框架之间的相对姿势
+A. And, here is Frame B and we can describe the relative pose between Frame A and Frame
+
+8
+00:00:38,480 --> 00:00:44,329
+B.我们可以用红色显示相对于框架B的空间速度和关系
+B. We can show in red the spatial velocity with respect to Frame B and the relationship
+
+9
+00:00:44,329 --> 00:00:50,350
+两者之间由雅可比矩阵给出。对于三维情形，雅可比
+between the two is given by a Jacobian matrix. For the three-dimensional case, the Jacobian
+
+10
+00:00:50,350 --> 00:00:56,789
+矩阵是6x6.而且，它再一次只是相对方向的函数
+matrix is 6 x 6. And, once again, it is a function only of the relative orientation
+
+11
+00:00:56,789 --> 00:01:02,750
+在两个坐标框架之间。它是来自B帧的旋转矩阵的函数
+between the two coordinate frames. It’s a function of rotation matrix from Frame B
+
+12
+00:01:02,750 --> 00:01:07,560
+框架A.以下是工业机器人的示例。
+to Frame A. Here is an example of an industrial robot.
+
+13
+00:01:07,560 --> 00:01:13,360
+并且，如果我应用一组特定的机器人关节角速度，我会得到一个特定的
+And, if I apply a particular set of robot joint angle velocities, I obtain a particular
+
+14
+00:01:13,360 --> 00:01:18,770
+机器人末端执行器的空间速度与这两个量相关
+spatial velocity for the robot end effector and those two quantities are related by the
+
+15
+00:01:18,770 --> 00:01:23,770
+操纵者，雅各比。现在，这假定机器人末端效应器
+manipulator, Jacobian. Now, this assumes that the robot end effector
+
+16
+00:01:23,770 --> 00:01:30,280
+速度是相对于世界坐标系定义的，在此表示为零。它的
+velocity is defined with respect to the world coordinate frame, denoted zero here. It’s
+
+17
+00:01:30,280 --> 00:01:35,990
+通常非常有用地描述末端执行器相对于末端的速度
+often very useful to describe the velocity of the end effector with respect to the end
+
+18
+00:01:35,990 --> 00:01:40,060
+效应器的坐标系。我在这里表示为第6帧。
+effector’s coordinate frame. I have denoted here as Frame 6.
+
+19
+00:01:40,060 --> 00:01:46,189
+现在，我们可以用不同的雅可比矩阵来写这个。这个雅可比矩阵是关联的
+Now, we can write this in terms of a different Jacobian matrix. This Jacobian matrix relates
+
+20
+00:01:46,189 --> 00:01:51,579
+机器人关节角速度以机器人末端执行器速度表示
+the robot joint angle velocity to the robot end effector velocity expressed in terms of
+
+21
+00:01:51,579 --> 00:01:56,250
+第6帧。我们可以为末端效应器写一个表达式
+Frame 6. We can write an expression for the end effector’s
+
+22
+00:01:56,250 --> 00:02:02,320
+根据两个雅可比矩阵，相对于第6帧的空间速度。这雅各比
+spatial velocity with respect to Frame 6 in terms of two Jacobian matrices. This Jacobian
+
+23
+00:02:02,320 --> 00:02:06,479
+是我们之前谈到的标准机器人操纵器雅可比矩阵。
+is the standard robot manipulator Jacobian matrix that we have talked about previously.
+
+24
+00:02:06,479 --> 00:02:13,330
+并且，这个雅可比矩阵负责将速度从帧0转换为帧
+And, this Jacobian matrix is responsible for transforming velocity from Frame 0 to Frame
+
+25
+00:02:13,330 --> 00:02:20,170
+它是从第6帧到第0帧的相对姿势的函数。并且，雅可比
+6 and it is a function of the relative pose from Frame 6 to Frame 0. And, that Jacobian
+
+26
+00:02:20,170 --> 00:02:26,040
+正如我们在上一张幻灯片中介绍的那样，矩阵只是旋转部分的一个功能
+matrix, as we introduced in the previous slide, is a function simply of the rotational part
+
+27
+00:02:26,040 --> 00:02:27,790
+相对姿势。
+of the relative pose.
+

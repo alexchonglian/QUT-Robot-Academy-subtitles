@@ -1,0 +1,305 @@
+1
+00:00:03,250 --> 00:00:07,950
+让我们用MATLAB来模拟整个彩色成像过程。
+Let’s use MATLAB to simulate this whole color imaging process.
+
+2
+00:00:07,950 --> 00:00:14,770
+首先，我将再次为纳米单位创建一个简短的手。
+To start with I am going to create again a short hand for the units of nanometers.
+
+3
+00:00:14,770 --> 00:00:19,230
+我将创建一个感兴趣的光谱区域，我将从中选择一个范围
+I am going to create a spectral region of interest and I am going to pick a range from
+
+4
+00:00:19,230 --> 00:00:25,090
+350纳米，略高于我们在光谱的蓝色端看到的值。
+350 nanometers, just above what we can see at the blue end of the spectrum.
+
+5
+00:00:25,090 --> 00:00:29,300
+以5纳米的步长，我将一直到800纳米。
+In steps of five nanometers and I am going to go all the way up to 800 nanometers.
+
+6
+00:00:29,300 --> 00:00:35,640
+它只是在红色端的光谱可见端稍微超出一点点。
+It is just a little bit beyond the visible end of the spectrum at the red end.
+
+7
+00:00:35,640 --> 00:00:43,780
+现在我要加载一些数据，这些数据是在地表测量的太阳光谱
+Now I am going to load some data which is the spectrum of sunlight measured at the surface
+
+8
+00:00:43,780 --> 00:00:48,649
+地球和我们使用负载频谱功能我将在范围内传递
+of the earth and we use the load spectrum function I am going to pass in the range
+
+9
+00:00:48,649 --> 00:00:53,780
+我感兴趣的波长，我将要求太阳能文件中的数据
+of wavelengths I am interested in and I am going to ask for data from the file solar
+
+10
+00:00:53,780 --> 00:00:55,670
+点数据。
+dot dat.
+
+11
+00:00:55,670 --> 00:01:01,219
+因此，这将太阳光的照射光谱加载到MATLAB工作空间变量中
+So this has loaded the illumination spectrum of sunlight into the MATLAB workspace variable
+
+12
+00:01:01,219 --> 00:01:08,950
+叫做E，我可以用E对抗lambda并看看那里，我们有
+called E and I can plot E against lambda and have a look at that and there we have the
+
+13
+00:01:08,950 --> 00:01:14,410
+底部的光谱波长和垂直轴的强度。
+spectrum wavelength across the bottom and intensity on the vertical axis.
+
+14
+00:01:14,410 --> 00:01:19,610
+现在我要为着名的红砖加载反射信息。
+Now I am going to load the reflectance information for the famous red brick.
+
+15
+00:01:19,610 --> 00:01:26,970
+再次使用负载频谱功能，通过相同的波长范围和
+Going to use the load spectrum function again, passing the same range of wavelengths and
+
+16
+00:01:26,970 --> 00:01:31,390
+数据来自名为redbrickdotdat的文件。
+the data comes from the file called red brick dot dat.
+
+17
+00:01:31,390 --> 00:01:40,380
+现在我可以在另一个图中显示，创建图二，现在我要绘制
+Now I can display that in another figure, create figure two and now I am going to plot
+
+18
+00:01:40,380 --> 00:01:45,830
+R对抗lambda，在这里我们看到红砖的反射分布，我们可以看到
+R against lambda and here we see the reflectance profile of the red brick and we can see that
+
+19
+00:01:45,830 --> 00:01:49,540
+它反射更多的红光然后它会发出蓝光。
+it reflects more red light then it does blue light.
+
+20
+00:01:49,540 --> 00:01:56,170
+现在我可以计算出红砖的亮度，亮度就是它的乘积
+Now I can compute the luminance of the red brick, and luminance is the product of the
+
+21
+00:01:56,170 --> 00:02:02,180
+照度E和反射率，我使用点星运算符，因为我要去的地方
+illuminance E and the reflectance and I use the dot star operator because what I am going
+
+22
+00:02:02,180 --> 00:02:09,900
+要做的是将E中的每个元素乘以R.E和R中的相应元素
+to do is to multiply every element in E by the corresponding element in R. E and R we
+
+23
+00:02:09,900 --> 00:02:16,920
+可以看到91是1个元素向量，我们可以看到的产品L也是91
+can see are both 91 by 1 element vectors, and the product L we can see is also 91 by
+
+24
+00:02:16,920 --> 00:02:18,970
+1个向量。
+1 vector.
+
+25
+00:02:18,970 --> 00:02:26,170
+现在我可以绘制照度，我们可以看到它看起来像这样;所以我们有来了
+Now I can plot illuminance and we can see it looks like this; so we have the incoming
+
+26
+00:02:26,170 --> 00:02:27,900
+光，有这个频谱。
+light, has got this spectrum.
+
+27
+00:02:27,900 --> 00:02:31,569
+从红砖反射出来的光有不同的光谱
+The light that has been reflected off the red brick has got a different spectrum, it
+
+28
+00:02:31,569 --> 00:02:35,640
+已经反射出更多的红色，它吸收了更多的蓝色和绿色。
+has reflected more red and it has absorbed more blue and green.
+
+29
+00:02:35,640 --> 00:02:42,730
+现在，我们将加载人类视锥细胞的响应，我也得到了这些信息
+Now, we are going to load the response of the human cones, I have also got that information
+
+30
+00:02:42,730 --> 00:02:45,480
+在工具箱附带的文件中。
+in a file that is shipped with the toolbox.
+
+31
+00:02:45,480 --> 00:02:49,650
+我们再次传入我们感兴趣的光谱范围，我们要求提供数据
+Again we pass in the spectral range we are interested in and we ask for data from the
+
+32
+00:02:49,650 --> 00:02:51,680
+fileconesdotdat。
+file cones dot dat.
+
+33
+00:02:51,680 --> 00:02:58,120
+现在有三个锥体，所以锥体数据是一个有91行和3行的矩阵
+Now there are three cones, so the cones data is a matrix that has got 91 rows and three
+
+34
+00:02:58,120 --> 00:03:01,930
+列，每列对应一个锥体。
+columns, each column corresponds to one of the cones.
+
+35
+00:03:01,930 --> 00:03:05,440
+第一列是红色圆锥，第二列是绿色圆锥，依此类推。
+Column one is the red cone, column two is the green cone and so on.
+
+36
+00:03:05,440 --> 00:03:11,300
+我可以绘制锥形反应;再一次，我打算将它们与lambda和这里联系起来
+I can plot the cone responses; again, I am going to plot them against lambda and here
+
+37
+00:03:11,300 --> 00:03:18,230
+我们看到三个圆锥响应，见蓝色圆锥，绿色圆锥和红色圆锥。
+we see the three cone responses, see the blue cone, the green cone and the red cone.
+
+38
+00:03:18,230 --> 00:03:25,610
+现在我要做的是绘制红锥对这个入射光的响应。
+Now what I am going to do is plot the response of the red cone to this incoming light.
+
+39
+00:03:25,610 --> 00:03:32,830
+现在我要做的是获取亮度，然后我将它乘以红色通道
+Now what I am going to do is to take the luminance and I am going to multiply it by the red channel
+
+40
+00:03:32,830 --> 00:03:37,760
+锥体响应，所以我将在第一列的锥形响应中取所有行。
+of the cones response, so I am going to take all rows in the cone response in column one.
+
+41
+00:03:37,760 --> 00:03:43,459
+这是包含有关红色圆锥的信息的列，这里我有它
+That is the column that contains information about the red cone and here I have it, this
+
+42
+00:03:43,459 --> 00:03:50,890
+是红色圆锥对来自红砖的入射光的响应。
+is the response of the red cone to the incoming light from the red brick.
+
+43
+00:03:50,890 --> 00:03:57,130
+锥体响应此函数的积分，即此曲线下方的区域，
+The cone responds to the integral of this function, the area underneath this curve,
+
+44
+00:03:57,130 --> 00:04:00,310
+我们可以看到这条曲线达到峰值约0.18。
+and we can see that this curve peaks up to about 0.18.
+
+45
+00:04:00,310 --> 00:04:06,120
+让我们来看看绿色锥体的含义，所以我现在改变那个数字
+Let’s look at what it would be for the green cone, so I change that number there and now
+
+46
+00:04:06,120 --> 00:04:10,070
+我们看到这是绿锥的反应。
+we see this is the response of the green cone.
+
+47
+00:04:10,070 --> 00:04:14,690
+峰值略低，峰值现在约为0.11;它不是很高。
+The peak is a little bit less, the peak is now about 0.11; it is not quite high.
+
+48
+00:04:14,690 --> 00:04:19,780
+它是下面的区域;此曲线是绿锥观察时的响应
+It is the area underneath; this curve is the response of the green cone when looking at
+
+49
+00:04:19,780 --> 00:04:20,780
+红砖。
+the red brick.
+
+50
+00:04:20,780 --> 00:04:26,540
+最后，蓝锥的响应由此给出，我们可以看到这是
+Finally, the response of the blue cone is given by this and we can see that this is
+
+51
+00:04:26,540 --> 00:04:32,910
+反应相当低，峰值仅为0.005。
+a fairly low response, the peak value is only 0.005.
+
+52
+00:04:32,910 --> 00:04:39,290
+现在我可以使用一些来计算曲线下方区域的简单数值近似
+Now I can compute a simple numerical approximation to the area underneath the curve using some
+
+53
+00:04:39,290 --> 00:04:41,000
+矩形整合。
+rectangular integration.
+
+54
+00:04:41,000 --> 00:04:49,600
+使用MATLAB求和函数，我将亮度乘以响应
+Use the MATLAB sum function and I am going to sum the luminance multiplied by the response
+
+55
+00:04:49,600 --> 00:04:50,600
+第一个例子。
+in the first instance.
+
+56
+00:04:50,600 --> 00:04:55,169
+我将做红锥的响应，因为它是矩形积分
+I am going to do the response of the red cone and because it is a rectangular integration
+
+57
+00:04:55,169 --> 00:05:01,630
+我应该适当地乘以波长步长，即
+I should properly multiply by the wavelength step size, which is
+
+58
+00:05:01,630 --> 00:05:06,630
+5纳米，这是红锥的响应。
+5 nanometers, and this is the response of the red cone.
+
+59
+00:05:06,630 --> 00:05:11,610
+绿锥的响应就是这样。
+The response of the green cone would be this.
+
+60
+00:05:11,610 --> 00:05:17,490
+几乎一半的值和蓝色锥体的响应是这个小得多的值，
+Almost half the value and the response of the blue cone is this much smaller value,
+
+61
+00:05:17,490 --> 00:05:22,970
+红锥对该亮度响应的响应约为八分之一。
+about one eighth the response of the red cone to this luminance response.
+

@@ -1,0 +1,70 @@
+1
+00:00:03,199 --> 00:00:08,820
+我想通过与你分享他们两个非常棒的研究视频来结束
+I'd like to finish off by sharing with you two quite amazing research videos they both
+
+2
+00:00:08,820 --> 00:00:14,150
+展示组合从多个视点获取的视觉信息的力量。
+show the power of combining visual information taken from multiple viewpoints.
+
+3
+00:00:14,150 --> 00:00:19,480
+第一个是绘制大型照片库的系统，例如Flickr。在这
+The first is a system that draws large repositories of photographs, for instance, Flickr. In this
+
+4
+00:00:19,480 --> 00:00:23,150
+他们检索了大量罗马的照片。
+case they retrieve a whole lot of images taken of Rome.
+
+5
+00:00:23,150 --> 00:00:28,430
+不同人在不同时间拍摄的所有这些图像显然都有很多重叠。
+All of these images taken by different people at different times clearly have a lot of overlap.
+
+6
+00:00:28,430 --> 00:00:33,880
+他们所做的是在多个图像中找到相同的点，然后是它们
+What they do is they find the same points in multiple images and from that then, they
+
+7
+00:00:33,880 --> 00:00:39,800
+然后可以重建拍摄这些照片的相机的相对精度。
+can then reconstruct the relative precision of the cameras that took those pictures.
+
+8
+00:00:39,800 --> 00:00:45,559
+然后他们可以将这些信息组合成数百甚至数千张图片
+Then they can combine this information across hundreds or even thousands of pictures and
+
+9
+00:00:45,559 --> 00:00:49,320
+用它来重建一个完整的三维模型。
+use that to reconstruct a full three-dimensional model.
+
+10
+00:00:49,320 --> 00:00:53,879
+他们没有去参观，他们只是在网上挖掘已有的照片
+They didn't have to go and visit, they just mined the web for photographs that were already
+
+11
+00:00:53,879 --> 00:00:59,539
+在那里，有一些非常聪明的算法能够从所有这些图片中提取，
+there, and with some very clever algorithms were able to extract from all those pictures,
+
+12
+00:00:59,539 --> 00:01:01,780
+这个三维模型。
+this three dimensional model.
+
+13
+00:01:01,780 --> 00:01:07,400
+下一个扩展了该技术，以组合数以百万计的信息
+This next one extends the technique to combine information from millions and millions of
+
+14
+00:01:07,400 --> 00:01:14,120
+不同的人用不同的相机拍摄的图像在不同的时间但是相同的主题。
+images taken by different people with different cameras at different times but of the same subject matter.
+

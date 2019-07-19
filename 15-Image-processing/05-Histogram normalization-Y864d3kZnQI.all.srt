@@ -1,0 +1,100 @@
+1
+00:00:04,470 --> 00:00:11,550
+直方图归一化是一种常用技术，用于增强其中的细节
+Histogram normalization is a common technique that is used to enhance fine detail within
+
+2
+00:00:11,550 --> 00:00:13,740
+一个图像。
+an image.
+
+3
+00:00:13,740 --> 00:00:19,449
+从图像强度直方图计算累积直方图。
+The cumulative histogram is computed from the image intensity histogram.
+
+4
+00:00:19,449 --> 00:00:26,640
+累积直方图中的每列被计算为所有图像强度的总和
+Each column in the cumulative histogram is computed as the sum of all the image intensity
+
+5
+00:00:26,640 --> 00:00:33,190
+直方图值高达并包括该灰度级，然后按比例缩放
+histogram values up to and including that grey level, and then it is scaled so that
+
+6
+00:00:33,190 --> 00:00:35,670
+最终值为1.0。
+the final value is 1.0.
+
+7
+00:00:35,670 --> 00:00:40,950
+你会注意到的累积直方图是它在非常陡峭的时候
+And what you will notice with the cumulative histogram is that it is very steep when the
+
+8
+00:00:40,950 --> 00:00:47,350
+输入直方图非常大，当输入直方图相当时它是相当平坦的
+input histogram is quite large, and it is fairly flat when the input histogram is quite
+
+9
+00:00:47,350 --> 00:00:48,920
+低。
+low.
+
+10
+00:00:48,920 --> 00:00:54,500
+因此，我们可以在这里看到累积直方图快速增长的几个领域。
+So we can see here a couple of areas where the cumulative histogram has grown quite quickly.
+
+11
+00:00:54,500 --> 00:00:58,080
+现在我们使用累积直方图作为映射。
+Now we use the cumulative histogram as a mapping.
+
+12
+00:00:58,080 --> 00:01:04,970
+因此对于每个输入值，以及0到255范围内的这些无符号整数像素值，
+So for every input value, and these unsigned integer pixel values in the range 0 to 255,
+
+13
+00:01:04,970 --> 00:01:11,780
+我取一个输入像素x，然后通过累积直方图对其进行映射，得到结果。
+I take an input pixel x and I map it through the cumulative histogram and I get the result.
+
+14
+00:01:11,780 --> 00:01:18,640
+所以我的x函数是通过图像的累积直方图的非线性映射。
+So my function of x is a non-linear mapping through the cumulative histogram of the image.
+
+15
+00:01:18,640 --> 00:01:24,030
+因此，蒙娜丽莎图像的结果是增强了许多细节。
+So the result of this on the Mona Lisa image is to enhance a lot of the fine detail.
+
+16
+00:01:24,030 --> 00:01:29,310
+因此，如果我们看一下背景，我们可以看到它在相当暗的区域
+So if we have a look into the background we can see areas where it is fairly dark in the
+
+17
+00:01:29,310 --> 00:01:35,870
+原始图像和直方图归一化增加了局部对比度;做好了
+original image and where the histogram normalization has increased the local contrast; made it
+
+18
+00:01:35,870 --> 00:01:41,110
+我们可以看到细节，否则我们在输入中很难看到
+possible for us to see detail that otherwise we could not see very easily in the input
+
+19
+00:01:41,110 --> 00:01:42,350
+图片。
+image.
+
+20
+00:01:42,350 --> 00:01:46,260
+这是monadic图像处理操作的另一个例子。
+This is another example of a monadic image processing operation.
+

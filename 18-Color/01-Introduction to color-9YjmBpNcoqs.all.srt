@@ -1,0 +1,50 @@
+1
+00:00:03,369 --> 00:00:06,980
+在这个讲座中，我们将讨论颜色。你可能会仔细地注意到我
+In this lecture we're going to talk about color. You probably notice that I studiously
+
+2
+00:00:06,980 --> 00:00:11,550
+到目前为止避免谈论颜色。这个讲座我们将正确谈论颜色。
+avoided talking about color so far. This lecture we're going to talk properly about color.
+
+3
+00:00:11,550 --> 00:00:17,019
+颜色对动物来说非常重要。几乎所有看到的动物都可以
+Color is something that's really important for animals. Almost all animals that see can
+
+4
+00:00:17,019 --> 00:00:19,559
+在某种程度上看到颜色。
+see color to some extent.
+
+5
+00:00:19,559 --> 00:00:24,570
+如果你想一想我们祖先的觅食，也许颜色很重要的一个原因
+And perhaps one reason why color is important, if you think about our ancestors' foraging
+
+6
+00:00:24,570 --> 00:00:29,719
+对于食物而言，或许重要的是能够在背景中检测到一些红色水果
+for food, perhaps it was important to be able to detect some red fruits against the background
+
+7
+00:00:29,719 --> 00:00:36,010
+一棵绿树。所以在这个讲座中，我们将讨论什么颜色，它在哪里
+of a green tree. So in this lecture we're going to talk about what color is, where it
+
+8
+00:00:36,010 --> 00:00:41,039
+来自我们如何处理计算机中的彩色图像。到目前为止我们一直都是
+comes from and how we can deal with color images in the computer. So far we've been
+
+9
+00:00:41,039 --> 00:00:46,530
+处理灰度图像。我们如何编写计算机程序来确定
+dealing with gray scale images. And how we can write the computer program to determine
+
+10
+00:00:46,530 --> 00:00:48,800
+一些物体是什么颜色的。
+what color some object is.
+

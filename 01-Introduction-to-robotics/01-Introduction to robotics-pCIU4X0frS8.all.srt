@@ -1,0 +1,70 @@
+1
+00:00:03,960 --> 00:00:09,130
+欢迎来到我们的在线课程“机器人入门”的第一堂课。
+Welcome to the very first lecture in our online course, Introduction to Robotics.
+
+2
+00:00:09,130 --> 00:00:13,310
+我的名字是PeterCorke，我将在接下来的六周内成为你的讲师。
+My name is Peter Corke and I’ll be your lecturer for the next six weeks.
+
+3
+00:00:13,310 --> 00:00:18,349
+所以，如果您喜欢虚构的基础，这是一个非常快速的过程
+So, this is a really quick run through if you like the, the fictional underpinnings
+
+4
+00:00:18,349 --> 00:00:23,640
+机器人技术我们在第一期课程中要做的就是看看各种各样的
+of robotics. What we’re going do in this first course is look at the great variety
+
+5
+00:00:23,640 --> 00:00:28,410
+今天存在的机器人我们将从制造机器人开始。这些
+of robots that exist today. We’re going start off with manufacturing robots. These
+
+6
+00:00:28,410 --> 00:00:33,620
+你看到的手臂式机器人是在建造汽车，建造电脑的工厂里工作的
+are the arm type robots that you see working in factories building cars, building computers
+
+7
+00:00:33,620 --> 00:00:38,579
+等等，非常非常重要的一类机器人。而且，这就是我们要去的机器人类型
+and so on, very, very important class of robots. And, that’s the type of robot we are going
+
+8
+00:00:38,579 --> 00:00:44,930
+在本机器人入门课程中最仔细地学习。但是，在这个特别的
+to study most carefully in this Introduction to Robotics course. But, in this particular
+
+9
+00:00:44,930 --> 00:00:49,350
+讲座，我想描绘出不同类型的机器人的大局
+lecture, I want to paint the big picture of the different types of robots that are in
+
+10
+00:00:49,350 --> 00:00:54,059
+今天的世界。所以，我们将看看驾驶的机器人，飞行的机器人，机器人
+the world today. So, we are going to look at robots that drive, robots that fly, robots
+
+11
+00:00:54,059 --> 00:00:58,820
+在水下游泳或在水面上划桨的机器人，
+that swim underneath the water or robots that paddle around on the surface of the water,
+
+12
+00:00:58,820 --> 00:01:02,150
+有效的机器人船。所以，在这第一堂课中，我们将会这样做
+effectively robotic boats. So, in this first lecture, we are going to
+
+13
+00:01:02,150 --> 00:01:06,930
+让我们了解机器人技术的巨大传播。然后，剩下的
+orient ourselves in learning about the big spread of robotics. And then, for the remainder
+
+14
+00:01:06,930 --> 00:01:12,659
+当然，我们要特别关注臂式机器人。
+of the course, we are going to knuckle down and look at arm type robots in particular.
+

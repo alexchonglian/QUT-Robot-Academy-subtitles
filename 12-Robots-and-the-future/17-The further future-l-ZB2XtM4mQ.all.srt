@@ -1,0 +1,385 @@
+1
+00:00:03,270 --> 00:00:08,879
+在本节中，我想推测未来的进一步发展。我相信每个人都听到了
+In this section, I'd like to speculate about the further future. I'm sure everybody's heard
+
+2
+00:00:08,879 --> 00:00:15,170
+摩尔定律1971年，英特尔的戈登·摩尔（GordonMoore）阐述了这一点。他正在关注
+of Moore's law. It was articulated by Gordon Moore of Intel in 1971. He was looking at
+
+3
+00:00:15,170 --> 00:00:19,180
+他们可以放在硅片上的晶体管数量正在密谋
+the number of transistors that they could put on a silicon chip and he was plotting
+
+4
+00:00:19,180 --> 00:00:23,660
+每个芯片的晶体管数量如何随时间增加。
+how that number of transistors per chip increased over time.
+
+5
+00:00:23,660 --> 00:00:28,230
+他在硅片技术的早期阶段就表明了晶体管的数量
+And he showed in the very early days of silicon chip technology that the transistor count
+
+6
+00:00:28,230 --> 00:00:34,000
+每两年翻一番。在那之后的四十年里，这种趋势一直持续下去
+doubled every two years. In the four decades since then, that trend has continued and this
+
+7
+00:00:34,000 --> 00:00:39,980
+图表显示了符合许多微过程的晶体管密度的线
+graph shows a line fitted to the transistor density of a number of micro-processes that
+
+8
+00:00:39,980 --> 00:00:44,140
+已经发展了这段时间。所以摩尔定律就是关于数量的
+have been developed over that period of time. So Moore's law is all about the number of
+
+9
+00:00:44,140 --> 00:00:46,810
+每芯片晶体管。
+transistors per chip.
+
+10
+00:00:46,810 --> 00:00:52,220
+这是RayKurzweil的有趣图表。他在这里画的是数字
+This is an interesting graph from Ray Kurzweil. And what he's plotted here is the number of
+
+11
+00:00:52,220 --> 00:00:57,030
+你可以得到一千美元的每秒计算。而且他画了那个
+calculations per second that you can get for a thousand dollars. And he's plotted that
+
+12
+00:00:57,030 --> 00:01:03,500
+与时间。这条曲线很有趣，因为它不是线性的。事实上，它是指数级的。
+against time. And this curve is interesting because it's not linear. In fact, it's exponential.
+
+13
+00:01:03,500 --> 00:01:07,770
+Ray所做的是采用了许多数据点并绘制出来并进行了拟合
+And what Ray has done is taken a number of data points and plotted them and fitted in
+
+14
+00:01:07,770 --> 00:01:12,909
+指数。现在，这个图表真正有趣的是水平虚线
+exponential to that. Now, what's really interesting about this graph are the horizontal dashed
+
+15
+00:01:12,909 --> 00:01:19,340
+对应于各种生命形式的计算能力的线。
+lines which correspond to the computational capability of various life forms.
+
+16
+00:01:19,340 --> 00:01:25,100
+所以他对昆虫大脑，小鼠大脑，人脑以及所有人都有一条水平线
+So he has a horizontal line for an insect brain, a mouse brain, a human brain, and all
+
+17
+00:01:25,100 --> 00:01:29,700
+人类的大脑。现在，我们就在这里。如果这个图表是正确的，它表明
+human brains. Right now, we're about here. And if this graph is correct, it indicates
+
+18
+00:01:29,700 --> 00:01:35,579
+一千美元，我可以购买一个鼠标大脑的计算等价物。
+that for a thousand dollars, I could buy the computational equivalent of one mouse brain.
+
+19
+00:01:35,579 --> 00:01:42,639
+到了2030年，我应该可以以1000美元的价格买一台电脑
+By they year 2030, I should be able to buy a computer for $1000 equivalent to a human
+
+20
+00:01:42,639 --> 00:01:48,659
+脑。最有趣的是到2050年，我可以花一千美元
+brain. The most interesting of all is it by the year 2050, for a thousand dollars, I can
+
+21
+00:01:48,659 --> 00:01:53,429
+购买地球上所有人类大脑的计算等价物。
+buy the computational equivalent of all human brains on the planet.
+
+22
+00:01:53,429 --> 00:01:58,919
+2050年并不遥远。对于你们中的许多人来说，这将是你们的工作生活。
+The year 2050 is not that far away. For many of you, it will be within your working life.
+
+23
+00:01:58,919 --> 00:02:03,979
+因此，如果我们能拥有这么多的计算能力，那将会产生深远的影响
+So there will be profound implications if we can have this much computational power
+
+24
+00:02:03,979 --> 00:02:07,209
+可用这么几美元。
+available for so few dollars.
+
+25
+00:02:07,209 --> 00:02:11,960
+该图描绘了各种微处理器的功率密度与其时钟频率的关系。
+This graph plots the power density of various microprocessors against their clock frequency.
+
+26
+00:02:11,960 --> 00:02:17,370
+我们可以看到，随着时间的推移，我们正朝着这个方向前进，我们正朝着更高的方向发展
+And we can see that over time, we're moving in this direction, we are moving towards higher
+
+27
+00:02:17,370 --> 00:02:21,530
+更高的功率密度和更高和更高的时钟频率。
+and higher power densities and higher and higher clock frequencies.
+
+28
+00:02:21,530 --> 00:02:26,680
+在这里，我们可以看到人类的大脑。我们看到它具有令人印象深刻的低功率
+Down here, we can see the human brain. We see that it has an impressively low power
+
+29
+00:02:26,680 --> 00:02:31,520
+密度和它在非常非常低的时钟频率下工作。我们可以争辩说我们在哪里
+density and it operates at a very, very low clock frequency. We can argue that where we're
+
+30
+00:02:31,520 --> 00:02:36,560
+随着硅计算技术的发展，我们走向了错误的方向。我们
+going with silicon computational technology, we're going in the wrong direction. We're
+
+31
+00:02:36,560 --> 00:02:42,250
+越来越远离人类大脑的惊人能力。
+going further and further away from the amazing capability of the human brain.
+
+32
+00:02:42,250 --> 00:02:47,510
+现在可以在超级计算机上模拟人脑。显然，这些模拟
+Now it's possible to simulate human brain on a supercomputer. Apparently, these simulations
+
+33
+00:02:47,510 --> 00:02:53,290
+以1/500的实时速度运行。如果我们要扩大它们以便它们
+run at something like 1/500 of real time. And if we were to scale those up so that they
+
+34
+00:02:53,290 --> 00:02:59,470
+会实时运行，电脑会很大，需要12千兆瓦的电力。
+would operate in real time, the computer would be big and require like 12 gigawatts of electricity.
+
+35
+00:02:59,470 --> 00:03:03,180
+你可以用那么多电力为纽约供电。
+You can power New York with that much electricity.
+
+36
+00:03:03,180 --> 00:03:08,810
+很明显，如果我们试图在机器人中获得类似人类的智慧，那么遵循这些传统
+So clearly, if we're trying to get human-like intelligence in robots, following these traditional
+
+37
+00:03:08,810 --> 00:03:14,370
+这种方法需要大规模，昂贵且耗费惊人的计算机
+approach is going to require computers that are massive, expensive, and consume phenomenal
+
+38
+00:03:14,370 --> 00:03:18,520
+电量。我们可以做些什么来解决这个问题？
+amounts of electricity. What can we do to get around that?
+
+39
+00:03:18,520 --> 00:03:23,850
+好吧，有些人正在研究不同的计算架构，称为：神经形态
+Well, some people are looking at different computing architectures, called: neuromorphic
+
+40
+00:03:23,850 --> 00:03:29,620
+计算，模仿人类大脑的神经连接结构。所以这些就像
+computing, modelled on the neuro connectionist structure of human brains. So these are like
+
+41
+00:03:29,620 --> 00:03:35,400
+类固醇的神经网络和嵌入定制硅芯片。也许这就是
+neural networks on steroids and embedded in custom silicon chips. So perhaps, this is
+
+42
+00:03:35,400 --> 00:03:42,760
+未来的硬件，我们将创造智能，为未来的机器人提供动力。
+the future hardware in which we will create the intelligence that will power future robots.
+
+43
+00:03:42,760 --> 00:03:47,140
+继这种生物学方法来计算，从大自然中学习
+Following on from this biological approach to computation, learning from nature about
+
+44
+00:03:47,140 --> 00:03:53,069
+大脑进行计算的方式是考虑可能最重要的生物传感
+the way brains do computation is to consider the perhaps most important biological sensing
+
+45
+00:03:53,069 --> 00:03:54,540
+发明是视觉。
+invention which is vision.
+
+46
+00:03:54,540 --> 00:04:00,510
+视觉是这个星球上几乎所有生物共有的惊人感觉。感觉
+Vision is an amazing sense shared by almost all creatures on the planet. The sense of
+
+47
+00:04:00,510 --> 00:04:06,600
+视觉已独立和平行地多次演变。今天，有一个巨大的
+vision has evolved multiple times independently and in parallel. And today, there is a vast
+
+48
+00:04:06,600 --> 00:04:11,200
+各种各样的眼睛对这个星球上的生物。
+variety of different sorts of eyes on creatures on the planet.
+
+49
+00:04:11,200 --> 00:04:16,739
+在这里我们只看到其中的一些。我们看到鹦鹉螺的针孔相机眼睛，倍数
+Here we see just a few of them. We see the pinhole camera eye of a nautilus, the multiple
+
+50
+00:04:16,739 --> 00:04:23,099
+蜘蛛的眼睛，昆虫的复眼，鸟的眼睛，小的反射器为主
+eyes of spider, the compound eyes of an insect, the eyes of a bird, the small reflector-based
+
+51
+00:04:23,099 --> 00:04:26,430
+扇贝的眼睛，章鱼的眼睛。
+eyes of a scallop, the eyes of an octopus.
+
+52
+00:04:26,430 --> 00:04:31,020
+眼睛无处不在。它们对于所有生物来说都是非常重要的感知方式
+Eyes are everywhere. They are really important sensing modality for all living creatures
+
+53
+00:04:31,020 --> 00:04:35,330
+而且我非常强烈地相信它是机器人的重要传感方式。
+and I believe very strongly it is an important sensing modality for robots.
+
+54
+00:04:35,330 --> 00:04:40,050
+因此，如果您对视力，视觉感知以及机器人如何利用视觉感兴趣，
+So if you're interested in vision, the sense of vision, and how robots might exploit that,
+
+55
+00:04:40,050 --> 00:04:46,789
+那么我邀请你和我一起参加即将到来的MOOC，RoboticVision的后续工作。
+then I invite you to join me in the follow up MOOC, Robotic Vision, which is coming soon.
+
+56
+00:04:46,789 --> 00:04:51,039
+那么这六周我们一直在寻找的重要信息是什么呢？
+So what are the important take-home messages from this six weeks that we've been looking
+
+57
+00:04:51,039 --> 00:04:56,520
+在机器人？我认为我喜欢你带回家的第一条信息是机器人是真实的。
+at robots? I think the first message I like you to take home is that robots are real.
+
+58
+00:04:56,520 --> 00:05:00,020
+它们并不都像你在书中读到的或你看到的虚构机器人
+They're not all like the fictional robots that you read about in books or you see in
+
+59
+00:05:00,020 --> 00:05:07,340
+电视和电影院。今天有真正的机器人在这个星球上做有用的事情。
+television and in movie theatres. There are real robots out there doing useful things on the planet today.
+
+60
+00:05:07,340 --> 00:05:11,980
+这些机器人的形式和功能各不相同。它们看起来不像我们的人形机器人
+These robots are diverse in form and function. They don't look like the humanoid robots we
+
+61
+00:05:11,990 --> 00:05:16,669
+在小说中看到。它们可能看起来像汽车，它们可能看起来像拖拉机或飞机
+see in fiction. They might look like cars, they might look like tractors or airplanes
+
+62
+00:05:16,669 --> 00:05:23,029
+或潜艇，但它们是机器人，因为它们遵循这种基本的传感范式，
+or submarines, but they are robots because they follow this fundamental paradigm of sensing,
+
+63
+00:05:23,029 --> 00:05:27,770
+计划，并采取行动，以便他们能够实现目标。那就是机器人。
+planning, and acting so that they can achieve a goal. That's what robots are.
+
+64
+00:05:27,770 --> 00:05:32,740
+机器人的功能正在快速改进，并且受到改进的推动
+The functionality of robots is improving incredibly rapidly and that's driven by improvements
+
+65
+00:05:32,740 --> 00:05:38,620
+在技​​术，计算技术和惊人的传感器的现成可用性;
+in technology, computational technology, and the ready availability of amazing sensors;
+
+66
+00:05:38,620 --> 00:05:42,680
+惯性传感器，视觉传感器等。
+inertial sensors, visual sensors, and so on.
+
+67
+00:05:42,680 --> 00:05:47,740
+但是这里有一些非常重要的非技术带回家信息。在这个讲座中，
+But there are some really important non-technical take-home messages here. And in this lecture,
+
+68
+00:05:47,740 --> 00:05:53,740
+我们已经谈了很多关于我们作为一个社会和这些社会所面临的巨大挑战
+we’ve talked a lot about the big challenges that confront all of us as a society and these
+
+69
+00:05:53,740 --> 00:05:59,979
+是关于人口，食物和就业以及照顾老人的问题。
+are problems around population and food and jobs and care for the elderly.
+
+70
+00:05:59,979 --> 00:06:04,610
+这些是我们社会面临的巨大挑战，我真的相信机器人是
+These are massive challenges that our societies face and I really believe that robots are
+
+71
+00:06:04,610 --> 00:06:07,339
+解决这些挑战的一部分。
+part of the solution to these challenges.
+
+72
+00:06:07,339 --> 00:06:12,939
+但作为机器人专家，我认为我们更广泛地考虑这些影响是非常重要的
+But as a roboticist’s I believe it's important that we think much more widely about the implications
+
+73
+00:06:12,939 --> 00:06:15,699
+我们正在开发的技术。
+of the technology that we are developing.
+
+74
+00:06:15,699 --> 00:06:20,749
+是的，我相信机器人技术确实是许多挑战的答案，但我们确实需要
+Yes, I believe robotics really is the answer to many of these challenges but we do need
+
+75
+00:06:20,749 --> 00:06:27,749
+了解技术的使用方式。我们需要了解道德，
+to be aware of the way the technology will be used. We need to understand about the ethics,
+
+76
+00:06:27,749 --> 00:06:32,999
+我们需要了解一般成员所关注的各种问题和考虑因素
+we need to understand about the sorts of concerns and considerations that general members of
+
+77
+00:06:32,999 --> 00:06:41,499
+公众持有。因此，作为机器人专家，我们有责任明智地使用和部署这项技术。
+the public hold. So it's our responsibility, as roboticist’s to employ and deploy this technology wisely.
+

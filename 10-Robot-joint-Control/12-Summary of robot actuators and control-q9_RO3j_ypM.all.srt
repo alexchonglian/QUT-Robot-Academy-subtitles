@@ -1,0 +1,315 @@
+1
+00:00:03,470 --> 00:00:08,550
+我们在本次讲座中涵盖了很多领域，让我们回顾一些更重要的观点。
+We've covered a lot of territory in this lecture, let's recap some of the more important points.
+
+2
+00:00:08,550 --> 00:00:12,580
+执行器是引起运动的装置-可以引起线性或旋转运动，以及它们
+Actuators are devices that cause motion — that can cause linear or rotary motion, and they
+
+3
+00:00:12,580 --> 00:00:17,439
+可以产生速度或力量。它们可以基于许多不同的物理
+can generate either a speed or a force. They can be based on a number of different physical
+
+4
+00:00:17,439 --> 00:00:20,439
+原则;它们可以是液压，气动或电动。
+principles; they can be hydraulic, pneumatic, or electric.
+
+5
+00:00:20,439 --> 00:00:25,769
+在大多数机器人中，电动是最常用的致动器类型。大多数机器人
+In most robots, electric is the most common type of actuator that's used. Most robots
+
+6
+00:00:25,769 --> 00:00:30,609
+由电动机驱动采用减速齿轮箱。电动机能够旋转
+driven by electric motors employ a reduction gear box. Electric motors are capable of spinning
+
+7
+00:00:30,609 --> 00:00:35,990
+非常快，但他们往往具有相对较低的扭矩。减速齿轮箱放大
+very very quickly, but they tend to have relatively low torque. A reduction gearbox amplifies
+
+8
+00:00:35,990 --> 00:00:42,270
+以电机速度为代价的电机转矩。我们引入了“S”作为运营商
+the motor's torque at the expense of the motor's speed. We introduced "S" as an operator to
+
+9
+00:00:42,270 --> 00:00:47,960
+将微分方程转换为代数方程，即一个特征方程
+convert a differential equation into an algebraic equation, a characteristic equation, which
+
+10
+00:00:47,960 --> 00:00:53,440
+代表了潜在的机械或电气系统的动态。特征的根源
+represents the dynamics of an underlying mechanical or electrical system. The roots of the characteristic
+
+11
+00:00:53,440 --> 00:00:58,710
+方程式被称为系统的极点。他们描述了反应
+equation are referred to as the poles of the system. And they describe the response of
+
+12
+00:00:58,710 --> 00:01:01,590
+系统作为时间的函数。
+the system as a function of time.
+
+13
+00:01:01,590 --> 00:01:06,560
+对于具有多个极点的系统，总体响应是响应的超级位置，
+For a system with multiple poles, the overall response is the super position of the response,
+
+14
+00:01:06,560 --> 00:01:12,640
+由于每个极点。我们介绍了传递函数的概念。
+due to each of the individual poles. We introduced the notion of a transfer function.
+
+15
+00:01:12,640 --> 00:01:17,230
+在拉普拉斯域中，它是电阻输出与其输入的比率。
+And in the laplace domain it is the ratio of resistance output to it's input.
+
+16
+00:01:17,230 --> 00:01:21,900
+大多数机械系统包含摩擦力有两种重要的摩擦类型：
+Most mechanical systems incorporate friction. There are two important classes of friction:
+
+17
+00:01:21,900 --> 00:01:26,860
+线性摩擦和非线性摩擦有时被称为库仑摩擦。
+linear friction, and non-linear friction which is sometimes referred to as coulomb friction.
+
+18
+00:01:26,860 --> 00:01:31,310
+一个现实的摩擦模型看起来像这样。它有正面和负面
+A realistic friction model looks something like this. It has a positive and negative
+
+19
+00:01:31,310 --> 00:01:34,870
+库仑摩擦值和线性斜率“B”。
+coulomb friction value and a linear slope "B".
+
+20
+00:01:34,870 --> 00:01:38,950
+摩擦力总是与运动方向相反。和摩擦特性一样
+The friction force always opposes the direction of motion. And a friction characteristic like
+
+21
+00:01:38,950 --> 00:01:45,010
+对于零速度的情况，这没有定义。对于电流控制的电动机，
+this is not defined for the case of zero velocity. For a current controlled electrical motor,
+
+22
+00:01:45,010 --> 00:01:50,060
+我们可以用电机常数，它的惯性和它来写出它的传递函数
+we can write its transfer function in terms of the motor constant, it's inertia, and it's
+
+23
+00:01:50,060 --> 00:01:51,150
+摩擦。
+friction.
+
+24
+00:01:51,150 --> 00:01:56,220
+电动机控制系统需要一种测量电动机轴角度的装置。而且最多
+A motor control system needs a means of measuring the angle of the motor shaft. And the most
+
+25
+00:01:56,220 --> 00:02:01,159
+常见的方法是使用增量编码器，两个光束照射通过
+common way this is done is with an incremental encoder with two light beams shine through
+
+26
+00:02:01,159 --> 00:02:03,540
+安装在电机轴上的圆盘槽。
+slots in a disk attached to the motor shaft.
+
+27
+00:02:03,540 --> 00:02:07,720
+我们可以分析这些信号，以确定电机的速度和方向
+We can analyze these signals to determine the velocity of the motor and the direction
+
+28
+00:02:07,720 --> 00:02:12,770
+轮换。通过计算脉冲并知道方向，我们可以确定
+of rotation. And by counting the pulses and knowing the direction, we can determine the
+
+29
+00:02:12,770 --> 00:02:17,840
+电机轴的角度。我们将许多这些组件组合在一起以创建机器人
+angle of the motor shaft. We bring a number of these components together to create a robot
+
+30
+00:02:17,840 --> 00:02:19,290
+联合控制员。
+joint controller.
+
+31
+00:02:19,290 --> 00:02:23,860
+联合控制器本身通常是在嵌入式控制器中运行的算法。
+The joint controller itself is typically an algorithm running in an embedded controller.
+
+32
+00:02:23,860 --> 00:02:29,020
+电动机驱动器通常是包括四个电子开关的H桥电路。开关
+The motor drive is typically an H-bridge circuit comprising four electronic switches. The switches
+
+33
+00:02:29,020 --> 00:02:33,260
+可以很快打开和关闭，这使我们不仅可以控制方向
+can be turned on and off very quickly which allows us to control not only the direction
+
+34
+00:02:33,260 --> 00:02:38,190
+电流流过电动机，但是电动机经历的平均电压。
+the current flows through the motor, but the average voltage that the motor experiences.
+
+35
+00:02:38,190 --> 00:02:42,099
+电机的输出通过机械传动装置通过机械传动装置连接，
+The output of the motor is connected through the robot joint by a mechanical transmission,
+
+36
+00:02:42,099 --> 00:02:46,730
+减速齿轮箱，用于放大电动机的扭矩。
+a reduction gearbox which amplifies the torque of the motor.
+
+37
+00:02:46,730 --> 00:02:51,380
+使用位置传感器测量电机的位置。通常，这是一种光学
+The position of the motor is measured with a position sensor. Typically, that's an optical
+
+38
+00:02:51,380 --> 00:02:56,170
+增量编码器。与之相比，该信息反馈给联合控制器
+incremental encoder. That information is fed back to the joint controller compared with
+
+39
+00:02:56,170 --> 00:03:00,930
+理想的位置。并且这两者之间的误差也用于驱动电动机
+the desired position. And the error between those two is used to drive the motor either
+
+40
+00:03:00,930 --> 00:03:05,300
+向前或向后以最小化错误。
+forwards or backwards to minimize the error.
+
+41
+00:03:05,300 --> 00:03:09,810
+我们可以创建这个机器人联合控制系统的动态模型。
+We can create a dynamic model of this robot joint control system.
+
+42
+00:03:09,810 --> 00:03:14,260
+我们有一个代表联合控制器的块和负反馈求和
+We have a block which represents the joint controller, and the negative feedback summing
+
+43
+00:03:14,260 --> 00:03:20,430
+结。电机驱动器的输出是电流，进入我们的执行器模型。
+junction. The output of the motor driver is current which goes into our model of the actuator.
+
+44
+00:03:20,430 --> 00:03:25,290
+该块的输出是电机的位置。我们将传感器建模为增益
+The output of that block is the position of the motor. We model the sensor as a gain of
+
+45
+00:03:25,290 --> 00:03:30,060
+一，它向关节控制器提供负反馈信号。
+one, which provides the negative feedback signal to the joint controller.
+
+46
+00:03:30,060 --> 00:03:35,920
+机器人关节的最大加速度是最大扭矩的函数
+The maximum acceleration of a robot joint is a function of the maximum torque that the
+
+47
+00:03:35,920 --> 00:03:40,790
+电动机可以产生，这是电动机转矩常数和最大值的函数
+motor can generate and that's a function of the motor torque constant and the maximum
+
+48
+00:03:40,790 --> 00:03:46,319
+可以送入电机的电流。它也是惯性的函数
+current that can be fed into the motor. And it's also a function of the inertia that the
+
+49
+00:03:46,319 --> 00:03:49,170
+运动经验。
+motor experiences.
+
+50
+00:03:49,170 --> 00:03:54,349
+惯性有两个组成部分：一个组件是电机自身的电枢惯性
+That inertia has got two components: one component is the motor's own armature inertia and that's
+
+51
+00:03:54,349 --> 00:03:57,870
+一个常数。另一个组成部分是链路的惯性。
+a constant. The other component is the inertia of the link.
+
+52
+00:03:57,870 --> 00:04:03,300
+在真实的机器人中，链路惯性是高度可变的。这是因为在串行链接中
+In a real robot, the link inertia is highly variable. And that's because in a serial link
+
+53
+00:04:03,300 --> 00:04:08,459
+操纵器，每个链接都必须支撑所有后续链接。作为关节角度
+manipulator, each link has to hold up all of the subsequent links. As the joint angles
+
+54
+00:04:08,459 --> 00:04:14,739
+所有这些板外链接都随时间变化，这种电机的惯性也会随之变化。
+of all of those out board links varies with time, so will the inertia that this motor experiences.
+
+55
+00:04:14,739 --> 00:04:19,699
+然而，通常在电动机和连杆之间存在齿轮箱，这就是效果
+However, typically there is a gearbox between the motor and the link and that is the effect
+
+56
+00:04:19,699 --> 00:04:25,540
+通过“G”平方因子减少链路惯性。通常，“G”是一个很大的数字，
+of reducing the inertia of the link by a factor of "G" squared. Typically, "G" is a big number,
+
+57
+00:04:25,540 --> 00:04:30,280
+可能是十，可能是一百;这大大减少了这种可变惯性
+could be ten, could be a hundred; and that dramatically reduces this variable inertia
+
+58
+00:04:30,280 --> 00:04:32,630
+由于链接配置。
+due to the link configuration.
+
+59
+00:04:32,630 --> 00:04:36,810
+多关节机器人通常采用所谓的独立关节控制
+Multi-joint robots typically employ what's called independent joint control so there
+
+60
+00:04:36,810 --> 00:04:41,699
+是每个单独关节的独立机器人关节控制器。通常这些控制器
+is a separate robot joint controller for each individual joint. Typically these controllers
+
+61
+00:04:41,699 --> 00:04:47,229
+有一个共同的电子和软件设计。通常，只有几个参数
+have a common electronic and software design. And typically, only a few parameters in the
+
+62
+00:04:47,229 --> 00:04:51,810
+需要更换联合控制器以适应安装的不同尺寸的电机
+joint controller need to be changed to accommodate the different sized motors that are fitted
+
+63
+00:04:51,810 --> 00:04:53,830
+到机器人的不同关节。
+to different joints of the robot.
+

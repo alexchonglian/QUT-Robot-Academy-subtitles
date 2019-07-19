@@ -1,0 +1,120 @@
+1
+00:00:03,750 --> 00:00:09,740
+最后，我们来讨论两个姿势之间的插值问题。姿势有翻译
+Finally, we come to the problem of interpolating between two poses. Poses have got a translational
+
+2
+00:00:09,740 --> 00:00:16,059
+和旋转部件。我们需要单独插入它们。我们称之为笛卡儿
+and a rotational component. We need to interpolate them separately. We refer to this as Cartesian
+
+3
+00:00:16,059 --> 00:00:22,770
+插值。让我们考虑两个姿势;姿势0和姿势1，每个都可以表示
+interpolation. Let’s consider two poses; pose 0 and pose 1, each can be represented
+
+4
+00:00:22,770 --> 00:00:29,460
+通过旋转矩阵和向量。我们可以将每个姿势的旋转矩阵转换为
+by a rotation matrix and a vector. We can convert the rotation matrix of each pose into
+
+5
+00:00:29,460 --> 00:00:34,500
+一个唯一的四元数，我们可以使用线性插值插值平移
+a unique quaternion and we can interpolate the translation using the linear interpolation
+
+6
+00:00:34,500 --> 00:00:39,870
+我们之前介绍过的公式。S是时间的函数，从0到0平滑变化
+formula that we introduced earlier. S is a function of time, varies smoothly from 0 to
+
+7
+00:00:39,870 --> 00:00:46,510
+1在轨迹的持续时间内。并且，我们使用四元数插入旋转
+1 over the duration of the trajectory. And, we interpolate the rotation using the quaternion
+
+8
+00:00:46,510 --> 00:00:51,739
+我们在上一节介绍的插值公式。如果我们想要，我们可以转换
+interpolation formula that we introduced in the last section. If we want, we can convert
+
+9
+00:00:51,739 --> 00:00:57,570
+插值四元数返回旋转矩阵，将其与插值平移相结合
+the interpolated quaternion back to a rotation matrix, combine it with the interpolated translation
+
+10
+00:00:57,570 --> 00:01:04,890
+并重建一个齐次变换矩阵。现在让我们在两个姿势之间进行插值
+and rebuild a homogeneous transformation matrix. Let’s now interpolate between two poses
+
+11
+00:01:04,890 --> 00:01:10,990
+以均匀变换矩阵的形式描述。第一个姿势是空姿势。它
+described in terms of homogeneous transformation matrices. The first pose is a null pose. It
+
+12
+00:01:10,990 --> 00:01:18,920
+只有0个方向，平移分量为0.第二个姿势有限
+just got 0 orientation and a translational component of 0. The second pose has a finite
+
+13
+00:01:18,920 --> 00:01:25,110
+平移分量和有限旋转分量由这种均匀定义
+translational component and a finite rotational component and is defined by this homogeneous
+
+14
+00:01:25,110 --> 00:01:32,790
+转换矩阵在这里。现在，我可以在这两个姿势之间创建一个平滑的轨迹
+transformation matrix here. Now, I can create a smooth trajectory between these two poses
+
+15
+00:01:32,790 --> 00:01:38,780
+使用工具箱功能，ctraj代表笛卡尔轨迹。而且，争论
+using the Toolbox function, ctraj which stands for Cartesian trajectory. And, the arguments
+
+16
+00:01:38,780 --> 00:01:45,880
+是最初的姿势，最终的姿势和时间步数。结果是一个矩阵
+are the initial pose, the final pose and the number of time steps. The result is a matrix
+
+17
+00:01:45,880 --> 00:01:53,579
+那是4x4x50.再一次，这是一堆均匀变换矩阵。
+that’s 4 x 4 x 50. Once again, this is a stack of homogeneous transformation matrices.
+
+18
+00:01:53,579 --> 00:01:58,740
+堆栈中的第一个元素，查看所有行和所有列以及第一个
+The first element in the stack, look at all the rows and all the columns and the first
+
+19
+00:01:58,740 --> 00:02:04,079
+在堆栈中看起来像这样。但是，堆栈中的第10个，看看所有的行和
+in the stack looks like this. But, the 10th one in the stack, look at all the rows and
+
+20
+00:02:04,079 --> 00:02:08,369
+所有列和堆栈中的第10列都是这样的。
+all the columns and the 10th in the stack looks like this.
+
+21
+00:02:08,369 --> 00:02:15,400
+该堆叠中的每个均匀变换表示沿轨迹和姿势的姿势
+Each homogeneous transformation in this stack represents a pose along a trajectory and pose
+
+22
+00:02:15,400 --> 00:02:20,790
+沿着这条轨道平稳地变化，在平移方面顺利而且顺畅
+varies smoothly along this trajectory, smoothly in terms of translation and smoothly in terms
+
+23
+00:02:20,790 --> 00:02:27,599
+方向。我可以使用tranimate函数绘制这个，我们在这里看到了
+of orientation. I can plot this using the tranimate function and we see here that the
+
+24
+00:02:27,599 --> 00:02:34,199
+姿势正在从位置和方向平滑地从初始姿势变为最终姿势。
+pose is changing from the initial pose to the final pose smoothly in position and in orientation.
+

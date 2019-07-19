@@ -1,0 +1,145 @@
+1
+00:00:03,639 --> 00:00:07,799
+最简单和最常见的摩擦模型称为线性摩擦，有时也称为线性摩擦
+The simplest and most common model of friction is called linear friction, sometimes also
+
+2
+00:00:07,799 --> 00:00:13,350
+称为粘性摩擦或粘性阻尼。然后，力或扭矩成比例
+called viscous friction or viscous damping. Then, the force or the torque is proportional
+
+3
+00:00:13,350 --> 00:00:18,750
+速度。所以，有两种情况。我们可以考虑一个我们有摩擦的线性情况
+to velocity. So, there are two cases. We can consider a linear case where we have friction
+
+4
+00:00:18,750 --> 00:00:24,060
+力与速度成正比，v，或者我们可以将旋转情况与摩擦力相对应
+force proportional to velocity, v, or we can have the rotational case where a frictional
+
+5
+00:00:24,060 --> 00:00:31,070
+扭矩tau与转速omega成正比。如果我们用力量对抗速度，
+torque, tau, is proportional to the rotational speed, omega. If we plot force against velocity,
+
+6
+00:00:31,070 --> 00:00:36,430
+我们可以通过斜率B的直线来表示摩擦的特性并参考
+we can represent the characteristic of friction by a straight line of slope B and refer to
+
+7
+00:00:36,430 --> 00:00:41,090
+B作为摩擦系数。通常，线的斜率为正
+B as the friction coefficient. Typically, the slope of the line for positive
+
+8
+00:00:41,090 --> 00:00:45,850
+和负速度是一样的。这是电流控制电动的模型
+and negative velocities is the same. Here is the model for a current controlled electric
+
+9
+00:00:45,850 --> 00:00:50,879
+我们之前介绍的电机。它将旋转加速度与施加的电流相关联。
+motor that we introduced earlier. It relates the rotation acceleration to the applied current.
+
+10
+00:00:50,879 --> 00:00:55,769
+而且，我将在这里添加摩擦力矩项。而且，摩擦是一个真正的问题
+And, I’m going to add a frictional torque term here. And, friction is a real issue in
+
+11
+00:00:55,769 --> 00:01:00,609
+大多数电动机。摩擦是由于轴在轴内旋转的轴承造成的。
+most electric motors. The friction is due to the bearings that the shaft rotates within.
+
+12
+00:01:00,609 --> 00:01:05,320
+并且，对于带刷子的电动机，这代表了刷子摩擦的摩擦力
+And, for motors with brushes this represents the frictional force of the brushes rubbing on
+
+13
+00:01:05,320 --> 00:01:09,100
+电机的换向器。我可以重新排列方程式
+the motor’s Commutator. I can rearrange the equation to look like
+
+14
+00:01:09,100 --> 00:01:14,450
+这个然后我可以转换它并将其转换为传递函数形式。所以，我们在这里
+this and then I can transform it and put it into transfer function form. So, here we
+
+15
+00:01:14,450 --> 00:01:20,240
+具有电动机的传递功能，并且它包含电动机扭矩
+have the transfer function for an electric motor and it incorporates the motor torque
+
+16
+00:01:20,240 --> 00:01:25,479
+恒定，电机的惯性和电机的摩擦力。一些系统展出
+constant, the inertia of the motor and the friction of the motor. Some systems exhibit
+
+17
+00:01:25,479 --> 00:01:29,840
+非线性摩擦和最经典的情况称为库仑摩擦
+a nonlinear friction and the most classic case of this is known as Coulomb friction
+
+18
+00:01:29,840 --> 00:01:34,990
+这是以一位着名的法国物理学家的名字命名的，他也在静电方面做了很多工作
+and this is named after a famous French physicist who also did a lot of work in electrostatics
+
+19
+00:01:34,990 --> 00:01:39,140
+电荷单位以同一位绅士的名字命名。
+and the unit of electric charge is named after this same gentleman.
+
+20
+00:01:39,140 --> 00:01:43,860
+就像我们之前看到的线性摩擦一样，非线性摩擦力总是相反的
+Like the linear friction we looked at before, the nonlinear friction force always opposes
+
+21
+00:01:43,860 --> 00:01:48,299
+运动的方向。有趣的是，库仑摩擦没有定义
+the direction of motion. Interestingly, Coulomb friction is not defined
+
+22
+00:01:48,299 --> 00:01:53,080
+对于零速度的情况。我们定义机构移动时的摩擦量
+for the case of zero velocity. We define the amount of friction when the mechanism is moving
+
+23
+00:01:53,080 --> 00:01:57,600
+在正方向和机构向负方向移动时，这些
+in the positive direction and when the mechanism is moving in the negative direction, and these
+
+24
+00:01:57,600 --> 00:02:01,850
+值可以相同，也可以不同。这取决于机制。
+values may be the same or they may be different. It depends on the mechanism.
+
+25
+00:02:01,850 --> 00:02:06,450
+对于真正的机器，摩擦实际上是这两种效果的组合，即
+For a real machine, friction is actually a combination of both these two effects, the
+
+26
+00:02:06,450 --> 00:02:11,150
+非线性库仑摩擦和线性摩擦。再次，这个摩擦曲线
+nonlinear Coulomb friction and the linear friction. Once again, this friction curve
+
+27
+00:02:11,150 --> 00:02:16,599
+没有为零速度的情况定义。这两个术语可以相同或不同
+is not defined for the case of zero velocity. These two terms may be the same or different
+
+28
+00:02:16,599 --> 00:02:21,080
+并且正负速度线的斜率可以相同或者相等
+and the slope of the line for positive and negative velocities may be the same or it
+
+29
+00:02:21,080 --> 00:02:24,870
+可能会有所不同。再一次，它取决于特定的机器。
+may be different. Once again, it depends on the particular machine.
+

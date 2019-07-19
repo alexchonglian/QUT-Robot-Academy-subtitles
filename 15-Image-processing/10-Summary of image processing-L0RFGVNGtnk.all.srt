@@ -1,0 +1,140 @@
+1
+00:00:04,049 --> 00:00:07,379
+让我们总结一下我们在本讲座中学到的东西。
+Let’s summarise what we have learned in this lecture.
+
+2
+00:00:07,379 --> 00:00:13,800
+MATLAB支持矩阵和标量，矩阵和矩阵之间的许多操作。
+MATLAB supports a number of operations between matrices and scalars, and matrices and matrices.
+
+3
+00:00:13,800 --> 00:00:20,439
+在矩阵和标量的情况下，会发生的是标量应用于每个标量
+In the case of a matrix and a scalar, what happens is that the scalar is applied to every
+
+4
+00:00:20,439 --> 00:00:25,619
+输入矩阵的元素和那些结果被放入相应的元素中
+element of the input matrix and those results are placed into the corresponding elements
+
+5
+00:00:25,619 --> 00:00:27,630
+输出矩阵
+of the output matrix.
+
+6
+00:00:27,630 --> 00:00:31,730
+我们可以在矩阵和标量之间使用的各种运算符包括标准
+The sorts of operators we can use between a matrix and a scalar include the standard
+
+7
+00:00:31,730 --> 00:00:37,480
+算术运算符，它们还包括逻辑运算符，它们执行逻辑运算
+arithmetic operators and they also include the logical operators, which perform logical
+
+8
+00:00:37,480 --> 00:00:41,800
+比较，其结果是假的。
+comparisons, and which have a result which is either true of false.
+
+9
+00:00:41,800 --> 00:00:46,430
+当我们在矩阵和矩阵之间执行操作时，矩阵需要是
+When we perform an operation between a matrix and a matrix, the matrices need to be the
+
+10
+00:00:46,430 --> 00:00:52,260
+相同的大小和操作在矩阵的相应元素之间执行。
+same size and the operations are performed between corresponding elements of the matrix.
+
+11
+00:00:52,260 --> 00:00:57,969
+结果被放入输出矩阵的相应元素中。
+Results are placed into the corresponding element of the output matrix.
+
+12
+00:00:57,969 --> 00:01:00,739
+MATLAB支持许多逻辑运算符。
+MATLAB supports a number of logical operators.
+
+13
+00:01:00,739 --> 00:01:07,500
+逻辑运算符的结果只是真或假，我们可以执行许多不同的结果
+The results of logical operator are only true or false and we can perform a number of different
+
+14
+00:01:07,500 --> 00:01:14,390
+逻辑测试：平等;非平等;比...更棒;少于;等等。
+logical tests: equality; non-equality; greater than; less than; and so on.
+
+15
+00:01:14,390 --> 00:01:19,550
+我们已经谈到了monadic图像处理，这就是单个像素的位置
+We have talked about monadic image processing and that is where individual pixels in the
+
+16
+00:01:19,550 --> 00:01:25,470
+输入图像通过函数f（x）传递，结果放入相应的
+input image are passed through a function f(x) and the result is placed into the corresponding
+
+17
+00:01:25,470 --> 00:01:29,030
+输出矩阵中的元素。
+element in the output matrix.
+
+18
+00:01:29,030 --> 00:01:33,920
+我们对所有像素应用相同的函数，我们查看了许多操作，例如
+We apply the same function to all pixels and we looked at a number of operations such as
+
+19
+00:01:33,920 --> 00:01:38,170
+对比;增强;亮度变化;直方图归一化;阈值;色调分离;
+contrast; enhancement; brightness change; histogram normalization; thresholding; posterization;
+
+20
+00:01:38,170 --> 00:01:40,220
+等等。
+and so on.
+
+21
+00:01:40,220 --> 00:01:43,390
+而且还有很多很多。
+And there are many, many, more.
+
+22
+00:01:43,390 --> 00:01:47,840
+我们所看到的另一类操作就是我们所说的diadic操作
+The other class of operation we looked at are what we called diadic operations and here
+
+23
+00:01:47,840 --> 00:01:53,310
+我们有两个输入图像，通过一个函数并输出值
+we have two input images, passed through a function and the output value is placed into
+
+24
+00:01:53,310 --> 00:01:55,920
+输出图像中的相应像素。
+the corresponding pixel in the output image.
+
+25
+00:01:55,920 --> 00:02:01,090
+diadic操作的一些例子是图像减法，我们用它来找到差异
+Some examples of diadic operations were image subtraction, which we used to find the difference
+
+26
+00:02:01,090 --> 00:02:02,960
+在两个输入场景之间。
+between two input scenes.
+
+27
+00:02:02,960 --> 00:02:07,260
+我们还使用了不同的diadic操作的数量来执行相当复杂的操作
+We also used the number of different diadic operations in performing quite a sophisticated
+
+28
+00:02:07,260 --> 00:02:11,250
+图像处理任务，即实现绿屏效果。
+image processing task, which is implementing the green screen effect.
+

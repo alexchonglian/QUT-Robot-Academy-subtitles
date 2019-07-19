@@ -1,0 +1,305 @@
+1
+00:00:03,540 --> 00:00:08,940
+我们将首先重新介绍二维几何的基本原理。首先，
+We’ll start by recapping some fundamentals of two-dimensional geometry. To start with,
+
+2
+00:00:08,940 --> 00:00:15,299
+我们要谈谈欧几里得飞机。欧几里德平面是非曲面
+we’re going to talk about a Euclidian plane. A Euclidian plane is a non-curved surface
+
+3
+00:00:15,299 --> 00:00:19,840
+欧几里德几何规则适用的地方。我们通常认为这是理所当然的。
+where the rules of Euclidian geometry apply. We normally take this for granted.
+
+4
+00:00:19,840 --> 00:00:24,880
+我们只是明确指出我们正在使用平面。
+We’re just going to be explicit about the fact that we’re working with flat surfaces.
+
+5
+00:00:24,880 --> 00:00:29,699
+第二个概念是笛卡尔坐标。同样，这是一个你应该很好的概念
+The second concept is Cartesian coordinates. Again, this is a concept you should be well
+
+6
+00:00:29,699 --> 00:00:34,980
+熟悉。我们有一组正交轴，通常标记为X和Y.我们有一个
+familiar with. We have a set of orthogonal axes typically labeled X and Y. We have a
+
+7
+00:00:34,980 --> 00:00:40,780
+点P，我们根据距离描述其相对于原点的位置
+point P and we describe its position with respect to the origin in terms of distances
+
+8
+00:00:40,780 --> 00:00:47,420
+沿X和Y轴。对您来说可能不太熟悉的概念将是同质的
+along the X and Y axes. A concept that is perhaps less familiar to you will be homogenous
+
+9
+00:00:47,420 --> 00:00:52,360
+坐标，我们将在本讲座中大量使用它们。那些你的人
+coordinates and we’re going to be using them a lot in this lecture. Those of you who’ve
+
+10
+00:00:52,360 --> 00:00:57,399
+完成了机器人课程的介绍，已经遇到了同质的坐标。
+done the introduction to robotics course will have already encountered homogenous coordinates.
+
+11
+00:00:57,399 --> 00:01:02,190
+为了表示二维笛卡尔空间中的一个点，我们用一对来描述它
+To represent a point in a two-dimensional Cartesian space, we describe it by a pair
+
+12
+00:01:02,190 --> 00:01:09,200
+作为元组X，Y写的数字，我们说这一点存在于二维空间中
+of numbers written as tuple X, Y and we say that this point lives in the space of two-dimensional
+
+13
+00:01:09,200 --> 00:01:13,740
+实数，我们用符号R2（R平方）表示。
+real numbers, which we denote by the symbol R2 (R squared).
+
+14
+00:01:13,740 --> 00:01:19,070
+在同质坐标中，我们用三个数字表示相同的点。在这种情况下，
+In homogenous coordinates, we represent the same point with three numbers. In this case,
+
+15
+00:01:19,070 --> 00:01:24,500
+我们把它表示为X，Y和头号。事实上，头号有些武断;
+we’ve represent it as X, Y and the number one. In fact, the number one is somewhat arbitrary;
+
+16
+00:01:24,500 --> 00:01:31,200
+它可以是任何非零常数。我们现在说这一点属于二维的
+it could be any non-zero constant. We say now that this point belongs to the two-dimensional
+
+17
+00:01:31,200 --> 00:01:36,799
+投影空间，我们用符号P2（P平方）表示。所以这是同一点，
+projective space, which we denote by the symbol P2 (P squared). So it’s the same point,
+
+18
+00:01:36,799 --> 00:01:42,320
+只有两种不同的方式来表示它。同质表示，表示
+just two different ways to represent it. The homogenous representation, the representation
+
+19
+00:01:42,320 --> 00:01:46,820
+在这个讲座中，投射空间对我们来说非常非常方便。
+in projective space is going to be very, very handy to us in this lecture.
+
+20
+00:01:46,820 --> 00:01:51,140
+现在要从同质坐标转换为笛卡尔坐标，我要去
+Now to convert from homogenous coordinate to a Cartesian coordinate, I’m going to
+
+21
+00:01:51,140 --> 00:01:57,439
+从这里表示为Xtilde，Ytilde和Ztilde的非常一般的同质坐标开始。
+start with the very general homogenous coordinate denoted here as X tilde, Y tilde and Z tilde.
+
+22
+00:01:57,439 --> 00:02:01,990
+要通过笛卡尔坐标转换它，我所做的就是取前两个数字和
+To convert it through a Cartesian coordinate what I do is take the first two numbers and
+
+23
+00:02:01,990 --> 00:02:08,989
+除以第三个。因此X和Y笛卡尔坐标由Z波浪号上的X波浪号给出
+divide by the third. So X and Y Cartesian coordinates are given by X tilde on Z tilde
+
+24
+00:02:08,989 --> 00:02:12,379
+和Y代表Ztilde。
+and Y tilde on Z tilde respectively.
+
+25
+00:02:12,379 --> 00:02:18,560
+现在一位数学家会说，在投射空间中，线和点有双重性。他们有
+Now a mathematician would say that in projective space, lines and points have duals. They have
+
+26
+00:02:18,560 --> 00:02:24,720
+等价的陈述。一些非常有趣和非常有用的东西来自这种二元性。
+equivalent representations. Some very interesting and very useful things flow from this duality.
+
+27
+00:02:24,720 --> 00:02:29,480
+我们可以用同质的形式写一条与我们习惯的有点不同的线
+We can write a line in homogenous form a little bit different to what we’re used to but
+
+28
+00:02:29,480 --> 00:02:35,989
+我们可以写一条线作为三个数字，在这里表示为L1，L2和L3。想象一下，我
+we can write a line as three numbers denoted here as L1, L2 and L3. Imagine that I’ve
+
+29
+00:02:35,989 --> 00:02:41,540
+得到一个沿着那条线移动的点。所以这条线实际上是所有可能的集合
+got a point which moves along that line. So the line is really the set of all possible
+
+30
+00:02:41,540 --> 00:02:47,010
+沿着它的点。我可以表达这样一个事实，即关键点在于
+points that lie along it. I can express the fact that the point lies on the line by the
+
+31
+00:02:47,010 --> 00:02:52,959
+线的点积和点等​​于零。我们将此称为重点
+dot product of the line and the point being equal to zero. We refer to this as the point
+
+32
+00:02:52,959 --> 00:02:58,730
+一条线的方程。根据可能存在的所有点来定义一条线
+equation of a line. A line is defined in terms of all the points that could possibly lie
+
+33
+00:02:58,730 --> 00:02:59,560
+沿着它。
+along it.
+
+34
+00:02:59,560 --> 00:03:05,409
+现在我可以扩展它，我们可以看到它看起来与传统的有点不同
+Now I can expand that out and we can see that that looks a little bit different to the conventional
+
+35
+00:03:05,409 --> 00:03:11,959
+直线的笛卡尔表示。但是如果我们从同质坐标进行转换
+Cartesian representation of a line. But if we do the transformation from homogenous coordinates
+
+36
+00:03:11,959 --> 00:03:17,629
+对于笛卡尔坐标，我们可以证明线的这两个表示是等价的。
+to Cartesian coordinates, we can show that these two representations of a line are equivalent.
+
+37
+00:03:17,629 --> 00:03:22,810
+使用同质形式的一个优点是它很容易表示一条线
+An advantage of using the homogenous form is that it’s very easy to represent a line
+
+38
+00:03:22,810 --> 00:03:27,400
+这是垂直的，在笛卡尔坐标系中，这意味着线的梯度是
+that is vertical where in Cartesian coordinates, that means that the gradient of the line is
+
+39
+00:03:27,400 --> 00:03:34,129
+等于无穷大。在同质形式下，我们非常简单方便地对待这种情况。
+equal to infinity. In homogenous form, we treat that situation very simply and conveniently.
+
+40
+00:03:34,129 --> 00:03:39,080
+我们不需要引入任何无穷大。我们也可能对如何描述感兴趣
+We don’t need to introduce any infinities. We also might be interested in how to describe
+
+41
+00:03:39,080 --> 00:03:44,150
+一条连接两点的线。所以这里我们有两个点，这是一条经过的线
+a line that joins two points. So here we have two points and here’s a line that passes
+
+42
+00:03:44,150 --> 00:03:49,530
+通过这两点。然后记住的线的同质表示
+through those two points. Then the homogenous representation of the line which remember
+
+43
+00:03:49,530 --> 00:03:55,420
+是三个向量简单地由两个点的交叉积给出
+is the three vector is given simply by the cross-product of the two points that lie on
+
+44
+00:03:55,420 --> 00:04:01,030
+这条线。这是一种非常非常简单的方法，可以找到连接两点的线的方程
+the line. So a very, very simple way of finding the equation of a line that joins two points
+
+45
+00:04:01,030 --> 00:04:05,040
+比笛卡尔坐标更方便。
+much, much more conveniently than it is for Cartesian coordinates.
+
+46
+00:04:05,040 --> 00:04:09,330
+我们可能也对交叉点的坐标问题感兴趣
+We might also be interested in the problem of the coordinate of the point at the intersection
+
+47
+00:04:09,330 --> 00:04:14,560
+两行。所以这里我们有两条线，这是交叉点和交叉点
+of two lines. So here we have two lines and this is the intersection point and the intersection
+
+48
+00:04:14,560 --> 00:04:20,199
+点由两条线的交叉积给出。我们称之为线方程
+point is given by the cross-product of the two lines. We call this the line equation
+
+49
+00:04:20,199 --> 00:04:24,990
+一点。该点由两行定义。
+of a point. The point is defined in terms of two lines.
+
+50
+00:04:24,990 --> 00:04:32,340
+所以让我们创造一个观点。水平坐标为100.垂直坐标为200.和点
+So let’s create a point. A horizontal coordinate of 100. A vertical coordinate of 200. And points
+
+51
+00:04:32,340 --> 00:04:36,940
+表示为列向量。那是我在那里写的行向量，
+are represented as column vectors. So that’s a row vector that I’ve written just there,
+
+52
+00:04:36,940 --> 00:04:43,680
+所以我会调换它。这样就会显示为列向量。所以这是欧几里德
+so I will transpose it. So that will display as a column vector. So this is a Euclidean
+
+53
+00:04:43,680 --> 00:04:46,520
+或点的笛卡尔坐标。
+or Cartesian coordinate for a point.
+
+54
+00:04:46,520 --> 00:04:51,240
+现在我们可以使用函数将欧几里德坐标转换为齐次坐标
+Now we can convert the Euclidean coordinate into a homogeneous coordinate using the function
+
+55
+00:04:51,240 --> 00:04:57,979
+e2h，我们可以看到它所做的一切都附加了1。所以现在而不是矢量
+e2h, and we can see that all it has done is appended a 1 to it. So now instead of a vector
+
+56
+00:04:57,979 --> 00:05:02,120
+有两个元素，它现在是一个有三个元素的列向量。最后一个元素是
+with two elements, its now a column vector with three elements. The last element is a
+
+57
+00:05:02,120 --> 00:05:03,060
+一。
+one.
+
+58
+00:05:03,060 --> 00:05:07,979
+现在我们可以使用。将齐次坐标转换回欧几里德坐标
+Now we can convert the homogeneous coordinate back to a Euclidean coordinate by using the
+
+59
+00:05:07,979 --> 00:05:14,180
+反函数h2e，对于齐次到欧几里德，我将其应用于答案
+inverse function h2e, for homogeneous to Euclidean, and I apply that to the answer
+
+60
+00:05:14,180 --> 00:05:18,780
+对于最后一个操作，我们看到它现在回到了一个带有两个元素的向量。
+for the last operation and we see that it is back now to a vector with two elements.
+
+61
+00:05:18,780 --> 00:05:21,389
+结果是我们开始使用的向量。
+The result is the vector that we started with.
+

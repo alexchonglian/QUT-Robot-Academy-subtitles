@@ -1,0 +1,55 @@
+1
+00:00:03,659 --> 00:00:08,430
+对任何机器人来说，一个非常重要的考虑因素是所有可能的点
+A really important consideration with any robot is the set of all possible points that
+
+2
+00:00:08,430 --> 00:00:09,510
+它可以到达。
+it can reach.
+
+3
+00:00:09,510 --> 00:00:14,599
+我们将此卷称为机器人的工作空间。
+And we refer to this volume as the workspace of the robot.
+
+4
+00:00:14,599 --> 00:00:19,050
+对于机器人随附的数据表中的大多数工业机器人手臂，您可以
+For most industrial robot arms in the data sheet that comes with the robot, you could
+
+5
+00:00:19,050 --> 00:00:21,380
+找到看起来像这样的图表。
+find the diagram that looks something like this.
+
+6
+00:00:21,380 --> 00:00:25,920
+它是机器人的平面图和侧视图。
+It is a plain view and side elevation view of the robot.
+
+7
+00:00:25,920 --> 00:00:31,119
+你在这里看到的标有蓝色的是机器人可达到的体积。
+And what you can see here marked in blue is the reachable volume of the robot.
+
+8
+00:00:31,119 --> 00:00:35,190
+我们可以看到这个体积在机器人身体周围也无法到达。
+We can see that this volume around the body of the robot where it cannot reach either.
+
+9
+00:00:35,190 --> 00:00:40,300
+这是由于特定关节或其运动范围的机械限制
+And this is due to mechanical limits on the range of motion of particular joints or it’s
+
+10
+00:00:40,300 --> 00:00:45,170
+机器人控制软件的神器，以防止手臂的部分相交或
+an artifact of the robot control software to prevent parts of the arm intersecting or
+
+11
+00:00:45,170 --> 00:00:48,789
+与机器人手臂或其基座的其他部分碰撞。
+colliding with other parts of the robot's arm or its base.
+

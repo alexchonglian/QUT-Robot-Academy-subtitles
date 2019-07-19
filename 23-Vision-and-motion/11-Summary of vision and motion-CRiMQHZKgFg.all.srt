@@ -1,0 +1,225 @@
+1
+00:00:03,320 --> 00:00:06,930
+让我们总结一下本讲座的一些要点。
+Let's summarise some of the main points from this lecture.
+
+2
+00:00:06,930 --> 00:00:12,389
+我们讨论了机器人如何知道物体在其环境中的位置。机器人实际上并不是
+We talked about how a robot knows where objects are in its environment. A robot doesn't actually
+
+3
+00:00:12,389 --> 00:00:17,890
+测量其工具尖端的位置，从关节角度测量和推断
+measure the position of its tool tip, it is inferred from joint angle measurements and
+
+4
+00:00:17,890 --> 00:00:22,580
+来自运动模型。它知道刀尖需要的笛卡尔坐标
+from a kinematic model. It knows the Cartesian coordinate of where the tool tip needs to
+
+5
+00:00:22,580 --> 00:00:27,289
+走向世界，运动控制器的工作就是把工具提到那里。
+go in the world, and it’s the job of the motion controller to take the tool tip there.
+
+6
+00:00:27,289 --> 00:00:31,019
+这个过程可能会出现许多问题;传感器可能存在错误，
+A number of things can go wrong with this process; there could be errors in the sensors,
+
+7
+00:00:31,019 --> 00:00:35,270
+运动模型可能存在误差，我们可能不知道机器人的基准位置
+there could be errors in the kinematic model, we may not know the base position of the robot
+
+8
+00:00:35,270 --> 00:00:40,079
+准确地说，我们可能不太准确地知道电路板的位置。所有的
+accurately, we may not know the location of the circuit board very accurately. All of
+
+9
+00:00:40,079 --> 00:00:44,899
+这些问题对我们构建现代工业机器人的方式产生了影响
+these issues have consequences on the way we construct a modern industrial robot and
+
+10
+00:00:44,899 --> 00:00:48,309
+它们通常会导致成本增加。
+they generally tend to lead to increased cost.
+
+11
+00:00:48,309 --> 00:00:52,320
+我们可以将其与人类解决问题的方式进行对比;例如穿针。
+We can contrast that with the way human beings solve problems; for instance threading a needle.
+
+12
+00:00:52,320 --> 00:00:58,620
+我用眼睛引导或引导线的末端穿过针孔。
+I use my eyes to guide or to steer the end of the thread through the hole in the needle.
+
+13
+00:00:58,620 --> 00:01:04,449
+如果我们将这个问题更加示意地考虑在哪里，我们试图对齐两端的结尾
+If we consider this problem a bit more schematically where we're trying to align the end of two
+
+14
+00:01:04,449 --> 00:01:11,770
+对象，我们可以考虑三维笛卡尔空间中的任务，我们也可以看一下
+objects, we can consider the task in the three-dimensional Cartesian space and we can also look at that
+
+15
+00:01:11,770 --> 00:01:18,189
+任务用相机。我们可以看一下正在实现的任务的二维表示。
+task with a camera. We can look at a two-dimensional representation of that task being achieved.
+
+16
+00:01:18,189 --> 00:01:22,640
+我们谈到了如何仅使用单个图像中的信息实际上提供的信息不足
+We talked about how using information from just a single image actually provides insufficient
+
+17
+00:01:22,640 --> 00:01:27,840
+在三维空间中可靠地执行此任务的信息。但实际上我们可以
+information to reliably perform this task in three-dimensional space. But we can actually
+
+18
+00:01:27,840 --> 00:01:33,820
+在两个摄像机视图中同时执行任务，对齐红色和蓝色对象，
+perform the task simultaneously in two camera views, aligning the red and blue objects,
+
+19
+00:01:33,820 --> 00:01:41,420
+如果发生这种情况，那么在真实的三维世界中，红色和蓝色物体也会对齐。
+and if that happens, then in the real three-dimensional world the red and blue objects will also become aligned.
+
+20
+00:01:41,520 --> 00:01:45,960
+我们谈到了移动相机时会发生什么。相机有六度
+We talked about what happens when we move a camera. The camera's got six degrees of
+
+21
+00:01:45,960 --> 00:01:51,360
+自由;其速度可以用三个平移速度分量来描述
+freedom; its velocity can be described in terms of three translational velocity components
+
+22
+00:01:51,360 --> 00:01:57,670
+和三个旋转速度分量。如果我们想象相机正在看
+and three rotational velocity components. If we imagine that the camera is looking at
+
+23
+00:01:57,670 --> 00:02:03,509
+一个恒定距离的常规点阵列，然后是每个相机速度分量
+a regular array of points a constant distance away, then each of the camera velocity components
+
+24
+00:02:03,509 --> 00:02:09,200
+导致图像平面上这些点的相当独特的运动模式。和这里
+results in a fairly unique pattern of motion of those points on the image plane. And here
+
+25
+00:02:09,200 --> 00:02:14,310
+我们可以看到由于速度而被称为光流的运动模式
+we can see the patterns of motion, which are referred to as optical flow, due to velocity
+
+26
+00:02:14,310 --> 00:02:21,040
+在X方向上，Z方向上的速度或绕Z轴的旋转速度。
+in the X direction, velocity in the Z direction or rotational velocity around the Z axis.
+
+27
+00:02:21,040 --> 00:02:26,129
+模式是相当明显的，但其中一些有点相似，特别是
+The patterns are fairly distinct but some of them are a little bit similar, and in particular
+
+28
+00:02:26,129 --> 00:02:32,980
+X方向的速度与旋转引起的运动模式非常相似
+velocity in the X direction is quite similar to the pattern of motion induced by rotation
+
+29
+00:02:32,980 --> 00:02:38,550
+围绕Y轴;它们看起来非常相似，但相似之处实际上取决于它们
+around the Y axis; they look quite similar, but the amount of similarity actually depends
+
+30
+00:02:38,550 --> 00:02:44,590
+关于镜头的焦距。对于大焦距，模糊性非常明显。
+on the focal length of the lens. For a large focal length, the ambiguity is quite pronounced.
+
+31
+00:02:44,590 --> 00:02:51,019
+随着焦距变小，模糊性不那么明显。这种模糊之间
+As the focal length gets smaller, the ambiguity is much less evident. This ambiguity between
+
+32
+00:02:51,019 --> 00:02:57,480
+vX和omega-Y，我们也在vY和omega-X之间看到，那里有一个对称性。
+vX and omega-Y, we also see between vY and omega-X, there's a symmetry there.
+
+33
+00:02:57,480 --> 00:03:02,890
+由六个向量描述的相机速度与之间的关系
+The relationship between the camera velocity which is described by a six vector and the
+
+34
+00:03:02,890 --> 00:03:09,730
+图像平面上的点的速度由图像雅可比矩阵描述。
+velocity of the point on the image plane, is described by the image Jacobian matrix.
+
+35
+00:03:09,730 --> 00:03:14,800
+图像雅可比矩阵告诉我们，对于特定的相机运动，点将如何
+The image Jacobian matrix tells us, for a particular camera motion, how points will
+
+36
+00:03:14,800 --> 00:03:20,060
+在图像平面上移动。我们可以转过来说我们想要的
+move on the image plane. We can turn this around and saying instead we want to have
+
+37
+00:03:20,060 --> 00:03:25,120
+图像平面上的特定速度，以便从初始移动形状
+a particular velocity on the image plane in order to move a shape from perhaps an initial
+
+38
+00:03:25,120 --> 00:03:32,269
+查看所需的视图。所以现在我们有了图像平面速度，我们可以反转这种关系
+view to a desired view. So now we have the image plane velocity, we can invert the relationship
+
+39
+00:03:32,269 --> 00:03:39,429
+并确定我们需要的相机速度，以实现我们所需的对象视图。
+and determine the camera velocity that we need in order to achieve our desired view of the object.
+
+40
+00:03:39,599 --> 00:03:44,760
+雅可比图像将像素速度与相机速度和图像雅可比相关联
+The image Jacobian relates pixel velocity to camera velocity, and the image Jacobian
+
+41
+00:03:44,760 --> 00:03:49,890
+本身是许多参数的函数。它取决于点的坐标
+itself is a function of many parameters. It depends on the coordinate of the point on
+
+42
+00:03:49,890 --> 00:03:55,620
+在图像平面上，它取决于点在三维空间中远离相机的距离
+the image plane, it depends on how far the point is away from the camera in three-dimensional
+
+43
+00:03:55,620 --> 00:04:00,510
+空间，这取决于焦距。我们可以在许多不同的方面重新安排这个等式
+space and it depends on the focal length. We can re-arrange this equation in many different
+
+44
+00:04:00,510 --> 00:04:06,580
+方法;也许我们知道像素速度和Z，以及u和v，然后我们可以确定什么
+ways; perhaps we know pixel velocity and Z, and u and v, and then we can determine what
+
+45
+00:04:06,580 --> 00:04:12,000
+相机速度是。我们可以用这个图像雅可比矩阵玩很多技巧。
+the camera velocity is. There are many tricks that we can play with this image Jacobian matrix.
+

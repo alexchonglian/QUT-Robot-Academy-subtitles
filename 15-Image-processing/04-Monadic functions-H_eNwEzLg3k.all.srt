@@ -1,0 +1,185 @@
+1
+00:00:04,460 --> 00:00:08,100
+让我们详细谈谈其中一些monadic函数。
+Let’s talk in detail about some of these monadic functions.
+
+2
+00:00:08,100 --> 00:00:15,650
+首先，改变像素类型-经常用于转换无符号整数
+First, changing the pixel type—quite useful frequently to convert an unsigned integer
+
+3
+00:00:15,650 --> 00:00:20,380
+图像成双重图像。所以我们要做的是获取范围内的输入像素
+image into a double image. So what we are going to do is take input pixels in the range
+
+4
+00:00:20,380 --> 00:00:26,259
+0到255，这些是整数，所以他们有0,1,2,3等值，我们
+0 through 255, and these are integers so they have got value 0, 1, 2, 3 and so on, and we
+
+5
+00:00:26,259 --> 00:00:31,720
+将它们映射到0到1之间的实数范围。我们可以表示
+are going to map them into the range of real numbers between 0 and 1. And we can represent
+
+6
+00:00:31,720 --> 00:00:36,489
+通过图形进行映射，如右图所示。
+that mapping by a graph, which is shown there on the right.
+
+7
+00:00:36,489 --> 00:00:41,579
+相反，我们可以将双精度图像转换为uint8图像。所以我们想要什么
+Conversely, we can convert double precision images into uint8 images. So what we want
+
+8
+00:00:41,579 --> 00:00:46,760
+现在要做的是取0到1范围内的像素，并将它们映射到整数值
+to do now is to take pixels in the range 0 to 1 and map them into integer values, in
+
+9
+00:00:46,760 --> 00:00:53,170
+范围为0到255，我们再次可以用图形表示这种映射。请注意，两者都有
+the range of 0 to 255, and again we can represent this mapping graphically. Note that in both
+
+10
+00:00:53,170 --> 00:00:59,590
+例如，映射是一条直线，它以1的渐变穿过原点。
+cases, the mapping is a straight line and it passes through the origin with a gradient of 1.
+
+11
+00:01:01,440 --> 00:01:03,240
+我们也可以改变亮度
+We could also change the brightness of the
+
+12
+00:01:03,249 --> 00:01:07,380
+图像，我们可以通过几种方式来做到这一点。一种方法是简单地添加一个
+image and there are a couple of ways that we can do that. One way is simply to add a
+
+13
+00:01:07,380 --> 00:01:11,340
+场景中所有灰度值的常数正值。
+constant positive value to all of the grey values within the scene.
+
+14
+00:01:11,340 --> 00:01:17,369
+所以f（x）是输入值x加上1/4的值。如果我们以图形方式表示
+So f(x) is the input value x, plus the value of 1/4. And if we represent that graphically
+
+15
+00:01:17,369 --> 00:01:23,250
+我们在这里看到这种形状，会发生的是一些像素会超过
+we see this shape here, and what happens is that some of the pixels are going to exceed
+
+16
+00:01:23,250 --> 00:01:29,030
+值1.因此我们应用我们称之为饱和度的东西：我们不允许它们更大
+the value of 1. So we apply what we call a saturation: we don’t allow them to be greater
+
+17
+00:01:29,030 --> 00:01:34,979
+超过1，所以我们的产品线已经扭曲了。如果我们将这种转变应用于莫娜
+than 1, so our line has got a kink in it. If we apply this transformation to the Mona
+
+18
+00:01:34,979 --> 00:01:40,719
+Lisa图像我们可以看到确实变得更亮的图像。
+Lisa image we can see that indeed the image that has become brighter.
+
+19
+00:01:40,719 --> 00:01:45,590
+另一种增加图像亮度的方法，通常称为增加
+Another way to increase the brightness of the image, often referred to actually as increasing
+
+20
+00:01:45,590 --> 00:01:51,009
+图像的对比度是将所有灰度值乘以常数，并且在
+the contrast of the image, is to multiply all the grey values by a constant, and in
+
+21
+00:01:51,009 --> 00:01:58,180
+在这种情况下，我们将所有灰度值乘以2的值。我们可以看到
+this case we are going to multiply all the grey values by the value of 2. We can see
+
+22
+00:01:58,180 --> 00:02:03,159
+如果我们再次以图形方式表示，那么线的斜率现在比它更陡峭
+if we represent this graphically again, the slope of the line now is steeper than it was
+
+23
+00:02:03,159 --> 00:02:08,479
+之前。这条线现在有一个陡峭，梯度为2，饱和度问题
+before. This line now has got a steepness, a gradient of, 2, and the saturation problem
+
+24
+00:02:08,479 --> 00:02:13,580
+现在更加明显。因此，如果我们申请，有很多价值观
+is more pronounced now. So there are a lot of values which if we apply
+
+25
+00:02:13,580 --> 00:02:18,330
+x的函数的值大于1，我们不得不限制它们
+the function to x would have a value much greater than 1, and we have had to limit those
+
+26
+00:02:18,330 --> 00:02:24,110
+或者将它们饱和到最大值1，这是我们在表示图像时所拥有的
+or saturate those to the maximum value of 1, which we have when we represent images
+
+27
+00:02:24,110 --> 00:02:29,050
+双精度数。我们现在看到的图像，
+in double precision numbers. What we can see now when we look at the image,
+
+28
+00:02:29,050 --> 00:02:32,550
+我们可以看到它确实更具对比度，
+we can see that it is indeed much more contrasty,
+
+29
+00:02:32,550 --> 00:02:37,250
+但我们也可以看到像素已经饱和的一些区域。
+but we can also see some areas where the pixels have become saturated.
+
+30
+00:02:39,660 --> 00:02:42,520
+像这样1-x这样的简单函数会产生一个
+A simple function like this 1-x produces a
+
+31
+00:02:42,520 --> 00:02:47,070
+负面形象。所以这是图形化的：具有斜率的线
+negative image. So this is it graphically: a line with a slope
+
+32
+00:02:47,070 --> 00:02:54,020
+-1。这里发生的是明亮的输入像素在输出图像中变暗
+of -1. And what happens here are bright input pixels become dark in the output image and
+
+33
+00:02:54,020 --> 00:02:59,240
+反之亦然。我之前提到过这种称为分色的技术，你可以经常这样做
+vice versa. I mentioned earlier the technique called posterization, which you can often
+
+34
+00:02:59,240 --> 00:03:06,170
+在流行艺术中找到。我们所做的是限制可能的输出亮度值
+find in pop art. And what we do is we limit the number of possible output brightness values
+
+35
+00:03:06,170 --> 00:03:12,380
+那可以。如果您愿意，我们会对其进行量化，因此在此处显示的图像中我们允许
+that there can be. We quantise it if you like, so in the image shown here what we have allowed
+
+36
+00:03:12,380 --> 00:03:20,870
+只有四个可能的输出灰度值，因此这个阶梯映射转换为连续的
+are only four possible output grey values, so this staircase mapping converts a continuous
+
+37
+00:03:20,870 --> 00:03:26,540
+输入灰度级范围为四种可能输出值之一。
+range of input grey levels to one of four possible output values.
+

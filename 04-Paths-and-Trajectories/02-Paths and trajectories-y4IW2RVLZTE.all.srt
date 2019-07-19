@@ -1,0 +1,145 @@
+1
+00:00:03,639 --> 00:00:06,980
+我们都非常直观地了解路径是什么。
+We all have a pretty intuitive idea of what a path is.
+
+2
+00:00:06,980 --> 00:00:12,610
+我们认为它是从A地到B地的一种方式。
+We consider it as a way of getting from place A to place B.
+
+3
+00:00:12,610 --> 00:00:17,400
+我们可以将它视为一组连接A到B的点;我们的一系列小步骤
+We can consider it as a set of points that link A to B; a set of small steps that we
+
+4
+00:00:17,400 --> 00:00:18,960
+一路走来。
+take along the way.
+
+5
+00:00:18,960 --> 00:00:21,679
+路径是空间构造。
+A path is a spatial construct.
+
+6
+00:00:21,679 --> 00:00:25,829
+它说明了我们如何通过世界从A到B，但它没有说
+It says something about how we get from A to B through the world but it doesn't say
+
+7
+00:00:25,829 --> 00:00:29,400
+关于我们应该多快移动它的任何事情。
+anything about how quickly we should move along it.
+
+8
+00:00:29,400 --> 00:00:31,230
+没有时间概念。
+There's no notion of time.
+
+9
+00:00:31,230 --> 00:00:36,590
+另一方面，轨迹包括从A到A的路径和时间表
+A trajectory on the other hand comprises a path and a schedule for getting from A to
+
+10
+00:00:36,590 --> 00:00:40,520
+B.所以沿着这条道路有一个时间或速度的概念。
+B. So there is a notion of time or speed along the path.
+
+11
+00:00:40,520 --> 00:00:45,750
+这是我需要在特定时间内完成的一系列要点。
+It's a set of points that I need to be at by a particular time.
+
+12
+00:00:45,750 --> 00:00:52,530
+在我的MATLAB工作空间中，我有两个姿势表示为4x4齐次变换
+In my MATLAB work space, I have got two poses represented as 4x4 homogeneous transformation
+
+13
+00:00:52,530 --> 00:00:53,809
+矩阵。
+matrices.
+
+14
+00:00:53,809 --> 00:00:59,829
+由工作空间变量T0表示的第一个姿势没有旋转并且具有它
+The first pose represented by the workspace variable T0, has got no rotation and has its
+
+15
+00:00:59,829 --> 00:01:03,989
+起源于世界坐标系的原点。
+origin at the origin of the world coordinate frame.
+
+16
+00:01:03,989 --> 00:01:09,520
+由工作空间变量T1表示的第二个帖子在x方向上包括1的集合
+The second post represented by the work space variable T1, comprises set of 1 in the x direction
+
+17
+00:01:09,520 --> 00:01:15,250
+在y方向上的图2和在z方向上的3和由辊间距描述的取向
+2 in the y direction and 3 in the z direction and an orientation described by roll pitch
+
+18
+00:01:15,250 --> 00:01:20,840
+偏航角分别为0.6,0.8和1.4弧度。
+yaw angles 0.6, 0.8 and 1.4 radians respectively.
+
+19
+00:01:20,840 --> 00:01:24,210
+我们可以想象出这些姿势。
+And we can visualize each of these poses.
+
+20
+00:01:24,210 --> 00:01:30,880
+我可以绘制姿势T0，我们可以看到它的起源是世界的起源
+I can plot the pose T0 and we can see there its origin is at the origin of the world
+
+21
+00:01:30,880 --> 00:01:31,880
+帧。
+frame.
+
+22
+00:01:31,880 --> 00:01:36,000
+它的轴与世界框架对齐。
+And its axes are aligned with the world frame.
+
+23
+00:01:36,000 --> 00:01:43,690
+我可以绘制另一个姿势T1，我们可以看到它的起源不是原点
+I can plot the other pose T1 and we can see that its origin is not at the origin of the
+
+24
+00:01:43,690 --> 00:01:49,100
+世界参考系及其轴与参考轴不平行。
+world reference frame and its axes are not parallel to the reference axes.
+
+25
+00:01:49,100 --> 00:01:56,939
+现在我可以为从姿势T0到姿势T1的运动设置动画，我们可以看到我们的坐标
+Now I can animate the motion that goes from pose T0 to pose T1 and we can see our coordinate
+
+26
+00:01:56,939 --> 00:02:03,990
+框架正在平移和旋转，以便从姿势T0移动到姿势T1。所以这
+frame is translating and rotating in order to move from pose T0 to pose T1. So this
+
+27
+00:02:03,990 --> 00:02:10,259
+当我谈到一个从一个姿势到另一个姿势的平滑运动的轨迹时，我的意思是
+is what I mean when I talked about a trajectory which is smooth motion from one pose to the
+
+28
+00:02:10,259 --> 00:02:11,259
+下一个。
+next.
+
+29
+00:02:11,259 --> 00:02:13,900
+弄清楚如何做到这一点是本讲座的主题。
+Figuring out how to do this is the subject of this lecture.
+

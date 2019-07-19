@@ -1,0 +1,315 @@
+1
+00:00:03,330 --> 00:00:07,670
+在这个讲座中，我们想谈谈我们如何描述事物的位置
+In this lecture, we want to talk about how we describe the position of things in the
+
+2
+00:00:07,670 --> 00:00:10,620
+世界。在机器人技术中，这非常非常重要。
+world. In robotics, this is really, really important.
+
+3
+00:00:10,620 --> 00:00:16,110
+例如，在我们的机器人问题中，我们可能想要描述机器人的位置。
+For instance, in our robotics problem, we might want to describe the position of a robot.
+
+4
+00:00:16,110 --> 00:00:19,650
+我们可能还想描述机器人想要互动的东西的位置
+We might also want to describe the position of something that the robot wants to interact
+
+5
+00:00:19,650 --> 00:00:24,210
+用。例如，它可能想与我的水瓶互动。所以我需要描述一下
+with. For instance, it might want to interact with my water bottle. So I need to describe
+
+6
+00:00:24,210 --> 00:00:27,950
+机器人的位置，水瓶的位置，我也很感兴趣
+the position of the robot, the position of the water bottle and I’m also interested
+
+7
+00:00:27,950 --> 00:00:30,260
+在描述相对位置。
+in describing the relative position.
+
+8
+00:00:30,260 --> 00:00:33,860
+水瓶相对于机器人在哪里？这显然是那样的
+Where is the water bottle with respect to the robot? And that's clearly something that
+
+9
+00:00:33,860 --> 00:00:39,330
+机器人想知道它是否想要拿起水瓶。
+the robot would like to know if it wanted to go and pick up the water bottle.
+
+10
+00:00:39,330 --> 00:00:44,860
+在描述事物的位置时，我们需要某种参考框架。
+When it comes to describing the position of things, we need some kind of frame of reference.
+
+11
+00:00:44,860 --> 00:00:50,350
+这是描述世界事物地位的一个非常重要的方面。这里
+This is a pretty important aspect of describing the position of things in the world. Here
+
+12
+00:00:50,350 --> 00:00:54,040
+是我们世界的图景。当然，我们需要牢记的一件事是
+is a picture of our world. And one of the things we need to keep in mind of course is
+
+13
+00:00:54,040 --> 00:00:58,930
+我们的世界，我们世界的表面正在移动。地球表面上的一个点
+that our world, the surface of our world is moving. A point on the surface at the earth
+
+14
+00:00:58,930 --> 00:01:06,860
+-赤道在太空中每秒移动近500米。地球本身在移动
+– the equator is moving nearly 500 meters per second in space. The earth itself is moving
+
+15
+00:01:06,860 --> 00:01:12,180
+在太阳周围相当高的速度。然后我们的太阳系正在高速运转
+at quite a high speed around the sun. And then our solar system is moving at very high
+
+16
+00:01:12,180 --> 00:01:18,020
+绕着银河系中心的速度。而且银河系本身正在以令人难以置信的方式发展
+speed around the centre of the galaxy. And the galaxy itself is moving at incredible
+
+17
+00:01:18,020 --> 00:01:22,610
+朝着狮子座的速度迈进。所以，一切都在运转。
+speed towards the constellation Leo. So, everything is in motion.
+
+18
+00:01:22,610 --> 00:01:27,610
+如果我们试图描述事物的位置，那么我们考虑这个问题非常重要
+If we're trying to describe where things are, it's really important that we consider the
+
+19
+00:01:27,610 --> 00:01:29,470
+参照系。
+frame of reference.
+
+20
+00:01:29,470 --> 00:01:33,310
+一切都在发展，所以我们只需要有效地放在地上并说，
+Everything is moving so we just have to put effectively a stake in the ground and say,
+
+21
+00:01:33,310 --> 00:01:39,150
+“这是参考点，我们将决定与该参考相关的所有位置
+"This is the reference point and we'll decide all positions with respect to that reference
+
+22
+00:01:39,150 --> 00:01:42,880
+“这正是我们所做的。我们将把利益放在地上。例如，
+point". That's exactly what we do. We're going to put a stake in the ground. For instance,
+
+23
+00:01:42,880 --> 00:01:47,700
+就像这个标志贴在这里并说，“这是原点。这是坐标，零零
+like this sign post here and say, "This is the origin. This is the coordinate, zero zero
+
+24
+00:01:47,700 --> 00:01:50,800
+我们将测量距离的所有距离。
+and we're going to measure all distances from that.
+
+25
+00:01:50,800 --> 00:01:55,909
+我们将创建一个坐标系。有效地是两个正交轴。一个x轴，
+And we're going to create a coordinate frame. Effectively two orthogonal axes. An x-axis,
+
+26
+00:01:55,909 --> 00:02:00,530
+和y轴，你在学校学到的各种东西。我们将使用这两个
+and a y-axis, sorts of things that you learn at school. And we're going to use those two
+
+27
+00:02:00,530 --> 00:02:06,319
+距离，沿x轴的距离，沿y轴的距离，以便描述
+distances, the distance along the x-axis, the distance along the y-axis, in order to describe
+
+28
+00:02:06,319 --> 00:02:09,990
+二维空间中物体的位置。
+the position of an object in two-dimensional space.
+
+29
+00:02:09,990 --> 00:02:13,760
+在这个讲座中，我们将保持简单。我们只会考虑这个位置
+In this lecture, we're going to keep things simple. We're only going to consider the position
+
+30
+00:02:13,760 --> 00:02:18,790
+在两个方面。在下一个讲座中，我会提出一个问题并谈谈立场
+in two dimensions. In the next lecture, I will kick it up a notch and talk about position
+
+31
+00:02:18,790 --> 00:02:21,870
+三维。
+in 3 dimensions.
+
+32
+00:02:21,870 --> 00:02:28,360
+现在，参考点完全是任意的。那么，我们来谈谈这个参考
+Now, reference points are entirely arbitrary. So, let's talk for a moment about the reference
+
+33
+00:02:28,360 --> 00:02:33,960
+我们在自己的星球上使用的系统。所以，在这里我们描绘了行星地球。
+system that we use on our own planet. So, here we have a depiction of planet earth.
+
+34
+00:02:33,960 --> 00:02:38,100
+这是一个投射，地球当然是一个球体。并制作一张矩形地图
+And this is a projection, the earth of course is a sphere. And to make a rectangular map
+
+35
+00:02:38,100 --> 00:02:42,450
+像这样我们要做的就是切割球体，展开它，伸展它以使它看起来
+like this what we have to do is cut the sphere, unroll it, stretch it out so that it looks
+
+36
+00:02:42,450 --> 00:02:48,930
+像一个矩形。我们在地球上添加了几条参考线。最重要的一个，
+like a rectangle. And we put a couple of reference lines on our globe. The most important one,
+
+37
+00:02:48,930 --> 00:02:51,480
+也许最明显的一个是赤道。
+perhaps the most obvious one, is the equator.
+
+38
+00:02:51,480 --> 00:02:56,260
+因为地球是一个球体，我们有一个明显的轴，就是行星的轴
+Because the earth is a sphere, we have an obvious axis which is that which the planet
+
+39
+00:02:56,260 --> 00:03:01,890
+转过来。并且您可以创建与该旋转轴正交的平面
+rotates around. And you may create a plane orthogonal to this rotational axis that cuts
+
+40
+00:03:01,890 --> 00:03:06,910
+将球体分成两个相等的半球，我们称这条线为赤道并显示出来
+the sphere into two equal hemispheres, and we call that line the equator and it shown
+
+41
+00:03:06,910 --> 00:03:10,900
+这里是黑色的。当你可以站在你的腿上时，你可以去参观赤道
+here in black. And you can go and visit the equator when you can stand with your leg one
+
+42
+00:03:10,900 --> 00:03:15,270
+在北半球和南半球。
+in the Northern Hemisphere and one in the Southern Hemisphere.
+
+43
+00:03:15,270 --> 00:03:20,849
+现在有另一条线，我们称之为Prime子午线并且它正交于
+Now there's another line, which we call the Prime meridian and it passes orthogonal to
+
+44
+00:03:20,849 --> 00:03:25,160
+赤道，它穿过伦敦的格林威治天文台。
+the equator, and it passes through the Greenwich observatory in London.
+
+45
+00:03:25,160 --> 00:03:29,770
+这条线是完全随意的。它不一定要通过格林威治天文台
+This line is completely arbitrary. It doesn't have to be through the Greenwich observatory
+
+46
+00:03:29,770 --> 00:03:35,099
+但我们星球上的惯例是我们使用格林威治天文台线
+but the convention on our planet is that we used the Greenwich observatory line as
+
+47
+00:03:35,099 --> 00:03:40,030
+Prime经络，你可以去格林威治，你可以把双脚放在两边
+the Prime meridian, and you can go visit Greenwich you can put your feet on either side
+
+48
+00:03:40,030 --> 00:03:47,250
+西方的本初子午线和地球的东半球。
+of the Prime meridian in the West and the Eastern Hemispheres of the planet.
+
+49
+00:03:47,250 --> 00:03:53,850
+水平方向上的距离，我们称为经度。和方向，
+The distance in the horizontal direction, we refer to as longitude. And the direction,
+
+50
+00:03:53,850 --> 00:03:58,610
+在另一个方向上的距离，我们称为纬度。所以我们有经度线
+the distance in the other direction, we refer to as latitude. So we have lines of longitude
+
+51
+00:03:58,610 --> 00:04:03,790
+和我们在球体上刻上的纬度线。那两个数字，经度
+and lines of latitude that we inscribe onto the sphere. And those two numbers, longitude
+
+52
+00:04:03,790 --> 00:04:09,640
+和纬度，足以描述任何点，表面上任何地方的位置
+and latitude, are sufficient to describe the position of any point, any place on the surface
+
+53
+00:04:09,640 --> 00:04:11,570
+我们的星球。
+of our planet.
+
+54
+00:04:11,570 --> 00:04:16,720
+现在，正如我之前提到的那样，我们称之为Prime子午线
+Now, we have this arbitrary line as I've mentioned before which we called the Prime meridian
+
+55
+00:04:16,720 --> 00:04:21,099
+穿过格林威治天文台。如果历史不同，我们就会有
+which goes through the Greenwich observatory. If history had been different, we would have
+
+56
+00:04:21,099 --> 00:04:26,509
+有一个不同的Prime子午线。有一个关于Prime经络的建议要通过
+had a different Prime meridian. There was a proposal for the Prime meridian to go through
+
+57
+00:04:26,509 --> 00:04:31,409
+巴黎天文台。如果你今天访问巴黎，你可以看到一条被称为
+the Paris observatory. And if you visit Paris today, you can see a line referred to as the
+
+58
+00:04:31,409 --> 00:04:38,410
+Arago线是这个不存在的Prime子午线穿过城市的地方
+Arago line which is where this non-existent Prime meridian passes through the city of
+
+59
+00:04:38,410 --> 00:04:44,050
+巴黎。它以法国天文学家和数学家阿拉戈（Arago）的名字命名
+Paris. And it's named after a French astronomer and mathematician, Arago, who proposed that
+
+60
+00:04:44,050 --> 00:04:45,409
+特别是本初子午线。
+particular Prime meridian.
+
+61
+00:04:45,409 --> 00:04:50,310
+所以，这里的带回家信息是这个Prime子午线完全是任意的。它
+So, the take home message here is that this Prime meridian is completely arbitrary. It
+
+62
+00:04:50,310 --> 00:04:55,629
+是一个我们都同意的公约。有这个约定是有用的
+is a convention that we've all agreed upon. It's useful to have this convention and that's
+
+63
+00:04:55,629 --> 00:04:58,679
+我们如何描述地球上的点。
+how we describe points on the planet of the earth.
+

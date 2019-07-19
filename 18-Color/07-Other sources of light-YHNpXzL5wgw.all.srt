@@ -1,0 +1,435 @@
+1
+00:00:03,399 --> 00:00:08,000
+摄影师经常提到一种叫做色温的东西;色温
+Photographers frequently refer to something called color temperature; color temperature
+
+2
+00:00:08,000 --> 00:00:12,339
+正在谈论他们正在研究的光谱
+is saying something about the spectrum of the light that they are looking at in terms
+
+3
+00:00:12,339 --> 00:00:17,840
+相当于黑体散热器。所以与这个夕阳红相关的光谱
+to the equivalent black body radiator. So the spectrum associated with this red sunset
+
+4
+00:00:17,840 --> 00:00:23,609
+相当于一个约2000至3000度开尔文的黑体辐射体。它是一个
+is equivalent to a black body radiator of about 2000 to 3000 degrees kelvin. It is a
+
+5
+00:00:23,609 --> 00:00:29,720
+非常微红的光。钨灯相当于约3000左右的色温
+very reddish light. A tungsten light is equivalent to a color temperature of around about 3000
+
+6
+00:00:29,720 --> 00:00:34,870
+开尔文。中午的太阳光谱相当于黑色的身体散热器
+kelvin. The spectrum of the sun at midday is equivalent to a black body radiator of
+
+7
+00:00:34,870 --> 00:00:42,480
+大约5000到5400开尔文。摄影师会说阳光比较蓝
+around 5000 to 5400 kelvin. A photographer would say that the sunlight is bluer then
+
+8
+00:00:42,480 --> 00:00:48,380
+钨灯，或者我们可以说钨灯比正午的阳光更红。
+the tungsten light, or we can say tungsten light is more red then the midday sun.
+
+9
+00:00:48,380 --> 00:00:52,940
+在阴天的情况下，色温实际上甚至更高
+In the case of an overcast day, the color temperature is, in fact, even higher, the
+
+10
+00:00:52,940 --> 00:00:57,850
+世界上的点不再被来自太阳的白光照亮，它被照亮了
+point in the world is no longer illuminated by the white light from the sun, it is illuminated
+
+11
+00:00:57,850 --> 00:01:04,049
+来自天空的蓝光和光线中过量的蓝光相当
+by the blue light from the sky and this excess amount of blue in the light is equivalent
+
+12
+00:01:04,049 --> 00:01:09,320
+一个更热，更热的黑体散热器。所以摄影师会将此称为
+to a much, much hotter black body radiator. So a photographer would refer to this as a
+
+13
+00:01:09,320 --> 00:01:13,810
+色温在8000到10000开尔文范围内。
+color temperature in the range 8000 to 10 000 kelvin.
+
+14
+00:01:13,810 --> 00:01:20,060
+我们的太阳在太空中是一个非常热的物体，并且起到黑体散热器的作用，但是
+Our sun is a very hot object in space and functions as a black body radiator, but by
+
+15
+00:01:20,060 --> 00:01:23,940
+来自太阳的光线发现光谱的地面水平的时间
+the time the light from the sun finds its way down to ground level the spectrum has
+
+16
+00:01:23,940 --> 00:01:29,550
+被大幅改变，这是因为大气中的一些化学物质-我们
+been dramatically altered and that is because of a number of chemicals in the atmosphere — we
+
+17
+00:01:29,550 --> 00:01:37,170
+有臭氧，氧气，水，二氧化碳等-每一个都去掉了部分
+have ozone, oxygen, water, carbon dioxide and so on — and each of them remove parts
+
+18
+00:01:37,170 --> 00:01:41,770
+来自太阳的辐射所以当光线到达地面时
+of the radiation that comes from the sun. So by the time the light gets to the ground
+
+19
+00:01:41,770 --> 00:01:47,420
+光谱与理想的黑体辐射器略有不同。最高峰
+the spectrum is a little bit different from an ideal black body radiator. The peak of
+
+20
+00:01:47,420 --> 00:01:51,299
+到达地面时光的光谱大约是
+the spectrum of a light by the time it reaches the ground is around about
+
+21
+00:01:51,299 --> 00:01:58,080
+550纳米......它有点绿色，毫不奇怪，这就是颜色
+550 nanometers … it is a little green color and, not surprisingly, that is the color that
+
+22
+00:01:58,080 --> 00:02:04,560
+我们的眼睛最敏感。很多来自黑色的能量
+our eyes are most sensitive to. A lot of the energy that comes from a black
+
+23
+00:02:04,560 --> 00:02:11,760
+在我们在这些较长波长中看不到的部分光谱中发射体辐射体，
+body radiator is emitted in parts of the spectrum that we cannot see in these longer wavelengths,
+
+24
+00:02:11,760 --> 00:02:16,769
+这是这些钨灯泡被逐步淘汰的原因之一。
+and this is one of the reasons that these tungsten light bulbs are being phased out.
+
+25
+00:02:16,769 --> 00:02:20,540
+它们将一些电能转换成我们可以看到的光，但它们会转换
+They convert some of the electrical energy into light that we can see, but they convert
+
+26
+00:02:20,540 --> 00:02:24,719
+太多的热量，这无助于我们看到。他们并不特别
+an awful lot of it into heat which does not help us to see. They are not particularly
+
+27
+00:02:24,719 --> 00:02:27,379
+高效。所以有很多能量被释放出来
+efficient. So there is a lot of energy being emitted
+
+28
+00:02:27,379 --> 00:02:31,540
+在这些较长的波长，所以如果我们在这里看一下这个光谱，我们可以看到
+at these longer wavelengths, so if we look at this spectrum here, we can see that the
+
+29
+00:02:31,540 --> 00:02:37,370
+光谱的可见部分，实际上是400到700纳米之间的区域
+visible part of the spectrum, that region between 400 and 700 nanometers, is actually
+
+30
+00:02:37,370 --> 00:02:42,079
+整个电磁频谱的一小部分。
+a very small part of the overall electromagnetic spectrum.
+
+31
+00:02:42,079 --> 00:02:48,019
+凭借我们的眼睛，我们能够在这个非常狭窄的部分感受到电磁辐射
+With our eyes we are able to sense electromagnetic radiation in this very narrow part of the
+
+32
+00:02:48,019 --> 00:02:52,329
+整体频谱。虽然我们看不到红外线辐射，
+overall spectrum. Although we cannot see infra-red radiation,
+
+33
+00:02:52,329 --> 00:02:58,719
+我们仍然可以感受到它，我们可以感受到它的温暖，就像我们皮肤上的温暖。红外辐射
+we can still sense it and we can feel it as heat, as warmth on our skin. Infra-red radiation
+
+34
+00:02:58,719 --> 00:03:05,719
+早在18世纪，德国出生的英国天文学家威廉·赫歇尔就发现了这一点。他建造
+was discovered by William Herschel, a German-born English astronomer back in the 1700s. He built
+
+35
+00:03:05,719 --> 00:03:09,819
+一个巨大的望远镜，发现了许多恒星和行星。
+an enormous telescope and discovered many stars and planets.
+
+36
+00:03:09,819 --> 00:03:15,260
+有一天，他从望远镜上取下光线，将棱镜穿过一张桌子
+And one day he took the light from his telescope passed it through a prism onto a table and
+
+37
+00:03:15,260 --> 00:03:19,809
+他把温度计放在桌子上的不同频谱部分。他在努力
+he put a thermometer into different parts of the spectrum on the table. He was trying
+
+38
+00:03:19,809 --> 00:03:24,019
+测量蓝色和黄色以及紫色和红色的温度。
+to measure the temperature of blue and yellow and violet and red.
+
+39
+00:03:24,019 --> 00:03:28,629
+令他感到惊讶的是，当他把温度计放在桌子的一个区域时
+And what surprised him was that when he put the thermometer into an area of the table
+
+40
+00:03:28,629 --> 00:03:33,870
+在他看不到任何光线的地方，温度计仍记录着高温，所以那里
+where he couldn’t see any light, the thermometer still recorded a high temperature, so there
+
+41
+00:03:33,870 --> 00:03:38,849
+是加热温度计的辐射，但是他无法看到它，所以他发现了
+was radiation that was heating the thermometer but he was unable to see it, so he discovered
+
+42
+00:03:38,849 --> 00:03:42,829
+红外辐射。他称之为热量射线。
+infra-red radiation. He referred to them as calorific rays.
+
+43
+00:03:42,829 --> 00:03:48,689
+我之前提到过，我们可以将红外辐射感知为热量。有些设备叫做
+I mentioned before that we can sense infra-red radiation as heat. There are devices called
+
+44
+00:03:48,689 --> 00:03:53,529
+热像仪，它们对所谓的红外辐射非常敏感
+thermal cameras and they are very sensitive to this infra-red radiation in what is called
+
+45
+00:03:53,529 --> 00:03:58,349
+9到14微米之间的热或长红外波段。
+the thermal or long infra-red band between 9 and 14 micrometres.
+
+46
+00:03:58,349 --> 00:04:04,040
+那是9000到14000纳米，我们之前使用的单位。
+That is 9000 to 14 000 nanometers, the units that we were using previously.
+
+47
+00:04:04,040 --> 00:04:10,120
+在这部分频谱中，人类会释放能量，因此你可以看到那些人
+And in that part of the spectrum human beings emit energy, and so you can see that people
+
+48
+00:04:10,120 --> 00:04:16,690
+这里温暖的背景是温暖的。这是我们的自然体温，37度
+here are warm against a colder background. This is our natural body temperature, 37 degrees
+
+49
+00:04:16,690 --> 00:04:23,120
+摄氏度，这意味着我们自己是黑体辐射器，我们发射不多
+Celsius, it means that we ourselves are black body radiators and we are emitting not much
+
+50
+00:04:23,120 --> 00:04:26,419
+但是少量的红外线能量和热像仪可以
+but a small amount of infra-red energy and a thermal camera can
+
+51
+00:04:26,419 --> 00:04:31,509
+拿起来。热像仪通常用于诊断建筑物的热量损失;该
+pick this up. Thermal cameras are often used to diagnose heat loss from buildings; the
+
+52
+00:04:31,509 --> 00:04:35,360
+在建筑物外面应该是凉爽的，但如果有热点，它通常会倾向于
+outside of a building should be cool, but if there are hot spots it generally tends
+
+53
+00:04:35,360 --> 00:04:39,849
+表明建筑物内部的热量泄漏到外面的世界。
+to indicate the heat is leaking from inside the building to the outside world.
+
+54
+00:04:39,849 --> 00:04:45,889
+火甲虫对红外辐射非常敏感。它喜欢产卵
+The fire beetle is exquisitely sensitive to infra-red radiation. It likes to lay its eggs
+
+55
+00:04:45,889 --> 00:04:52,479
+到烧焦的树木，所以它去寻找森林火灾，并采用特殊的红外线
+into burnt trees, so it goes hunting for forest fires and to do that it uses special infra-red
+
+56
+00:04:52,479 --> 00:04:58,300
+感应器官内置于胸腔内。还有大量非黑人
+sensing organs built into its thorax. There are also a large number of non-black
+
+57
+00:04:58,300 --> 00:05:03,750
+人体照度：例如，发光二极管具有光谱特性
+body illuminance: light emitting diodes, for instance, have got a spectral characteristic
+
+58
+00:05:03,750 --> 00:05:08,659
+像这样形状与黑体发射光谱形状完全不同，所以我们可以这样做
+like this quite differently shaped to the black body emission spectrum, so here we can
+
+59
+00:05:08,659 --> 00:05:15,009
+看到蓝色LED，绿色LED和红色LED的发射。
+see the emission of a blue LED, a green LED and a red LED.
+
+60
+00:05:15,009 --> 00:05:21,379
+我们看到能量集中在一个相当窄的光谱带中。没有浪费
+We see that the energy concentrated into a fairly narrow spectral band. There is no wasting
+
+61
+00:05:21,379 --> 00:05:25,400
+例如，在光谱的红外部分发射。
+or emission in the infra-red part of the spectrum, for instance.
+
+62
+00:05:25,400 --> 00:05:31,419
+紧凑型荧光灯管的光谱非常复杂：光线是混合光
+A compact fluorescent tube has got a very complex spectrum: the light is a mixture of
+
+63
+00:05:31,419 --> 00:05:37,340
+由大量不同荧光粉发出的光，白色层内部为螺旋形
+the light emitted by a large number of different phosphors, the white layer inside the helical
+
+64
+00:05:37,340 --> 00:05:42,840
+被气体放电激发的管子。因此每种荧光粉都会发出不同的光
+tube which is excited by the gas discharge. So each phosphor emits light at a different
+
+65
+00:05:42,840 --> 00:05:49,009
+波长。我们认为这些不同波长的整体组合
+wavelength. The overall combination of these different wavelengths appears to our eye to
+
+66
+00:05:49,009 --> 00:05:54,030
+是白色的。另一种非黑体发光是激光;激光可能有点
+be white. Another non-black body illuminate is the laser; the laser is perhaps somewhat
+
+67
+00:05:54,030 --> 00:05:58,830
+类似于我们刚才看到的发光二极管，除了光谱
+similar to the light emitting diode that we looked at a moment ago, except that the spectrum
+
+68
+00:05:58,830 --> 00:06:05,659
+非常狭窄。最后，这些是与红色相关的镜面发射，
+is extremely narrow. Finally, these are the specular emissions associated with the red,
+
+69
+00:06:05,659 --> 00:06:11,550
+在旧式阴极射线管中的绿色和蓝色荧光粉，这显示了发射
+green and blue phosphors in an old fashion cathode ray tube and this shows the emission
+
+70
+00:06:11,550 --> 00:06:17,900
+蓝色荧光粉的光谱，此曲线在这里;绿色荧光粉，这条曲线在这里;
+spectrum of the blue phosphor, this curve here; the green phosphor, this curve here;
+
+71
+00:06:17,900 --> 00:06:25,120
+和含有大量相当窄带发射的红色荧光粉，但是
+and the red phosphor which contains a large number of quite narrow band emissions, but
+
+72
+00:06:25,120 --> 00:06:29,120
+它们一起在人眼看来是红色的。
+together collectively they appear to the human eye as red.
+
+73
+00:06:29,120 --> 00:06:34,270
+正如我刚才提到的那样，到达地球表面的光是部分的
+As I mentioned a moment ago, the light that reaches the surface of the planet is partly
+
+74
+00:06:34,270 --> 00:06:40,349
+被地球大气层中的各种分子吸收。特别是水是一种
+absorbed by various molecules in the atmosphere of the planet. Water, in particular, is a
+
+75
+00:06:40,349 --> 00:06:47,000
+非常强大的光吸收。该图显示了光的吸收量
+very strong absorber of light. This graph shows the amount of absorption of light as
+
+76
+00:06:47,000 --> 00:06:51,550
+波长的函数，我们可以看到有一个光谱区域
+a function of wavelength and we can see that there is a region of the spectrum where there
+
+77
+00:06:51,550 --> 00:06:57,650
+是最小的光吸收。如果我们只看可见光带然后标记蓝色和
+is minimal light absorption. If we look just at the visible band and then mark blue and
+
+78
+00:06:57,650 --> 00:07:04,319
+红色我们可以看到红光比蓝光吸收更多，这就解释了为什么，
+red we can see that red light is absorbed more than blue light and this explains why,
+
+79
+00:07:04,319 --> 00:07:09,030
+当你在水下时，你越往水下，光线就会越来越多
+when you are under water and the further you go under water, the light has got much more
+
+80
+00:07:09,030 --> 00:07:14,669
+对它的蓝色色调-你往往会失去红色和绿色等颜色，它们往往会消失
+of a blue tint to it — you tend to lose colors like red and green, they tend to disappear
+
+81
+00:07:14,669 --> 00:07:20,099
+一切都开始变蓝，因为只有蓝光才能穿透
+and everything starts to look blue because only the blue light is able to penetrate through
+
+82
+00:07:20,099 --> 00:07:25,419
+一大堆水。因此，让我们总结一下：我们拥有来自光源的光
+a big column of water. So let’s summarise: we have light that comes from an illuminant
+
+83
+00:07:25,419 --> 00:07:31,749
+并且它产生场景的照度，我们可以根据它来描述光
+and it produces illuminance of the scene and we can describe that light in terms of its
+
+84
+00:07:31,749 --> 00:07:37,409
+频谱，所以我们使用符号E来表示亮度，它是一个函数
+spectrum, so we use the symbol E to represent the luminance and it is a function of the
+
+85
+00:07:37,409 --> 00:07:41,689
+波长，我们看了各种各样的照度，我们看了黑体
+wavelength, and we have looked at various sorts of illuminance, we looked at black body
+
+86
+00:07:41,689 --> 00:07:46,349
+散热器，发光二极管，紧凑型荧光灯管和激光器
+radiators, light emitting diodes, compact fluorescent tubes and lasers, each of these
+
+87
+00:07:46,349 --> 00:07:48,989
+有不同的光谱特征。
+have got a different spectral characteristic.
+

@@ -1,0 +1,535 @@
+1
+00:00:03,470 --> 00:00:07,140
+我们已经涵盖了很多主题。我们已经谈到了视觉的演变。我们
+We have covered a lot of topics. We have talked about how the sense of vision evolved. We
+
+2
+00:00:07,140 --> 00:00:12,220
+谈到了人类视觉的细节。我们看了一些动物的种类
+have talked about the details of human vision. We have looked at some of the variety of animal
+
+3
+00:00:12,220 --> 00:00:18,019
+视力。我们已经讨论过视觉是一个眼睛积极引导的过程
+vision. We have talked about how vision is a process where the eye is actively steered
+
+4
+00:00:18,019 --> 00:00:22,880
+在场景周围，以最大限度地了解特定场景。
+around the scene in order to maximise our understanding of that particular scene.
+
+5
+00:00:22,880 --> 00:00:28,999
+因此，现在讨论机器人和视觉，并了解机器人如何使用是恰当的
+So now it is appropriate to talk about robots and vision, and look at how robots have used
+
+6
+00:00:28,999 --> 00:00:34,260
+为了能够以与人类相似的方式执行任务的视觉感
+the sense of vision in order to be able to perform tasks, in a similar way to which humans
+
+7
+00:00:34,260 --> 00:00:40,150
+和动物使用视觉来执行任务。左边的机器人是一个非常有名的机器人
+and animals use vision to perform tasks. The robot on the left is a very famous robot
+
+8
+00:00:40,150 --> 00:00:45,760
+叫沙基。20世纪60年代在SRIInternational开发。它有一台电视摄像机
+called Shakey. Developed at SRI International in the 1960s. And it has a television camera
+
+9
+00:00:45,760 --> 00:00:51,640
+在顶部，它用于导航。右边的机器人就是我建造的机器人
+on the top, which it uses for navigation. The robot on the right is one that I built
+
+10
+00:00:51,640 --> 00:00:56,880
+在21世纪初，它已经拥有相当多的摄像头，他们是一个
+in the early 2000s, and it has got quite a number of cameras on board, and they are a
+
+11
+00:00:56,880 --> 00:01:01,660
+看看有点有趣。在前面是一个立体相机对，它是一个
+little bit interesting to look at. In the front is a stereo camera pair and it is a
+
+12
+00:01:01,660 --> 00:01:06,659
+有点像我们自己的两只眼睛。它允许机器人确定三维结构
+bit like our own two eyes. It allows the robot to determine three dimensional structure of
+
+13
+00:01:06,659 --> 00:01:12,640
+在它面前的世界。在顶部，它有一个非常闪亮的镜像对象，这是一部分
+the world in front of it. On the top, it has a very shiny mirror object and that is part
+
+14
+00:01:12,640 --> 00:01:18,080
+我们称之为全景相机组件。有一个摄像头抬头看着那面镜子
+of what we call a panoramic camera assembly. There is a camera looking up at that mirror
+
+15
+00:01:18,080 --> 00:01:23,490
+并且允许机器人看到360度-它可以看到前进，后退和侧向。
+and that allows the robot to see 360 degrees—it can see forwards, backwards and side ways.
+
+16
+00:01:23,490 --> 00:01:27,890
+它有时被称为全向摄像机或全景摄像机。
+It’s sometimes called an omni-cam or a panoramic camera.
+
+17
+00:01:27,890 --> 00:01:34,280
+这个机器人的最后一个摄像头是侧面的广角摄像头。它有一个鱼眼镜头，
+The last camera on this robot is a wide-angle camera on the side. It has a fish eye lens,
+
+18
+00:01:34,280 --> 00:01:39,030
+所以它几乎有一个半球形的视野。这可以看看发生了什么
+so it almost has a hemispherical field of view. And that can look at what is happening
+
+19
+00:01:39,030 --> 00:01:45,650
+到机器人的一侧。目前的火星探测器，好奇号探测器，
+to the side of the robot. The current Mars Rover, the Curiosity Rover,
+
+20
+00:01:45,650 --> 00:01:52,220
+它拥有大量的摄像头，用于各种功能。
+has got a large number of cameras on board that it uses for a variety of functions.
+
+21
+00:01:52,220 --> 00:01:57,000
+现在看教学机器的业务是计算机视觉领域，那
+Now the business of teaching machines to see is the field of computer vision, and that
+
+22
+00:01:57,000 --> 00:02:03,080
+是一项自20世纪60年代以来一直在进行的活动。一些重要的早期工作
+is an activity that has been going on since perhaps the 1960s. Some important early work
+
+23
+00:02:03,080 --> 00:02:08,239
+由麻省理工学院的拉里·罗伯茨（LarryRoberts）作为博士项目的一部分进行。拉里接着说
+was carried out by Larry Roberts at MIT as part of his PhD project. Larry went on to
+
+24
+00:02:08,239 --> 00:02:13,410
+做其他非常重要的事情，并在创建互联网方面发挥了重要作用。所以
+do other very important things and was very instrumental in creating the internet. So
+
+25
+00:02:13,410 --> 00:02:17,110
+在他的论文作品中，他正在做的是拍摄一个物体的照片，这是非常的
+in his thesis work what he was doing was taking a picture of an object, and this is a very
+
+26
+00:02:17,110 --> 00:02:23,300
+简单的木块对象，用电视摄像机拍照，并试图锻炼
+simple wooden block object, took a picture with a TV camera and was trying to work out
+
+27
+00:02:23,300 --> 00:02:28,310
+它的形状是什么。所以他经历了许多视觉处理步骤，这些都是
+what shape it was. So he went through a number of vision processing steps and these are the
+
+28
+00:02:28,310 --> 00:02:31,060
+我们将在以下讲座中介绍的各种事情。
+sorts of things we will cover in following lectures.
+
+29
+00:02:31,060 --> 00:02:37,959
+最初的步骤之一是找到这个物体的边缘，一旦找到了边缘
+One of the first steps was to find the edges of this object and once he had found the edges
+
+30
+00:02:37,959 --> 00:02:42,980
+他会尝试将线段与这些边缘相匹配，一旦他知道这些线条
+of the object he would try to fit line segments to those edges and once he knew those line
+
+31
+00:02:42,980 --> 00:02:47,690
+他知道图像的形成方式。然后他可以说些什么
+segments, he knew something about the way images are formed. He could then say something
+
+32
+00:02:47,690 --> 00:02:53,050
+关于这个特定物体的三维形状。所以我们在这里有
+about the three dimensional shape of this particular object. So what we have here is
+
+33
+00:02:53,050 --> 00:02:58,290
+一个可以拍摄图像并对其进行处理并提出三维模型的系统
+a system that can take an image and process it and come up with a three dimensional model
+
+34
+00:02:58,290 --> 00:03:04,330
+那种形状。所以它是一种非常简单的物体识别形式。电脑需要
+of that shape. So it is a very simple form of object recognition. The computers take
+
+35
+00:03:04,330 --> 00:03:09,800
+一个图像，并讨论它正在看什么样的对象。那是
+an image and made a discussion about what sort of object that it was looking at. That’s
+
+36
+00:03:09,800 --> 00:03:14,810
+足够的信息，然后机器人进行移动，去挑选该对象和
+sufficient information then for a robot to make a move, go and pick that object up and
+
+37
+00:03:14,810 --> 00:03:20,319
+或许以某种方式操纵它。那么为什么视觉是机器人的良好传感器呢？
+perhaps manipulate it in some way. So why is vision a good sensor for a robot
+
+38
+00:03:20,319 --> 00:03:24,879
+具有？我认为视力是重要且非常实用的原因有几个
+to have? There are a few reasons why I believe vision is an important and very practical
+
+39
+00:03:24,879 --> 00:03:29,489
+用于机器人的传感器。首先，相机本身现在非常
+sensor for a robot. Firstly, the cameras themselves are now very
+
+40
+00:03:29,489 --> 00:03:34,099
+价格便宜，其原因在于摄像机内置于一切;内置于细胞中
+cheap and the reason for this is because cameras are built into everything; built into cell
+
+41
+00:03:34,099 --> 00:03:40,519
+手机，内置于笔记本电脑等。所以实际传感器相当于视网膜
+phones, built into laptops, and so on. So the actual sensor the equivalent of a retina
+
+42
+00:03:40,519 --> 00:03:45,150
+现在是一种可能花费不到1美元的设备。镜头较小，镜头较小
+is now a device that perhaps costs less then a dollar. Lenses are smaller, cameras are
+
+43
+00:03:45,150 --> 00:03:47,709
+小而便宜。另一个非常重要的原因
+small and cheap. The other reason that is really important
+
+44
+00:03:47,709 --> 00:03:52,580
+是计算现在真的很便宜;我们有非常强大的计算机芯片和很多
+is that computation is now really cheap; we have very powerful computer chips and lots
+
+45
+00:03:52,580 --> 00:03:57,440
+和大量的内存，所以这使我们能够运行算法来处理数据
+and lots of memory, and so this enables us to run algorithms to process the data that
+
+46
+00:03:57,440 --> 00:04:02,720
+来自传感器芯片。所以这种组合非常有效，高
+comes out of the sensor chip. So this combination of very effective, high
+
+47
+00:04:02,720 --> 00:04:09,290
+分辨率，颜色，便宜的传感器，丰富的计算是我们的基础
+resolution, colour, cheap sensors, with abundant computation are the foundations on which we
+
+48
+00:04:09,290 --> 00:04:13,569
+可以建立机器人视觉系统。这是Ray的一张非常有趣的图表
+can build robot vision systems. Here is a really interesting graph from Ray
+
+49
+00:04:13,569 --> 00:04:20,880
+Kurzweil，他谈了很多关于计算能力随时间变化的方式，以及
+Kurzweil, and he talks a lot about the way computation power has changed over time, and
+
+50
+00:04:20,880 --> 00:04:27,470
+这是一个对数垂直标度，他正在绘制一些代表的数据点
+this is a logarithmic vertical scale and he’s plotting a number of data points that represent
+
+51
+00:04:27,470 --> 00:04:33,479
+随着时间的推移，你每秒可以购买一千美元的计算量。和
+a number of calculations per second you can buy for a thousand dollars over time. And
+
+52
+00:04:33,479 --> 00:04:39,290
+我们可以看到这是一个对数垂直尺度的指数图。它是什么呢
+we can see that this is an exponential plot on a logarithmic vertical scale. So what it
+
+53
+00:04:39,290 --> 00:04:44,639
+显示的是计算确实在增加，随着时间的推移越来越快。这是
+is showing is computation is really increasing, increasingly rapidly with time. And this is
+
+54
+00:04:44,639 --> 00:04:50,290
+从根本上说，RayKurzweil的论文。所以，如果我们将此推断到未来，
+fundamentally Ray Kurzweil's thesis. So if we extrapolate this into the future,
+
+55
+00:04:50,290 --> 00:04:57,360
+我们可以看到我们在这里，我们有一个有效的计算能力
+we can see that we are about here, and we have computational power of effectively one
+
+56
+00:04:57,360 --> 00:05:02,639
+小鼠脑。到20世纪20年代初，我们应该拥有一千个
+mouse brain. By the early 2020s we should have, for a thousand
+
+57
+00:05:02,639 --> 00:05:09,759
+美元，人类大脑的计算能力。到2050年，当你们许多人将会
+dollars, the computational power of a human brain. And by 2050 when many of you will be
+
+58
+00:05:09,759 --> 00:05:14,810
+活着，也许是在你工作生涯的最后，你会花一千美元
+alive, perhaps at the ends of your working careers, for a thousand dollars you will be
+
+59
+00:05:14,810 --> 00:05:20,710
+能够购买相当于地球上所有人类大脑的足够计算能力。
+able to buy enough computing power to the equivalent of all human brains on the planet.
+
+60
+00:05:20,710 --> 00:05:26,430
+这是一个非常惊人的预测，非常非常非常激动人心的时刻。
+That is a pretty amazing prediction and so clearly very, very exciting times ahead.
+
+61
+00:05:26,430 --> 00:05:31,470
+那么机器人专家对传感器视觉做了哪些实际的事情呢？
+So what practical things have roboticists been doing with sensor vision?
+
+62
+00:05:31,470 --> 00:05:37,370
+我们最近听到很多关于自动驾驶汽车，谷歌汽车等等，但实际情况
+We hear a lot in recent times about self-driving cars, Google cars and so on, but the actual
+
+63
+00:05:37,370 --> 00:05:43,070
+自动驾驶汽车的历史可以追溯到很久以前。有一些非常重要的研究
+history of self-driving cars goes back a long way. There was some very significant research
+
+64
+00:05:43,070 --> 00:05:49,040
+20世纪80年代欧洲的计划叫做普罗米修斯，并且做了很多非常基础的工作
+program in Europe in the 1980s called Prometheus, and a lot of very fundamental work was done
+
+65
+00:05:49,040 --> 00:05:56,320
+一位叫ErnstDickmanns的科学家。他自动化这辆面包车。它有很多相机
+by a scientist called Ernst Dickmanns. He automated this van. It had a number of cameras
+
+66
+00:05:56,320 --> 00:06:01,530
+在前面向外看，它能够高速驾驶高速公路。
+in the front looking outwards, and it was able to drive along autobahns at high speed.
+
+67
+00:06:01,530 --> 00:06:06,430
+这辆特定的货车和一些货车取得了许多重要的里程碑式的成就
+A number of significant landmark achievements were made by this particular van and some
+
+68
+00:06:06,430 --> 00:06:11,740
+它的直系后代。另一项具有里程碑意义的成
+of it immediate descendants. Another landmark achievement was from some
+
+69
+00:06:11,740 --> 00:06:17,180
+来自卡内基梅隆大学的研究人员，他们主要使用传感器自动化汽车
+researchers from Carnegie Mellon University, who automated a car primarily using the sensor
+
+70
+00:06:17,180 --> 00:06:22,740
+愿景，并将其驱逐到美国各地。旅程花了几天，大约四千公里，
+vision, and drove it across America. The journey took a few days, around four thousand kilometres,
+
+71
+00:06:22,740 --> 00:06:29,600
+并且人为干预的人数相对较少。这个视频显示了一个人形机器人接球。
+and there were relatively few human interventions. This video shows a humanoid robot catching a ball.
+
+72
+00:06:30,900 --> 00:06:33,360
+在这里，我们再次以慢动作看到它。
+Here we see it again in slow motion.
+
+73
+00:06:36,860 --> 00:06:39,540
+现在机器人头部有一对摄像头，
+Now the robot has a pair of cameras in its head,
+
+74
+00:06:39,540 --> 00:06:43,740
+这允许它估计到球的距离;使用该信息进行建模
+which allows it to estimate the distance to the ball; uses that information to model
+
+75
+00:06:43,750 --> 00:06:48,900
+球如何在空间中移动以规划手臂应该采取的动作
+how a ball moves through space in order to plan the motion that the arm should take to
+
+76
+00:06:48,900 --> 00:06:53,580
+拦截球。因此，机器人的头部有许多传感器：一对相机
+intercept the ball. So the robot’s head has a number of sensors: pair of cameras as
+
+77
+00:06:53,580 --> 00:06:58,370
+我提到过，但也有一些倾斜传感器，所以它可以解决头部指向的位置
+I mentioned, but also some tilt sensors, so it can work out where the head is pointing
+
+78
+00:06:58,370 --> 00:07:04,470
+在太空。现在你可以看到左眼和右眼看到的球的位置
+in space. Now you can see the positions of the ball as seen by its left and right eye
+
+79
+00:07:04,470 --> 00:07:10,389
+作为时间的函数，在这里你可以看到机器人手移动的动画
+as a function of time, and here you can see an animation of the robot’s hand moving
+
+80
+00:07:10,389 --> 00:07:16,660
+拦截球的路径。这是我们实际看的飞行机器人
+to intercept the path of the ball. Here is a flying robot which we actually looked
+
+81
+00:07:16,660 --> 00:07:22,310
+在机器人技术课程中，你们中的一些人在关闭机器人视频中近距离观看
+at up close in the Out and About with Robots video, in the Robotics course some of you
+
+82
+00:07:22,310 --> 00:07:27,380
+可能早些时候见过。这个机器人再次配备了立体声相机。再说一遍
+might have seen earlier. This robot is equipped with a stereo pair of cameras again. So again
+
+83
+00:07:27,380 --> 00:07:33,030
+就像我们自己的两只眼睛一样，这使机器人能够通过工作来感知它前面的障碍物
+like our own two eyes, this enables the robot to sense an obstacle in front of it, by working
+
+84
+00:07:33,030 --> 00:07:37,620
+使用两个信息从前面的世界的三维结构
+out the three dimensional structure of the world in front using information from two
+
+85
+00:07:37,620 --> 00:07:41,060
+相机和船上的大量处理。
+cameras and a fair amount of processing on board.
+
+86
+00:07:43,360 --> 00:07:49,099
+我自己和CSIRO的一些同事以及这个水下机器人开发的另一个机器人
+Another robot developed by myself and some colleagues at CSIRO, and this underwater robot
+
+87
+00:07:49,099 --> 00:07:53,599
+还有一对立体声相机。它有两个向下看的摄像头
+has also got a stereo pair of cameras. It has got two cameras that look downwards and
+
+88
+00:07:53,599 --> 00:07:58,889
+两个向前看的相机。向下看的摄像机正在估算距离
+two cameras which look frontwards. The downward looking cameras are estimating the distance
+
+89
+00:07:58,889 --> 00:08:03,370
+来自机器人的海底，这个机器人正试图保持恒定的高度
+of the seabed from the robot, and this robot is trying to maintain a constant altitude
+
+90
+00:08:03,370 --> 00:08:07,810
+在海床上面。它使用来自的三维信息来做到这一点
+above the sea bed. And it does that using the three dimensional information from the
+
+91
+00:08:07,810 --> 00:08:13,470
+向下看的立体相机。前视立体摄像机用于探测障碍物。
+downward looking stereo cameras. The frontward looking stereo cameras are used to detect obstacles.
+
+92
+00:08:16,720 --> 00:08:18,460
+在这里，我们看到了世界的样子
+Here we see what the world looks like through
+
+93
+00:08:18,470 --> 00:08:24,380
+移动机器人的眼睛。这个特殊的机器人有一个允许的立体相机对
+the eyes of a mobile robot. This particular robot has got a stereo camera pair which allows
+
+94
+00:08:24,380 --> 00:08:30,009
+它创造了一个通过它移动的世界的三维模型。和
+it to create a three dimensional model of the world through which it is moving. And
+
+95
+00:08:30,009 --> 00:08:34,500
+这对于确定它可以驱动的平面是非常有用的
+that is really useful in order to determine what is a flat surface that it could drive
+
+96
+00:08:34,500 --> 00:08:40,560
+过去，什么是墙，或人，或其他一些障碍。
+over, and what is a wall, or human being, or some other kind of obstacle.
+
+97
+00:08:43,220 --> 00:08:47,340
+在这里，我们有一些不同的东西。在这里，我们有一个向下看的相机
+Here we have something a bit different. Here we have a single camera looking downwards
+
+98
+00:08:47,350 --> 00:08:52,389
+在珊瑚礁，摄像机由机器人携带。现在我们可以使用一个数字
+at a coral reef, and the camera is being carried by a robot. Now we are able to use a number
+
+99
+00:08:52,389 --> 00:08:57,189
+数学技术结合来自这些多个摄像机视频的信息
+of mathematical techniques to combine the information from these multiple camera videos
+
+100
+00:08:57,189 --> 00:09:03,279
+创建珊瑚礁的三维模型。我们从一些单曲做到这一点
+to create a three dimensional model of the coral reef. We do this from a number of single
+
+101
+00:09:03,279 --> 00:09:09,040
+相机视图。现在我们平滑那个三维网格;我们将原始图像覆盖在上面
+camera views. Now we smooth that three dimensional mesh; we drape the original imagery over it
+
+102
+00:09:09,040 --> 00:09:14,649
+创建纹理贴图表面。所以现在我们有一个非常逼真的三维视觉
+to create a texture map surface. So now we have a very realistic looking three dimensional
+
+103
+00:09:14,649 --> 00:09:22,499
+从一系列单一摄像机视图中获得的珊瑚礁模型。
+model of a coral reef obtained just from a whole sequence of single camera views.
+
+104
+00:09:22,499 --> 00:09:28,199
+所以我希望我已经说服你，愿景是一个真正非常重要的传感器
+So I hope that I have convinced you that vision is a really, really important sensor for all
+
+105
+00:09:28,199 --> 00:09:34,529
+各种各样的动物，为自己和机器人。所以在本课程的其余部分我们是
+sorts of animals, for ourselves and also for robots. So in the rest of the course we are
+
+106
+00:09:34,529 --> 00:09:40,189
+要了解我们如何做机器人视觉;我们如何从相机中获取信息
+going to learn something about how we do robot vision; how do we take information from camera
+
+107
+00:09:40,189 --> 00:09:45,449
+传感器并处理它并生成机器人可以采取某些行动的信息。
+sensors and process it and generate information that a robot can take some action on.
+

@@ -1,0 +1,220 @@
+1
+00:00:03,860 --> 00:00:09,250
+我们现在考虑一个稍微复杂的例子;这是一个三连杆平面机器人。
+Let's now consider a slightly more complex example; this is a three link planar robot.
+
+2
+00:00:09,250 --> 00:00:13,379
+你会记得关于正向运动学的讲座，一个有三个关节的机器人
+As you will remember from the lecture about forward kinematics, a robot with three joints
+
+3
+00:00:13,379 --> 00:00:18,460
+或三个自由度，允许我们控制末端效应器的姿势，而不仅仅是它
+or three degrees of freedom, allows us to control the end effector pose, not just its
+
+4
+00:00:18,460 --> 00:00:23,710
+位置，它是X，它是Y，但也是末端效应器的方向。
+position, it's X and it's Y, but also the orientation of the end effector.
+
+5
+00:00:23,710 --> 00:00:28,270
+我们将标记这个机器人的链接长度，我们将指出关节
+We're going to label the link lengths of this robot and we're going to indicate the joint
+
+6
+00:00:28,270 --> 00:00:36,680
+角度，Q1，Q2和Q3。我们将指出包含X的末端效应器姿势
+angles, Q1, Q2, and Q3. We're going to indicate the end effector pose which comprises an X
+
+7
+00:00:36,680 --> 00:00:43,250
+和Y分量和方向θ。我们之前已经描述了如何写下来
+and a Y component and an orientation theta. We've previously described how to write down
+
+8
+00:00:43,250 --> 00:00:49,940
+用二维齐次变换表示末端执行器姿态的表达式
+an expression for the pose of the end effector in terms of two dimensional homogeneous transformations
+
+9
+00:00:49,940 --> 00:00:56,649
+它是一个转换链，绕Q1旋转，沿着链接平移
+and it is a chain of transformations, rotation about Q1, translation along the link by an
+
+10
+00:00:56,649 --> 00:01:03,130
+量A1，绕Q2旋转，沿第二连杆平移到A2的距离，
+amount A1, rotation about Q2, translation along the second link by a distance to A2,
+
+11
+00:01:03,130 --> 00:01:09,260
+通过连接角度3旋转，然后沿链节3平移距离A3。它的
+rotation by join angle three and then a translation along link three by the distance A3. It's
+
+12
+00:01:09,260 --> 00:01:14,110
+有点繁琐，但相对简单地将所有矩阵相乘
+a little bit tedious but relatively straightforward to multiply all of the matrices together and
+
+13
+00:01:14,110 --> 00:01:19,040
+我最终得到了一个均匀的变换矩阵，它代表了机器人的姿势
+I end up with a homogeneous transformation matrix, which represents the pose of the robot
+
+14
+00:01:19,040 --> 00:01:25,360
+末端效应器，这是一个三维，均匀的变换矩阵，二维。
+end effector and this is a three by three, homogeneous transformation matrix, in two dimensions.
+
+15
+00:01:25,440 --> 00:01:30,100
+您会记得，矩阵的某些部分代表了平移
+You will recall that there are some parts of the matrix which represent the translational
+
+16
+00:01:30,100 --> 00:01:35,619
+姿势的组成部分，矩阵的其他部分代表旋转
+component of the pose and there are other parts of the matrix which represent the rotational
+
+17
+00:01:35,619 --> 00:01:41,549
+姿势的一部分。让我们首先看一下这两个元素的翻译部分
+part of the pose. Let's look first at the translational part that is these are two elements
+
+18
+00:01:41,549 --> 00:01:47,250
+在这里的矩阵中，我可以将它们拉出来，它们代表X和Y坐标
+in the matrix up here and I can pull those out and they represent the X and Y co-ordinate
+
+19
+00:01:47,250 --> 00:01:49,280
+末端效应器的姿势。
+of the end effector pose.
+
+20
+00:01:49,280 --> 00:01:55,020
+相对于时间和我们的计算，计算这些衍生物相对简单
+It's relatively simple to compute the derivate of these with respect to time and as we did
+
+21
+00:01:55,020 --> 00:02:01,270
+之前，我可以用矩阵形式写这个，所以我们有一个X点和Y点的表达式，
+earlier, I can write this in matrix form, so we have an expression for X dot and Y dot,
+
+22
+00:02:01,270 --> 00:02:06,119
+就雅可比矩阵而言，这次我们的雅可比矩阵有两行和三行
+in terms of a Jacobian Matrix and this time our Jacobian Matrix has got two rows and three
+
+23
+00:02:06,119 --> 00:02:12,220
+列和它乘以关节角速度矢量Q1点，Q2点
+columns and that is multiplied by a vector of joint angle velocities, Q1 dot, Q2 dot
+
+24
+00:02:12,220 --> 00:02:18,050
+和Q3点。这非常简单。现在让我们看看旋转部分和
+and Q3 dot. This is pretty straightforward. Let's look now at the rotational part and
+
+25
+00:02:18,050 --> 00:02:23,610
+我要把它拉出来。这是我们姿势的旋转部分，描述了方向
+I'm going to pull that out. This is the rotational part of our pose, describes the orientation
+
+26
+00:02:23,610 --> 00:02:25,290
+机器人末端执行器
+of the robot end effector.
+
+27
+00:02:25,290 --> 00:02:30,660
+我们很早就知道了二维旋转矩阵的一般形式
+We learnt very early on that the general form for a rotation matrix in two dimensions looks
+
+28
+00:02:30,660 --> 00:02:35,470
+像这样。通过将cos符号和sin函数的参数等同于此，它非常漂亮
+like this. By equating the arguments of the cos sign and sin functions here, it's pretty
+
+29
+00:02:35,470 --> 00:02:40,260
+明确我们可以为theta写这个等于Q1加Q2加Q3。
+clear that we can write this for theta is equal to Q1 plus Q2 plus Q3.
+
+30
+00:02:40,260 --> 00:02:44,230
+如果你考虑问题的几何形状，那么这个结果实际上并不是特别的
+If you think about the geometry of the problem then this result is actually not particularly
+
+31
+00:02:44,230 --> 00:02:48,690
+奇怪。现在我可以考虑时间的θ的导数，所以Q点是
+surprising. Now I can take the derivative of theta with respect to time, so Q dot is
+
+32
+00:02:48,690 --> 00:02:56,950
+等于Q1点，再加上Q2点，再加上Q3点，我再次将其分解并以矩阵形式写入。
+equal to Q1 dot, plus Q2 dot, plus Q3 dot and once again I can factorize this and write it in matrix form.
+
+33
+00:02:57,760 --> 00:03:03,520
+这是X点和Y点的表达式，这里是theta点的表达式。
+Here is the expression for X dot and Y dot and here is the expression for theta dot.
+
+34
+00:03:03,530 --> 00:03:09,910
+现在它们都是矩阵乘以关节角速度的矢量。我可以
+Now both of them are a matrix multiplied by a vector of joint angle velocities. I can
+
+35
+00:03:09,910 --> 00:03:14,629
+将这些组合在一起基本上我堆叠了两个矩阵，最后我得到了雅可比矩阵
+combine these together basically I stack two matrices and I end up with a Jacobian Matrix
+
+36
+00:03:14,629 --> 00:03:20,269
+这是三乘三。在这里我有联合速度，在这里我有空间
+which is three by three. Here I have the joint velocity and over here I have the spatial
+
+37
+00:03:20,269 --> 00:03:25,680
+机器人末端执行器的速度，但关节之间再次呈线性关系
+velocity of the robot end effector, but once again a linear relationship between joint
+
+38
+00:03:25,680 --> 00:03:30,190
+末端执行器的速度和空间速度。
+velocity and spatial velocity of the end effector.
+
+39
+00:03:30,190 --> 00:03:35,739
+因此对于这三个链接，具有关节角度Q1，Q2和Q3的平面机械手，我可以定义
+So for this three link, planar manipulator with joint angles Q1, Q2 and Q3, I can define
+
+40
+00:03:35,739 --> 00:03:41,340
+和它的平移速度相关的末端效应器速度，就是它的X点
+and end effector velocity in terms of its translational velocity, that's it's X dot
+
+41
+00:03:41,340 --> 00:03:48,019
+和Y点分量以及它的旋转速度;thetadot。所以，如果我指定
+and Y dot component and also in terms of its rotational velocity; theta dot. So if I specify
+
+42
+00:03:48,019 --> 00:03:52,500
+那就是我想要的特殊机器人控制问题，然后计算
+that, that’s what I want in my particular robot control problem, then computing the
+
+43
+00:03:52,500 --> 00:03:57,950
+Jacobian并采用它的逆，我可以计算出我需要的关节角度的速度
+Jacobian and taking its inverse, I can compute the velocity of the joint angles that I need
+
+44
+00:03:57,950 --> 00:04:00,459
+为了达到最终效应器的速度。
+in order to achieve that end effector velocity.
+

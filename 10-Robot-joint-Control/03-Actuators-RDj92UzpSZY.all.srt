@@ -1,0 +1,355 @@
+1
+00:00:03,379 --> 00:00:08,710
+正如我刚才提到的，执行器是实际移动机器人关节的装置。
+As I mentioned a moment ago, actuators are the devices that actually move the robot joints.
+
+2
+00:00:08,710 --> 00:00:13,950
+并且机器人通常使用许多不同类型的致动器。一个
+And there are a number of different types of actuators in common use for robotics. A
+
+3
+00:00:13,950 --> 00:00:18,199
+执行器的良好定义是它是一种引起运动的装置，它可能导致
+good definition of an actuator is it is a device that causes motion and it can cause
+
+4
+00:00:18,199 --> 00:00:23,869
+线性运动或旋转运动。在这里，我们有一个线性执行器和轴
+linear motion or rotary motion. On the top here, we have a linear actuator and the shaft
+
+5
+00:00:23,869 --> 00:00:28,609
+该线性致动器沿着线向后和向前移动。更常见的形式
+of that linear actuator moves backwards and forwards along a line. The more common form
+
+6
+00:00:28,609 --> 00:00:33,430
+电动机具有旋转输出。可以考虑执行器的输出
+of electric motor has a rotary output. The output of an actuator could be considered
+
+7
+00:00:33,430 --> 00:00:39,210
+无论是速度还是力量。也就是说，对于特定输入，电动机可能采用
+as either a speed or a force. That is, for a particular input, the motor might adopt
+
+8
+00:00:39,210 --> 00:00:46,280
+特定的速度或它可能在旋转壳体中施加特定的力或扭矩。
+a particular speed or it might exert a particular force or torque in the rotational case.
+
+9
+00:00:46,280 --> 00:00:50,830
+有许多不同类型的执行器，它们的基础物理类型各不相同
+There are many different types of actuators and they vary in the types of underlying physics
+
+10
+00:00:50,830 --> 00:00:55,400
+那用来引起运动。最常见的执行器类型是液压执行器
+that’s used to cause the motion. The most common types of actuators are hydraulic which
+
+11
+00:00:55,400 --> 00:01:00,970
+使用压缩油引起运动，气动使用压缩空气引起运动，
+use compressed oil to cause the motion, pneumatic which use compressed air to cause the motion,
+
+12
+00:01:00,970 --> 00:01:06,400
+和电动使用电流和磁铁引起运动。
+and electric which use electric current and magnets to cause the motion.
+
+13
+00:01:06,400 --> 00:01:10,659
+液压执行器在重型机械中非常常见，例如在建筑和建筑中使用
+Hydraulic actuators are very common in heavy machineries such as used in construction and
+
+14
+00:01:10,659 --> 00:01:15,229
+在采矿业。它们是非常紧凑的设备，能够产生非常紧凑的设备
+in the mining industry. They are very compact devices that are capable of generating very
+
+15
+00:01:15,229 --> 00:01:20,150
+当我想要挖掘挖掘机的桶时，这是非常重要的
+high forces and that’s important when I want to pull a bucket of an excavator through
+
+16
+00:01:20,150 --> 00:01:25,150
+地面或我想举起许多吨土和石头。
+the ground or I want to lift up many, many tons of earth and stones.
+
+17
+00:01:25,150 --> 00:01:29,859
+液压执行器是您在此图中看到的圆柱形设备。近距离，你
+The hydraulic actuators are the cylindrical devices you see in this image. Up close, you
+
+18
+00:01:29,859 --> 00:01:35,189
+可以看到一个带有一些软管的大圆筒和一个伸出一端的闪亮棒
+can see a large cylinder with some hoses going to it and a shiny rod sticking out one end
+
+19
+00:01:35,189 --> 00:01:40,870
+向前和向后移动。液压执行器实际上是一种非常简单的装置。该
+that moves backwards and forwards. A hydraulic actuator is really a very simple device. The
+
+20
+00:01:40,870 --> 00:01:46,200
+圆柱体有两个压缩油进入和离开的端口然后，有
+cylindrical body has got two ports where compressed oil enters and leaves and then, there is the
+
+21
+00:01:46,200 --> 00:01:50,729
+移动部件，前后移动的杆，在机器上施加力
+moving part, the rod which moves backwards and forwards and exerts a force on the machine
+
+22
+00:01:50,729 --> 00:01:52,329
+或环境。
+or on the environment.
+
+23
+00:01:52,329 --> 00:01:57,069
+液压执行器的简单示意图看起来像这样。在底部，
+A simple schematic of a hydraulic actuator looks something like this. Down the bottom,
+
+24
+00:01:57,069 --> 00:02:01,000
+我们有汽缸本身。在里面，有一个活塞连接到
+we have the cylinder itself. Inside that, there is a piston which is attached to the
+
+25
+00:02:01,000 --> 00:02:04,469
+棒是做工作的一块。
+rod which is the piece that does the work.
+
+26
+00:02:04,469 --> 00:02:09,080
+有一个阀门组件，来自泵的高压油进入阀门和油
+There is a valve assembly and high-pressure oil from the pump enters the valve and oil
+
+27
+00:02:09,080 --> 00:02:14,030
+离开阀门并返回泵。液压执行器转换油压
+leaves the valve and returns to the pump. The hydraulic actuator converts oil pressure
+
+28
+00:02:14,030 --> 00:02:19,930
+线性力。如果我向阀门施加正信号并且油流如图所示
+to a linear force. If I apply a positive signal to the valve and oil flows as shown by the
+
+29
+00:02:19,930 --> 00:02:25,540
+黑色箭头，活塞向右移动。油进入气缸的左端口
+black arrows, and the piston moves to the right. Oil enters the left port of the cylinder
+
+30
+00:02:25,540 --> 00:02:29,320
+它从气缸的右侧端口出来。
+and it exits from the right hand port of the cylinder.
+
+31
+00:02:29,320 --> 00:02:34,470
+如果活塞的面积是A并且如果油的压力是P，那么的力就是
+If the area of the piston is A and if the pressure of the oil is P, then the force of
+
+32
+00:02:34,470 --> 00:02:39,760
+活塞是PxA.而且由于油压很高，可以施加的力
+the piston is P x A. And because the oil pressure is so high, the force that can be exerted
+
+33
+00:02:39,760 --> 00:02:45,140
+由液压执行器非常非常大。如果我对阀门施加负信号，那么
+by a hydraulic actuator is very, very large. If I apply negative signal to the valve, then
+
+34
+00:02:45,140 --> 00:02:50,440
+油沿相反方向流动，活塞向左移动。如果我申请
+the oil flows in the opposite direction and the piston moves to the left. If I apply a
+
+35
+00:02:50,440 --> 00:02:55,090
+零信号到阀门，然后所有的端口都被阻塞，这意味着没有油可以
+zero signal to the valve, then all the ports are blocked and this means that no oil can
+
+36
+00:02:55,090 --> 00:02:59,780
+进入或离开液压缸。因为油实际上是不可压缩的，所以
+enter or leave the hydraulic cylinder. Because the oil is virtually incompressible, this
+
+37
+00:02:59,780 --> 00:03:04,170
+意味着活塞有效锁定，不能向左或向右移动。
+means that the piston is effectively locked and it can’t move left or right.
+
+38
+00:03:04,170 --> 00:03:08,980
+虽然线性液压执行器是目前最常见的，但也有旋转式
+Although the linear hydraulic actuator is by far the most common, there are also rotary
+
+39
+00:03:08,980 --> 00:03:13,380
+这里示出的液压马达在驱动该履带的马达中。
+hydraulic motors such are shown here in the motor which is driving this caterpillar track.
+
+40
+00:03:13,380 --> 00:03:17,980
+您可以将其视为油驱动涡轮或桨轮。
+You can think of it essentially as an oil-driven turbine or paddle wheel.
+
+41
+00:03:17,980 --> 00:03:22,250
+液压执行器非常紧凑，可以施加很大的力。但为了
+The hydraulic actuators are very compact and can exert a lot of force. But in order to
+
+42
+00:03:22,250 --> 00:03:27,320
+使用液压执行器，你需要很多其他套件。首先，你需要阀门
+use a hydraulic actuator, you need a lot of other kit. First of all, you need valves to
+
+43
+00:03:27,320 --> 00:03:33,000
+控制油流的方向。你需要一台压缩机来供应高压油
+control the direction of oil flow. You need a compressor to supply the high-pressure oil
+
+44
+00:03:33,000 --> 00:03:37,710
+对于大型系统，您需要一台冷却器在压缩后冷却油。
+and for large systems, you need a chiller to cool the oil after it’s been compressed.
+
+45
+00:03:37,710 --> 00:03:42,070
+通常你会有一个容纳高压油的蓄能器，总是很糟糕
+Often you will have an accumulator that holds high-pressure oil and there is always an awful
+
+46
+00:03:42,070 --> 00:03:48,010
+很多软管。早在1984年，我就参与了这种灵活制造的开发
+lot of hoses. Way back in 1984, I was involved in developing this flexible manufacturing
+
+47
+00:03:48,010 --> 00:03:52,650
+除了许多其他设备外，它还包含两个机器人。有
+cell and it contained two robots in addition to a lot of other equipment. There is the
+
+48
+00:03:52,650 --> 00:03:57,710
+电动Puma560机器人，我们在这个课程之前已经见过很多次了
+electric Puma 560 robot that we’ve met a number of times before in this course and
+
+49
+00:03:57,710 --> 00:04:03,710
+在前景是这个非常大的液压动力辛辛那提米拉克龙T3机器人。
+in the foreground is this very large hydraulically-powered Cincinnati Milacron T3 robot.
+
+50
+00:04:03,710 --> 00:04:08,350
+在当天，液压技术是唯一可用于制造机器人的技术
+Back in the day, hydraulics was the only technology that could be used to create a robot that
+
+51
+00:04:08,350 --> 00:04:12,850
+能够举起非常大的有效载荷。从那时起，已经有了很大的改进
+was able to lift very large payloads. Since then, there has been massive improvements
+
+52
+00:04:12,850 --> 00:04:17,740
+在电动机技术方面，几乎没有液压动力制造
+in electric motor technology and there are virtually no hydraulically-powered manufacturing
+
+53
+00:04:17,740 --> 00:04:20,040
+机器人今天存在。
+robots in existence today.
+
+54
+00:04:20,040 --> 00:04:24,440
+气动执行器与液压执行器有很多相似之处。在这里，我们看到了一个
+Pneumatic actuators have a lot of similarity to hydraulic actuators. And here we see a
+
+55
+00:04:24,440 --> 00:04:30,010
+线性气动执行器。气动系统使用压缩而不是压缩油
+linear pneumatic actuator. Instead of compressed oil, the pneumatic system uses compressed
+
+56
+00:04:30,010 --> 00:04:35,330
+空气。就像液压系统一样，你需要很多其他套件。你需要有阀门，
+air. Just like the hydraulic system, you need a lot of other kit. You need to have valves,
+
+57
+00:04:35,330 --> 00:04:38,680
+你需要有压缩机，你需要有蓄能器，当然，你需要
+you need to have compressors, you need to have accumulators and of course, you need
+
+58
+00:04:38,680 --> 00:04:45,340
+有很多软管。作为线性气动执行器的替代方案，它是可能的
+to have an awful lot of hoses. As an alternative to the linear pneumatic actuator, it’s possible
+
+59
+00:04:45,340 --> 00:04:51,020
+创造一个人造肌肉。这些装置直接将气压转换为线性
+to create an artificial muscle. These devices directly convert air pressure to a linear
+
+60
+00:04:51,020 --> 00:04:52,700
+力。没有活塞参与。
+force. There’s no piston involved.
+
+61
+00:04:52,700 --> 00:04:57,990
+在这里，我们可以看到大量的人造肌肉通过肌腱连接到手指
+And here we can see a large number of artificial muscles connected by tendons to the fingers
+
+62
+00:04:57,990 --> 00:05:00,250
+在这个机器人手上。
+on this robotic hand.
+
+63
+00:05:00,250 --> 00:05:04,890
+人造肌肉包含柔性腔室或袋子。当空气被泵入
+The artificial muscle contains a flexible chamber or bag. As air is pumped into the
+
+64
+00:05:04,890 --> 00:05:09,440
+腔室，腔室变宽，也变短。我们可以看到整体
+chamber, the chamber gets wider and it also gets shorter. And we can see that the overall
+
+65
+00:05:09,440 --> 00:05:14,710
+随着充气，肌肉的长度减少了。这些人造的一个特征
+length of the muscle has reduced as it is inflated. One characteristic of these artificial
+
+66
+00:05:14,710 --> 00:05:19,820
+肌肉就像我们自己的肌肉一样，它们只能拉动，它们无法推动。在
+muscles just like our own muscles is that they can only pull, they can’t push. In
+
+67
+00:05:19,820 --> 00:05:24,940
+为了制造有效的驱动系统，我们将它们用于我们所谓的对抗性
+order to make an effective actuation system, we use them in what we called antagonistic
+
+68
+00:05:24,940 --> 00:05:30,389
+对。你可以看到这里说明的。当我给一块肌肉加压时，它会变短
+pairs. You can see that illustrated here. As I pressurize one muscle, it gets shorter
+
+69
+00:05:30,389 --> 00:05:37,330
+并且顶部的轮子向右旋转。当我减压肌肉并加压时
+and the wheel at the top rotates to the right. As I depressurize that muscle and pressurize
+
+70
+00:05:37,330 --> 00:05:42,780
+另一块肌肉，它变得更短，顶部的轮子向左旋转。
+the other muscle, it gets shorter and the wheel at the top rotates towards the left.
+
+71
+00:05:42,780 --> 00:05:45,020
+这些人造肌必须成对使用。
+These artificial muscles have to be used in pairs.
+

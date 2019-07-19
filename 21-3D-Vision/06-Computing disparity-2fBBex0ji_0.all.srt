@@ -1,0 +1,355 @@
+1
+00:00:03,340 --> 00:00:09,139
+现在让我们谈谈我们如何计算立体差异。我们拍了一对照片
+Let's talk now about how we compute stereo disparity. We have a pair of images taken
+
+2
+00:00:09,139 --> 00:00:14,190
+通过立体相机。我们有左图像和右图像，我们的目标是计算
+by a stereo camera. We have a left image and a right image, and our goal is to compute
+
+3
+00:00:14,190 --> 00:00:19,699
+我们称之为视差图像。在视差图像中，像素的亮度对应
+what we call a disparity image. In the disparity image, the brightness of a pixel corresponds
+
+4
+00:00:19,699 --> 00:00:23,430
+到该特定点的立体差异。
+to the stereo disparity at that particular point.
+
+5
+00:00:23,430 --> 00:00:28,090
+明亮的点具有大的立体差异，并且当对象出现时发生
+A point that's bright has got a large stereo disparity and that occurs when an object is
+
+6
+00:00:28,090 --> 00:00:33,610
+靠近我们，较暗的像素具有较小的视差并对应于一个物体
+close to us, and a darker pixel has got a smaller disparity and corresponds to an object
+
+7
+00:00:33,610 --> 00:00:38,879
+那是更远的地方。我们想要了解我们如何能够采用原始的左右
+that is further away. We want to understand how we can take that original left and right
+
+8
+00:00:38,879 --> 00:00:44,860
+图像，处理它并将其转换为此视差图像。这种计算的基本原理
+image, process it and turn it into this disparity image. The fundamental principle of this computational
+
+9
+00:00:44,860 --> 00:00:47,180
+立体声可以很简单地描述。
+stereo can be described quite simply.
+
+10
+00:00:47,180 --> 00:00:51,879
+这是我从埃菲尔铁塔略有不同的观点拍摄的两张照片。
+Here are two pictures that I took of the Eiffel Tower from slightly different viewpoints.
+
+11
+00:00:51,879 --> 00:00:57,210
+让我们考虑一下塔顶的一个点。我打算选择一个窗口
+Let's consider a single point on the top of the tower. I'm going to select a window of
+
+12
+00:00:57,210 --> 00:01:01,609
+周围的像素，我将打印那个像素窗口的副本
+pixels around that, and I'm going to make a copy of that window of pixels and there
+
+13
+00:01:01,609 --> 00:01:03,149
+它在顶部。
+it is at the top.
+
+14
+00:01:03,149 --> 00:01:11,170
+现在我要将距离U转移到右手图像并做一点点
+Now I'm going to transfer the distance U to the right hand image and do a little bit of
+
+15
+00:01:11,170 --> 00:01:16,890
+施工。我要说的是，我所寻找的差距已经达到最大值
+construction. I am going to say that the disparity that I am looking for has got a maximum value
+
+16
+00:01:16,890 --> 00:01:22,759
+我打电话给D-max。现在，立体声过程涉及寻找那个小模板
+that I'm going to call D-max. Now, the stereo process involves looking for that little template
+
+17
+00:01:22,759 --> 00:01:28,580
+埃菲尔铁塔顶部沿着该搜索线的每个可能的位置和最好的
+of the top of the Eiffel Tower at every possible position along that search line and the best
+
+18
+00:01:28,580 --> 00:01:34,450
+这个特定的位置显然是合适的，距离垂直方向的距离为D.
+fit is clearly at this particular location, which is a distance D away from the vertical
+
+19
+00:01:34,450 --> 00:01:36,299
+我画的参考线。
+reference line that I drew.
+
+20
+00:01:36,299 --> 00:01:42,150
+D是此时的差异值。显然，这是一个计算密集型
+D is the value of the disparity at this point. Clearly this is quite a computationally intensive
+
+21
+00:01:42,150 --> 00:01:48,710
+处理。我必须在许多不同的可能差异值上进行模板匹配
+process. I have to do a template match at a number of different possible disparity values
+
+22
+00:01:48,710 --> 00:01:55,140
+从零到D-max。这只是为了确定坐标U，V处的视差。
+from zero up to D-max. And this is just to determine the disparity at the coordinate U, V.
+
+23
+00:01:55,140 --> 00:01:59,740
+我实际上需要为输入图像中的每个像素执行此操作。这当然是
+I actually need to do this for every single pixel in the input image. It is certainly
+
+24
+00:01:59,740 --> 00:02:04,159
+很多计算，但是对于今天的计算机来说，它可以非常非常快速地完成
+a lot of computation, but with today's computers it can be done very, very quickly even for
+
+25
+00:02:04,159 --> 00:02:08,330
+非常高分辨率的立体图像对。
+very high resolution stereo image pairs.
+
+26
+00:02:08,330 --> 00:02:14,410
+让我们将立体声对加载到我们的工作区中。我要从中加载左图像
+Let's load a stereo pair into our workspace. I'm going to load the left image from the
+
+27
+00:02:14,410 --> 00:02:26,000
+文件rocks2-L，我要从rocks2-R加载正确的图像。我使用了reduce选项
+file rocks2-L and I'm going to load the right image from rocks2-R. I've used the reduce option
+
+28
+00:02:26,000 --> 00:02:31,349
+在水平和垂直方向上读取分辨率因为它们非常，
+to iread the resolution in the horizontal and vertical direction because these are very,
+
+29
+00:02:31,349 --> 00:02:36,720
+在MATLAB下，非常高分辨率的图像和立体声计算有点慢。
+very high-resolution images and the stereo computation is a little slow under MATLAB.
+
+30
+00:02:36,720 --> 00:02:44,890
+我要做的第一件事就是将图像显示为立体图像。通过左边
+The first thing I’m going to do is to display the images as an anaglyph. Pass the left
+
+31
+00:02:44,890 --> 00:02:49,569
+和图像到立体照片功能，在这里我们看到一个立体图像
+and right images to the anaglyph function and here we see an anaglyph representation
+
+32
+00:02:49,569 --> 00:02:54,760
+一堆岩石的立体声场景。如果我戴上红色和蓝色眼镜，就可以了
+of this stereo scene of a pile of rocks. If I had my red and blue glasses on, this would
+
+33
+00:02:54,760 --> 00:02:57,300
+看起来非常有力的三维。
+look very powerfully three-dimensional.
+
+34
+00:02:57,300 --> 00:03:02,170
+让我们更详细地看一下左右图像。我要去
+Let’s have a look at the left and right images in a bit more detail. I’m going to
+
+35
+00:03:02,170 --> 00:03:07,900
+使用工具箱功能，stdisp，立体显示，它给出了一个看起来像的窗口
+use the toolbox function, stdisp, stereo display and it gives a window that looks something
+
+36
+00:03:07,900 --> 00:03:11,599
+像这样，我只是想让它更广泛一点。
+like this and I’m just going to make that a little bit wider.
+
+37
+00:03:11,599 --> 00:03:16,970
+现在，我们在这里看到左图和右图。让我点击一个特定点
+Now, here we see the left image and the right image. Let me just click on a particular point
+
+38
+00:03:16,970 --> 00:03:20,260
+在图像中。我要点击前景中的这块岩石。我要点击了
+in the image. I’m going to click on this rock in the foreground. I’m going to click
+
+39
+00:03:20,260 --> 00:03:27,890
+在那个特定的斑点上，如果我去另一个图像，那是相同的斑点;
+on that particular blotch there and if I go to the other image and that’s the same blotch;
+
+40
+00:03:27,890 --> 00:03:28,739
+就在那里，
+it’s just there,
+
+41
+00:03:28,739 --> 00:03:35,019
+我要点击它并在顶部我们看到左边病房的差异
+I’m going to click on it and up the top we see the disparity that is the left ward
+
+42
+00:03:35,019 --> 00:03:41,220
+在右图中移位，它是79.29像素。现在让我们看一下
+shift in the right image and it’s 79.29 pixels. Now let’s have a look at a point
+
+43
+00:03:41,220 --> 00:03:47,030
+在背上。让我们来看看这两块岩石之间这个非常独特的山谷
+on the back. Let’s have a look at this very distinctive valley between these two rocks
+
+44
+00:03:47,030 --> 00:03:48,280
+然后点击该点。
+and click on that point.
+
+45
+00:03:48,280 --> 00:03:53,060
+我将在另一个图像中找到相同的点，它就在那里，现在
+I’m going to find the same point in the other image and it’s just there and now
+
+46
+00:03:53,060 --> 00:03:59,670
+我们看到差距，左边的病房转移已经减少。它只有43.45像素。
+we see that the disparity, the left ward shift has been reduced. It’s only 43.45 pixels.
+
+47
+00:03:59,670 --> 00:04:02,950
+让我们找到一个介于这些事物之间的点。我们来看一下
+Let’s find a point that’s somewhere in between those things. Let’s have a look
+
+48
+00:04:02,950 --> 00:04:09,950
+在这个白点，我们在正确的图像中找到它。就在那里。在这种情况下，
+at this white dot here and we find it in the right image. It’s just there. In this case,
+
+49
+00:04:09,950 --> 00:04:12,720
+差异是52像素。
+the disparity is 52 pixels.
+
+50
+00:04:12,720 --> 00:04:17,019
+所以我们可以非常清楚地看到深度和差异之间的关系。积分在
+So we can see very clearly the relationship between depth and disparity. Points in the
+
+51
+00:04:17,019 --> 00:04:23,299
+前景有很大的差距。背景中的点数差异要小得多。
+foreground have got a large disparity. Points in the background have got a much smaller disparity.
+
+52
+00:04:23,300 --> 00:04:28,070
+现在让我们计算这对图像中每个像素的视差。我要去
+Now let’s compute disparity for every single pixel in this pair of images. I’m going
+
+53
+00:04:28,070 --> 00:04:33,910
+将差异放入工作空间变量D.我将使用工具箱函数
+to put the disparity into the workspace variable D. I’m going to use the toolbox function
+
+54
+00:04:33,910 --> 00:04:39,820
+istereo并传递左图像和右图像。
+istereo and pass in the left image and the right image.
+
+55
+00:04:39,820 --> 00:04:44,130
+差异的范围是搜索这个特定的对，我已经解决了
+The range of disparity is to search over and for this particular pair, I've worked out
+
+56
+00:04:44,130 --> 00:04:49,830
+最小视差是40像素，最大视差是90像素，我是
+that the smallest disparity is 40 pixels and the largest disparity is 90 pixels and I’m
+
+57
+00:04:49,830 --> 00:04:54,440
+传递匹配窗口的半宽。匹配窗口将是三次
+passing the half width of the matching window. The matching window will be three times two
+
+58
+00:04:54,440 --> 00:04:58,410
+加一。那是一个七乘七的窗口。
+plus one. That’s a seven by seven window.
+
+59
+00:04:58,410 --> 00:05:04,440
+计算需要一两个时间，现在我可以在这里显示视差图像
+Computation takes a moment or two and now I can display the disparity image and here
+
+60
+00:05:04,440 --> 00:05:08,750
+我们看到了。如果我可以点击这里的一些像素，我们在前景中看到这里的岩石有
+we see it. If I can click on some pixels here we see in the foreground this rock here has
+
+61
+00:05:08,750 --> 00:05:15,530
+从世界各地的相应点开始，大约有83个差距开始出现
+got disparities starting off around 83 falling away as the corresponding points in the world
+
+62
+00:05:15,530 --> 00:05:19,639
+离相机越来越远，跌到70多岁。这些岩石在这里晃动
+get further away from the camera, falls off to 70 something. These rocks up the back here
+
+63
+00:05:19,639 --> 00:05:25,120
+有一个小得多的差距，50的顺序。这个摇滚的东西像40和
+have got a much smaller disparity, the order of 50. This rock’s something like 40 and
+
+64
+00:05:25,120 --> 00:05:29,430
+这些真正黑暗的背后有45或46的差距。
+these really dark ones up the back have a disparity of 45 or 46.
+
+65
+00:05:29,430 --> 00:05:34,639
+我们可以看到这张图片远非完美。有些观点看起来不太好看
+We can see that this image is far from perfect. There are some points that just don’t look
+
+66
+00:05:34,639 --> 00:05:39,620
+对。岩石边缘周围有一些非常异常的亮点，那就是
+right. There are some very anomalous bright points around the edges of the rocks and that’s
+
+67
+00:05:39,620 --> 00:05:44,389
+因为从一个摄像机视图可以看到岩石的那些部分，但是从中看不到
+because those parts of the rock are visible from one camera view but not visible from
+
+68
+00:05:44,389 --> 00:05:48,750
+另一个摄像机视图，这意味着无法正确完成立体声匹配。
+the other camera view and that means that the stereo matching can’t be completed properly.
+
+69
+00:05:48,750 --> 00:05:52,479
+您还注意到图像侧面有一个黑色区域，就在那里
+You also note that there’s a black region down the side of the image and that’s where
+
+70
+00:05:52,479 --> 00:05:58,610
+相机的视野不完全重叠。这是一个非常简单的立体视觉
+the fields of view of a camera don’t fully overlap. This is a very simplistic stereovision
+
+71
+00:05:58,610 --> 00:06:04,350
+算法。有更复杂的技术，但它证明了原理。
+algorithm. There are much more sophisticated techniques available but it demonstrates the principle.
+

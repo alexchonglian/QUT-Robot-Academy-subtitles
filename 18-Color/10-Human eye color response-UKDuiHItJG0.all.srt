@@ -1,0 +1,450 @@
+1
+00:00:03,389 --> 00:00:08,469
+当我们提到人们对不同波长的光的敏感性时，我们使用a
+When we refer to the sensitivity of people to different wavelengths of light we use a
+
+2
+00:00:08,469 --> 00:00:11,320
+单位称为流明，并定义了流明。
+unit called lumens, and lumens are defined.
+
+3
+00:00:11,320 --> 00:00:19,250
+因此，在555纳米的波长（绿色）下，一瓦特的光会产生一种感觉
+So at the wavelength 555 nanometers, which is green, one watt of light creates a sensation
+
+4
+00:00:19,250 --> 00:00:23,449
+683流明。
+of 683 lumens.
+
+5
+00:00:23,449 --> 00:00:28,130
+在500纳米的波长-蓝色-只有1瓦的光源
+At a wavelength of 500 nanometers—which is blue—a one watt light source would only
+
+6
+00:00:28,130 --> 00:00:31,249
+获得220流明的感觉。
+get a sensation of 220 lumens.
+
+7
+00:00:31,249 --> 00:00:36,100
+所以它是相同数量的电子能量，但如果它集中在那个波长，
+So it is the same amount of electronic energy, but if it is concentrated at that wavelength,
+
+8
+00:00:36,100 --> 00:00:43,250
+如果我们有一瓦特的电子产品，它会给人类观察者带来较小的感觉
+it produces a smaller sensation to the human observer and if we had one watt of electronic
+
+9
+00:00:43,250 --> 00:00:48,690
+在800纳米的能量，它将产生零流明-我们无法看到它，它的结果
+energy at 800 nanometers it would produce zero lumens—we can’t see it, it results
+
+10
+00:00:48,690 --> 00:00:51,210
+根本没有感觉。
+in no sensation at all.
+
+11
+00:00:51,210 --> 00:00:56,339
+所以我们可以看看人类的光度反应，其中有两个：我们的夜晚
+So we can look at the human luminosity response and there are two of these: there is our night
+
+12
+00:00:56,339 --> 00:01:02,150
+时间响应称为暗视响应，白天时间响应称为明视
+time response which is called the scotopic response and a day time response, the photopic
+
+13
+00:01:02,150 --> 00:01:03,150
+响应。
+response.
+
+14
+00:01:03,150 --> 00:01:07,610
+这是我们对特定波长的光的整体感觉，很明显
+This is our overall sensation to light at a particular wavelength, and it is clear that
+
+15
+00:01:07,610 --> 00:01:13,460
+在晚上，我们比较短的波长，比我们更蓝的颜色更敏感
+at night we are much more sensitive to shorter wavelengths, the bluer colours, than we are
+
+16
+00:01:13,460 --> 00:01:15,200
+在白天的时间。
+during the day time.
+
+17
+00:01:15,200 --> 00:01:21,530
+我们之前谈到人类在我们眼睛后面有三种类型的锥形细胞，
+We talked before that humans have got three types of cone cells in the backs of our eyes,
+
+18
+00:01:21,530 --> 00:01:24,780
+短中长波锥。
+the short medium and long wavelength cones.
+
+19
+00:01:24,780 --> 00:01:30,070
+因为我们有三个我们被称为三色，我们有三个意思
+Because we have three of them we are referred to as being trichromats, tri meaning we have
+
+20
+00:01:30,070 --> 00:01:33,450
+我们眼中有三种颜色传感器。
+three color sensors in our eyes.
+
+21
+00:01:33,450 --> 00:01:38,579
+在拥有三种颜色受体的哺乳动物中，人类有些不寻常;大多数哺乳动物
+Humans are somewhat unusual amongst mammals in having three color receptors; most mammals
+
+22
+00:01:38,579 --> 00:01:40,149
+只有两个。
+only have two.
+
+23
+00:01:40,149 --> 00:01:46,340
+并且该图显示了典型哺乳动物的短波长和长波长锥的响应。
+And this graph shows the response of the short and long wavelength cones for a typical mammal.
+
+24
+00:01:46,340 --> 00:01:51,189
+许多鸟类都是四色的;这意味着他们有四种不同类型的锥体细胞
+Many birds are tetrachromats; that means that they have four different types of cones cells
+
+25
+00:01:51,189 --> 00:01:54,590
+这里显示了鸟的锥细胞的反应。
+and the response of the bird’s cone cells are shown here.
+
+26
+00:01:54,590 --> 00:02:00,659
+现在显然，鸟类必须有一些进化优势才能拥有四个锥形细胞。
+Now clearly there must be some evolutionary advantage for birds to have four cone cells.
+
+27
+00:02:00,659 --> 00:02:04,170
+它使他们有更好的辨别色彩的能力。
+It gives them a better ability to discriminate colors.
+
+28
+00:02:04,170 --> 00:02:09,790
+我们可以争辩说，也许对于其他哺乳动物来说，不需要有三个锥形细胞，
+We can argue that perhaps for the other mammals there is no need to have three cone cells,
+
+29
+00:02:09,790 --> 00:02:11,860
+两个就够了。
+two is enough.
+
+30
+00:02:11,860 --> 00:02:15,120
+并非所有人都有完美的三色视觉。
+Not all humans have perfect trichromatic vision.
+
+31
+00:02:15,120 --> 00:02:18,620
+许多人患有色盲，我就是其中之一。
+Many humans suffer from color blindness and I am one of those people.
+
+32
+00:02:18,620 --> 00:02:25,340
+我患有红色，绿色缺陷，这对我来说意味着灵敏度
+I suffer from a red, green color deficiency and what that means for me is that the sensitivity
+
+33
+00:02:25,340 --> 00:02:32,400
+我的中波长锥向右移了一点，所以我的中波长
+of my medium wavelength cone is shifted a bit to the right, so my medium wavelength
+
+34
+00:02:32,400 --> 00:02:35,970
+锥形响应与我的长波长锥响应重叠。
+cone response overlaps my long wavelength cone response.
+
+35
+00:02:35,970 --> 00:02:41,290
+因此，两个锥形响应几乎相等，这使我很难区分
+So the two cone responses are almost equal and that makes it very hard for me to distinguish
+
+36
+00:02:41,290 --> 00:02:42,360
+绿色的红色。
+reds from greens.
+
+37
+00:02:42,360 --> 00:02:50,680
+现在这是一个遗传缺陷，这个特殊的基因位于X染色体的顶端
+Now this is a hereditary defect, this particular gene is on the tip of the X chromosome and
+
+38
+00:02:50,680 --> 00:02:54,720
+通过女性从男性传给男性。
+is passed from males to males via females.
+
+39
+00:02:54,720 --> 00:02:59,580
+色盲在社区中相当普遍，特别是在男性中，
+Color blindness is reasonably prevalent in the community, particularly amongst males,
+
+40
+00:02:59,580 --> 00:03:05,150
+我所拥有的特殊缺陷是人口中6％的人所共有的。
+and the particular defect that I have is shared by six per cent of men in the population.
+
+41
+00:03:05,150 --> 00:03:10,080
+尝试向人们解释色盲是什么感觉是相当困难的。
+It is quite difficult to try and explain to people what it is like to be color blind.
+
+42
+00:03:10,080 --> 00:03:16,260
+这张幻灯片试图向具有正常色觉的人展示世界的外观
+This slide is trying to illustrate to somebody with normal color vision how the world looks
+
+43
+00:03:16,260 --> 00:03:21,822
+有了这些不同类型的颜色缺陷，是否有人缺少他们的L锥，他们的
+with these different types of color defects, whether someone is missing their L cone, their
+
+44
+00:03:21,822 --> 00:03:24,980
+M锥或他们的S锥。
+M cone or their S cone.
+
+45
+00:03:24,980 --> 00:03:29,430
+所以这里我们有光源的光谱，在这种情况下，这是光谱
+So here we have the spectrum of the illuminant and in this case this is the spectrum of the
+
+46
+00:03:29,430 --> 00:03:34,170
+中午的一天太阳在地球表面测量，所以它不是光滑的黑体
+noon day sun as measured on the surface of the earth, so it is not the smooth black body
+
+47
+00:03:34,170 --> 00:03:39,400
+我们之前看过的曲线，由于吸收而产生了肿块和凹凸
+curve that we looked at earlier, it has got lumps and bumps in it due to absorption of
+
+48
+00:03:39,400 --> 00:03:45,720
+大气中分子的光谱部分，这里是亮度
+parts of the spectrum by molecules in the atmosphere and here is the luminance of the
+
+49
+00:03:45,720 --> 00:03:47,379
+从砖块反射的光线。
+light that is being reflected from the brick.
+
+50
+00:03:47,379 --> 00:03:53,280
+而这是从红砖的反射函数乘以得到的
+And that is obtained from the reflectance function for the red brick multiplied by the
+
+51
+00:03:53,280 --> 00:03:55,000
+照度谱。
+illuminance spectrum.
+
+52
+00:03:55,000 --> 00:04:00,769
+因此，来自砖块反射的太阳光具有这种特殊的亮度光谱。
+So the light from the sun reflected from the brick has got this particular luminance spectrum.
+
+53
+00:04:00,769 --> 00:04:07,620
+最后一步是对输入亮度应用许多滤波器或响应函数
+The final step is to apply a number of filters or response functions to the incoming luminance
+
+54
+00:04:07,620 --> 00:04:11,239
+在我们看来，我们应用了三种不同的响应函数。
+and in our eye we apply three different response functions.
+
+55
+00:04:11,239 --> 00:04:15,610
+所以M有三种不同的版本;响应功能。
+So there are three different versions of M; the response function.
+
+56
+00:04:15,610 --> 00:04:20,360
+所以我们首先考虑蓝色响应函数;所以我们采取传入的亮度
+So let’s consider firstly the blue response function; so we take the incoming luminance
+
+57
+00:04:20,360 --> 00:04:26,160
+我们用蓝色锥体的响应过滤它，我们可以在这里看到。
+and we filter it with the response of the blue cone and we can see that here.
+
+58
+00:04:26,160 --> 00:04:32,130
+现在锥体的总响应是亮度乘以的积分
+Now the total response of the cone is the integral of the luminance multiplied by the
+
+59
+00:04:32,130 --> 00:04:37,700
+响应函数，即曲线下方的区域，即此处显示的区域
+response function, and that is the area underneath the curve, that is what is shown here as the
+
+60
+00:04:37,700 --> 00:04:39,410
+坚实的蓝色。
+solid mass of blue.
+
+61
+00:04:39,410 --> 00:04:44,610
+因此，此曲线下面的区域是总能量，它是总响应
+So the area underneath this curve is the total amount of energy, it is the total response
+
+62
+00:04:44,610 --> 00:04:49,440
+对于这种特定的入射亮度，视网膜中的蓝色锥形。
+of the blue cone in the retina for this particular incoming luminance.
+
+63
+00:04:49,440 --> 00:04:54,950
+类似地，对于绿色锥体，我们应用绿锥体响应函数，它自己的版本
+Similarly for the green cone, we apply the green cones response function, its own version
+
+64
+00:04:54,950 --> 00:04:59,791
+兰姆的M然后我们整合曲线下面的区域，那就是
+of M of lambda and then we integrate the area underneath the curve, and that is what is
+
+65
+00:04:59,791 --> 00:05:05,880
+在这里显示为一个坚实的绿色质量，我们对红色锥体做了完全相同的事情。
+shown here as a solid mass of green and we do exactly the same thing for the red cone.
+
+66
+00:05:05,880 --> 00:05:11,630
+我们采用了传入的亮度光谱，对它应用了三个滤波器，集成了
+We have taken an incoming luminance spectrum, applied three filters to it, integrated the
+
+67
+00:05:11,630 --> 00:05:16,950
+这些过滤器的响应和结果是三个数字，红色，绿色的数量
+response of those filters and the results are three numbers an amount of red, green
+
+68
+00:05:16,950 --> 00:05:19,660
+和蓝色。
+and blue.
+
+69
+00:05:19,660 --> 00:05:24,000
+这个过程听起来很复杂，但它做得非常聪明。
+This process sounds complicated, but it has done a very clever thing.
+
+70
+00:05:24,000 --> 00:05:28,110
+如果我们考虑照度的光谱，即光的光谱
+If we consider that the spectrum of illuminance, that is, the spectrum of the light that is
+
+71
+00:05:28,110 --> 00:05:32,750
+从特定物体进入眼睛，它说明了材料特性
+entering out eyes from a particular object, it says something about the material properties
+
+72
+00:05:32,750 --> 00:05:37,690
+那个对象;例如，一个苹果是红色的;植物的叶子是绿色的。
+of that object; an apple, for instance, is red; a leaf of a plant is green.
+
+73
+00:05:37,690 --> 00:05:41,300
+世界上所有这些不同的物体都有不同的光谱。
+All of these different objects in the world have got a different spectrum.
+
+74
+00:05:41,300 --> 00:05:45,310
+但要描述一个频谱，我们需要无数个数字。
+But to describe a spectrum we need an infinite number of numbers.
+
+75
+00:05:45,310 --> 00:05:47,930
+它是波长的连续函数。
+It is a continuous function of wavelength.
+
+76
+00:05:47,930 --> 00:05:50,820
+它是一个无限维信号。
+It is an infinite dimensional signal.
+
+77
+00:05:50,820 --> 00:05:57,630
+但是通过对这个入射光应用三个光谱滤波器并对输出进行积分
+But by applying three spectral filters to this incoming light and integrating the output
+
+78
+00:05:57,630 --> 00:06:02,070
+它传递给每个滤波器之后的信号，我们只剩下了
+of the signal after it has passed to each of these filters, we are left simply with
+
+79
+00:06:02,070 --> 00:06:03,290
+三个数字。
+three numbers.
+
+80
+00:06:03,290 --> 00:06:08,300
+因此，我们将无限维信号简化为三个数或三个
+So we have reduced an infinite dimensional signal simply to three numbers or to three
+
+81
+00:06:08,300 --> 00:06:12,460
+尺寸......进行了大规模的降维。
+dimensions … performed a massive dimensionality reduction.
+
+82
+00:06:12,460 --> 00:06:18,020
+这种降维的结果是模糊的可能性;那是，
+A consequence of this dimensionality reduction is the possibility of ambiguity; that is,
+
+83
+00:06:18,020 --> 00:06:24,290
+有无数个不同的亮度光谱可以准确给出
+that there are an infinite number of different luminance spectrum that will give exactly
+
+84
+00:06:24,290 --> 00:06:27,610
+R，G和B的值相同。
+the same values of R, G and B.
+
+85
+00:06:27,610 --> 00:06:33,450
+我们称这种光谱为metamers;也就是说，不同的光谱可以准确地给你
+We refer to such spectra as metamers; that is, different spectra that give you exactly
+
+86
+00:06:33,450 --> 00:06:35,960
+相同的R，G和B值。
+the same R, G and B value.
+
+87
+00:06:35,960 --> 00:06:40,360
+但显然这不是日常生活中的重大问题;它不是那样的
+But clearly this is not a significant problem in everyday life; it is not something that
+
+88
+00:06:40,360 --> 00:06:46,950
+我们担心或压力，所以我们已经为这个问题找到了一个足够好的解决方案。
+we worry or stress about, so we have evolved a good enough solution to the problem.
+
+89
+00:06:46,950 --> 00:06:52,220
+我们可以通过减少指示它们是什么的信号的维数来识别对象
+We can recognise objects by reducing the dimensionality of the signals which indicate what they are
+
+90
+00:06:52,220 --> 00:06:55,630
+由三个数量组成，三个数字。
+made of into just three quantities, three numbers.
+

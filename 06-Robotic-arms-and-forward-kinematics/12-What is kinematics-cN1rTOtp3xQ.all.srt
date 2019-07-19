@@ -1,0 +1,85 @@
+1
+00:00:03,669 --> 00:00:07,569
+我在本次讲座中多次使用过运动学这个术语，但事实并非如此
+I've used the term kinematics a number of times in this lecture and I haven't really
+
+2
+00:00:07,569 --> 00:00:13,950
+非常明确这意味着什么。运动学是研究数学的数学分支
+been very clear about what it means. Kinematics is a branch of mathematics that studies the
+
+3
+00:00:13,950 --> 00:00:20,500
+身体或身体系统的运动。运动学关注事物的位置
+motion of a body or a system of bodies. Kinematics is concerned with the positions of things
+
+4
+00:00:20,500 --> 00:00:25,789
+或者事物之间的角度与速度有关。这些可以是转化的
+or the angles between things and is concerned with velocities. These can be translational
+
+5
+00:00:25,789 --> 00:00:29,890
+速度或它们可以是角速度。
+velocities or they could be angular velocities.
+
+6
+00:00:29,890 --> 00:00:34,219
+运动学不关心力和力矩。这是动态的业务。
+Kinematics is not concerned with forces and moments. That's the business of dynamics.
+
+7
+00:00:34,219 --> 00:00:40,550
+因此，在运动学中，人们研究机制，例如此处所示的机制并尝试理解
+So in kinematics people study mechanisms such as the ones shown here and try to understand
+
+8
+00:00:40,550 --> 00:00:45,280
+一个身体的运动如何与另一个身体的运动相关。
+how the motion of one body is related to the motion of another body.
+
+9
+00:00:45,280 --> 00:00:50,219
+我在这里展示了许多相当复杂的机制的例子。在运动学中，是
+I have shown here examples of a number of quite complex mechanisms. In kinematics, is
+
+10
+00:00:50,219 --> 00:00:57,499
+研究这些机制的各个组成部分的运动。在机器人技术中，我们考虑
+the study of the motion of the various components of these mechanisms. In robotics, we consider
+
+11
+00:00:57,499 --> 00:00:59,429
+两个运动学问题。
+two kinematic problems.
+
+12
+00:00:59,429 --> 00:01:04,190
+首先，我们在这个特定的讲座中讨论的是所谓的前向运动学
+First one, in what we discuss in this particular lecture is what's called the forward kinematic
+
+13
+00:01:04,190 --> 00:01:10,690
+问题。这是机器人关节角度，机器人工具尖端的姿势是什么？
+problem. And that is given the robot joint angles, what's the pose of the robot's tool tip?
+
+14
+00:01:11,080 --> 00:01:16,079
+第二个问题称为反向运动学。我们将在下一个讨论这个问题
+The second problem is called the inverse kinematics. And we're going to discuss that in the next
+
+15
+00:01:16,079 --> 00:01:21,640
+演讲。鉴于我知道我想要机器人在叛逃者身上的姿势，问题
+lecture. Given that I know the pose that I want the robot in-defector to have, the problem
+
+16
+00:01:21,640 --> 00:01:27,240
+是为了确定实现这一目标所需的关节角度。让我来
+is to determine what are the joint angles required in order to achieve that. Let me
+
+17
+00:01:27,240 --> 00:01:30,210
+留下你真正喜欢的这句话。这是关于运动学的。
+leave you with this quote I really like. It's about kinematics.
+

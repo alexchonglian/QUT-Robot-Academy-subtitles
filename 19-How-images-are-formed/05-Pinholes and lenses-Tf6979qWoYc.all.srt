@@ -1,0 +1,270 @@
+1
+00:00:03,270 --> 00:00:08,490
+针孔相机的一个问题是它们创建的图像非常非常
+One problem with pinhole cameras, is that the images that they create are very, very
+
+2
+00:00:08,490 --> 00:00:12,990
+昏暗，这是他们如此难以捕捉的原因之一和原因
+dim and that's one of the reasons that they are so hard to capture and the reason that
+
+3
+00:00:12,990 --> 00:00:17,369
+如果我们看到从特定点出现的所有光线，图像是暗淡的，
+the images are dim, is if we look at all the light rays that emerge from a particular point,
+
+4
+00:00:17,369 --> 00:00:21,420
+在这个例子中，只有一条光线通过并形成图像，其余的
+in this example, only one of those light rays goes through and forms the image, the rest
+
+5
+00:00:21,420 --> 00:00:27,050
+光线射到不透明的平面上，被吸收或反射到其他地方。
+of the light rays hit the opaque plane and are absorbed or reflected off to somewhere else.
+
+6
+00:00:27,439 --> 00:00:32,500
+因此，如果我们想让我们的图像更亮，我们需要能够利用更多的光
+So if we want to make our image brighter we need to be able to utilize more of the light
+
+7
+00:00:32,500 --> 00:00:36,989
+离开物体的光线和我们这样做的方式是使用镜头。
+rays that are leaving the object and the way we do that, is to use a lens.
+
+8
+00:00:36,989 --> 00:00:42,239
+镜头是一种非常简单的技术，用于收集更多留下特定光线的光线
+A lens is a very simple technique for gathering more of the light rays that leave a particular
+
+9
+00:00:42,239 --> 00:00:47,840
+指向世界。我们再次使用我们的图形示例，我们可以看到光线离开
+point in the world. Again we have our graphical example and we can see the light rays leaving
+
+10
+00:00:47,840 --> 00:00:52,539
+一个特殊的点，他们都通过镜头并击中图像平面。所以在这里
+one particular point, they've all passed through the lens and strike the image plane. So here
+
+11
+00:00:52,539 --> 00:00:57,870
+我们捕获了许多更多的光线，因此我们形成的图像会更亮。
+we've captured many, many more light rays, so the image that we form will be brighter.
+
+12
+00:00:57,870 --> 00:01:02,920
+我们可以更正式地描述一下。我们考虑远离镜头的距离
+We can describe this a bit more formally. We consider the distance away from the lens
+
+13
+00:01:02,920 --> 00:01:07,510
+我们称之为距离F的平面和距离的镜头直径
+plane which we will call the distance F and the diameter of the lens which is the distance
+
+14
+00:01:07,510 --> 00:01:12,530
+Phi和我们可以创建一个数字，通常被称为镜头的F数，其中
+Phi and we can create a number, which is generally referred to as the F-number of the lens, which
+
+15
+00:01:12,530 --> 00:01:18,409
+是F与Phi的比率。镜片的F值通常刻在正面
+is the ratio of F to Phi. The F-number of the lens is typically inscribed on the front
+
+16
+00:01:18,409 --> 00:01:25,130
+镜头;在这种情况下，它是一个F1.4镜头，这意味着资本F等于1.4。越小
+of the lens; in this case it's a F1.4 lens so that means capital F equals 1.4. The smaller
+
+17
+00:01:25,130 --> 00:01:30,470
+F值越大，镜头的聚光能力越强，图像越亮
+the F-number the greater is the light gathering power of the lens, the brighter image that
+
+18
+00:01:30,470 --> 00:01:35,150
+它会创造。让我们简化一下，看看镜头是如何工作的。
+it will create. Let's simplify things and see how lenses work.
+
+19
+00:01:35,150 --> 00:01:41,369
+我们在世界上有一个简单的物体，我们有一个镜头。并且镜头由a描述
+We have a simple object in the world and we have a lens. And a lens is described by a
+
+20
+00:01:41,369 --> 00:01:46,390
+焦距，在这种情况下，我们有一个我们称之为薄透镜模型。这可能是
+focal length and in this case we have what we call a thin lens model. This is probably
+
+21
+00:01:46,390 --> 00:01:51,009
+你对高中物理学很熟悉。相机中的真实镜头
+familiar to you from high school physics. The real lenses that you have in your camera
+
+22
+00:01:51,009 --> 00:01:56,020
+不像这样的简单镜头，但它们可以用单个镜头近似。
+are not simple lenses like this, but they can be approximated by a single lens.
+
+23
+00:01:56,020 --> 00:02:01,810
+透镜由两个焦点描述，每个焦点距离中心平面的距离为F.
+The lens is described by two focal points, each a distance F away from the centre plane
+
+24
+00:02:01,810 --> 00:02:07,829
+镜头要查看对象图像的位置，我们执行此操作非常简单
+of the lens. To see where the image of the object falls, we perform this very simple
+
+25
+00:02:07,829 --> 00:02:13,480
+几何和小箭头显示图像的形成位置。这是十字路口
+geometry and the small arrow shows where the image will be formed. It's the intersection
+
+26
+00:02:13,480 --> 00:02:19,590
+两条黄线。这个图像形成过程在数学上非常简单地描述，
+of the two yellow lines. This image formation process is described quite simply mathematically,
+
+27
+00:02:19,590 --> 00:02:24,020
+我们称之为“Zo”的物体的距离是形成图像的距离
+the distance of the object which we call "Zo" the distance at which the image is formed
+
+28
+00:02:24,020 --> 00:02:30,340
+“Zi”在这里与此等式相关，所以Zi是距离中心的距离
+"Zi" is related by this equation here, so Zi is the distance away from the centre of
+
+29
+00:02:30,340 --> 00:02:35,599
+镜头，将形成一个清晰的图像，这就是我们所说的“图像平面”。
+the lens, where a sharp image will be formed and that's what we call the "Image Plane."
+
+30
+00:02:35,599 --> 00:02:40,340
+这就是图像形成的地方，也就是放置传感器的地方。现在传感器可能
+That's where the image is formed and that's where we put the sensor. Now the sensor might
+
+31
+00:02:40,340 --> 00:02:45,849
+在过去一直是一部电影，今天我们更有可能放置
+have been a piece of film in the old days, today it's much more likely that we place
+
+32
+00:02:45,849 --> 00:02:51,500
+半导体成像芯片;大量的光敏元件和输出
+a semiconductor imaging chip; a large array of light sensitive elements and the output
+
+33
+00:02:51,500 --> 00:02:57,410
+这个阵列的数字记录，并放入手机或手机的闪存中
+of this array is recorded digitally and placed into the flash memory in the phone or the
+
+34
+00:02:57,410 --> 00:02:59,200
+相机。
+camera.
+
+35
+00:02:59,200 --> 00:03:04,030
+现在让我们来看看如果我将物体移近镜头会发生什么。该
+Now let's look at what happens if I move the object a little bit closer to the lens. The
+
+36
+00:03:04,030 --> 00:03:10,040
+Zo的价值已经降低了，我们做了几何结构，我们现在看到了
+value of Zo has been reduced and we do the geometric construction, we see now that the
+
+37
+00:03:10,040 --> 00:03:16,060
+图像形成于不同的地方;Zi具有不同的值，如等式​​所示
+image is formed in a different place; Zi has got a different value, as given by the equation
+
+38
+00:03:16,060 --> 00:03:21,430
+在底部。这意味着如果我在原始位置有图像平面，
+down the bottom. What this means is that if I had the image plane in the original location,
+
+39
+00:03:21,430 --> 00:03:25,780
+那里我会有一个模糊的图像;那个图像会失焦。
+I would have a fuzzy image there; that image would be out of focus.
+
+40
+00:03:25,780 --> 00:03:31,069
+为了创建聚焦图像，我需要将图像平面移动到此处以及是否
+In order to create a focussed image, I need to move the image plane over to here and if
+
+41
+00:03:31,069 --> 00:03:37,010
+我将图像平面放在那里，然后我会有一个清晰的物体图像。所以这个
+I place the image plane there, then I will have a sharp image of my object. And so this
+
+42
+00:03:37,010 --> 00:03:43,110
+当我调整旧式相机的焦点时会发生什么。当我旋转
+is what happens when I adjust the focus of an old fashioned type camera. As I rotate
+
+43
+00:03:43,110 --> 00:03:47,920
+镜头为了聚焦它，那里有一个螺纹实际上正在移动
+the lens in order to focus it, there's a screw thread there which is actually moving the
+
+44
+00:03:47,920 --> 00:03:54,280
+镜头远离传感器或胶片的平面。所以为了聚焦相机，什么
+lens away from the plane of the sensor or the film. So in order to focus a camera, what
+
+45
+00:03:54,280 --> 00:04:00,299
+我需要做的是改变镜头和图像所在平面之间的距离
+I need to do is to change the distance between the lens and the plane where the image is
+
+46
+00:04:00,299 --> 00:04:02,360
+形成并捕获。
+formed and captured.
+
+47
+00:04:02,360 --> 00:04:07,430
+这是一个动画，显示了这一点。当物体朝向镜头移动时，我们可以看到，
+Here's an animation that shows this. As the object moves towards the lens, we can see,
+
+48
+00:04:07,430 --> 00:04:14,260
+只需使用简单的几何结构，图像的位置就会进一步移动
+just using the simple geometric construction, that the location of the image is moving further
+
+49
+00:04:14,260 --> 00:04:19,799
+并且远离镜头，所以为了使它成为焦点，我需要移动镜头
+and further away from the lens, so in order to bring it into focus, I need to move the
+
+50
+00:04:19,799 --> 00:04:22,830
+图像平面远离镜头。
+image plane away from the lens.
+
+51
+00:04:22,830 --> 00:04:28,280
+有趣的是针孔相机不需要聚焦。无论距离如何
+Interestingly a pinhole camera does not require focussing. Irrespective of the distance of
+
+52
+00:04:28,280 --> 00:04:33,729
+物体，它形成的图像总是很清晰，但针孔的缺点
+the object, the image that it forms is always sharp, but the disadvantage of the pinhole
+
+53
+00:04:33,729 --> 00:04:39,250
+我之前提到过的镜头是，图像非常非常微弱。所以它不需要聚焦
+lens as I mentioned earlier, is that the images are very, very faint. So it doesn't need focussing
+
+54
+00:04:39,250 --> 00:04:41,210
+但它不会产生明亮的图像。
+but it doesn't produce bright images.
+

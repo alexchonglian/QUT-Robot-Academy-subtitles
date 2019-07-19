@@ -1,0 +1,165 @@
+1
+00:00:03,730 --> 00:00:09,540
+我们将快速回顾一下三角函数Tan及其逆。没什么
+We're going to do a quick recap on the trigonometric function Tan and its inverse. Nothing on this
+
+2
+00:00:09,540 --> 00:00:14,799
+到目前为止幻灯片应该让你大吃这是非常标准的高中数学。我们可以
+slide so far should surprise you. This is pretty standard high school maths. We can
+
+3
+00:00:14,799 --> 00:00:20,920
+重新安排它以隔离Tantheta，我们用Y除以X和表示
+re-arrange it to isolate Tan theta and we write that in terms of Y divided by X and
+
+4
+00:00:20,920 --> 00:00:26,279
+那么我们就可以引入逆tan函数，所以我们可以用反函数来写
+then we can introduce the inverse tan function, so we can write theta in terms of the inverse
+
+5
+00:00:26,279 --> 00:00:28,460
+我的X分为Y.
+tan of Y divided my X.
+
+6
+00:00:28,460 --> 00:00:33,050
+反tan函数以许多不同的方式表示，但最常见的是它的写法
+The inverse tan function is denoted in many different ways, but most commonly it's written
+
+7
+00:00:33,050 --> 00:00:37,829
+作为减1的力量的棕褐色，有时它写成棕褐色，有时它是
+as tan to the power of minus one, sometimes it’s written as A tan and sometimes it's
+
+8
+00:00:37,829 --> 00:00:43,160
+写成ArcTan。它们可能是表示反正切的最常用方法
+written as Arc Tan. They're perhaps the most common ways of representing the inverse tangent
+
+9
+00:00:43,160 --> 00:00:48,359
+功能。现在让我们看看一些更复杂的情况，但我们将从最简单的开始
+function. Now let's look at some more complex cases, but we'll start off with the simplest
+
+10
+00:00:48,359 --> 00:00:53,739
+这些案件。我们有一个三角形，它的高度是一个，它的宽度是两个和角度
+of these cases. And we have a triangle, its height is one, its width is two and the angle
+
+11
+00:00:53,739 --> 00:01:00,960
+在三角形中标记的等于0.4636辐亮度。如果我应用逆tan函数
+marked in the triangle is equal to 0.4636 radiance. If I apply the inverse tan function
+
+12
+00:01:00,960 --> 00:01:07,640
+对于两个以上的比例，然后我得到完全相同的值，0.4636。这是正确的
+to the ration one over two, then I get exactly the same value, 0.4636. That's right for the
+
+13
+00:01:07,640 --> 00:01:14,600
+角度为负的情况。在这种情况下，宽度为2，但高度等于-1。
+case where the angle is negative. In this case the width is two but the height is equal to minus one.
+
+14
+00:01:14,820 --> 00:01:19,220
+我可以计算减1除以2的反正切，得到结果
+I can compute the arc tangent of minus one divided by two and I get the result which
+
+15
+00:01:19,230 --> 00:01:25,830
+就像我预期的那样是零下0.4636。现在让我们考虑一个角度的情况
+is minus 0.4636 just as I would expect. Now let's consider the case of an angle that's
+
+16
+00:01:25,830 --> 00:01:31,480
+两个比Pi大。在这种情况下，高度为1，宽度等于-2。
+bigger than Pi on two. In this case the height is one and the width is equal to minus two.
+
+17
+00:01:31,480 --> 00:01:40,300
+在这种情况下，theta等于2.6779辐亮度。如果我计算一个减去的反正切
+In this case theta is equal to 2.6779 radiance. If I compute the arc tangent of one over minus
+
+18
+00:01:40,300 --> 00:01:46,570
+二，然后我得到的结果是负0.4636。我们看到之间存在差异
+two, then I get a result which is minus 0.4636. We see that there is a discrepancy between
+
+19
+00:01:46,570 --> 00:01:53,500
+该直线的实际角度和反正切函数给我们的角度。
+the actual angle of this line and the angle that is given to us by the arc tangent function.
+
+20
+00:01:53,500 --> 00:01:59,000
+同样，对于这种情况，宽度为负2，高度为负1和if
+And similarly for this case, the width is minus two, the height is minus one and if
+
+21
+00:01:59,000 --> 00:02:06,980
+我计算了它的反正切，得到的结果是0.4636。最后的问题
+I compute the arc tangent of that, the result I get is 0.4636. The problem in this last
+
+22
+00:02:06,980 --> 00:02:12,760
+case是负数除以负2，得到的结果与1相同
+case is that negative one divided by negative two, gives a result which is the same as one
+
+23
+00:02:12,760 --> 00:02:17,590
+除以2。这是一个正数，这与我们在该数据中所做的例子相同
+divided by two. It's a positive number and that's the same as the example we did at the
+
+24
+00:02:17,590 --> 00:02:19,670
+从这里开始
+beginning up here.
+
+25
+00:02:19,670 --> 00:02:24,950
+这里的根本问题是反tan函数的范围只有跨越
+The underlying problem here is that inverse tan function has got a range which only spans
+
+26
+00:02:24,950 --> 00:02:30,810
+从减去Pi的两个到加上Pi的两个。为了解决这个问题，我们推出了一个新的
+from minus Pi on two to plus Pi on two. To get around the problem we introduce a new
+
+27
+00:02:30,810 --> 00:02:36,069
+功能，它通常被称为“ATanTwo”，你会在中找到这个名字的功能
+function and it's commonly called "A Tan Two", you’ll find a function of this name in the
+
+28
+00:02:36,069 --> 00:02:41,540
+许多编程语言的数学库，你肯定会在MATLAB中找到它。
+mathematical library of many programming languages and you’ll certainly find it in MATLAB.
+
+29
+00:02:41,540 --> 00:02:46,810
+它考虑了A的符号和B的符号，并且可以从该信息中得到
+It takes into account the sign of A and the sign of B and from that information it can
+
+30
+00:02:46,810 --> 00:02:52,859
+确定角度所在的圆的哪个象限。所以这个功能的范围
+determine which quadrant of the circle the angle lies within. So the range of this function
+
+31
+00:02:52,859 --> 00:02:59,280
+从负Pi到加Pi包括在内。这是一个使用MATLAB计算的简单例子
+is from minus Pi to plus Pi inclusive. And here's a simple example using MATLAB, computing
+
+32
+00:02:59,280 --> 00:03:06,530
+一个除以2的反正切，它给出了2.6779辐射的答案
+the arc tangent of one divided by minus two, it gives us the answer of 2.6779 radiance
+
+33
+00:03:06,530 --> 00:03:09,959
+这是圆圈第二象限的一个角度。
+and that's an angle in the second quadrant of the circle.
+

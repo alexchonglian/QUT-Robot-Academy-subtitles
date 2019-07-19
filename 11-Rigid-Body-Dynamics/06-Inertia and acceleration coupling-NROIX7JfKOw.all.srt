@@ -1,0 +1,255 @@
+1
+00:00:03,970 --> 00:00:07,920
+接下来，我们将看一下惯性项。这是加速所需的扭矩
+Next, we are going to look at the inertia term. That's the torque required to accelerate
+
+2
+00:00:07,920 --> 00:00:12,650
+手臂的关节。这就是这个术语。所以，我们将跨越其他两个。
+the joints of the arm. That's this term here. So, we'll cross the other two out.
+
+3
+00:00:12,650 --> 00:00:17,730
+现在，我将计算机器人的惯性矩阵，这是另一种方法
+Now, I'm going to compute the inertia matrix of our robot, and that's yet another method
+
+4
+00:00:17,730 --> 00:00:24,269
+在双链路机器人对象上，该方法被称为“惯性”和参数
+on the two-link robot object, and the method is called "inertia" and the arguments to that
+
+5
+00:00:24,269 --> 00:00:33,290
+是机器人Q1和Q2的关节角度。而且，这里我们有2x2的惯性矩阵
+are the joint angles of the robot Q1 and Q2. And, here we have the 2x2 inertia matrix of
+
+6
+00:00:33,290 --> 00:00:38,650
+我们的机器人再一次，我们可以看到它是运动学和动力学参数的函数
+our robot. Once again, we can see that it is a function of kinematic and dynamic parameters
+
+7
+00:00:38,650 --> 00:00:44,380
+一个机器人，它也是机器人配置的功能，我们可以看到
+of a robot, and it's also a function of the configuration of the robot, and we can see
+
+8
+00:00:44,380 --> 00:00:51,140
+Q2的正弦和余弦出现在这个表达式中。这是我们两个链接的惯性矩阵
+sine and cosine of Q2 appearing in this expression. Here is the inertia matrix for our two link
+
+9
+00:00:51,140 --> 00:00:55,490
+机器人机械手。它是一个2x2矩阵，它是一个对称矩阵;这意味着这一点
+robot manipulator. It's a 2x2 matrix and it's a symmetric matrix; and that means that this
+
+10
+00:00:55,490 --> 00:01:00,340
+这里的术语与此术语相同。而且，我们可以看到惯性矩阵是完全的
+term here is equal to this term here. And, we can see that the inertia matrix is quite
+
+11
+00:01:00,340 --> 00:01:05,189
+复杂而且不是常数。我们可以看到这个矩阵中的元素
+complex and it is not constant. We can see that the elements in this matrix
+
+12
+00:01:05,189 --> 00:01:10,260
+是关节角度Q2的函数，以及机器人连杆的质量，运动学
+are functions of the joint angles Q2, as well as the masses of the robot link, the kinematic
+
+13
+00:01:10,260 --> 00:01:15,390
+参数A1和A2，以及质心的位置，C2。我们可以把它写进来
+parameters A1 and A2, and the position of the centre of mass, C2. We can write it in
+
+14
+00:01:15,390 --> 00:01:22,130
+简化形式，我们在主对角线上只有三个独特的元素，I11，I22，
+simplified form where we have just three unique elements, I11, I22 on the principal diagonal,
+
+15
+00:01:22,130 --> 00:01:27,260
+和I12和I21在对角线上。而且，正如我刚才提到的，矩阵是对称的
+and I12 and I21 on the opposite diagonal. And, as I just mentioned, the matrix is symmetric
+
+16
+00:01:27,260 --> 00:01:32,280
+所以I12等于I21。扭矩矢量作用于机器人的
+so I12 equals I21. The vector of torques acting on the robot's
+
+17
+00:01:32,280 --> 00:01:39,170
+惯性矩阵乘以关节加速度矢量给出关节。现在，
+joints are given by the inertia matrix multiplied by the vector of joint accelerations. Now,
+
+18
+00:01:39,170 --> 00:01:44,140
+我们可以扩展它，我们现在可以突出显示对角线上的两个术语。
+we can expand that out, and we can highlight now the two terms on the diagonal.
+
+19
+00:01:44,140 --> 00:01:48,620
+在之前的讲座中，当我们考虑机器人关节控制时，生活很简单。我们有
+In the previous lecture when we considered robot joint control, life was simple. We had
+
+20
+00:01:48,620 --> 00:01:52,409
+电动机施加在关节上的扭矩与加速度之间的关系
+a relationship between the torque that the motor applies to a joint, the acceleration
+
+21
+00:01:52,409 --> 00:01:58,320
+一个关节和该关节的惯性。现在，我们可以看到事情并不完全
+of a joint and the inertia of that joint. Now, we can see that things are not quite
+
+22
+00:01:58,320 --> 00:02:03,630
+如此直截了当我们可以看到扭矩1和扭矩之间存在关系
+so straightforward. We can see that there is a relationship between torque 1 and the
+
+23
+00:02:03,630 --> 00:02:09,099
+关节1的加速就像我们在更简单的情况下一样。但我们现在也有这些
+acceleration of joint 1 just like we had in the simpler case. But we now also have these
+
+24
+00:02:09,099 --> 00:02:14,870
+干扰扭矩。这意味着作用在接头1上的扭矩不仅归因于加速度
+disturbance torques. That means that the torque acting on joint 1 is due not just to the acceleration
+
+25
+00:02:14,870 --> 00:02:18,730
+关节1，也是关节2的加速度。
+of joint 1, but also to the acceleration of joint 2.
+
+26
+00:02:18,730 --> 00:02:23,490
+想象一下，关节1是静止的。它没有加速。联合控制是
+Imagine for a moment that joint 1 is stationary. It's non-accelerating. The joint control is
+
+27
+00:02:23,490 --> 00:02:28,170
+试图保持静止。如果第2关节开始加速，它将会发挥作用
+trying to keep it stationary. If joint number 2 starts to accelerate, it's going to exert
+
+28
+00:02:28,170 --> 00:02:33,220
+关节1号上的扭矩，关节1电机控制器必须处理
+a torque on joint number 1, which the joint 1 motor controller is going to have to deal
+
+29
+00:02:33,220 --> 00:02:37,670
+用。它将不得不提出一些额外的扭矩，将其应用于电机停止
+with. It's going to have to come up with some extra torque, apply it to the motor to stop
+
+30
+00:02:37,670 --> 00:02:44,720
+由于关节2的影响，关节1移动。我们将计算它的惯性
+joint 1 moving, due to the influence of joint 2. We're going to compute the inertia of this
+
+31
+00:02:44,720 --> 00:02:50,940
+机器人数字。我们将使用惯性方法并计算它
+robot numerically. We're going to use the inertia method and going to compute it for
+
+32
+00:02:50,940 --> 00:02:56,300
+关节角度零，零，这是惯性矩阵，我们可以看到它是对称的。
+joint angle zero, zero, and this is the inertia matrix and we can see that it is symmetric.
+
+33
+00:02:56,300 --> 00:03:02,290
+这里的元素在这里等于这个元素。而且，只是为了提醒自己的配置
+This element here equals this element here. And, just to remind ourselves of the configuration
+
+34
+00:03:02,290 --> 00:03:07,840
+这个机器人，我们将绘制它。它就是。所以，这是带有手臂的机器人
+of this robot, we are going to plot it. There it is. So, this is the robot with its arm
+
+35
+00:03:07,840 --> 00:03:13,920
+完全伸出来。现在，我们可以做的是更改配置。所以，我要走了
+fully outstretched. Now, what we can do is to change the configuration. So, I'm going
+
+36
+00:03:13,920 --> 00:03:21,520
+将机器人置于第二关节角度为90度的配置中。所以，
+to put the robot in to a configuration where the second joint angle is 90 degrees. So,
+
+37
+00:03:21,520 --> 00:03:27,730
+现在机器人看起来像这样。而且，我可以计算这个新配置的惯性，
+now the robot looks like this. And, I can compute the inertia for this new configuration,
+
+38
+00:03:27,730 --> 00:03:32,650
+0pi/2。并且，我们可以看到惯性矩阵的某些元素已经改变。
+0 pi/2. And, we can see that some elements of the inertia matrix have changed.
+
+39
+00:03:32,650 --> 00:03:36,800
+事实上，他们已经减少了。并且，这里的元素，这是看到的惯性
+In fact, they have been reduced. And, this element here, which is the inertia seen by
+
+40
+00:03:36,800 --> 00:03:42,410
+关节1减少了。那是因为关节2的质心现在更接近了
+joint 1 is reduced. And that is because the centre of mass of joint 2 is now closer to
+
+41
+00:03:42,410 --> 00:03:48,010
+关节的旋转轴1.现在，我可以更进一步。我们来看看是什么
+the rotational axis of joint 1. Now, I can bring that in even further. Let's see what
+
+42
+00:03:48,010 --> 00:03:53,450
+如果我将机器人放入第一个角度为0和第二个角度的配置中，看起来就好像
+it looks like if I put the robot in to a configuration where the first angle is 0, and the second
+
+43
+00:03:53,450 --> 00:03:59,769
+关节角度等于pi或180度，手臂向后折叠，这样
+joint angle is equal to pi or 180 degrees and the arm is folded back on itself, which
+
+44
+00:03:59,769 --> 00:04:03,180
+实际上可能不是物理上可能的，但让我们一起工作。
+may not actually be physically possible, but let's work with that.
+
+45
+00:04:03,180 --> 00:04:12,061
+现在，我可以看一下这种配置中的惯性，看看它进一步减少了。那是
+Now, I can look at the inertia in this configuration and see that it is even further reduced. That's
+
+46
+00:04:12,061 --> 00:04:17,250
+因为机器人的所有质量都尽可能接近旋转轴
+because all the mass of the robot is as close as it possibly can get to the rotational axis
+
+47
+00:04:17,250 --> 00:04:21,989
+因此，如果我崩溃了这个数字，那么我们可以看到的是逐步的
+of joint 1. So, if I collapse that figure, then what we can see is progressively the
+
+48
+00:04:21,989 --> 00:04:27,040
+随着我们增加关节，惯性矩阵中元素的大小变得越来越小
+magnitude of the elements in the inertia matrix become less and less as we increase joint
+
+49
+00:04:27,040 --> 00:04:30,350
+角度2.而且，这是我们将重新审视的主题
+angle 2. And, this is a topic that we will revisit
+
+50
+00:04:30,350 --> 00:04:35,380
+不久。联合控制系统的问题，当它必须处理惯性时
+shortly. The problem for a joint control system, when the inertia that it has to deal with
+
+51
+00:04:35,380 --> 00:04:37,879
+随机器人的配置而变化。
+varies with the configuration of the robot.
+

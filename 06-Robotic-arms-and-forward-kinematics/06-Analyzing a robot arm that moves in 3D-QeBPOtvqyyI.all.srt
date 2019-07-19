@@ -1,0 +1,310 @@
+1
+00:00:03,500 --> 00:00:09,240
+到目前为止我们看过的机器人在2D平面上移动但是大多数有用的机器人都移动了
+The robots that we looked at so far move in the 2D plane but most useful robots move in
+
+2
+00:00:09,240 --> 00:00:15,540
+三个维度。我们现在要做的是确定末端执行器的姿势
+three dimensions. What we want to do now is to determine the pose of the end effector
+
+3
+00:00:15,540 --> 00:00:21,359
+这个机器人在三维空间中移动。我们遵循的过程非常非常
+of this robot which moves in three dimensional space. The process we follow is very, very
+
+4
+00:00:21,359 --> 00:00:26,609
+类似于我们为二维机器人所做的过程。首先我们介绍一下
+similar to the process we did for the two dimensional robots. First of all we introduced
+
+5
+00:00:26,609 --> 00:00:33,100
+参考坐标系然后我们指示机器人的姿势对象的部分
+a reference coordinate frame and then we indicate the part of the robot the object whose pose
+
+6
+00:00:33,100 --> 00:00:38,540
+我们感兴趣的是，这是机器人的末端执行器，用符号ksiE表示。
+we’re interested in, that’s the end effector of the robot indicated here by the symbol ksi E.
+
+7
+00:00:39,180 --> 00:00:46,520
+然后，第一步是围绕z轴旋转坐标系一个量Q1。然后
+The first step then is a rotation of the coordinate frame about the z axis by an amount Q1. Then
+
+8
+00:00:46,520 --> 00:00:51,510
+我们在x方向上将该坐标系转换为A1的长度
+we translate that coordinate frame in the x direction by an amount A1 the length of
+
+9
+00:00:51,510 --> 00:00:58,380
+第一个链接。然后我们再次围绕z轴旋转坐标系Q2。
+the first link. Then we rotate the coordinate frame about the z axis again by an amount Q2.
+
+10
+00:00:58,380 --> 00:01:04,199
+接下来，我们在X方向上转换A2，即第二个的长度
+Next we translate in the X direction by an amount A2 that’s the length of the second
+
+11
+00:01:04,199 --> 00:01:12,250
+链接。然后我们再次围绕Z轴旋转角度Q3，最后我们翻译
+link. Then we rotate around the Z axis again by the angle Q3 and finally we translate in
+
+12
+00:01:12,250 --> 00:01:14,950
+Z方向的量为Q4。
+the Z direction by the amount Q4.
+
+13
+00:01:14,950 --> 00:01:22,909
+我们现在已经将机器人末端执行器的姿势描述为链，一系列基本的
+We now have described the pose of the robot’s end effector as a chain, a sequence of elementary
+
+14
+00:01:22,909 --> 00:01:29,030
+齐次变换矩阵。所有矩阵都属于集合SE3
+homogeneous transformation matrices. All of the matrices belong to the set SE3 that’s
+
+15
+00:01:29,030 --> 00:01:34,729
+三维空间中所有旋转和平移的集合。我们可以扩大
+the set of all rotations and translations in three dimensional space. We could expand
+
+16
+00:01:34,729 --> 00:01:39,310
+将每个基本矩阵中的每个矩阵相乘并将它们相乘以得出
+out each of these elementary matrices and multiply them all together to come up with
+
+17
+00:01:39,310 --> 00:01:44,829
+一个单一的同质转换度量表示姿势的最终效应器
+a single homogeneous transformation metric representation the pose the end effector of
+
+18
+00:01:44,829 --> 00:01:51,610
+这个Scara机器人。这个小机器人已经四个自由度，四个旋转关节。
+this Scara robot. This small robot has gone four degrees of freedom, four rotational joints.
+
+19
+00:01:51,610 --> 00:01:57,790
+所以第一次旋转是围绕这样的轴。你看到整个手臂都在转动
+So the first rotation is around an axis like this. You see that the whole arm rotates around
+
+20
+00:01:57,790 --> 00:02:02,130
+基地。第二个旋转关节有一个像这样的轴，我们可以说是
+the base. The second rotating joint has got an axis like this and we can say that the
+
+21
+00:02:02,130 --> 00:02:08,399
+整个臂可以绕这个轴旋转。第三个关节绕该轴旋转，
+whole arm can rotate around this axis here. The third joint is rotation around this axis,
+
+22
+00:02:08,399 --> 00:02:14,560
+你看到长臂绕着它旋转而第四个关节是一个旋转
+you see that longer arm rotates around that and the fourth joint is a rotation around
+
+23
+00:02:14,560 --> 00:02:20,100
+这里有一个轴。您可以看到整组机构相对于下臂旋转。
+an axis here. You can see that the whole group of mechanism rotates with respect to the lower arm.
+
+24
+00:02:20,980 --> 00:02:25,240
+让我们看看这四个联合教育机器人吧。我们有一个相当的
+Let’s finish off by looking at this four joint educational robot. We've had quite a
+
+25
+00:02:25,250 --> 00:02:30,379
+现在我们应该能够写下机器人的表达式
+bit of practice by now that we should be able to write down the expression for the robot
+
+26
+00:02:30,379 --> 00:02:33,190
+末端效应器几乎通过检查。
+end effector pose almost by inspection.
+
+27
+00:02:33,190 --> 00:02:37,440
+所以这就是我思考这个问题的方式。我想机器人已经拉长了
+So this is the way I think about the problem. I imagine that the robot is stretched down
+
+28
+00:02:37,440 --> 00:02:42,879
+垂直，两根手指指向天空，然后我写下序列
+vertically with its two fingers pointing to the sky and then I just write down the sequence
+
+29
+00:02:42,879 --> 00:02:47,950
+变形首先，机器人绕参考Z轴旋转
+of transformations. First of all the robots rotates around the reference Z axis by the
+
+30
+00:02:47,950 --> 00:02:53,459
+量Q1然后我们向上移动一点，这是在Z方向，然后我们旋转
+amount Q1 and then we move up a little bit which is in the Z direction and then we rotate
+
+31
+00:02:53,459 --> 00:02:57,120
+围绕Y轴的量为Q2。
+around the Y axis by the amount Q2.
+
+32
+00:02:57,120 --> 00:03:01,409
+然后我们向上移动一点，然后遇到下一个关节，我们绕着旋转的关节3
+Then we move up a little bit and encounter the next joint, joint 3 we rotate around the
+
+33
+00:03:01,409 --> 00:03:07,430
+Y轴的量Q3然后我们在Z方向上向上移动了一点点
+Y axis by the amount Q3 then we move up a bit more in the Z direction encounter the
+
+34
+00:03:07,430 --> 00:03:13,739
+最后一个关节，关节4我们围绕Y轴旋转关节角度Q4。然后我们搬家
+last joint, joint 4 we rotate around the Y axis by the joint angle Q4. And then we move
+
+35
+00:03:13,739 --> 00:03:17,890
+在Z方向上向上一点，直到我们到达手指的尖端。
+up a bit more in the Z direction until we reach the tip of the fingers.
+
+36
+00:03:17,890 --> 00:03:25,489
+因此，只需通过联合，精神上通过机器人机制联合，我们链接
+So just by mentally walking through the robot mechanism joint by joint, link by link we
+
+37
+00:03:25,489 --> 00:03:29,810
+可以写下末端效应器姿势的表达式。然后这很简单
+can write down an expression for the pose of the end effector. Then it’s a simple
+
+38
+00:03:29,810 --> 00:03:34,560
+扩展矩阵然后将它们相乘的问题。和我们
+a matter of expanding out the matrices and then multiplying them all together. And we
+
+39
+00:03:34,560 --> 00:03:38,769
+可以使用像MATLAB这样的工具让我们很容易。
+can use a tool like MATLAB to make that very easy for us.
+
+40
+00:03:38,769 --> 00:03:43,110
+现在我们将使用MATLAB来确定该机器人的末端执行器的姿势
+Now we’re going to use MATLAB to determine the pose of the end effector of this robot
+
+41
+00:03:43,110 --> 00:03:47,790
+它以三维方式移动，我们将以象征性的方式进行，但首先是
+which moves in three dimensions and we’re going to do this symbolically but first of
+
+42
+00:03:47,790 --> 00:03:54,049
+我将为各种链接长度A1，A2，A3和定义一些符号变量
+all I’m going to define some symbolic variables for the various link lengths A1, A2, A3, and
+
+43
+00:03:54,049 --> 00:04:04,189
+A4以及四个关节角度Q1，Q2，Q3和Q4。我们将使用trchain
+A4 and also for the four joint angles Q1, Q2, Q3 and Q4. We’re going to use the trchain
+
+44
+00:04:04,189 --> 00:04:08,700
+功能再次。这次我们将使用名为trchain的函数进行操作
+function again. This time we’re going to use the function called trchain which operates
+
+45
+00:04:08,700 --> 00:04:13,689
+在三个维度而不是在二维操作的函数trchain2
+in three dimensions rather than the function trchain2 which operates in two dimensions
+
+46
+00:04:13,689 --> 00:04:15,620
+我们在前面的例子中使用过的。
+that we used in the previous examples.
+
+47
+00:04:15,620 --> 00:04:20,239
+现在我开始编写这个变换字符串，这样我们就可以围绕它进行旋转了
+And now I start to write this transform string so we’re going to do a rotation around the
+
+48
+00:04:20,239 --> 00:04:27,630
+Z轴由Q1然后我们将在A1方向进行Z方向的平移
+Z axis by Q1 and then we’re going to do a translation in the Z direction by A1 then
+
+49
+00:04:27,630 --> 00:04:32,580
+我们将在第二季度围绕Y轴进行旋转，然后我们将会这样做
+we’re going to do a rotation around the Y axis by Q2 and then we’re going to do
+
+50
+00:04:32,580 --> 00:04:40,470
+A2的另一个Z方向平移，然后我们将轮换
+another translation in the Z direction by A2 and then we’re going to do a rotation
+
+51
+00:04:40,470 --> 00:04:46,210
+在Q3附近围绕Y轴然后我们将在Z方向上进行另一次平移
+around the Y axis by Q3 and then we’re going to do another translation in the Z direction
+
+52
+00:04:46,210 --> 00:04:54,340
+通过A3然后我们将在Q4绕Y轴旋转，最后进行平移
+by A3 and then we’re going to do a rotation around the Y axis by Q4 and finally a translation
+
+53
+00:04:54,340 --> 00:04:56,160
+在A4方向的Z方向。
+in the Z direction by A4.
+
+54
+00:04:56,160 --> 00:05:07,800
+我关闭了那根弦，现在我传递了关节角度Q1，Q2，Q3和Q4，在这里我们
+I close that string and now I pass in the joint angles Q1, Q2, Q3 and Q4 and here we
+
+55
+00:05:07,800 --> 00:05:14,320
+具有表示该机器人姿态的均匀变换的表达式
+have the expression for the homogeneous transformation which represents the pose of this robot which
+
+56
+00:05:14,320 --> 00:05:19,720
+三维移动。因为机器人的三维操作是均匀的
+moves in three dimensions. Because the robot’s operating in three dimensions this homogeneous
+
+57
+00:05:19,720 --> 00:05:25,000
+变换是一个四乘四的矩阵。我们可以看到它非常庞大而复杂
+transformation is a four-by-four matrix. And we can see that it’s quite a large and complex
+
+58
+00:05:25,000 --> 00:05:30,729
+表达式，我需要横向滚动很多才能结束它。
+expression and I need to scroll sideways quite a lot to get to end of it.
+
+59
+00:05:30,729 --> 00:05:35,210
+如果我想确定这个机器人的末端执行器的X坐标，我会的
+If I wanted to determine the X coordinate of the end effector of this robot I would
+
+60
+00:05:35,210 --> 00:05:40,780
+通过获取此同类的第一行和第四列中的元素来做到这一点
+do that by taking the element in the first row and the forth column of this homogeneous
+
+61
+00:05:40,780 --> 00:05:45,500
+转换矩阵，这将是该机器人的X坐标的表达式
+transformation matrix and that would be the expression for the X coordinate of this robot
+
+62
+00:05:45,500 --> 00:05:48,750
+而且这本身就是一个非常复杂的表达。
+and again that itself is quite a complex expression.
+

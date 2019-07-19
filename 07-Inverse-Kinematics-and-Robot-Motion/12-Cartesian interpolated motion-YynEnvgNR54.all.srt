@@ -1,0 +1,240 @@
+1
+00:00:03,520 --> 00:00:08,960
+让我们重申一下这个问题。我们想要从姿势A平滑地移动末端效应器姿势
+Let's restate the problem. We want to move the end effector pose smoothly from pose A
+
+2
+00:00:08,960 --> 00:00:14,949
+我们现在要做的是确定末端执行器的姿势
+to pose B. What we're going to do now is to determine the pose of the end effector at
+
+3
+00:00:14,949 --> 00:00:21,110
+每个中间点。我们有一个插值函数，它的参数是最初的姿势，
+each intermediate point. We have an interpolation function, its arguments are the initial pose,
+
+4
+00:00:21,110 --> 00:00:28,280
+最终姿势和标量变量S从0到1平滑变化。结果
+the final pose and a scalar variable S which vary smoothly from 0 to 1. The result of this
+
+5
+00:00:28,280 --> 00:00:35,540
+功能是机器人末端执行器的中间姿势。对于这些中间体中的每一个
+function is the intermediate pose of the robot's end effector. For each of these intermediate
+
+6
+00:00:35,540 --> 00:00:40,079
+姿势我们将应用逆运动学函数来确定关节角度
+poses we're going to apply the inverse kinematic function to determine the joint angles that
+
+7
+00:00:40,079 --> 00:00:44,250
+对应于S的特定值。
+corresponds to that particular value of S.
+
+8
+00:00:44,250 --> 00:00:48,070
+总而言之，我们正在做的是在每个时间步骤中我们将进行插值
+So in summary what we're doing is that in every time step we're going to interpolate
+
+9
+00:00:48,070 --> 00:00:53,760
+使用顶部方程的帖子。然后我们将执行反向运动学。这个
+the post using the top equation. Then we're going to perform inverse kinematics. This
+
+10
+00:00:53,760 --> 00:00:58,910
+是一种与我们在前一种情况下使用的算法不同的算法。以前我们插入
+is a different algorithm than what we used in the previous case. Previously we interpolated
+
+11
+00:00:58,910 --> 00:01:05,100
+关节角度。在这种情况下，我们实际上是插入笛卡尔姿势。本来打算
+the joint angles. In this case we're actually interpolating the Cartesian pose. We're going
+
+12
+00:01:05,100 --> 00:01:09,969
+继续我们从上一个例子中离开的地方继续我们现在要做什么
+to carry on from where we left off from the previous example. What we're going to do now
+
+13
+00:01:09,969 --> 00:01:16,359
+是笛卡尔插值运动。我将创建一个新的工作区变量TS。这个
+is Cartesian interpolated motion. I am going to create a new workspace variable TS. This
+
+14
+00:01:16,359 --> 00:01:22,389
+是插值的笛卡尔姿势。我将使用函数ctraj作为笛卡尔轨迹
+is the interpolated Cartesian pose. I'm going to use the function ctraj for Cartesian trajectory
+
+15
+00:01:22,389 --> 00:01:29,229
+我将分阶段进行初始姿势，最终姿势和时间步数，创建
+I am going to phase in the initial pose, the final pose and the number of time steps, create
+
+16
+00:01:29,229 --> 00:01:34,219
+我们工作区中的一个名为TS的新变量。我们可以看到这是一个三维的
+a new variable in our workspace called TS. We can see that this is a three dimensional
+
+17
+00:01:34,219 --> 00:01:42,889
+矩阵，四行，四列和50个平面。所以我们可以把它想象成一组4x4矩阵
+matrix, four rows, four columns and 50 planes. So we can imagine as a set of 4x4 matrices
+
+18
+00:01:42,889 --> 00:01:50,209
+一个堆叠在另一个之上。最终维度表明我们正在谈论的特定时间步骤。
+stacked one above the other. The final dimension indicates which particular time step we're talking about.
+
+19
+00:01:50,209 --> 00:01:56,829
+让我们看看第一个元素的所有行和所有列。那是
+Let's have a look at the, all the rows and all the columns of the first element. That's
+
+20
+00:01:56,829 --> 00:02:08,369
+最初的姿势。我们可以看第二个姿势和第三个姿势等等。现在我能
+the initial pose. We can look at the second pose and the third pose and so on. Now I can
+
+21
+00:02:08,369 --> 00:02:16,260
+实际上将这个三维矩阵相位成逆运动函数。逆
+actually phase this three dimensional matrix into the inverse kinematic function. Inverse
+
+22
+00:02:16,260 --> 00:02:20,940
+具有6个关节和球形手腕的机器人的运动学。我打算通过TS。
+kinematics for a robot with 6 joints and a spherical wrist. I'm going to pass in TS.
+
+23
+00:02:20,940 --> 00:02:29,010
+它要做的是计算该矩阵中每个姿势的关节角度。所以
+What it's going to do is to compute the joint angles for every pose in this matrix. So the
+
+24
+00:02:29,010 --> 00:02:37,000
+结果现在QS，我们可以看到一个包含50行和6列的矩阵。这是计算的，
+result now QS, we can see is a matrix with 50 rows and 6 columns. It's computed, the
+
+25
+00:02:37,000 --> 00:02:44,670
+逆运动学，对于矩阵TS中的每个单独姿势。我们可以回过头来看看
+inverse kinematics, for every single pose in the matrix TS. And we can go back to figure
+
+26
+00:02:44,670 --> 00:02:54,030
+1，我们可以绘制。看看它的样子。这是笛卡尔插值运动。
+1 and we can plot that. See what it looks like. This is the Cartesian interpolated motion.
+
+27
+00:02:58,180 --> 00:03:05,190
+回到图2，我们可以绘制对应于笛卡尔坐标的关节角度
+And coming back to figure 2 we can plot the joint angles corresponding to that Cartesian
+
+28
+00:03:05,190 --> 00:03:12,550
+运动。我们可以看到它们与我们从关节插值得到的轨迹大致相似
+motion. We can see that they are broadly similar to the trajectory that we got from joint interpolated
+
+29
+00:03:12,550 --> 00:03:17,420
+运动。它们肯定以相同的值开始和结束，但沿着中间的路径
+motion. They certainly start and end at the same values but the path along the middle
+
+30
+00:03:17,420 --> 00:03:22,130
+他们遵循的轨迹略有不同。这种差异足以改变
+of the trajectory, they follow is slightly different. That difference is enough to change
+
+31
+00:03:22,130 --> 00:03:29,450
+从3D空间略微弯曲到3D空间中的直线运动。
+the motion from being slightly curved in 3D space to being a straight line in 3D space.
+
+32
+00:03:29,450 --> 00:03:35,170
+这是笛卡尔插值策略的结果。在这里我们可以看到机器人关节
+This is the result of the Cartesian interpolation strategy. Here we can see the robot joint
+
+33
+00:03:35,170 --> 00:03:42,160
+角度在两秒钟内从初始姿势平滑变化到最终姿势。
+angles varying smoothly from the initial pose to the final pose over a period of two seconds.
+
+34
+00:03:42,160 --> 00:03:47,620
+如果我从每个中间关节角度计算前向运动学和
+If I compute the forward kinematics from each of the intermediate set of joint angles and
+
+35
+00:03:47,620 --> 00:03:52,530
+绘制x坐标与y坐标的关系。我现在可以看到机器人末端效应器
+plot the x coordinate versus the y coordinate. I can see now that the robot end effector
+
+36
+00:03:52,530 --> 00:03:56,880
+是从A到B的完全直线移动
+is moving in a perfectly straight line from A to B.
+
+37
+00:03:56,880 --> 00:04:02,520
+如果我现在将正向运动学函数应用于所有中间关节角度组，
+If I now apply forward kinematic function to all the intermediate sets of joint angles,
+
+38
+00:04:02,520 --> 00:04:08,540
+我可以确定机器人末端执行器的姿势。如果我绘制末端效应器x坐标
+I can determine the pose of the robot end effector. If I plot the end effector x coordinate
+
+39
+00:04:08,540 --> 00:04:13,130
+相对于它的y坐标，我可以看到末端效应器现在已经完美地移动了
+against its y coordinate, I can see that the end effector has now moved in a perfectly
+
+40
+00:04:13,130 --> 00:04:16,819
+从姿势A到姿势B的直线。
+straight line from pose A to pose B.
+
+41
+00:04:16,819 --> 00:04:21,189
+同样地，当我看到末端执行器的方向时，我可以看到音高
+Similarly when I look at the orientation of the end effector I can see that the pitch
+
+42
+00:04:21,189 --> 00:04:27,810
+并且在轨迹的整个持续时间内，红豆杉角度等于0。所以工具方向
+and yew angles are equal to 0 for the entire duration of the trajectory. So the tool orientation
+
+43
+00:04:27,810 --> 00:04:32,120
+保持不变，刀尖已沿直线移动。
+remains constant and the tool tip has moved in a straight line.
+
+44
+00:04:32,120 --> 00:04:37,849
+我们只是通过改变插值或插值笛卡尔的方式来实现这一点
+We achieved this just by changing the way we do the interpolation or interpolating Cartesian
+
+45
+00:04:37,849 --> 00:04:44,520
+姿势而非机器人关节角度。如果我们比较两组关节角度轨迹，
+poses rather than robot joint angles. If we compare the two sets of joint angle trajectories,
+
+46
+00:04:44,520 --> 00:04:49,409
+我们可以看到它们实际上非常相似。实际上没有太大的变化
+we can see that they're actually quite similar. There is actually not very much variation
+
+47
+00:04:49,409 --> 00:04:54,189
+在关节角度作为实现这种直线末端所需的时间的函数
+in the joint angles as a function of time necessary to achieve this straight line end
+
+48
+00:04:54,189 --> 00:04:57,810
+效应器运动与抑制末端执行器运动。
+effector motion versus the curbed end effector motion.
+

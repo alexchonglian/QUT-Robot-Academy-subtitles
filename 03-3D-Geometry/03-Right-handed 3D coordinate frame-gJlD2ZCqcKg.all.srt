@@ -1,0 +1,200 @@
+1
+00:00:03,540 --> 00:00:07,900
+在我们讨论二维世界的前一讲中，我们介绍了这个概念
+In the previous lecture when we were discussing 2-dimensional worlds, we introduced the concept
+
+2
+00:00:07,900 --> 00:00:09,980
+右手坐标系。
+of a right-handed coordinate frame.
+
+3
+00:00:09,980 --> 00:00:14,100
+而且，只是提醒你，右手坐标系就是这样构造的。
+And, just to remind you, the right-handed coordinate frame is constructed like this.
+
+4
+00:00:14,100 --> 00:00:19,200
+我们绘制x轴，然后我们将y轴向上摆动90度。
+We draw the x-axis and then we swing the y-axis up by 90 degrees.
+
+5
+00:00:19,200 --> 00:00:24,050
+三维坐标系实际上非常类似于二维坐标
+A three-dimensional coordinate frame is actually very similar to the two-dimensional coordinate
+
+6
+00:00:24,050 --> 00:00:25,050
+帧。
+frame.
+
+7
+00:00:25,050 --> 00:00:28,370
+所以，这是我们刚才介绍的二维右手坐标系。
+So, here is the two-dimensional right-handed coordinate frame that we just introduced.
+
+8
+00:00:28,370 --> 00:00:32,560
+而且，我现在要做的是在三维空间中旋转它。
+And, what I’m going to do do now is to rotate that in three dimensions.
+
+9
+00:00:32,560 --> 00:00:35,790
+而且，我们看到的是z轴以前是隐藏的。
+And, what we see is that the z-axis was previously hidden.
+
+10
+00:00:35,790 --> 00:00:38,980
+以前，它在屏幕上突然出现在我们面前。
+Previously, it was sticking up at us out of the screen.
+
+11
+00:00:38,980 --> 00:00:42,680
+为了创建一个三维右手坐标系，我们以类似的方式开始。
+To create a 3-dimensional right-handed coordinate frame, we start in a similar way.
+
+12
+00:00:42,680 --> 00:00:44,470
+我们绘制x轴。
+We draw the x-axis.
+
+13
+00:00:44,470 --> 00:00:50,370
+我们摆动y轴，使其与x轴成90度角。
+We swing the y-axis so that it makes an angle of 90 degrees to the x-axis.
+
+14
+00:00:50,370 --> 00:00:56,420
+然后，我们向上摆动z轴，它也与z轴成90度角
+And then, we swing the z-axis upwards and it also makes an angle of 90 degrees to the
+
+15
+00:00:56,420 --> 00:01:00,160
+x轴也与y轴成90度角。
+x-axis and also makes an angle of 90 degrees to the y-axis.
+
+16
+00:01:00,160 --> 00:01:06,250
+二维和三维坐标之间存在非常密切的关系
+There’s a very close relationship between the 2-dimensional and the 3-dimensional coordinate
+
+17
+00:01:06,250 --> 00:01:07,250
+帧。
+frames.
+
+18
+00:01:07,250 --> 00:01:11,680
+让我放下二维坐标系，这里是三维坐标
+Let me put down the two-dimensional coordinate frame and here is three-dimensional coordinate
+
+19
+00:01:11,680 --> 00:01:12,680
+帧。
+frame.
+
+20
+00:01:12,680 --> 00:01:18,560
+并且，我可以覆盖x轴和y轴，我们看到z轴指向上方。
+And, I can overlay the x-axis and the y-axis and we see that the z-axis points upwards.
+
+21
+00:01:18,560 --> 00:01:22,150
+我们将其称为右手坐标系。
+We refer to this as a right-handed coordinate frame.
+
+22
+00:01:22,150 --> 00:01:26,460
+而且，我们称之为右手框架的原因是轴的方向可以是
+And, the reason we call it a right-handed frame is the orientation of the axes can be
+
+23
+00:01:26,460 --> 00:01:29,140
+非常简单地用右手定义。
+defined very simply using my right hand.
+
+24
+00:01:29,140 --> 00:01:31,030
+所以，这是x轴。
+So, this is the x-axis.
+
+25
+00:01:31,030 --> 00:01:32,030
+这是y轴。
+This is the y-axis.
+
+26
+00:01:32,030 --> 00:01:34,710
+而且，这是指向上方的z轴。
+And, this is the z-axis pointing upwards.
+
+27
+00:01:34,710 --> 00:01:40,280
+因此，每当我们使用三维坐标框架时，它们总是右手
+So, whenever we’re doing work with 3-dimensional coordinate frames, they are always right-handed
+
+28
+00:01:40,280 --> 00:01:43,119
+坐标框架。
+coordinate frames.
+
+29
+00:01:43,119 --> 00:01:47,530
+我建立的这个特殊坐标系，我们有一个x轴和一个y轴，这个，
+This particular coordinate frame that I built, we have an x-axis and a y-axis and this one,
+
+30
+00:01:47,530 --> 00:01:49,619
+z轴指向下方。
+the z-axis pointing downwards.
+
+31
+00:01:49,619 --> 00:01:51,520
+这是一个左手坐标系。
+This is a left-handed coordinate frame.
+
+32
+00:01:51,520 --> 00:01:55,650
+所以最好不要使用它们，它们会给你带来各种各样的悲伤。
+So it’s best not to use these, they are going to cause you all sorts of grief.
+
+33
+00:01:55,650 --> 00:01:57,880
+所以，不要使用左手坐标系。
+So, don’t use left-handed coordinate frames.
+
+34
+00:01:57,880 --> 00:02:00,409
+使用右手坐标系。
+Go with the right-handed coordinate frame.
+
+35
+00:02:00,409 --> 00:02:02,550
+所以，回顾一下。
+So, just to recap.
+
+36
+00:02:02,550 --> 00:02:07,280
+当我们创建一个右手坐标系时，我们使用这个称为右手的规则
+When we create a right-handed coordinate frame, we use this rule what’s called the right-handed
+
+37
+00:02:07,280 --> 00:02:09,420
+规则，我拿右手。
+rule, and I take my right hand.
+
+38
+00:02:09,420 --> 00:02:11,810
+x轴与我的拇指平行。
+The x-axis is parallel to my thumb.
+
+39
+00:02:11,810 --> 00:02:14,170
+y轴平行于我的食指。
+The y-axis is parallel to my index finger.
+
+40
+00:02:14,170 --> 00:02:17,739
+并且，z轴平行于我的中指。
+And, the z-axis is parallel to my middle finger.
+

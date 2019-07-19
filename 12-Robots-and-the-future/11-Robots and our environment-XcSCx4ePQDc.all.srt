@@ -1,0 +1,290 @@
+1
+00:00:03,189 --> 00:00:08,259
+我们作为一个物种拥有的最大资产是我们的星球，我们知道它的存在
+The biggest asset that we have as a species is our planet and we know that it’s under
+
+2
+00:00:08,259 --> 00:00:13,490
+一些压力。这个非常着名的图表显示了二氧化碳水平的变化
+some stress. This very famous graph here shows the variation in carbon dioxide levels in
+
+3
+00:00:13,490 --> 00:00:19,010
+大气作为时间的函数。而且我们可以看到有一个不可阻挡的向上
+the atmosphere as a function of time. And we can see that there is an inexorable upward
+
+4
+00:00:19,010 --> 00:00:24,730
+趋势，这将对这个星球上的生活产生各种各样的影响。所以
+trend and that’s going to have all sorts of consequences for life on this planet. So
+
+5
+00:00:24,730 --> 00:00:30,090
+我们需要了解地球如何应对不断增长的所有不同压力
+we need to understand how the planet is responding to all the different stresses that the growing
+
+6
+00:00:30,090 --> 00:00:33,300
+人口正在接受它。
+human population is placing on it.
+
+7
+00:00:33,300 --> 00:00:38,190
+最近，我们非常擅长研究其他星球。这是一幅可爱的照片
+During recent times, we become very good at studying other planets. This is a lovely picture
+
+8
+00:00:38,190 --> 00:00:43,969
+这显示了NASA向火星和这些探测器发送的许多漫游车
+that shows a number of the rover vehicles that NASA has sent to Mars and these rovers
+
+9
+00:00:43,969 --> 00:00:48,929
+关于那个星球上发生的事情已经取得了很好的发现。特别是他们
+have made wonderful discoveries about what's happened on that planet. In particular, they’ve
+
+10
+00:00:48,929 --> 00:00:54,170
+几乎证明了水曾经存在于这个星球上的事实。但是我们呢
+pretty much proven the fact that water once existed on that planet. But what about our
+
+11
+00:00:54,170 --> 00:00:58,690
+自己的星球？嗯，在我们自己的星球上，我们有很多科学家，他们花了很多钱
+own planet? Well, on our own planet we have lots of scientists who spend a lot of their
+
+12
+00:00:58,690 --> 00:01:04,519
+收集数据的时间，试图获得有关地球健康状况的最新信息。但是收集
+time collecting data to try and get an update on the health of the planet. But collecting
+
+13
+00:01:04,519 --> 00:01:10,080
+这种数据非常非常耗费人力。以下是科学家收集的一些图片
+this kind of data is very, very labour intensive. And here are some images of scientists collecting
+
+14
+00:01:10,080 --> 00:01:13,140
+水下标本。
+specimens under water.
+
+15
+00:01:13,140 --> 00:01:18,120
+这种手动数据收集费用的一个问题是我们不能
+One of the problems with the expense of this manual collection of data is that we can't
+
+16
+00:01:18,120 --> 00:01:23,030
+收集很多数据。收集标本或进行测量是不可能的
+collect very much data. It’s not possible to collect specimens or make measurements
+
+17
+00:01:23,030 --> 00:01:28,810
+在这个星球的每个角落，我们也不能经常访问这些点。所以抽样
+at every point on the planet and nor can we visit those points very often. So the sampling
+
+18
+00:01:28,810 --> 00:01:33,480
+我们做的，我们做的测量非常稀少。我们不会访问很多
+that we do, the measurements that we make are very sparse. We do not visit very many
+
+19
+00:01:33,480 --> 00:01:38,770
+地方，我们不经常访问它们。底线是我们正在抽样
+places and we do not visit them very often. The bottom line is that we are under sampling
+
+20
+00:01:38,770 --> 00:01:44,070
+这个星球让人很难理解一些潜在的生物
+the planet and that makes it difficult to understand some of the underlying biological
+
+21
+00:01:44,070 --> 00:01:47,500
+和正在发生的生态过程。
+and ecological processes that are occurring.
+
+22
+00:01:47,500 --> 00:01:52,660
+但如果不是人们收集数据呢？如果我们派出机器人来做那件事怎么办？
+But what if it wasn't people collecting the data? What if we sent robots out to do that
+
+23
+00:01:52,660 --> 00:01:59,280
+代替？多年来，许多机器人专家为此目的建造了机器人，
+instead? And over the years many roboticists have built robots for exactly this purpose,
+
+24
+00:01:59,280 --> 00:02:04,340
+用于环境数据收集。在这里，我们有一个可以制造的机器人飞行器
+for environmental data collection. Here we have a robotic flying vehicle which can make
+
+25
+00:02:04,340 --> 00:02:10,269
+极端天气系统（如旋风或飓风）内的气象观测。
+meteorological observations inside extreme weather systems like cyclones or hurricanes.
+
+26
+00:02:10,269 --> 00:02:14,870
+这个机器人是由卡内基梅隆大学开发的，有腿和强奸
+This robot here was develop by Carnegie Mellon University and has legs and the rapelling
+
+27
+00:02:14,870 --> 00:02:20,330
+电缆允许它下降到火山的火山口进行测量
+cable which allows it to descend into the crater of a volcano to make measurements of
+
+28
+00:02:20,330 --> 00:02:25,710
+那里有液体和气体。已经开发出Blimps以实现自主环境
+liquids and gases there. Blimps have been developed to make autonomous environmental
+
+29
+00:02:25,710 --> 00:02:30,680
+调查亚马逊流域的大面积雨林。
+surveys of large areas of rainforest such as in the Amazon basin.
+
+30
+00:02:30,680 --> 00:02:36,090
+这个漂亮的太空外观水下车辆用于探索墨西哥的落水洞。该
+This pretty spacey looking underwater vehicle is use to explore sinkholes in Mexico. The
+
+31
+00:02:36,090 --> 00:02:41,660
+Nomad流浪者也是由卡内基梅隆大学开发的，曾被用来表演南极洲
+Nomad rover was also develop by Carnegie Mellon University and was used to perform Antarctic
+
+32
+00:02:41,660 --> 00:02:46,900
+调查，特别是寻找倒下的陨石。这里的机器人船是
+survey, in particular searching for fallen meteorites. And the robotic boat here was
+
+33
+00:02:46,900 --> 00:02:52,810
+我的同事在CSIRO开发并进行了水质测量
+develop by colleagues of mine at CSIRO and performed measurements of water quality over
+
+34
+00:02:52,810 --> 00:02:55,290
+一个非常大的蓄水池的表面。
+the surface of a very large water storage.
+
+35
+00:02:55,290 --> 00:03:01,360
+一个非常有趣的发展是Argo浮动。这张地图显示了一张快照
+A really interesting development is the Argo float. And this map shows a snapshot of the
+
+36
+00:03:01,360 --> 00:03:07,050
+Argo漂浮在世界各地。这些花车真的是非常简单的机器人。他们向上移动
+Argo floats around the world. These floats are really very simple robots. They move up
+
+37
+00:03:07,050 --> 00:03:11,330
+通过控制它们的浮力来降下水柱。随着他们上下移动
+and down the water column by controlling their buoyancy. And as they move up and down in
+
+38
+00:03:11,330 --> 00:03:17,040
+水柱他们测量温度和盐度和其他物理参数。
+the water column they measure temperature and salinity and other physical parameters.
+
+39
+00:03:17,040 --> 00:03:21,830
+它们漂浮在海洋的洋流中。所以他们允许我们从三个方面进行探索
+They drift in the currents of the ocean. So they allow us to explore in three dimensions
+
+40
+00:03:21,830 --> 00:03:27,190
+在我们的海洋中发生了什么。如果您对有关浮子的更多信息感兴趣
+what's going on in our oceans. If you're interested in more information about the floats have
+
+41
+00:03:27,190 --> 00:03:29,020
+看看这个URL在这里。[注意：替换视频中的URL]
+a look at this URL here. [Note:Replace URL in Video]
+
+42
+00:03:29,020 --> 00:03:34,610
+以下是我大学同事对这些人群感兴趣的一个例子
+Here is an example from colleagues at my University who interested in the population of these
+
+43
+00:03:34,610 --> 00:03:38,950
+温柔的生物叫儒艮。儒艮可以在世界各地找到，但有
+gentle creatures called dugongs. Dugongs can be found all around the world but there's
+
+44
+00:03:38,950 --> 00:03:45,099
+他们在布里斯班市外的莫顿湾有大量人口。
+a large population of them in Moreton Bay which is the port just outside my city of Brisbane.
+
+45
+00:03:45,099 --> 00:03:49,190
+他们使用带有向下看的摄像头的无人驾驶飞行器拍照
+They used an unmanned aerial vehicle with downward looking cameras to take pictures
+
+46
+00:03:49,190 --> 00:03:54,569
+从空中。然后是一些图像处理技术来检测和计算儒艮内的儒艮
+from the air. And then some image processing techniques to detect and count dugongs within
+
+47
+00:03:54,569 --> 00:03:59,420
+海湾。我们没有派潜水员去寻找和统计儒艮。我们可以飞
+the bay. We don't have to send divers down to find and count the dugongs. We can fly
+
+48
+00:03:59,420 --> 00:04:04,129
+在海湾上方，可以自动测量有多少儒艮和下落
+over the bay to get automatic measurements of how many dugongs there are and whereabouts
+
+49
+00:04:04,129 --> 00:04:05,700
+他们在海湾。
+in the bay they are.
+
+50
+00:04:05,700 --> 00:04:10,410
+现在，进行这种调查的无人驾驶飞行器或飞行机器人已经得到了
+Now, an unmanned aerial vehicle or flying robot that does this kind of survey has got
+
+51
+00:04:10,410 --> 00:04:14,879
+有限的耐力。它只能在空气中播放一段时间才能播出
+a limited endurance. It can only be in the air for a certain amount of time before it
+
+52
+00:04:14,879 --> 00:04:19,129
+耗尽燃料。但是很多研究人员现在开始关注太阳能供电
+runs out of fuel. But a lot of researchers are now starting to look at solar powered
+
+53
+00:04:19,129 --> 00:04:24,560
+机器人。这是太阳能机器人的照片，在我的大学再次开发
+robots. This is a picture of a solar powered robot, again developed at my University, which
+
+54
+00:04:24,560 --> 00:04:29,600
+可以永远留在空中。人们正在研究太阳能船和太阳能供电
+can stay in the air forever. And people are looking at solar powered boats and solar powered
+
+55
+00:04:29,600 --> 00:04:34,750
+水下航行器和太阳能陆地机器人。所以这是一项技术
+underwater vehicles and solar powered land robots as well. So this is a technology which
+
+56
+00:04:34,750 --> 00:04:40,370
+允许我们将智能机器放入可持久的环境中
+allows us to put intelligent machines into the environment where they can persistently
+
+57
+00:04:40,370 --> 00:04:46,130
+监测行星状态并发回大量频繁测量的测量值
+monitor the state of the planet and send back lots of measurements taken at frequent intervals
+
+58
+00:04:46,130 --> 00:04:49,379
+并覆盖了我们星球表面的大片区域。
+and covering a large expanse of our planet's surface.
+

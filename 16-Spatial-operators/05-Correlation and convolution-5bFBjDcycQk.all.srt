@@ -1,0 +1,185 @@
+1
+00:00:03,570 --> 00:00:07,950
+现在让我们谈谈我们如何将内核实际应用于图像。
+Let’s talk now about how we would actually apply the kernel to an image.
+
+2
+00:00:07,950 --> 00:00:10,260
+我们需要应用的算法是什么？
+What is the algorithm that we would need to apply?
+
+3
+00:00:10,260 --> 00:00:15,349
+这就是它的样子;它是指定的输入窗口的总和
+And this is what it looks like; it is a summation over the input window which is designated
+
+4
+00:00:15,349 --> 00:00:22,560
+通过符号W.在求和中，我们有输入图像I和内核K.
+by the symbol W. And inside the summation we have the input image I and the kernel K.
+
+5
+00:00:22,560 --> 00:00:30,419
+指数I和J都在-H到+H的值范围内。我们在这里以数学方式写了什么
+The indices I and J both range over values from -H to +H. What we have written here mathematically
+
+6
+00:00:30,419 --> 00:00:35,360
+是二维相关的定义。
+is the definition of a two dimensional correlation.
+
+7
+00:00:35,360 --> 00:00:41,149
+存在称为卷积的相关操作，并且数学地表示2D卷积
+There is a related operation called convolution, and 2D convolution is represented mathematically
+
+8
+00:00:41,149 --> 00:00:42,149
+这条路。
+this way.
+
+9
+00:00:42,149 --> 00:00:46,730
+它与我们刚才看到的相关性非常相似;事实上，唯一的区别是
+It is very similar to the correlation we just looked at; in fact, the only differences are
+
+10
+00:00:46,730 --> 00:00:48,559
+这些负面迹象在这里。
+these negative signs here.
+
+11
+00:00:48,559 --> 00:00:51,579
+为了相关，他们是积极的迹象。
+For correlation they were positive signs.
+
+12
+00:00:51,579 --> 00:00:56,100
+现在，如果内核是对称的，卷积与相关性相同。
+Now convolution is the same as correlation if the kernel is symmetric.
+
+13
+00:00:56,100 --> 00:01:00,309
+例如，我们刚才看到的高斯核确实是对称的。
+The Gaussian kernel we just looked at, for example, is indeed symmetric.
+
+14
+00:01:00,309 --> 00:01:05,990
+卷积的一个优点是它可以以运算符的形式编写。
+An advantage of convolution is that it can be written in operator form.
+
+15
+00:01:05,990 --> 00:01:11,720
+所以这就是输出图像等于与输入图像卷积的内核
+So what this says is the output image is equal to the kernel convolved with the input image
+
+16
+00:01:11,720 --> 00:01:12,720
+一世。
+I.
+
+17
+00:01:12,720 --> 00:01:19,229
+因此，圆圈内的十字符号表示卷积的运算。
+So the symbol of a cross inside a circle represents the operation of convolution.
+
+18
+00:01:19,229 --> 00:01:22,540
+卷积的一些属性是什么？
+What are some of the properties of convolution?
+
+19
+00:01:22,540 --> 00:01:28,030
+好一开始它是可交换的，所以与B卷积的A与用A卷积的B相同。
+Well for a start it is commutative, so A convolved with B is the same as B convolved with A.
+
+20
+00:01:28,030 --> 00:01:33,549
+它也是关联的，这是我们将在一些即将发布的幻灯片中使用的属性。
+It is also associative and this is a property that we will use in some upcoming slides.
+
+21
+00:01:33,549 --> 00:01:35,660
+我们说它是分配的。
+We say it is distributive.
+
+22
+00:01:35,660 --> 00:01:37,390
+它也是线性的。
+And it is also linear.
+
+23
+00:01:37,390 --> 00:01:41,490
+所以这些是卷积的重要数学属性。
+So these are important mathematical properties of convolution.
+
+24
+00:01:41,490 --> 00:01:45,020
+现在，关联性的优势是什么？
+Now, what are the advantages of associativity?
+
+25
+00:01:45,020 --> 00:01:50,549
+好吧，考虑我用高斯卷积图像然后进行卷积的情况
+Well consider the case where I convolve an image with a Gaussian and then I convolve
+
+26
+00:01:50,549 --> 00:01:51,730
+再次使用高斯。
+with a Gaussian again.
+
+27
+00:01:51,730 --> 00:01:56,190
+所以，如果你愿意，我可以把它想象成添加一个图像，我通过应用高斯来平滑它
+So if you like, I can think of this as adding an image, I smooth it by applying a Gaussian
+
+28
+00:01:56,190 --> 00:02:00,259
+它然后我再次平滑它。
+to it and then I smooth it again.
+
+29
+00:02:00,259 --> 00:02:06,220
+这与使用高斯卷积的内核卷积图像相同
+This is the same as convolving the image with a kernel which is the Gaussian convolved with
+
+30
+00:02:06,220 --> 00:02:07,520
+本身。
+itself.
+
+31
+00:02:07,520 --> 00:02:12,610
+并且将高斯与另一高斯卷积在高斯中。
+And convolving a Gaussian with another Gaussian results in a Gaussian.
+
+32
+00:02:12,610 --> 00:02:18,230
+并且结果高斯的标准偏差是标准偏差的函数
+And the standard deviation of the result Gaussian is a function of a standard deviation of the
+
+33
+00:02:18,230 --> 00:02:22,850
+两个正在成倍增加的高斯，如左边所示。
+two Gaussians that are multiplying, as shown over here on the left.
+
+34
+00:02:22,850 --> 00:02:27,800
+因此，为了用非常大的高斯卷积图像，这需要非常高
+So in order to convolve an image with a very large Gaussian which would require a very
+
+35
+00:02:27,800 --> 00:02:34,270
+大内核，它实际上相当于用小高斯多次卷积图像
+big kernel, it is actually equivalent to convolving the image with a small Gaussian multiple times
+
+36
+00:02:34,270 --> 00:02:35,570
+连续。
+consecutively.
+
+37
+00:02:35,570 --> 00:02:38,500
+这样做可能有一些计算优势。
+And there may be some computational advantages of doing that.
+

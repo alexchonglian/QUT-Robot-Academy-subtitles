@@ -1,0 +1,410 @@
+1
+00:00:03,220 --> 00:00:08,760
+现在，我们将看一个更加数学化的方式来描述投影过程，投影
+Now, we're going to look at a more mathematical way to describe the projection process, projection
+
+2
+00:00:08,769 --> 00:00:13,420
+从现实世界到图像平面的一点。在上一讲中，我们研究了它
+of a point from the real world into the image plane. In the last lecture, we looked at it
+
+3
+00:00:13,420 --> 00:00:18,460
+从非常直观和几何的角度来看。这一次，我们将更多地关注它
+from a very intuitive and geometric perspective. This time, we're going to look at it more
+
+4
+00:00:18,460 --> 00:00:21,990
+数学。我们将使用不同的投影
+mathematically. We're going to use a different projection
+
+5
+00:00:21,990 --> 00:00:26,430
+我们上次使用的模型。我们将使用一种被称为“中心”的模型
+model to what we used last time. We're going to use a model that's referred to as the "central
+
+6
+00:00:26,430 --> 00:00:31,970
+投影“模型。这个模型的关键元素是我们的相机坐标框架
+projection" model. The key elements of this model are the cameras coordinate frame we
+
+7
+00:00:31,970 --> 00:00:39,149
+由C表示。图像平面与摄像机的x和y轴平行并位于
+denote by C. The image plane is parallel to the camera's x and y axis and positioned at
+
+8
+00:00:39,149 --> 00:00:44,800
+正z方向上的距离F.F相当于焦距
+a distance F in the positive z direction. F is equivalent to the focal length of the
+
+9
+00:00:44,800 --> 00:00:49,510
+我们在上一次讲座中谈过的镜头。现在为了突出重点，我们是什么
+lens that we talked about in the last lecture. Now in order to project the point, what we
+
+10
+00:00:49,510 --> 00:00:55,930
+我们是通过图像平面从原点投射光线到原点
+do is we cast a ray from the point in the world through the image plane to the origin
+
+11
+00:00:55,930 --> 00:01:01,100
+相机使用中央投影模型，您会注意到图像是非反转的
+of the camera. With the central projection model, you'll note that the image is non-inverted
+
+12
+00:01:01,100 --> 00:01:06,020
+正如我们在上一次讲座中谈到的那样。我们可以写一个等式
+as it was in the case that we talked about in the last lecture. We can write an equation
+
+13
+00:01:06,020 --> 00:01:12,869
+对于齐次坐标中的点P，我们乘以世界坐标X，Y，Z
+for the point P in homogeneous coordinates, we multiply the world coordinates, X, Y, Z
+
+14
+00:01:12,869 --> 00:01:19,360
+通过3×4矩阵，以获得投影点的齐次坐标
+by a 3 x 4 matrix in order to get the homogeneous coordinates of the projected point on the
+
+15
+00:01:19,360 --> 00:01:22,439
+图像平面。让我们稍微看一下这个等式
+image plane. Let's look at this equation in a little bit
+
+16
+00:01:22,439 --> 00:01:28,729
+更多详情。用x，ỹ，z语言编写表达式非常简单
+more detail. It's quite straightforward to write an expression for x̃, ỹ, z̃ in terms
+
+17
+00:01:28,729 --> 00:01:34,670
+焦距和世界坐标，X，Y，Z。我们可以改变同质
+of the focal length and the world coordinate, X, Y, Z. We can transform the homogeneous
+
+18
+00:01:34,670 --> 00:01:38,650
+使用我们在最后讨论的规则坐标到笛卡尔坐标
+coordinates to Cartesian coordinates using the rule that we talked about in the last
+
+19
+00:01:38,650 --> 00:01:44,079
+部分和一点点的重新排列，我们可以将方程带入这种形式和
+section and with a little bit of rearrangement, we can bring the equation into this form and
+
+20
+00:01:44,079 --> 00:01:48,890
+这与我们在上一次演讲中通过观察相似的内容完全相同
+this is exactly the same form as we derived in the last lecture by looking at similar
+
+21
+00:01:48,890 --> 00:01:52,200
+三角形。什么是非常方便和有用的
+triangles. What's really convenient and useful about
+
+22
+00:01:52,200 --> 00:01:57,570
+图像形成过程的这种均匀表示是完全的
+this homogeneous representation of the image formation process is that it is completely
+
+23
+00:01:57,570 --> 00:02:04,119
+线性的。我们没有这个明确的划分Z，相机和相机之间的距离
+linear. We don't have this explicit division by Z, the distance between the camera and
+
+24
+00:02:04,119 --> 00:02:09,129
+物体。它隐含在我们以均匀形式编写方程的方式中。
+the object. It's implicit in the way we write the equations in homogeneous form.
+
+25
+00:02:09,129 --> 00:02:13,860
+让我们再看一下这个等式，我们可以将这个矩阵分解为两个。矩阵上
+Let's look at this equation again and we can factor this matrix into two. The matrix on
+
+26
+00:02:13,860 --> 00:02:19,180
+右边的元素是0或1或f，即镜头的焦距。所以这
+the right has elements that are either 0 or 1 or f, the focal length of the lens. So this
+
+27
+00:02:19,180 --> 00:02:24,340
+矩阵执行缩放和缩放。这是我们镜头焦距的函数。
+matrix performs the scaling and zooming. It’s a function of the focal length of our lens.
+
+28
+00:02:24,340 --> 00:02:29,560
+左边的矩阵有一个有趣的形状，它只有3x4和这个矩阵
+The matrix on the left has got an interesting shape, it’s only a 3 x 4 and this matrix
+
+29
+00:02:29,560 --> 00:02:35,090
+执行维数减少，将点从三个维度缩减为两个。
+performs the dimensionality reduction, crunches points from three dimensions down into two.
+
+30
+00:02:35,090 --> 00:02:39,989
+到目前为止，我们认为图像平面是连续的。实际上，图像平面
+And so far, we consider the image plane to be continuous. In reality, the image plane
+
+31
+00:02:39,989 --> 00:02:45,360
+被量化。它由大量的光感应元件组成
+is quantized. It consists of a massive array of light sensing elements which corresponds
+
+32
+00:02:45,360 --> 00:02:51,569
+到输出图像中的像素。这个网格中每个像素的尺寸，我要去
+to the pixels in the output image. The dimension of each pixel in this grid, I’m going to
+
+33
+00:02:51,569 --> 00:02:58,940
+用希腊字母rho表示。所以像素很宽，而且它们很高。像素
+denote by the Greek letter rho. So the pixels are rho u wide and they’re rho v high. Pixels
+
+34
+00:02:58,940 --> 00:03:04,060
+真的很小，所以像素的宽度和高度通常在大约的数量级
+are really really small so the width and height of a pixel is often at the order of around
+
+35
+00:03:04,060 --> 00:03:07,200
+10微米，可能更大，可能更小一点。
+10 microns, maybe a bit bigger, maybe a bit smaller.
+
+36
+00:03:07,200 --> 00:03:13,080
+我们现在需要做的是转换我们先前计算过的坐标P
+What we need to do now is to convert the coordinate P which we computed previously and that was
+
+37
+00:03:13,080 --> 00:03:17,409
+以米为单位，相对于图像平面的原点。
+in units of meters with respect to the origin of the image plane.
+
+38
+00:03:17,409 --> 00:03:22,769
+我们需要将它转换为像素单位，我们的像素坐标系有所不同
+We need to convert it to units of pixels and our pixel coordinate system has got a different
+
+39
+00:03:22,769 --> 00:03:27,840
+我们在早期讲座中谈到的起源。像素坐标是从左上角开始测量的
+origin as we talked about in earlier lectures. Pixel coordinates are measured from the top-left
+
+40
+00:03:27,840 --> 00:03:32,580
+图像的一角，所以我们需要做一个缩放，我们需要做一个移动，那就是
+corner of the image so we need to do a scaling and we need to do a shifting and that’s
+
+41
+00:03:32,580 --> 00:03:38,190
+一个简单的线性操作。因此，如果我们有点的笛卡尔x和y坐标
+a simple linear operation. So if we have the Cartesian x and y coordinates of the point
+
+42
+00:03:38,190 --> 00:03:43,510
+在图像平面上的P，我们可以将其转换为我们的等效像素坐标
+P on the image plane, we can convert that to the equivalent pixel coordinate which we
+
+43
+00:03:43,510 --> 00:03:49,370
+用坐标u和v表示，我们可以再次以同质的形式表示。
+denote by the coordinates u and v and we can represent that again in homogeneous form.
+
+44
+00:03:49,370 --> 00:03:54,340
+这里我们乘以矩阵，矩阵的元素是像素的维度
+Here we multiplied by a matrix, the elements of the matrix are the dimensions of the pixel
+
+45
+00:03:54,340 --> 00:03:59,769
+Pu和Pv以及所谓的主要点的坐标。主要观点是
+Pu and Pv and the coordinates of what’s called the principal point. The principal point is
+
+46
+00:03:59,769 --> 00:04:06,620
+相机原点z轴的像素坐标
+the pixel coordinate where the z axis of the camera origin frame
+
+47
+00:04:06,620 --> 00:04:09,920
+刺穿图像平面。可以转换均匀像素坐标
+pierces the image plane. The homogeneous pixel coordinates can be converted
+
+48
+00:04:09,920 --> 00:04:15,040
+通过我们的转换规则得到更熟悉的笛卡尔像素坐标u和v
+to the more familiar Cartesian pixel coordinates u and v by the transformation rule that we
+
+49
+00:04:15,040 --> 00:04:17,799
+早先报道过。基本上，我们采取第一和第二
+covered earlier. Essentially, we take the first and second
+
+50
+00:04:17,799 --> 00:04:22,520
+均匀向量的元素并将其除以齐次的第三个元素
+element of the homogeneous vector and divide it by the third element of the homogeneous
+
+51
+00:04:22,520 --> 00:04:25,610
+向量。现在，我们可以将所有这些部分组合在一起
+vector. Now, we can put all these pieces together
+
+52
+00:04:25,610 --> 00:04:31,639
+我们可以用三个矩阵来编写完整的相机模型。的产物
+and we can write the complete camera model in terms of three matrices. The product of
+
+53
+00:04:31,639 --> 00:04:37,030
+前两个矩阵通常用符号K表示，我们将它们称为
+the first two matrices is typically denoted by the symbol K and we refer to these as the
+
+54
+00:04:37,030 --> 00:04:42,270
+内在参数。这两个矩阵中的所有数字都是摄像机本身的功能。
+intrinsic parameters. All the numbers in these two matrices are functions of the camera itself.
+
+55
+00:04:42,270 --> 00:04:45,449
+相机在哪里指向并不重要，它们只是一个功能
+It doesn't matter where the camera is where it’s pointing, they’re only a function
+
+56
+00:04:45,449 --> 00:04:51,070
+相机这些数字包括图像平面上像素的高度和宽度，
+of the camera. These numbers include the height and width of the pixels on the image plane,
+
+57
+00:04:51,070 --> 00:04:55,009
+主点的坐标和镜头的焦距。
+the coordinates of the principal point and the focal length of the lens.
+
+58
+00:04:55,009 --> 00:05:00,410
+第三个矩阵描述了外部参数，这些参数描述了相机的位置
+The third matrix describes the extrinsic parameters and these describe where the camera is but
+
+59
+00:05:00,410 --> 00:05:03,039
+他们没有说相机的类型。
+they don’t say anything about the type of camera.
+
+60
+00:05:03,039 --> 00:05:09,110
+该矩阵中的元素是相机相对姿态的函数
+The elements in this matrix are a function of the relative pose of the camera with respect
+
+61
+00:05:09,110 --> 00:05:14,680
+到世界起源框架。实际上，它与xiC相反。
+to the world origin frame. In fact, it is the inverse of xi C.
+
+62
+00:05:14,680 --> 00:05:20,169
+所有这些矩阵的乘积一起被称为相机矩阵
+The product of all of these matrices together is referred to as the camera matrix and it’s
+
+63
+00:05:20,169 --> 00:05:27,270
+经常给出符号C.所以这个单个矩阵，这个单个3x4矩阵
+often given the symbol C. So this single matrix, this single 3 x 4 matrix
+
+64
+00:05:27,270 --> 00:05:33,539
+我们需要描述从世界坐标X，Y和Z到的映射
+is all we need to describe the mapping from a world coordinate, X, Y and Z through to
+
+65
+00:05:33,539 --> 00:05:39,660
+图像平面上像素坐标的均匀表示。那是同质的
+a homogeneous representation of the pixel coordinate on the image plane. That homogeneous
+
+66
+00:05:39,660 --> 00:05:44,389
+图像平面坐标可以转换为熟悉的笛卡尔图像平面坐标
+image plane coordinate can be converted to the familiar Cartesian image plane coordinate
+
+67
+00:05:44,389 --> 00:05:50,530
+在这里使用此转换规则。所以这是一种非常简单和简洁的表现方式
+using this transformation rule here. So this is a very simple and concise way of performing
+
+68
+00:05:50,530 --> 00:05:54,580
+透视投影。现在让我们考虑一下我介绍时会发生什么
+perspective projection. Let’s consider now what happens when I introduce
+
+69
+00:05:54,580 --> 00:06:01,819
+非零比例因子λ。齐次坐标元素ũ，ṽ和w将
+a non-zero scale factor λ. The homogeneous coordinate elements ũ, ṽ and w̃ will
+
+70
+00:06:01,819 --> 00:06:08,889
+全部按λ缩放。当我将它们转换为笛卡尔形式时，λ项将被考虑
+all be scaled by λ. When I convert them to Cartesian form, the λ term will be factored
+
+71
+00:06:08,889 --> 00:06:14,580
+out，它在分子和分母中，所以结果将保持不变。这是一个特别的
+out, it's in the numerator and the denominator so the result will be unchanged. This is a particular
+
+72
+00:06:14,580 --> 00:06:20,270
+以同质形式写关系的好处。它给了我们所谓的缩放方差。
+advantage of writing the relationship in homogeneous form. It gives us what’s called scaling variance.
+
+73
+00:06:20,270 --> 00:06:24,000
+因为我们可以将矩阵乘以任意值
+Because we can multiply the matrix by an arbitrary
+
+74
+00:06:24,000 --> 00:06:29,330
+比例因子，这意味着我们可以用稍微简化的形式写出相机矩阵
+scale factor, it means we can write the camera matrix in a slightly simplified form, which
+
+75
+00:06:29,330 --> 00:06:34,990
+我们称之为标准化相机矩阵。我们选择一个特定的元素来做到这一点
+we refer to as a normalized camera matrix. We do that by choosing one particular element
+
+76
+00:06:34,990 --> 00:06:41,110
+该矩阵的值为1，通常我们选择右下角的元素并将其设置为1。
+of that matrix to have a value of 1 and typically we choose the bottom right element and set it to 1.
+
+77
+00:06:41,110 --> 00:06:45,250
+此标准化相机矩阵仍包含
+This normalized camera matrix still contains
+
+78
+00:06:45,250 --> 00:06:50,500
+所有信息都完整地描述了图像形成过程。它包含
+all of the information to completely describe the image formation process. It contains the
+
+79
+00:06:50,500 --> 00:06:54,830
+镜头的焦距，它包含像素的尺寸，它包含
+focal length of the lens, it contains the dimensions of the pixels, it contains the
+
+80
+00:06:54,830 --> 00:07:00,620
+主点的坐标，它包含摄像机的位置和方向
+coordinate of the principal point and it contains the position and orientation of the camera
+
+81
+00:07:00,620 --> 00:07:05,830
+在三维空间。最后，我们可以转换齐次像素坐标
+in three dimensional space. And finally, we can convert the homogeneous pixel coordinates
+
+82
+00:07:05,830 --> 00:07:11,020
+我们用u和v表示更熟悉的笛卡尔像素坐标。
+to the more familiar Cartesian pixel coordinates which we denote by u and v.
+

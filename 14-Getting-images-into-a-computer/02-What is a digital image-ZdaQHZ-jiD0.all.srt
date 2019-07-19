@@ -1,0 +1,255 @@
+1
+00:00:03,679 --> 00:00:08,230
+在这个时代，我们都有数以万计的图像存储在我们的计算机中。
+We all have tens of thousands of images stored in our computer in this day and age.
+
+2
+00:00:08,230 --> 00:00:12,309
+这是我个人收藏的一些图片，也就是我度假的图片
+Here’re some images from my own personal collection, the ones that I took on a holiday
+
+3
+00:00:12,309 --> 00:00:18,520
+几年前到澳大利亚北部。有睡莲，鸟类的照片，
+to the northern part of Australia a few years ago. There are pictures of water lilies, birds,
+
+4
+00:00:18,520 --> 00:00:25,840
+树木，日落，原住民的岩石艺术和鳄鱼。此集合中的每个图像都存储在
+trees, sunsets, Aboriginal rock art, and crocodiles. Every image in this collection is stored in
+
+5
+00:00:25,840 --> 00:00:31,699
+我计算机文件系统中的单个文件。让我们选择这条特别的鳄鱼
+an individual file in the file system of my computer. Let’s select this particular crocodile
+
+6
+00:00:31,699 --> 00:00:37,390
+图像在这里，我们可以看到它所在的文件。这是一台Mac，所以我来到这里和我
+image here and we can see which file it is in. This is a Mac, so I come up here and I
+
+7
+00:00:37,390 --> 00:00:44,110
+将在Mac的文件浏览器实用程序Finder中查看该文件。在Linux下，
+will look at the file in the Mac’s file browser utility called Finder. Under Linux,
+
+8
+00:00:44,110 --> 00:00:48,600
+Windows，有相应的应用程序。在这里我们可以看到特定的文件
+Windows, there are equivalent applications. And here we can see the particular file that
+
+9
+00:00:48,600 --> 00:00:54,239
+认为鳄鱼形象。我们可以看到它有一个.JPG扩展名，这意味着它
+holds that crocodile image. We can see that it has a .JPG extension, that means it is
+
+10
+00:00:54,239 --> 00:00:59,810
+一个JPEG图像，我们将很快讨论这意味着什么，我们可以看到它是3.7
+a JPEG image and we will talk about what that means shortly, and we can see that it is 3.7
+
+11
+00:00:59,810 --> 00:01:03,629
+兆字节长。现在我们可以在常规中打开该图像
+megabytes long. Now we can open that image in the regular
+
+12
+00:01:03,629 --> 00:01:08,180
+Mac上的图像浏览器，在这种情况下，它是名为Preview的应用程序。那里
+image browser on the Mac, and in this case it is the application called Preview. There
+
+13
+00:01:08,180 --> 00:01:14,110
+我们看到鳄鱼在屏幕上隐约可见。我们可以放大这个图像和
+we see the crocodile looming large on the screen. And we can zoom into this image and
+
+14
+00:01:14,110 --> 00:01:20,110
+当我们放大时，我们看到图像变得越来越像块状。当我们向右缩放时
+as we zoom in we see that the image becomes more and more block-like. And as we zoom right
+
+15
+00:01:20,110 --> 00:01:26,560
+我们可以看到图像是由这些微小的块组成的。这些是最小的
+in we can see that the image is made up of these tiny little blocks. These are the smallest
+
+16
+00:01:26,560 --> 00:01:30,939
+图片中的元素。我们称它们为像素，这是像素的缩写。
+elements within the picture. We call them pixels, that’s short for picture elements.
+
+17
+00:01:30,939 --> 00:01:37,229
+所以你在这里看到的是构成这个特定图像的单个像素。
+So what you are seeing here are individual pixels that comprise this particular image.
+
+18
+00:01:37,229 --> 00:01:42,780
+让我们回到原来的位置。对于每个特定的图像，以及
+Let’s go back to where we were. For each particular image, as well as the
+
+19
+00:01:42,780 --> 00:01:47,689
+包含图像本身的数据，构成图像的像素，有
+data that comprises the image itself, the pixels that make up the picture, there is
+
+20
+00:01:47,689 --> 00:01:51,979
+一堆称为元数据的附加信息。我们可以看看
+a bunch of additional information which is referred to as metadata. And we can look at
+
+21
+00:01:51,979 --> 00:01:57,700
+此处单击此按钮可以显示此图像的元数据。现在，显示元数据
+the metadata for this image by clicking this button here. Now, the metadata is displayed
+
+22
+00:01:57,700 --> 00:02:03,040
+在顶角，有相当多的。首先，我们可以看到模型
+up in the top corner, and there is quite a bit of it. First of all, we can see the model
+
+23
+00:02:03,040 --> 00:02:08,729
+拍摄这些照片的相机号码。我们可以看到图像的分辨率和
+number of the camera that took these pictures. We can see the resolution of the image and
+
+24
+00:02:08,729 --> 00:02:16,430
+也就是说，图像宽3248像素，高2160像素。我们可以看到图像
+that is that the image is 3248 pixels wide by 2160 pixels tall. We can see that the image
+
+25
+00:02:16,430 --> 00:02:22,129
+磁盘上的长度为3.7兆字节。我们可以看到焦距或缩放设置
+is 3.7 megabytes long on the disk. We can see the focal length or the zoom setting that
+
+26
+00:02:22,129 --> 00:02:27,510
+当我拍摄这张特别的照片时我用过。我可以看到F-stop或光圈设置。
+I used when I took this particular picture. I can see the F-stop or aperture setting.
+
+27
+00:02:27,510 --> 00:02:34,239
+我还可以看到拍摄这张特殊照片时的曝光时间或快门时间。
+And I can also see the exposure time or shutter time when I took this particular picture.
+
+28
+00:02:34,239 --> 00:02:38,449
+更现代的相机会有额外的元数据，例如GPS坐标
+More modern cameras would have additional metadata, for things like the GPS coordinate
+
+29
+00:02:38,449 --> 00:02:44,879
+拍摄图像的地方有许多不同类型的图像
+of the place where the image was captured. There are many, many different types of image
+
+30
+00:02:44,879 --> 00:02:49,059
+今天常用的格式。如果你去看维基百科，你可以在那里找到
+format commonly used today. If you go and look on Wikipedia, you can find that there
+
+31
+00:02:49,059 --> 00:02:54,879
+有数百种不同类型的图像文件格式。我在这里列出了一些
+are hundreds of different types of image file format. I have listed here just a few of the
+
+32
+00:02:54,879 --> 00:03:02,239
+最常见的。JPEG是格式文件，通常具有.jpg或的文件扩展名
+most common ones. JPEG are format files which typically have a file extension of .jpg or
+
+33
+00:03:02,239 --> 00:03:10,269
+.JPEG。TIFF文件，GIF文件，便携式网络图形或PNG文件等等。什么时候
+.jpeg. TIFF files, GIF files, Portable network graphics or PNG files, and many others. When
+
+34
+00:03:10,269 --> 00:03:17,199
+我们实际上看一个图像文件，它有三个独立的组件，并且
+we actually look inside an image file, it has really three separate components, and
+
+35
+00:03:17,199 --> 00:03:22,540
+他们生活在我们称之为容器的地方。所以我们这里有一个空容器。一个
+they live within what we call a container. So here we have an empty container. And one
+
+36
+00:03:22,540 --> 00:03:26,090
+容器中的第一个元素是所谓的标题和标题
+of the first elements in the container is what is called the header, and the header
+
+37
+00:03:26,090 --> 00:03:31,359
+包含有关图像有多大，图像有多宽，有多高和有多高的信息
+contains information about how big the image is, how wide it is, how tall it is and the
+
+38
+00:03:31,359 --> 00:03:36,749
+压缩类型和像素格式的类型。是每像素8位，10位
+type of compression, and the type of pixel format. Is it eight bits per pixel, ten bits
+
+39
+00:03:36,749 --> 00:03:41,359
+每像素或其他什么。容器中的下一个对象是什么
+per pixel or whatever. The next object in the container is what is
+
+40
+00:03:41,359 --> 00:03:47,050
+称为元数据，其中包含有关拍摄的实际图片的信息。它
+called the metadata, and that has information about the actual picture that was taken. It
+
+41
+00:03:47,050 --> 00:03:51,150
+拍摄照片时可能具有相机的GPS坐标。它可能有
+might have the GPS coordinate of the camera when the picture was taken. It might have
+
+42
+00:03:51,150 --> 00:03:56,069
+F数和焦距，以及闪光是否发射。所以这是信息
+the F number and the focal length, and whether the flash fired or not. So it is information
+
+43
+00:03:56,069 --> 00:04:01,750
+关于拍摄的特定照片。然后，最后我们有了实际的像素
+about that particular picture that was taken. And then, finally we have the actual pixel
+
+44
+00:04:01,750 --> 00:04:09,409
+数据本身，代表图像的信息，它可以被压缩或不被压缩
+data itself, the information which represents the image and it may be compressed or not
+
+45
+00:04:09,409 --> 00:04:12,010
+压缩。所以当我们谈论图像文件格式时，我们
+compressed. So when we talk about image file format, we
+
+46
+00:04:12,010 --> 00:04:17,030
+需要实际谈论两件事。我们需要谈谈特定的容器
+need to actually talk about two things. We need to talk about the particular container
+
+47
+00:04:17,030 --> 00:04:20,949
+保存此信息并且有不同类型的容器。我们也是
+that holds this information and there are different types of containers. And we also
+
+48
+00:04:20,949 --> 00:04:25,810
+需要讨论应用于图像像素的不同压缩方法
+need to talk about the different compression methods which are applied to the image pixel
+
+49
+00:04:25,810 --> 00:04:30,720
+数据。所以当我们通常谈论JPEG文件时，
+data. So when we commonly talk about a JPEG file,
+
+50
+00:04:30,720 --> 00:04:38,139
+JPEG格式文件，正确的我们应该说这是一个EXIF容器
+JPEG format file, correctly we should be saying that this is an EXIF container that holds
+
+51
+00:04:38,139 --> 00:04:39,749
+JPEG压缩图像数据。
+JPEG compressed image data.
+

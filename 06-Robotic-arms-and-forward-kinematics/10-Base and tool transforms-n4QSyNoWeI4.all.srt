@@ -1,0 +1,255 @@
+1
+00:00:03,429 --> 00:00:08,900
+考虑一个相当标准的工业机器人，有6个旋转接头试图添加一个
+Consider a fairly standard industrial robot with 6 rotational joints. Trying to add a
+
+2
+00:00:08,900 --> 00:00:15,609
+在链接零上坐标框架并在链接6上添加一个坐标框架
+coordinate frame on link zero and going to add a coordinate frame on link 6 which is
+
+3
+00:00:15,609 --> 00:00:20,570
+末端执行器框架实际完成工作的机器人的位。我们谈了
+the end-effector frame the bit of the robot that actually does the work. And we talked
+
+4
+00:00:20,570 --> 00:00:27,260
+关于运动模型，其关于框架6的姿态与框架零和
+about kinematic models which relate the pose of frame 6 with respect to frame zero and
+
+5
+00:00:27,260 --> 00:00:32,940
+它是机器人第6关节角度的函数。现在让我们说这个机器人存在
+it's a function of the 6th joint angles of the robot. Let's say now that this robot exists
+
+6
+00:00:32,940 --> 00:00:38,620
+在工厂里，工厂有自己的世界坐标框架。
+in a factory and the factory is got its own world coordinate frame indicated over here.
+
+7
+00:00:38,620 --> 00:00:43,910
+并且我们知道机器人的姿势相对于世界坐标系的零点。
+And we know the pose of the robot link zero with respect to the world coordinate frame.
+
+8
+00:00:43,910 --> 00:00:50,329
+我们称之为机器人的基本变换。机器人末端执行器的姿势
+We called this the base transform of the robot. The pose of the robots end effector in the
+
+9
+00:00:50,329 --> 00:00:55,170
+简单地通过复合基础变换就可以获得世界坐标系
+world coordinate frame can be attained for it's simply by compounding the base transform
+
+10
+00:00:55,170 --> 00:01:01,930
+通过机器人的正向运动变换，这是机器人关节角度的函数。
+with the forward kinematic transform of the robot which is a function of the robot's joint angles.
+
+11
+00:01:02,440 --> 00:01:07,420
+想象一下，我现在介绍了另一个机器人，这个机器人从屋顶倒挂
+Imagine now that I introduced another robot, this one's hanging upside down from the roof
+
+12
+00:01:07,420 --> 00:01:11,770
+并且我们知道它相对于世界坐标系的姿势然后我们可以写一个
+and we know its pose with respect to the world coordinate frame then we can write an
+
+13
+00:01:11,770 --> 00:01:17,850
+表达第二个机器人相对于世界的末端效应器姿势。
+expression for the end-effector pose of the second robot with respect to the world.
+
+14
+00:01:17,850 --> 00:01:24,260
+现在，让我们看一下机器人的工具端。运动学为我们提供了机器人的姿势
+Now, let's look at the tool end of the robot. The kinematics give us the pose of the robots
+
+15
+00:01:24,260 --> 00:01:29,060
+末端执行器，但通常它确实给我们一些安装法兰的姿势
+end effector but typically it actually does gives us the pose of some mounting flange
+
+16
+00:01:29,060 --> 00:01:33,560
+在机器人的末端，我们想为此加上某种工具。所以，我们
+on the end of the robot and we would like to affix some sort of tool to that. So, we
+
+17
+00:01:33,560 --> 00:01:37,420
+这里要介绍工具，这是机器人的某种磨具
+are going to introduce the tool here, this is some kind of grinding tool that the robot
+
+18
+00:01:37,420 --> 00:01:43,470
+正在携带。当然，我们对这个特定工具的业务端感兴趣。
+is carrying. And of course, we're interested in the business end of this particular tool.
+
+19
+00:01:43,470 --> 00:01:48,820
+我们想知道这个坐标系的姿势。通过一些仔细的测量，
+We want to know the pose of this coordinate frame here. In with some careful measurement,
+
+20
+00:01:48,820 --> 00:01:56,020
+我们可以确定从第6帧到第E帧的相对姿势，这将是恒定的相对姿势。
+we can determine the relative pose from the frame 6 to frame E and this would be constant relative pose.
+
+21
+00:01:56,020 --> 00:02:01,530
+那么，现在关于世界坐标系的末端效应器的姿势可以
+So, now the pose of the end-effector, with respect to the world coordinate frame, can
+
+22
+00:02:01,530 --> 00:02:08,179
+由这组复合姿势写成。它是基础变换的复合体
+be written by this set of compounded poses. It's the base transform compounded with the
+
+23
+00:02:08,179 --> 00:02:14,879
+臂的运动学模型与安装的恒定工具变换相结合
+kinematic model of the arm compounded with the constant tool transform from the mounting
+
+24
+00:02:14,879 --> 00:02:18,459
+指向该工具的业务端。
+point to the business end of the tool.
+
+25
+00:02:18,459 --> 00:02:21,529
+这是我们以前的MATLAB会议之一，我们正在使用的模型
+Here's one of our previous MATLAB sessions where we were working with a model of the
+
+26
+00:02:21,529 --> 00:02:28,349
+Puma-560机器人。我们可以在Denavit-Hartenberg参数表下看到
+Puma-560 robot. We can see here under the table of the Denavit-Hartenberg parameters
+
+27
+00:02:28,349 --> 00:02:33,689
+有一个基本变换矩阵和一个工具变换矩阵，它们各自对应
+that there is a base transform matrix and a tool transform matrix and each of them corresponds
+
+28
+00:02:33,689 --> 00:02:40,659
+零转和零转换。但我们可以轻松改变基础变换
+to zero rotation and zero translation. But we can easily change the base transform of
+
+29
+00:02:40,659 --> 00:02:47,919
+例如，通过调整串行链接机器人对象的基本属性来实现机器人。
+the robot for instance by adjusting the base property of the serial link robot object.
+
+30
+00:02:47,919 --> 00:02:54,290
+所以，我可能会改变基本变换的平移路径。也许，我会放置
+So, I might change the translational path of the base transform. Perhaps, I will place
+
+31
+00:02:54,290 --> 00:03:00,900
+机器人在X方向10米，Y方向15米，也许
+the robot at 10 meters in the X direction and 15 meters in the Y direction and maybe
+
+32
+00:03:00,900 --> 00:03:05,969
+我会把它抬高一点，或者沿Z方向向上移动两米。所以，现在
+I will put it up a little bit higher or move it up two meters in the Z direction. So, now
+
+33
+00:03:05,969 --> 00:03:10,969
+机器人对象有一个我们找到的不同的基础变换。
+the robot object has got a different base transform that we find.
+
+34
+00:03:10,969 --> 00:03:15,709
+现在，计算机器人的正向运动学，这被考虑在内，我们可以
+Now, compute the forward kinematics of the robot, this is taken into account and we can
+
+35
+00:03:15,709 --> 00:03:21,299
+看到现在的末端效应器位置是完全不同的。基础变换非常好
+see that the end-effector position now is quite different. The base transform is a very
+
+36
+00:03:21,299 --> 00:03:27,180
+强大的功能，我可以设置一个更复杂的基础变换。例如，我实际上可以
+powerful function and I could set a more complex base transform. For instance, I could actually
+
+37
+00:03:27,180 --> 00:03:32,029
+将机器人颠倒过来，我将围绕x轴旋转pi弧度
+turn the robot upside down and I am going to rotate it around the x-axis by pi radians
+
+38
+00:03:32,029 --> 00:03:37,629
+所以这就是机器人基础变换现在的样子，如果我再次计算前进
+so this is what the robot base transform looks like now and if I again compute the forward
+
+39
+00:03:37,629 --> 00:03:43,180
+对于同一组关节角度的运动学，我们将看到机器人末端执行器的位置
+kinematics for that same set joint angles, we'll see that the position of the robot end-effector
+
+40
+00:03:43,180 --> 00:03:48,019
+是不同的，我们可以看到末端执行器的方向是非常不同的
+is different and we can see that the orientation of the end-effector is very different the
+
+41
+00:03:48,019 --> 00:03:51,949
+旋转子矩阵中的正号和负号位于不同的位置。所以，
+positive and minus signs in the rotations sub matrix are in different locations. So,
+
+42
+00:03:51,949 --> 00:03:57,569
+我已经有效地移动了机器人并将其颠倒过来，这非常容易
+I have effectively moved the robot and turn it upside down and that's very very easy to
+
+43
+00:03:57,569 --> 00:04:01,719
+做这个基础变换的概念。
+do with this concept of a base transform.
+
+44
+00:04:01,719 --> 00:04:05,499
+我可能想对机器人做的另一件事是向它添加工具变换
+The other thing that I might want to do to the robot is to add a tool transform to it
+
+45
+00:04:05,499 --> 00:04:11,680
+并通过调整工具属性来做到这一点，我可能会声明该工具已经获得
+and do that by adjusting the tool property and I might declare that the tool has got
+
+46
+00:04:11,680 --> 00:04:17,739
+x方向的偏移为零，Y方向的偏移为零，可能为0.2米
+an offset of zero in the x direction, zero in the Y direction and perhaps it's 0.2 meters
+
+47
+00:04:17,739 --> 00:04:23,169
+在Z方向上指向机器人末端的安装板。
+in the Z direction which is pointing out of the mounting plate on the end of the robot.
+
+48
+00:04:23,169 --> 00:04:28,590
+现在，您可以看到工具变换代表有限位移。现在，
+And now, you can see that the tool transform represents a finite displacement. And now,
+
+49
+00:04:28,590 --> 00:04:33,199
+如果我要计算那组特定关节角度的正向运动学，我们会
+if I'm going to compute the forward kinematics for that particular set of joint angles, we'll
+
+50
+00:04:33,199 --> 00:04:39,800
+看到末端效应器的位置略有不同，因为现在它正在使用这个工具
+see that the end-effector position is slightly different because now it's taking this tool
+
+51
+00:04:39,800 --> 00:04:41,559
+转化为计数。
+transform into a count.
+

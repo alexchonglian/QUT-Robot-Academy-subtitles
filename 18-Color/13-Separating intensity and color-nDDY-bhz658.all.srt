@@ -1,0 +1,225 @@
+1
+00:00:04,029 --> 00:00:08,780
+考虑一下我们正在查看此对象。它被白光源照亮
+Consider that we are viewing this object. It is being illuminated by a white light source
+
+2
+00:00:08,780 --> 00:00:16,289
+并且相机返回这些RGB值或三刺激值。想象一下，现在
+and the camera is returning these RGB values or tristimulus values. Imagine now that the
+
+3
+00:00:16,289 --> 00:00:22,029
+白光源的强度正在降低。我们观察到的是外观
+intensity of the white light source is being reduced. What we observe is that the appearance
+
+4
+00:00:22,029 --> 00:00:27,340
+对象的变化但很明显，对象本身的颜色不能改变，因为
+of the object changes but clearly the color of the object itself cannot change because
+
+5
+00:00:27,340 --> 00:00:33,540
+颜色是物体的物质属性-苹果即使在黑暗中仍然是红色的
+the color is a material property of the object — an apple is still red, even if it is in a dark
+
+6
+00:00:33,540 --> 00:00:40,519
+房间-而我们观察到的是，随着照明水平降低了三刺激
+room — and what we observe is that as the lighting level has been reduced the tristimulus
+
+7
+00:00:40,519 --> 00:00:45,890
+价值观发生了变化它们都变小了，但三刺激之间的比例
+values have changed; they have all become smaller, but the ratio between the tristimulus
+
+8
+00:00:45,890 --> 00:00:51,269
+值保持不变，我们想要做的是找到一些转换方法
+values remains the same and what we would like to do is to find some way to transform
+
+9
+00:00:51,269 --> 00:00:58,129
+三个三刺激值到一个亮度值，也许两个颜色值。
+the three tristimulus values to one brightness value and perhaps two color values.
+
+10
+00:00:58,129 --> 00:01:03,960
+一种方法是将RGB值转换为色度坐标和我们
+One way to do this is to transform the RGB values into chromaticity coordinates and we
+
+11
+00:01:03,960 --> 00:01:10,990
+将RGB值除以总和，通过总三刺激，我们最终得到这些变量，
+divide the RGB values by the sum, by the total tristimulus, we end up with these variables,
+
+12
+00:01:10,990 --> 00:01:16,890
+小R，小G和小B.并且很容易证明这些在零之间变化
+little R, little G and little B. And it is easy to show that these vary between zero
+
+13
+00:01:16,890 --> 00:01:22,869
+一个。它也很容易证明它们总和为一。因此，其中一个坐标
+and one. It is also easy to show that they sum to one. Therefore, one of the coordinates
+
+14
+00:01:22,869 --> 00:01:27,860
+是多余的，通常我们只考虑小R和小G值。
+is redundant and typically we consider just the little R and little G values.
+
+15
+00:01:27,860 --> 00:01:32,649
+考虑这个有效的例子，类似于我们之前看过的事情：白光下降
+Consider this worked example, similar to things we have looked at before: white light falling
+
+16
+00:01:32,649 --> 00:01:37,960
+在红苹果上产生这种三刺激值。现在考虑有一个云
+on to a red apple and producing this tristimulus value. Now consider that there is a cloud
+
+17
+00:01:37,960 --> 00:01:42,930
+在光源前面，整体照度水平已经降低了
+in front of the light source, the overall illumination level has been reduced and the
+
+18
+00:01:42,930 --> 00:01:49,009
+三刺激值现在具有不同的值，比我们之前的三刺激值更小。
+tristimulus value now has a different value, smaller tristimulus value then we had before.
+
+19
+00:01:49,009 --> 00:01:53,799
+让我们考虑一个有效的例子：在第一种情况下，我们可以计算色度
+Let’s consider a worked example: in the first case we can compute the chromaticity
+
+20
+00:01:53,799 --> 00:01:58,460
+小R和小G的坐标。对于有云的第二种情况
+coordinates of little R and little G. For the second case where there was a cloud in
+
+21
+00:01:58,460 --> 00:02:03,710
+在光源前面，降低整体照度，我们可以计算色度坐标
+front of the light source, lower overall illumination, we can compute the chromaticity coordinates
+
+22
+00:02:03,710 --> 00:02:07,719
+我们可以看到它们是相同的，我们能够做的就是要考虑因素
+and we can see that they are the same and what we have been able to do then is to factor
+
+23
+00:02:07,719 --> 00:02:14,489
+消除强度的影响，只保留两个数字，提供一些表示
+out the effect of intensity and retain just two numbers which provide some representation
+
+24
+00:02:14,489 --> 00:02:17,319
+的颜色。我们考虑一个二维坐标
+of color. Let’s consider a two dimensional coordinate
+
+25
+00:02:17,319 --> 00:02:23,500
+轴小R和小G的系统。这个点R等于1，G等于
+system with the axis little R and little G. This point where R equals one and G equals
+
+26
+00:02:23,500 --> 00:02:29,840
+没有对应纯红色。其中R等于零，G等于一等于纯
+nought corresponds to pure red. Where R equals nought and G equals one corresponds to pure
+
+27
+00:02:29,840 --> 00:02:35,750
+绿色和此点在R和G都等于零的原点对应
+green and this point at the origin where R and G are both equal to zero corresponds to
+
+28
+00:02:35,750 --> 00:02:39,560
+纯蓝色。色度坐标是不可能的
+pure blue. It is not possible for a chromaticity coordinate
+
+29
+00:02:39,560 --> 00:02:44,430
+存在于蓝线上方的空间中，这来自于很少的约束
+to exist in the space above the blue line and this comes from the constraint that little
+
+30
+00:02:44,430 --> 00:02:48,269
+R，加上小G，加上小B必须等于1。
+R, plus little G, plus little B has to equal one.
+
+31
+00:02:48,269 --> 00:02:54,480
+在之前的一个讲座中，我们讨论了伽玛编码的概念，这就是有一个
+In an earlier lecture we discussed the concept of gamma encoding this is where there is a
+
+32
+00:02:54,480 --> 00:03:00,360
+进入相机的光的亮度与幅度之间的非线性变换
+non-linear transformation between the brightness of the light entering the camera and the magnitude
+
+33
+00:03:00,360 --> 00:03:06,080
+离开相机的信号今天几乎所有相机都有伽玛编码
+of the signal leaving the camera. Almost all cameras today have gamma encoding in them
+
+34
+00:03:06,080 --> 00:03:14,340
+伽玛值通常约为2.2。伽玛编码对色度有何影响
+and the gamma value is typically around 2.2. What effect does gamma encoding have on chromaticity
+
+35
+00:03:14,340 --> 00:03:17,959
+坐标？我们将用另一个有用的例子说明这一点。
+coordinates? We will illustrate this with another worked example.
+
+36
+00:03:17,959 --> 00:03:24,159
+我们将使用前面示例中的三刺激或RGB值与完整的太阳
+We will use the tristimulus or RGB values from the earlier example with the full sun
+
+37
+00:03:24,159 --> 00:03:30,549
+和阴云密布的太阳照射，第一步是计算伽玛编码的RGB值，
+and the clouded sun illumination and the first step is to compute the gamma encoded RGB values,
+
+38
+00:03:30,549 --> 00:03:35,640
+它们在这里显示，我们可以使用MATLAB非常方便地完成这项工作。
+and they are shown here, and we can do this very easily and conveniently using MATLAB.
+
+39
+00:03:35,640 --> 00:03:40,819
+现在让我们计算色度坐标，在第一种情况下，它是用于完全照明
+Now let’s compute the chromaticity coordinates and in the first case it is for the full illumination
+
+40
+00:03:40,819 --> 00:03:47,680
+条件，这里是R和G值。对于低照度的第二种情况，
+condition and here are the R and G values. For the second case with lower illumination,
+
+41
+00:03:47,680 --> 00:03:51,709
+我们计算色度坐标，我们看到它们与第一个相同
+we compute the chromaticity coordinates and we see they are the same as for the first
+
+42
+00:03:51,709 --> 00:03:57,780
+案件。所以我们再一次考虑了照明的影响，我们留下了
+case. So once again we have factored out the effect of illumination and we are left with
+
+43
+00:03:57,780 --> 00:04:03,530
+两个代表颜色的数字。对于这种使用伽玛编码的情况，我们已经考虑了因素
+two numbers which represent the color. For this case with gamma encoding, we have factored
+
+44
+00:04:03,530 --> 00:04:08,860
+效果照明，这是一件好事。但实际的色度坐标
+out the effect illumination and that is a good thing. But the actual chromaticity coordinates
+
+45
+00:04:08,860 --> 00:04:13,760
+与我们之前在没有伽玛编码的情况下计算的情况具有不同的值。
+have a different value to the case we computed earlier without gamma encoding.
+

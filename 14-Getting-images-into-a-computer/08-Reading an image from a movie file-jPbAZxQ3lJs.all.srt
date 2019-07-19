@@ -1,0 +1,215 @@
+1
+00:00:04,009 --> 00:00:10,119
+另一个非常重要的视觉信息来源是电影文件。工具箱
+Another really important source of visual information are movie files. The tool box
+
+2
+00:00:10,119 --> 00:00:14,529
+您一直在使用具有大量图像且数量较少的船舶
+that you have been using ships with a large number of images and also smaller number of
+
+3
+00:00:14,529 --> 00:00:17,590
+电影。让我们滚动浏览提供的图像，
+movies. So let’s scroll through the provided images,
+
+4
+00:00:17,590 --> 00:00:21,260
+其中一些是您已经看过或稍后会看到的熟悉的
+and some of them are familiar ones that you have either seen already or will see later
+
+5
+00:00:21,260 --> 00:00:27,270
+在这个课程中，在这里有一个电影文件，我们知道它是
+during this course, and right down the bottom here there is a movie file, we know it is
+
+6
+00:00:27,270 --> 00:00:31,800
+一个电影文件，因为它有.MPG的扩展名，是MPEG的缩写。我们会谈谈
+a movie file because it has got an extension of .MPG, short for MPEG. And we will talk
+
+7
+00:00:31,800 --> 00:00:35,629
+不久之后。让我双击这个电影文件和
+a little bit about that shortly. Let me double click on this movie file and
+
+8
+00:00:35,629 --> 00:00:40,050
+它出现在电影播放器​​中。这不是一部精彩的电影;它是一种观点
+it comes up in a movie player. It is not a brilliantly exciting movie; it is a view from
+
+9
+00:00:40,050 --> 00:00:48,649
+一个俯视城市十字路口的窗户，有汽车和卡车。它是黑色和白色，
+a window looking down on an urban intersection, with cars and trucks. It is in black and white,
+
+10
+00:00:48,649 --> 00:00:52,460
+它只运行很短的时间。
+and it runs for only a very short amount of time.
+
+11
+00:00:52,460 --> 00:00:57,819
+所以我们现在要做的是从该电影序列中读取一些帧
+So what we are going to do now is to read some frames from that movie sequence into
+
+12
+00:00:57,819 --> 00:01:03,920
+MATLAB工作区。我将通过创建一个电影摄影机对象来做到这一点。这是
+the MATLAB workspace. I am going to do that by creating a movie camera object. This is
+
+13
+00:01:03,920 --> 00:01:08,500
+与我们之前看过的相机对象相关，但这个特定的电影对象是
+related to the camera object we looked at before, but this particular movie object is
+
+14
+00:01:08,500 --> 00:01:12,940
+类电影。我们将给它文件的名称
+of the class movie. We are going to give it the name of the file
+
+15
+00:01:12,940 --> 00:01:22,820
+包含电影traffic_sequence.mpg。打开它，它会创建一个新的电影对象
+that contains the movie, traffic_sequence.mpg. Open that up and it creates a new movie object
+
+16
+00:01:22,820 --> 00:01:28,360
+在我们的工作区现在我们可以通过使用抓取方法从这部电影中抓取帧
+in our workspace. Now we can grab frames from this movie, by using the grab method, just
+
+17
+00:01:28,360 --> 00:01:32,350
+正如我们为之前看到的其他相机对象所做的那样。这样做是抓住
+as we have done for the other camera objects we have seen before. What that does is grab
+
+18
+00:01:32,350 --> 00:01:38,820
+电影的第一帧并在窗口中显示。我可以得到下一帧。
+the first frame from the movie and display it in a window. I can get the next frame.
+
+19
+00:01:38,820 --> 00:01:45,020
+以及下一帧，下一帧，等等。
+And the next frame, the next frame, and so on.
+
+20
+00:01:45,020 --> 00:01:52,320
+如果我们只是通过输入名称并返回来显示电影对象，它会给我们一些信息
+If we display the movie object just by typing in the name and return, it gives us some information
+
+21
+00:01:52,320 --> 00:01:59,350
+关于电影。它告诉我们各个帧的大小，它们是720列
+about the movie. It tells us the size of the individual frames, that they are 720 columns
+
+22
+00:01:59,350 --> 00:02:05,570
+宽，576行高。这部电影以每秒30帧的速度录制，总数也是如此
+wide, 576 rows high. The movie is recorded at 30 frames per second and there’s a total
+
+23
+00:02:05,570 --> 00:02:13,060
+这部电影中的351帧，运行时间为11.7秒。
+of 351 frames in this movie, for a run time of 11.7 seconds.
+
+24
+00:02:13,060 --> 00:02:17,810
+电影文件格式与我们看到的图像文件格式有很多共同之处
+Movie file formats have got a lot in common with the image file formats that we looked
+
+25
+00:02:17,810 --> 00:02:23,069
+在不久之前。它们包括容纳许多物体的容器，第一个容器
+at a little while ago. They comprise a container which holds a number of objects, the first
+
+26
+00:02:23,069 --> 00:02:28,879
+object是标题，用于说明电影中每个帧的大小
+object is the header which says something about the size of each frame within the movie
+
+27
+00:02:28,879 --> 00:02:33,139
+以及音频和视频编码的格式。
+and the format in which the audio and video is encoded.
+
+28
+00:02:33,139 --> 00:02:39,840
+通常我们称之为所谓的视频编解码器，这是压缩的简写
+Often times we refer to what is called a video codec and that is short hand for the compression
+
+29
+00:02:39,840 --> 00:02:45,700
+应用于电影中图像帧的算法。还有一个音频
+algorithm that is applied to the image frames within the movie. And there is also an audio
+
+30
+00:02:45,700 --> 00:02:49,349
+编解码器，它是压缩音频信息的算法。
+codec, which is the algorithm which compresses the audio information.
+
+31
+00:02:49,349 --> 00:02:54,650
+还有一些与电影相关的元数据。它可能有相机类型，
+There is also some metadata associated with the movie. It might have the type of camera,
+
+32
+00:02:54,650 --> 00:02:59,769
+相机设置以及拍摄电影的位置。大部分
+the camera settings and again the location at which the movie was taken. The bulk of
+
+33
+00:02:59,769 --> 00:03:04,419
+虽然该文件被电影的帧占用，但是使用了一个
+the file though is occupied with the frames of the movie, which are compressed using a
+
+34
+00:03:04,419 --> 00:03:11,900
+视频编解码器，以及使用音频编解码器压缩的音频数据。所以我们需要指定
+video codec, and the audio data which is compressed using the audio codec. So we need to specify
+
+35
+00:03:11,900 --> 00:03:19,079
+容器的格式以及电影数据和音频数据的格式。
+the format of the container as well as the format of the movie data and the audio data.
+
+36
+00:03:19,079 --> 00:03:24,249
+因此，当我们提到像mpeg4电影这样的东西时，更确切地说，我们在说什么
+So when we refer to something like an mpeg4 movie, to be more precise, what we are talking
+
+37
+00:03:24,249 --> 00:03:31,599
+约是一个mpeg4，十四个容器。这意味着它由标准部分定义
+about is an mpeg4, part fourteen container. That means it is defined by a standard, part
+
+38
+00:03:31,599 --> 00:03:37,609
+mpeg4标准，该标准的十四分之一。视频使用压缩
+of the mpeg4 standard, part fourteen of that standard. And the video is compressed using
+
+39
+00:03:37,609 --> 00:03:44,559
+H.264标准，音频使用AAC标准压缩。所以mpeg4很短
+the H.264 standard, and the audio is compressed using the AAC standard. So mpeg4 is a short
+
+40
+00:03:44,559 --> 00:03:49,249
+关于容器，视频和音频的更多细节。
+hand for a lot more detail about the container, the video and the audio.
+
+41
+00:03:49,249 --> 00:03:55,599
+就像图像文件格式一样，通常有一堆电影格式
+And just as with image file formats, there’s a bunch of movie formats that are commonly
+
+42
+00:03:55,599 --> 00:04:01,540
+今天使用，其中一些是容器格式，其中一些是编解码器格式和
+used today and some of them are container formats, some of them are codec formats and
+
+43
+00:04:01,540 --> 00:04:04,749
+其中一些指定容器和编解码器。
+some of them specify the container and the codec.
+

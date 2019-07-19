@@ -1,0 +1,185 @@
+1
+00:00:03,409 --> 00:00:08,540
+想象一下，我们现在想要尝试实现其中一些monadic操作，比如添加
+Imagine now that we want to try and implement some of these monadic operations, like adding
+
+2
+00:00:08,540 --> 00:00:15,440
+每个像素的常数，或每个像素乘以常数。
+a constant to every pixel, or to multiply every pixel by a constant.
+
+3
+00:00:15,440 --> 00:00:20,519
+一种方法是编写一些带有一些嵌套循环的代码
+One way to do this would be to write some code with some nested loops that step through
+
+4
+00:00:20,519 --> 00:00:26,320
+矩阵中的每个元素并对它们执行monadic操作。
+every element in the matrix and performs the monadic operation on them.
+
+5
+00:00:26,320 --> 00:00:31,140
+在MATLAB中有一种简单的方法，它是MATLAB中的一种技术
+In MATLAB there is an easy way to do it and it is a technique in MATLAB that is referred
+
+6
+00:00:31,140 --> 00:00:34,830
+作为矢量化。
+to as vectorization.
+
+7
+00:00:34,830 --> 00:00:41,340
+考虑到我们有一个包含n行和m列的矩阵，我们有一个标量。
+Consider that we have a matrix with n rows and m columns and we have a scalar.
+
+8
+00:00:41,340 --> 00:00:46,870
+在中间我们有许多标准算术运算符;加，减，次，
+And in in the middle we have a number of standard arithmetic operators; plus, minus, times,
+
+9
+00:00:46,870 --> 00:00:48,520
+分裂等等。
+divide and so on.
+
+10
+00:00:48,520 --> 00:00:55,489
+例如，如果我们使用加法运算符加符号-我们将矩阵添加到标量中，
+If, for instance, we use the addition operator—plus symbol—and we add the matrix to a scalar,
+
+11
+00:00:55,489 --> 00:00:58,370
+结果将是一个矩阵。
+the result will be a matrix.
+
+12
+00:00:58,370 --> 00:01:04,039
+MATLAB要做的是将标量添加到每个元素中
+And what MATLAB is going to do is to add the scalar to every individual element of the
+
+13
+00:01:04,039 --> 00:01:09,660
+输入矩阵并将其分配给输出矩阵中的相应元素。
+input matrix and assign it to the corresponding element in the output matrix.
+
+14
+00:01:09,660 --> 00:01:14,030
+所以我们不必编写循环来将标量添加到每个元素中
+So we do not have to write loops to go through and add the scalar to every element of the
+
+15
+00:01:14,030 --> 00:01:15,430
+输入矩阵。
+input matrix.
+
+16
+00:01:15,430 --> 00:01:22,500
+MATLAB将为我们做，我们使用矩阵运算符和标量的简写符号。
+MATLAB will do it for us, and we use the short hand notation of a matrix operator and a scalar.
+
+17
+00:01:22,500 --> 00:01:29,300
+所以我们可以为每个元素矩阵添加一个常量，减去常量;乘;划分;
+So we can add a constant to every element matrix, subtract the constant; multiply; divide;
+
+18
+00:01:29,300 --> 00:01:31,850
+把每个元素都提升到一个力量;等等。
+raise every element to a power; and so on.
+
+19
+00:01:31,850 --> 00:01:35,330
+我们现在将用一个真实的例子来证明这一点。
+We are going to demonstrate this now with a real example.
+
+20
+00:01:35,330 --> 00:01:41,960
+我们将首先创建一个矩阵并将其命名为m，其元素将全部为整数，
+We will start by creating a matrix and call it m, and its elements will all be integers,
+
+21
+00:01:41,960 --> 00:01:44,480
+1到10之间的整数。
+integers between 1 and 10.
+
+22
+00:01:44,480 --> 00:01:47,580
+矩阵将是4乘4。
+And the matrix will be 4 by 4.
+
+23
+00:01:47,580 --> 00:01:53,050
+我们将使用MATLAB内置的randi函数来随机创建这个矩阵
+We are going to use MATLAB’s built in randi function to create this matrix with random
+
+24
+00:01:53,050 --> 00:01:54,970
+其中的整数元素。
+integer elements in it.
+
+25
+00:01:54,970 --> 00:02:01,069
+现在我要向该矩阵添加1，或者添加一个矩阵-四乘四矩阵
+Now I am going to add 1 to that matrix, or adding a matrix—four by four matrix—to
+
+26
+00:02:01,069 --> 00:02:08,349
+一个标量，MATLAB要做的是为矩阵的每个元素加1。
+a scalar, and what MATLAB is going to do is add 1 to every element of the matrix.
+
+27
+00:02:08,349 --> 00:02:16,520
+同样，如果我将矩阵乘以2，我们将看到每个单独的元素
+Similarly, if I multiply the matrix by 2, we will see that every individual element
+
+28
+00:02:16,520 --> 00:02:21,230
+在矩阵m中乘以2。
+in the matrix m has been multiplied by 2.
+
+29
+00:02:21,230 --> 00:02:25,290
+我们可以以类似的方式执行更复杂的数学函数。
+We can perform more complex mathematical functions in a similar way.
+
+30
+00:02:25,290 --> 00:02:30,300
+我们可以计算m的平方根，MATLAB要做的是计算平方
+We can compute the square root of m, and what MATLAB is going to do is to compute the square
+
+31
+00:02:30,300 --> 00:02:33,860
+矩阵中每个元素的根。
+root of every element within the matrix.
+
+32
+00:02:33,860 --> 00:02:40,280
+最后，我们可以将矩阵的每个元素提升到2的幂，我们使用运算符
+Finally, we can raise each element of the matrix to the power of two, we use the operator
+
+33
+00:02:40,280 --> 00:02:47,720
+。^我们在这里看到的是矩阵m中的每个元素都已被平方。
+.^ and what we see here is that every element in the matrix m has been squared.
+
+34
+00:02:47,720 --> 00:02:54,280
+重要的是要注意这与写这个非常不同，这是做了什么的
+Important to note that this is very different to writing this, and what this has done is
+
+35
+00:02:54,280 --> 00:03:00,200
+将矩阵m乘以其自身;它和写那个一样。
+to multiply the matrix m by itself; it is the same as writing that.
+
+36
+00:03:00,200 --> 00:03:05,490
+这是使用矩阵乘法规则将矩阵乘以矩阵-非常不同
+This is multiplying a matrix by a matrix, using matrix multiplication rules — very different
+
+37
+00:03:05,490 --> 00:03:09,760
+将矩阵的每个元素提高到2的幂。
+to raising each element of the matrix to the power of 2.
+

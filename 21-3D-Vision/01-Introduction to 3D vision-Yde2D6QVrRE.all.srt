@@ -1,0 +1,95 @@
+1
+00:00:03,270 --> 00:00:06,800
+在最后几节讲座中，我们研究了图像形成的过程
+In the last couple of lectures, we've looked at the process of image formation, that's
+
+2
+00:00:06,800 --> 00:00:14,320
+我们如何将3D世界转变为二维图像或该世界的表现形式。该
+how we transform the 3D world, into a two-dimensional image or representation of that world. The
+
+3
+00:00:14,320 --> 00:00:18,599
+对于动物来说，世界的实际三维结构确实非常重要
+actual three-dimensional structure of the world is really, really important, for animals
+
+4
+00:00:18,599 --> 00:00:24,420
+以及机器人。所以在动物的情况下，如果你想象你是一个掠夺性的动物，
+as well as for robots. So in the case of animals, if you imagine that you are a predatory animal,
+
+5
+00:00:24,420 --> 00:00:28,870
+了解猎物有多远是非常重要的。如果你是猎物，那就是它
+it's really important to know how far away the prey is. If you're a prey animal it's
+
+6
+00:00:28,870 --> 00:00:32,510
+知道捕食者有多远是非常重要的。如果你是一个机器人，你可能会
+really important to know how far away the predator is. If you're a robot, you might
+
+7
+00:00:32,510 --> 00:00:37,520
+想知道你想要到达和抓住的物体有多远。如果你是一个手机
+want to know how far away is the object that you want to reach and grab. If you're a mobile
+
+8
+00:00:37,520 --> 00:00:42,670
+机器人，你想知道你前面的空间的哪些部分有物体粘在一起
+robot, you want to know which parts of the space in front of you have got objects sticking
+
+9
+00:00:42,670 --> 00:00:46,789
+高于地面，阻止你在那里和世界的哪个地方开车
+up above the ground, that prevent you from driving there and which parts of the world
+
+10
+00:00:46,789 --> 00:00:49,550
+没有那些障碍。
+are free from those kinds of obstacles.
+
+11
+00:00:49,550 --> 00:00:55,110
+所以我们希望拥有世界的三维结构，但我们只有二维结构
+So we want to have a three dimensional structure of the world, but we've only got a two dimensional
+
+12
+00:00:55,110 --> 00:01:00,970
+代表性投射。我们如何解决这个问题？当人类看待一个人
+representational projection. How do we solve this problem? When human beings look at a
+
+13
+00:01:00,970 --> 00:01:05,549
+二维图像或照片，我们想象三维结构和
+two dimensional image or a photograph, we imagine the three dimensional structure and
+
+14
+00:01:05,549 --> 00:01:10,759
+来自我们对3D世界的体验，我们通过我们获得的体验
+that comes from our experience of 3D worlds, the experiences that we've gain through our
+
+15
+00:01:10,759 --> 00:01:16,430
+整个人生。我将谈谈人类的一些机制
+whole lives. And I'm going to talk a little bit about some of the mechanism by which human
+
+16
+00:01:16,430 --> 00:01:22,400
+众生填补了这个缺失的维度。特别是我将谈论双目
+beings fill in this missing dimension. In particular I'm going to talk about binocular
+
+17
+00:01:22,400 --> 00:01:26,799
+立体声，这就是我们从两个摄像头获取信息的方式，比如我们的两只眼睛
+stereo and that's how we take information from two cameras, like the two eyes that we
+
+18
+00:01:26,799 --> 00:01:32,549
+在我们的头脑中，重新创造三维世界。这是非常普遍的
+have in our heads and recreate three dimensional world from that. And this is a very common
+
+19
+00:01:32,549 --> 00:01:36,100
+机器人技术称为“立体视觉”。
+technique in robotics called "Stereo Vision".
+

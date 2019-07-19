@@ -1,0 +1,235 @@
+1
+00:00:03,790 --> 00:00:08,960
+好的，这里我们在MATLAB中，我已经将两个图像加载到我的工作区中。我可以
+Okay, here we are in MATLAB and I've already loaded two images into my workspace. I can
+
+2
+00:00:08,960 --> 00:00:14,450
+显示这两个。我将它们都放入一个单元格数组中，艺术家的功能就是这样
+display these two. I put them both into a cell array and the artist's function will
+
+3
+00:00:14,450 --> 00:00:17,970
+我们可以在这里看到它们彼此相邻。
+display them next to each other as we can see here.
+
+4
+00:00:17,970 --> 00:00:22,020
+这里的两幅图像清楚地来自不同的观点。现在我要去的地方
+The two images\hhere are clearly taken from a different viewpoints. Now what I'm going
+
+5
+00:00:22,020 --> 00:00:26,980
+要做的是计算兴趣点，特征点，特征点
+to do is to compute the interest points, the feature points, the distinctive points in
+
+6
+00:00:26,980 --> 00:00:32,090
+我们可能能够在一个图像和另一个图像之间匹配这些图像中的每一个。
+each of these images that we're likely to be able to match between one image and another.
+
+7
+00:00:32,090 --> 00:00:36,360
+现在已经创建了许多不同类型的特征检测器
+Now there are a whole lot of different sorts of feature detectors that have been created
+
+8
+00:00:36,360 --> 00:00:40,470
+多年来通过计算机视觉研究人员。我们要去的特殊探测器
+by computer vision researchers over the years. The particular detector that we're going to
+
+9
+00:00:40,470 --> 00:00:46,550
+在这里使用被称为冲浪探测器，我使用函数isurf和我调用它
+use here is called the surf detector and I invoke that using the function isurf and I
+
+10
+00:00:46,550 --> 00:00:54,980
+传递图像。这是结果。冲浪探测器已发现2,667有趣
+pass in the image. And here's the result. The surf detector has found 2,667 interesting
+
+11
+00:00:54,980 --> 00:01:01,350
+或场景中的独特角落功能。可能找到的点数
+or unique corner features within the scene. Points that are likely to be able to be located
+
+12
+00:01:01,350 --> 00:01:06,740
+在同一场景的另一个图像中，但取自不同的视点。
+in another image of that same scene, but taken from a different view point.
+
+13
+00:01:06,740 --> 00:01:12,860
+让我们看一下找到的点。我要做的是显示图像
+Let's have a look at the points that is found. What I'm going to do is to display the image
+
+14
+00:01:12,860 --> 00:01:17,520
+再次。它就在那里。而我只是想让它看起来有点暗
+again. There it is there. And I'm just going to make it appear a little bit dark using
+
+15
+00:01:17,520 --> 00:01:25,080
+彩色地图菜单栏。工作空间变量F1是冲浪点特征对象的矢量。
+the colour map menu bar. The workspace variable F1 is a vector of surf point feature object.
+
+16
+00:01:25,080 --> 00:01:31,810
+这是一个2,667长的矢量，这些功能是从最独特的
+It's a vector that's 2,667 long and these features are ordered from the most distinctive
+
+17
+00:01:31,810 --> 00:01:35,860
+功能最小的特色。所以我要做的就是拿第一个
+feature to the least distinctive feature. So what I'm going to do is to take the first
+
+18
+00:01:35,860 --> 00:01:42,659
+200个元素。这些是200个最强大的功能，我将绘制它们并且我要去
+200 elements. These are 200 strongest features and I'm going to plot them and I'm going to
+
+19
+00:01:42,659 --> 00:01:49,400
+将它们描绘成白色钻石。在这里，我们可以看到冲浪的独特功能
+plot them as white diamonds. And here we can see the distinctive features that the surf
+
+20
+00:01:49,400 --> 00:01:55,760
+算法已检测到。其中一些与树木中非常明显的特征相关联但是
+algorithm has detected. A number of them associated with very obvious features in the trees but
+
+21
+00:01:55,760 --> 00:02:00,369
+其中一些与建筑的独特特征相关联。阳台的角落
+a number of them were attached to distinctive features on the building. The corners of balconies
+
+22
+00:02:00,369 --> 00:02:02,710
+和那栋建筑物上的其他锋利边缘。
+and other sharp edges on that building.
+
+23
+00:02:02,710 --> 00:02:09,920
+我们现在要做的是计算其他图像的冲浪特征。我做
+What we are going to do now is to compute the surf features for the other image. I do
+
+24
+00:02:09,920 --> 00:02:18,749
+它以一种非常相似的方式。花一点时间来计算。而这次它发现了2,448个角落
+it in a very similar way. Takes a moment to compute. And this time it's found 2,448 corner
+
+25
+00:02:18,749 --> 00:02:24,239
+图像编号2中的功能。现在，图像编号1中的一些功能正在进行中
+features in image number 2. Now some of the features found in image number 1 are going
+
+26
+00:02:24,239 --> 00:02:30,329
+匹配图像编号2中的功能。我们可以找到匹配的功能，
+to match features that are found in image number 2. And we can find those matching features,
+
+27
+00:02:30,329 --> 00:02:37,409
+通过使用要素对象的匹配方法的相应要素。
+the corresponding features by using the match method of the feature object.
+
+28
+00:02:37,409 --> 00:02:44,260
+所以它的作用是将矢量F2中的所有特征与中的所有特征相匹配
+So what this does is to match all the features in the vector F2 with all features in the
+
+29
+00:02:44,260 --> 00:02:53,560
+向量F1并返回一个匹配对象和匹配对象，我可以在这里显示它的值，
+vector F1 and return a match object and the match object, I can display its value here,
+
+30
+00:02:53,560 --> 00:02:59,209
+表示有841个对应点。所以有2000个奇怪的角落功能
+indicates that there are 841 corresponding points. So there is 2,000 odd corner features
+
+31
+00:02:59,209 --> 00:03:03,980
+在一张图像中，第二张图像中有2,000个奇数角。匹配过程
+in one image, 2,000 odd corner features this in the second image. The matching process
+
+32
+00:03:03,980 --> 00:03:08,499
+发现841被认为是对应的对。
+is found 841 that are believes are corresponding pairs.
+
+33
+00:03:08,499 --> 00:03:15,180
+现在是另一个对象，其中一个方法是P.我要向上滚动到顶部
+Now in is another object and one of it's methods is P. I'm going to scroll up to the top of
+
+34
+00:03:15,180 --> 00:03:19,480
+这个相当大的展示在这里。我们可以看到所有这些数字都乘以
+this rather large display here. We can see that all of these numbers are multiplied by
+
+35
+00:03:19,480 --> 00:03:20,480
+1000。
+1,000.
+
+36
+00:03:20,480 --> 00:03:27,890
+那么这就是说这是坐标1,007和354的点。它匹配
+So what is this saying it's that the point at coordinate 1,007 and 354. It matches the
+
+37
+00:03:27,890 --> 00:03:35,879
+点在第二图像中的坐标791和383。所以这个矩阵，每个角落
+point where the coordinate 791 and 383 in the second image. So this matrix, each corner
+
+38
+00:03:35,879 --> 00:03:40,419
+表示两个图像上的一对对应坐标。
+that represents a pair of corresponding coordinates across the two images.
+
+39
+00:03:40,419 --> 00:03:45,909
+现在，这很难解释。所以我要做的就是再次展示
+Now, this is rather difficult to interpret. So what I'm going to do is to display again
+
+40
+00:03:45,909 --> 00:03:52,769
+这两个图像。图1和图像2彼此相邻，我们有它。一次
+the two images. Image 1 and image 2 next to each other and there we have it. And once
+
+41
+00:03:52,769 --> 00:03:57,859
+再说一次，我要把它变得更暗一些。而现在我要做的就是
+again, I'm going to make that a little bit darker. And now what I'm going to do is to
+
+42
+00:03:57,859 --> 00:04:03,129
+绘制所有这些匹配的子集。我不想要他们所有人。我会拿一百强
+plot a subset of all these matches. I don't want all of them. I'll take a hundred strongest
+
+43
+00:04:03,129 --> 00:04:09,919
+两个图像之间的匹配，这是另一个匹配对象，现在我要去
+matches between the two images and that's another match object and now I'm going to
+
+44
+00:04:09,919 --> 00:04:15,139
+用白线绘制。所以我要做的是绘制白线或加入100
+plot that with white lines. So what I'm going to do is to plot white lines or join the 100
+
+45
+00:04:15,139 --> 00:04:21,370
+图像1和图像2之间的最强功能。现在并非所有这些匹配都是完美的
+strongest features between image 1 and image 2. Now not all these matches will be perfect
+
+46
+00:04:21,370 --> 00:04:25,340
+但是如果我们看一些线条，我们可以看到它们非常清楚地加入了相应的线条
+but if we look at some of the lines, we can see that they very clearly join corresponding
+
+47
+00:04:25,340 --> 00:04:27,760
+两个图像中的功能。
+features in the two images.
+

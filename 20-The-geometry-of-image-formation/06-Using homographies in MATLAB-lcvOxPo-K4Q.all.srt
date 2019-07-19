@@ -1,0 +1,110 @@
+1
+00:00:03,140 --> 00:00:07,140
+让我们使用前面的MATLAB示例来说明关于单应性的一些原则。第一
+Let's use the previous MATLAB example to illustrate some principles around homographies. First
+
+2
+00:00:07,149 --> 00:00:12,870
+我要做的就是关闭这两个窗口并创建一个名为Little的新变量
+thing I'm going to do is to close these 2 windows and create a new variable called Little
+
+3
+00:00:12,870 --> 00:00:18,500
+P，包含那些世界点的投影。开始了。
+P, which contains the projection of those world points. Here we go.
+
+4
+00:00:18,500 --> 00:00:23,019
+因此，这是该摄像机所观察到的点的图像平面坐标
+So, this is the image plane coordinates of the points as viewed by that camera up in
+
+5
+00:00:23,019 --> 00:00:30,330
+空气。世界点P是一组3维坐标。注意Z坐标
+the air. The world points P are a set of 3 dimensional coordinates. Note that the Z coordinate
+
+6
+00:00:30,330 --> 00:00:34,910
+所有这些点都等于0.所以，我要创建一个新的向量，只有P和
+of all of these points is equal to 0. So, I'm going to create a new vector, just P and
+
+7
+00:00:34,910 --> 00:00:41,940
+它只是前两行，它包含所有列。所以，这是Q.所以，Q是
+it's just the first 2 rows and it contains all of the columns. So, this is Q. So, Q are
+
+8
+00:00:41,940 --> 00:00:47,879
+相机正在观察的地平面上的一组点坐标和P.
+a set of coordinates of points on the ground plane that the camera is looking at and P
+
+9
+00:00:47,879 --> 00:00:53,120
+是一个像素坐标在视图中从那个相机在空中，现在
+is a set of pixel coordinates in the view from that camera up in the air and now that
+
+10
+00:00:53,120 --> 00:01:00,000
+我有这两组相应的二维点，我可以计算单应性。我会用的
+I have these 2 sets of corresponding 2-D points, I can compute an homography. I'll just use
+
+11
+00:01:00,000 --> 00:01:06,030
+单应性函数和我传递第一组点，小P和第二组
+the homography function and I pass in the first set of points, little P and the second
+
+12
+00:01:06,030 --> 00:01:11,310
+点集，Q和这里是已经计算的单应矩阵。
+set of points, Q and here is the homography matrix that's been computed.
+
+13
+00:01:11,310 --> 00:01:16,450
+现在我有单应性H，我可以将它应用于单个点或多个点。
+Now that I have the homography H, I can apply it to a single point or to multiple points.
+
+14
+00:01:16,450 --> 00:01:21,189
+为了帮助我，有一个名为'homtrans'的工具箱辅助函数应用了
+To help me with that, there is a toolbox helper function called 'homtrans' which applies the
+
+15
+00:01:21,189 --> 00:01:28,340
+单应性H到像素组P.这是我们的图像平面坐标和结果
+homography H to the set of pixels P. This is our image plane coordinates and the result
+
+16
+00:01:28,340 --> 00:01:32,590
+是地面上点的坐标集。
+is the set of coordinates of points on the ground.
+
+17
+00:01:32,590 --> 00:01:37,030
+我们已经在图像中映射了一组点，其坐标以单位为单位进行测量
+We have mapped a set of points in the image whose coordinates are measured in units of
+
+18
+00:01:37,030 --> 00:01:41,670
+将像素分成地平面上的一组点，并描述其中的坐标
+pixels into a set of points on the ground plane and there coordinates are described
+
+19
+00:01:41,670 --> 00:01:47,399
+以米为单位。同样地，我可以使用单应矩阵的逆来反过来。
+in units of metres. Similarly, I can use the inverse of the homography matrix to go the other way.
+
+20
+00:01:48,079 --> 00:01:54,070
+所以现在，我传入地面上的点的坐标，结果是一组
+So now, I pass in the coordinates of the points on the ground and the result is the set of
+
+21
+00:01:54,070 --> 00:01:59,469
+图像平面坐标。因此，如果我想映射，单应性是一个非常有用的工具
+image plane coordinates. So, the homography is a really useful tool if I want to map the
+
+22
+00:01:59,469 --> 00:02:04,020
+一个平面与另一个平面之间的点坐标。
+coordinates of points between one plane and another.
+

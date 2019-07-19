@@ -1,0 +1,350 @@
+1
+00:00:03,550 --> 00:00:08,599
+在之前的讲座中，我们介绍了姿势和姿势的概念;一种描述方式
+In the previous lecture we introduced the notion of pose and poses; a way of describing
+
+2
+00:00:08,599 --> 00:00:14,990
+一个坐标系相对于另一个坐标系的平移和方向。
+both the translation and the orientation of one coordinate frame with respect to another.
+
+3
+00:00:14,990 --> 00:00:20,449
+我们使用的符号基于希腊字母ksi，我们用它来表示姿势
+And the notation we used is based on the Greek letter ksi and we used that to represent pose
+
+4
+00:00:20,449 --> 00:00:24,949
+我们用字母B下标来表示我们正在谈论这个姿势
+and we used the letter B the subscript to indicate that we're talking about the pose
+
+5
+00:00:24,949 --> 00:00:29,890
+坐标框架B和前导索引，在这种情况下为A，表示该
+of the coordinate frame B and the leading index, in this case A, to indicate that the
+
+6
+00:00:29,890 --> 00:00:37,670
+姿势是关于坐标框架A.因此我们将此符号读作B相对于A的姿势。
+pose is with respect to coordinate frame A. So we read this symbol as the pose of B with respect to A.
+
+7
+00:00:38,260 --> 00:00:43,460
+三维事物并没有太大的不同，我们再一次使用这个抽象的概念
+Things are not much different in 3-dimensions, once again we use this abstract notion of
+
+8
+00:00:43,460 --> 00:00:49,010
+由希腊字母ksi代表的姿势，现在我们代表翻译和方向
+pose represented by Greek letter ksi, and now we represent the translation and orientation
+
+9
+00:00:49,010 --> 00:00:54,320
+一个三维坐标系相对于另一个的三维坐标系。后来在这个讲座
+of one three-dimensional coordinate frame with respect to another. Later in this lecture
+
+10
+00:00:54,320 --> 00:00:59,390
+我们将讨论ksi的具体实现，它实际上意味着什么
+we’ll talk about concrete implementations of ksi, what it actually means in terms of
+
+11
+00:00:59,390 --> 00:01:05,220
+您可以计算的东西，但现在只需将其视为抽象符号。
+things that you can compute with, but for now just consider that as an abstract symbol.
+
+12
+00:01:05,220 --> 00:01:09,890
+符号与二维情况相同，我们读取此符号
+The notation is the same as it is for the 2-dimensional case and we read this symbol
+
+13
+00:01:09,890 --> 00:01:15,790
+这里是坐标系B相对于坐标系A的姿势
+here as being the pose of coordinate frame B with respect to coordinate frame A. And
+
+14
+00:01:15,790 --> 00:01:20,940
+记住这个姿势有两个组成部分，一个平移组件;那就是距离
+remembering that pose has got two components, a translational component; that's the distance
+
+15
+00:01:20,940 --> 00:01:26,710
+在框架A和框架B的起源与旋转部件之间;我该如何旋转
+between the origins of frame A and frame B, and a rotational component; how do I rotate
+
+16
+00:01:26,710 --> 00:01:33,790
+坐标框架A使其轴与坐标框架B的轴平行。
+coordinate frame A so that its axes are parallel to the axes of coordinate frame B.
+
+17
+00:01:33,790 --> 00:01:39,630
+在三维中，描述对象的方向并不那么简单。考虑一下
+In 3-dimensions it is not as simple to describe the orientation of an object. Consider this
+
+18
+00:01:39,630 --> 00:01:45,780
+飞机。它可以通过多种方式移动。它可以向上和向下倾斜
+airplane. There are a number of ways in which it can move. It can pitch up and down, it
+
+19
+00:01:45,780 --> 00:01:51,510
+可以向右滚动或者它可以向左滚动，它可以偏向右侧或向右侧偏航
+can roll to the right or it can roll to the left, and it can yaw to the right or to the
+
+20
+00:01:51,510 --> 00:01:58,930
+剩下。因此，有许多参数可以描述这个物体在太空中的方向。
+left. So there are number of parameters that describe the orientation of this body in space.
+
+21
+00:01:58,930 --> 00:02:04,340
+因此，我们将这种形式化的方式再次类似于我们为此做的
+So the way that we are going to formalise this is again similar to what we did for the
+
+22
+00:02:04,340 --> 00:02:08,979
+二维情况，我们再次将坐标框架附加到飞机上。
+2-dimensional case, and again we attach a coordinate frame to the aircraft.
+
+23
+00:02:08,979 --> 00:02:12,980
+这里的另一个坐标框架，一个蓝色的坐标框架，我将把它固定到飞机上
+Another coordinate frame here, a blue one and I'm going to fix it to the aircraft with
+
+24
+00:02:12,980 --> 00:02:17,860
+x轴指向前方，这意味着y轴指向机翼和机翼
+the x-axis pointing forward and that means that the y-axis points over the wing and the
+
+25
+00:02:17,860 --> 00:02:23,700
+z轴指向上方。所以现在谈到描述这架飞机的姿势时
+z-axis points upward. So now when it comes to describing the pose of this aircraft it's
+
+26
+00:02:23,700 --> 00:02:28,200
+得到一个平移分量，这是该坐标原点的位置
+got a translational component, that's the position of the origin of this coordinate
+
+27
+00:02:28,200 --> 00:02:33,600
+框架相对于该坐标系的原点，然后有方向
+frame with respect to the origin of this coordinate frame, and then there is the orientation of
+
+28
+00:02:33,600 --> 00:02:38,660
+该坐标系相对于该坐标系。
+this coordinate frame with respect to this coordinate frame.
+
+29
+00:02:38,660 --> 00:02:43,970
+正旋转的方向是重要的概念，并且是二维的
+The direction of the positive rotation is an important concept, and in a 2-dimensional
+
+30
+00:02:43,970 --> 00:02:49,870
+案件轮换被定义为在这个方向上是积极的。如果我们考虑二维
+case rotation was defined as being positive in this direction. If we consider a 2-dimensional
+
+31
+00:02:49,870 --> 00:02:54,950
+坐标框架，然后如果我们从屏幕上增长一个z轴，那就相当于
+coordinate frame, then if we grow a z-axis out of the screen, that is the equivalent
+
+32
+00:02:54,950 --> 00:03:01,600
+右手三维坐标系。所以这个正角度约定在两个维度上
+right handed 3-dimensional coordinate frame. So this positive angle convention in two dimensions
+
+33
+00:03:01,600 --> 00:03:08,010
+对应于围绕z轴的正向旋转，该正向旋转从屏幕进入我们。
+corresponds to a positive rotation about the z-axis which is coming at us out of the screen.
+
+34
+00:03:08,010 --> 00:03:14,240
+当我们谈论围绕轴的旋转时，我们定义了正旋转的方向
+When we are talking about rotations around axes we define the direction of positive rotation
+
+35
+00:03:14,240 --> 00:03:19,630
+再次使用右手规则。所以我用右手拿着我的拇指指向
+again using a right hand rule. So I take my right hand and I point my thumb along the
+
+36
+00:03:19,630 --> 00:03:24,250
+轴-在这种情况下，它是z轴，我的手指和方向卷曲
+axis - in this case it's the z-axis, and I curl my fingers around, and the direction
+
+37
+00:03:24,250 --> 00:03:29,330
+卷曲的方向，我的手指尖是正方向。所以这
+of the curl, the direction of the tip of my fingers is the positive direction. So this
+
+38
+00:03:29,330 --> 00:03:36,190
+是围绕z轴的正旋转。类似地围绕x轴旋转-这个
+is a positive rotation around the z-axis. Similarly a rotation around the x-axis - this
+
+39
+00:03:36,190 --> 00:03:43,250
+围绕x轴的正旋转，这是围绕y轴的正旋转。
+a positive rotation around the x-axis and this is a positive rotation around the y-axis.
+
+40
+00:03:43,250 --> 00:03:49,819
+当我们先前看到二维坐标系时，我们也有一个规则
+When we looked previously at the 2-dimensional coordinate frame we also had a rule for the
+
+41
+00:03:49,819 --> 00:03:54,980
+二维正旋转方向。这是我们的二维坐标系
+direction of positive rotation in two dimensions. Here's our 2-dimensional coordinate frame
+
+42
+00:03:54,980 --> 00:04:01,430
+再次，这是我们的x和y轴位于顶部。所以我们定义为正向轮换
+again, here is our x and y-axis lying on top. So what we defined as a positive rotation
+
+43
+00:04:01,430 --> 00:04:09,319
+对于二维坐标系实际上是围绕z轴的正旋转，如果
+for a 2-dimensional coordinate frame is actually a positive rotation around the z-axis, if
+
+44
+00:04:09,319 --> 00:04:15,770
+你可以想象一个z轴在那里。在机器人技术中，与许多其他工程领域一样，
+you could imagine a z-axis being there. In robotics, as in many other areas of engineering,
+
+45
+00:04:15,770 --> 00:04:20,370
+将坐标框架附加到对象上非常有用和重要。现在是
+it's really useful and important to attach coordinate frames to objects. Now here is
+
+46
+00:04:20,370 --> 00:04:26,090
+在飞行中我们可以附加右手坐标系的直升机的例子;
+an example of a helicopter in flight and where we can attach a right-handed coordinate frame;
+
+47
+00:04:26,090 --> 00:04:32,129
+x轴指向前方，y轴指向右侧，z轴指向正下方。一旦
+x-axis pointing forward, a y-axis out to the right, and a z-axis going straight down. Once
+
+48
+00:04:32,129 --> 00:04:36,990
+我们有一个连接到车辆的坐标框架，然后我们可以描述它的方向
+we have a coordinate frame attached to the vehicle, we can then describe its orientation
+
+49
+00:04:36,990 --> 00:04:41,900
+相对于另一个坐标系。我们也可以尊重其动议
+with respect to another coordinate frame. We can also describe its motion with respect
+
+50
+00:04:41,900 --> 00:04:48,069
+到这个特定的坐标系。向前是在x方向，向下是在z方向
+to this particular coordinate frame. Forward is in the x direction, down is in its z direction
+
+51
+00:04:48,069 --> 00:04:54,330
+等等。在工业臂式机器人的例子中，我们可能有三维
+and so on. In the example of an industrial arm type robot, we might have a 3-dimensional
+
+52
+00:04:54,330 --> 00:04:58,490
+连接到机器人底座的坐标框，以指示它的相对位置
+coordinate frame attached to the base of the robot to indicate where it is with respect
+
+53
+00:04:58,490 --> 00:05:03,650
+到工厂的世界坐标框架，我们将附加另一个3D坐标框架
+to the world coordinate frame of the factory and we will attach another 3D coordinate frame
+
+54
+00:05:03,650 --> 00:05:08,270
+对于夹子，按照惯例，z轴指向手指的方向，
+to the gripper, and by convention the z-axis points outward in the directions of the fingers,
+
+55
+00:05:08,270 --> 00:05:12,509
+它可能接近一个物体来描述拾取的方向。按照惯例，y轴
+the direction that it might approach an object for describing a pick up. The y-axis by convention
+
+56
+00:05:12,509 --> 00:05:17,949
+是指尖之间的方向，然后我们在x轴上绘制，以便创建一个合适的
+is the direction between the finger tips, then we draw in the x-axis so as to create a proper
+
+57
+00:05:17,949 --> 00:05:20,900
+右手三维坐标系。
+right-handed 3-dimensional coordinate frame.
+
+58
+00:05:20,900 --> 00:05:25,969
+如果我们查看非常着名的工程项目的细节，如阿波罗农历
+If we look into the details of very famous engineering projects like the Apollo Lunar
+
+59
+00:05:25,969 --> 00:05:29,759
+任务，我们会查看一些在线可用的文档，我们在这里
+Missions, and we look at some of the documentations which are all available online and here we
+
+60
+00:05:29,759 --> 00:05:35,889
+可以看到Apollo命令模块的x，y和z轴。同样对于农历
+can see the x, y and z axis for the Apollo command module. And similarly for the Lunar
+
+61
+00:05:35,889 --> 00:05:42,240
+模块文档显示x轴垂直向上，z轴向前
+module the documentation shows that the x-axis is vertically upwards and the z axis is forward
+
+62
+00:05:42,240 --> 00:05:47,879
+在前门的方向。这是一张巨大的土星五号火箭的照片
+in the direction of the front door. This is a picture of the massive Saturn V rocket which
+
+63
+00:05:47,879 --> 00:05:52,620
+让宇航员登上月球并返回，如果我们仔细查看文档，
+got the astronauts to the moon and back, and again if we look at the documentation carefully,
+
+64
+00:05:52,620 --> 00:05:57,539
+我们可以清楚地看到火箭早期阶段的轴线。某些
+we can see that the axes for the early stages of the rocket are clearly indicated. Some of the
+
+65
+00:05:57,539 --> 00:06:01,400
+坐标框架约定实际上是在火箭外面绘制的，并且
+coordinate frame conventions are actually painted on the outside of the rocket, and
+
+66
+00:06:01,400 --> 00:06:07,029
+如果我们仔细观察这个黑色环在这里所谓的仪器模块，
+if we look closely at this black ring up here what's called the instrumentation module,
+
+67
+00:06:07,029 --> 00:06:11,089
+在肉体中实际上是一个非常庞大的装置，我们可以清楚地看到这里是画的
+which in the flesh is actually quite a massive device, we can see quite clearly here is painted
+
+68
+00:06:11,089 --> 00:06:15,839
+正z方向的方向和背面的方向我们可以看到方向
+the direction of the positive z direction and the one at the back we can see the direction
+
+69
+00:06:15,839 --> 00:06:22,490
+其负y轴。该模块实际上是土星的惯性测量单元
+of its negative y-axis. This module is effectively the inertial measurement unit for the Saturn
+
+70
+00:06:22,490 --> 00:06:28,109
+Vrocket，功能现在可能与您口袋里的手机相当。
+V rocket, functionality now is probably equivalent to what you have in the phone in your pocket.
+

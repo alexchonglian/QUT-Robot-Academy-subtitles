@@ -1,0 +1,75 @@
+1
+00:00:04,000 --> 00:00:09,320
+我可以显示像素的值，而不仅仅显示各个像素的值
+Instead of just displaying values of individual pixels I can display the values of the pixels
+
+2
+00:00:09,320 --> 00:00:13,130
+沿着场景中的一条线。我们来看看这个。
+along a line in the scene. Let’s have a look at this.
+
+3
+00:00:13,130 --> 00:00:17,041
+要做到这一点，我在这里使用线路按钮，我点击这里的第一点，我要去
+To do that I use the line button here and I click the first point here and I am going
+
+4
+00:00:17,041 --> 00:00:22,520
+单击此处的第二个点。在原始图像和另一个图像上绘制一条线
+to click a second point over here. Draws a line on the original image and in the other
+
+5
+00:00:22,520 --> 00:00:28,030
+窗口我们看到我们称之为强度轮廓。所以我们可以看到强度是最初的
+window we see what we call an intensity profile. So we can see that the intensity is initially
+
+6
+00:00:28,030 --> 00:00:34,230
+非常明亮-我们在墙上-然后当我们向右移动时
+quite bright—we’re on the wall—then as we move further towards the right along
+
+7
+00:00:34,230 --> 00:00:39,640
+那条线强度下降，在门口变得很暗。如果你走出了
+that line the intensity drops, gets quite dark in the doorway. If you come out of the
+
+8
+00:00:39,640 --> 00:00:44,030
+门口再次穿过一段墙，像素值得到了很大的价值，它
+doorway and cross a section of wall again the pixel values have got a large value, it
+
+9
+00:00:44,030 --> 00:00:49,090
+是一堵明亮的墙，然后当我们经历下一个时，它们会下降到较低的值
+is a bright wall, and then they fall down to a lower value as we go through the next
+
+10
+00:00:49,090 --> 00:00:53,090
+窗口。所以，这是像素值的模式
+window. So, this is the pattern of pixel values as
+
+11
+00:00:53,090 --> 00:01:02,480
+我们沿着原始场景中的一条线移动。我们可以做的另一件事是创造什么
+we move along a line within the original scene. Another thing we can do is to create what
+
+12
+00:01:02,480 --> 00:01:08,040
+被称为感兴趣的区域，有效地放大到其中的矩形区域
+is called a region of interest, effectively to zoom in onto a rectangular region within
+
+13
+00:01:08,040 --> 00:01:12,300
+图片。那么让我们来看看。我将做的是删除此个人资料
+the image. So let’s have a look at that. What I will do is I will remove this profile
+
+14
+00:01:12,300 --> 00:01:19,799
+图像，我将点击缩放按钮，我将以交互方式套接图像的一个区域
+image and I will click the zoom button, and I will lasso an area of the image interactively
+
+15
+00:01:19,799 --> 00:01:25,290
+结果是一个较小的图像，其中包含原始图像的子区域。
+and the result is a smaller image which contains a sub region of the original image.
+

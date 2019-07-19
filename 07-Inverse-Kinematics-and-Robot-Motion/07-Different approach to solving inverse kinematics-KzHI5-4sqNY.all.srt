@@ -1,0 +1,340 @@
+1
+00:00:03,889 --> 00:00:09,000
+让我们回顾一下我们在解决反向运动学问题方面所学到的东西
+Let's recap what we've learnt about solving the inverse Kinematic problem for particular
+
+2
+00:00:09,000 --> 00:00:14,529
+机器人手臂。到目前为止，我们已经查看了分析解决方案，这涉及到我们创建模型
+robot arms. So far we've looked at the analytic solution and that involved us creating a model
+
+3
+00:00:14,529 --> 00:00:20,249
+机器人的关节和链接。我们写下正向运动学的方程式
+of the robot's joints and links. We write down the equations for the forward kinematics
+
+4
+00:00:20,249 --> 00:00:25,169
+机器人手臂，这是一个相对简单的事情。
+of the robot arm and that's relatively a straightforward thing to do.
+
+5
+00:00:25,169 --> 00:00:29,369
+接下来是困难的部分，我们需要写下很多方程式
+Next comes the hard part, where we need to write down a lot of equations in attempt to
+
+6
+00:00:29,369 --> 00:00:35,110
+解决未知的关节变量，这需要一些人类的洞察力。经常在
+solve for the unknown joint variables and that requires some human insight. Often when
+
+7
+00:00:35,110 --> 00:00:38,770
+你试图做到这一点，你会发现自己在你来之前要去一些盲道
+you're trying to do this, you'll find yourself going down some blind alleys before you come
+
+8
+00:00:38,770 --> 00:00:42,989
+退出并确定获得解决方案的正确方法。
+back out and determine the right way to get to the solution.
+
+9
+00:00:42,989 --> 00:00:48,730
+这个过程可以使用计算机代数包自动化;你可以编写那些软件
+This process can be automated, using a computer algebra package; you can write software that
+
+10
+00:00:48,730 --> 00:00:54,949
+将解决某类机器人手臂的逆运动学问题。最大的优势
+will solve the inverse kinematics for certain classes of robot arms. The great advantage
+
+11
+00:00:54,949 --> 00:01:00,190
+解析解决方案是它明确地显示了多个配置
+of the analytic solution is that it explicitly shows the multiple configurations that the
+
+12
+00:01:00,190 --> 00:01:06,380
+机器人手臂可以进入。所以对于我们的两个链接机械手，我们展示了两个中间配置
+robot arm can be in. So for our two link manipulator, we showed two configurations with the middle
+
+13
+00:01:06,380 --> 00:01:10,590
+接头位于对角​​线下方或对角线上方。
+joint either below the diagonal line or above the diagonal line.
+
+14
+00:01:10,590 --> 00:01:15,750
+对于Puma560机器人，我们展示了配置，就像左撇子或者左撇子一样
+For the Puma 560 robot, we showed configurations where it's like a left handed person or a
+
+15
+00:01:15,750 --> 00:01:22,780
+右撇子等等。当您使用时，会明确地显示多种配置
+right handed person and so on. The multiple configurations come out explicitly when you
+
+16
+00:01:22,780 --> 00:01:26,119
+解决分析方程。
+solve the analytic equations.
+
+17
+00:01:26,119 --> 00:01:30,119
+分析解决方案的另一个优点是你最终为表达式编写表达式
+Another advantage of the analytic solution is you end up writing expressions for the
+
+18
+00:01:30,119 --> 00:01:35,350
+关于末端执行器姿势的关节角度，它们非常紧凑，这意味着
+joint angles in terms of the end effector pose and they are quite compact and that means
+
+19
+00:01:35,350 --> 00:01:38,040
+它们执行起来非常快。
+that they are very fast to execute.
+
+20
+00:01:38,040 --> 00:01:42,619
+随着机器人中关节数量的增加，问题变得越来越困难。
+The problem becomes increasingly difficult as the number of joints in the robot increases.
+
+21
+00:01:42,619 --> 00:01:48,219
+在前面的部分中，我们得到了一个简单的两个关节机器人的解决方案
+In an earlier section we derived the solution for a simple two joint robot and already that
+
+22
+00:01:48,219 --> 00:01:53,189
+花了很多幻灯片来提出解决方案。什么来到我们的
+took quite a number of slides in order to come up with the solution. What comes to our
+
+23
+00:01:53,189 --> 00:01:59,350
+救援是几十年来，聪明的人已经确定了反向运动解决方案
+rescue is that over many decades, smart people have determined the inverse kinematic solutions
+
+24
+00:01:59,350 --> 00:02:04,590
+对于特定的机器人或特定类型的机器人，所以他们已经完成了艰苦的工作
+for particular robots or for particular classes of robots, so they've done the hard work of
+
+25
+00:02:04,590 --> 00:02:08,310
+得出解决方案，这些已发表在文献中。
+deriving the solutions and these have been published in the literature.
+
+26
+00:02:08,310 --> 00:02:11,900
+因此，如果你有一个特定的机器人，并且你正在寻找一个解决方案，那就去吧
+So if you've got a particular robot and you're looking for a solution, go and hit up the
+
+27
+00:02:11,900 --> 00:02:16,569
+文献，看看有人已经为你解决了这个问题。
+literature and see if somebody has already solved this problem for you.
+
+28
+00:02:16,569 --> 00:02:20,629
+当您尝试确定六自由度机器人的逆运动学时，
+When you're trying to determine the inverse kinematics for a six degree of freedom robot,
+
+29
+00:02:20,629 --> 00:02:25,260
+拥有所谓的“球形手腕”真的非常有用。现在是一个球形
+it's really, really useful to have what's called a "Spherical Wrist." Now a spherical
+
+30
+00:02:25,260 --> 00:02:31,459
+如图所示，腕部是三个腕关节轴都在公共点相交的腕部
+wrist is one in which the three wrist joint axes all intersect at a common point, as shown
+
+31
+00:02:31,459 --> 00:02:37,519
+在这个草图这里。几乎所有工业机器人都有球形手腕。真是太棒了
+in this sketch here. Almost all industrial robots have a spherical wrist. It's quite
+
+32
+00:02:37,519 --> 00:02:42,940
+一个复杂的机制，但它确实很简单，当涉及到确定
+a complex mechanism but it leads to great simplicity when it comes to determining the
+
+33
+00:02:42,940 --> 00:02:44,739
+机器人的反向运动学。
+inverse kinematics of the robot.
+
+34
+00:02:44,739 --> 00:02:49,620
+事实上，它的作用是让我们将问题分成两部分。它允许我们解决
+In fact what it does is allow us to partition the problem into two. It allows us to solve
+
+35
+00:02:49,620 --> 00:02:55,930
+对于机器人的末端执行器的位置，XYZ坐标然后分开
+for the position of the robot’s end effector, the XYZ co-ordinate and then separately to
+
+36
+00:02:55,930 --> 00:03:01,190
+求解机器人末端执行器的方向，即可以的方向
+solve for the orientation of the robot's end effector, that is the orientation that could
+
+37
+00:03:01,190 --> 00:03:07,170
+用滚动，俯仰，偏航角或欧拉角表示。但是会发生什么
+be expressed in terms roll, pitch, yaw angles or in terms of Euler angles. But what happens
+
+38
+00:03:07,170 --> 00:03:10,650
+如果无法确定分析解决方案？
+if it's not possible to determine the analytic solution?
+
+39
+00:03:10,650 --> 00:03:14,930
+也许机器人没有球形手腕，或者如果它太难以计算
+Perhaps the robot doesn't have a spherical wrist or what if it's just too hard to figure
+
+40
+00:03:14,930 --> 00:03:20,049
+out或者你不能费心去完成需要确定的代数页面
+out or you can't be bothered to go through the pages of algebra required to determine
+
+41
+00:03:20,049 --> 00:03:25,610
+解决方案？那么有一个替代方案，那就是找到一个数值解决方案
+the solution? Well there is an alternative and that is to find a numerical solution to
+
+42
+00:03:25,610 --> 00:03:30,980
+问题。我们总能确定机器人的前向运动学，这是相对直的
+the problem. We can always determine the forward kinematics of a robot, that's relatively straight
+
+43
+00:03:30,980 --> 00:03:36,590
+正如我们在前一讲中所展示的那样前进。如果我们知道我们想要的姿势
+forward to do as we showed in the previous lecture. If we know the desired pose of our
+
+44
+00:03:36,590 --> 00:03:42,480
+机器人，我将称之为Ksi星，然后我们所要做的就是调整关节角度
+robot, which I'm going to call Ksi star, then all we have to do is adjust the joint angles
+
+45
+00:03:42,480 --> 00:03:48,319
+直到前向运动学给出给我们的姿势Ksi等于期望值Ksi
+until the pose given to us by the forward kinematics Ksi equals the desired value Ksi
+
+46
+00:03:48,319 --> 00:03:53,909
+星。所以你可以把它想象成拥有大量的表盘，每个表盘
+star. So you could think of it perhaps as having a large number of dials, each dial
+
+47
+00:03:53,909 --> 00:03:59,209
+代表一个特定的关节角度，我只是调整所有这些表盘，直到
+represents a particular joint angle and I’m just going to adjust all of those dials until
+
+48
+00:03:59,209 --> 00:04:05,049
+机器人的末端效应器姿势等于我想要的姿势。一种更正式的描述方式
+the robot's end effector pose equals the pose that I want. A more formal way of describing
+
+49
+00:04:05,049 --> 00:04:09,010
+像这样的问题是将其表示为优化问题。
+a problem like this is to represent it as an optimization problem.
+
+50
+00:04:09,010 --> 00:04:13,840
+我想要做的是最小化正向运动学给出的相对姿势
+What I want to do is minimize the relative pose which is given by the forward kinematics
+
+51
+00:04:13,840 --> 00:04:20,250
+机器人与所需姿势的倒数复合，我想知道关节
+of the robot compounded with the inverse of the desired pose and I want to know the joint
+
+52
+00:04:20,250 --> 00:04:23,720
+导致这种最小化的角度。
+angles that cause this minimum.
+
+53
+00:04:23,720 --> 00:04:28,480
+我们主要讨论串联机器人，这些机器人是由一系列机器人组成的
+We've mostly talked about serial linked robots and these are robots formed by a chain of
+
+54
+00:04:28,480 --> 00:04:33,000
+链接，从机器人的基础开始，我们有一个链接，该链接支撑第二个
+links, starting at the base of the robot we have a link, that link holds up the second
+
+55
+00:04:33,000 --> 00:04:36,530
+链接，它保持第三个链接等等。
+link, which holds up the third link and so on.
+
+56
+00:04:36,530 --> 00:04:40,630
+机器人的另一种结构是所谓的并联机器人，如图所示
+An alternative structure for a robot is what's called a parallel link robot and that's shown
+
+57
+00:04:40,630 --> 00:04:46,220
+在右边。它们的优点是所有电机都放在底座中。
+here on the right. They have the advantage that all the motors are placed in the base.
+
+58
+00:04:46,220 --> 00:04:51,260
+这比串行链路机器人更有优势，其中每个电机不仅要支撑它
+This has advantages over a serial link robot where each motor has to hold up not only the
+
+59
+00:04:51,260 --> 00:04:55,700
+下一个链接，但也驱动链接超出该链接。
+next link but also the motor that drives the link beyond that.
+
+60
+00:04:55,700 --> 00:04:59,960
+平行连杆机器人也非常非常隆起，它们能够进行非常高速的运动。
+Parallel link robots are also very, very ridged and they're capable of very high speed motion.
+
+61
+00:04:59,960 --> 00:05:05,350
+它们用于高速，非常精确的拾取和放置操作。所以对于一个序列
+They're used for high speed, very precise, pick and place operations. So for a serial
+
+62
+00:05:05,350 --> 00:05:10,670
+链接机器人，运动学-正向运动学很容易确定，非常容易编写
+link robot, the kinematics - the forward kinematics is very easy to determine, very easy to write
+
+63
+00:05:10,670 --> 00:05:16,410
+下。然而，对于并联机器人，正向运动学非常非常复杂
+down. However for a parallel link robot, the forward kinematics is very, very complex and
+
+64
+00:05:16,410 --> 00:05:21,720
+甚至可能不存在分析形式。对于串行链接机器人，反向运动学
+an analytical form may not even exist. For a serial link robot, the inverse kinematics
+
+65
+00:05:21,720 --> 00:05:28,530
+通常是复杂的，可能不存在分析形式。但对于大多数并行链接
+is typically complex and analytic form may not exist. However for most parallel link
+
+66
+00:05:28,530 --> 00:05:33,210
+机器人，反向运动学实际上很容易确定和分析形式
+robots, the inverse kinematics is actually very easy to determine and an analytic form
+
+67
+00:05:33,210 --> 00:05:39,600
+永远存在。因此串行和并行链接机器人之间存在一些互补性;一
+always exists. So there is some complementarity between serial and parallel link robots; one
+
+68
+00:05:39,600 --> 00:05:43,820
+有一个简单的正向运动学，另一个有一个简单的反向运动学。
+has an easy forward kinematics, the other has an easy inverse kinematics.
+

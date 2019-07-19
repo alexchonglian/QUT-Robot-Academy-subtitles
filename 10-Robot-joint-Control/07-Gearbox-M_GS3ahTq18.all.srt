@@ -1,0 +1,130 @@
+1
+00:00:03,730 --> 00:00:09,100
+几乎所有电动机都与变速箱一起使用。原因是这个
+Almost all electric motors are used in conjunction with gearboxes. The reason for this is the
+
+2
+00:00:09,100 --> 00:00:14,330
+电动机产生相对低的扭矩。他们不是特别强大。但是，他们是
+electric motors produce relatively low torque. They not particularly strong. However, they are
+
+3
+00:00:14,330 --> 00:00:19,690
+能够非常快速地旋转。因此我们可以使用变速箱来换取速度
+capable of rotating very very quickly. So we can use a gearbox to trade off speed for
+
+4
+00:00:19,690 --> 00:00:24,759
+扭矩。当然，没有免费午餐和变速箱介绍一些东西
+torque. Of course, there is no such thing as a free lunch and a gearbox introduces some
+
+5
+00:00:24,759 --> 00:00:31,459
+效率低下，有一些权力损失。功率损失是在热量和声学噪声方面。
+inefficiency, there is some loss of power. That power lost is in terms of heat and acoustic noise.
+
+6
+00:00:31,460 --> 00:00:36,340
+如果你使用自行车，你可能对传动装置的概念非常熟悉。电动机
+If you use a bicycle you are probably quite familiar with the concept of gearing. Electric motors
+
+7
+00:00:36,350 --> 00:00:41,539
+能够非常快速地旋转，但它们不会产生很大的扭矩，它们有点弱。
+are capable of spinning very very quickly but they don't produce very much torque they are kind of weak.
+
+8
+00:00:41,539 --> 00:00:47,320
+现在有点像骑自行车上坡的问题。你想要权衡
+Now it's a bit like the problem of riding your bicycle uphill. You want to trade off
+
+9
+00:00:47,320 --> 00:00:53,699
+大量的踏板旋转，以减少你的负荷
+a large number of rotations of the pedals in order to reduce the load that you have
+
+10
+00:00:53,699 --> 00:00:59,550
+施加在那些踏板上。你需要以很大的速度换取大量的扭矩。
+to exert on those pedals. You are trading off a lot of speed for a large amount of torque.
+
+11
+00:00:59,550 --> 00:01:04,320
+对于电动机来说，它与自行车是一样的，你有一个小的链轮
+For an electric motor it's the same thing and as with the bicycle you have a small sprocket
+
+12
+00:01:04,320 --> 00:01:09,080
+在踏板的前部，后轮上有一个更大的链轮。因此对于
+at the front on the pedals, and you have a larger sprocket on the back wheel. So for
+
+13
+00:01:09,080 --> 00:01:15,800
+电动机的每次旋转，我们只有输出轴的半个旋转
+every rotation of the electric motor, we only have half a rotation of the output shaft of
+
+14
+00:01:15,800 --> 00:01:20,830
+电机的变速箱。因此电机旋转很快，输出轴旋转
+the motor's gearbox. So the motor is spinning quite quickly, the output shaft is rotating
+
+15
+00:01:20,830 --> 00:01:26,990
+相当缓慢，但电机的扭矩被齿轮比放大。
+rather slowly but the torque of the motor is amplified by the gear ratio.
+
+16
+00:01:26,990 --> 00:01:32,790
+这里我们有一台带单级减速箱的电机。我们称之为减速箱因为
+Here we have a motor with a single stage reduction gearbox. We call it a reduction gearbox because
+
+17
+00:01:32,790 --> 00:01:38,940
+对于电机的每次旋转，输出轴旋转不到一次。当我们提到
+for every rotation of the motor, the output shaft rotates less than once. When we refer
+
+18
+00:01:38,940 --> 00:01:44,950
+在齿轮箱的两侧，我们称之为下标所示的电机侧
+to the two sides of the gearbox we refer to as the motor side which indicated by the subscript
+
+19
+00:01:44,950 --> 00:01:52,090
+M和负载侧表示下标L.齿轮箱的比率是大写G和
+M and the load side indicated the subscript L. The ratio of the gearbox is capital G and
+
+20
+00:01:52,090 --> 00:01:57,010
+这就是大轮上的牙齿数量与小牙齿数量之比
+that's the ratio of the number teeth on the big wheel to the number teeth on the little
+
+21
+00:01:57,010 --> 00:02:00,910
+轮。对于减速齿轮箱，G大于1。
+wheel. And for a reduction gearbox G is greater than one.
+
+22
+00:02:00,910 --> 00:02:06,630
+输出转速欧米茄L在G倍欧米茄N上等于1.因此输出轴转速
+The output speed omega L is equal to 1 on G times omega N. So the output shaft speed
+
+23
+00:02:06,630 --> 00:02:13,209
+低于电机速度。输出转矩tauL等于电动机的G倍
+is lower than the motor speed. The output torque tau L is equal to G times the motor
+
+24
+00:02:13,209 --> 00:02:18,500
+扭矩tauM因此输出扭矩大于电机扭矩。这些都是根本
+torque tau M so the output torque is greater than the motor torque. These are the fundamental
+
+25
+00:02:18,500 --> 00:02:23,099
+描述变速箱特性的方程式。它降低了速度和它
+equations that describe the characteristics of a gearbox. It reduces the speed and it
+
+26
+00:02:23,099 --> 00:02:24,099
+增加扭矩。
+increases the torque.
+

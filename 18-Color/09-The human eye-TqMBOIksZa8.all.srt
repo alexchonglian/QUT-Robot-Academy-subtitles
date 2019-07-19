@@ -1,0 +1,698 @@
+1
+00:00:02,629 --> 00:00:04,905
+这个过程的最后一部分是什么
+the last part of the process is what
+
+2
+00:00:04,910 --> 00:00:08,295
+在我们的观察者眼中继续
+goes on in the eyes of the observer we
+
+3
+00:00:08,300 --> 00:00:11,145
+将此称为响应等
+refer to this as the response and like
+
+4
+00:00:11,150 --> 00:00:13,214
+响应的一切都是
+everything else the response is a
+
+5
+00:00:13,219 --> 00:00:16,185
+波长λ的函数
+function of the wavelength lambda in
+
+6
+00:00:16,190 --> 00:00:17,835
+事实上可以写出这个回应
+fact the response can be written this
+
+7
+00:00:17,840 --> 00:00:20,354
+这是波长的积分
+way it is the integral over wavelengths
+
+8
+00:00:20,359 --> 00:00:23,174
+光的入射光谱
+of the spectrum of the incoming light of
+
+9
+00:00:23,179 --> 00:00:26,415
+反射率和反应
+the reflectance and of the response of
+
+10
+00:00:26,420 --> 00:00:28,934
+那个特别的光明之眼
+the eye to light at that particular
+
+11
+00:00:28,939 --> 00:00:31,655
+波长所以我们所感受到的
+wavelength so what we sense in the
+
+12
+00:00:31,660 --> 00:00:33,675
+我们背后的感光细胞
+photoreceptor cells in the back of our
+
+13
+00:00:33,680 --> 00:00:36,705
+眼睛基本上就是这样的结果
+eye is essentially the result of this
+
+14
+00:00:36,710 --> 00:00:38,835
+特别是积分让我们看看如何
+particular integral let's see how that
+
+15
+00:00:38,840 --> 00:00:41,955
+这里的作品是一张剖面图
+works here is a cutaway diagram of the
+
+16
+00:00:41,960 --> 00:00:44,025
+我们眼睛后方的人眼
+human eye at the back of the eye we have
+
+17
+00:00:44,030 --> 00:00:46,245
+视网膜我们正在看表面
+the retina we're looking at the surface
+
+18
+00:00:46,250 --> 00:00:48,315
+视网膜我们看到很多血
+of the retina we see a lot of blood
+
+19
+00:00:48,320 --> 00:00:50,865
+血管，我们可以看到视神经
+vessels and we can see the optic nerve
+
+20
+00:00:50,870 --> 00:00:53,085
+这是将眼睛与我们联系起来的东西
+which is what connects the eye to our
+
+21
+00:00:53,090 --> 00:00:56,205
+如果我们采取横截面通过大脑
+brain if we take a cross-section through
+
+22
+00:00:56,210 --> 00:00:58,394
+视网膜在那里切片
+the retina where to slice through there
+
+23
+00:00:58,399 --> 00:01:00,615
+我们向下看，我们看到有
+we look downwards we see that there are
+
+24
+00:01:00,620 --> 00:01:02,835
+神经层和其他类型的
+layers of nerves and other sorts of
+
+25
+00:01:02,840 --> 00:01:05,475
+细胞和在这个堆栈的底部我们
+cells and at the bottom of this stack we
+
+26
+00:01:05,480 --> 00:01:08,445
+有光敏细胞和它们
+have the light-sensitive cells and they
+
+27
+00:01:08,450 --> 00:01:10,004
+看起来像这样
+look something like this
+
+28
+00:01:10,009 --> 00:01:12,195
+所以令人惊讶的是
+so what's quite surprising is that the
+
+29
+00:01:12,200 --> 00:01:14,175
+光敏细胞不在
+light-sensitive cells are not on the
+
+30
+00:01:14,180 --> 00:01:16,335
+他们实际上是视网膜的表面
+surface of the retina they are actually
+
+31
+00:01:16,340 --> 00:01:19,065
+在表面下约500微米
+about 500 micrometers below the surface
+
+32
+00:01:19,070 --> 00:01:21,434
+视网膜，所以光线落在上面
+of the retina so the light that falls on
+
+33
+00:01:21,439 --> 00:01:23,474
+视网膜必须向下挣扎
+the retina has to fight its way down
+
+34
+00:01:23,479 --> 00:01:25,544
+通过血管和神经细胞
+through blood vessels and nerve cells
+
+35
+00:01:25,549 --> 00:01:27,645
+以及各种各样的事情
+and all sorts of things to get to the
+
+36
+00:01:27,650 --> 00:01:30,525
+光敏棒和锥形细胞让我们
+light-sensitive rod and cone cells let's
+
+37
+00:01:30,530 --> 00:01:32,595
+看看他们就是这些杆细胞
+look at the rod cells they're these
+
+38
+00:01:32,600 --> 00:01:36,015
+我们看到的小虫形物体
+small worm shaped objects that we see in
+
+39
+00:01:36,020 --> 00:01:39,465
+他们包含视网膜的背面
+the back of the retina they contain a
+
+40
+00:01:39,470 --> 00:01:42,254
+化学物质叫做视紫红质，相当
+chemical called rhodopsin and is quite
+
+41
+00:01:42,259 --> 00:01:44,114
+一个重要的化学品，因为当a
+an important chemical because when a
+
+42
+00:01:44,119 --> 00:01:46,425
+光子照射它会改变它
+photon of light hits it it changes its
+
+43
+00:01:46,430 --> 00:01:49,214
+形状从它改变形状
+shape it changes its shape from this to
+
+44
+00:01:49,219 --> 00:01:51,074
+我们可以看到它的一只手臂
+that and we can see the one arm of the
+
+45
+00:01:51,079 --> 00:01:53,894
+事实上，分子是被旋转的
+molecule is in fact being spun around by
+
+46
+00:01:53,899 --> 00:01:56,235
+光子的影响就是这样
+the impact of the photon and that is
+
+47
+00:01:56,240 --> 00:01:58,245
+最终转变为电气
+eventually converted into an electrical
+
+48
+00:01:58,250 --> 00:02:00,345
+沿光学传播的信号
+signal which travels along the optical
+
+49
+00:02:00,350 --> 00:02:03,015
+神经到你大脑的视觉皮层
+nerve to the visual cortex of your brain
+
+50
+00:02:03,020 --> 00:02:05,894
+杆细胞非常敏感
+the rod cells are very very sensitive to
+
+51
+00:02:05,899 --> 00:02:08,385
+因此这些是我们使用的细胞
+light so these are the cells we use in
+
+52
+00:02:08,390 --> 00:02:10,785
+我们使用的低光条件
+low-light conditions what we use at
+
+53
+00:02:10,790 --> 00:02:13,155
+晚上和他们有线的方式
+night and the way they're wired makes
+
+54
+00:02:13,160 --> 00:02:15,065
+他们也非常敏感
+them also very sensitive to
+
+55
+00:02:15,070 --> 00:02:16,655
+这是我们用来确定的
+that's what we use to determine
+
+56
+00:02:16,660 --> 00:02:18,995
+一些东西在我们的边缘移动
+something's moving in the edge of our
+
+57
+00:02:19,000 --> 00:02:21,395
+视杆细胞是
+field of view the rod cells are
+
+58
+00:02:21,400 --> 00:02:23,705
+对一系列电磁敏感
+sensitive to a range of electromagnetic
+
+59
+00:02:23,710 --> 00:02:26,945
+辐射如此图所示
+radiation as shown by this graph here so
+
+60
+00:02:26,950 --> 00:02:29,885
+这是杆的响应曲线
+this is the response curve of the rod
+
+61
+00:02:29,890 --> 00:02:32,675
+细胞我们用符号M表示它
+cells and we denote it by the symbol M
+
+62
+00:02:32,680 --> 00:02:34,835
+它当然是一个功能
+and it of course is a function of
+
+63
+00:02:34,840 --> 00:02:37,535
+波长λ为棒状细胞
+wavelength lambda the rod cells are
+
+64
+00:02:37,540 --> 00:02:41,315
+最大响应498的光
+maximally responsive to light at 498
+
+65
+00:02:41,320 --> 00:02:43,835
+纳米基本上是中灰色
+nanometers basically mid gray in color
+
+66
+00:02:43,840 --> 00:02:46,895
+另一类非常重要的细胞
+the other very important class of cells
+
+67
+00:02:46,900 --> 00:02:49,295
+在人眼中是锥细胞和
+in the human eye are the cone cells and
+
+68
+00:02:49,300 --> 00:02:51,335
+其中一个在这里表明他们不是
+one of them's indicated here they're not
+
+69
+00:02:51,340 --> 00:02:53,555
+圆锥形的，只有更加丰富的
+that conical there's only fatter at the
+
+70
+00:02:53,560 --> 00:02:55,805
+比他们在顶部相当低
+bottom than they are at the top quite a
+
+71
+00:02:55,810 --> 00:02:58,625
+不同形状的棒状细胞
+different shape to the rod cells the
+
+72
+00:02:58,630 --> 00:03:00,635
+锥细胞含有被称为敌人的化学物质
+cone cells contain chemicals called foe
+
+73
+00:03:00,640 --> 00:03:03,095
+与视紫红质有关的毒素
+toxins that are related to rhodopsin
+
+74
+00:03:03,100 --> 00:03:05,225
+我们在杆细胞中有
+that we have in the rod cells there are
+
+75
+00:03:05,230 --> 00:03:07,445
+不同口味的毒素
+different flavors of the toxins that are
+
+76
+00:03:07,450 --> 00:03:10,595
+敏感的光线不同的颜色
+sensitive to light different colors the
+
+77
+00:03:10,600 --> 00:03:12,335
+锥形细胞是我们用于我们的
+cone cells are what we use for our
+
+78
+00:03:12,340 --> 00:03:15,185
+日常的白天活动
+everyday daytime activities in the
+
+79
+00:03:15,190 --> 00:03:17,435
+白天我们使用的是锥形细胞而不是
+daytime we use our cone cells not the
+
+80
+00:03:17,440 --> 00:03:19,925
+棒细胞锥细胞含有
+rod cells the cone cells contain a
+
+81
+00:03:19,930 --> 00:03:22,415
+被称为毒素毒素的化学物质是
+chemical called fo toxin foe toxin is
+
+82
+00:03:22,420 --> 00:03:24,905
+与视紫红质有关但有三种
+related to rhodopsin but there are three
+
+83
+00:03:24,910 --> 00:03:27,155
+不同种类的法塔赫人
+different flavors of fatah persons the
+
+84
+00:03:27,160 --> 00:03:29,735
+对红色敏感的毒素
+toxins that are sensitive to red to
+
+85
+00:03:29,740 --> 00:03:32,075
+绿色和蓝色的光，所以有
+green and to blue light so there are
+
+86
+00:03:32,080 --> 00:03:34,145
+三种不同类型的锥体
+three different types of cones those
+
+87
+00:03:34,150 --> 00:03:36,365
+包含这些不同的东西
+that are that contain these different
+
+88
+00:03:36,370 --> 00:03:38,645
+对红色敏感的法塔赫人的类型
+types of fatah person sensitive to red
+
+89
+00:03:38,650 --> 00:03:41,375
+绿色和蓝色，所以我们说人类
+green and blue so we say that human
+
+90
+00:03:41,380 --> 00:03:43,535
+众生是三色，这意味着我们拥有
+beings are trichromats it means we have
+
+91
+00:03:43,540 --> 00:03:45,845
+得到了可以感知三种不同的细胞
+got cells that can sense three different
+
+92
+00:03:45,850 --> 00:03:46,355
+颜色
+colors
+
+93
+00:03:46,360 --> 00:03:48,635
+敏感的内部不同的乐队
+sensitive to different bands within the
+
+94
+00:03:48,640 --> 00:03:50,675
+频谱，这就是所显示的
+spectrum and that's what's shown in the
+
+95
+00:03:50,680 --> 00:03:53,915
+这里的图通常是这些乐队
+graph over here often these bands are
+
+96
+00:03:53,920 --> 00:03:56,705
+由字母sm和L引用
+referred to by the letters s m and L
+
+97
+00:03:56,710 --> 00:03:59,735
+它代表短波长介质
+which stands for short wavelength medium
+
+98
+00:03:59,740 --> 00:04:01,325
+波长和长波长
+wavelength and long wavelength
+
+99
+00:04:01,330 --> 00:04:04,265
+我们也将它们称为蓝绿色和
+we'd also refer them as blue green and
+
+100
+00:04:04,270 --> 00:04:07,865
+红色按此顺序响应
+red in that order the response of the
+
+101
+00:04:07,870 --> 00:04:10,445
+短的中长锥细胞
+short medium and long cone cells as
+
+102
+00:04:10,450 --> 00:04:12,545
+这里显示我们可以看到相当的
+shown here we can see that there's quite
+
+103
+00:04:12,550 --> 00:04:14,785
+有些重叠尤其是
+some overlap particularly between the
+
+104
+00:04:14,790 --> 00:04:18,125
+中长波锥细胞
+medium and long wavelength cones cells
+
+105
+00:04:18,130 --> 00:04:20,765
+并且在此处显示以供参考
+and also shown here for reference is the
+
+106
+00:04:20,770 --> 00:04:23,885
+我们看到的杆细胞的反应
+response of the rod cells we looked at
+
+107
+00:04:23,890 --> 00:04:26,135
+在上一张幻灯片中，让我们看看更多
+in the previous slide let's look more
+
+108
+00:04:26,140 --> 00:04:27,645
+紧靠视网膜
+closely at the retina
+
+109
+00:04:27,650 --> 00:04:30,255
+并且有两个关键的地标
+and there are two key landmarks in the
+
+110
+00:04:30,260 --> 00:04:32,055
+视网膜一是我们所说的中央凹
+retina one is what we call the fovea
+
+111
+00:04:32,060 --> 00:04:34,035
+我们集中精力的地方
+where we have an enormous concentration
+
+112
+00:04:34,040 --> 00:04:37,155
+光敏细胞和另一个
+of light-sensitive cells and the other
+
+113
+00:04:37,160 --> 00:04:39,435
+光学所在的大地标
+big landmark which is where the optic
+
+114
+00:04:39,440 --> 00:04:41,865
+神经加入视网膜，该区域有
+nerve joins the retina and that area has
+
+115
+00:04:41,870 --> 00:04:44,085
+几乎没有光敏细胞
+almost no light sensitive cells exactly
+
+116
+00:04:44,090 --> 00:04:47,505
+你眼中的一个盲点，如果我们
+a blind spot in your eye so if we
+
+117
+00:04:47,510 --> 00:04:49,845
+预测这两点我们
+project those two points down and we
+
+118
+00:04:49,850 --> 00:04:54,405
+绘制一个我们可以绘制的轴
+draw an axis we can plot the
+
+119
+00:04:54,410 --> 00:04:57,585
+锥细胞密度的浓度
+concentration for density of cone cells
+
+120
+00:04:57,590 --> 00:05:01,605
+作为角度的函数远离
+as a function of angle away from the
+
+121
+00:05:01,610 --> 00:05:04,155
+我们有一方的中央凹等等
+fovea and so on one side we have the
+
+122
+00:05:04,160 --> 00:05:06,194
+另一方面，你的耳朵方向
+direction towards your ear on the other
+
+123
+00:05:06,199 --> 00:05:08,055
+我们有朝向你的方向
+side we have the direction towards your
+
+124
+00:05:08,060 --> 00:05:09,884
+鼻子，我们可以看到有一个巨大的
+nose and we can see there's an enormous
+
+125
+00:05:09,889 --> 00:05:12,765
+中央凹区锥体的浓度
+concentration of cones in the fovea area
+
+126
+00:05:12,770 --> 00:05:15,015
+并且浓度低得多
+and a much lower concentration of cone
+
+127
+00:05:15,020 --> 00:05:17,534
+在你的眼睛的细胞我们是什么
+cells in the rest of your eye what we
+
+128
+00:05:17,539 --> 00:05:19,784
+如果我们打电话给周边视野区域
+call the peripheral vision area if we
+
+129
+00:05:19,789 --> 00:05:21,795
+现在看看杆细胞的分布
+look now the distribution of rod cells
+
+130
+00:05:21,800 --> 00:05:24,675
+我们看到几乎与我们看到的相反
+we see almost the converse we see that
+
+131
+00:05:24,680 --> 00:05:26,805
+在这里有很多杆细胞
+there are very many rod cells in the
+
+132
+00:05:26,810 --> 00:05:29,175
+视力的周边部分不是太多
+peripheral part of vision not too many
+
+133
+00:05:29,180 --> 00:05:31,724
+在你的恐惧症中它们都是如此
+of them at all in your phobia so the
+
+134
+00:05:31,729 --> 00:05:33,825
+我们的浓度非常高
+fovea we have a very high concentration
+
+135
+00:05:33,830 --> 00:05:36,435
+其余的颜色敏感细胞
+of color sensitive cells the rest of the
+
+136
+00:05:36,440 --> 00:05:38,295
+眼睛里有大量的细胞
+eye there are a large number of cells
+
+137
+00:05:38,300 --> 00:05:39,555
+对光敏感的
+that are sensitive to light
+
+138
+00:05:39,560 --> 00:05:41,589
+but don't distinguish between different
+
+139
+00:05:39,560 --> 00:05:43,990
+但不要区分不同
+
+140
+00:05:41,599 --> 00:05:43,990
+颜色
+colors
+

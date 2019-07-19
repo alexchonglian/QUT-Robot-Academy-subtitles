@@ -1,0 +1,190 @@
+1
+00:00:05,049 --> 00:00:10,990
+在本节中，我们将研究计算正交旋转矩阵的导数。
+In this section we're going to look at computing the derivative of an orthogonal rotation matrix.
+
+2
+00:00:10,990 --> 00:00:15,600
+正交矩阵的一个特性是它的倒数等于它的转置
+One of the properties of an orthogonal matrix is that it's inverse is equal to its transpose
+
+3
+00:00:15,600 --> 00:00:22,200
+所以我们可以写出这个简单的关系R次，它的转置必须等于单位矩阵。
+so we can write this simple relationship R times it's transpose must be equal to the identity matrix.
+
+4
+00:00:22,600 --> 00:00:27,200
+首先，我将考虑通过角度θ旋转的简单情况
+First off I'm going to consider the simple case of a rotation by the angle theta about
+
+5
+00:00:27,210 --> 00:00:32,649
+X轴。我可以采用关于theta的衍生物并使用链规则
+the X-axis. I can take the derivative with respect to theta and using the chain rule
+
+6
+00:00:32,649 --> 00:00:38,920
+我可以写这个。应用此身份我可以用这种特殊的形式重写它
+I can write this. Applying this identity I can rewrite it in this particular form and
+
+7
+00:00:38,920 --> 00:00:44,649
+我可以通过引入符号S来表示此表达式来简化它。
+I can simplify it by introducing the symbol S to represent this expression here.
+
+8
+00:00:44,649 --> 00:00:49,679
+矩阵S具有一个有趣的属性。如果我将它添加到它的转置，结果将会
+The matrix S has an interesting property. If I add it to its transpose the result will
+
+9
+00:00:49,679 --> 00:00:55,480
+等于零。并且这种矩阵被称为偏斜对称矩阵。
+be equal to zero. And this kind of matrix is referred to as a skew-symmetric matrix.
+
+10
+00:00:55,480 --> 00:00:59,730
+偏斜对称矩阵的性质也可以这样写。所以这种
+That property of the skew-symmetric matrix can also be written like this. So this kind
+
+11
+00:00:59,730 --> 00:01:04,320
+矩阵的有时也被称为反对称矩阵。
+of matrix is also sometimes referred to as an anti-symmetric matrix.
+
+12
+00:01:04,320 --> 00:01:09,430
+这些矩阵总是单数的，它确定总是等于零。
+These matrices are always singular that is that it determines is always equal to zero.
+
+13
+00:01:09,430 --> 00:01:15,070
+任何矩阵都可以写成对称矩阵和斜对称矩阵之和。
+Any matrix can be written as the sum of a symmetric matrix and a skew-symmetric matrix.
+
+14
+00:01:15,070 --> 00:01:19,390
+在三维中，斜对称矩阵具有这种形式。它有一个非常独特的
+In three dimensions the skew-symmetric matrix has this form. It's got a very distinctive
+
+15
+00:01:19,390 --> 00:01:26,190
+零对角线，此矩阵x，y，z和每个矩阵中只有三个独特的元素
+zero diagonal and there are only three unique elements in this matrix x, y, z and each of
+
+16
+00:01:26,190 --> 00:01:31,060
+它们带有正号和负号。现在有趣的特点了
+them appears with a positive sign and a negative sign. Now the interesting characteristic of
+
+17
+00:01:31,060 --> 00:01:36,060
+斜对称矩阵是一种编写向量叉积关系的方法
+the skew-symmetric matrix is it’s a way to write the vector cross product relationship
+
+18
+00:01:36,060 --> 00:01:41,840
+作为从矢量A乘以的矢量计算的斜对称矩阵的乘积
+as the product of a skew-symmetric matrix computed from the vector A multiplied by the
+
+19
+00:01:41,840 --> 00:01:46,660
+矢量B.因此，交叉积可以变成矩阵矢量积。
+vector B. So cross product can be turned into a matrix vector product.
+
+20
+00:01:46,660 --> 00:01:51,080
+这是S的早期表达式，我可以写下矩阵的表达式
+Here's our earlier expression for S and I can write down an expression for a matrix
+
+21
+00:01:51,080 --> 00:01:56,230
+它表示围绕X轴旋转角度θ。如果我替换这些
+which represents rotation about the X axis by the angle theta. If I substitute these
+
+22
+00:01:56,230 --> 00:02:00,960
+值，并简化我最终得到一个包含很多零的非常简单的矩阵
+values in, and simplify I end up with a very simple matrix containing a lot of zeroes one
+
+23
+00:02:00,960 --> 00:02:07,040
+还有一个。回顾我们早期的表达式，即对称矩阵这个矩阵
+and a minus one. Recalling our earlier expression for a skew-symmetric matrix this matrix that
+
+24
+00:02:07,040 --> 00:02:14,100
+我刚刚写下来，我可以写为矢量[100]的偏斜对称矩阵。所以
+I've just written down I can write as a skew- symmetric matrix of the vector [1 0 0]. So the
+
+25
+00:02:14,100 --> 00:02:19,390
+相对于θ的旋转矩阵的导数由偏斜的乘积给出-
+derivative of a rotation matrix with respect to theta is given by the product of a skew-
+
+26
+00:02:19,390 --> 00:02:24,730
+对称矩阵乘以原始旋转矩阵。
+symmetric matrix multiplied by the original rotation matrix.
+
+27
+00:02:24,730 --> 00:02:29,700
+我可以执行代数操作，围绕Y轴旋转，也可以
+I can perform the algebraic manipulation for a rotation around the Y axis and also for
+
+28
+00:02:29,700 --> 00:02:34,640
+围绕Z轴旋转，我在这里得到这些表达式，你可以清楚地看到一些
+a rotation around the Z axis and I get these expressions here and you can clearly see some
+
+29
+00:02:34,640 --> 00:02:40,640
+一种模式。现在让我们考虑一般情况。关于向量L的旋转
+kind of pattern. Now let's consider the general case. A rotation about the vector L by an
+
+30
+00:02:40,640 --> 00:02:45,830
+角θ和它可以表明这等于斜对称的乘积
+angle theta and it can be shown that this is equal to the product of a skew-symmetric
+
+31
+00:02:45,830 --> 00:02:52,260
+从矢量L乘以原始旋转矩阵计算的矩阵。
+matrix computed from the vector L multiplied by the original rotation matrix.
+
+32
+00:02:52,260 --> 00:02:58,330
+如果我现在将表达式的两边乘以deethetadeeT，那就是theta的变化率，
+If I now multiply both sides of the expression by dee theta dee T, that's the rate of change of theta,
+
+33
+00:03:00,280 --> 00:03:02,580
+我可以写一个这样的表达式。
+I can write an expression like this.
+
+34
+00:03:03,520 --> 00:03:07,240
+这是什么，是一般旋转矩阵的时间导数。
+What this is, is a time derivative of a general rotation matrix.
+
+35
+00:03:07,240 --> 00:03:13,569
+围绕向量L的θ的旋转等于计算的偏斜对称矩阵
+A rotation of theta about the vector L is equal to a skew-symmetric matrix computed
+
+36
+00:03:13,569 --> 00:03:18,819
+在矢量Omega乘以原始旋转矩阵。
+on the vector Omega multiplied by the original rotational matrix.
+
+37
+00:03:18,819 --> 00:03:23,850
+在这种情况下，欧米茄是角速度矢量。它是角度的变化率
+Omega in this case is the angular velocity vector. It is the rate of change of angle
+
+38
+00:03:23,850 --> 00:03:28,939
+乘以旋转发生的矢量方向。
+multiplied by the vector direction about which the rotation is occurring.
+

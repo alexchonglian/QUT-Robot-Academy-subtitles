@@ -1,0 +1,220 @@
+1
+00:00:03,280 --> 00:00:06,390
+我们研究了许多惯性传感器。
+We've studied a number of inertial sensors.
+
+2
+00:00:06,390 --> 00:00:10,330
+我们看到的第一个传感器是加速度计，它测量总量
+The first sensor that we looked at was the accelerometer and that measures the total
+
+3
+00:00:10,330 --> 00:00:12,509
+加速身体。
+acceleration of a body.
+
+4
+00:00:12,509 --> 00:00:16,590
+这种加速可能是由于作用在身体上的力或加速度可能是由于
+That acceleration might be due to forces acting on the body or the acceleration might be due
+
+5
+00:00:16,590 --> 00:00:19,280
+重力作用于身体。
+to gravity acting on the body.
+
+6
+00:00:19,280 --> 00:00:24,020
+如果作用在身体上的唯一力是重力，那么我们可以使用测量的加速度
+If the only force acting on a body is gravity, then we can use the acceleration measured
+
+7
+00:00:24,020 --> 00:00:29,710
+在身体上确定相对于重力矢量的滚转角和俯仰角
+on the body to determine the roll and pitch angles with respect to the gravity vector
+
+8
+00:00:29,710 --> 00:00:32,230
+或向下的方向。
+or the downward direction.
+
+9
+00:00:32,230 --> 00:00:37,149
+我们研究了能够测量角速度分量的陀螺仪
+We looked at gyroscopes which are able to measure components of the angular velocity
+
+10
+00:00:37,149 --> 00:00:38,149
+的身体。
+of the body.
+
+11
+00:00:38,149 --> 00:00:42,100
+而且，我们研究了可以感应地球磁性成分的磁力计
+And, we looked at magnetometers which can sense components of the Earth’s magnetic
+
+12
+00:00:42,100 --> 00:00:47,589
+相对于附着在物体上的坐标系的场。
+field with respect to the coordinate frame attached to the body of the object.
+
+13
+00:00:47,589 --> 00:00:52,219
+我们可以结合加速度计和磁力计的信息来确定方向
+We can combine information from accelerometers and magnetometers to determine the orientation
+
+14
+00:00:52,219 --> 00:00:55,359
+关于磁北的身体。
+of the body with respect to magnetic north.
+
+15
+00:00:55,359 --> 00:01:00,079
+最早的惯性导航系统类型被称为万向节和
+The earliest types of inertial navigation systems were referred to as gimballed and
+
+16
+00:01:00,079 --> 00:01:03,949
+它们是我在本讲座中很早就展示的非常大的乐器。
+they are very large instruments that I showed very early on in this lecture.
+
+17
+00:01:03,949 --> 00:01:09,340
+它包含一个自由浮动的陀螺稳定平台，称为稳定元件
+It contains a free floating gyro-stabilized platform referred to as the stable element
+
+18
+00:01:09,340 --> 00:01:12,350
+它在这里由坐标系I显示。
+and it’s shown here by the coordinate frame I.
+
+19
+00:01:12,350 --> 00:01:17,310
+该平台通过万向节机构连接到车辆。
+That platform is connected to the vehicle by a gimbal mechanism.
+
+20
+00:01:17,310 --> 00:01:22,710
+随着车辆的方向改变，车身框架附接到车辆
+As the orientation of the vehicle changes, the body frame which is attached to the vehicle
+
+21
+00:01:22,710 --> 00:01:28,460
+变化，但惯性坐标系I在空间中保持固定。
+changes, but the inertial coordinate frame I remains fixed in space.
+
+22
+00:01:28,460 --> 00:01:33,039
+因此，我们可以通过测量车辆的角度来确定车辆的方向
+We can, therefore, determine the orientation of a vehicle by measuring the angles of the
+
+23
+00:01:33,039 --> 00:01:38,079
+惯性框架固定在空间和车身框架之间的万向节
+gimbals between the inertial frame which is fixed in space and the body frame which is
+
+24
+00:01:38,079 --> 00:01:40,520
+附在车上。
+attached to the vehicle.
+
+25
+00:01:40,520 --> 00:01:45,770
+加速度计安装在陀螺稳定平台上，因此可以测量加速度
+The accelerometers are mounted on the gyro- stabilized platform, so they measure acceleration
+
+26
+00:01:45,770 --> 00:01:48,060
+在惯性框架中的车辆。
+of the vehicle in the inertial frame.
+
+27
+00:01:48,060 --> 00:01:53,080
+但是如果我们想要，并且我们知道车辆相对于惯性的方向
+But if we want to, and we know the orientation of the vehicle with respect to the inertial
+
+28
+00:01:53,080 --> 00:01:59,420
+框架，我们可以将加速度矢量旋转到车身框架。
+frame, we can rotate the acceleration vector in to the vehicles body frame.
+
+29
+00:01:59,420 --> 00:02:05,310
+这是阿波罗宇宙飞船上使用的万向节惯性测量单元的示意图。
+This is a schematic of the gimballed inertial measurement unit used on the Apollo spacecraft.
+
+30
+00:02:05,310 --> 00:02:10,810
+稳定元件在这里显示，它包含三个旋转陀螺仪并保持
+The stable element is shown here and it contains three spinning gyroscopes and they maintain
+
+31
+00:02:10,810 --> 00:02:14,690
+该平台相对于恒星的方向不变。
+the orientation of that platform constant with respect to the stars.
+
+32
+00:02:14,690 --> 00:02:21,709
+该平台还包含三个加速度计，XA，YA和ZA。
+That platform also contains three accelerometers indicated here, XA, YA and ZA.
+
+33
+00:02:21,709 --> 00:02:26,760
+万向节机构有效地允许航天器围绕稳定平台旋转
+The gimbal mechanism effectively allows the spacecraft to rotate about the stable platform
+
+34
+00:02:26,760 --> 00:02:30,980
+而万向节的角度是由今天标准的老式传感器测量的
+and the gimbal angles are measured by rather old fashioned sensors by today’s standard
+
+35
+00:02:30,980 --> 00:02:32,410
+叫做解析器。
+called resolvers.
+
+36
+00:02:32,410 --> 00:02:38,090
+今天，几乎所有惯性测量单元都使用所谓的捷联配置。
+Today, almost all inertial measurement units use what’s called the strap-down configuration.
+
+37
+00:02:38,090 --> 00:02:43,510
+我们有车身框架B连接到车辆，加速度计和陀螺仪测量
+We have a body frame B attached to the vehicle and the accelerometers and gyroscopes measure
+
+38
+00:02:43,510 --> 00:02:48,769
+沿着每个车身框架轴和陀螺仪的加速度测量角度
+acceleration along each of the body frame axis and the gyroscopes measure the angular
+
+39
+00:02:48,769 --> 00:02:53,099
+关于每个车身框架坐标轴的速度分量。
+velocity components about each of the body frame coordinate axes.
+
+40
+00:02:53,099 --> 00:02:59,290
+随着车辆方向的改变，车身框架B也发生变化，我们测量角速度
+As the vehicle orientation changes, so does the body frame B, we measure the angular velocity
+
+41
+00:02:59,290 --> 00:03:05,060
+在坐标系B中，我们将其随时间积分以确定方向
+in the coordinate frame B and we integrate that over time to determine the orientation
+
+42
+00:03:05,060 --> 00:03:06,549
+车辆
+of the vehicle.
+
+43
+00:03:06,549 --> 00:03:11,180
+一旦我们知道车身在车身框架中的方向，我们就可以将其旋转回来
+Once we know the orientation of the vehicle in the body frame, we can rotate it back to
+
+44
+00:03:11,180 --> 00:03:15,719
+惯性框架确定我们相对于恒星的加速度。
+the inertial frame to determine our acceleration with respect to the stars.
+

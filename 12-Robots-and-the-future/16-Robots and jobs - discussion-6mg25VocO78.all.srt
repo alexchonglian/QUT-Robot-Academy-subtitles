@@ -1,0 +1,480 @@
+1
+00:00:03,360 --> 00:00:08,130
+彼得：每当我在一个普通观众面前谈论机器人，某人时
+Peter: Whenever I give a talk somewhere to a general audience about robots, somebody
+
+2
+00:00:08,130 --> 00:00:13,519
+总是问我关于工作的问题;机器人不会把我们的工作带走吗？和论点
+always asks me the question about jobs; won’t robots take our jobs away? And the argument
+
+3
+00:00:13,519 --> 00:00:19,780
+我经常做的是'是的，他们会带走一些工作，这是不舒服的，
+I usually make is 'yeah, they're going to take some jobs away and that's uncomfortable,
+
+4
+00:00:19,780 --> 00:00:24,430
+但另一种选择是，如果我们没有在工厂工作的机器人，我们可能就是这样
+but the alternative is if we don't have robots working in factories, the likelihood is we
+
+5
+00:00:24,430 --> 00:00:27,080
+将完全失去这个行业。
+will lose the industry entirely.'
+
+6
+00:00:27,080 --> 00:00:30,750
+所以我们做了一些交易。我们将继续保持行业，例如，我们
+So we're making a bit of a trade. We're going to keep the industry, for instance, we're
+
+7
+00:00:30,750 --> 00:00:36,160
+将汽车制造业保持在劳动力成本高的国家，并且这样做
+going to keep manufacturing automobiles in a high labor cost country and it's going to
+
+8
+00:00:36,160 --> 00:00:40,590
+雇用一些人，它将采用一些税收，这将是一个巨大的打击
+employ some people and it's going to employ some taxes and there's going to be a big knock
+
+9
+00:00:40,590 --> 00:00:46,500
+关于经济利益，但是，是的，绝对会对就业产生一些影响。
+on economic benefit, but yeah, absolutely, it will have some impact on jobs.
+
+10
+00:00:46,500 --> 00:00:51,399
+最近，关于所谓的新机器时代已有相当多的文章
+More recently, there's been quite a bit written about the so-called new machine age where
+
+11
+00:00:51,399 --> 00:00:58,200
+整个工作岗位，不一定是手工劳动工作，很多所谓的知识工作者
+a whole raft the jobs, not necessarily manual labor jobs, a lot of so-called knowledge worker
+
+12
+00:00:58,200 --> 00:01:04,110
+工作也许会消失，比如解释X光片并撰写财务报告。现在
+jobs will perhaps disappear, like interpreting X-rays and writing financial reports. Now
+
+13
+00:01:04,110 --> 00:01:06,509
+这些都是现在的工作。
+these are jobs now that are on the line.
+
+14
+00:01:06,509 --> 00:01:13,000
+曾经有一位非常着名的哲学家伏尔泰谈到了工作的美德
+There's a once upon a time very famous philosopher, Voltaire, talked about the virtues of work
+
+15
+00:01:13,000 --> 00:01:19,350
+我们中的许多人定义自己或我们的身份，我们的自尊，这一切都包含在内
+and many of us define ourselves or our identity, our self-esteem, it’s all wrapped up in
+
+16
+00:01:19,350 --> 00:01:25,570
+工作。因此，在我看来，这或许是我们今天所讨论的所有主题中最复杂的问题。
+work. So this seems to me perhaps the most exquisitely complex of all the topics that we've talked about today.
+
+17
+00:01:25,570 --> 00:01:28,330
+道德对此有何看法？
+What does ethics say about this?
+
+18
+00:01:29,240 --> 00:01:40,260
+道格：我们的身份被锁定在我们大多数人经常做的事情上。而我们的根本
+Doug: Our identity is locked up in what we do often for most of us. And our fundamental
+
+19
+00:01:40,270 --> 00:01:46,369
+引导我们大多数人的道德哲学来自约翰洛克的劳动理论。约翰
+moral philosophy that guides most of us comes out of John Locke's theory of labor. John
+
+20
+00:01:46,369 --> 00:01:54,350
+洛克的劳动理论是财产权的基础。而这本身就是这样
+Locke's theory of labor is the foundation to the rights to property. And that in itself
+
+21
+00:01:54,350 --> 00:01:59,420
+建立美国宪法的产权基础。
+set up the property rights basis of the American Constitution.
+
+22
+00:01:59,420 --> 00:02:05,780
+因此，财产权以及我们如何定义自己以及如何定义我们的文化
+So the rights to property and how we define ourselves and how we define our culture is
+
+23
+00:02:05,780 --> 00:02:14,500
+锁定了我们的工作。它在自由民主，劳动理论方面根深蒂固，
+locked up in what we do. And it's entrenched in terms of liberal democracy, the labor theory,
+
+24
+00:02:14,500 --> 00:02:22,620
+和功利主义;所有这三种哲学观点都指导着我们如何设定价值观。
+and utilitarianism; all three of those philosophical perspectives guide us in terms of how we set our values.
+
+25
+00:02:22,620 --> 00:02:32,080
+现在，对于取代人类的机器，你将对Luddite革命非常熟悉。
+Now with respect to machines replacing humans, you'll be very familiar with the Luddite revolution.
+
+26
+00:02:32,080 --> 00:02:32,980
+彼得：当然。
+Peter: Absolutely.
+
+27
+00:02:32,980 --> 00:02:34,930
+道格：在早期的工业革命中。
+Doug: During the early industrial revolution.
+
+28
+00:02:34,930 --> 00:02:36,300
+彼得：有大锤子的家伙。
+Peter: The guys with big hammers.
+
+29
+00:02:36,300 --> 00:02:40,660
+道格：是的。他们进去了，他们粉碎了所有的棉纺厂。我想这大约是1790年。
+Doug: Yep. They went in and they smashed all the cotton mills. I think it's about 1790.
+
+30
+00:02:40,660 --> 00:02:44,209
+他们去了那里，因为他们害怕而去了棉纺厂的小镇
+They went in there and just went to town on the cotton mills because they're afraid, and
+
+31
+00:02:44,209 --> 00:02:48,769
+他们在这方面非常正确，棉纺厂将取代他们的工作。他们做到了。
+they were quite right in this, that the cotton mills are going to replace their jobs. And they did.
+
+32
+00:02:48,770 --> 00:02:56,870
+当然，Luddites都很快就被吊死了。维多利亚时代的不当行为规则
+Of course, the Luddites were all duly hanged very quickly. Victorian rules for misconduct
+
+33
+00:02:56,870 --> 00:03:02,019
+这是世界上历史上最严重的一些，但感谢天堂，我们没有
+were some of the most severe in the history in the world but thank heavens we don't have
+
+34
+00:03:02,019 --> 00:03:06,440
+这么多艰难的法律了。
+so many hard laws anymore.
+
+35
+00:03:06,440 --> 00:03:13,450
+但是Luddites有一个合理的立场。然而，自从机器以来，这一直伴随着我们
+But the Luddites had a justified position. However, that's been with us since machines
+
+36
+00:03:13,450 --> 00:03:19,760
+和我们在一起，那种恐惧。天生担心我们不仅会失去工作，
+been with us, that fear. That innate fear that we're going to lose not only our jobs,
+
+37
+00:03:19,760 --> 00:03:23,660
+但我们的身份和我们是谁。
+but our identity and who we are.
+
+38
+00:03:23,660 --> 00:03:29,209
+彼得：自从工业化以来，创造了许多就业机会，然后就消失了。
+Peter: And since industrialisation here, so many jobs have been created and then disappeared.
+
+39
+00:03:29,209 --> 00:03:35,140
+道格：正确。它似乎潮起潮落。我们的劳动力越来越多
+Doug: Correct. It seems to ebb and flow. We're getting more and more people in the labor
+
+40
+00:03:35,140 --> 00:03:40,580
+市场。澳大利亚在过去50年中人口增加了一倍。我们有更多的人在工作。
+market. Australia in the last 50 years has doubled in population. We have more people working.
+
+41
+00:03:42,120 --> 00:03:47,060
+所以我可能对此有点无知，但从我所看到的是我们适应。它的
+So I might be a little ignorant on this, but from what I can see is that we adapt. It's
+
+42
+00:03:47,060 --> 00:03:53,010
+关于人类最有趣的事情之一，就是我们适应和适应的能力
+one of the most interesting things about the human being, is our ability to adapt and to
+
+43
+00:03:53,010 --> 00:03:56,209
+更改。而我们似乎正在这样做。
+change. And we seem to be doing that.
+
+44
+00:03:56,209 --> 00:04:04,230
+因此，这种对机器失去工作的天生恐惧似乎是没有根据的。然而，
+And so, this innate fear of losing our jobs to machines seems to be unfounded. However,
+
+45
+00:04:04,230 --> 00:04:11,799
+我明白了。在道德方面，实际上，这不是一个道德立场
+I understand it. In terms of ethics, really, it's not an ethical position that you can
+
+46
+00:04:11,799 --> 00:04:17,319
+采取。我猜个人需要有自主权来选择并能够工作
+take. I guess individuals need to have the autonomy to choose and to be able to work
+
+47
+00:04:17,319 --> 00:04:23,360
+并且能够生活在自由的环境中并且能够访问这些资源
+and to be able to live in a free environment and to have access to those resources, so
+
+48
+00:04:23,360 --> 00:04:26,689
+这在道德上非常重要。
+that's very important ethically.
+
+49
+00:04:26,689 --> 00:04:31,710
+但是机器将把它带走的论点，我已经看到了一些证据
+But the argument that machines are going to take that away, I've seen some evidence of
+
+50
+00:04:31,710 --> 00:04:39,169
+它最近关闭了南澳大利亚的Holden工厂，但最底层
+it recently with the closure of the Holden facilities in South Australia, but bottom
+
+51
+00:04:39,169 --> 00:04:42,409
+现在我们正在谈论潜艇，我想，昨天的新闻？
+line is - now we're talking about submarines, I think, yesterday on the news?
+
+52
+00:04:42,409 --> 00:04:42,849
+彼得：是的。
+Peter: Yep.
+
+53
+00:04:42,849 --> 00:04:47,629
+道格：并且可能将更多的工作整合到澳大利亚并将其发送出去
+Doug: And integrating maybe more work back into Australia and send it off, putting it
+
+54
+00:04:47,629 --> 00:04:55,539
+进入日本重新设计和重建在澳大利亚的潜艇。因此，它起伏不定。
+into Japan for re-designing and rebuilding submarines back in Australia. So, it ebbs and flows.
+
+55
+00:04:55,539 --> 00:05:03,110
+彼得：那么就个人而言，如果他们没有工作，那就是道德考虑
+Peter: So in the case of an individual, if they don't have a job, the ethical consideration
+
+56
+00:05:03,110 --> 00:05:07,270
+这是我们是否会影响他们的自治。
+here is whether we impinge on their autonomy.
+
+57
+00:05:07,270 --> 00:05:13,639
+道格：是的，没错。在这种文化中有基本的权利可以拥有充实的生活。
+Doug: Yes, correct. And there are basic right to have a fulfilled life in this culture.
+
+58
+00:05:13,639 --> 00:05:18,419
+彼得：但在我们的文化中，一个充实的生活通常包括一份工作。
+Peter: But in our culture a fulfilled life usually includes a job.
+
+59
+00:05:18,419 --> 00:05:25,979
+道格：嗯，它包括工作权和获得工作和资源的权利。
+Doug: Well, it includes the right to work and the right to have access to work and resources.
+
+60
+00:05:25,979 --> 00:05:26,930
+是的，它确实。
+Yes, it does.
+
+61
+00:05:26,930 --> 00:05:33,550
+彼得：所以我们可以在人们头上盖一个屋顶，我们可以确保他们不饿
+Peter: So we could put a roof over people's heads, we can make sure that they're not hungry
+
+62
+00:05:33,550 --> 00:05:42,470
+所以他们会在某种意义上照顾，舒服，但他们可能没有工作选择。
+and so they would be in some sense looked after, comfortable, but they may not have the option of a job.
+
+63
+00:05:42,720 --> 00:05:51,399
+道格：是的。我认为更大的问题是，机器是否会夺走工作机会？换句话说，如果我们看一下......
+Doug: Yeah. I think the bigger question is, are machines taking away jobs? In other words, if we look at…
+
+64
+00:05:51,399 --> 00:05:52,869
+彼得：总的来说。
+Peter: In an overall sense.
+
+65
+00:05:52,869 --> 00:05:55,520
+彼得：是的，他们会带走一些，但其他工作将会到来。
+Peter: Yes, they're going to take away some but then other jobs are going to come.
+
+66
+00:05:55,529 --> 00:06:00,080
+道格：其他工作将用机器创造，所以似乎有一个平衡点
+Doug: And other jobs will be created with the machines, so there seems to be a balance
+
+67
+00:06:00,080 --> 00:06:05,309
+那里。和往常一样，这是一种平衡，我认为这是一种凝聚力
+there. And as always, there's a balance, and I think that there's a cohesion in terms of
+
+68
+00:06:05,309 --> 00:06:09,699
+创造就业机会和失去似乎正在努力的工作。我没有
+the creation of jobs and the loss of jobs that seems to be working on. I don't have
+
+69
+00:06:09,699 --> 00:06:11,449
+关于那个的统计数据但这将是一个有趣的...
+stats on that but that would be an interesting…
+
+70
+00:06:11,449 --> 00:06:14,889
+彼得：我的意思是，它已经消失了一百年或更长时间。
+Peter: I mean, it's the way it's gone for hundred years or more.
+
+71
+00:06:14,889 --> 00:06:15,319
+道格：当然，是的。
+Doug: Absolutely, yeah.
+
+72
+00:06:15,319 --> 00:06:20,969
+彼得：问题在于我们是否会突然出现某种临界点
+Peter: The issue is whether we're going to some kind of tipping point where suddenly
+
+73
+00:06:20,969 --> 00:06:27,860
+不再持有，并且有一些书说这种情况，但我不认为
+that no longer holds, and there is some books that say that that's case, but I don't think
+
+74
+00:06:27,860 --> 00:06:32,119
+我们-我不确定是否有人可以做出混合硬性或坚定的预测。
+we- I'm not sure anyone can make a hybrid hard or firm prediction about that.
+
+75
+00:06:32,119 --> 00:06:36,679
+道格：是的，所以我没有答案，因为如果是这样的话，让我们的项目......
+Doug: Yeah, so I don't have an answer to that because if it's the case, let's project…
+
+76
+00:06:36,679 --> 00:06:37,189
+彼得：好的。
+Peter: Okay.
+
+77
+00:06:37,189 --> 00:06:48,969
+道格：如果是这样，比如100年，机器真的几乎取代了你和我。
+Doug: If it's the case, say, in 100 years, that machines have really pretty much replaced you and me.
+
+78
+00:06:48,969 --> 00:06:49,469
+彼得：是的。
+Peter: Yup.
+
+79
+00:06:49,469 --> 00:06:54,539
+道格：我们不再需要教授，我们在那里有一个忘记了更多的机器人
+Doug: We don't need professors anymore, we've got an android there that forgot more about
+
+80
+00:06:54,539 --> 00:06:59,649
+比道格贝克所知道的道德规范，我们在这里有另一个道德，好吧，
+ethics than Doug Baker will ever know, and we've got another one over here that, well,
+
+81
+00:06:59,649 --> 00:07:04,860
+他将彼得·科克的大脑编入他的脑中，而他还有另外三个大脑
+he's got Peter Corke's brain programmed into him and he's got about three more other brains
+
+82
+00:07:04,860 --> 00:07:10,419
+编入他的程序，他可以教所有关于机器人的东西。
+programmed into him and he can teach everything there is about robotics.
+
+83
+00:07:10,419 --> 00:07:17,330
+那么接下来的问题是，你和我这样的人呢？我们可能会这样做
+So the question then is this, what are guys like you and me do? We'll probably be doing
+
+84
+00:07:17,330 --> 00:07:27,669
+但是我不确定是什么。那么问题就在于我们是否接管了这些工作
+something but I'm not sure what. And the question then is if we have the jobs taken over by
+
+85
+00:07:27,669 --> 00:07:34,339
+机器，人类做什么？我们是否为此获得了价值，或者我们可能在年龄退休
+machines, what do humans do? Do we get value for that or maybe we retire at the age of
+
+86
+00:07:34,339 --> 00:07:37,020
+30，或许我们不工作？我不知道。
+30, or maybe we don't work? I don't know.
+
+87
+00:07:37,020 --> 00:07:41,679
+彼得：我认为另一件事是我们长大了。我们谈到了那个人
+Peter: Which is the other thing that I think is we grow up. We talked about that the people
+
+88
+00:07:41,679 --> 00:07:45,599
+将会提前退休以及所有这些，而且这种情况也没有发生。
+would be retiring earlier and all this, and that didn't happen either.
+
+89
+00:07:45,599 --> 00:07:45,949
+道格：不。
+Doug: No.
+
+90
+00:07:45,949 --> 00:07:47,369
+彼得：退休年龄正在上升。
+Peter: The retirement age is going up.
+
+91
+00:07:47,369 --> 00:07:51,309
+道格：是的，绝对的。是的，绝对是，它正在上升。我不知道那是什么。
+Doug: Yeah, absolutely. Yeah, absolutely, it is going up. I don't know what that's about.
+
+92
+00:07:51,309 --> 00:07:54,959
+彼得：不，但我认为这是一个坏主意。
+Peter: No, but I think it's a bad idea.
+
+93
+00:07:54,959 --> 00:08:03,779
+道格：那是真的。但我认为，就道德而言，我认为就是拿走工作
+Doug: That's true. But I think that, in terms of ethics, the taking away of jobs, I think
+
+94
+00:08:03,779 --> 00:08:07,569
+我们需要了解更大的图景以及所创造和所采取的措施的平衡
+we need to look at the bigger picture and the balance of what's created and what's taken
+
+95
+00:08:07,569 --> 00:08:13,229
+离开之前，我们可以做出这个论点。但它确实不是道德的论据。它
+away before we can make that argument. But it really isn't an argument for ethics. It
+
+96
+00:08:13,229 --> 00:08:19,149
+可以作为自治的论据，但总的来说，我不认为这是一个道德问题。一点也不。
+can be an argument for autonomy but overall, I don't see that's an ethical issue. Not at all.
+

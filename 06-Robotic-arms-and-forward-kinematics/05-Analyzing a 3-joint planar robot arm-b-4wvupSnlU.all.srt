@@ -1,0 +1,290 @@
+1
+00:00:03,949 --> 00:00:06,649
+现在我们要为我的机器人添加第三个链接。
+Now we are going to add a third link to my robot.
+
+2
+00:00:06,649 --> 00:00:12,549
+所以现在，我们有一个3自由度机器人，有3个旋转关节或3个旋转关节。
+So now, we have a 3-degree of freedom robot with 3 revolute or 3 rotational joints.
+
+3
+00:00:12,549 --> 00:00:14,960
+该机器人具有更大的工作体积。
+This robot has a much larger working volume.
+
+4
+00:00:14,960 --> 00:00:20,590
+它可以到达这个非常大的圆圈内的任何一点，但因为它有3度
+It can reach any point within this very large circle here, but because it has got 3 degrees
+
+5
+00:00:20,590 --> 00:00:25,070
+自由意味着它不仅可以到达其工作空间内的任何特定位置。
+of freedom it means it cannot only reach any particular position within its work space.
+
+6
+00:00:25,070 --> 00:00:29,400
+它还可以在该特定位置实现任何方向。
+It can also achieve any orientation at that particular position.
+
+7
+00:00:29,400 --> 00:00:34,090
+例如，如果机器人的末端执行器位置在这里，则机器人具有3度
+If for example the robot's end effector position is here, then the robot with 3 degrees of
+
+8
+00:00:34,090 --> 00:00:39,340
+自由能够实现机器人最后一个链接的任何仲裁方向。
+freedom is able to achieve any arbitrate orientation of this last link of the robot.
+
+9
+00:00:39,340 --> 00:00:44,440
+我们可以看到我可以通过该链接和它的相当大范围的角度移动它
+We could see I can move it through quite a large range of angles of that link and it
+
+10
+00:00:44,440 --> 00:00:49,989
+是可能的，因为它有1个额外的自由度。
+is possible because it has 1 extra degree of freedom.
+
+11
+00:00:49,989 --> 00:00:53,530
+让我们确定我们的3连杆机器人的末端执行器的姿势。
+Let us determine the pose of the end effector of our 3-link robot.
+
+12
+00:00:53,530 --> 00:00:58,680
+我们要做的第一件事是注释机器人并引入机器人的长度
+The first thing we are going to do is to annotate the robot and introduce the lengths of the
+
+13
+00:00:58,680 --> 00:01:02,970
+各种链接然后我们将介绍各种关节角度。
+various links and then we are going to introduce the various joint angles.
+
+14
+00:01:02,970 --> 00:01:08,500
+该图中的Q1和Q2均为正，而Q3为负值。
+Q1 and Q2 in this diagram are both positive and Q3 here is a negative value.
+
+15
+00:01:08,500 --> 00:01:13,659
+您注意到旋转方向与Q1和Q2的旋转方向相反。
+You note that the direction of rotation is the opposite of that for Q1 and Q2.
+
+16
+00:01:13,659 --> 00:01:18,780
+当我们为1和2联合机器人做这个时，我展示了坐标系的动画
+When we did this for the 1 and 2 joint robots, I showed an animation of the coordinate frame
+
+17
+00:01:18,780 --> 00:01:23,920
+沿着链接从参考坐标系移动并最终到达末端效应器。
+moving from the reference coordinate frame along the links and ending up at the end effector.
+
+18
+00:01:23,920 --> 00:01:26,189
+这次我不打算做那个动画。
+I am not going to do that animation this time.
+
+19
+00:01:26,189 --> 00:01:30,630
+我认为你有了一般的想法，我们要做的就是写下来
+I think you got the general idea and what we are going to do is just write down the
+
+20
+00:01:30,630 --> 00:01:33,340
+通过检查转换表达。
+transform expression by inspection.
+
+21
+00:01:33,340 --> 00:01:37,950
+我们要做的第一件事是在Q1处旋转它，在X方向上平移
+The 1st thing we are going to do is to rotate it at Q1, translate in the X-direction by
+
+22
+00:01:37,950 --> 00:01:45,170
+A1，以角度Q2旋转，沿X方向沿第二连杆平移量
+A1, rotate by the angle Q2, translate along the 2nd link in its X-direction by the amount
+
+23
+00:01:45,170 --> 00:01:52,130
+然后旋转角度Q3，然后沿X方向平移一个量
+of A2 and then rotate by the angle Q3 and then translate in the X-direction by an amount
+
+24
+00:01:52,130 --> 00:01:53,130
+A3。
+A3.
+
+25
+00:01:53,130 --> 00:01:58,709
+再一次，我可以扩展这些矩阵并将它们相乘以得出它们
+Once again, I can expand out what these matrices and multiply them together to come up with
+
+26
+00:01:58,709 --> 00:02:04,530
+一个均匀的变换，代表这个3关节的末端执行器的姿势
+a homogenous transformation which represents the pose of the end effector of this 3-joint
+
+27
+00:02:04,530 --> 00:02:05,530
+机器人。
+robot.
+
+28
+00:02:05,530 --> 00:02:08,670
+为3连杆机器人手动完成这一点有点单调乏味。
+To do this by hand for the 3-link robot is a little bit tedious.
+
+29
+00:02:08,670 --> 00:02:09,670
+我可能会犯一个错误。
+I might make an error.
+
+30
+00:02:09,670 --> 00:02:12,340
+所以我们将直接进入MATLAB并在那里完成。
+So we are going to go straight to MATLAB and do it there.
+
+31
+00:02:12,340 --> 00:02:18,049
+现在，我们将使用MATLAB来计算这个3链路末端效应器的姿态
+Now, we are going to use the MATLAB to compute the pose of the end effector of this 3-link
+
+32
+00:02:18,049 --> 00:02:19,049
+平面机器人。
+planar robot.
+
+33
+00:02:19,049 --> 00:02:21,599
+这次我们将以符号形式进行。
+We are going to do it just in symbolic form this time.
+
+34
+00:02:21,599 --> 00:02:28,230
+我创建了一些符号来表示3个链接长度：A1，A2和A3，它们代表
+I create some symbols to represent the 3 links lengths: A1, A2 and A3 and they represent
+
+35
+00:02:28,230 --> 00:02:33,110
+3个关节角度：Q1，Q2和Q3。
+the 3 joint angles: Q1, Q2 and Q3.
+
+36
+00:02:33,110 --> 00:02:38,519
+再次，我们使用trchain2来运行，现在我传入的字符串描述了
+Once again, we used the trchain2 to function and the string now I pass in describes the
+
+37
+00:02:38,519 --> 00:02:42,209
+坐标框架从机器人底部移动到尖端的方式。
+way the coordinate frame moves from the base of the robot to the tip.
+
+38
+00:02:42,209 --> 00:02:50,030
+所以我要按角度Q1进行旋转，平移距离A1，旋转
+So I am going to do a rotation by the angle Q1, translation by the distance A1, a rotation
+
+39
+00:02:50,030 --> 00:02:56,560
+通过角度Q2，在X方向上平移距离A2，另一次旋转
+by angle Q2, translation in the X-direction by the distance A2, another rotation this
+
+40
+00:02:56,560 --> 00:03:02,909
+一个是角度Q3，另一个是沿着距离A3移动的距离
+one by the angle Q3 and another translation by the distance A3 that is moving along the
+
+41
+00:03:02,909 --> 00:03:04,370
+机器人的第3个环节。
+3rd link of the robot.
+
+42
+00:03:04,370 --> 00:03:11,121
+现在，我将通过关节角度Q1，Q2和Q3的末端效应器，在这里，我们
+Now, I am going to pass the end effector of the joint angles Q1, Q2 and Q3 and here, we
+
+43
+00:03:11,121 --> 00:03:16,930
+有一个符号表达式，代表这个3连接的末端效应器的姿势
+have a symbolic expression which represents the pose of the end effector of this 3-link
+
+44
+00:03:16,930 --> 00:03:17,930
+机器人。
+robot.
+
+45
+00:03:17,930 --> 00:03:22,880
+你看，这是一个非常复杂的表达，因为我们需要侧向滚动才能看到结束
+You see this is now quite a complex expression as we need to scroll sideways to see the end
+
+46
+00:03:22,880 --> 00:03:25,329
+它的。
+of it.
+
+47
+00:03:25,329 --> 00:03:32,209
+例如，x分量由结果的第1行和第3列给出
+The x component for example is given by the 1st row and the 3rd column of the result that
+
+48
+00:03:32,209 --> 00:03:37,239
+我刚刚计算出来，这是最终效应器的X坐标的表达式
+I just computed and that is the expression for the X-coordinate of the end effector of
+
+49
+00:03:37,239 --> 00:03:40,110
+3连杆机器人。
+the 3-link robot.
+
+50
+00:03:40,110 --> 00:03:46,650
+我还可以导入平面三连杆机器人的模型，这是工具箱功能和
+I can also import a model of a planar 3-link robot and that is the tool box function and
+
+51
+00:03:46,650 --> 00:03:51,739
+平面树在我们的工作区中创建一个串行链接对象。
+the planar tree creates a serial link object in our workspace.
+
+52
+00:03:51,739 --> 00:03:57,519
+该变量称为P3，并且我可以将一些方法应用于此对象
+The variable is called P3 and there is some methods that I can apply to this object and
+
+53
+00:03:57,519 --> 00:03:59,239
+我们之前看过的教学方法。
+the teach method that we have looked at previously.
+
+54
+00:03:59,239 --> 00:04:03,040
+我可以在这个3连杆机器人上做到这一点。
+I can do it on this 3-link robot and here it is.
+
+55
+00:04:03,040 --> 00:04:05,360
+我可以增加1号关节角度。
+I can increase joint angle number 1.
+
+56
+00:04:05,360 --> 00:04:07,879
+我可以减少关节角度2。
+I can decrease joint angle number 2.
+
+57
+00:04:07,879 --> 00:04:13,590
+我可以增加3号关节角度，我们可以看到它移动，我们可以看到位置
+I can increase joint angle number 3 and we can see it moving and we can see the position
+
+58
+00:04:13,590 --> 00:04:18,050
+当我调整这些滑块时，末端执行器的变化。
+of the end effector changing as I adjust these sliders.
+

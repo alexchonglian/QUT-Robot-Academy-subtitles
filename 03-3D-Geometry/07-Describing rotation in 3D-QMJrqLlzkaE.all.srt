@@ -1,0 +1,465 @@
+1
+00:00:03,780 --> 00:00:08,340
+对于二维情况，我们考虑两个坐标框架，即原始框架A和
+For the two dimensional case we consider two coordinate frames, the original frame A, and
+
+2
+00:00:08,340 --> 00:00:13,190
+旋转版本，坐标框架B.并且B沿正方向旋转
+a rotated version of that, coordinate frame B. And B is rotated in the positive direction
+
+3
+00:00:13,190 --> 00:00:21,110
+通过相对于框架A的角度θ，我们描述了新的坐标框架轴
+by angle theta with respect to frame A. We then described the new coordinate frame axes
+
+4
+00:00:21,110 --> 00:00:26,400
+就旧坐标框架轴而言，我们能够编写这些关系。
+in terms of the old coordinate frame axes, and we were able to write these relationships.
+
+5
+00:00:26,400 --> 00:00:32,119
+然后我们以矩阵形式写了这个，最后我们得到了一个允许我们改造的公式
+We then wrote this in matrix form and we ended up with a formulation that allowed us to transform
+
+6
+00:00:32,119 --> 00:00:40,219
+从新帧到旧帧A的向量。此旋转矩阵的列是
+vectors from the new frame to the old frame A. The columns of this rotation matrix are
+
+7
+00:00:40,219 --> 00:00:47,999
+新的X轴是B轴，用A坐标框架表示
+the new X-axis that is the B-axis expressed in terms of the A coordinate frame and the
+
+8
+00:00:47,999 --> 00:00:51,809
+按照A坐标框架的BY轴。
+BY-axis in terms of the A coordinate frame.
+
+9
+00:00:51,809 --> 00:00:55,989
+我们使用了一些相当复杂的几何图形和图表来展示这一点。
+We used some quite complex geometry and diagrams in order to show this.
+
+10
+00:00:55,989 --> 00:01:01,089
+对于三维，做这种几何结构有点复杂
+For three dimensions it's a little complex to do that kind of geometric construction
+
+11
+00:01:01,089 --> 00:01:05,659
+所以我们将从上次采取这个重要原则。
+so we're just going to take the big principle from last time.
+
+12
+00:01:05,659 --> 00:01:10,159
+我们将以类似的方式开始，这里是坐标框架A，我们已经提到了一个观点
+We'll start off in a similar fashion, here's coordinate frame A and we've drawn a point
+
+13
+00:01:10,159 --> 00:01:13,640
+我们可以用关于坐标框架A的向量来描述。我是
+which we can describe in terms of a vector with respect to coordinate frame A. I’m
+
+14
+00:01:13,640 --> 00:01:18,600
+将引入相对于坐标旋转的新坐标系B.
+going to introduce a new coordinate frame B which is rotated with respect to coordinate
+
+15
+00:01:18,600 --> 00:01:24,460
+我们将用另一个向量定义点，矢量BP就是
+frame A. And we're going to define the point with another vector, vector BP which is the
+
+16
+00:01:24,460 --> 00:01:27,180
+关于旋转框架B的点
+point in respect to a rotated frame B.
+
+17
+00:01:27,180 --> 00:01:30,450
+我们将采用与二维情况相同的技巧。
+We're going to pull the same trick as we did for the 2-dimensional case.
+
+18
+00:01:30,450 --> 00:01:36,619
+我们将把坐标系B的轴描述为以术语表示的单位向量
+We're going to describe the axes of coordinate frame B as unit vectors expressed in terms
+
+19
+00:01:36,619 --> 00:01:41,440
+坐标框架A，它们是新旋转矩阵的列。
+of coordinate frame A and they are the columns of a new rotation matrix.
+
+20
+00:01:41,440 --> 00:01:45,520
+在这种情况下，它是一个3x3旋转矩阵。
+In this case it's a 3x3 rotation matrix.
+
+21
+00:01:45,520 --> 00:01:50,479
+所以我们不会经历详细的几何构造，我们将推断
+So we're not going to go through the detailed geometric construction, we're going to extrapolate
+
+22
+00:01:50,479 --> 00:01:55,750
+从二维案例中直接写出这个表达式。
+from the 2-dimensional case and just write this expression directly.
+
+23
+00:01:55,750 --> 00:02:01,460
+这个新的旋转矩阵将矢量从新的坐标系B变换为旧的
+This new rotation matrix transforms vectors from the new coordinate frame B to the old
+
+24
+00:02:01,460 --> 00:02:08,140
+坐标框架A.这个三维旋转矩阵，这个3x3矩阵，有很多
+coordinate frame A. This 3-dimensional rotation matrix, this 3x3 matrix, has got a lot of
+
+25
+00:02:08,140 --> 00:02:11,270
+类似的属性，它是2x2对应物。
+similar properties to it's 2x2 counterpart.
+
+26
+00:02:11,270 --> 00:02:16,340
+它是正交的，有时称为标准正交矩阵。
+It is an orthogonal, sometimes called orthonormal, matrix.
+
+27
+00:02:16,340 --> 00:02:21,870
+这意味着矩阵中的每列都是单位长度矢量。
+That means each column in the matrix is a unit length vector.
+
+28
+00:02:21,870 --> 00:02:27,040
+矩阵中的每一列都与所有其他列正交，这意味着我可以使用
+Each column in the matrix is orthogonal to all the other columns so that means if I take
+
+29
+00:02:27,040 --> 00:02:32,440
+第1列和第2列之间的点积等于0，第1列也相同
+the dot product between column 1 and column 2 it will be equal to 0, same for column 1
+
+30
+00:02:32,440 --> 00:02:35,290
+和第3栏，第2栏和第3栏。
+and column 3, column 2 and column 3.
+
+31
+00:02:35,290 --> 00:02:39,840
+这个矩阵的倒数与它的转置相同，这是非常有用的
+The inverse of this matrix is the same as it's transpose and this is a really useful
+
+32
+00:02:39,840 --> 00:02:45,239
+属性，因为我们经常计算姿势表达式时，我们需要找到逆
+property because often times when we're computing pose expressions we need to find the inverse
+
+33
+00:02:45,239 --> 00:02:50,030
+旋转矩阵的计算和计算转置要简单得多
+of the rotation matrix and computationally it's much simpler to compute the transpose
+
+34
+00:02:50,030 --> 00:02:53,519
+而不是计算3x3矩阵的逆。
+than it is to compute the inverse for a 3x3 matrix.
+
+35
+00:02:53,519 --> 00:03:01,570
+该矩阵的行列式是+1，这意味着当我们将一个向量乘以该矩阵时，
+The determinant of this matrix is +1, that means when we multiply a vector by this matrix,
+
+36
+00:03:01,570 --> 00:03:03,379
+它的长度不变。
+its length will be unchanged.
+
+37
+00:03:03,379 --> 00:03:09,450
+数学家会说像这样的矩阵属于特殊的正交群
+A Mathematician would say that a matrix like this belongs to the special orthogonal group
+
+38
+00:03:09,450 --> 00:03:15,710
+尺寸为3，并且将被写为R是集合SO（3）的元素。
+of dimension 3 and that'll be written as R being an element of the set SO(3).
+
+39
+00:03:15,710 --> 00:03:22,030
+三表示矩阵是3x3，它是在三维空间中旋转。
+Three indicating that the matrix is 3x3, it is rotation in 3-dimensional space.
+
+40
+00:03:22,030 --> 00:03:26,220
+我们可以写下一些非常有用的旋转矩阵，我们参考这些
+There are some very useful rotation matrices that we can write down, we refer to these
+
+41
+00:03:26,220 --> 00:03:29,079
+作为基本旋转矩阵。
+as elementary rotation matrices.
+
+42
+00:03:29,079 --> 00:03:35,180
+然后第一个是围绕X轴的θ旋转，由θ围绕旋转
+The first one then is the rotation by theta around the X axis, rotation by theta around
+
+43
+00:03:35,180 --> 00:03:40,250
+Y轴，最后绕θ绕Z轴旋转。
+the Y axis and finally rotation by theta about the Z axis.
+
+44
+00:03:40,250 --> 00:03:45,819
+我们可以将它们以各种组合相乘，以实现更多目标
+And we can multiply these together in various combinations in order to achieve much more
+
+45
+00:03:45,819 --> 00:03:48,790
+复杂的旋转;不久之后。
+complicated rotations; more about that shortly.
+
+46
+00:03:48,790 --> 00:03:53,500
+在我们考虑二维旋转的最后一节中，我们写了一个旋转矩阵
+In the last lecture when we considered 2-dimensional rotations we wrote a rotation matrix that
+
+47
+00:03:53,500 --> 00:03:54,500
+看起来像这样。
+looks like this.
+
+48
+00:03:54,500 --> 00:03:59,670
+实际上，这与基本旋转矩阵的左上角相同
+In fact this is identical to the top left corner of the elementary rotation matrix for
+
+49
+00:03:59,670 --> 00:04:01,360
+旋转绕Z.
+rotation about Z.
+
+50
+00:04:01,360 --> 00:04:04,440
+这个的原因很直观。
+The reason about this quite intuitive.
+
+51
+00:04:04,440 --> 00:04:09,920
+在二维情况下，我们实际上围绕看不见的Z轴旋转
+In the 2 dimensional case we are actually rotating around the unseen Z axis which was
+
+52
+00:04:09,920 --> 00:04:14,629
+在屏幕上向我们伸出手，实际上是看不见的。
+sticking up at us out of the screen and was effectively invisible.
+
+53
+00:04:14,629 --> 00:04:20,739
+因此，二维旋转和三维旋转之间存在等价关系
+So there is an equivalence between 2-dimensional rotation and the 3-dimensional rotation around
+
+54
+00:04:20,739 --> 00:04:22,030
+Z轴。
+the Z axis.
+
+55
+00:04:22,030 --> 00:04:27,639
+当我们谈论方向时，我们会根据基本序列来考虑它们
+When we're talking about orientation we consider them in terms of a sequence of elementary
+
+56
+00:04:27,639 --> 00:04:31,030
+旋转，让我们看一下围绕X轴的旋转。
+rotations, so let's look at rotations around the X-axis.
+
+57
+00:04:31,030 --> 00:04:36,190
+现在这是正旋转方向，所以如果我将此坐标系旋转90°
+Now this was the positive rotation direction so if I rotate this coordinate frame by 90
+
+58
+00:04:36,190 --> 00:04:39,860
+围绕X轴的度数看起来像这样。
+degrees around the X-axis it's going to look like this.
+
+59
+00:04:39,860 --> 00:04:44,680
+如果我围绕X轴旋转负90度，它将看起来像这样。
+If I rotate it by minus 90 degrees around the X-axis it's going to look like this.
+
+60
+00:04:44,680 --> 00:04:50,110
+我可以围绕Y轴旋转正90度，这样就可以旋转
+I can rotate it by positive 90 degrees around the Y-axis so that's a rotation that way so
+
+61
+00:04:50,110 --> 00:04:55,340
+正90度旋转看起来像这样，负90度旋转
+positive 90 degrees rotation looks like this and a negative 90 degrees rotation is going
+
+62
+00:04:55,340 --> 00:04:56,800
+看起来像这样。
+to look like this.
+
+63
+00:04:56,800 --> 00:05:01,500
+现在围绕Z轴的正向旋转是这样的，所以如果我将这个框架旋转90度
+Now positive rotation around the Z-axis is this way, so if I rotate this frame 90 degrees
+
+64
+00:05:01,500 --> 00:05:06,669
+在Z轴周围，它看起来像是这样，或者如果我将它旋转零下90度
+around the Z-axis it's going to look like this or if I rotate it by minus 90 degrees
+
+65
+00:05:06,669 --> 00:05:10,190
+在Z轴周围，它看起来像这样。
+this.
+
+66
+00:05:10,190 --> 00:05:13,930
+我们来看看MATLAB中的一些基本变换矩阵。
+Let's have a look at some of these elementary transformation matrices in MATLAB.
+
+67
+00:05:13,930 --> 00:05:19,400
+我们可以使用函数rotx创建一个围绕X轴的旋转，我将要求
+We can use the function rotx to create a rotation about the X-axis and I'm going to ask for
+
+68
+00:05:19,400 --> 00:05:20,759
+旋转0.2
+a rotation of 0.2
+
+69
+00:05:20,759 --> 00:05:25,419
+弧度，这就是旋转矩阵的样子。
+radians and this is what the rotation matrix looks like.
+
+70
+00:05:25,419 --> 00:05:30,240
+我也可以用度数来指定角度，所以在这种情况下我寻找的是什么
+I could have also specified the angle in terms of degrees so in this case what I look for
+
+71
+00:05:30,240 --> 00:05:36,170
+是围绕X轴旋转30度。
+is a rotation of 30 degrees around the X-axis.
+
+72
+00:05:36,170 --> 00:05:41,850
+让我把那个矩阵放到一个变量中，我将它称为R，它是一个3x3
+Let me put that matrix into a variable which I'm going to call R for rotation it's a 3x3
+
+73
+00:05:41,850 --> 00:05:46,120
+正交旋转矩阵，我们将只测试我们提到的一些属性
+orthogonal rotation matrix and we'll just test some of the properties we've mentioned
+
+74
+00:05:46,120 --> 00:05:49,890
+早期关于正交旋转矩阵。
+earlier about orthogonal rotation matrices.
+
+75
+00:05:49,890 --> 00:05:54,410
+我可以看一下矩阵的行列式，我们可以看到它等于1。
+I can look at the determinant of the matrix and we can see that it is equal to 1.
+
+76
+00:05:54,410 --> 00:06:00,000
+我可以计算该矩阵的逆矩阵，我们可以看到它与它完全相同
+I can compute the inverse of that matrix and we can see that it is exactly the same as
+
+77
+00:06:00,000 --> 00:06:02,500
+该矩阵的转置。
+a transpose of that matrix.
+
+78
+00:06:02,500 --> 00:06:07,030
+并且在计算上这是特别方便的，而不是必须反转矩阵
+And computationally this is particularly convenient instead of having to invert the matrix I can
+
+79
+00:06:07,030 --> 00:06:09,360
+简单地转置它。
+simply transpose it.
+
+80
+00:06:09,360 --> 00:06:12,460
+计算上更便宜，便宜得多。
+Computationally much, much cheaper.
+
+81
+00:06:12,460 --> 00:06:17,210
+我还可以计算一个不同轴的旋转，我可以要求围绕它旋转
+I can also compute a rotation about a different axis I could ask for a rotation around the
+
+82
+00:06:17,210 --> 00:06:18,880
+Y轴乘以0.2
+Y-axis by 0.2
+
+83
+00:06:18,880 --> 00:06:24,080
+弧度或围绕Z轴的旋转，再次为0.3
+radians or a rotation around the Z-axis, again by 0.3
+
+84
+00:06:24,080 --> 00:06:25,560
+弧度。
+radians.
+
+85
+00:06:25,560 --> 00:06:31,110
+工具箱还包含一个功能，允许我以图形方式描绘其中一个旋转
+The toolbox also contains a function which allows me to graphically depict one of these rotation
+
+86
+00:06:31,110 --> 00:06:33,650
+矩阵作为旋转坐标系。
+matrices as a rotated coordinate frame.
+
+87
+00:06:33,650 --> 00:06:39,430
+所以我可以将自动变量ans中的最后一个结果传递给函数
+So I can pass the last result, which is in the automatic variable ans into the function
+
+88
+00:06:39,430 --> 00:06:45,490
+trplot和这里我们可以看到旋转坐标系的表示。
+trplot and here we can see the representation of the rotated coordinate frame.
+
+89
+00:06:45,490 --> 00:06:50,650
+此处指示参考坐标系，并显示旋转的坐标系
+The reference coordinate frame is indicated here and the rotated coordinate frame is shown
+
+90
+00:06:50,650 --> 00:06:52,930
+这里是蓝色的。
+here in blue.
+
+91
+00:06:52,930 --> 00:06:55,090
+trplot函数有很多很多选项。
+The trplot function has got many, many options.
+
+92
+00:06:55,090 --> 00:06:58,970
+我们可以改变坐标框架的颜色，我们可以在框架上添加标签
+We can change the color of the coordinate frame, we can add a label to the frame, we
+
+93
+00:06:58,970 --> 00:07:00,900
+可以添加箭头等。
+can add arrowheads and so on.
+

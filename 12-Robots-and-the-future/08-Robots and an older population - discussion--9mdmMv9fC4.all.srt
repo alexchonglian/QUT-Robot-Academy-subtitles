@@ -1,0 +1,255 @@
+1
+00:00:03,689 --> 00:00:08,740
+彼得：最近我最喜欢的机器人电影之一被称为“机器人和弗兰克”。
+Peter: One of my favorite robot movies in recent times is called "Robot and Frank".
+
+2
+00:00:08,740 --> 00:00:13,200
+这是关于一个正处于早期阶段的老人之间的关系
+And it's about the relationship between an elderly man who is suffering the early stages
+
+3
+00:00:13,200 --> 00:00:19,680
+老年痴呆症-他曾经是一个猫咪窃贼-以及照顾他的机器人。还有弗兰克
+of dementia - he used to be a cat burglar - and the robot who looks after him. And Frank
+
+4
+00:00:19,680 --> 00:00:25,060
+是一个相当吝啬的角色，他的儿子发现它非常耗费精力和疲惫
+is a fairly curmudgeonly character, and his son finds it pretty draining and exhausting
+
+5
+00:00:25,060 --> 00:00:31,660
+去拜访他并被虐待。所以他给他的父亲买了一个机器人，因为机器人会的
+to go and visit him and be abused. So he buys his father a robot, because the robot will
+
+6
+00:00:31,660 --> 00:00:41,469
+照顾他。这对儿子亨特来说有点麻烦，而且他有效
+look after him. And it's kind of a less bother for the son, Hunter, and he has effectively
+
+7
+00:00:41,469 --> 00:00:47,530
+将他父亲的照顾委托给一台机器，因为实际上他不那么痛苦
+delegated the care of his father to a machine because it's less painful for him to actually
+
+8
+00:00:47,530 --> 00:00:49,519
+拜访他，父亲，他自己。
+visit him, the father, himself.
+
+9
+00:00:49,519 --> 00:00:54,499
+所以你或许可以争辩说，这位父亲弗兰克会更好地照顾
+So you could perhaps argue that this father, Frank, is going to be better looked after
+
+10
+00:00:54,499 --> 00:01:01,410
+与机器人。你想知道亨特是否通过购买他的方式在这里做正确的事
+with the robot. Do you wonder whether Hunter is doing the right thing here by buying his
+
+11
+00:01:01,410 --> 00:01:03,140
+父亲一个机器人走开了？
+father a robot and walking away?
+
+12
+00:01:03,140 --> 00:01:14,750
+道格：如果我们看看道义论，那么道义论就是“deon”，责任。道义论的关键
+Doug: If we look at deontology, deontology is ‘deon’, duty. And key to deontology
+
+13
+00:01:14,750 --> 00:01:21,070
+是我满足那些我先前提出的标准所需的职责。自治，
+are the sets of duties that are required to meet those criteria I laid out earlier. Autonomy,
+
+14
+00:01:21,070 --> 00:01:25,190
+非男性，对吗？所以在这种情况下，我们谈的是自治权和权利
+non-maleficence, right? So in this case we're talking about autonomy and the right of the
+
+15
+00:01:25,190 --> 00:01:31,660
+个人过着充实而深思熟虑的生活。所以在这种情况下父亲正在被关注
+individual to live a full and considered life. So the father in this case is being looked
+
+16
+00:01:31,660 --> 00:01:39,640
+在一台机器之后，儿子正在废除他对父亲的责任。有人可以说
+after by a machine, the son is abrogating his duty to his father. And so one could say
+
+17
+00:01:39,640 --> 00:01:47,390
+这是不道德的。其次，到了什么程度呢？我认为有一台机器可以看
+that that's unethical. Secondly, to what degree though? I think that having a machine to look
+
+18
+00:01:47,390 --> 00:01:53,730
+在某人之后，只要它符合父亲的自治标准，就可以了。
+after somebody, as long as it fulfills the autonomy criterion for the father, it's fine.
+
+19
+00:01:53,730 --> 00:01:58,720
+只要他是自主的并且可以在机器人之外做出决定-不是问题。该
+As long as he is autonomous and can make decisions outside of the robot - not a problem. The
+
+20
+00:01:58,720 --> 00:02:04,560
+机器人正在满足他的需求并且正在增加他的自主权。但那时，和
+robot is serving his needs and is increasing his autonomy. But at that point where, and
+
+21
+00:02:04,560 --> 00:02:10,750
+这是一个照顾个人的家长式举动，对吧？但在这一点上
+this is really a paternalistic move to look after an individual, right? But at the point
+
+22
+00:02:10,750 --> 00:02:15,390
+个人自治受到影响，换句话说他们无法做出决定，
+that the individuals autonomy is impacted, in other words they can't make decisions,
+
+23
+00:02:15,390 --> 00:02:20,010
+或者他们做出的决定受到机器的影响，那么我认为这是不道德的。
+or what decisions they made are affected by the machine, then I'd argue it's unethical.
+
+24
+00:02:20,010 --> 00:02:24,740
+而且我还认为儿子正在废除照顾的责任。
+And I'd also argue that the duty of care is being abrogated by the son.
+
+25
+00:02:24,740 --> 00:02:29,250
+彼得：即使机器比儿子自己做得更好吗？
+Peter: Even if the machine would do a better job of care than the son would himself?
+
+26
+00:02:29,250 --> 00:02:33,010
+道格：但这并没有废除个人的责任。
+Doug: But this does not abrogate the individual for the duty.
+
+27
+00:02:33,010 --> 00:02:34,010
+彼得：好的。
+Peter: Okay.
+
+28
+00:02:34,010 --> 00:02:35,010
+道格：你和我在一起？
+Doug: You're with me?
+
+29
+00:02:35,010 --> 00:02:36,020
+彼得：是的。
+Peter: Yup.
+
+30
+00:02:36,020 --> 00:02:44,550
+道格：但是没错，我同意你的观点。但是对父母的照顾责任是道德的，
+Doug: But correct, I agree with you on that. But the duty of care to a parent is an ethical,
+
+31
+00:02:44,550 --> 00:02:51,410
+随着父母年龄的增长，我们都必须面对这种基本的道德窘境。
+it's a fundamental ethical sort of quandary we all have to face as our parents get older.
+
+32
+00:02:51,410 --> 00:02:52,410
+彼得：当然。
+Peter: Absolutely.
+
+33
+00:02:52,410 --> 00:02:57,490
+道格：但道德和道义论会认为你有这个职责而你实现了它。
+Doug: But ethics and deontology would argue that you have this duty and you fulfill it.
+
+34
+00:02:57,490 --> 00:03:02,521
+彼得：那么......让我们走下一代而不是一代人。我们
+Peter: So what about the... let's go down a generation instead of up a generation. We
+
+35
+00:03:02,521 --> 00:03:08,470
+在这个国家有很多关于学前教育，儿童保育和儿童保育费用的讨论
+have a lot of discussion in this country about the cost of preschool care, childcare, and
+
+36
+00:03:08,470 --> 00:03:14,740
+我们无法让足够多的人去做那项工作。那么道德规范对于拥有什么呢？
+that we can't get enough people to do that work. So what does ethics say about having
+
+37
+00:03:14,740 --> 00:03:22,670
+机器，机器人照顾幼儿园年龄的儿童或更年轻？他们吃饱了。
+machines, robots looking after kindergarten age children or younger? They're well fed.
+
+38
+00:03:22,670 --> 00:03:29,459
+他们受到照顾。他们的尿布和尿布都改变了。也许他们玩的，
+They're looked after. Their nappies and diapers are changed. Maybe they’re played with,
+
+39
+00:03:29,459 --> 00:03:32,720
+非常热情，也许比人类更多。
+very enthusiastically, perhaps more than by a human.
+
+40
+00:03:32,720 --> 00:03:38,400
+道格：是的，我和你在一起。但我认为，我们再次使用相同的论点
+Doug: Yeah, I'm with you. But I think that, again we use the same argument in terms of
+
+41
+00:03:38,400 --> 00:03:47,410
+责任，这是父母的责任。孝顺的责任，以及这需要什么。再说一次，
+duty, and that's the duty of the parent. The filial duty, and what that entails. So again,
+
+42
+00:03:47,410 --> 00:03:59,060
+如果一个机器人补充那个孝顺的职责，那就好了。但如果它取代它-不好。所以它变成了
+if a robot supplements that filial duty, good. But if it replaces it - not good. So it becomes
+
+43
+00:03:59,060 --> 00:04:04,660
+你必须谈判的灰色区域，因为如果一天结束的机器人使我们的
+a grey area that you have to negotiate, because if a robot at the end of the day makes our
+
+44
+00:04:04,660 --> 00:04:09,810
+孩子更安全-我很喜欢那个。你知道，如果它不让他们进入
+children safer – well I'm for that. You know, if it doesn't let them get onto the
+
+45
+00:04:09,810 --> 00:04:14,700
+街道和那种事情，我认为这很棒。但机器人无法取代责任
+street and that sort of thing, I'd argue that's great. But a robot can't replace the duty
+
+46
+00:04:14,700 --> 00:04:21,880
+照顾父母。它做不到。至少不是现在。但仍然存在根本原因
+of care of the parent. It can't do it. At least not now. But there's still that fundamental
+
+47
+00:04:21,880 --> 00:04:23,690
+个人对孩子的责任。
+duty the individual has to their children.
+
+48
+00:04:23,690 --> 00:04:25,350
+彼得：还有他们的父母。
+Peter: And to their parents.
+
+49
+00:04:25,350 --> 00:04:29,230
+道格：还有他们的父母，是的。你无法摆脱这种情况。
+Doug: And to their parents, yeah. And you can't escape that.
+
+50
+00:04:29,230 --> 00:04:34,400
+彼得：所以写下来的地方，你的孩子和你父母的责任在哪里？
+Peter: So where is that written down, the duty to your children and your parents?
+
+51
+00:04:34,400 --> 00:04:36,479
+道格：哦，它就在附近。
+Doug: Oh, it's around.
+

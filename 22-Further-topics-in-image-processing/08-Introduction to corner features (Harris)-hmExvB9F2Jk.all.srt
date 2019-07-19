@@ -1,0 +1,760 @@
+1
+00:00:04,160 --> 00:00:09,870
+这里是同一建筑的两个视图。我拍了照。我动了一下，然后我拿了
+Here two views of the same building. I took picture. I moved a little bit and then I took
+
+2
+00:00:09,870 --> 00:00:13,870
+另外一张照片。所以我们可以看到观点完全不同。我们可以看到
+another picture. So we can see that the view point is quite different. We can see that
+
+3
+00:00:13,870 --> 00:00:18,220
+这里堆积的烟囱是不同的，我们可以看到其中的烟叶少得多
+the chimney stacked up here is different and we can see there’s far less foliage in one
+
+4
+00:00:18,220 --> 00:00:22,130
+图片的一面。所以，让我们说我对某一点很感兴趣
+side of the picture. So let's say that I'm interested in a point
+
+5
+00:00:22,130 --> 00:00:28,699
+在这里，阳台的角落，在这个图像中，我可以找到它的像素坐标。我想要
+here, the corner of the balcony and in this image I can find its pixel coordinate. I want
+
+6
+00:00:28,699 --> 00:00:34,360
+在另一个图像中找到相同的阳台。这对你和我很容易找到
+to find that same balcony in the other image. That's very easy for you and me to find that
+
+7
+00:00:34,360 --> 00:00:39,760
+同样的点，我可以非常轻松地点击它，我这样做，我发现这里是它的
+same point and I can click on it very very easily and I do that and I find here is its
+
+8
+00:00:39,760 --> 00:00:44,990
+像素坐标。所以两个不同的观点，世界上的同一点，同一个角落
+pixel coordinate. So two different views, the same point in the world, the same corner
+
+9
+00:00:44,990 --> 00:00:50,489
+因为我移动了相机，所以它的像素坐标非常不同。
+of the balcony when it's got to very different pixel coordinates because I moved the camera.
+
+10
+00:00:50,489 --> 00:00:57,149
+能够解决这种对应问题是许多机器人视觉算法的基础。
+Being able to solve this correspondence problem is fundamental to many robotic vision algorithms.
+
+11
+00:00:57,149 --> 00:01:01,070
+我们不打算在本课程中介绍这些算法，但我认为这很有趣
+And we're not going to cover those algorithms in this course, but I think it's interesting
+
+12
+00:01:01,070 --> 00:01:09,050
+只是概述了点检测器的原理并确定了对应关系。怎么可能
+just to outline the principles of point detectors and determining correspondence. So how might
+
+13
+00:01:09,050 --> 00:01:11,910
+我们去解决这个对应问题？
+we go about solving this correspondence problem?
+
+14
+00:01:11,910 --> 00:01:16,890
+如果我看一下阳台角落这个特定点的灰度值，
+If I look at the grey scale value at this particular point on the corner of the balcony,
+
+15
+00:01:16,890 --> 00:01:22,471
+我发现它的灰度值为51.这很有趣。所以我也许那样
+I find that it's got a grey scale value of 51. That's interesting. So I perhaps that
+
+16
+00:01:22,471 --> 00:01:28,380
+我去寻找另一个图像中具有51值的所有像素
+I go and look for all the pixels in the other image that have got the value of 51. One of
+
+17
+00:01:28,380 --> 00:01:33,530
+他们可能在阳台的角落或其中一个可能是，但有很多
+them might be on the corner of the balcony or one of them might be, but there are a lot
+
+18
+00:01:33,530 --> 00:01:39,040
+第二个图像中其他像素的值为51.实际上只是
+of other pixels within that second image that have got a value of 51. In fact there's just
+
+19
+00:01:39,040 --> 00:01:45,640
+超过6,000个，它们在这里表示为黑色背景下的白点。
+over 6,000 of them and they are indicated here as white dots against our black background.
+
+20
+00:01:45,640 --> 00:01:50,439
+很明显，这不是一个非常有用或可靠的技术。
+So clearly this is not a very useful or reliable technique.
+
+21
+00:01:50,439 --> 00:01:52,970
+另一个困难是虽然像素
+Another difficulty is that although the pixel
+
+22
+00:01:52,970 --> 00:01:59,030
+当我拍摄第一张照片时，其值为51，但是当我拍摄第二张照片时，该像素
+had a value of 51 when I took the first picture, but when I took the second picture, that pixel
+
+23
+00:01:59,030 --> 00:02:04,810
+灰度值为47.因此寻找值为51的像素是荒谬的
+has got grey scale value of 47. So looking for a pixel with a value of 51 is forlorn
+
+24
+00:02:04,810 --> 00:02:09,649
+因为我感兴趣的像素实际上有一个不同的灰度值，即使
+because the pixel I'm interested in has actually got a different grey scale value even though
+
+25
+00:02:09,649 --> 00:02:15,940
+这是图像中的相同点。原因是曝光设置在
+it's the same point in the image. The reason for that is that the exposure setting on the
+
+26
+00:02:15,940 --> 00:02:21,100
+相机可能略有不同。第二张图片有更多蓝天，曝光
+camera is perhaps slightly different. The second image there is more blue sky, exposure
+
+27
+00:02:21,100 --> 00:02:25,780
+相机的数量不同，因此所有像素值都有一点变化。
+of the camera is different and therefore all the pixel values have changed a little bit.
+
+28
+00:02:25,780 --> 00:02:30,500
+因此仅仅考虑灰度值是不够的。
+So looking at the grey scale values alone is not enough.
+
+29
+00:02:30,500 --> 00:02:35,880
+我们需要考虑的另一点是，不可能总是找到一个
+Another point that we need to take into consideration is that it's not possible to always find a
+
+30
+00:02:35,880 --> 00:02:41,330
+对应点。我们现在拍摄一个在天空中的像素。现在有很多
+corresponding point. Let's now take a pixel that's in a sky. Now there is a whole lot
+
+31
+00:02:41,330 --> 00:02:47,820
+天空中的其他像素看起来与第一张图像中的天空像素完全相同。
+of other pixels in the sky that look exactly the same as that sky pixel in the first image.
+
+32
+00:02:47,820 --> 00:02:52,160
+所以我们可以看到有些像素没有对应的点。
+So we can see that there is some pixels for which there is no corresponding point.
+
+33
+00:02:52,160 --> 00:02:57,020
+我们可以从这个例子中学到一些关于尝试匹配天空中的像素的示例
+We can learn something from this example about trying to match a pixel in the sky from one
+
+34
+00:02:57,020 --> 00:03:02,530
+框架到另一个。但是让我们放大这个特定的例子。每个灰色矩形
+frame to the other. But let's zoom in on this particular example. Each of the grey rectangles
+
+35
+00:03:02,530 --> 00:03:09,990
+代表一个像素。我们将考虑中心3x3像素区域。
+represents a single pixel. And we're going to consider a central 3x3 region of pixels.
+
+36
+00:03:09,990 --> 00:03:13,610
+所有这些像素都具有完全相同的值。这就是为什么他们被展示出来的原因
+All these pixels have got exactly the same value. That's why they are shown with the
+
+37
+00:03:13,610 --> 00:03:19,930
+相同的灰色阴影。我要砍掉这个中央3x3区域，我要去了
+identical shade of grey. I am going to chop out this central 3x3 region and I'm going
+
+38
+00:03:19,930 --> 00:03:25,470
+将它与一大堆相邻的3x3区域进行比较，您可以看到它们是
+to compare it to a whole bunch of neighbouring\h3x3 regions and you can see that they are the
+
+39
+00:03:25,470 --> 00:03:26,470
+相同。
+same.
+
+40
+00:03:26,470 --> 00:03:31,240
+无论我把这个移动的红色矩形放在哪里，它看起来与原始的完全相同
+Wherever I put this moving red rectangles, it looks exactly the same as the original
+
+41
+00:03:31,240 --> 00:03:38,430
+3x3窗口。因此，我切出的这个中央窗口类似于其他八个可能的窗口
+3x3 window. So this central\hwindow that I chopped out is similar to eight other possible
+
+42
+00:03:38,430 --> 00:03:45,150
+我可以放置3x3窗口的位置。它不是唯一的，这是问题所在
+locations that I can put my 3x3 window. It's not unique and this is the problem with the
+
+43
+00:03:45,150 --> 00:03:50,920
+天空。所有像素都是相同的颜色。无论我放置3x3窗口，它看起来都一样
+sky. All the pixels are the same color. Wherever I put the 3x3 window it looks the same as
+
+44
+00:03:50,920 --> 00:03:53,850
+中央3x3窗口。
+the central 3x3 window.
+
+45
+00:03:53,850 --> 00:03:58,900
+让我们现在考虑一个边缘的例子。所以我们有一些浅灰色像素和一些
+Let's consider an example now along an edge. So we have some light grey pixels and some
+
+46
+00:03:58,900 --> 00:04:03,440
+深灰色像素。我要完全做同样的事情。我要砍掉了
+dark grey pixels. I'm going to do exactly the same thing. I'm going to chop out the
+
+47
+00:04:03,440 --> 00:04:07,770
+中间区域，然后我将它与一堆相邻区域进行比较
+middle region and I'm going to compare it then to a bunch of neighbouring\hregions and
+
+48
+00:04:07,770 --> 00:04:13,020
+匹配那里不匹配，那里不匹配，不匹配，匹配
+that matches\hthere doesn't match there, doesn't match there, doesn't match there, matches
+
+49
+00:04:13,020 --> 00:04:20,670
+好在这里，在这里不匹配。所以这个中央窗口在其他两个位置匹配。
+well here and doesn't match here. So this central window matches at two other locations.
+
+50
+00:04:20,670 --> 00:04:23,980
+所以它更独特一点。
+So it is a bit more unique.
+
+51
+00:04:23,980 --> 00:04:30,430
+现在考虑这种模式。单个暗像素与较亮像素的背景。我
+Consider now this pattern. A single dark pixel against a background of brighter pixels. I'm
+
+52
+00:04:30,430 --> 00:04:35,160
+要切断中央区域，我将再次移动3x3窗口。
+going to chop out the central region and once again I'm going to move the 3x3 window around.
+
+53
+00:04:35,160 --> 00:04:40,830
+我们发现它与其他任何地方都不匹配。它是独一无二的。它只与那匹配
+And we see that it doesn't match anywhere else. It is unique. It only matches to that
+
+54
+00:04:40,830 --> 00:04:48,790
+中心位置。所以我们说这个特殊的3x3像素图案是本地唯一的。它的
+central location. So we say that this particular 3x3 pattern of pixels is locally unique. It's
+
+55
+00:04:48,790 --> 00:04:52,290
+不同。这意味着它将成为我们可能认识到的模式
+distinct. It's means that it's going to be a pattern that we could perhaps recognize
+
+56
+00:04:52,290 --> 00:04:53,880
+在一个不同的形象。
+in a different image.
+
+57
+00:04:53,880 --> 00:04:59,420
+让我们试着将其形式化。我们将看看我们的中央3x3窗口。我们
+Let's try\hto formalize this. We're going to look at our central 3x3\hwindow. We're
+
+58
+00:04:59,420 --> 00:05:04,900
+去看看从中央窗口移开的任意3x3窗口
+going to look at an\harbitrary 3x3 window which is displaced from that central window
+
+59
+00:05:04,900 --> 00:05:10,780
+在水平方向上由ΔU组成，在垂直方向上由ΔV组成。所以我们
+in the horizontal direction by delta U and in the vertical direction by delta V. So we
+
+60
+00:05:10,780 --> 00:05:17,340
+可以描述这两个窗口的相似性。资本I是我们的输入图像。参考资料
+can describe the similarity of these two windows. Capital I is our input image. The reference
+
+61
+00:05:17,340 --> 00:05:23,340
+3x3窗口以坐标U，V为中心。要做到这一点，我们将索引我和
+3x3 window is centred at the coordinate U,V. And to do that we are going to index I and
+
+62
+00:05:23,340 --> 00:05:29,199
+J在一个地区，所以我和J.在这个简单的例子中，它将在-1之间变化
+J over a region, so I and J. In this simple example are going to vary between minus 1
+
+63
+00:05:29,199 --> 00:05:30,199
+加1。
+and plus 1.
+
+64
+00:05:30,199 --> 00:05:34,950
+所以这是一个相似性度量。它会告诉我们中央窗口有多相似
+So this is a similarity measure. It's going to tell us how similar the central window
+
+65
+00:05:34,950 --> 00:05:41,500
+是移动的窗口。我们可以计算任意有价值的转变的相似性。
+is to the shifted window. We can compute the similarity for an arbitrary valuable shift.
+
+66
+00:05:41,500 --> 00:05:45,380
+如果两个区域相同并且具有较大的相似性，则相似性的值为零
+Similarity's got the value of zero if the two regions are identical and has a large
+
+67
+00:05:45,380 --> 00:05:52,020
+如果区域不相似则为正值。现在我们将介绍一种衡量标准，即资本C
+positive value if the regions are not similar. Now we'll introduce a measure, capital C which
+
+68
+00:05:52,020 --> 00:05:53,630
+我们称之为角落。
+we call cornerness.
+
+69
+00:05:53,630 --> 00:06:00,260
+它与特定像素片段的唯一性有关。它是最小值
+It's related to the uniqueness of a particular patch of pixels. And it is the minimum value
+
+70
+00:06:00,260 --> 00:06:07,080
+我们在参考窗口周围移动3x3窗口时的相似性。如果参考
+of the similarity as we shift that 3x3 window around the reference window. If the reference
+
+71
+00:06:07,080 --> 00:06:12,820
+窗口类似于所有移位位置的窗口，然后是最小值
+window is similar to the window in all the shifted locations, then the minimum value
+
+72
+00:06:12,820 --> 00:06:18,610
+相似性将是一个非常低的价值。我们的价值很低
+of the similarity is going to be a very low value. We're going to have a low value of
+
+73
+00:06:18,610 --> 00:06:24,570
+cornerness;低独特性。所以这是一个不太明显的观点。
+cornerness; a low value of uniqueness. So this is a point that's not very distinct.
+
+74
+00:06:24,570 --> 00:06:31,120
+但是，如果我们发现当我们移动窗口时，它与参考非常不同
+If however we find that when we shift the window, it's very very dissimilar to the reference
+
+75
+00:06:31,120 --> 00:06:35,900
+窗口，那么相似度值都将非常高。最低限度
+window, then the similarity values are all going to be very high. The minimum of all
+
+76
+00:06:35,900 --> 00:06:40,870
+这些非常高的价值将是更高的价值。所以我们将会有很高的价值
+these very high values is going to be a higher value. So we're going to have a high value
+
+77
+00:06:40,870 --> 00:06:45,330
+角度或独特性的高价值。
+of cornerness or a high value of uniqueness.
+
+78
+00:06:45,330 --> 00:06:51,050
+所以这是一个非常简单的角点检测器的下划线原则。一种叫做的探测器
+So this is the underlined principle of a very simple corner detector. A detector known as
+
+79
+00:06:51,050 --> 00:06:56,080
+Moravec角落探测器，真正是各种现代角落的祖先
+the Moravec corner detector and is really the ancestor of all sorts of modern corner
+
+80
+00:06:56,080 --> 00:06:58,979
+探测器跟随它的脚步。
+detectors that have followed in it's footsteps.
+
+81
+00:06:58,979 --> 00:07:04,901
+现在我们可以概括这种方法。我们从以前得到了相似性度量。但现在
+Now we can generalize this approach. We got our similarity measure from before. But now
+
+82
+00:07:04,901 --> 00:07:10,620
+我们要做的是引入高斯加权矩阵。它就在这里W.那是怎么回事
+what we're going to do is to introduce a Gaussian\hweighting matrix. It’s here W. And what that's going
+
+83
+00:07:10,620 --> 00:07:15,910
+要做的是增加相对于靠近参考的窗户的重量
+to do is to increase the weight with respect to windows that are close to the reference
+
+84
+00:07:15,910 --> 00:07:21,009
+窗口和减重测试窗口，远离参考窗口。
+window and de-weight test windows that are further away from the reference window.
+
+85
+00:07:21,009 --> 00:07:25,110
+我们在这里通过一些数学工作，我们可以重写这个表达式
+We're going worked through a little bit of maths here, we can rewrite this expression
+
+86
+00:07:25,110 --> 00:07:30,820
+就deltadelta和deltaV的向量而言，它是窗口偏移，乘以
+in terms of a vector of delta U and delta V, which is the window shift, multiplied by
+
+87
+00:07:30,820 --> 00:07:38,380
+方阵A.这个矩阵A被称为结构张量，2x2矩阵和
+a square matrix A. This matrix A is referred to as the structure\htensor,\h2x2 matrix and
+
+88
+00:07:38,380 --> 00:07:42,550
+它由图像渐变组成。所以我们谈谈如何计算图像渐变
+it's comprised of the image gradiants. So we talk about how to compute image gradiants
+
+89
+00:07:42,550 --> 00:07:49,919
+之前。IU是水平梯度。IV是垂直梯度。G是高斯
+before. IU is the horizontal gradient. IV is the vertical gradient. And G is a Gaussian
+
+90
+00:07:49,919 --> 00:07:50,919
+平滑的角落。
+smoothing\hcorner.
+
+91
+00:07:50,919 --> 00:07:55,229
+这种结构张量的优点在于它基于图像梯度。所以任何
+The advantage of this structure tensor is that it's based on image gradients. So any
+
+92
+00:07:55,229 --> 00:08:01,639
+由于相机曝光变化，太阳从后面出来的图像之间的差异
+difference between images due to camera exposure change, the sun coming out from behind the
+
+93
+00:08:01,639 --> 00:08:05,150
+云。被强度梯度算子消除。
+cloud. Is eliminated by the intensity gradient operator.
+
+94
+00:08:05,150 --> 00:08:09,699
+图像张量是2x2矩阵，因此它有两个特征值。特征值
+The image tensor is the 2x2 matrix and so it's got two\heigenvalues. The\heigenvalues
+
+95
+00:08:09,699 --> 00:08:16,460
+在这个矩阵中告诉我们很多关于图像的特定部分。如果两个特征值
+in this matrix tell us a lot about that particular part of the image. If both the eigenvalues
+
+96
+00:08:16,460 --> 00:08:22,270
+很小，然后它说图像的特定部分几乎是不变的。如果
+are small, then it's saying that that particular part of the image is almost constant. If the
+
+97
+00:08:22,270 --> 00:08:26,941
+两个特征值都很小，那么图像的那部分几乎是不变的。它的
+two eigenvalues are both small, then that part of the image is almost constant. It's
+
+98
+00:08:26,941 --> 00:08:31,280
+就像我们正在看的天空一样。该社区的所有像素都有
+like the sky that we were looking at. All of the pixels in that neighbourhood have got
+
+99
+00:08:31,280 --> 00:08:32,789
+一个非常相似的价值。
+a very similar value.
+
+100
+00:08:32,789 --> 00:08:38,360
+如果任一特征值很大但不是两者都是，则这对应于一个点
+If either of the eigenvalues are large but not both then this corresponds to a point
+
+101
+00:08:38,360 --> 00:08:43,249
+它沿着图像的边缘排列。它没有告诉我们的方向
+which is lined along an edge in the image. It doesn't tell us about the orientation of
+
+102
+00:08:43,249 --> 00:08:49,319
+边缘，它只是说图像的这个区域包含边缘。现在，如果两者
+the edge, it's just says that this region of the image contains an edge. Now if both
+
+103
+00:08:49,319 --> 00:08:56,189
+特征值很大，那么这对应于一个峰值。它说我们有一个局部最大值
+the eigenvalues are large, then this corresponds to a peak. It says that we have a local maxima
+
+104
+00:08:56,189 --> 00:09:02,749
+或者相对于周围的像素强度的最小值，因此这是非常独特的
+or minima in pixel intensities with respect to the surrounds and so this is a very distinctive
+
+105
+00:09:02,749 --> 00:09:06,290
+我们能够在另一张图片中识别出来。
+point that we're able to recognize in another image.
+
+106
+00:09:06,290 --> 00:09:11,269
+基于这个原理有几种算法确定是否有一个点
+There were a couple of algorithms based on this principle which determine whether a point
+
+107
+00:09:11,269 --> 00:09:17,389
+在图像中很有趣，这通常被称为角落侦探，但更多
+in the image is interesting and this is referred to often as corner detectives but that's more
+
+108
+00:09:17,389 --> 00:09:23,129
+适当地称为利益运营商。一个非常着名的是Shi-Tomasi探测器
+appropriately referred to as interest operators. A very famous one is the Shi-Tomasi detector
+
+109
+00:09:23,129 --> 00:09:27,910
+它所做的只是为每个像素计算结构张量并采取
+and what it does is simply for every pixel compute the structure tensor and take the
+
+110
+00:09:27,910 --> 00:09:34,350
+两个特征值中的最小值。如果两个特征值都很大，则Shi-Tomasi检测器具有
+minimum of the two eigenvalues. If both eigenvalues are large, then the Shi-Tomasi detector has
+
+111
+00:09:34,350 --> 00:09:35,819
+很大的价值。
+a large value.
+
+112
+00:09:35,819 --> 00:09:41,769
+另一个非常着名的是Harris角点探测器，它在原理上是相似的。它
+Another very famous one is the Harris corner detector and it is similar in principle. It
+
+113
+00:09:41,769 --> 00:09:46,480
+有效地确定了具有两个大的特征值的像素，但是这样做了
+effectively determines pixels that have got two large\heigenvalues\hbut it does it by
+
+114
+00:09:46,480 --> 00:09:52,199
+计算矩阵的行列式和矩阵的轨迹是两件事
+computing the determinant of the matrix and the trace of the matrix which are two things
+
+115
+00:09:52,199 --> 00:09:57,179
+这非常容易计算，并且在这些和回报之间取得了比例差异
+that are very very easy to compute and takes the scaled difference between those and returns
+
+116
+00:09:57,179 --> 00:10:02,179
+如果图像的特定部分很有趣，则该值很高。
+the value that is high if that particular part of the image is interesting.
+
+117
+00:10:02,179 --> 00:10:08,519
+以下是Harris角落操作员输出的示例。积极的像素
+Here is an example of the output of the Harris corner operator. Pixels that have got a positive
+
+118
+00:10:08,519 --> 00:10:12,420
+值以蓝色显示。具有负值的像素以红色显示
+value are shown in blue. Pixels that have got a negative value are shown in red and
+
+119
+00:10:12,420 --> 00:10:17,939
+大约为零的像素显示为白色。输入图像的相应区域
+pixels that are around zero are shown as white. The corresponding region of the input image
+
+120
+00:10:17,939 --> 00:10:20,550
+在右边显示在这里。
+is shown over here on the right.
+
+121
+00:10:20,550 --> 00:10:26,470
+我们看到Harris探测器在有特色时会给​​出强烈的正值
+We see that the Harris detector gives a strong positive value when there is a distinctive
+
+122
+00:10:26,470 --> 00:10:31,829
+图像的局部区域。我们可以在另一张图片中找到的东西。它
+local region of the image. Something that we may be able to find in another image. It
+
+123
+00:10:31,829 --> 00:10:37,300
+对输入图像中的边缘给出强烈的否定响应。所以，如果我们在寻找
+gives a strong negative response to an edge in the input image. So if we were looking
+
+124
+00:10:37,300 --> 00:10:43,360
+对于要尝试在另一个图像中定位的点，我们会寻找那些区域
+for points to try and locate in another image, we would look for those regions where the
+
+125
+00:10:43,360 --> 00:10:47,029
+哈里斯角落值具有最强的正值。
+Harris corner value had the strongest positive value.
+
+126
+00:10:47,029 --> 00:10:52,220
+现在我们在左图中找到了一些有趣点的坐标
+Now that we found the coordinates of some interesting points in both the left image
+
+127
+00:10:52,220 --> 00:10:57,489
+和正确的图像，我们现在需要确定对应关系，哪个有趣点
+and the right image, we now need to determine the correspondence, which interesting point
+
+128
+00:10:57,489 --> 00:11:03,199
+在第一图像中对应于第二图像中的哪个有趣点。而且，我们已经谈过了
+in the first image corresponds to which interesting point in the second image. And, we have talked
+
+129
+00:11:03,199 --> 00:11:08,379
+在像素值本身如何不够独特之前。
+before how the pixel values themselves are not sufficiently unique.
+
+130
+00:11:08,379 --> 00:11:14,709
+注意我在这里使用的符号，前导数字，1或2，表示哪个
+Note the notation that I’m using here, a leading digit, the 1 or the 2, indicates which
+
+131
+00:11:14,709 --> 00:11:19,490
+我们正在讨论的特殊框架。所以，这表示第一张图片和这张图片
+particular frame we are talking about. So, this indicates the first image and this one
+
+132
+00:11:19,490 --> 00:11:25,399
+表示第二张图像。解决个人非独特性的问题
+indicates the second image. To get around the problem of the non-uniqueness of individual
+
+133
+00:11:25,399 --> 00:11:33,290
+在图像中的像素值，我们将看到以W为中心的W窗口
+pixel values across images, we are going to look at W by W window of pixels centred around
+
+134
+00:11:33,290 --> 00:11:36,779
+每个角点。这些是具有W平方值的像素组
+each corner point. These are group of pixels with W squared values
+
+135
+00:11:36,779 --> 00:11:43,439
+在它中可能比以兴趣点为中心的单个像素更加独特。
+in it is likely to be much more unique than a single pixel centred at the interest point.
+
+136
+00:11:43,439 --> 00:11:47,970
+那么我们要做的是计算这个感兴趣的像素窗口
+What we’re going to do then is to compute this window of pixels around the interest
+
+137
+00:11:47,970 --> 00:11:53,019
+在第一个图像中指向第二个图像中的所有兴趣点。
+points in the first image and around all the interest points in the second image.
+
+138
+00:11:53,019 --> 00:11:57,730
+我们之前讨论了图像相似性度量，我们将再次使用它们
+We talked previously about image similarity measures and we are going to use them again
+
+139
+00:11:57,730 --> 00:12:04,899
+这里比较这些以兴趣点为中心的窗口。让我们简要回顾一下
+here to compare these windows centred on the interest points. Let’s recap very briefly
+
+140
+00:12:04,899 --> 00:12:10,709
+关于这些功能的实用性，特别是我们刚刚拥有的Harris角落功能
+on the utility of these features, in particular the Harris corner feature that we have just
+
+141
+00:12:10,709 --> 00:12:16,239
+一直在描述。它导致对图像的非常简洁的描述。而不是图像
+been describing. It leads to a very concise description of an image. Instead of an image
+
+142
+00:12:16,239 --> 00:12:22,869
+拥有数百万像素，我们现在有数百个功能。该功能是一个独特的
+with millions of pixels in it, we now have hundreds of features. The feature is a distinct
+
+143
+00:12:22,869 --> 00:12:27,699
+点在场景中。这是我们可以从一个帧到另一个帧找到的东西，只是
+point within the scene. It’s something we can find from one frame to the next, just
+
+144
+00:12:27,699 --> 00:12:32,230
+如果相机正在移动有用。我们现在只有数百个这样的功能而不是
+useful if that camera is moving. We only have hundreds of these features now instead of
+
+145
+00:12:32,230 --> 00:12:37,089
+数百万像素。因此，Harris算法告诉我们每个算法的坐标
+millions of pixels. So, the Harris algorithm tells us the coordinates of each of these
+
+146
+00:12:37,089 --> 00:12:42,000
+图像中的不同特征。现在，我们需要描述这些功能和
+distinct features within the image. Now, we need to describe those features and
+
+147
+00:12:42,000 --> 00:12:48,550
+我们使用每个特征周围的W×W窗口来实现这一点，我们使用图像
+we do that with a W by W window of pixels around each of those features and we use image
+
+148
+00:12:48,550 --> 00:12:53,309
+相似性度量来跨帧比较它们。另一种思考方式
+similarity measures to compare them across frames. Another way of thinking about this
+
+149
+00:12:53,309 --> 00:12:58,709
+我们是否从图像中消除了许多不相关或无用的信息
+is we have eliminated a lot of the irrelevant or not useful information from the image and
+
+150
+00:12:58,709 --> 00:13:04,069
+只关注图像中非常高价值的信息。
+concentrated just on the very high value information within the image.
+
+151
+00:13:04,069 --> 00:13:09,200
+这种寻找角落特征并跨帧匹配的技术确实如此
+This technique of finding corner features and matching them across frames is really
+
+152
+00:13:09,220 --> 00:13:12,800
+正如我们刚才所示，对于实时跟踪非常有用。
+useful for real time tracking as we just showed.
+

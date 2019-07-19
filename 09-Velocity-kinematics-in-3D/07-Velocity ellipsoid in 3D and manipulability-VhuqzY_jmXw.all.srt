@@ -1,0 +1,385 @@
+1
+00:00:03,540 --> 00:00:07,270
+雅可比矩阵中有很多非常丰富的信息，我们可以将其用作
+There is a lot of really rich information in the Jacobian matrix and we can use it as
+
+2
+00:00:07,270 --> 00:00:13,950
+一种诊断工具，用于处理机器人在特定关节角度配置下的移动情况。
+a sort of diagnostic tool to work at how well the robot can move at a particular joint angle configuration.
+
+3
+00:00:14,240 --> 00:00:18,760
+让我们更详细地研究雅可比矩阵是奇异的情况，这是
+Let us look in more detail at the case where the Jacobian matrix is singular and this is
+
+4
+00:00:18,770 --> 00:00:24,060
+Jacobian矩阵对于这里所示姿势的机器人来说是什么样的，其中是关节
+what the Jacobian matrix looks like for a robot in the pose shown here, where joint
+
+5
+00:00:24,060 --> 00:00:29,360
+角度五等于零。给出了由于关节4引起的末端执行器的运动
+angle five is equal to zero. The motion of the end-effector due to joint four is given
+
+6
+00:00:29,360 --> 00:00:34,660
+由雅可比矩阵的这一列和由于关节引起的末端执行器的运动
+by this column of the Jacobian matrix and the motion of the end-effector due to joint
+
+7
+00:00:34,660 --> 00:00:38,280
+雅可比矩阵的这一列给出了六个。
+six is given by this column of the Jacobian matrix.
+
+8
+00:00:38,280 --> 00:00:43,650
+您会注意到这两列是相同的，这意味着它们会产生
+You will notice that these two columns are identical and that means that they result
+
+9
+00:00:43,650 --> 00:00:48,800
+在相同的末端执行器运动中，在这种特殊情况下，它是围绕世界的旋转
+in the same end-effector motion and in this particular case it is rotation about the world
+
+10
+00:00:48,800 --> 00:00:56,230
+Z轴。我们可以通过改变联合四或改变联合六来获得相同的动作。
+Z axis. We can get the same motion by changing joint four or by changing joint six.
+
+11
+00:00:56,230 --> 00:01:01,810
+对于方阵，如果两列相同，则它变为单数;和一位数学家
+For a square matrix, if two columns are identical, then it becomes singular; and a mathematician
+
+12
+00:01:01,810 --> 00:01:08,050
+会说矩阵的等级从完全等级，等级6降低到等级5。
+would say that the rank of the matrix has reduced from full rank, rank six, to a rank of five.
+
+13
+00:01:08,540 --> 00:01:13,660
+这是MATLAB中相同的雅可比矩阵，我们可以清楚地看到第四列和第四列
+Here is that same Jacobian matrix in MATLAB and we can clearly see that columns four and
+
+14
+00:01:13,670 --> 00:01:19,040
+第六列是相同的。如果我们计算矩阵的确定性，我们就会看到它
+column six are identical. If we compute the determinate of the matrix, we see that it
+
+15
+00:01:19,040 --> 00:01:24,040
+等于零;这意味着雅各比派是单数的。如果我计算这个等级
+is equal to zero; it means that this Jacobian is singular. If I compute the rank of this
+
+16
+00:01:24,040 --> 00:01:29,540
+矩阵，它等于五，这就是说，只有五个唯一列
+matrix, it is equal to five and that’s saying that there are only five unique columns in
+
+17
+00:01:29,540 --> 00:01:32,960
+这个矩阵。其中两列完全相同。
+this matrix. Two of the columns are identically equal.
+
+18
+00:01:32,960 --> 00:01:38,200
+现在让我们看一下更健康的雅可比矩阵。我们要计算雅可比行列式
+Let us look now at a more healthy Jacobian matrix. We are going to compute the Jacobian
+
+19
+00:01:38,200 --> 00:01:45,720
+对于设定的关节角度Qn。该矩阵没有明显的重复列。它的决定因素
+for the set joint angle Qn. This matrix has no obvious duplicated columns. Its determinant
+
+20
+00:01:45,720 --> 00:01:52,940
+不等于零，其等级等于六。这意味着所有六列都是唯一的。
+is not equal to zero and its rank is equal to six. That means that all six columns are unique.
+
+21
+00:01:54,040 --> 00:01:58,940
+在上一个讲座中，我们介绍了速度椭圆的概念，我们这样做了
+In the last lecture, we introduced the concept of the velocity ellipse and we did this in
+
+22
+00:01:58,950 --> 00:02:04,640
+两个维度。对于一组位于所有平面上的圆上的关节角度
+two dimensions. For a set of joint angles which lie on a circle in the plane of all
+
+23
+00:02:04,640 --> 00:02:11,159
+可能的关节角速度，我们将其映射到所有可能的空间中的椭圆
+possible joint angle velocities, we mapped that into an ellipse in the space of all possible
+
+24
+00:02:11,159 --> 00:02:16,950
+末端效应器速度，表明在特定的机器人关节角度配置，
+end-effector velocities and that indicated that in a particular robot joint angle configuration,
+
+25
+00:02:16,950 --> 00:02:21,450
+机器人能够在世界Y方向上移动得比它可以移动得更快
+the robot was able to move more quickly in the world Y direction than it could move in
+
+26
+00:02:21,450 --> 00:02:26,560
+世界X方向。我们可以为六轴机器人做同样的事情，但数学
+the world X direction. We can do the same thing for a six-axis robot, but the mathematics
+
+27
+00:02:26,560 --> 00:02:29,040
+有点复杂。
+is a little bit more complex.
+
+28
+00:02:29,040 --> 00:02:33,760
+我们在机器人末端执行器空间速度和关节之间存在这种关系
+We have this relationship between the robot end-effector spatial velocity and the joint
+
+29
+00:02:33,760 --> 00:02:38,980
+角速度。我可以将这两个方程结合起来，得出这个表达式
+angle velocity. I can combine these two equations and come up with this expression which is
+
+30
+00:02:38,980 --> 00:02:44,900
+六维超椭球或椭圆的方程;所以它有点儿
+the equation for a hyper-ellipsoid or some ellipse in six dimensions; so it is a little
+
+31
+00:02:44,900 --> 00:02:49,209
+很难理解你的头脑。大多数情况下，我们对前三个要素感兴趣
+hard to get your head around. Mostly, we are interested in the first three elements
+
+32
+00:02:49,209 --> 00:02:54,340
+空间速度;这就是机器人末端执行器的平移速度。
+of the spatial velocity; that is the translational velocity of the robot end-effector.
+
+33
+00:02:54,340 --> 00:03:00,969
+在这种情况下，我们最终得到一个三维椭球，我们可以很容易地绘制。所以，
+In this case, we end up with a three-dimensional ellipsoid which we can quite easily plot. So,
+
+34
+00:03:00,969 --> 00:03:06,290
+这是特定配置中机器人的速度椭圆体。我们可以看
+here is the velocity ellipsoid for a robot in a particular configuration. We could view
+
+35
+00:03:06,290 --> 00:03:11,290
+从不同角度看这个椭球，我们可以看到椭圆很长
+this ellipsoid from different angles and we could see that the ellipse is quite elongated
+
+36
+00:03:11,290 --> 00:03:16,029
+在垂直方向上，它在朝向基座的方向上相当平坦
+in the vertical direction and it is reasonably flat in the direction towards the base of
+
+37
+00:03:16,029 --> 00:03:21,379
+机器人，所以机器人能够在长的方向上最快速地移动
+the robot and so the robot is able to move most quickly in the direction of the long
+
+38
+00:03:21,379 --> 00:03:26,019
+椭圆的轴线在短轴方向上移动得慢得多
+axis of the ellipse and it moves much more slowly in the direction of the short axis
+
+39
+00:03:26,019 --> 00:03:27,749
+这个椭圆体。
+of this ellipsoid.
+
+40
+00:03:27,749 --> 00:03:32,439
+如果椭球实际上是一个球体，那么我们说运动是各向同性的;这意味着
+If the ellipsoid was actually a sphere, then we say the motion is isotropic; that means
+
+41
+00:03:32,439 --> 00:03:38,120
+机器人末端执行器能够在任何方向上快速移动。这很方便
+that the robot end-effector is able to move equally quickly in any direction. It is convenient
+
+42
+00:03:38,120 --> 00:03:43,999
+引入可操作性的概念，这是一个难以理解的词，它是一个简单的标量度量
+to introduce a notion of manipulability, a difficult word to say, and it is a simple scalar measure
+
+43
+00:03:43,999 --> 00:03:49,370
+这说明了速度椭圆体的形状。如果可操纵性相等
+that says something about the shape of the velocity ellipsoid. If manipulability is equal
+
+44
+00:03:49,370 --> 00:03:53,889
+到一，然后我们有各向同性运动的情况;机器人能够平等移动
+to one, then we have the case of isotropic motion; the robot is able to move equally
+
+45
+00:03:53,889 --> 00:03:55,439
+任何方向都快。
+fast in any direction.
+
+46
+00:03:55,439 --> 00:04:00,609
+如果可操纵性等于零，则椭圆体会折叠并变为刚好
+If manipulability is equal to zero, then the ellipsoid is collapsed and it becomes just
+
+47
+00:04:00,609 --> 00:04:05,959
+椭圆形板，这意味着不可能在一个笛卡尔方向上运动
+an elliptical plate and it means that motion in one Cartesian direction is not possible
+
+48
+00:04:05,959 --> 00:04:11,739
+一点都不通常，可操纵性将介于0和1之间。如果是
+at all. In general, the manipulability will be somewhere between zero and one. If it is
+
+49
+00:04:11,739 --> 00:04:17,559
+接近一，这意味着机器人被配置为在其工作空间的任何方向上快速移动。
+close to one, it means that the robot is configured to move quite quickly in any direction in its workspace.
+
+50
+00:04:17,860 --> 00:04:23,400
+随着可操纵性接近于零，这意味着机器人处于尴尬的姿势
+As the manipulability gets closer to zero, it means that the robot is in an awkward pose
+
+51
+00:04:23,410 --> 00:04:28,300
+并且有一些方向根本无法快速移动。操作性
+and there are some directions where it was not able to move very quickly at all. Manipulability
+
+52
+00:04:28,300 --> 00:04:33,720
+是机器人关节角度的强大功能，因此根据任务，您可能需要
+is a strong function of the robot joint angles, so depending on the task, you may need to
+
+53
+00:04:33,720 --> 00:04:39,980
+设置机器人关节角度，使其达到所需的速度，以实现该特定任务。
+set the robot joint angles so that it has got the speed required in order to achieve that particular task.
+
+54
+00:04:41,740 --> 00:04:45,820
+我们将使用MATLAB显示其中一个速度椭圆体。第一件事
+We are going to use MATLAB to display one of these velocity ellipsoids. The first thing
+
+55
+00:04:45,820 --> 00:04:51,430
+我要做的是将机器人绘制在中间的关节角度配置中
+I am going to do is to plot the robot in the joint angle configuration that is in the middle
+
+56
+00:04:51,430 --> 00:04:55,970
+它的工作空间，这就是机器人的样子，然后我将使用它
+of its work-space and that is what the robot looks like and then I am going to use the
+
+57
+00:04:55,970 --> 00:04:59,970
+椭圆叠加在速度椭球上的方法。
+method for ellipse to overlay on that a velocity ellipsoid.
+
+58
+00:04:59,970 --> 00:05:04,820
+这个方法有很多参数和选项。首先，我通过联合
+This method has got quite a number of arguments and options. First of all, I pass in the joint
+
+59
+00:05:04,820 --> 00:05:10,360
+我感兴趣的角度。我想要将椭圆绘制成蓝色和
+angles that I am interested in. I want the ellipse to be plotted in the colour blue and
+
+60
+00:05:10,360 --> 00:05:15,800
+我希望椭圆上的边线为白色。我想要整个事情
+I want the edge lines on the ellipse to be in white. I want the whole thing to
+
+61
+00:05:15,800 --> 00:05:23,470
+有些半透明，所以我要给它一个0.5的alpha值，然后我们
+be somewhat translucent, so I am going to give it an alpha value of 0.5 and there we
+
+62
+00:05:23,470 --> 00:05:25,760
+看速度椭圆。
+see the velocity ellipse.
+
+63
+00:05:25,760 --> 00:05:31,190
+现在，我可以旋转它，从各种不同的方向看它
+Now, I can rotate this around and look at it from all sorts of different orientations
+
+64
+00:05:31,190 --> 00:05:36,640
+和观点。如果我一边看它，我们可以看到椭圆是相对的
+and viewpoints. If I look at it pretty much side on, we can see that the ellipse is relatively
+
+65
+00:05:36,640 --> 00:05:41,920
+在朝向机器人基座的方向上变薄。那是机器人的方向
+thin in the direction toward the base of the robot. That is the direction where the robot
+
+66
+00:05:41,920 --> 00:05:47,240
+不能快速移动或在垂直Z方向移动，基本上是向上和
+is not able to move very quickly or as in the vertical Z direction, basically up and
+
+67
+00:05:47,240 --> 00:05:53,050
+向下，机器人能够很快地移动;这就是速度椭圆体
+down, the robot is able to move quite quickly; so that is the velocity ellipsoid for this
+
+68
+00:05:53,050 --> 00:05:55,470
+关节角度配置。
+joint angle configuration.
+
+69
+00:05:55,470 --> 00:06:00,710
+如果我选择不同的关节角度配置，这就是机器人手臂向右伸展的位置
+If I choose a different joint angle configuration, this is where the robot arm is stretched right
+
+70
+00:06:00,710 --> 00:06:06,250
+在我的工作空间中，水平，即关节角度矢量Qs，然后是机器人
+out horizontally which is the joint angle vector, Qs, in my workspace then the robot
+
+71
+00:06:06,250 --> 00:06:11,970
+在那个配置中，现在我将绘制这个特定配置的椭圆，
+is in that configuration and now I am going to plot the ellipse for this particular configuration,
+
+72
+00:06:11,970 --> 00:06:18,340
+所以我会回来编辑这个命令，将Qn改为Qs，这里我们有速度
+so I would just come back and edit this command, change Qn to Qs, and here we have the velocity
+
+73
+00:06:18,340 --> 00:06:20,220
+这种特殊情况的椭圆体。
+ellipsoid for this particular case.
+
+74
+00:06:20,220 --> 00:06:25,970
+现在，我们可以看到它是一个椭圆;但一边说，它根本没有厚度，它
+Now, we can see that it is an ellipse; but side on, it has got no thickness at all, it
+
+75
+00:06:25,970 --> 00:06:30,700
+是一个盘子。因此，在这种特定的关节角度配置中，机器人能够移动它
+is a plate. So, in this particular joint angle configuration, the robot is able to move its
+
+76
+00:06:30,700 --> 00:06:34,710
+来自这个特殊视图的末端效应器上下左右;但看着它
+end-effector from this particular view up and down and left and right; but looking it
+
+77
+00:06:34,710 --> 00:06:40,710
+通过这种方式，它根本无法将末端执行器移回基座。
+at this way, it has got no ability at all to move the end-effector back towards the base.
+

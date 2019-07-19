@@ -1,0 +1,135 @@
+1
+00:00:03,609 --> 00:00:08,869
+在上一节课中，我们讨论了如何描述两个物体的位置
+In the last lecture we talked about how we described the position of objects in a two
+
+2
+00:00:08,869 --> 00:00:10,050
+维度世界。
+dimensional world.
+
+3
+00:00:10,050 --> 00:00:14,380
+我们使用了这个例子，例如机器人，我们创建了一个二维坐标
+We used the example, for instance, a robot and we created a two dimensional coordinate
+
+4
+00:00:14,380 --> 00:00:15,380
+帧。
+frame.
+
+5
+00:00:15,380 --> 00:00:19,210
+我们将坐标框架放在参考位置，我们可以描述位置
+We placed the coordinate frame at a reference location and we can describe the position
+
+6
+00:00:19,210 --> 00:00:22,520
+关于那个坐标框架的机器人。
+of the robot with respect to that co-ordinate frame.
+
+7
+00:00:22,520 --> 00:00:27,140
+我们还谈到了我们如何描述物体的方向;那是机器人的方式
+We also talked about how we describe the orientation of the object; that is which way the robot
+
+8
+00:00:27,140 --> 00:00:31,469
+相对于该坐标系上的轴指向。
+is pointing with respect to the axes on this co-ordinate frame.
+
+9
+00:00:31,469 --> 00:00:35,489
+现在我们要做的是提高复杂程度并引入
+Now what we are going to do is to kick it up a level of complexity and introduce the
+
+10
+00:00:35,489 --> 00:00:36,570
+第三维度。
+third dimension.
+
+11
+00:00:36,570 --> 00:00:40,910
+因此对于大多数机器人而言，第三维非常重要。
+So for most robotics the third dimension is really important.
+
+12
+00:00:40,910 --> 00:00:44,350
+例如，机器人可以在任何类型的真实机器人手中移动
+The robots hand for instance, in any sort of real robot, the hand is going to move in
+
+13
+00:00:44,350 --> 00:00:47,460
+一架飞机，但它也可以上下移动。
+a plane, but it is also going to be able to move up and down.
+
+14
+00:00:47,460 --> 00:00:52,720
+所以我们需要能够描述三维物体的位置和方向
+So we need to be able to describe the position and orientation of bodies in three-dimensional
+
+15
+00:00:52,720 --> 00:00:53,720
+空间。
+space.
+
+16
+00:00:53,720 --> 00:00:57,329
+但是也有很多机器人在三维空间中移动。
+But there are also a lot of robots that move in three-dimensional space.
+
+17
+00:00:57,329 --> 00:01:01,110
+所以我在这里有一架模型飞机，或者一架飞机在空中飞行。
+So here I have a model airplane, or course an airplane flies through the air.
+
+18
+00:01:01,110 --> 00:01:02,409
+它上升而且下降。
+It goes up and it goes down.
+
+19
+00:01:02,409 --> 00:01:07,130
+它可以左右移动，也可以通过多种有趣的方式旋转。
+It can move left and right, and it can also rotate in a number of interesting ways.
+
+20
+00:01:07,130 --> 00:01:14,200
+它可以向上和向下倾斜，它可以像这样偏转，它可以像这样滚动。
+It can pitch up and down, it can yaw like this, and it can roll like this.
+
+21
+00:01:14,200 --> 00:01:19,280
+所以水下机器人是另一个例子，他们有点像这样但不是飞行
+So underwater robots are another example, they are a bit like this but instead of flying
+
+22
+00:01:19,280 --> 00:01:21,390
+他们在空中飞过水面。
+through the air, they are flying through the water.
+
+23
+00:01:21,390 --> 00:01:25,690
+所以这些是今天两个非常重要的机器人类，飞行机器人和机器人
+So these are two really important classes of robots today, robots that fly and robots
+
+24
+00:01:25,690 --> 00:01:30,700
+在水下游泳，他们的运动用三维方式描述
+that swim under the water and their motion is described in terms of three-dimensional
+
+25
+00:01:30,700 --> 00:01:31,700
+空间。
+space.
+
+26
+00:01:31,700 --> 00:01:35,619
+也许这样一个简单的轮式机器人，我们可以通过描述它来实现
+Where perhaps a simple wheeled robot like this, we could get by with just describing it’s
+
+27
+00:01:35,619 --> 00:01:39,380
+位置和它在二维空间方面的方向。
+position and it’s orientation in terms of two-dimensional space.
+

@@ -1,0 +1,280 @@
+1
+00:00:03,949 --> 00:00:08,290
+另一个重要的monadic图像处理操作是伽马校正，我要去了
+Another important monadic image processing operation is gamma correction, and I am going
+
+2
+00:00:08,290 --> 00:00:12,180
+现在谈谈伽玛的问题。
+to talk now about the problem of gamma.
+
+3
+00:00:12,180 --> 00:00:17,320
+早在电视的早期，选择的显示装置就是阴极射线
+Back in the early days of television, the display device of choice was the cathode ray
+
+4
+00:00:17,320 --> 00:00:20,910
+管和阴极管是非常非线性的装置。
+tube and the cathode tube is a very non-linear device.
+
+5
+00:00:20,910 --> 00:00:25,970
+所以对于输入电压V，屏幕上的亮度，我将称之为L
+So for an input voltage V, the brightness on the screen, which I am going to call L
+
+6
+00:00:25,970 --> 00:00:29,670
+对于亮度，是输入电压的功率。
+for luminance, was the power of the input voltage.
+
+7
+00:00:29,670 --> 00:00:35,680
+事实上，它几乎是一个平方定律，所以就是这样;屏幕上某点的亮度
+In fact, it was almost a square law, so that is; the luminance of a point on the screen
+
+8
+00:00:35,680 --> 00:00:41,800
+大约是输入电压的平方-输入电压升至2.2的功率。
+was about the square of the input voltage—the input voltage raised to the power of 2.2.
+
+9
+00:00:41,800 --> 00:00:47,700
+因此，这个数字2.2被称为显示设备的伽玛。
+So this number, 2.2, is referred to as the gamma of the display device.
+
+10
+00:00:47,700 --> 00:00:49,340
+所以这有点困难。
+So this is a bit of a difficulty.
+
+11
+00:00:49,340 --> 00:00:55,810
+输出亮度与输入电压不成线性比例。
+The output luminance is not linearly proportional to the input voltage.
+
+12
+00:00:55,810 --> 00:00:58,280
+现在让我们为系统添加一个摄像头。
+Now let’s add a camera to the system.
+
+13
+00:00:58,280 --> 00:01:05,329
+因此，相机看着世界，它看到亮度L，并将其转换为电压。
+So the camera looks at the world and it sees luminance L and it converts that to a voltage.
+
+14
+00:01:05,329 --> 00:01:11,070
+电压传输到电视接收器，电视接收器产生
+The voltage is transmitted to the television receiver, and the television receiver produces
+
+15
+00:01:11,070 --> 00:01:17,649
+亮度，与输入电压升高到伽马功率有关。
+a luminance, which is related to the input voltage raised to the power of gamma.
+
+16
+00:01:17,649 --> 00:01:22,229
+现在发生的是我们的系统从头到尾不是线性的。
+And what happens now is that our system is not linear from end to end.
+
+17
+00:01:22,229 --> 00:01:27,090
+我在屏幕上看到的亮度是原始亮度提升到的功率
+The luminance that I see on my screen is the original luminance raised to the power of
+
+18
+00:01:27,090 --> 00:01:31,560
+伽玛，这将对对比度产生非常糟糕的影响。
+gamma, and that is going to have a really bad effect on contrast.
+
+19
+00:01:31,560 --> 00:01:35,780
+如果原始图像的一部分是我在屏幕上的另一部分亮度的两倍
+If one part of the original image is twice as bright as another on the screen that I
+
+20
+00:01:35,780 --> 00:01:41,579
+我看着，它的亮度几乎会增加四倍。
+am looking at, it will appear to be almost four times greater in brightness.
+
+21
+00:01:41,579 --> 00:01:46,439
+因此，为了解决这个问题，早期的电视工程师提出了一个非常巧妙的技巧。
+So to get around this problem the early television engineers pulled a pretty neat trick.
+
+22
+00:01:46,439 --> 00:01:52,530
+他们所做的是将相反的非线性插入相机：亮度
+And what they did is they inserted the inverse non-linearity into the camera: the luminance
+
+23
+00:01:52,530 --> 00:01:57,259
+我在电视屏幕上看到的与电视场景的亮度成正比
+that I see on my TV screen is proportional to the luminance of the scene that the TV
+
+24
+00:01:57,259 --> 00:01:58,779
+相机在看。
+camera was looking at.
+
+25
+00:01:58,779 --> 00:02:01,610
+现在系统从头到尾是线性的。
+The system now is linear from end to end.
+
+26
+00:02:01,610 --> 00:02:04,880
+这对于观看电视图像的人来说非常好。
+And that is great for the person viewing the TV image.
+
+27
+00:02:04,880 --> 00:02:10,720
+因此，相机内的过程称为伽玛编码和之间的图像
+So the process within the camera is referred to as gamma encoding and the image between
+
+28
+00:02:10,720 --> 00:02:16,709
+相机和电视屏幕被称为伽马编码图像。
+the camera and the TV screen is referred to as a gamma encoded image.
+
+29
+00:02:16,709 --> 00:02:22,269
+伽玛解码的过程，或有时称为伽马校正，发生在
+And the process of gamma decoding, or sometimes called gamma correction, happens within the
+
+30
+00:02:22,269 --> 00:02:24,769
+显示屏。
+display screen.
+
+31
+00:02:24,769 --> 00:02:31,019
+现在，这与今天相关的是那些伽马编码的图像是我们记录的
+Now where this is relevant today is those gamma encoded images are what we record in
+
+32
+00:02:31,019 --> 00:02:32,019
+图像文件。
+image files.
+
+33
+00:02:32,019 --> 00:02:38,010
+因此，如果我采用标准图像文件格式，JPEG文件或其他任何像素值
+So if I take a standard image file format, a JPEG file or whatever, the pixel values
+
+34
+00:02:38,010 --> 00:02:41,430
+在该文件中已经过伽马编码。
+within that file have been gamma encoded.
+
+35
+00:02:41,430 --> 00:02:48,190
+它们与相机正在观看的场景的亮度线性不相关。
+They are not linearly related to the luminance of the scene that the camera is looking at.
+
+36
+00:02:48,190 --> 00:02:53,640
+在几乎任何图像文件格式的标题中都有一个条目，其中说：
+And in the header of almost any image file format there is an entry there, which says:
+
+37
+00:02:53,640 --> 00:02:58,000
+什么是相机中使用的伽玛设置。
+what’s the gamma setting that has been used in the camera.
+
+38
+00:02:58,000 --> 00:03:03,109
+即使阴极射线管早已消失，这仍然是方便的原因
+The reason that this is still convenient even though cathode ray tubes have long gone is
+
+39
+00:03:03,109 --> 00:03:09,230
+图像文件中的那些图像像素将显示在屏幕上，
+that those image pixels in the image file are going to be displayed on your screen,
+
+40
+00:03:09,230 --> 00:03:16,549
+正如我之前所说，即使是现代的屏幕也能模仿旧的阴极射线管的非线性。
+and as I said before even modern screens emulate the old cathode ray tube non-linearity.
+
+41
+00:03:16,549 --> 00:03:22,090
+因此，记住图像文件中的像素值是非常重要的
+So it is really important to remember that the pixel values within an image file are
+
+42
+00:03:22,090 --> 00:03:26,000
+与现实世界的亮度没有线性关系。
+not linearly related to the real world luminance.
+
+43
+00:03:26,000 --> 00:03:31,390
+它们与亮度相关，相对于γ的功率为1;事实上，它几乎是
+They are related to that luminance to the power of 1 over gamma; in fact, it is almost
+
+44
+00:03:31,390 --> 00:03:34,560
+平方根函数。
+a square root function.
+
+45
+00:03:34,560 --> 00:03:40,019
+所以我们可以进行伽马校正，我们可以将其视为一元函数。
+So we can do gamma correction, we can treat that as a monadic function.
+
+46
+00:03:40,019 --> 00:03:45,099
+该功能基本上是我们采用每个输入像素并将其提升到伽玛的功率。
+The function is basically we take every input pixel and raise it to the power of gamma.
+
+47
+00:03:45,099 --> 00:03:50,709
+我们可以看到这种映射基本上是抛物线形状。
+And we can see that there is basically a parabolic shape to this mapping.
+
+48
+00:03:50,709 --> 00:03:55,819
+如果我们将它应用于图像并查看它，我们会发现图像看起来非常非常
+And if we apply it to an image and look at it, we see that the image looks very, very
+
+49
+00:03:55,819 --> 00:03:57,019
+确实很黑。
+dark indeed.
+
+50
+00:03:57,019 --> 00:04:02,219
+原因就是我所做的是伽马校正此图像两次。
+And the reason for that is that what I have done is gamma corrected this image twice.
+
+51
+00:04:02,219 --> 00:04:08,359
+我通过应用这个monadic函数，然后我的屏幕，伽马校正图像，
+I have gamma corrected the image by applying this monadic function and then my screen,
+
+52
+00:04:08,359 --> 00:04:12,500
+或者您的屏幕，再次应用了伽马校正。
+or your screen, has applied the gamma correction again.
+
+53
+00:04:12,500 --> 00:04:17,280
+因此，如果您想要查看和操作，则应用伽马校正会很有用
+So it can be useful to apply gamma correction if you want to look at and manipulate the
+
+54
+00:04:17,280 --> 00:04:22,350
+像素值，因为您希望它们与原始光照水平成比例
+pixel values, because you want them to be proportional to the original light levels
+
+55
+00:04:22,350 --> 00:04:28,440
+在场景中，但在显示器上显示伽马校正图像并不是一件有用的事情
+in the scene, but to display a gamma corrected image on a monitor is not a useful thing to
+
+56
+00:04:28,440 --> 00:04:28,660
+做。
+do.
+

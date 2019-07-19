@@ -1,0 +1,250 @@
+1
+00:00:03,870 --> 00:00:07,799
+我们来看看几种不同类型的机器人。我们要去的第一个
+Let’s have a look at a few different kinds of robots. The first one we’re going to
+
+2
+00:00:07,799 --> 00:00:12,559
+考虑是所谓的龙门机器人，有时也称为笛卡尔机器人。它的
+consider is what’s called a Gantry robot and sometimes called a Cartesian robot. It’s
+
+3
+00:00:12,559 --> 00:00:17,860
+一个允许我们控制三维空间中刀尖位置的机器人，
+a robot that allows us to control the position of the tool-tip in three-dimensional space,
+
+4
+00:00:17,860 --> 00:00:24,009
+所以我们可以控制刀尖的X，Y和Z坐标。龙门机器人得到了
+so we can control the X, Y and Z coordinate of the tool-tip. The Gantry robot has got
+
+5
+00:00:24,009 --> 00:00:29,430
+沿着蓝色箭头指示的方向移动并且工具移动的吊杆
+a boom which moves in the direction indicated by the blue arrow and the tool moves along
+
+6
+00:00:29,430 --> 00:00:35,050
+红色箭头所示方向的繁荣。最后，工具本身会移动
+the boom in the direction shown by the red arrow. And, finally, the tool itself moves
+
+7
+00:00:35,050 --> 00:00:40,559
+按绿色箭头指示的方向上下。我们有三个运动轴，
+up and down in the direction indicated by the green arrow. We have three motion axes,
+
+8
+00:00:40,559 --> 00:00:45,329
+每个都与其他正交。这种机器人被称为SCARA机器人
+each orthogonal to the others. This kind of robot is known as a SCARA robot
+
+9
+00:00:45,329 --> 00:00:50,690
+它们广泛用于制造和包装处理应用。
+and they are widely used in manufacturing and package handling applications.
+
+10
+00:00:50,690 --> 00:00:55,489
+以红色突出显示的机器人部分围绕此处显示的轴旋转。
+The part of the robot that’s highlighted in red rotates around the axis shown here.
+
+11
+00:00:55,489 --> 00:01:01,780
+并且，以蓝色突出显示的机器人部分围绕该轴旋转。最后，
+And, the part of the robot that’s highlighted in blue rotates around this axis. And, finally,
+
+12
+00:01:01,780 --> 00:01:07,600
+该工具沿绿色箭头所示的轴上下移动。一些变种
+the tool moves up and down along the axis shown here by the green arrow. Some variants
+
+13
+00:01:07,600 --> 00:01:14,610
+SCARA机器人还可以围绕绿色虚线所示的轴旋转工具。该
+of the SCARA robots also rotate the tool around the axis shown by the green dashed line. The
+
+14
+00:01:14,610 --> 00:01:21,410
+术语SCARA是SelectiveComplianceArticulatingRobot的首字母缩写词，为什么复杂
+term SCARA is an acronym for Selective Compliance Articulating Robot and so why the complex
+
+15
+00:01:21,410 --> 00:01:25,960
+和折磨的缩写？但基本上，这意味着机器人是完全自由的
+and tortured acronym? But essentially, what it means is that the robot is quite free to
+
+16
+00:01:25,960 --> 00:01:31,450
+在水平面上移动，但在垂直方向上它是非常非常僵硬的
+move in the horizontal plane, but it’s very, very stiff in the vertical direction and that’s
+
+17
+00:01:31,450 --> 00:01:36,140
+只是它的设计和构造方式的结果。
+just a consequence of the way it has been designed and constructed.
+
+18
+00:01:36,140 --> 00:01:41,570
+一种相对较新的机器人是并联机器人，这是一个示例
+A relatively new class of robot is the parallel link robot and this is an example of one shown
+
+19
+00:01:41,570 --> 00:01:47,420
+这里。并联机器人的一大优势是可以定位所有电机
+here. A great advantage of the parallel link robot is all of the motors can be situated
+
+20
+00:01:47,420 --> 00:01:52,980
+在机器人的底座上，它们通过机械连接与工具连接。所以，那里
+in the base of the robot and they are connected via mechanical linkages to the tool. So, there
+
+21
+00:01:52,980 --> 00:01:59,180
+是多个机械连接并联将工具连接到电动机。这是
+are a number of mechanical linkages in parallel connecting the tool to the motors. This is
+
+22
+00:01:59,180 --> 00:02:04,890
+与龙门机器人和SCARA机器人完全不同的架构。那些机器人被推荐
+a very different architecture to the Gantry robot and the SCARA robot. Those robots are referred
+
+23
+00:02:04,890 --> 00:02:10,280
+作为串行链接机器人，因为从基础到工具提示有一系列链接。
+to as serial link robots because there is a chain of links from the base to the tool-tip.
+
+24
+00:02:10,280 --> 00:02:17,069
+这里，链接都是并行的。这里有几个教育的例子
+Here, the links are all in parallel. Here are a couple of examples of educational
+
+25
+00:02:17,069 --> 00:02:22,959
+机器人。左边的那个是一个爱好机器人，有四个机械关节连接
+robots. The one on the left is a hobby robot that has got four mechanical joints connecting
+
+26
+00:02:22,959 --> 00:02:28,980
+刀尖的底座，有平行钳口或双指夹具。
+the base to the tool-tip where there is a parallel jaw or a two-finger gripper.
+
+27
+00:02:28,980 --> 00:02:35,439
+这里展示的AldebaranNAO机器人有两条胳膊和两条腿。并且，每个武器
+The Aldebaran NAO robot shown here has got two arms and two legs. And, each of the arms
+
+28
+00:02:35,439 --> 00:02:40,709
+并且腿本质上是一个串行链接操纵器。在武器的情况下，那里
+and the legs is essentially a serial link manipulator. In the case of the arms, there
+
+29
+00:02:40,709 --> 00:02:46,090
+是四个关节，两个在肩部，一个在肘部，一个在手腕，控制
+are four joints, two at the shoulder, one at the elbow and one at the wrist, which control
+
+30
+00:02:46,090 --> 00:02:51,659
+握住许多手指的手腕的位置和方向。以及那些
+the position and orientation of the wrist which holds a number of fingers. And, those
+
+31
+00:02:51,659 --> 00:02:55,079
+手指本身内部有许多关节。
+fingers themselves have got a number of joints within them.
+
+32
+00:02:55,079 --> 00:03:01,069
+一类很常见的机器人有六轴，即六轴串联机器人。在
+A very common class of robots have got six axes, the six-axis serial link robot. On the
+
+33
+00:03:01,069 --> 00:03:06,590
+左边，我们可以看到一个最先进的工业机器人的例子，它有六个
+left, we can see an example of a state of the art industrial robot which has got six
+
+34
+00:03:06,590 --> 00:03:12,129
+链接。而且，在右侧，我们可以看到一个非常不寻常的六轴机器人示例。这个
+links. And, on the right, we can see a very unusual example of a six-axis robot. This
+
+35
+00:03:12,129 --> 00:03:18,789
+臂用于从航天飞机的有效载荷舱装载和卸载卫星和其他货物。
+arm is used to load and unload satellites and other cargo from the shuttle’s payload bay.
+
+36
+00:03:20,140 --> 00:03:25,459
+这是机器人手臂发展历史上非常着名的机器人手臂。它是
+Here is a very famous robotic arm in the history of robot arm development. It was
+
+37
+00:03:25,459 --> 00:03:30,769
+在斯坦福大学开发，它通常被称为斯坦福机器人
+developed at Stanford University and it’s commonly known just as the Stanford Robotic
+
+38
+00:03:30,769 --> 00:03:37,459
+臂。它发展于1969年。那是人们第一次登上月球的那一年。
+Arm. It was developed in 1969. That’s the year that people first walked on the moon.
+
+39
+00:03:37,459 --> 00:03:42,829
+这种机器人手臂与今天非常普遍的机器人手臂的不同之处在于它
+What differentiates this robot arm from robot arms that are very common today is that it
+
+40
+00:03:42,829 --> 00:03:48,719
+有一个滑动关节。该机器人中的第三个关节向后和向前滑动
+has got a sliding joint. The third joint in this robot slides backwards and forwards and
+
+41
+00:03:48,719 --> 00:03:55,760
+改变机器人工具，手腕和机器人底座之间的距离。
+changes the distance between the robot’s tool, it’s wrist and the base of the robot.
+
+42
+00:03:55,760 --> 00:04:00,469
+第一家生产工业机器人的公司是位于康涅狄格州的Unimation公司
+The first company to produce an industrial robot was Unimation Inc, a Connecticut-based
+
+43
+00:04:00,469 --> 00:04:06,319
+公司和他们成立于1956年，并安装了他们的第一个工业机器人
+company and they were founded in 1956 and installed their first industrial robot in
+
+44
+00:04:06,319 --> 00:04:11,959
+几年后到一家制造工厂。这项技术真的很老了。
+to a manufacturing plant a couple of years later. The technology is really quite old.
+
+45
+00:04:11,959 --> 00:04:18,320
+这是1983年Unimate机器人之一的一个例子。它是PUMA560机器人，
+This is an example of one of those Unimate robots from 1983. It’s the PUMA 560 robot,
+
+46
+00:04:18,320 --> 00:04:23,479
+真正在机器人研究史上非常着名的机器人。有很多很多
+quite a famous robot really in the history of robotics research. There were many, many
+
+47
+00:04:23,479 --> 00:04:28,500
+这些机器人积极参与制造，但也有很多
+of these robots actively involved in manufacturing, but there are also a great number of them
+
+48
+00:04:28,500 --> 00:04:33,400
+在大学研究实验室，如学习如何破解这些机器人，以便他们可以
+in university research labs such as learning how to hack these robots so that they could
+
+49
+00:04:33,400 --> 00:04:38,949
+将自己的控制算法添加到机器人中。所以，很多很多早期的机器人研究论文
+add their own control algorithms to the robot. So, many, many early robotics research papers
+
+50
+00:04:38,949 --> 00:04:43,889
+都是基于这些特殊的PUMA机器人PUMA560。
+are all based on these particular PUMA robots, the PUMA 560.
+

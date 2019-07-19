@@ -1,0 +1,290 @@
+1
+00:00:03,550 --> 00:00:06,840
+使用称为磁力计的传感器测量磁场。
+Magnetic field is measured using a sensor called a magnetometer.
+
+2
+00:00:06,840 --> 00:00:12,630
+最常见的固态磁力计类型是霍尔效应传感器，它可以测量
+The most common type of solid state magnetometer is a Hall effect sensor and it measures the
+
+3
+00:00:12,630 --> 00:00:15,400
+磁场垂直于芯片表面。
+magnetic field normal to the chip surface.
+
+4
+00:00:15,400 --> 00:00:20,409
+能够测量磁场的三个正交分量是非常有用的
+It’s very useful to be able to measure the three orthogonal components of magnetic field
+
+5
+00:00:20,409 --> 00:00:21,409
+向量。
+vector.
+
+6
+00:00:21,409 --> 00:00:25,970
+因此，通常，三个正交霍尔效应传感器被封装到单个芯片中
+So typically, three orthogonal Hall effect sensors are packaged in to a single chip along
+
+7
+00:00:25,970 --> 00:00:30,970
+与所有相关的电子设备，通常这些都有一个简单的串行接口
+with all the associated electronics and typically these have a simple serial interface that
+
+8
+00:00:30,970 --> 00:00:33,720
+允许它们轻松连接到微控制器。
+allows them to be easily connected to a micro-controller.
+
+9
+00:00:33,720 --> 00:00:39,980
+因此，为了确定身体在空间中的方向，我们使用加速度计
+So, in order to determine the orientation of a body in space, we use the accelerometers
+
+10
+00:00:39,980 --> 00:00:44,440
+确定向下方向，重力矢量的方向。
+to determine the downward direction, the direction of the gravity vector.
+
+11
+00:00:44,440 --> 00:00:49,420
+并且，我们用它来确定水平面中的磁场分量
+And, we use that to determine the magnetic field component in the horizontal plane which
+
+12
+00:00:49,420 --> 00:00:54,579
+我们可以认为它与传统机械上的针尖方向相同
+we can think of as being the same as the direction of the needle points on a traditional mechanical
+
+13
+00:00:54,579 --> 00:00:55,980
+罗盘。
+compass.
+
+14
+00:00:55,980 --> 00:00:59,750
+为了使这个有形，再次考虑我的手机的例子，我附上了一个
+To make this tangible, consider again the example of my phone and I have attached a
+
+15
+00:00:59,750 --> 00:01:01,429
+身体框架到手机。
+body frame to the phone.
+
+16
+00:01:01,429 --> 00:01:07,350
+z轴在屏幕之外，y轴在屏幕上方，x轴在屏幕上方
+The z-axis is out of the screen, y-axis is up the screen and the x-axis is across the
+
+17
+00:01:07,350 --> 00:01:09,220
+屏幕从左到右。
+screen from left to right.
+
+18
+00:01:09,220 --> 00:01:15,070
+我要将磁力计与每个轴对齐，结果称为三轴
+I’m going to align a magnetometer with each of these axes and the result is called a tri-axial
+
+19
+00:01:15,070 --> 00:01:18,250
+磁力计，因为那里有三个磁力计。
+magnetometer because there are three magnetometers there.
+
+20
+00:01:18,250 --> 00:01:22,720
+现在让我们谈谈我们如何处理磁力计的信息。
+Let’s talk now about how we process the information from the magnetometer.
+
+21
+00:01:22,720 --> 00:01:25,990
+再一次，我有一个世界坐标系，表示为零。
+Once again, I have a world coordinate frame denoted zero.
+
+22
+00:01:25,990 --> 00:01:29,920
+再次，z轴平行于重力矢量。
+Once again, the z-axis is parallel to the gravity vector.
+
+23
+00:01:29,920 --> 00:01:31,340
+它直指向上。
+It’s pointing straight upwards.
+
+24
+00:01:31,340 --> 00:01:35,600
+并且，x轴与磁北对齐。
+And, the x-axis is aligned with the magnetic north.
+
+25
+00:01:35,600 --> 00:01:39,860
+在这种情况下，我可以根据世界参考编写磁场矢量
+In this case, I can write the magnetic field vector with respect to the world reference
+
+26
+00:01:39,860 --> 00:01:44,670
+坐标框架为B，我可以查看的磁场矢量的大小
+coordinate frame as B, the magnitude of the magnetic field vector which I can look up
+
+27
+00:01:44,670 --> 00:01:51,810
+如果我知道我在这个星球上的位置，以及磁倾角的余弦和正弦，就在桌子上
+in a table if I know my location on the planet, and the cosine and sine of the magnetic inclination
+
+28
+00:01:51,810 --> 00:01:52,810
+角度。
+angle.
+
+29
+00:01:52,810 --> 00:01:54,421
+该向量位于xz平面中。
+This vector lies in the x-z plane.
+
+30
+00:01:54,421 --> 00:01:58,530
+它在y方向上没有任何组件。
+It has got no component in the y direction.
+
+31
+00:01:58,530 --> 00:02:03,860
+从世界框架到车身框架的旋转变换是根据世界框架给出的
+The rotational transform from the world frame to the body frame is given in terms of the
+
+32
+00:02:03,860 --> 00:02:06,230
+滚动，俯仰和偏航角度。
+roll, pitch and yaw angles.
+
+33
+00:02:06,230 --> 00:02:11,730
+我们已经讨论过如何从加速度计确定滚转角和俯仰角
+We have already talked about how to determine the roll and pitch angles from the accelerometer
+
+34
+00:02:11,730 --> 00:02:12,730
+测量。
+measurements.
+
+35
+00:02:12,730 --> 00:02:17,060
+手机中的磁力计测量坐标系B和中的磁场
+The magnetometers in the phone measure the magnetic field in the coordinate frame B and
+
+36
+00:02:17,060 --> 00:02:19,440
+这让我可以写下这段关系。
+that allows me to write this relationship.
+
+37
+00:02:19,440 --> 00:02:25,720
+而且，现在我们可以求出偏航角psi，它就是滚转角和俯仰角
+And, now we can solve for the yaw angle psi and it is in terms of the roll and pitch angles
+
+38
+00:02:25,720 --> 00:02:28,540
+我们根据加速度计测量结果确定。
+that we determined from the accelerometer measurements.
+
+39
+00:02:28,540 --> 00:02:34,569
+测得的磁场强度BX，BY和BZ，已知的磁场长度
+The measured magnetic field strength, BX, BY and BZ, the known length of the magnetic
+
+40
+00:02:34,569 --> 00:02:39,420
+场矢量，大写B和已知的倾角，大写I.
+field vector, capital B, and the known inclination angle, capital I.
+
+41
+00:02:39,420 --> 00:02:45,140
+如果我们知道我们在地球表面的位置，我们可以查看B和I。
+And both B and I, we can look up if we know our location on the surface of the planet.
+
+42
+00:02:45,140 --> 00:02:47,510
+地球的磁场很弱。
+The magnetic field of the earth is quite weak.
+
+43
+00:02:47,510 --> 00:02:52,140
+因此，磁力计需要对磁场非常敏感，这就是磁力计
+Therefore, magnetometers need to be very sensitive to magnetic field and this makes magnetometers
+
+44
+00:02:52,140 --> 00:02:57,230
+非常容易受到电流流动产生的杂散磁场的影响
+very susceptible to stray magnetic fields that are created by electric currents flowing
+
+45
+00:02:57,230 --> 00:03:01,370
+内部电子设备和电动机。
+inside electronic devices and also from electric motors.
+
+46
+00:03:01,370 --> 00:03:05,740
+建造在室内操作的机器人的机器人专家经常受到结构的挫败
+Roboticists building robots that operate indoors are often frustrated by the structural
+
+47
+00:03:05,740 --> 00:03:09,220
+建筑物中扭曲地球磁场的钢构件。
+steel elements of the building which distort the earth’s magnetic field.
+
+48
+00:03:09,220 --> 00:03:14,430
+墙上还有电源线，还有Wi-Fi接入点和设备
+There are also power cables in the walls and there are Wi-Fi access points and equipment
+
+49
+00:03:14,430 --> 00:03:19,459
+壁橱也会产生磁场，这可能会混淆主要依赖的机器人
+closets which also create magnetic field which can confuse robots that rely predominantly
+
+50
+00:03:19,459 --> 00:03:21,380
+关于磁场传感。
+on magnetic field sensing.
+
+51
+00:03:21,380 --> 00:03:26,569
+我真的很喜欢探索远方的先锋十号卫星的旧照片
+I really like this old picture of the Pioneer ten satellite which is exploring the far reaches
+
+52
+00:03:26,569 --> 00:03:30,819
+我们的太阳系。背面有一堆电子设备和火箭发动机
+of our solar system. There’s a bunch of electronics and a rocket motor on the back
+
+53
+00:03:30,819 --> 00:03:33,950
+一个大盘子，指向地球的行星。
+of a large dish which is pointed back at Planet Earth.
+
+54
+00:03:33,950 --> 00:03:40,590
+并且，在长长的细长臂上是磁力计仪器，它感应到局部磁场
+And, on a long slender boom is the magnetometer instrument which is sensing the local magnetic
+
+55
+00:03:40,590 --> 00:03:45,240
+他们可以从其他电子产品中找到远离它们的位置
+field and they’ve position that is far away as they can from the rest of the electronics
+
+56
+00:03:45,240 --> 00:03:46,240
+在航天器上。
+in the space craft.
+
+57
+00:03:46,240 --> 00:03:51,790
+而且，正是由于这个原因，磁力计对杂散磁场非常敏感
+And, that’s for exactly this reason that magnetometer is very sensitive to stray magnetic
+
+58
+00:03:51,790 --> 00:03:51,819
+领域。
+fields.
+

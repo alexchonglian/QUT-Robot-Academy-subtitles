@@ -1,0 +1,315 @@
+1
+00:00:03,689 --> 00:00:08,900
+这里再次是机器人关节控制系统的框图。我们要做什么
+Here again is the block diagram of a robot joint control system. What we're going to
+
+2
+00:00:08,900 --> 00:00:14,049
+现在要做的是为PUMA560机器人的第2关节建立一个模型。
+do now is to actually build a model for joint 2 of the PUMA 560 robot.
+
+3
+00:00:14,049 --> 00:00:20,330
+PUMA560机器人的一个优点是它是一个研究得很好的机器人，而且
+One of the advantages of the PUMA 560 robot is that it's a very well-studied robot, and
+
+4
+00:00:20,330 --> 00:00:26,870
+它的控制器及其机制的许多参数都非常清楚。
+many of the parameters of its controller and of its mechanism are very well understood.
+
+5
+00:00:26,870 --> 00:00:33,260
+下面列出了该机器人关节2的一些重要参数。我们有惯性
+Here are listed a few of the important parameters of joint 2 for this robot. We have the inertia
+
+6
+00:00:33,260 --> 00:00:38,350
+电机;我们有电机的摩擦力，电机转矩常数，放大率
+of the motor; we have the friction of the motor, the motor torque constant, the amplifying
+
+7
+00:00:38,350 --> 00:00:43,679
+获得。这是应用于放大器的每个伏特进入电机的放大器数量。最后，
+gain. That's the number of amps into the motor for every volt applied to the amplifier. Finally,
+
+8
+00:00:43,679 --> 00:00:46,550
+PUMA机器人第二关节的传动比。
+the gear ratio for the second joint of the PUMA robot.
+
+9
+00:00:46,550 --> 00:00:52,399
+我刚刚将机器人动态模型的参数输入MATLAB工作区，
+I have just been entering the parameters for our robot dynamic model into the MATLAB Workspace,
+
+10
+00:00:52,399 --> 00:00:56,780
+创建一些变量。我需要创建的最后一个是齿轮比
+creating a number of variables. The last one that I need to create is the gear ratio which
+
+11
+00:00:56,780 --> 00:01:02,319
+PUMA机器人的这个特殊关节是107.815。
+is 107.815 for this particular joint of the PUMA robot.
+
+12
+00:01:02,319 --> 00:01:07,910
+接下来我要做的是调用Simulink，这是用于创建和创建的MATLAB工具
+Next thing I'm going to do is to invoke Simulink, which is the MATLAB tool for creating and
+
+13
+00:01:07,910 --> 00:01:14,280
+模拟动力学模型。调用Simulink，这是给我们所有人的窗口
+simulating dynamical models. Invoked Simulink, and here is the window which gives us all
+
+14
+00:01:14,280 --> 00:01:21,640
+我们需要的模型的其余组件。我打算创建一个新模型，并且
+the rest of the components of the models that we need. I'm going to create a new model, and
+
+15
+00:01:21,640 --> 00:01:24,830
+这是我可以创建新图形模型的窗口。
+here's the window in which I can create my new graphical model.
+
+16
+00:01:24,830 --> 00:01:30,080
+现在，我要做的第一件事是添加一些连续时间的动态块。该
+Now, the first thing I'm going to do is to add some continuous time dynamic blocks. The
+
+17
+00:01:30,080 --> 00:01:35,880
+我要做的第一件事就是拖动转移功能，这将成为我们的电机模型。
+first thing I'm going to do is to drag in the transfer function which is going to be our motor model.
+
+18
+00:01:35,880 --> 00:01:42,900
+这是将成为我们电机的块，我将更改参数。
+Here is the block which is going to be our motor, and I'm going to change the parameters.
+
+19
+00:01:42,910 --> 00:01:49,770
+在这种特殊情况下，分子是变量'km'，即电机转矩常数，
+The numerator in this particular case is the variable 'km,' that's the motor torque constant,
+
+20
+00:01:49,770 --> 00:01:56,170
+分母是多项式，最高阶系数是'jm'，即
+and the denominator is a polynomial, and the highest order coefficient is 'jm,' that's
+
+21
+00:01:56,170 --> 00:02:03,000
+电机惯性跟随电机摩擦，然后是零。这是一个二阶
+the motor inertia followed by the motor friction and followed by a zero. It is a second-order
+
+22
+00:02:03,000 --> 00:02:04,760
+多项式。我们走了。
+polynomial. There we go.
+
+23
+00:02:04,760 --> 00:02:10,979
+在这里，我们有一个代表我们电机动力学的块。我也打算画
+Here, we have a block which represents the dynamics of our motor. I'm also going to draw
+
+24
+00:02:10,979 --> 00:02:19,000
+在PID控制器中，那就是它。我要创建一个源代码。这是
+in a PID controller, and that's it there. I'm going to create a source. This is the
+
+25
+00:02:19,000 --> 00:02:25,890
+表示我希望机器人关节跟随。我要拖进信号发生器和
+signal that I want the robot joint to follow. I'm going to drag in a signal generator and
+
+26
+00:02:25,890 --> 00:02:30,590
+我打算把它设置为0.5赫兹的频率。
+I'm going to set it to have a frequency of 0.5 Hertz.
+
+27
+00:02:30,590 --> 00:02:36,480
+这是每两秒一个周期，它将是一个方波，我要去
+That's one cycle every two seconds, and it’s going to be a square wave and I'm going to
+
+28
+00:02:36,480 --> 00:02:43,310
+将其连接到我的控制器的参考输入。我要设置控制器
+connect that to the reference input of my controller. I'm going to set the controller
+
+29
+00:02:43,310 --> 00:02:49,810
+参数比例增益为1，积分增益为0，依此类推。
+parameters a proportional gain of 1, integral gain of 0, and so on.
+
+30
+00:03:14,540 --> 00:03:18,610
+现在我们已经准备好模拟系统了。我要在参考中应用方波
+Now we're ready to simulate the system. I'm going to apply a square wave to the reference
+
+31
+00:03:18,610 --> 00:03:20,940
+输入我的控制器。
+input of my controller.
+
+32
+00:03:20,940 --> 00:03:24,990
+在真实机器人中，控制器的输出是一个电压到达电机驱动器，
+In the real robot, the output of the controller is a voltage which goes to the motor drive,
+
+33
+00:03:24,990 --> 00:03:28,770
+这实际上是一个大功率放大器，其输出是电流
+which is effectively a big power amplifier, and the output of that is a current which
+
+34
+00:03:28,770 --> 00:03:33,400
+流入电机。此块表示电机的动态特性和输出
+flows into the motor. This block here represents the dynamics of the motor, and the output
+
+35
+00:03:33,400 --> 00:03:38,420
+是电机的位置。我们可以看到反馈路径。我要做的就是点击
+is the position of the motor. We can see the feedback path. What I'm going to do is hit
+
+36
+00:03:38,420 --> 00:03:43,010
+这里的“播放”按钮，Simulink将模拟这个动态模型。
+the 'Play' button here, and Simulink is going to simulate this dynamic model.
+
+37
+00:03:43,010 --> 00:03:48,720
+在这里，我们看到输出响应。我们可以看到电机以某种方式响应
+Here we see the output response. We can see that the motor is responding in some way to
+
+38
+00:03:48,720 --> 00:03:52,870
+正在注入的方波，但我们可以看到它非常振荡，
+the square wave, which is being injected, but we can see that it's very very oscillatory,
+
+39
+00:03:52,870 --> 00:03:56,330
+那里有很多超调，这是非常不受欢迎的。
+there's a lot of overshoot there which is very undesirable.
+
+40
+00:03:56,330 --> 00:04:01,140
+我们可以调整控制器的参数。我要做的是添加一点
+We can adjust the parameters of the controller. What I’m going to do is to add a little
+
+41
+00:04:01,140 --> 00:04:05,050
+微分导数，也称为阻尼。
+bit of derivative gain, otherwise known as damping.
+
+42
+00:04:05,050 --> 00:04:11,440
+如果我现在模拟，那就是导数增益设置为0.1的值。我们在这里看到
+If I simulated now, that's where the derivative gain is set to a value of 0.1. Here we see
+
+43
+00:04:11,440 --> 00:04:16,379
+反应更令人满意。我们看到电机位置在变化之间
+the response is much more desirable. We see that the motor position is changing between
+
+44
+00:04:16,379 --> 00:04:20,980
+-1和+1。这正是这个信号发生器所要求的。我们看到了
+-1 and +1. That's exactly what this signal generator is demanding. We see that there's
+
+45
+00:04:20,980 --> 00:04:25,930
+只有极少量的过冲。这不是一个坏的机器人联合控制器。
+only a very small amount of overshoot. This is not a bad robot joint controller.
+
+46
+00:04:25,930 --> 00:04:31,660
+我们使用一些试验和错误来使该控制器正常工作。虽然是的
+We use a little bit of trial and error to make this controller work well. Although it's
+
+47
+00:04:31,660 --> 00:04:36,280
+这样做很常见，更好的方法是设计控制器
+quite common practice to do this, a much better approach is to design the controller that
+
+48
+00:04:36,280 --> 00:04:40,960
+要求我们有一个要控制的系统模型。在PUMA机器人的情况下，
+requires we have a model of the system to be controlled. In the case of the PUMA robot,
+
+49
+00:04:40,960 --> 00:04:46,760
+我们确实有一个非常非常好的机器人模型，机械和电气元件。
+we do have a very, very good model of that robot, of its mechanical and its electrical components.
+
+50
+00:04:46,760 --> 00:04:51,660
+然后我们需要有一个控制质量的规范。超调量是多少
+Then we need to have a specification for the quality of control. How much overshoot are
+
+51
+00:04:51,660 --> 00:04:57,000
+我们愿意容忍吗？我们希望机器人关节多快达到所需的关节角度？
+we willing to tolerate? How quickly do we want the robot joint to get to the desired joint angle?
+
+52
+00:04:57,010 --> 00:05:01,750
+然后我们使用控制理论中众所周知的技术，如“根轨迹法”或
+Then we use well-known techniques from control theory such as, 'Root locus method,' or
+
+53
+00:05:01,750 --> 00:05:03,840
+'极点放置'或'LQR合成'。
+'pole placement' or 'LQR synthesis'.
+
+54
+00:05:03,840 --> 00:05:09,070
+控制理论中有很多技术。选择你喜欢的那个，然后申请
+There are lots of techniques in control theory. Pick the one that you prefer, and you apply
+
+55
+00:05:09,070 --> 00:05:14,000
+那是设计一个控制器。也许它需要一点点调整，也许是因为
+that to design a controller. Perhaps it needs a little bit of tweaking, perhaps because
+
+56
+00:05:14,000 --> 00:05:18,570
+您正在使用的模型并不能完全反映特定机器人的实际情况
+the model that you're using doesn't exactly reflect the reality of the particular robot
+
+57
+00:05:18,570 --> 00:05:24,440
+你正在努力，但你会得到一个非常好的第一近似一个体面的控制器。
+that you're working on, but you'll get a very very good first approximation to a decent controller.
+
+58
+00:05:24,440 --> 00:05:30,130
+对于像PUMA560这样的多关节机器人，常见的策略就是所谓的“独立”
+For a multi-joint robot like the PUMA 560, a common strategy is what's called, 'Independent
+
+59
+00:05:30,130 --> 00:05:36,000
+联合控制。'我们为每个单独的关节设计和构建一个控制器。
+Joint Control.' We design and build a controller for each of these separate joints.
+
+60
+00:05:36,000 --> 00:05:40,740
+对于规模经济，每个控制器使用相同的设计是很常见的
+For economies of scale, it's common to use the same design for the controller for each
+
+61
+00:05:40,740 --> 00:05:45,240
+的关节。所有不同的是联合控制算法中的一些参数
+of the joints. All that's different is some parameters in the joint control algorithm
+
+62
+00:05:45,240 --> 00:05:49,720
+反映关节有不同动态的事实。也许他们有所不同
+to reflect the fact that the joints have got different dynamics. Perhaps they have different
+
+63
+00:05:49,720 --> 00:05:53,690
+尺寸马​​达`具有不同的惯性，不同的摩擦特性等。
+size motors` with different inertia, different friction characteristics, and so on.
+

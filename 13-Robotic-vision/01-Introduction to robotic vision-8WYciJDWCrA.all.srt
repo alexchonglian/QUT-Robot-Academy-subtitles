@@ -1,0 +1,35 @@
+1
+00:00:03,330 --> 00:00:07,972
+欢迎来到机器人视觉课程的第一堂课，在我们的第一堂课中
+Welcome to this first lecture in the Robotic Vision course, in this first lecture we are
+
+2
+00:00:07,972 --> 00:00:12,410
+回顾一下机器人，它们是如何工作的，以及它们对感官的需求。然后我们就是
+going to recap about robots, how they work, and their need for senses. And then we're
+
+3
+00:00:12,410 --> 00:00:17,090
+更广泛地谈论感官动物和人们的感官
+going to talk about senses more broadly the sort of senses that animals and people have
+
+4
+00:00:17,090 --> 00:00:21,010
+然后我们将集中讨论机器人可能有类似的感觉
+and then we are going to focus on sort of senses that robots have perhaps things like
+
+5
+00:00:21,010 --> 00:00:27,070
+GPS，但特别是我们将重点关注为什么这个愿景有意义
+GPS but in particular we are going to focus on why it is that vision makes sense as a
+
+6
+00:00:27,070 --> 00:00:31,770
+机器人的传感器，所以我在这个讲座的工作是为了说明为什么视觉是伟大的
+sensor for robots, so my job in this lecture is to make the case for why vision is a great
+
+7
+00:00:31,770 --> 00:00:33,070
+机器人传感器。
+sensor for robots.
+

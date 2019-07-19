@@ -1,0 +1,360 @@
+1
+00:00:03,220 --> 00:00:06,390
+让我们总结一下我们在本次讲座中学到的一些概念。这就是全部
+Let’s summarise some of the concepts that we’ve learned in this lecture. It’s all
+
+2
+00:00:06,390 --> 00:00:11,370
+关于三维空间中的运动。首先，我们介绍了这个概念
+being about motion in three-dimensional space. First of all, we introduced the concept of
+
+3
+00:00:11,370 --> 00:00:17,160
+平移速度，即一个点的X，Y和Z分量的变化率
+translational velocity that is the rate of change of the X, Y and Z components of a point
+
+4
+00:00:17,160 --> 00:00:22,150
+在空间中，我们定义相对于参考坐标系。
+in space and we define that with respect to a reference coordinate frame.
+
+5
+00:00:22,150 --> 00:00:27,460
+我们介绍了角速度的概念，即矢量。方向
+We introduced the concept of angular velocity and that is a vector quantity. The direction
+
+6
+00:00:27,460 --> 00:00:31,869
+矢量的矢量是身体在该时刻绕其旋转的轴
+of the vector is the axis about which the body is rotating at that instance in time
+
+7
+00:00:31,869 --> 00:00:38,050
+并且矢量的大小是旋转速度。角速度有三个组成部分：
+and the magnitude of the vector is the rate of rotation. Angular velocity has three components:
+
+8
+00:00:38,050 --> 00:00:44,070
+相对于参考坐标系定义的ωx，ωy和ωz。
+ωx, ωy, and ωz defined with respect to a reference coordinate frame.
+
+9
+00:00:44,070 --> 00:00:48,690
+平移速度V和角速度ω组合成我们参考的量
+Translational velocity V and angular velocity ω are combined into a quantity we referred
+
+10
+00:00:48,690 --> 00:00:55,030
+作为空间速度或有时称为扭曲。这是一个六元素的矢量。
+to as spatial velocity or sometimes referred to as twist. It’s a six-element vector.
+
+11
+00:00:55,030 --> 00:01:00,060
+我们引入了一个偏斜对称矩阵。这是一个矩阵，其转置等于
+We introduced a skew symmetric matrix. This is a matrix whose transpose is equal to the
+
+12
+00:01:00,060 --> 00:01:04,439
+消极的。当我们谈论三维旋转时，相关
+negative of itself. When we are talking about rotation in three dimensions, the relevant
+
+13
+00:01:04,439 --> 00:01:10,000
+偏斜对称矩阵是3.3元素矩阵，它是矢量的函数。有
+skew symmetric matrix is a 3.3 element matrix which is a function of a vector. There is
+
+14
+00:01:10,000 --> 00:01:14,510
+这个身体的角速度和时间之间非常重要的关系
+a really important relationship between the angular velocity of that body and the time
+
+15
+00:01:14,510 --> 00:01:17,470
+旋转矩阵的导数。
+derivative of the rotation matrix.
+
+16
+00:01:17,470 --> 00:01:21,890
+对于一个有六个关节的机器人，我们可以写出这样的关系，它与之相关
+For a robot with six joints, we can write a relationship like this, which relates the
+
+17
+00:01:21,890 --> 00:01:27,060
+机器人关节角度与机器人末端执行器空间速度的变化率，
+rate of change of the robot joint angles to this spatial velocity of the robots end effector,
+
+18
+00:01:27,060 --> 00:01:32,280
+这种关系是用六乘六雅可比矩阵表示的
+and the relationship is in terms of a six by six Jacobian matrix which we denote by
+
+19
+00:01:32,280 --> 00:01:38,270
+符号J.雅可比矩阵是关节角度本身的函数。
+the symbol J. The Jacobian matrix is a function of the joint angles themselves.
+
+20
+00:01:38,270 --> 00:01:42,520
+我们可以写出机器人关节角速度Qdot和空间之间的这种一般关系
+We can write this general relationship between the robot joint angle velocity Qdot and spatial
+
+21
+00:01:42,520 --> 00:01:47,420
+雅各比矩阵的速度。如果雅可比矩阵是正方形，那么我们
+velocity in terms of the Jacobian matrix. If the Jacobian matrix is square, then we
+
+22
+00:01:47,420 --> 00:01:51,920
+可以反转这种关系，并允许我们转换所需的空间速度
+can invert the relationship and that allows us to transform a desired spatial velocity
+
+23
+00:01:51,920 --> 00:01:57,380
+对于机器人的末端执行器进入机器人电机的关节角速率需要达到。
+for the robot’s end effector into the joint angle rates of the robots’ motors need to attain.
+
+24
+00:01:58,040 --> 00:02:03,740
+任何机器人关节的运动都会影响机器人末端执行器的空间速度。
+The motion of any robot joint affects the spatial velocity of the robot’s end effector.
+
+25
+00:02:03,740 --> 00:02:07,960
+我们可以想到雅各比矩阵的列在那种关系中描述。
+We can think of the columns of the Jacobian matrix as described at that relationship.
+
+26
+00:02:07,960 --> 00:02:12,450
+第一列告诉我们第一个关节如何影响空间速度。该
+The first column tells us how the spatial velocity is affected by the first joint. The
+
+27
+00:02:12,450 --> 00:02:17,180
+第二列告诉我们空间速度如何受到第二个关节的影响，依此类推。
+second column tells us how the spatial velocity is affected by the second joint and so on.
+
+28
+00:02:17,180 --> 00:02:22,690
+我们可以将它视为每个关节的效果的总和，我们添加它们
+We can think of it as a summation of the effect of each of the individual joints, we add them
+
+29
+00:02:22,690 --> 00:02:28,360
+一起确定机器人末端执行器的整体空间速度。
+all together to determine the overall spatial velocity of the robot’s end effector.
+
+30
+00:02:28,360 --> 00:02:33,250
+在某些情况下，机器人雅可比行列式可以是单一的，并且当不止一个联合原因时
+In some cases, the robot Jacobian can be singular and that’s when more than one joint cause
+
+31
+00:02:33,250 --> 00:02:38,060
+与机器人末端执行器完全相同的运动，雅可比行列中有两列
+exactly the same motion of the robot end effector, that there are two columns in the Jacobian
+
+32
+00:02:38,060 --> 00:02:42,280
+矩阵是相同的，使机器人奇异。
+matrix which are identical and that makes the robot singular.
+
+33
+00:02:42,280 --> 00:02:46,220
+对于在三维空间中移动的机器人，雅可比矩阵总是有六个
+For robots that move in three-dimensional space, the Jacobian matrix always has six
+
+34
+00:02:46,220 --> 00:02:51,010
+角色但列数等于机器人具有的关节数。如果
+roles but the number of columns is equal to the number of joints that the robot has. If
+
+35
+00:02:51,010 --> 00:02:55,970
+机器人有六个关节，雅可比矩阵将是方形的，我们可以将它反转这么长时间
+the robot got six joints, the Jacobian matrix will be square and we can invert it so long
+
+36
+00:02:55,970 --> 00:03:01,090
+因为机器人不是单一的配置。对于接头少于六个的机器人
+as the robot is not in a singular configuration. For a robot with less than six joints which
+
+37
+00:03:01,090 --> 00:03:06,840
+我们称之为欠驱动机器人，雅可比不是方形的。为了平方
+we refer to as an under-actuated robot, the Jacobian is not square. In order to square
+
+38
+00:03:06,840 --> 00:03:12,040
+我们可以将它用于控制目的，我们需要消除雅可比行列中的一些行
+it up so we can use it for control purposes, we need to eliminate some rows in that Jacobian
+
+39
+00:03:12,040 --> 00:03:17,530
+矩阵。对于具有六个以上关节的机器人的情况，我们称之为过度驱动
+matrix. For the case of a robot with more than six joints, which we refer to as an over-actuated
+
+40
+00:03:17,530 --> 00:03:22,680
+机器人，雅可比行列有很多列而不是行。如果我们想要反转它
+robot, the Jacobian has many more columns than has rows. If we want to invert it for
+
+41
+00:03:22,680 --> 00:03:26,709
+为了控制目的，我们需要使用一种称为伪逆的技术。我们也可以思考
+control purposes, we need to use a technique called the Pseudo Inverse. We can also think
+
+42
+00:03:26,709 --> 00:03:30,610
+关于像这样的机器人有大量的备用关节，我们可以使用它
+about the robot like this as having a large number of spare joints and we can use this
+
+43
+00:03:30,610 --> 00:03:35,830
+以独立于姿势的方式控制机器人手臂形状的配置
+to control the configuration with the shape of the robot arm independently of the pose
+
+44
+00:03:35,830 --> 00:03:39,959
+其末端执行器。我们称之为零空间运动。
+of its end effector. We refer to this as null space motion.
+
+45
+00:03:39,959 --> 00:03:44,870
+我们可以将相对于一帧表示的速度转换为相对于另一帧的速度
+We can transform velocity expressed with respect to one frame to velocity with respect to another
+
+46
+00:03:44,870 --> 00:03:50,920
+由雅可比矩阵构成的帧，并且雅可比矩阵是相对姿势的函数
+frame by a Jacobian matrix, and that Jacobian matrix is a function of the relative pose
+
+47
+00:03:50,920 --> 00:03:56,599
+两帧之间。特别是，它是两者之间相对方向的函数
+between the two frames. In particular, it’s a function of the relative orientation between
+
+48
+00:03:56,599 --> 00:03:58,569
+两个坐标框架。
+the two coordinate frames.
+
+49
+00:03:58,569 --> 00:04:03,170
+我们可以使用该速度变换技术来确定机器人的末端效应器
+We can use that velocity transform technique in order to determine the robot’s end-effector
+
+50
+00:04:03,170 --> 00:04:08,290
+空间速度相对于末端效应器坐标系而不是世界坐标
+spatial velocity with respect to the end-effector coordinate frame rather than the world coordinate
+
+51
+00:04:08,290 --> 00:04:13,720
+框架，这通常是一个非常有用和方便的东西。因此我们可以定义
+frame, and that’s typically a very useful and convenient thing to have. We can therefore define
+
+52
+00:04:13,720 --> 00:04:19,760
+雅可比矩阵的一个变体，它给出了第六帧中的速度，即末端效应器坐标系。
+a variant of the Jacobian matrix which gives us the velocity in frame six, the end-effector coordinate frame.
+
+53
+00:04:20,080 --> 00:04:24,680
+角速度是一个有点抽象的概念，有点难以想象。
+Angular velocity is a somewhat abstract concept that’s a little difficult to visualize.
+
+54
+00:04:24,690 --> 00:04:28,750
+我们经常谈论车身在侧倾，俯仰和偏航角方面的方向
+We often talk about the orientation of a body in terms of its roll, pitch, and yaw angles
+
+55
+00:04:28,750 --> 00:04:33,160
+因此，根据速率表达物体的旋转速度更直观
+so it’s more intuitive to express the rotational velocity of an object in terms of the rates
+
+56
+00:04:33,160 --> 00:04:39,919
+其滚动，俯仰和偏航角度的变化。我们可以导出一个3x3雅可比矩阵
+of change of its roll, pitch, and yaw angles. We can derive a 3x3 Jacobian matrix which
+
+57
+00:04:39,919 --> 00:04:45,620
+将滚转，俯仰和偏航角速率转换为传统的角速度。然后我们
+transforms roll, pitch, and yaw angle rates into traditional angular velocity. Then we
+
+58
+00:04:45,620 --> 00:04:50,880
+可以引入空间速度矢量的变体，我们替换角速度
+can introduce a variant of a spatial velocity vector and we replace the angular velocity
+
+59
+00:04:50,880 --> 00:04:55,590
+具有滚动，俯仰，偏航速度分量的部件。这会导致一些叫做的事情
+component with a roll, pitch, yaw velocity component. This leads to something called
+
+60
+00:04:55,590 --> 00:05:01,020
+分析雅可比矩阵并将机器人关节角速率映射到修改后的空间
+the Analytic Jacobian matrix and this maps robot joint angle rates to the modified spatial
+
+61
+00:05:01,020 --> 00:05:02,199
+速度矢量。
+velocity vector.
+
+62
+00:05:02,199 --> 00:05:07,160
+我们在三个维度上介绍了速度椭球的概念。椭圆体
+We introduced the concept of the velocity ellipsoid in three dimensions. The ellipsoid
+
+63
+00:05:07,160 --> 00:05:11,940
+谈到机器人在不同方向上实现速度的能力
+says something about the ability of the robot to achieve velocity in different directions
+
+64
+00:05:11,940 --> 00:05:17,110
+在三维空间。末端执行器能够在这个方向上移动得最快
+in three-dimensional space. The end-effector is able to move most quickly in the direction
+
+65
+00:05:17,110 --> 00:05:22,699
+平行于椭圆体的最长轴并且它平行于方向移动得最慢
+parallel to the longest axis of the ellipsoid and it moves most slowly parallel to the direction
+
+66
+00:05:22,699 --> 00:05:28,290
+椭圆体的最短轴。我们可以描述椭圆体的整体形状
+of the shortest axis of the ellipsoid. We can describe the overall shape of the ellipsoid
+
+67
+00:05:28,290 --> 00:05:33,509
+就我们称之为可操纵性的标量度量而言，它说的是一些东西
+in terms of a scalar measure which we call manipulability, and it says something about
+
+68
+00:05:33,509 --> 00:05:39,919
+椭圆体的紧凑性。如果可操纵性等于1，则椭圆体实际上是
+the compactness of the ellipsoid. If the manipulability is equal to one, the ellipsoid is in fact
+
+69
+00:05:39,919 --> 00:05:44,979
+球体，我们将其称为各向同性运动情况。机器人能够平等移动
+the sphere, and we refer to this as the isotropic motion case. The robot is able to move equally
+
+70
+00:05:44,979 --> 00:05:51,020
+快速向任何方向发展。在可操纵性等于零的情况下，这表示运动
+quickly in any direction. In the case of manipulability is equal to zero, that indicates that motion
+
+71
+00:05:51,020 --> 00:05:55,870
+在一个分区方向上是不可能的并且三维椭圆体已经存在
+in one partition direction is not possible and the three-dimensional ellipsoid has been
+
+72
+00:05:55,870 --> 00:05:58,310
+扁平成椭圆形板。
+flattened into an elliptical plate.
+

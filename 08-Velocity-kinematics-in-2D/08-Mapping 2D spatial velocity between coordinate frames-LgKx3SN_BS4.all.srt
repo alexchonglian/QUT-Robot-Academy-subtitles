@@ -1,0 +1,80 @@
+1
+00:00:03,620 --> 00:00:07,180
+在这里，我们现在应该对我们非常熟悉。我们有一个坐标
+Here we have something that should be quite familiar to us by now. We have a coordinate
+
+2
+00:00:07,180 --> 00:00:13,380
+框架表示A，我们有一个点。现在这一点正在发生变化。它有一个空间速度，
+frame denoted A and we have a point. Now that point is moving. It’s got a spacial velocity,
+
+3
+00:00:13,380 --> 00:00:19,000
+nu，关于框架A和我用这种方式表示它。它具有平移速度
+nu, with respect to frame A and I denote it this way. It’s got translational velocity
+
+4
+00:00:19,000 --> 00:00:24,290
+分量，X点和Y点以及旋转速度分量thetadot但是我代表
+component, X dot and Y dot and a rotational velocity component theta dot but I represent
+
+5
+00:00:24,290 --> 00:00:25,399
+用一支箭头。
+that by a single arrow.
+
+6
+00:00:25,399 --> 00:00:31,340
+现在我将介绍另一个坐标系，一个红色的协调框架，表示为B和
+Now I am going to introduce another coordinate frame, a red coordinated frame denoted B and
+
+7
+00:00:31,340 --> 00:00:36,890
+我们有一个相对姿势来描述框架B相对于姿势的姿势
+we have a relative pose that describes the pose of frame B with respect to the pose of
+
+8
+00:00:36,890 --> 00:00:43,010
+帧A.现在我还可以描述相对于坐标系的点的速度
+frame A. Now I can also describe the velocity of the point with respect to coordinate frame
+
+9
+00:00:43,010 --> 00:00:46,890
+B和我通过使用领先的超级脚本B代替A来做到这一点。
+B and I do that by using a leading super script B instead of A.
+
+10
+00:00:46,890 --> 00:00:53,280
+现在，点相对于帧B的速度与速度有关
+Now, the velocity of the point with respect to frame B is related to the velocity with
+
+11
+00:00:53,280 --> 00:00:59,420
+相对于框架A，它与雅可比矩阵相关，雅可比矩阵映射速度
+respect to frame A and it’s related by a Jacobian matrix, a Jacobian that maps velocity
+
+12
+00:00:59,420 --> 00:01:02,339
+从一帧到另一帧。
+from one frame to another.
+
+13
+00:01:02,339 --> 00:01:08,090
+这种特殊的雅可比行列式是两帧之间相对姿态的函数。
+This particular Jacobian is a function of the relative pose between the two frames.
+
+14
+00:01:08,090 --> 00:01:14,110
+它是一个三乘三的矩阵，包括相对姿势的旋转部分和
+It’s a three by three matrix that comprises the rotational part of the relative pose and
+
+15
+00:01:14,110 --> 00:01:19,790
+一堆零和一个。实际上，它只是相对方向的函数
+a bunch of zeros and ones. In fact, it is only a function of the relative orientation
+
+16
+00:01:19,790 --> 00:01:26,130
+帧之间。它完全不依赖于这两个帧的起源之间的距离。
+between the frames. It doesn't depend at all on the distance between the origins of these two frames.
+

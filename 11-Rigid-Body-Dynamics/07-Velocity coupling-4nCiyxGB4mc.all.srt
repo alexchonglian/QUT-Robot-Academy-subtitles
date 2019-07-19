@@ -1,0 +1,170 @@
+1
+00:00:03,270 --> 00:00:09,110
+我们要看的最后一个术语是“C”，它代表科里奥利和
+The last term we're going to look at is the term 'C' and it represents the Coriolis and
+
+2
+00:00:09,110 --> 00:00:14,110
+存在于串行链接机器人操纵器内的向心扭矩。它通常被称为
+Centripetal torques that exists within a serial link robot manipulator. It's often called
+
+3
+00:00:14,110 --> 00:00:20,200
+速度项是因为C矩阵乘以矢量Q点，即关节速度的矢量。
+the velocity term because the C matrix multiplies the vector Q dot, the vector of joint velocities.
+
+4
+00:00:20,200 --> 00:00:26,380
+这是由于旋转关节引起的陀螺效应引起的扭矩
+This is the torque that is due to gyroscopic effects due to rotating joints within the
+
+5
+00:00:26,380 --> 00:00:30,910
+机器人机械手。实际上有两种效果由矩阵C和C建模
+robot manipulator. There are actually two effects that are modelled by the matrix C and
+
+6
+00:00:30,910 --> 00:00:35,750
+这是以法国科学家，数学家科里奥利（Coriolis）命名的科里奥利效应
+it's the Coriolis effect which is named after the French scientist, mathematician Coriolis
+
+7
+00:00:35,750 --> 00:00:40,960
+他在理解旋转参考系中发生的事情方面做了很多工作
+and he did a lot of work on understanding what goes on in rotating reference frames
+
+8
+00:00:40,960 --> 00:00:45,410
+并且由矩阵C表示的另一个力是向心力矩。
+and the other force represented by the matrix C are centripetal torques.
+
+9
+00:00:45,410 --> 00:00:49,880
+我们再一次用象征性地表示我们的两个链接机器人，这次我们要去
+Once again we have our two link robot represented symbolically and this time we're going to
+
+10
+00:00:49,880 --> 00:00:55,790
+研究科里奥利和向心力矩。这是使用名为coriolis的方法完成的
+investigate the Coriolis and centripetal torques. And that's done using the method called coriolis
+
+11
+00:00:55,790 --> 00:01:04,269
+对它的论证是关节角度，它们是关节角度和联合速度;Q1D和Q2D。
+and the arguments to that are the joint angles, there they are and the joint velocities; Q1D and Q2D.
+
+12
+00:01:05,240 --> 00:01:11,340
+需要一点时间来计算，这是科里奥利和向心矩阵。
+It takes a moment to compute and this is the Coriolis and centripetal matrix.
+
+13
+00:01:11,340 --> 00:01:18,320
+它是一个2x2矩阵，我们再次看到它包含了许多运动和动态
+It's a 2 x 2 matrix and we can see, once again that it comprises a number of kinematic and dynamic
+
+14
+00:01:18,329 --> 00:01:22,749
+机器人的参数，我们也可以看到它是配置的一个功能
+parameters of a robot and we can also see that it's a function of the configuration
+
+15
+00:01:22,749 --> 00:01:27,459
+机器人有趣的是，在这种情况下，它只是Q2的一个功能。
+of a robot. Interestingly, in this case it’s only a function of Q2.
+
+16
+00:01:27,459 --> 00:01:31,810
+对于一个简单的2连杆机器人操纵器，C矩阵看起来像这样。我们可以
+For a simple 2 link robot manipulator, the C matrix looks something like this. We can
+
+17
+00:01:31,810 --> 00:01:36,639
+看到元素是关节角度的函数，在这种情况下只是一个关节
+see that the elements are a function of the joint angle, in this case just a single joint
+
+18
+00:01:36,639 --> 00:01:43,560
+角度。关节2角度Q2以及两个关节Q1点和Q2点的速度。
+angle. Joint 2 angle Q2 and also the velocities of the two joints Q1 dot and Q2 dot.
+
+19
+00:01:43,560 --> 00:01:50,009
+现在，由于科里奥利和向心效应的扭矩可以通过乘以得出
+Now the torque, due to the Coriolis and centripetal effects can be derived by multiplying the
+
+20
+00:01:50,009 --> 00:01:55,560
+矩阵C由关节速度的向量组成，如果我们扩展出来，我们就有了表达式
+matrix C by the vector of joint velocities and if we expand that out, we have the expression
+
+21
+00:01:55,560 --> 00:02:02,529
+科林奥利和向心谈判在联合1和联合2上行事。
+for the Coriolis and centripetal talks acting on Joint 1 and acting on Joint 2.
+
+22
+00:02:02,529 --> 00:02:07,539
+让我们考虑联合1没有移动的情况，即Q1点等于零
+Let's consider the case where Joint 1 is not moving that’s Q1 dot is equal to zero but
+
+23
+00:02:07,539 --> 00:02:12,990
+让我们说联合2正在移动，所以Q2点不等于零。然后虽然这个词
+let's say that Joint 2 is moving so Q2 dot is not equal to zero. Then although this term
+
+24
+00:02:12,990 --> 00:02:19,200
+这里等于零。这个术语在这里是有限的，即第2关节的运动
+here is equal to zero. This term here will be finite, that is the motion of Joint 2 at
+
+25
+00:02:19,200 --> 00:02:25,120
+恒定速度将在关节1上产生扭矩，而这又是一种扭矩
+constant velocity is going to induce a torque on Joint 1 and that's again something that
+
+26
+00:02:25,120 --> 00:02:30,690
+联合1运动控制器将不得不反对，必须反对
+the Joint 1 motion controller is going to have to fight against, going to have to oppose
+
+27
+00:02:30,690 --> 00:02:33,940
+为了保持关节1静止。
+in order to keep Joint 1 stationary.
+
+28
+00:02:33,940 --> 00:02:39,130
+同样地，我们可以看到，对于关节1，关节1的恒定速度运动正在进行
+And similarly we can see that for Joint 2 constant velocity motion of Joint 1 is going
+
+29
+00:02:39,130 --> 00:02:44,870
+引起关节2的科里奥利和向心效应。现在，如果我们看一下这些术语，
+to induce a Coriolis and centripetal effect on Joint 2. Now if we look at these terms,
+
+30
+00:02:44,870 --> 00:02:50,140
+我们可以看到它们中的一些是特定关节速度平方和的函数
+we can see that some of them are a function of a particular joint velocity squared and
+
+31
+00:02:50,140 --> 00:02:56,280
+这些是向心式的谈话，其中一些是一个联合速度倍增的产物
+these are the centripetal talks and some of them are a product of one joint velocity multiplied
+
+32
+00:02:56,280 --> 00:03:02,130
+通过不同的关节速度，这些是科里奥利术语。所以这个矩阵C已经有了
+by a different joint velocity and these are the Coriolis terms. So this matrix C has got
+
+33
+00:03:02,130 --> 00:03:07,140
+一些术语是不同关节的速度的产物，一些是关节速度
+some terms which are the products of velocities of different joints and some are joint velocity
+
+34
+00:03:07,140 --> 00:03:10,069
+平方，科里奥利和向心效应。
+squared, Coriolis and centripetal effects.
+

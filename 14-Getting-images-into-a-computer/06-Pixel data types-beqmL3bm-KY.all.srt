@@ -1,0 +1,495 @@
+1
+00:00:03,959 --> 00:00:09,019
+我们之前讨论了不同的数据类型，特别是这个uint8或无符号整数
+We talked before about different data types in particular this uint8 or unsigned integer
+
+2
+00:00:09,019 --> 00:00:13,740
+八位数量。让我们稍微看一下数值，我会去
+eight bit quantity. Let’s just have a little bit of a look at numeric values and I am going
+
+3
+00:00:13,740 --> 00:00:20,909
+在这里做一个非常简单的例子。我将创建一个名为A的变量
+to do a really trivial example here. I am going to create a variable called A which
+
+4
+00:00:20,909 --> 00:00:23,159
+等于100，变量名为B，等于200.你可以做一些非常简单的事
+is equal to 100, variable called B which is equal to 200. You can do some really simple
+
+5
+00:00:23,159 --> 00:00:25,849
+算术，你可以弄清楚答案将是什么。
+arithmetic and you can work out what the answers are going to be.
+
+6
+00:00:25,849 --> 00:00:36,160
+A加B为300.减B为-100。除以B等于0.5，完全如我们所愿
+A plus B is 300. A minus B is -100. A divided by B is equal to 0.5, all exactly as we would
+
+7
+00:00:36,160 --> 00:00:41,719
+期望。MATLAB中的这些数字量是双精度数。
+expect. These numeric quantities within MATLAB are double precision numbers.
+
+8
+00:00:41,719 --> 00:00:47,190
+让我们从工作区中删除这些变量。他们都走了，我要创造
+Let’s remove these variables from the workspace. They are all gone, and I am going to create
+
+9
+00:00:47,190 --> 00:00:53,559
+变量现在是uint8类型。所以这个变量A;我们可以看到它是uint8类型和
+variables now of uint8 type. So this variable A; we can see it is of the uint8 type and
+
+10
+00:00:53,559 --> 00:01:00,899
+就像以前一样，它的值为100，但类型不同。我们创建变量
+it has got a value of 100 just like before, but the type is different. We create the variable
+
+11
+00:01:00,899 --> 00:01:06,820
+B，它的值为200，它是uint8类型。所以现在让我们做一些算术。
+B, it has got a value of 200 and it is of the uint8 type. So now let’s do some arithmetic.
+
+12
+00:01:06,820 --> 00:01:12,100
+让我们一起添加A和B.它的值为255。
+Lets add A and B together. It has got a value of 255.
+
+13
+00:01:12,100 --> 00:01:19,909
+减去它们，我们看到值为0.现在让我们进行划分。所以这些答案
+Subtract them and we see that the value is 0. Now let’s do a division. So these answers
+
+14
+00:01:19,909 --> 00:01:25,409
+有点令人惊讶，其原因是无符号整数八
+are a little bit surprising and the reason for this is that the unsigned integer eight
+
+15
+00:01:25,409 --> 00:01:30,009
+位数的动态范围非常有限。
+bit numbers have got a very limited dynamic range.
+
+16
+00:01:30,009 --> 00:01:35,110
+因此，我们在屏幕上看到的结果非常有意义。我添加了两个数字
+So the results that we see here on our screen make perfect sense. I add the two numbers
+
+17
+00:01:35,110 --> 00:01:39,930
+虽然结果应该是300，但它可以达到最大可能值
+together and although the results should be 300, the maximum possible value that it can
+
+18
+00:01:39,930 --> 00:01:45,229
+将uint8类型设为255，这就是MATLAB设置的类型。
+have as a uint8 type is 255 and that is what MATLAB has set it to.
+
+19
+00:01:45,229 --> 00:01:49,680
+同样，它可以拥有的最小可能值是0，所以尽管结果正确
+Similarly, the smallest possible value it can have is 0, so although the correct result
+
+20
+00:01:49,680 --> 00:01:56,789
+是-100，MATLAB将答案设置为0.我们称之为剪裁。结果如此
+was -100, MATLAB has set the answer to 0. Well we call it clipping. So the results have
+
+21
+00:01:56,789 --> 00:02:02,090
+被剪掉了。他们不能低于0，他们不能超过255。
+been clipped. They can not go below 0 and they cannot go above 255.
+
+22
+00:02:02,090 --> 00:02:07,109
+除法结果也有点令人惊讶。这里发生的是A除以
+The division result is also a little bit surprising. What has happened here is that A divided by
+
+23
+00:02:07,109 --> 00:02:13,940
+B，结果为0.5，MATLAB将其舍入到值1.在许多编程中
+B, the result is 0.5 and MATLAB has rounded that up to the value of 1. In many programming
+
+24
+00:02:13,940 --> 00:02:20,190
+语言，如果我将一个小整数除以一个更大的整数，结果将为0.MATLAB
+languages, if I divide a small integer by a larger integer the result will be 0. MATLAB
+
+25
+00:02:20,190 --> 00:02:25,170
+已完成舍入操作，值为1。
+has done a rounding operation and given a value of 1.
+
+26
+00:02:25,170 --> 00:02:30,000
+就实际的计算机硬件而言，uint8类型存储在单个字节中
+In terms of the actual computer hardware, the uint8 type is stored in a single byte
+
+27
+00:02:30,000 --> 00:02:35,160
+计算机的内存。最小的值是所有8位都有一个值
+of the computer’s memory. The smallest value is when all of the eight bits have got a value
+
+28
+00:02:35,160 --> 00:02:41,060
+0，相当于十进制值0.最大值是所有位
+of 0, equivalent to a decimal value of 0. And the largest value is when all of the bits
+
+29
+00:02:41,060 --> 00:02:47,410
+得到的值为1，相当于255的十进制值。
+have got a value of 1, which is the equivalent to the decimal value of 255.
+
+30
+00:02:47,410 --> 00:02:54,790
+对于任意n位整数，最大值为2n^-1。MATLAB支持许多
+For an arbitrary n bit integer, the maximum value is 2n^-1. MATLAB supports a number of
+
+31
+00:02:54,790 --> 00:03:02,450
+其他无符号整数类型;它支持有16位的uint16和uint32
+additional unsigned integer types; it supports uint16 which has got 16 bits, and uint32 which
+
+32
+00:03:02,450 --> 00:03:10,590
+有32位，这些能够表示具有更大的最大值的数字。
+has got 32 bits, and these are able to represent numbers with much larger maximum values.
+
+33
+00:03:10,590 --> 00:03:15,140
+现在我们已经在之前和前面讨论过的图像中显示了这个图像
+Now we have displayed this image before and as previously discussed, the pixels in this
+
+34
+00:03:15,140 --> 00:03:19,870
+image是无符号整数的类型。点击左右，这里我们有整数值
+image are of a type unsigned integer. Click around and here we have the integer values
+
+35
+00:03:19,870 --> 00:03:25,560
+像素。最亮的一个是255;最小的一个将是0。
+of the pixels. The brightest one will be 255; the smallest one will be 0.
+
+36
+00:03:25,560 --> 00:03:29,970
+现在有另一种方法可以表示图像中的像素，我将创建
+Now there is another way that we can represent the pixels in an image and I am going to create
+
+37
+00:03:29,970 --> 00:03:34,360
+一个新的变量，我将它称为imd，imagedouble。我们要做什么
+a new variable, I am going to call it imd, image double. And what we are going to do
+
+38
+00:03:34,360 --> 00:03:39,650
+再次读取图像，但这次是另一个变量。我们将通过
+is read the image again, but into a different variable this time. We are going to pass the
+
+39
+00:03:39,650 --> 00:03:47,720
+选项double，这将做的是将所有像素转换为双精度数，
+option double, and what this will do is convert all of the pixels into double precision numbers,
+
+40
+00:03:47,720 --> 00:03:55,690
+而不是无符号整数。现在让我们显示这个新图像，我会
+instead of unsigned integer numbers. Now let’s display this new image and I will
+
+41
+00:03:55,690 --> 00:04:04,310
+创造一个新的人物。我将在这个新图中显示我的新图像。现在我们看到了
+create a new figure. And I will display my new image in this new figure. Now we see it
+
+42
+00:04:04,310 --> 00:04:08,260
+看起来和另一个看起来完全一样，但如果我在这里点击像素值
+looks exactly the same as the other one, but if I click around on the pixel values here
+
+43
+00:04:08,260 --> 00:04:13,830
+我们现在会看到它们是浮点数。在这个约定中，0表示
+we will see that they are floating point numbers now. And in this convention, 0 represents
+
+44
+00:04:13,830 --> 00:04:18,850
+黑色和1代表白色。所以这是一个相当明亮的数字;在这黑暗中
+black and 1 represents white. So this is a reasonably bright number; in the dark of this
+
+45
+00:04:18,850 --> 00:04:25,750
+门方式，像素值仅为0.03。所以这是另一种表达方式
+door way, the pixel values are only 0.03. So this is another way of representing an
+
+46
+00:04:25,750 --> 00:04:31,919
+图像，每个像素，该矩阵中的每个元素都是双精度数。所以我们有一个
+image, each pixel, each element in this matrix is a double precision number. So we have a
+
+47
+00:04:31,919 --> 00:04:37,699
+这种图像表示中的每个像素值都具有很高的精度。缺点
+lot of precision with each of the pixel values in this representation of the image. The disadvantage
+
+48
+00:04:37,699 --> 00:04:41,379
+是这样的图像需要更多，更多，更多的记忆。
+is that such an image requires much, much, more memory.
+
+49
+00:04:41,379 --> 00:04:47,689
+双精度数占据八个字节的存储空间;uint8只占用
+The double precision numbers occupy eight bytes of storage; the uint8 occupies only
+
+50
+00:04:47,689 --> 00:04:53,280
+一个字节的存储空间，因此右侧的图像占用了8倍多
+one byte of storage, so this image on the right-hand side occupies eight times more
+
+51
+00:04:53,280 --> 00:04:58,550
+记忆比左边的图像。我们可以很容易地看到，使用约
+memory than the image on the left. And we can see that quite easily, using the about
+
+52
+00:04:58,550 --> 00:05:04,569
+功能;告诉我有关变量的信息。我们可以看到它占用1.1兆内存
+function; tell me about the variable im. We can see it occupies 1.1 megabytes of memory
+
+53
+00:05:04,569 --> 00:05:08,599
+在电脑里。让我们看看另一个图像，你可以看到它占据了
+in the computer. Let’s have a look at the other image and you can see that it occupies
+
+54
+00:05:08,599 --> 00:05:13,180
+8.7兆字节。但有时候有优势
+8.7 megabytes. But sometimes there are advantages in having
+
+55
+00:05:13,180 --> 00:05:17,889
+由双精度数表示的像素。
+the pixels represented by double precision numbers.
+
+56
+00:05:17,889 --> 00:05:22,550
+就实际的计算机硬件而言，组织了双精度数
+In terms of the actual computer hardware, the double precision number is organised in
+
+57
+00:05:22,550 --> 00:05:29,939
+像这样的记忆。它占用8个字节的计算机内存或总共64位。
+memory like this. It occupies 8 bytes of computer memory or a total of 64 bits.
+
+58
+00:05:29,939 --> 00:05:35,689
+第一位是符号位，正数为0，a为1
+And the first bit is the sign bit and that has got a 0 for a positive number, 1 for a
+
+59
+00:05:35,689 --> 00:05:41,939
+负数。接下来是11个指数位和52个小数位，我会说
+negative number. That is followed by 11 exponent bits and 52 fraction bits and I’ll talk
+
+60
+00:05:41,939 --> 00:05:47,520
+关于那些片刻。这种特定的布局由IEEE定义
+about those in a moment. This particular layout is defined by the IEEE
+
+61
+00:05:47,520 --> 00:05:53,289
+754标准，所以今天几乎所有计算机上都有浮点数
+754 standard, so floating point numbers on almost all computers today are represented
+
+62
+00:05:53,289 --> 00:05:59,169
+以这种特殊的方式。现在，如果我们用F和表示分数部分
+in this particular fashion. Now if we denote the fraction part by F and
+
+63
+00:05:59,169 --> 00:06:07,949
+指数部分由E表示，实际值表示为Fx2^E.所以E是指数
+the exponent part by E, the actual value that is represented is Fx2^E. So the E is the exponent
+
+64
+00:06:07,949 --> 00:06:14,539
+part和F是我们称之为小数部分-有时也称为尾数。
+part and F is what we call the fraction part—sometimes also called the mantissa.
+
+65
+00:06:14,539 --> 00:06:24,360
+现在，指数的范围是-1022到1021.如果我们从二进制转换
+Now, the exponent has got a range of -1022 to 1021. If we do the conversion from binary
+
+66
+00:06:24,360 --> 00:06:30,279
+在十进制中，我们看到这给了我们这个乘法因子的范围
+into decimal, we see that this gives us a range of this multiplication factor which
+
+67
+00:06:30,279 --> 00:06:39,819
+从10^-308到近10^-307。所以这种数字有了巨大的动力
+goes from 10^-308, to almost 10^-307. So this kind of number has got an enormous dynamic
+
+68
+00:06:39,819 --> 00:06:44,539
+范围。现在指数由11位表示
+range. Now the exponent is represented by 11 bits
+
+69
+00:06:44,539 --> 00:06:52,340
+有2048个可能的不同值。这些值中的四个是保留的，它们是
+that has got 2048 possible different values. Four of those values are reserved, they are
+
+70
+00:06:52,340 --> 00:06:57,849
+特殊的，其中一个用于表示无限数，另一个用于表示
+special and one of them is used to represent an infinite number, another is used to represent
+
+71
+00:06:57,849 --> 00:07:03,479
+负无穷数。一个用于表示所谓的不是数字，所以
+a negative infinite number. One is used to represent what is called not a number, so
+
+72
+00:07:03,479 --> 00:07:10,469
+这是在数字上无效的东西。另一个值用于表示
+that is something that is numerically invalid. And another value is used to represent the
+
+73
+00:07:10,469 --> 00:07:16,379
+精确值为零。分数是有组织的，所以它总是如此
+precise value of zero. The fraction is organised so that it is always
+
+74
+00:07:16,379 --> 00:07:26,199
+因此，分数中最高有效位代表2^-2或1/4。
+in the range from 0.5 to 1. So the most significant bit in a fraction represents 2^-2 or 1/4.
+
+75
+00:07:26,199 --> 00:07:32,870
+最低有效位具有大约10^-16的等效值，因此这意味着这一点
+The least significant bit has got an equivalent value of about 10^-16, so that means that this
+
+76
+00:07:32,870 --> 00:07:39,840
+双精度表示有效地获得了16位有效数字。所以很多数字
+double precision representation has got effectively 16 significant digits. So a lot of numeric
+
+77
+00:07:39,840 --> 00:07:44,930
+精度和非常非常大的动态范围;这是双倍的优势
+precision and a very, very, large dynamic range; that is the advantage of this double
+
+78
+00:07:44,930 --> 00:07:49,479
+计算机内数字的精确浮点表示。
+precision floating point representation of numbers within a computer.
+
+79
+00:07:49,479 --> 00:07:55,289
+现在对精度有一些限制，如果我们考虑这样的数字，0.1，
+Now there’s some limits to the precision and if we consider a number like this, 0.1,
+
+80
+00:07:55,289 --> 00:08:03,620
+这是十进制的十分之一，它没有二进制分数的精确表示。
+that is a tenth in decimal, it doesn’t have a precise representation as a binary fraction.
+
+81
+00:08:03,620 --> 00:08:08,330
+它是二进制的重复部分，因此我们无法准确地表示它。
+It is a repeating fraction in binary, so we can’t represent it precisely.
+
+82
+00:08:08,330 --> 00:08:15,879
+例如，我想查看十进制值90.1。我说
+An example of this is, for instance, I want to look at the decimal value 90.1. And I tell
+
+83
+00:08:15,879 --> 00:08:21,860
+MATLAB以长格式显示，因此显示了很多十进制数字
+MATLAB to display this in its long format, so that is showing a lot of decimal digits
+
+84
+00:08:21,860 --> 00:08:30,460
+而我们看到的是90.1实际上是由90.09999......和最后一位数字在内部表示的
+and what we see is that 90.1 is actually represented internally by 90.09999... and the last digit
+
+85
+00:08:30,460 --> 00:08:36,580
+显示为4.所以在第17位有效数字中是错误的，但正如我们刚才所说的那样
+is shown as 4. So it is wrong in the seventeenth significant digit, but as we just talked about
+
+86
+00:08:36,580 --> 00:08:41,940
+刚才，双精度可以保证你有十六位有效数字，所以
+a moment ago, double precision guarantees you around sixteen significant figures, so
+
+87
+00:08:41,940 --> 00:08:47,760
+这是可以预料的。所以，回顾一下这些不同的数值范围
+this is to be expected. So, to recap the numeric ranges of these different
+
+88
+00:08:47,760 --> 00:08:53,500
+我们用于像素的表示。我们可以将像素表示为无符号
+representations that we use for pixels. We can represent pixels as either unsigned
+
+89
+00:08:53,500 --> 00:08:58,090
+8位整数，每个占用一个字节的计算机内存，它们都有
+eight bit integers which would occupy a single byte of computer memory each, and they have
+
+90
+00:08:58,090 --> 00:09:05,690
+数值范围为0和255.或者我们可以将它们表示为双精度浮点数-它们
+a numeric range of 0 and 255. Or we can represent them as double precision floating point numbers—they
+
+91
+00:09:05,690 --> 00:09:10,630
+每个占用八个字节的计算机存储空间。我们通常将像素强度映射到
+occupy eight bytes of computer storage each. And we typically map pixel intensities into
+
+92
+00:09:10,630 --> 00:09:18,940
+范围0到1,0为暗，1为亮。我们使用时也存在一些困难
+the range 0 to 1, 0 being dark, 1 being bright. There are also some difficulties when we use
+
+93
+00:09:18,940 --> 00:09:23,540
+整数运算。其中一个问题是饱和度，所以如果我们算术的结果
+integer arithmetic. One of the problems is saturation, so if the result of our arithmetic
+
+94
+00:09:23,540 --> 00:09:29,810
+操作超出该表示的最大可能值，它被剪切或
+operation exceeds the maximum possible value for that representation, it is clipped or
+
+95
+00:09:29,810 --> 00:09:34,260
+限于表示的最大可能值。
+limited to the maximum possible value for the representation.
+
+96
+00:09:34,260 --> 00:09:39,290
+所以在这种情况下，算术的结果应该是300.但它被剪裁为255，这就是
+So in this case, the result of the arithmetic should be 300. But it is clipped to 255, which
+
+97
+00:09:39,290 --> 00:09:46,100
+是uint8类型的最大可能值。另一个问题是量化，所以如果我们
+is the maximum possible value of a uint8 type. Another problem is quantisation, so if we
+
+98
+00:09:46,100 --> 00:09:53,380
+看看这两个分区-49除以100给出0的结果-它是有效的
+look at these two divisions—49 divided by 100 gives a result of 0—it is effectively
+
+99
+00:09:53,380 --> 00:09:58,760
+向下舍入为0，而50除以100则向上舍入为1。
+rounded down to 0, whereas 50 divided by 100 is rounded up to 1.
+

@@ -1,0 +1,355 @@
+1
+00:00:03,399 --> 00:00:08,590
+这个过程的第一个阶段是光源;也就是说，是什么产生了落下的光
+The first stage in the process is the illuminant; that is, what creates the light that falls
+
+2
+00:00:08,590 --> 00:00:13,690
+在最终反映到我们眼中的场景中。光到了哪里来了
+on the scene that is ultimately reflected into our eyes. So where does the light come
+
+3
+00:00:13,690 --> 00:00:18,330
+从？那么有许多不同的光源;发射白炽灯
+from? Well there are many, many different sources of light; incandescence’s is emitted
+
+4
+00:00:18,330 --> 00:00:24,850
+通过热物体，可以是钨灯泡的白热灯丝，也可以是太阳。
+by hot objects, that could be the white hot filament of a tungsten light bulb or it could be the sun.
+
+5
+00:00:24,850 --> 00:00:30,280
+旧时尚阴极射线管-如电视和旧电脑显示器中所见-产生
+Old fashion cathode ray tubes—as found in televisions and old computer monitors—generate
+
+6
+00:00:30,289 --> 00:00:35,930
+通过在磷光体上发射非常高能的电子来发光，这些是接受的化学物质
+light by firing very energetic electrons at phosphors and these are chemicals that accept
+
+7
+00:00:35,930 --> 00:00:41,110
+高能电子并将其转换成光子或光。
+that high energy electron and convert that into photons or light.
+
+8
+00:00:41,110 --> 00:00:47,500
+我们还有发光二极管，气体放电管和激光器。
+We also have light emitting diodes, gas discharge tubes and lasers.
+
+9
+00:00:47,500 --> 00:00:53,830
+早在1672年，艾萨克·牛顿（IsaacNewton）就开发了他所谓的光谱理论
+Way back in 1672, Isaac Newton developed what he called the spectral theory of light and
+
+10
+00:00:53,830 --> 00:00:59,830
+他做了一个非常着名的实验，光线通过一个覆盖的洞进入房间
+he did a very famous experiment, light entered the room through a hole in a covering over
+
+11
+00:00:59,830 --> 00:01:06,470
+窗户进入棱镜，在那里他看到它分裂成许多不同的颜色。
+the window and entered a prism where he saw that it was split into many different colors.
+
+12
+00:01:06,470 --> 00:01:10,760
+然后他能够证明他可以重新组合多种颜色的光
+And then he was able to show that he could recombine the multiple colors of light back
+
+13
+00:01:10,760 --> 00:01:16,600
+成一束白光。你在这里看到的是艾萨克·牛顿的形象
+into a single beam of white light. What you see here is an image of Isaac Newton’s
+
+14
+00:01:16,600 --> 00:01:19,960
+笔记本记录了他做过的这个实验。
+notebook that records this experiment that he did.
+
+15
+00:01:19,960 --> 00:01:25,310
+一个非常标志性的图像是一束白光进入棱镜并被分裂成
+A very iconic image is of a beam of white light entering a prism and being split into
+
+16
+00:01:25,310 --> 00:01:33,020
+彩虹的所有颜色。这些不同的颜色代表不同频率的光
+all of the colors of the rainbow. These different colors represent light of different frequencies
+
+17
+00:01:33,020 --> 00:01:39,020
+我们倾向于根据它来描述特定颜色光的频率
+and we tend to describe the frequency of a particular color of light in terms of its
+
+18
+00:01:39,020 --> 00:01:44,380
+波长。它是一个长度，以纳米为单位测量;十到九
+wavelength. It is a length and it is measured in units of nanometers; ten to the minus nine
+
+19
+00:01:44,380 --> 00:01:50,229
+米。现在，并非所有的光都是可见的，人类能够在两者之间看到光
+meters. Now, not all light is visible, human beings are able to see light between about
+
+20
+00:01:50,229 --> 00:01:56,479
+400纳米和700纳米。我们的光波长短于400纳米
+400 nanometers and 700 nanometers. Light with wavelengths shorter than 400 nanometers we
+
+21
+00:01:56,479 --> 00:02:03,140
+我们称之为波长大于700纳米的紫外线和光线
+refer to as ultra-violet and light with wavelengths greater than 700 nanometers we refer to as
+
+22
+00:02:03,140 --> 00:02:09,000
+红外线。光是电磁波，如果我们
+infra-red. Light is an electromagnetic wave and if we
+
+23
+00:02:09,000 --> 00:02:11,639
+从图形上看，我们看到有两个
+look at this graphically we see that there are two
+
+24
+00:02:11,639 --> 00:02:18,319
+自增强波，沿x轴在这个方向上穿过空间。之一
+self-reinforcing waves, moving through space in this direction along the x axis. One of
+
+25
+00:02:18,319 --> 00:02:24,739
+那些波是一个电场;另一波是磁场。一个长度
+those waves is an electric field; the other wave is a magnetic field. The length of a
+
+26
+00:02:24,739 --> 00:02:29,939
+这些波中的任何一个的单个周期我们称为波长并且非常普遍地给出
+single cycle of either of these waves we refer to as the wavelength and very commonly give
+
+27
+00:02:29,939 --> 00:02:34,819
+它是符号lambda。所以波长是单个的长度
+it the symbol lambda. So the wavelength is the length of a single
+
+28
+00:02:34,819 --> 00:02:42,450
+这种电磁波的周期和光的周期在400到700纳米之间。
+cycle of this electromagnetic wave and for light it is between 400 and 700 nanometers.
+
+29
+00:02:42,450 --> 00:02:48,359
+我们现在考虑黑体散热器和两种最常见的黑体源
+Let’s now consider black body radiators and the two most common black body sources
+
+30
+00:02:48,359 --> 00:02:54,310
+我们使用的光是传统的白炽钨灯泡，尽管现在这些
+of light that we use are the traditional incandescent tungsten light bulb, though these are now
+
+31
+00:02:54,310 --> 00:02:59,909
+走出时尚，和太阳。太阳是天空中非常热的物体
+going out of fashion, and the sun. The sun is a very hot object in the sky that emits
+
+32
+00:02:59,909 --> 00:03:03,959
+可见光。黑体散热器的光量
+visible light. The amount of light that a black body radiator
+
+33
+00:03:03,959 --> 00:03:11,029
+这里，曲线给出了作为其波长函数的函数。可见光范围
+emits as a function of its wavelength is given by this curve here. The visible range of light
+
+34
+00:03:11,029 --> 00:03:17,930
+在这里显示。该曲线由普朗克定律描述，并且包含大量数据
+is shown here. This curve is described by Planck’s law and it contains a large number
+
+35
+00:03:17,930 --> 00:03:22,840
+const的，这个表达式中的一个术语是T，即温度
+of constance, and one of the terms in this expression is T, that is the temperature of
+
+36
+00:03:22,840 --> 00:03:28,389
+黑体散热器。那是钨丝的温度或它是温度
+the black body radiator. That is the temperature of the tungsten filament or it is the temperature
+
+37
+00:03:28,389 --> 00:03:32,260
+太阳表面。通常，这些数量级为数千
+of the surface of the sun. Typically, these are in the order of thousands
+
+38
+00:03:32,260 --> 00:03:37,819
+开尔文度。曲线有一个非常清晰的峰值，以及这个峰值的波长
+of degrees Kelvin. The curve has got a very clear peak, and the wavelength of this peak
+
+39
+00:03:37,819 --> 00:03:43,989
+由维恩位移定律给出，这表明波长是相关的
+is given by the Wien displacement law, and what this shows is that the wavelength associated
+
+40
+00:03:43,989 --> 00:03:48,519
+该峰值的最大值与温度成反比。
+with the maximum of this peak is inversely related to the temperature.
+
+41
+00:03:48,519 --> 00:03:54,590
+因此，低温具有与峰值相关的大λ并且随着温度升高
+So low temperatures have a large lambda associated with the peak and as the temperature increases
+
+42
+00:03:54,590 --> 00:04:00,299
+这个lambda行动，减少。它移动到更短的波长。我们实际上有一个
+this lambda acts, decreases. It moves to a shorter wavelength. And we actually have an
+
+43
+00:04:00,299 --> 00:04:06,730
+直观的感觉：我在这里绘制的是黑体发射曲线
+intuitive feel for this: what I have plotted here are the black body emission curves for
+
+44
+00:04:06,730 --> 00:04:13,529
+在不同温度范围内的黑体-从1000开尔文到6000开尔文-和我们一样
+black bodies at a range of different temperatures — from 1000 Kelvin up to 6000 Kelvin — and as we
+
+45
+00:04:13,529 --> 00:04:19,120
+可以看出，随着温度的升高，与最大值相关的波长是
+can see, as the temperature increases, the wavelength associated with the maximum is
+
+46
+00:04:19,120 --> 00:04:24,400
+向更小的波长移动......它变得越来越蓝。所以它的温度
+moving towards a smaller wavelength … it is becoming more blue. So as its temperature
+
+47
+00:04:24,400 --> 00:04:31,050
+增加，与最大发射相关的波长移动到更低的波长，
+increases, the wavelength associated with the maximum emission moves to lower wavelengths,
+
+48
+00:04:31,050 --> 00:04:34,740
+更蓝的颜色。在我们的语言中，我们使用颜色来描述
+to bluer colors. In our language we use colors to describe
+
+49
+00:04:34,740 --> 00:04:38,400
+温度。一些非常热的东西，即将开始的金属能够
+temperatures. Something that is pretty hot, metal that is just about to begin be able
+
+50
+00:04:38,400 --> 00:04:42,639
+为了工作，我们描述为炽热。随着我们增加温度，它变成了
+to be worked, we describe as being red hot. As we increase the temperature it becomes
+
+51
+00:04:42,639 --> 00:04:47,009
+黄色的热，它发出不同的颜色，它现在更黄色和温度
+yellow hot, it is glowing a different color, it is more yellow now and as the temperature
+
+52
+00:04:47,009 --> 00:04:52,069
+上升它开始发出白光。我们称之为白热化。
+goes up it starts to emit white light. And we refer to that as being white hot.
+
+53
+00:04:52,069 --> 00:04:57,080
+让我们来绘制其中一条黑体曲线。要开始，只需
+Let’s have a go at plotting one of these black body curves. To get started with, just
+
+54
+00:04:57,080 --> 00:05:01,759
+为了让自己的生活更轻松，我将定义一个符号NM，代表
+to make life a little bit easier for myself I am going to define a symbol NM, stands for
+
+55
+00:05:01,759 --> 00:05:06,889
+纳米并且等于十分之一到负九分。让生活更轻松一点。
+nanometer and is equal to one by ten to the minus nine. Make life a little bit easier.
+
+56
+00:05:06,889 --> 00:05:12,360
+我将创建一个波长矢量。我打算把它叫做lambda，它就要开始了
+And I am going to create a vector of wavelengths. I am going to call it lambda and it is going
+
+57
+00:05:12,360 --> 00:05:19,169
+从100纳米到10纳米不等，一直到千分之一
+to vary from three hundred nanometers in steps of ten nanometers all the way up to a thousand
+
+58
+00:05:19,169 --> 00:05:26,990
+纳米，这是从近紫外线到光谱的红外线部分。
+nanometers, this is going from the near ultra-violet through into the infra-red part of the spectrum.
+
+59
+00:05:26,990 --> 00:05:33,050
+现在我可以使用黑体功能计算黑体辐射器发射曲线。我通过
+Now I can compute a black body radiator emission curve, using the black body function. I pass
+
+60
+00:05:33,050 --> 00:05:37,780
+在我感兴趣的波长范围内，我传递温度。我是
+in the range of wavelengths that I am interested in and I pass in the temperature. And I am
+
+61
+00:05:37,780 --> 00:05:45,759
+要投入6500开尔文，这是太阳的温度。我可以绘制这条曲线，
+going to put in 6500 Kelvin, which is the temperature of the sun. I can plot this curve,
+
+62
+00:05:45,759 --> 00:05:50,259
+一个轴将成为lambda而另一个轴将成为E.而这里我们有一个
+one axis is going to be lambda and the other axis is going to be E. And here we have a
+
+63
+00:05:50,259 --> 00:05:55,750
+黑体辐射器的响应图。我要在那里放一个网格。
+plot of the response of the black body radiator. I am going to put a grid on there.
+
+64
+00:05:55,750 --> 00:06:00,939
+让我们来看一下黑体散热器的情况，但色温较低
+Let’s look at the case now for a black body radiator, but at a lower color temperature
+
+65
+00:06:00,939 --> 00:06:03,900
+我会稍微降低色温。
+and I am going to reduce the color temperature a little bit.
+
+66
+00:06:03,900 --> 00:06:08,969
+所以让我们回到这里，我将把颜色减少500度。把它
+So let’s come back here and I am going to reduce the color by 500 degrees. Put that
+
+67
+00:06:08,969 --> 00:06:17,969
+进入变量E.我将覆盖该情节，现在我将绘制E
+into the variable E. I am going to overlay that plot and now I am going to plot E against
+
+68
+00:06:17,969 --> 00:06:23,759
+lambda和我将用dashline来做，所以我们可以看到有什么区别。和
+lambda and I am going to do it with dashline so we can see what’s the difference. And
+
+69
+00:06:23,759 --> 00:06:30,719
+我们可以看到曲线较低;这个稍微凉爽的身体散发的更少
+what we can see is that the curve is lower; this slightly cooler body is emitting less
+
+70
+00:06:30,719 --> 00:06:38,330
+整体能源。其遗漏的高峰已经从大约450纳米变为更接近
+energy overall. The peak of its omission has moved from around 450 nanometers to closer
+
+71
+00:06:38,330 --> 00:06:46,510
+到480纳米。所以它有点凉爽，它的外观有点红。
+to 480 nanometers. So it has got a little bit cooler and it is a little bit more red in its appearance.
+

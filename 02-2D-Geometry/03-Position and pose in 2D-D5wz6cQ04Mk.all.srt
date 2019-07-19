@@ -1,0 +1,385 @@
+1
+00:00:03,480 --> 00:00:07,480
+现在我有我的机器人和坐标框架，我可以测量机器人的位置
+Now that I have my robot and a coordinate frame, I can measure the position of the robot
+
+2
+00:00:07,480 --> 00:00:11,230
+相对于坐标系。所以，用我的卷尺，我可以看到机器人
+with respect to the coordinate frame. So, with my tape measure, I can see that the robot
+
+3
+00:00:11,230 --> 00:00:18,960
+有一个18厘米的x坐标，它有一个16厘米的坐标。
+has got an x coordinate of 18 centimetres and it has got a y coordinate of 16 centimetres.
+
+4
+00:00:18,960 --> 00:00:24,650
+所以我可以用矢量和元素来描述机器人的位置
+So I can describe the position of the robot in terms of a vector and the elements of the
+
+5
+00:00:24,650 --> 00:00:30,039
+矢量是以厘米为单位的18和16。现在，我可以介绍其他对象了
+vector are 18 and 16 in units of centimetres. Now, I can introduce other objects in the
+
+6
+00:00:30,039 --> 00:00:33,640
+环境。一个机器人可以有一个小朋友。他的小朋友可以坐在那里，并且
+environment. A robot can have a little friend. His little friend can sit over there, and
+
+7
+00:00:33,640 --> 00:00:39,570
+我也可以衡量这位小朋友的位置。并且，他坐在大约38厘米
+I can measure the position of the little friend as well. And, he is sitting at about 38 centimetres
+
+8
+00:00:39,570 --> 00:00:45,010
+在x方向，这是他的x坐标。并且，y坐标，不容易测量，
+in the x direction, that’s his x coordinate. And, the y coordinate, not so easy to measure,
+
+9
+00:00:45,010 --> 00:00:50,760
+但我可以说也许它在y方向上是6厘米。所以，其中的任何对象
+but I could say perhaps it’s 6 centimetres in the y direction. So, any object within
+
+10
+00:00:50,760 --> 00:00:56,519
+在这个环境中，我可以用两个坐标来描述它们的位置
+this environment I can describe their position in terms of two coordinates with respect to
+
+11
+00:00:56,519 --> 00:00:59,969
+我在开头放下的坐标框架。
+the coordinate frame that I laid down at the beginning.
+
+12
+00:00:59,969 --> 00:01:03,269
+描述机器人的位置是问题的一个重要部分，但它是
+Describing the position of the robot is an important part of the problem, but it’s
+
+13
+00:01:03,269 --> 00:01:07,770
+还不够。我们需要能够说出这个机器人面临的方式。
+not quite enough. We need to be able to say something about which way this robot is facing.
+
+14
+00:01:07,770 --> 00:01:12,030
+所以，如果这个机器人想要移动到这个机器人，我们需要知道它是否正在进行
+So, if this robot wanted to move towards this robot, we need to know whether it’s going
+
+15
+00:01:12,030 --> 00:01:17,000
+向前，向左，向右，向后移动。所以，这个机器人非常不同
+to move forwards, to the left, to the right, backwards. So, this robot is very different
+
+16
+00:01:17,000 --> 00:01:22,890
+对这个机器人，对这个机器人，对这个机器人。能够描述哪个是很重要的
+to this robot, to this robot, to this robot. It’s important to be able to describe which
+
+17
+00:01:22,890 --> 00:01:27,610
+这是面临的方式。并且，为了描述它面临的方式，我们可以使用这些工具
+way it’s facing. And, in order to describe which way it’s facing, we can use the tools
+
+18
+00:01:27,610 --> 00:01:32,320
+我们已经讨论过了。而且，我们能做的是我们可以附加另一个坐标
+that we've already been discussing. And, what we can do is we can attach another coordinate
+
+19
+00:01:32,320 --> 00:01:35,910
+框架到我们的机器人。在这种情况下，我将使用绿色坐标框架，我是
+frame to our robot. In this case, I’m going to use a green coordinate frame and I’m
+
+20
+00:01:35,910 --> 00:01:39,560
+用一些蓝色大头钉将它贴在机器人的底部。现在
+going to stick it on to the bottom of the robot with some, with some blue tack. Now
+
+21
+00:01:39,560 --> 00:01:44,890
+对于这里的机器人，我们可以描述它的方向-它面对的方式
+with the robots here, we can describe its orientation - the way it’s facing in the
+
+22
+00:01:44,890 --> 00:01:52,350
+world-通过该坐标系相对于该坐标系的方向。
+world - by the orientation of this coordinate frame with respect to this coordinate frame.
+
+23
+00:01:52,350 --> 00:01:58,100
+那么，我们可以描述我们所附加的这个新坐标系的位置
+So, we can describe then the position of this new coordinate frame that we've attached to
+
+24
+00:01:58,100 --> 00:02:06,290
+机器人在运动方面。我们从原始坐标框架进行运动，我们的参考
+the robot in terms of a motion. We do a motion from the original coordinate frame, our reference
+
+25
+00:02:06,290 --> 00:02:10,729
+坐标框架，有时称为世界坐标框架，我们移动原点
+coordinate frame, sometimes called the world coordinate frame, that we move the origin
+
+26
+00:02:10,729 --> 00:02:17,290
+这个框架到这里然后我们旋转。我们可以为小机器人做同样的事情。
+of this frame to here and then we rotate. We can do the same thing for the little robot.
+
+27
+00:02:17,290 --> 00:02:21,469
+我们可以描述它相对于世界坐标系的姿势。要做到这一点，我是
+We can describe its pose with respect to the world coordinate frame. To do that, I’m
+
+28
+00:02:21,469 --> 00:02:27,400
+要将蓝色坐标框架附加到这个小机器人身上，我要去定位
+going to attach a blue coordinate frame to this little robot, and, I’m going to orient
+
+29
+00:02:27,400 --> 00:02:31,859
+它使x轴指向前方。这是一个非常常见的惯例
+it so that the x-axis is pointing forward. And this is a pretty common convention for
+
+30
+00:02:31,859 --> 00:02:39,039
+飞机，船舶，汽车，机器人。我们使x轴成为机器正常运动的方向。
+airplane, ships, cars, robots. We make the x-axis the direction of normal motion for the machine.
+
+31
+00:02:40,360 --> 00:02:42,760
+现在，我们有一个非常简单的表示
+Now, we have a very simple representation
+
+32
+00:02:42,769 --> 00:02:48,420
+现在描述的原始环境完全是根据多个坐标来描述的
+of the original environment where it’s described now entirely in terms of a number of coordinate
+
+33
+00:02:48,420 --> 00:02:52,930
+表示该环境中重要实体的姿势的框架
+frames which represent the pose of the important entities in that environment with respect
+
+34
+00:02:52,930 --> 00:02:58,349
+到世界坐标框架。现在，就像我们为大型机器人所做的那样，我们可以考虑
+to the world coordinate frame. Now, just as we did for the big robot, we can consider
+
+35
+00:02:58,349 --> 00:03:03,569
+这个小机器人在运动方面的姿势。所以，想象一下我们移动坐标
+the pose of the little robot in terms of a motion. So, imagine that we move the coordinate
+
+36
+00:03:03,569 --> 00:03:09,489
+它位于参考坐标系顶部的框架。我们做翻译
+frame from where it lies on top of the reference coordinate frame. We make a translational
+
+37
+00:03:09,489 --> 00:03:15,099
+运动，水平移动，我们垂直移动，然后旋转它并旋转它
+motion, move it horizontally, we move it vertically, and then we rotate it and rotate it quite
+
+38
+00:03:15,099 --> 00:03:19,530
+一点直到它位于该坐标系的顶部。所以，这就是小小的姿势
+a bit until it lies on top of that coordinate frame. So, that is the pose of the little
+
+39
+00:03:19,530 --> 00:03:25,269
+机器人相对于根据位置分量描述的世界坐标系
+robot with respect to the world coordinate frame described in terms of a positional component
+
+40
+00:03:25,269 --> 00:03:30,529
+和旋转部件。所以，现在我们已经描述了它的姿势
+and a rotational component. So, now we have described the pose of the
+
+41
+00:03:30,529 --> 00:03:34,700
+相对于世界坐标框架的小机器人。我们之前描述过的姿势
+little robot with respect to the world coordinate frame. We previously described the pose of
+
+42
+00:03:34,700 --> 00:03:39,120
+关于世界坐标系的大机器人。但是，我们也可以描述姿势
+the big robot with respect to the world coordinate frame. But, we can also describe the pose
+
+43
+00:03:39,120 --> 00:03:44,689
+关于大机器人的小机器人，我们可以通过拿起机器人做到这一点
+of the little robot with respect to the big robot, and we can do that by picking up the
+
+44
+00:03:44,689 --> 00:03:50,099
+大机器人的坐标框架，我们在世界x方向上进行翻译，并且
+big robot’s coordinate frame and we make a translation in the world x direction, and
+
+45
+00:03:50,099 --> 00:03:55,209
+然后在世界y方向，然后我们旋转它直到轴线向上。然后
+then in the world y direction, and then we rotate it until the axis line up. And, that
+
+46
+00:03:55,209 --> 00:04:01,439
+然后是从这个坐标系到这个坐标系的相对运动或相对姿势。
+then is a relative motion or relative pose from this coordinate frame to this one.
+
+47
+00:04:01,439 --> 00:04:07,870
+我将使用这个希腊字母，发音为ksi来表示姿势。在
+I’m going to use this Greek letter which is pronounced as ksi to represent pose. In
+
+48
+00:04:07,870 --> 00:04:13,480
+一个二维世界，pose有三个参数：x和y代表偏移量
+a two-dimensional world, pose has got three parameters: x and y which represent the offset
+
+49
+00:04:13,480 --> 00:04:18,880
+从一个坐标系的原点到下一个坐标系的原点，和
+from the origin of one coordinate frame to the origin of the next coordinate frame, and
+
+50
+00:04:18,880 --> 00:04:26,000
+角度θ表示从一个坐标系到下一个坐标系的旋转。那里
+the angle Theta which represents the rotation from one coordinate frame to the next. There
+
+51
+00:04:26,000 --> 00:04:30,620
+当我们谈论一个坐标系的旋转时，这是一个重要的约定
+is an important convention when we talk about the rotation of one coordinate frame with
+
+52
+00:04:30,620 --> 00:04:36,110
+相对于另一个，也就是角度在逆时针方向上正向增加。
+respect to another, and that is that angles increase positively in the anticlockwise direction.
+
+53
+00:04:36,110 --> 00:04:41,840
+所以，如果这是我的原始坐标系，如果我按角度Theta旋转它，它看起来
+So, if this is my original coordinate frame, if I rotate that by the angle Theta, it looks
+
+54
+00:04:41,840 --> 00:04:47,530
+像这样。重要的是，正向旋转处于逆时针方向。
+like this. Importantly, positive rotation is in the anticlockwise direction.
+
+55
+00:04:47,530 --> 00:04:55,000
+我们还可以将姿势视为移动，x方向和y方向的运动，
+We can also think about pose as a move, a motion in the x direction and in the y direction,
+
+56
+00:04:55,000 --> 00:04:59,280
+然后通过量Theta旋转或扭曲。
+and then a rotation or twist by the amount Theta.
+
+57
+00:04:59,280 --> 00:05:04,810
+因此，我们可以描述我们附加的这个新坐标系的位置
+So, we can describe that the position of this new coordinate frame that we have attached
+
+58
+00:05:04,810 --> 00:05:12,380
+在运动方面对机器人。我们从原始坐标系做一个动作，
+to the robot in terms of a motion. We do a motion from the original coordinate frame,
+
+59
+00:05:12,380 --> 00:05:16,440
+我们的参考坐标框架，有时也称为世界坐标框架
+our reference coordinate frame, sometimes called the world coordinate frame, that we
+
+60
+00:05:16,440 --> 00:05:21,540
+将此框架的原点移动到此处，然后我们旋转。
+move the origin of this frame to here, and then we rotate.
+
+61
+00:05:21,540 --> 00:05:28,090
+那么，让我们总结一下我们在本节中介绍的内容。一点可以用来描述
+So, let’s summarise what we've covered in this section. A point can be described by
+
+62
+00:05:28,090 --> 00:05:34,090
+关于特定坐标系的向量，当我们这样做时，我们介绍
+a vector with respect to a particular coordinate frame, and, when we do that, we introduce
+
+63
+00:05:34,090 --> 00:05:40,310
+一些额外的表示法。我们使用符号小写p来表示向量。A
+some additional notation. We use the symbol lower case p to represent a vector. The A
+
+64
+00:05:40,310 --> 00:05:46,520
+infront表示向量开始的坐标系。所以，这个向量开始了
+in front denotes the coordinate frame from which the vector starts. So, this vector begins
+
+65
+00:05:46,520 --> 00:05:52,660
+从坐标框架A的原点开始。尾随B是目的地。就是这样
+from the origin of coordinate frame A. The trailing B is the destination. It’s the
+
+66
+00:05:52,660 --> 00:05:57,580
+向量指向的点的名称。可以描述坐标系的姿势
+name of the point that the vector points to. The pose of a coordinate frame can be described
+
+67
+00:05:57,580 --> 00:06:03,610
+相对于另一个坐标系。我用这个胖箭来表示姿势
+with respect to another coordinate frame. I used this fat arrow to represent the pose
+
+68
+00:06:03,610 --> 00:06:09,580
+-从坐标系A到坐标系B的运动。现在，运动比复杂
+- the motion from coordinate frame A to coordinate frame B. Now, the motion is more complex than
+
+69
+00:06:09,580 --> 00:06:15,640
+只是一个普通的矢量翻译。它包括翻译和轮换，
+just a translation like an ordinary vector. It includes a translation and a rotation,
+
+70
+00:06:15,640 --> 00:06:19,020
+这就是为什么我使用了不同类型的箭头。你知道它更胖，而且它是
+so that’s why I used a different kind of arrow. You know that it’s fatter and it’s
+
+71
+00:06:19,020 --> 00:06:23,920
+有一种不同的头脑。象征性地，我这样形容它。我用
+got a different kind of head. Symbolically, I describe it like this. I use
+
+72
+00:06:23,920 --> 00:06:28,980
+希腊字母ksi表示我们正在谈论一个姿势。领先的A是
+the Greek letter ksi to denote that we’re talking about a pose. The leading A is the
+
+73
+00:06:28,980 --> 00:06:34,360
+参照系。这就是我从哪里开始的。尾随B是我想要结束的地方
+frame of reference. That’s where I start from. The trailing B is where I want to end
+
+74
+00:06:34,360 --> 00:06:40,290
+起来。该符号描述了相对运动，即坐标系的相对姿态
+up. This symbol describes a relative motion, a relative pose from the coordinate frame
+
+75
+00:06:40,290 --> 00:06:46,670
+A到坐标系B.我们可以将姿势视为运动。我们可以将其视为
+A to the coordinate frame B. We can consider a pose as a motion. We can consider it as
+
+76
+00:06:46,670 --> 00:06:52,560
+翻译和轮换。并且，对于二维情况，描述姿势
+a translation and a rotation. And, for the two-dimensional case, the pose is described
+
+77
+00:06:52,560 --> 00:06:57,360
+由三个数字组成：两个平移分量和一个旋转分量。
+by three numbers: two translational components and one rotational component.
+

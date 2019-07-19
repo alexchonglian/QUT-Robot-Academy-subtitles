@@ -1,0 +1,175 @@
+1
+00:00:03,409 --> 00:00:08,389
+这些基于图像的视觉控制策略有两个重要的要求。
+These image based visual control strategies have got two important requirements.
+
+2
+00:00:08,389 --> 00:00:13,780
+一种是可靠地找到目标对象上的点，并且可靠地表示每一个点
+One is to reliably find the points on the target object, and by reliably means every
+
+3
+00:00:13,780 --> 00:00:18,440
+单帧：当物体移动或相机移动时，我们需要能够识别
+single frame: as the object is moving or the camera is moving, we need to be able to identify
+
+4
+00:00:18,440 --> 00:00:21,010
+目标对象上的相同点。
+the same points on the target object.
+
+5
+00:00:21,010 --> 00:00:26,570
+第二个问题是确定哪个点是哪个。这就是我们所说的通信
+The second problem is to determine which point is which. This is what we call the correspondence
+
+6
+00:00:26,570 --> 00:00:31,939
+问题。因此，在我们之前的三角形目标的情况下，我们需要确定哪个
+problem. So, in the case of our triangular target before, we need to determine which
+
+7
+00:00:31,939 --> 00:00:37,070
+当前视图中的点对应于所需视图中的哪个点。
+point in the current view corresponds to which point in the desired view.
+
+8
+00:00:37,070 --> 00:00:42,110
+现在考虑第一个问题：我们如何可靠地找到目标对象上的点。
+Considering now the first problem: how do we reliably find points on the target object.
+
+9
+00:00:42,110 --> 00:00:46,399
+曾几何时，这是通过创造非常高的人造场景来完成的
+Once upon a time this was done by creating artificial scenes that have got very high
+
+10
+00:00:46,399 --> 00:00:51,890
+形成鲜明对比。所以这是我在20世纪90年代的博士研究中的两个例子，以及我的观点
+contrasts. So here are two examples from my PhD research back in the 1990s, and what I
+
+11
+00:00:51,890 --> 00:00:57,399
+曾经是一个黑色的背景和一个白色的物体。所以我们可以使用非常简单
+had was very much a black background and a white object. So we could use very simple
+
+12
+00:00:57,399 --> 00:01:01,390
+阈值技术和二进制视觉处理技术非常非常
+thresholding techniques and binary vision processing techniques, which were very very
+
+13
+00:01:01,390 --> 00:01:07,909
+快，以便识别对象。但这显然是非常不现实的。
+fast, in order to identify the object. But this is, clearly, very unrealistic.
+
+14
+00:01:07,909 --> 00:01:11,080
+另一种方法是在具有独特性的场景中引入一些东西
+Another approach is to introduce something into the scene which has got a distinctive
+
+15
+00:01:11,080 --> 00:01:16,030
+颜色。我们之前已经谈过这个移动机器人如何相对于导航
+color. We have talked before about how this mobile robot could navigate with respect to
+
+16
+00:01:16,030 --> 00:01:22,110
+橙色交通锥。右侧的图像显示了我们的室内飞行着陆目标
+an orange traffic cone. The image on the right shows our landing target for an indoor flying
+
+17
+00:01:22,110 --> 00:01:26,670
+机器人。它可以看到这四个黄色目标的配置，识别质心
+robot. It could see this configuration of four yellow targets, identify the centroid
+
+18
+00:01:26,670 --> 00:01:28,790
+那些，并落在他们身上。
+of those, and land on them.
+
+19
+00:01:28,790 --> 00:01:33,350
+我们能够轻松解决问题的另一种方法是使目标变得非常明亮;
+Another way we can make the problem easy is to make the target something that's very bright;
+
+20
+00:01:33,350 --> 00:01:38,829
+实际发光的东西。所以也许我们可以在物体上放置彩色LED
+something that actually emits light. So perhaps we could put a colored LED on the object in
+
+21
+00:01:38,829 --> 00:01:43,899
+现场，机器人的视觉系统可以识别非常明亮的特定斑块
+the scene, and the robot's vision system can identify that particular patch of very bright
+
+22
+00:01:43,899 --> 00:01:48,030
+颜色。通过使用明亮的颜色，它更容易分割。
+color. By using the bright color it makes it easier to segment.
+
+23
+00:01:48,030 --> 00:01:52,970
+另一种方法是在对象上放置某种模式，这里我们看到了一些
+Another approach is to put some kind of pattern on the object, and here we see a number of
+
+24
+00:01:52,970 --> 00:01:58,210
+用于本地化的模式。在中间我们有我们称之为自我相似的东西
+patterns that are used for localisation. In the middle we have what we call a self-similar
+
+25
+00:01:58,210 --> 00:02:04,020
+具有里程碑意义，你可以看到计算机视觉算法能够非常非常强大
+landmark, and you can see that the computer vision algorithm is able to very, very robustly
+
+26
+00:02:04,020 --> 00:02:09,590
+确定这三个地标中心的位置，几乎与此无关
+determine the position of the centres of those three landmarks, almost irrespective of the
+
+27
+00:02:09,590 --> 00:02:16,980
+即使目标有些模糊，也可以使用工作表的姿势。在左边我们看到一些
+pose of the sheet, even if the targets are somewhat obscured. On the left we see some
+
+28
+00:02:16,980 --> 00:02:23,170
+相关的地标，这次使用的是垂直线而不是圆形
+related landmarks, this time using vertical lines rather than circles, which are used
+
+29
+00:02:23,170 --> 00:02:29,150
+在那个特定的机器人中，识别坩埚到机器人的位置，以便它可以捡起它。
+in that particular robot to identify the location of the crucible to the robot so it can pick it up.
+
+30
+00:02:29,150 --> 00:02:34,910
+我们也可以使用右侧所示的QR码。我们可以计算QR码的质心，
+We can also use QR code as shown here on the right. We can compute centroid of the QR code,
+
+31
+00:02:34,910 --> 00:02:41,019
+它是一种非常独特的模式，但QR码还包含许多字节的信息。
+it’s a very unique pattern, but the QR code also contains a number of bytes of information.
+
+32
+00:02:41,019 --> 00:02:46,209
+通常这些用于在广告中编码URL。所以这个QR码有一个
+Often times these are used to encode URLs in advertising. So this QR code has got a
+
+33
+00:02:46,209 --> 00:02:50,920
+位置，但它也有一些与之相关的信息。
+position but it's also got some information associated with it.
+
+34
+00:02:50,920 --> 00:02:56,849
+与QR码相关的是另一种称为AR代码或增强现实的代码
+Related to QR codes is another type of code called an AR code or an augmented reality
+
+35
+00:02:56,849 --> 00:03:01,780
+代码，它们可用于标记三维世界中的对象。
+code, and they can be used to label objects in a three-dimensional world.
+

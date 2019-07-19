@@ -1,0 +1,275 @@
+1
+00:00:03,980 --> 00:00:08,850
+在这里，我用乐高创造了一个非常简单的机器人。它只有一个旋转关节
+Here I have created a very simple robot out of Lego. It's got simply one rotational joint
+
+2
+00:00:08,850 --> 00:00:14,309
+或一个旋转关节。并且机器人的末端执行器位置可以遵循任何点
+or one revolute joint. And the end effector position of the robot can follow any point
+
+3
+00:00:14,309 --> 00:00:18,550
+围绕一个圆圈如果不是特别有趣或特别有用。
+around a circle if not particularly interesting or particularly useful.
+
+4
+00:00:18,550 --> 00:00:25,390
+我们现在感兴趣的是描述这个关节的末端执行器的姿势
+What we are interested in now is to describe the pose of the end effector of this one joint
+
+5
+00:00:25,390 --> 00:00:30,829
+机器人。末端执行器在此处用此符号表示。我们将从早些时候回忆起来
+robot. The end effector is indicated by this symbol here. We will recall from the earlier
+
+6
+00:00:30,829 --> 00:00:35,600
+当我们想要描述二维物体的姿势时，我们附上
+lecture that when we want to describe the pose of an object in two dimensions, we attach
+
+7
+00:00:35,600 --> 00:00:40,370
+它的坐标框架和对象的位置由位置描述
+a coordinate frame to it and the position of the object is described by the position
+
+8
+00:00:40,370 --> 00:00:45,090
+其中描述了坐标系的原点和对象的方向
+of the origin of the coordinate frame and the orientation of the object is described
+
+9
+00:00:45,090 --> 00:00:51,309
+通过该坐标系与参考坐标系之间的角度。我已经指出了
+by the angle between that coordinate frame and the reference coordinate frame. I've indicated
+
+10
+00:00:51,309 --> 00:00:56,109
+这里是轴x和y的参考坐标系。
+here a reference coordinate frame with the axis x and y.
+
+11
+00:00:56,109 --> 00:01:01,820
+我们要做的第一件事是将坐标系旋转角度Q1。那是
+The first thing we're going to do is to rotate that coordinate frame by the angle Q1. That's
+
+12
+00:01:01,820 --> 00:01:10,410
+我们的1自由度机器人的关节角度。所以我要应用同质转换，
+the joint angle of our 1 degree freedom robot. So I'm going to apply a homogeneous transformation,
+
+13
+00:01:10,410 --> 00:01:17,040
+以角度Q1旋转。现在我要沿着它转换坐标框架
+a rotation, by the angle Q1. And now I'm going to translate the coordinate frame along the
+
+14
+00:01:17,040 --> 00:01:23,500
+机器人的链接。所以我现在要在x方向上应用翻译。所以灰色
+link of the robot. So I'm now going to apply a translation in the x direction. So the gray
+
+15
+00:01:23,500 --> 00:01:29,440
+此处显示的坐标系表示机器人的姿势。我们到达末端效应器
+coordinate frame shown here represents the pose of the robot. We get to the end effector
+
+16
+00:01:29,440 --> 00:01:35,580
+通过旋转然后平移参考坐标系来协调框架。所有这些
+coordinate frame by rotating and then translating the reference coordinate frame. All these
+
+17
+00:01:35,580 --> 00:01:42,160
+变换是二维的。所以我们说他们属于SE2集。那是一套
+transforms are in two dimensions. So we say that they belong the set SE2. That's the set
+
+18
+00:01:42,160 --> 00:01:47,490
+二维中的所有翻译和旋转。
+of all translations and rotations in two dimensions.
+
+19
+00:01:47,490 --> 00:01:52,470
+使用我们在之前的讲座中学到的知识，我可以将其扩展出来。然后我可以繁殖
+Using what we learned in an earlier lecture, I can expand this out. Then I can multiply
+
+20
+00:01:52,470 --> 00:01:57,570
+两个矩阵在一起，我想出了一个单一的齐次变换矩阵
+the two matrices together and I come up with a single homogeneous transformation matrix
+
+21
+00:01:57,570 --> 00:02:03,210
+它描述了末端执行器的姿势。给出了末端执行器的位置
+which describes the pose of the end effector. The position of the end effector is given
+
+22
+00:02:03,210 --> 00:02:07,430
+通过这三个齐次变换矩阵中的这两个元素，我写了它们
+by these two elements in three homogeneous transformation matrix and I've written them
+
+23
+00:02:07,430 --> 00:02:13,310
+在这里。我们可以看到它们描述了一组位于半径圆上的点
+out here. And we can see that they describe a set of points which lie on a circle of radius
+
+24
+00:02:13,310 --> 00:02:14,019
+A1。
+A1.
+
+25
+00:02:14,019 --> 00:02:20,500
+因此，末端执行器的位置是关节角度Q1和方向的函数
+So the position of the end effector is a function of the joint angle Q1 and the orientation
+
+26
+00:02:20,500 --> 00:02:26,920
+这个矩阵给出的末端执行器的数值也是Q1的函数。所以这是
+of the end effector which is given by this matrix here is also a function of Q1. So its
+
+27
+00:02:26,920 --> 00:02:32,560
+我们不可能独立设置机器人的位置和方向。
+not possible for us to independently set the position and the orientation of the robot.
+
+28
+00:02:32,560 --> 00:02:39,879
+在像这样的简单机器人中，没有足够的关节或自由度。
+There are just not enough joints or degrees of freedom in a simple robot like this.
+
+29
+00:02:39,879 --> 00:02:43,989
+我们来看看在MATLAB中这样做。我将定义几个工作区变量
+Let's look at doing this in MATLAB. I'm going to define a couple of workspace variables
+
+30
+00:02:43,989 --> 00:02:51,489
+A1表示第一连杆的长度，Q1表示关节角度。
+A1 which represents a length of the first link and Q1 which represents the joint angle.
+
+31
+00:02:51,489 --> 00:02:56,730
+现在为了确定末端效应器的姿势，我需要将两个相乘
+Now in order to determine the end effector pose, I need to multiply together a couple
+
+32
+00:02:56,730 --> 00:02:58,560
+基本变换
+of elementary transformations.
+
+33
+00:02:58,560 --> 00:03:05,150
+使用机器人工具箱更简单的方法是使用名为trchain2的函数。它计算
+An easier way to do this using the robot toolbox is with the function called trchain2. It computes
+
+34
+00:03:05,150 --> 00:03:08,620
+同质变换链的结果。
+the result of the chain of homogeneous transformations.
+
+35
+00:03:08,620 --> 00:03:14,780
+第一个是在第一个链轮流中，然后是一个翻译
+The first one in the chain rotation by Q1 and that's followed by a translation in the
+
+36
+00:03:14,780 --> 00:03:21,510
+x方向，沿着链路距离A1。我只是将它表示为MATLAB中的字符串
+x direction, that's along the link by a distance A1. I just represent that as a string in MATLAB
+
+37
+00:03:21,510 --> 00:03:29,310
+然后我传递了我感兴趣的关联角度，这是Q1，这是结果。
+and then I pass in the joint angle that I'm interested in which is Q1 and here is the result.
+
+38
+00:03:29,720 --> 00:03:36,739
+这样做是当trchain2正在执行时，它看起来是变量A1in
+What this is done is when the trchain2 is executing, it looks of the variable A1 in
+
+39
+00:03:36,739 --> 00:03:43,150
+工作区，它查找变量Q1作为向量的第一个元素
+the workspace and it looks for the variable Q1 as being the first element of the vector
+
+40
+00:03:43,150 --> 00:03:49,939
+我传入了。来自工作区的A1。Q1来自传递的向量。这是数字
+that I passed in. A1 from the workspace. Q1 comes from the passed vector. Here is in numeric
+
+41
+00:03:49,939 --> 00:03:57,079
+形成表示末端执行器姿势的3x3齐次变换矩阵
+form the 3x3 homogeneous transformation matrix representing the pose of the end effector
+
+42
+00:03:57,079 --> 00:04:00,459
+我们简单的一个链接机器人。
+of our simple one link robot.
+
+43
+00:04:00,459 --> 00:04:07,120
+现在我可以用符号而不是数字来做。并且这样做可以调用一些函数
+Now I can do it using symbols instead of numbers. And to do that invoke some functions from
+
+44
+00:04:07,120 --> 00:04:13,689
+MATLAB的符号工具箱，我要说Q1是一个符号，A1是一个符号。
+MATLAB’s symbolic toolbox and I’m going to say Q1 is a symbol and A1 is a symbol.
+
+45
+00:04:13,689 --> 00:04:17,470
+现在我要做的就是重复我之前做过的命令。
+Now what I'm going to do is just repeat the command that I did previously.
+
+46
+00:04:17,470 --> 00:04:22,200
+我们这里所拥有的是对末端效应器姿势的象征性表现;相同
+And what we had here is a symbolic representation of the pose of the end effector; the same
+
+47
+00:04:22,200 --> 00:04:28,180
+因为我们之前制作了幻灯片。我可以使用机器人的工具箱进行的另一个是导入
+as we worked out a slide ago. Another I can do using the robotic's toolbox is to import
+
+48
+00:04:28,180 --> 00:04:37,380
+一个平坦的一个关节机器人的模型。我用这个函数mdl_planar1和我们这样做
+a model of a plainer one joint robot. I do that with this function mdl_planar1 and we
+
+49
+00:04:37,380 --> 00:04:41,820
+在该工作区中创建了一个新变量;变量叫做P1。你可以看到它
+created a new variable in that workspace; variable called P1. You can see that it's
+
+50
+00:04:41,820 --> 00:04:46,720
+类型的串行链接。它是一个机器人操纵器类型的对象。
+of a serial link of type. It's a robot manipulator type object.
+
+51
+00:04:46,720 --> 00:04:51,760
+现在有了这个特殊的类型对象，它有很多方法。一个有趣的方法
+Now with this particular type object, it's got a number of methods. An interesting method
+
+52
+00:04:51,760 --> 00:04:57,480
+是教方法，如果我调用它，你在这里看到的只是一个图形表示
+is to teach method and if I invoke that, all you see here is a graphical representation
+
+53
+00:04:57,480 --> 00:05:03,480
+一个链接机器人和一个简单的示教器，这里有一个滑块。而当我调整
+of a one link robot and a simple teach pendant, a single slider here. And as I adjust the
+
+54
+00:05:03,480 --> 00:05:10,850
+滑块我们看到机器人移动。我正在调整第一个关节角度的值。我们是什么
+slider we see the robot move. I'm adjusting the value of the first joint angle. What we
+
+55
+00:05:10,850 --> 00:05:19,170
+这里是我调整每个关节角度时机器人末端执行器的xy坐标变化。
+see here is the xy coordinate of the end effector of the robot changing as I adjust each joint angle.
+

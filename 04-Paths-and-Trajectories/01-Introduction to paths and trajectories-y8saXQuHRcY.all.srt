@@ -1,0 +1,90 @@
+1
+00:00:03,740 --> 00:00:08,370
+在最后几节讲座中，我们谈到了描述位置和方向
+In the last couple of lectures we've talked about describing the position and the orientation
+
+2
+00:00:08,370 --> 00:00:10,139
+世界上的物体。
+of objects in the world.
+
+3
+00:00:10,139 --> 00:00:14,040
+我们开始讨论二维空间中的位置和方向，那就是
+We started off talking about position and orientation in two-dimensional space, that's
+
+4
+00:00:14,040 --> 00:00:18,680
+最简单的例子，然后我们讨论了位置和方向
+the easiest example to start with, and then we talked about position and orientation in
+
+5
+00:00:18,680 --> 00:00:24,230
+三维空间。这种组合的立场;什么东西，和方向;
+three-dimensional space. This combination of position; where something is, and orientation;
+
+6
+00:00:24,230 --> 00:00:29,480
+这就是它在太空中的定位，结合在一起我们称之为物体的姿势，
+that's how its oriented in space, combined together we call that the pose of an object,
+
+7
+00:00:29,480 --> 00:00:34,350
+和姿势在机器人技术中非常重要。所以我们谈谈如何描述姿势
+and pose is really really important in robotics. So we talk about how we can describe the pose
+
+8
+00:00:34,350 --> 00:00:39,040
+在某个地方的机器人。例如，在桌子上-这是一个二维的例子。
+of a robot somewhere. For instance, on the table—that's a two dimensional example.
+
+9
+00:00:39,040 --> 00:00:44,269
+或者我们如何描述三维空间中物体的姿态。
+Or how we describe the pose of an object in three-dimensional space.
+
+10
+00:00:44,269 --> 00:00:51,009
+现在虽然姿势非常有用，但我们还想谈谈姿势如何随时间而变化。
+Now while pose is really very useful we also want to talk about how pose changes as a function of time.
+
+11
+00:00:51,140 --> 00:00:55,239
+考虑机器人从这里移动到那里的问题。它将不得不
+Consider the problem with the robot moving from here to there. It's going to have to
+
+12
+00:00:55,239 --> 00:01:01,000
+遵循某种路径，所以它的姿势会随着时间的推移而发生变化
+follow some kind of path, so its pose will change as a function of time and that leads
+
+13
+00:01:01,000 --> 00:01:07,400
+我们称之为路径和轨迹的两个非常重要的概念。而我们是什么
+to two very important concepts that we refer to as a path and a trajectory. And what we
+
+14
+00:01:07,400 --> 00:01:14,400
+我希望能够做的是描述姿势如何随着时间的推移而平稳而优雅地变化。
+want to be able to do is to describe how the pose changes smoothly and elegantly as a function of time.
+
+15
+00:01:14,509 --> 00:01:20,749
+因此，这里举例说明一个对象的姿势如何随函数变化的一个小例子
+So here for instance is a small example how the pose of an object can vary as a function
+
+16
+00:01:20,749 --> 00:01:26,009
+时间我们在这个三维坐标框架中看到它的位置在变化
+of time. And we see here in this three-dimensional co-ordinate frame, its position is changing
+
+17
+00:01:26,009 --> 00:01:30,869
+它的方向变化非常顺利。我们希望能够申请
+and its orientation is changing very very smoothly. And we want to be able to apply
+
+18
+00:01:30,869 --> 00:01:34,810
+这些技术可以解决机器人技术中的一般问题。
+these kinds of techniques to general problems in robotics.
+

@@ -1,0 +1,490 @@
+1
+00:00:03,510 --> 00:00:06,300
+让我们将彩色图像加载到我们的工作区中。
+Let’s load a color image into our workspace.
+
+2
+00:00:06,300 --> 00:00:13,010
+我们将它放入名为im的变量中，并调用我要使用的图像
+We’ll put it into the variable called im, and the image that I’m going to use is called
+
+3
+00:00:13,010 --> 00:00:16,309
+flowers8，它是一个png格式文件。
+flowers8 and it’s a png format file.
+
+4
+00:00:16,309 --> 00:00:20,869
+所以这是随工具箱分发的文件之一。
+So this is one of the files that’s distributed with the toolbox.
+
+5
+00:00:20,869 --> 00:00:23,020
+我们已将其加载到工作区中。
+We have loaded it into the workspace.
+
+6
+00:00:23,020 --> 00:00:27,600
+现在再一次，这是一个无符号的8位整数图像。
+Now once again this is an unsigned 8-bit integer image.
+
+7
+00:00:27,600 --> 00:00:31,330
+我们可以看到图像属于类uint8。
+We can see that the image belongs to the class uint8.
+
+8
+00:00:31,330 --> 00:00:35,790
+与我们之前看到的相比，这张图片的尺寸很有趣。
+The dimensions of this image are interesting compared to what we’ve seen before.
+
+9
+00:00:35,790 --> 00:00:42,809
+我们看到这个有426行，640列和一个带有值的额外维度
+We see that this one has got 426 rows, 640 columns and an extra dimension with a value
+
+10
+00:00:42,809 --> 00:00:44,219
+3。
+of 3.
+
+11
+00:00:44,219 --> 00:00:49,749
+我们将第二维称为平面，并且很快就会变得清晰。
+We refer to the second dimension as the plane, and that will become clear shortly.
+
+12
+00:00:49,749 --> 00:00:53,819
+我们要做的第一件事是显示图像，我们看到一张图片包含
+First thing we’re going to do is to display the image and we see a picture containing
+
+13
+00:00:53,819 --> 00:00:55,929
+一些彩色的花朵。
+a number of colored flowers.
+
+14
+00:00:55,929 --> 00:01:01,129
+现在，如果我点击一些像素值-我将点击这里的红色花-我们
+Now if I click on some pixel values—I’m going to click here on this red flower—we
+
+15
+00:01:01,129 --> 00:01:04,930
+看到它有一个有三个组件的像素值。
+see that it has got a pixel value which has three components.
+
+16
+00:01:04,930 --> 00:01:08,770
+像素值实际上是一个矢量，这些数字表示红色的数量，
+The pixel value is actually a vector, and those numbers indicate the amount of red,
+
+17
+00:01:08,770 --> 00:01:10,530
+绿色量，蓝色量。
+the amount of green, the amount of blue.
+
+18
+00:01:10,530 --> 00:01:14,540
+所以我刚刚点了一朵红色的花，我们看到红色的数量是176，而且这个
+So I’ve just clicked on a red flower and we see that the red amount is 176, and this
+
+19
+00:01:14,540 --> 00:01:17,460
+非常重要。
+is quite significant.
+
+20
+00:01:17,460 --> 00:01:20,160
+请记住，8位无符号整数从最小值开始
+Remember, 8-bit unsigned integers go from a minimum
+
+21
+00:01:20,160 --> 00:01:26,330
+值0到最大值255，所以这个像素中有很多红色。
+value of 0 to a maximum value of 255, so this pixel has got quite a lot of red in it.
+
+22
+00:01:26,330 --> 00:01:29,700
+它几乎没有绿色，而且几乎没有蓝色。
+It’s got almost no green, and it’s got almost no blue.
+
+23
+00:01:29,700 --> 00:01:32,050
+让我们转向一朵粉红色的花。
+Let’s move over to a pink flower.
+
+24
+00:01:32,050 --> 00:01:35,730
+这有点接近白色，我们看到这个像素有很大的数量
+This is a bit closer to white, and we see that this pixel has got a significant amount
+
+25
+00:01:35,730 --> 00:01:38,810
+红色，相当数量的绿色，和相当数量的蓝色。
+of red, and a fair amount of green, and a fair amount of blue.
+
+26
+00:01:38,810 --> 00:01:44,210
+我们来看看这片绿叶，我们看到绿色值是
+Let’s go and have a look on a green leaf here, and we see that the green value is the
+
+27
+00:01:44,210 --> 00:01:49,080
+最大的一个，但那里也有一些红色和蓝色，但以绿色为主。
+biggest one, but there is also an amount of red and blue there, but dominated by green.
+
+28
+00:01:49,080 --> 00:01:52,890
+有一些小小的蓝色花朵，所以我要放大这部分
+There are some tiny little blue flowers so I’m going to zoom in on this part of the
+
+29
+00:01:52,890 --> 00:01:59,450
+图像，然后点击其中一个蓝色的花朵，正如我们所料，蓝色值占主导地位
+image, and click on one of those blue flowers, and as we would expect, the blue value dominates
+
+30
+00:01:59,450 --> 00:02:00,450
+这里。
+here.
+
+31
+00:02:00,450 --> 00:02:02,750
+我们来看看其中一个图像平面。
+Let’s have a look at one of these image planes.
+
+32
+00:02:02,750 --> 00:02:04,610
+我要显示图像。
+I am going to display the image.
+
+33
+00:02:04,610 --> 00:02:10,190
+我将显示所有行和所有列，但仅显示属于平面的那些像素
+I’m going to display all rows and all columns, but only those pixels that belong to plane
+
+34
+00:02:10,190 --> 00:02:11,440
+1号。
+number 1.
+
+35
+00:02:11,440 --> 00:02:12,629
+我们终于得到它了。
+And there we have it.
+
+36
+00:02:12,629 --> 00:02:15,689
+现在这是灰度图像。
+This is now a grey scale image.
+
+37
+00:02:15,689 --> 00:02:19,620
+颜色已全部消失，这是红色平面，第一个平面。
+The color has all gone and this is the red plane, the first plane.
+
+38
+00:02:19,620 --> 00:02:24,480
+如果我看一下这里的值，我们会发现它们在红色的地方非常明亮
+And if I look at the values here we see that they are quite bright where there was red
+
+39
+00:02:24,480 --> 00:02:27,709
+在图像中，在图像中没有红色的情况下，它们非常暗。
+in the image, and they’re very dark where there was no red in the image.
+
+40
+00:02:27,709 --> 00:02:32,030
+因此绿色的叶子会变黑，蓝色的花朵会变暗。
+So it will be dark in the green leaves, it will be dark on the blue flowers.
+
+41
+00:02:32,030 --> 00:02:36,209
+我们可以看看绿色平面，那是2号飞机。
+We can look at the green plane, that’s plane number 2.
+
+42
+00:02:36,209 --> 00:02:38,530
+我们可以看到这看起来很不一样。
+We can see that this looks quite different.
+
+43
+00:02:38,530 --> 00:02:44,209
+红色的花很暗-这是因为它们没有任何绿色-而是
+The red flowers are quite dark—that’s because they don’t have any green in them—whereas
+
+44
+00:02:44,209 --> 00:02:48,730
+叶子看起来比以前更亮一些，粉红色的白色
+the leaves are looking a little bit brighter than they were before, and the pinky white
+
+45
+00:02:48,730 --> 00:02:52,810
+鲜花也看起来相当明亮，因为白色的花朵有混合物
+flowers are also looking reasonably bright because the white flowers have got a mixture
+
+46
+00:02:52,810 --> 00:02:54,439
+红色和绿色和蓝色。
+of red and green and blue.
+
+47
+00:02:54,439 --> 00:02:58,709
+最后，我们可以看看蓝色平面，那是第三个平面。
+Finally, we can look at the blue plane, that’s the third plane.
+
+48
+00:02:58,709 --> 00:03:02,870
+在这里，我们看到底部的小蓝花现在看起来非常明亮。
+And here we see that the little blue flowers around the bottom are now looking quite bright.
+
+49
+00:03:02,870 --> 00:03:06,190
+正如我前面提到的那样，白色的花朵，我前面提到的粉红色的白色花朵，也在寻找
+The white flowers as I mentioned, pinky white flowers as I mentioned before, are also looking
+
+50
+00:03:06,190 --> 00:03:09,099
+相当明亮，因为它们含有相当数量的蓝色。
+reasonably bright because they contain a fair amount of blue.
+
+51
+00:03:09,099 --> 00:03:13,019
+绿叶也看起来很暗，因为没有太多的蓝色被反射
+The green leaves are also looking quite dark because there’s not much blue being reflected
+
+52
+00:03:13,019 --> 00:03:15,400
+从那些叶子。
+from those leaves.
+
+53
+00:03:15,400 --> 00:03:19,790
+我们可以将彩色图像视为包含三个平面。
+We can consider a color image then as comprising three planes.
+
+54
+00:03:19,790 --> 00:03:23,340
+我们将它们称为红色，绿色和蓝色平面。
+We refer to those as the red, green and blue planes.
+
+55
+00:03:23,340 --> 00:03:28,349
+我们可以认为每个平面都是灰度图像，其中像素值对应于
+Each plane we can consider to be a grey scale image, where the pixel value corresponds to
+
+56
+00:03:28,349 --> 00:03:33,019
+该特定像素位置处的原色数量。
+the amount of that primary color at that particular pixel location.
+
+57
+00:03:33,019 --> 00:03:37,269
+因此，如果我们在这里看到这些白色的花朵，我们会看到它们在红色和绿色中是明亮的
+So if we look at these white flowers here, we see that they are bright in the red, green
+
+58
+00:03:37,269 --> 00:03:38,269
+和蓝色图像。
+and blue images.
+
+59
+00:03:38,269 --> 00:03:42,920
+这意味着那些白色的花朵含有大量的红色，还有很多绿色和许多
+That means that those white flowers contain a lot of red, and a lot of green and a lot
+
+60
+00:03:42,920 --> 00:03:43,920
+蓝色
+of blue.
+
+61
+00:03:43,920 --> 00:03:47,659
+相比之下，红色图像中的红色花朵非常明亮，但它们非常非常
+By contrast, the red flowers are quite bright in the red image, but they’re very, very
+
+62
+00:03:47,659 --> 00:03:49,900
+绿色和蓝色图像中的黑暗。
+dark in the green and blue images.
+
+63
+00:03:49,900 --> 00:03:55,569
+所以红色的花朵包含许多红色，正如你所料，绿色不是很多
+So the red flowers comprise a lot of red color, as you would expect, not much green and not
+
+64
+00:03:55,569 --> 00:03:56,650
+很蓝。
+much blue.
+
+65
+00:03:56,650 --> 00:04:00,701
+我们可以看到黄色的花朵在红色和绿色的图像中是明亮的;就是他们
+We can see that the yellow flowers are bright in the red and green images; that is, they
+
+66
+00:04:00,701 --> 00:04:05,400
+反射红光和绿光，但它们不反射蓝光。
+reflect red light and green light, but they do not reflect blue light.
+
+67
+00:04:05,400 --> 00:04:11,129
+如果我们将彩色图像视为一组平面，红色绿色和蓝色，请想象它们
+If we consider our color image as a stack of planes, red green and blue, imagine them
+
+68
+00:04:11,129 --> 00:04:13,169
+一个堆叠在另一个之上。
+stacked up one above the other.
+
+69
+00:04:13,169 --> 00:04:17,790
+因此，当谈到描述彩色图像中的像素时，我们将描述像素
+So when it comes to describe a pixel in a color image now, we describe the pixel at
+
+70
+00:04:17,790 --> 00:04:22,480
+坐标u，v，这就是我们以前做过的事情;你是水平坐标，
+the coordinate u,v and this is what we’ve done previously; u is the horizontal coordinate,
+
+71
+00:04:22,480 --> 00:04:24,340
+v是垂直坐标。
+v is the vertical coordinate.
+
+72
+00:04:24,340 --> 00:04:28,570
+现在我们要做的是深入了解这一堆图像。
+And now what we’re going to do is drill down through this stack of images.
+
+73
+00:04:28,570 --> 00:04:34,090
+所以这是红色值，然后我们找到绿色值，然后我们找到蓝色值。
+So this is the red value, then we find the green value, and then we find the blue value.
+
+74
+00:04:34,090 --> 00:04:39,280
+所以在坐标u，v处，像素值实际上由三个数字组成。
+So at the coordinate u,v the pixel value is actually comprised of three numbers.
+
+75
+00:04:39,280 --> 00:04:43,670
+它是一个三元素矢量：包含红色，绿色和蓝色成分。
+It is a three-element vector: contains a red, green and blue component.
+
+76
+00:04:43,670 --> 00:04:49,570
+我们之前已经看过我们在MATLAB中索引矩阵的方式，在MATLAB中我们
+We’ve previously looked at the way we index into a matrix in MATLAB, and in MATLAB we
+
+77
+00:04:49,570 --> 00:04:52,200
+表示具有两个坐标的矩阵。
+represent a matrix with two coordinates.
+
+78
+00:04:52,200 --> 00:04:57,690
+第一个坐标是行号，第二个坐标是列号。
+The first coordinate is the row number, and the second coordinate is the column number.
+
+79
+00:04:57,690 --> 00:05:02,350
+在彩色图像中，就MATLAB而言，它是一个三维矩阵，并且
+In a color image it’s a three-dimensional matrix as far as MATLAB is concerned, and
+
+80
+00:05:02,350 --> 00:05:06,130
+我们再次使用一堆飞机的类比。
+again we use this analogy of a stack of planes.
+
+81
+00:05:06,130 --> 00:05:11,970
+所以，第一个索引是行号，第二个索引是列号和
+So again, the first index is the row number, the second index is the column number and
+
+82
+00:05:11,970 --> 00:05:14,620
+第三个指标就是我们所说的飞机号码。
+the third index is what we call the plane number.
+
+83
+00:05:14,620 --> 00:05:18,700
+它是我们所指的堆栈中的哪个工作表。
+It’s which sheet in the stack that we are referring to.
+
+84
+00:05:18,700 --> 00:05:23,420
+正如我在之前的一次演讲中提到的那样谨慎：我们在谈论的时候
+And there’s a caution as I’ve mentioned in an earlier lecture: when we are talking
+
+85
+00:05:23,420 --> 00:05:29,070
+关于在MATLAB中索引图像，我们使用行后跟列。
+about indexing into an image in MATLAB, we use the row followed by the column.
+
+86
+00:05:29,070 --> 00:05:34,420
+当我们参考图像时，我们通常是指水平坐标，然后是垂直坐标
+When we refer to an image we generally refer to the horizontal coordinate, then the vertical
+
+87
+00:05:34,420 --> 00:05:37,580
+坐标，它们被转置;他们被交换了。
+coordinate, and they are transposed; they are swapped.
+
+88
+00:05:37,580 --> 00:05:39,870
+所以要小心。
+So be careful with that.
+
+89
+00:05:39,870 --> 00:05:43,460
+我们可以这样编程;也就是说，从命令行。
+We can do this programmatically; that is, from the command line.
+
+90
+00:05:43,460 --> 00:05:44,680
+所以我们有了自己的形象。
+So we have our image.
+
+91
+00:05:44,680 --> 00:05:51,270
+让我们看看坐标100,100处像素的值，我们想看一下
+Let’s look at the value of the pixel at coordinate 100,100, and we want to look at
+
+92
+00:05:51,270 --> 00:05:53,210
+所有的飞机。
+all of the planes.
+
+93
+00:05:53,210 --> 00:05:56,120
+我们从MATLAB得到了这个相当奇怪的结果。
+We get this rather strange result from MATLAB.
+
+94
+00:05:56,120 --> 00:06:00,340
+正如我们所料，它已经使用了三个数字：红色，绿色和蓝色，
+It has given use three numbers, as we would expect: the amount of red, green and blue,
+
+95
+00:06:00,340 --> 00:06:02,870
+但是形式相当不方便。
+but in a rather inconvenient form.
+
+96
+00:06:02,870 --> 00:06:07,870
+当我们这样做时，我们实际上必须使用MATLAB运算符，以删除两个
+We actually have to use the MATLAB operator squeeze when we do this, to remove two of
+
+97
+00:06:07,870 --> 00:06:11,430
+MATLAB所指的单身尺寸。
+what MATLAB refers to as singleton dimensions.
+
+98
+00:06:11,430 --> 00:06:16,870
+因此，如果我们现在这样做，我们就有了这个特定像素的矢量值。
+So if we do that now we have a vector value for this particular pixel.
+

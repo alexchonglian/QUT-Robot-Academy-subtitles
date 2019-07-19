@@ -1,0 +1,680 @@
+1
+00:00:03,409 --> 00:00:08,069
+现在让我们考虑一下我们有两个鲨鱼对象的稍微困难的情况
+Now let’s consider the slightly more difficult situation where we have two shark objects
+
+2
+00:00:08,069 --> 00:00:09,320
+在我们的形象。
+within our image.
+
+3
+00:00:09,320 --> 00:00:13,870
+现在你和我看这个图像可以清楚地看到有两个不同的区域;我们
+Now you and I looking at this image can clearly see that there are two distinct regions; we’re
+
+4
+00:00:13,870 --> 00:00:15,650
+一点也不困惑。
+not confused at all.
+
+5
+00:00:15,650 --> 00:00:19,640
+但对于我们正在构建的机器视觉系统，我们需要开发一种算法
+But for the machine vision system that we’re building, we need to develop an algorithm
+
+6
+00:00:19,640 --> 00:00:24,100
+这可以确定这里有两个不同的区域。
+that can determine that there are two distinct regions here.
+
+7
+00:00:24,100 --> 00:00:28,619
+如果我们应用我们刚看过的时刻技术并计算时刻
+If we apply the technique of moments that we just looked at and compute the moments
+
+8
+00:00:28,619 --> 00:00:35,059
+在这个场景中，我们最终得到的是一个区域的质心，其中包含了
+of this scene, what we will end up with is the centroid of a region, which contains the
+
+9
+00:00:35,059 --> 00:00:36,059
+两条鲨鱼。
+two sharks.
+
+10
+00:00:36,059 --> 00:00:38,390
+我们看到两条鲨鱼之间的质心。
+We see the centroid in between the two sharks.
+
+11
+00:00:38,390 --> 00:00:42,490
+它无法确定它们是分开的，它只是处理所有的白色
+It hasn’t been able to work out that they’re separate, it’s just treated all the white
+
+12
+00:00:42,490 --> 00:00:48,129
+像素以相同的方式，我们也看到边界框是围绕四肢绘制的
+pixels in the same way, and we see also that the bounding box is drawn around the extremities
+
+13
+00:00:48,129 --> 00:00:51,840
+两只鲨鱼，而不是单独的鲨鱼。
+of both sharks, rather than around the sharks individually.
+
+14
+00:00:51,840 --> 00:00:55,780
+我们需要一些方法来区分这两个对象。
+We need some way to distinguish between these two objects.
+
+15
+00:00:55,780 --> 00:00:59,280
+现在，我们这样做的方式是转换图像。
+Now the way that we do this is to transform the image.
+
+16
+00:00:59,280 --> 00:01:03,879
+所以这是我们的输入图像，我们将进行转换;这是一个过程
+So here is our input image and we’re going to perform a transformation; it’s a process
+
+17
+00:01:03,879 --> 00:01:10,140
+称为连通性分析，输出图像显示在右侧。
+called connectivity analysis, and the output image is shown on the right.
+
+18
+00:01:10,140 --> 00:01:14,789
+我们将此称为标签图像，标签图像的有趣之处在于
+We refer to this as a label image, and what’s interesting about the labelling image is that
+
+19
+00:01:14,789 --> 00:01:20,380
+属于同一对象的所有像素都被分配了相同的标签。
+all of the pixels that belong to the same object are assigned the same label.
+
+20
+00:01:20,380 --> 00:01:25,350
+因此，我们看到属于顶级鲨鱼的所有像素都标记为1。
+So we see that all of the pixels that belong to the top shark have been labelled 1.
+
+21
+00:01:25,350 --> 00:01:31,399
+与底部鲨鱼相对应的所有像素都标记为2，并且所有像素都标记为
+All of the pixels that correspond to the bottom shark have been labelled 2, and all of the
+
+22
+00:01:31,399 --> 00:01:35,240
+属于背景的像素标记为3。
+pixels that belong to the background have been labelled 3.
+
+23
+00:01:35,240 --> 00:01:41,509
+在此图像中，像素值是指您喜欢的对象的标签;来描述
+In this image the pixel values refer to the label of the object if you like; to describe
+
+24
+00:01:41,509 --> 00:01:46,250
+场景中n个对象属于哪个像素。
+which of the n objects in the scene those pixels belong to.
+
+25
+00:01:46,250 --> 00:01:49,500
+这是一次非常强大的转型。
+This is a really powerful transformation.
+
+26
+00:01:49,500 --> 00:01:52,310
+输入场景中的白色对象称为blob。
+The white objects in the input scene are called blobs.
+
+27
+00:01:52,310 --> 00:01:55,750
+'Blob'实际上是一个技术术语-你被允许使用它。
+‘Blobs’ is actually a technical term — you’re allowed to use it.
+
+28
+00:01:55,750 --> 00:02:00,751
+在这个输入场景中有三个斑点，鲨鱼1，鲨鱼2和背景，并在
+In this input scene there are three blobs, shark 1, shark 2 and the background, and in
+
+29
+00:02:00,751 --> 00:02:06,590
+输出图像的像素值为1-3，表示它们属于哪个blob。
+the output image the pixels have got values 1–3, indicating which blob they belong to.
+
+30
+00:02:06,590 --> 00:02:07,770
+什么是blob？
+So what is a blob?
+
+31
+00:02:07,770 --> 00:02:12,640
+它也被称为区域，有时它被称为连通组件。
+It’s also known as a region, and sometimes it’s called a connected component.
+
+32
+00:02:12,640 --> 00:02:19,470
+它是一组相邻颜色的连续像素，彼此相邻;他们碰了
+It’s a set of contiguous pixels of the same colour that are next to each other; they touch
+
+33
+00:02:19,470 --> 00:02:20,470
+彼此。
+each other.
+
+34
+00:02:20,470 --> 00:02:23,460
+当我们谈论颜色时，在我们看到二进制图像之前
+And when we talk about colour, before we’ve just been looking at a binary image where
+
+35
+00:02:23,460 --> 00:02:25,780
+像素是黑色或白色。
+the pixels are either black or white.
+
+36
+00:02:25,780 --> 00:02:30,110
+通常我们将从真正的彩色图像开始，第一个处理阶段是
+Often times we’ll start with a real colour image, and the first processing stage is to
+
+37
+00:02:30,110 --> 00:02:32,680
+将该彩色图像转换为边界图像。
+convert that colour image into a boundary image.
+
+38
+00:02:32,680 --> 00:02:38,010
+所以在这里的顶部示例中，我们有一个场景，里面有四个黄色物体。
+So in the top example here we have a scene with four yellow objects in it.
+
+39
+00:02:38,010 --> 00:02:42,950
+我们会执行一些图像处理操作，我们将在未来的讲座中讨论这个问题，
+And we perform some image processing operations and we’ll talk about this in future lectures,
+
+40
+00:02:42,950 --> 00:02:47,760
+将黄色像素转换为真实-或白色-以及所有其他颜色像素转换为
+to convert the yellow pixels to being true — or white — and all the other colour pixels to
+
+41
+00:02:47,760 --> 00:02:49,720
+假的-或黑的。
+being false — or black.
+
+42
+00:02:49,720 --> 00:02:53,910
+在最下面的例子中，我们试图在灌木丛中找到西红柿，我们要走了
+In the bottom example we’re trying to find the tomatoes on the bush, and we’re going
+
+43
+00:02:53,910 --> 00:02:59,170
+使用图像处理技术，当像素为红色时，可以为我们提供真实的结果
+to use image processing techniques that give us a true result when the pixel is red and
+
+44
+00:02:59,170 --> 00:03:01,350
+当它不是红色时的错误结果。
+a false result when it is not red.
+
+45
+00:03:01,350 --> 00:03:06,430
+所以第一步是拍摄一张真正的彩色图像，将其转换成二进制图像
+So the first step is to take a real colour image, convert it into a binary image where
+
+46
+00:03:06,430 --> 00:03:11,890
+像素值为真或假，然后我们可以应用我们的连通性分析
+the pixel values are either true or false, and then we can apply our connectivity analysis
+
+47
+00:03:11,890 --> 00:03:13,120
+到那个形象。
+to that image.
+
+48
+00:03:13,120 --> 00:03:18,000
+我们分配给像素的标签表示它属于哪个集合。
+The label that we assign to a pixel indicates which set it belongs to.
+
+49
+00:03:18,000 --> 00:03:24,180
+每个像素都具有与其北，南，东或西邻居相同的标签
+Every pixel has the same label as its neighbour to the north, south, east or west that has
+
+50
+00:03:24,180 --> 00:03:25,180
+相同的颜色。
+the same colour.
+
+51
+00:03:25,180 --> 00:03:29,350
+这是连通性分析算法的基本部分。
+This is a fundamental part of the connectivity analysis algorithm.
+
+52
+00:03:29,350 --> 00:03:33,900
+现在，执行连接分析的过程有很多名称。
+Now this process of performing connectivity analysis has many names.
+
+53
+00:03:33,900 --> 00:03:37,720
+有时它被称为连通分量分析;有时它被称为blob或
+Sometimes it’s called connected component analysis; sometimes it’s called blob or
+
+54
+00:03:37,720 --> 00:03:42,250
+区域或图像标签;有时它被称为斑点或区域着色。
+region or image labelling; sometimes it’s called blob or region colouring.
+
+55
+00:03:42,250 --> 00:03:44,750
+许多名称，相同的算法。
+Many names, the same algorithm.
+
+56
+00:03:44,750 --> 00:03:49,459
+这是我们原始的二进制图像，里面有两条鲨鱼，现在我们有了
+Here is our original binary image with two sharks in it, and now in the middle we have
+
+57
+00:03:49,459 --> 00:03:54,290
+标签图像，其中像素的值取决于像素是否为1,2或3
+the label image where the pixels have got values of 1, 2 or 3 depending on whether pixels
+
+58
+00:03:54,290 --> 00:03:57,700
+属于鲨鱼1，鲨鱼2或背景。
+belong to shark 1, shark 2 or the background.
+
+59
+00:03:57,700 --> 00:04:02,990
+现在我可以对这个图像应用一个简单的逻辑测试，我可以说给我所有的像素
+Now I can apply a simple logical test to this image, and I can say give me all of the pixels
+
+60
+00:04:02,990 --> 00:04:05,209
+标签值为1的标签值。
+that have got a label value of 1.
+
+61
+00:04:05,209 --> 00:04:09,810
+我最终得到的这个二进制图像只包含一条鲨鱼，即顶级鲨鱼。
+I end up with this binary image that contains just one shark, the top shark.
+
+62
+00:04:09,810 --> 00:04:14,120
+一旦我有这个图像，我就可以运用我们以前用过的技术来找到它
+And once I have this image I can apply the techniques we used previously to find the
+
+63
+00:04:14,120 --> 00:04:18,579
+质心和这条特殊鲨鱼的边界框。
+centroid and the bounding box of this particular shark.
+
+64
+00:04:18,579 --> 00:04:24,551
+现在我可以要求一个二进制图像，其中包含标记为2的所有像素，以及
+Now I can ask for a binary image, which contains all of the pixels that are labelled 2, and
+
+65
+00:04:24,551 --> 00:04:27,639
+我有一个图像，一个只包含底部鲨鱼的二进制图像。
+I have an image, a binary image which contains just the bottom shark.
+
+66
+00:04:27,639 --> 00:04:32,770
+一旦我将这条鲨鱼孤立起来，我就可以应用早期的技术并再次找到
+Once I have this shark in isolation I can apply the earlier techniques and again find
+
+67
+00:04:32,770 --> 00:04:37,700
+它的边界框和它的质心。
+its bounding box and its centroid.
+
+68
+00:04:37,700 --> 00:04:39,610
+现在背景也是一个blob。
+Now the background is also a blob.
+
+69
+00:04:39,610 --> 00:04:42,410
+它是标记为3的所有像素。
+It’s all of the pixels that are labelled 3.
+
+70
+00:04:42,410 --> 00:04:47,280
+所以我们可以说所有像素都等于3的图像是什么，我们在这里看到
+So we can say what is the image where all of the pixels are equal to 3, and we see here
+
+71
+00:04:47,280 --> 00:04:51,470
+它基本上是鲨鱼形孔的背景。
+it is basically the background with shark shaped holes in it.
+
+72
+00:04:51,470 --> 00:04:53,900
+这也是一个blob;这是一个非常大的blob。
+It’s a blob as well; it’s a very large blob.
+
+73
+00:04:53,900 --> 00:04:58,770
+它触及图像的边缘，它有两个洞，它们是物体
+It touches the edge of the image and it’s got these two holes in it, which are the objects
+
+74
+00:04:58,770 --> 00:05:00,820
+在前台。
+in the foreground.
+
+75
+00:05:00,820 --> 00:05:05,310
+如果我们计算下面背景的时刻，我们会发现它有一个质心
+If we compute the moments of the background below we find that it’s got a centroid which
+
+76
+00:05:05,310 --> 00:05:09,900
+大概在中间，它有一个非常大的边界框，四处走动
+is roughly in the middle and it’s got a very large bounding box which goes around
+
+77
+00:05:09,900 --> 00:05:14,380
+整个图像之外。
+the whole outside of the image.
+
+78
+00:05:14,380 --> 00:05:19,570
+现在我们有一个包含两个blob的二进制图像或逻辑图像。
+Now we have a binary image, or logical image, that contains two blobs.
+
+79
+00:05:19,570 --> 00:05:21,770
+所以让我们计算标签图像。
+So let’s compute the label image.
+
+80
+00:05:21,770 --> 00:05:24,650
+我们使用的函数实际上有两个输出参数。
+The function that we use has actually got two output arguments.
+
+81
+00:05:24,650 --> 00:05:29,560
+第一个输出参数L是标签图像本身，第二个是输出参数
+The first output argument, L is the label image itself, and the second output argument
+
+82
+00:05:29,560 --> 00:05:32,710
+是它在场景中找到的斑点数。
+is the number of blobs it finds within the scene.
+
+83
+00:05:32,710 --> 00:05:37,550
+函数本身称为ilabel，我们传入二进制图像。
+The function itself is called ilabel and we pass in the binary image.
+
+84
+00:05:37,550 --> 00:05:44,300
+所以它是计算出的L，它是一个图像，以及有一个值的blob的数量
+So it’s computed L, which is an image, and the number of blobs, which has got a value
+
+85
+00:05:44,300 --> 00:05:47,980
+3，所以它说，在这个场景中有3个blob。
+of 3, so it’s saying there, are 3 blobs within this scene.
+
+86
+00:05:47,980 --> 00:05:51,510
+有两条鲨鱼和背景斑点。
+There are the two sharks, and the background blob.
+
+87
+00:05:51,510 --> 00:05:55,240
+那么让我们显示标签图像并进行调查。
+So let’s display the label image and investigate that.
+
+88
+00:05:55,240 --> 00:06:00,760
+开始一个新图并显示标签图像。
+Start a new figure and display the label image.
+
+89
+00:06:00,760 --> 00:06:04,270
+我们来看看其中的一些像素值。
+Let’s have a look at some of the pixel values within that.
+
+90
+00:06:04,270 --> 00:06:10,190
+所以这些像素，我点击的所有像素，都是3。
+So these pixels here, all the ones that I’m clicking on, have got a value of 3.
+
+91
+00:06:10,190 --> 00:06:15,770
+这意味着这些像素属于blobnumber3，即背景blob。
+That means these pixels belong to blob number 3, which is the background blob.
+
+92
+00:06:15,770 --> 00:06:21,040
+这条鲨鱼中的所有这些像素都标记为1;也就是说，他们都属于
+All of these pixels here in this shark are all labelled 1; that is, they all belong to
+
+93
+00:06:21,040 --> 00:06:22,650
+blob数字1。
+blob number 1.
+
+94
+00:06:22,650 --> 00:06:30,449
+这里的这些像素都具有值2，因此这些像素都属于blob数
+These pixels down here all have a value of 2, so these pixels all belong to blob number
+
+95
+00:06:30,449 --> 00:06:31,940
+2。
+2.
+
+96
+00:06:31,940 --> 00:06:37,910
+现在我们可以做的是使用逻辑运算，对每个标签进行逻辑测试
+Now what we can do is use a logical operation, a logical test on the labelling of each in
+
+97
+00:06:37,910 --> 00:06:42,389
+为了隔离图像中的不同斑点。
+order to isolate the different blobs within the image.
+
+98
+00:06:42,389 --> 00:06:51,660
+我现在能做的就是显示标签等于1的所有像素，以及我们看到的内容
+What I can do now is to display all the pixels who have a label equal to 1, and what we see
+
+99
+00:06:51,660 --> 00:06:54,650
+现在是这个场景中只有一条鲨鱼。
+now is that there is just a single shark in this scene.
+
+100
+00:06:54,650 --> 00:07:01,090
+让我们看一下标签等于2的所有像素，现在我们看到了
+Let’s have a look at all the pixels that have got a label equal to 2 and now we see
+
+101
+00:07:01,090 --> 00:07:02,300
+第二条鲨鱼。
+the second shark.
+
+102
+00:07:02,300 --> 00:07:08,229
+所以现在我们得到的是一个带有单个blob的场景，这是我们遇到的问题
+So now what we’ve got is a scene with a single blob in it, and this is a problem we’ve
+
+103
+00:07:08,229 --> 00:07:09,229
+以前见过面。
+met before.
+
+104
+00:07:09,229 --> 00:07:14,430
+我们知道如何计算包含单个blob的场景的边界框;我们知道
+We know how to work out the bounding box of a scene that contains a single blob; we know
+
+105
+00:07:14,430 --> 00:07:20,100
+如何计算质心，以及仅包含单个blob的场景区域。
+how to compute the centroid, and the area of a scene that contains just a single blob.
+
+106
+00:07:20,100 --> 00:07:25,650
+因此，通过使用标记图像的这个中间步骤，我们可以解决我们复杂的问题
+So by using this intermediate step of labelling the image, we can turn our complex problem
+
+107
+00:07:25,650 --> 00:07:30,790
+将多个地区变成我们以前见过的问题。
+with multiple regions into a problem that we have seen before.
+
+108
+00:07:30,790 --> 00:07:39,479
+我们可以进行的额外复杂程度是使用iblobs功能。
+An extra level of sophistication that we can go to is to use the function iblobs.
+
+109
+00:07:39,479 --> 00:07:45,650
+我传递了图像-这就是我需要做的全部-它返回了一个blob矢量
+I pass in the image — that’s all I need to do — and it’s returned a vector of blob
+
+110
+00:07:45,650 --> 00:07:46,650
+对象。
+objects.
+
+111
+00:07:46,650 --> 00:07:50,270
+从技术上讲，它们是区域特征对象。
+Technically, they are region feature objects.
+
+112
+00:07:50,270 --> 00:07:55,520
+并且每个区域或场景中的每个斑点都有一个对象。
+And there’s one object for each region or each blob in the scene.
+
+113
+00:07:55,520 --> 00:08:01,360
+因此，元素编号1是一个面积为7827的blob。
+So element number 1 is a blob with an area of 7827.
+
+114
+00:08:01,360 --> 00:08:02,949
+我们可以看到它的质心。
+We can see its centroid.
+
+115
+00:08:02,949 --> 00:08:07,139
+我们可以看到是颜色;也就是说，它包含值为1的像素。
+We can see is colour; that is, that it comprises pixels with the value of 1.
+
+116
+00:08:07,139 --> 00:08:11,880
+我们可以看到它的标签;它的标签值为1，其他参数如下
+We can see its label; it’s got a label value of 1, and a couple of other parameters as
+
+117
+00:08:11,880 --> 00:08:15,530
+以及我们将在适当的时候得到的。
+well which we will get to in due course.
+
+118
+00:08:15,530 --> 00:08:20,580
+Blob2号的面积也是7827它是另一条鲨鱼。
+Blob number 2 also has an area of 7827 It’s another shark.
+
+119
+00:08:20,580 --> 00:08:26,480
+而blob3号的面积非常大;我们可以看到它的颜色等于0，所以
+And blob number 3 has got a very large area; and we can see its colour is equal to 0, so
+
+120
+00:08:26,480 --> 00:08:28,470
+那是背景blob。
+that is the background blob.
+
+121
+00:08:28,470 --> 00:08:32,659
+让我们再次显示原始图像。
+Let’s show again the original image.
+
+122
+00:08:32,659 --> 00:08:34,959
+我们走了，这里有两条鲨鱼的场景。
+Here we go, here’s the scene with two sharks in it.
+
+123
+00:08:34,959 --> 00:08:41,180
+对于这个blob向量中的第一个元素，即blob数字1，我​​可以绘制一个边界
+For the first element in this vector of blobs, that’s blob number 1, I can plot a bounding
+
+124
+00:08:41,180 --> 00:08:45,649
+盒子，我可以用绿色做到这一点......我们去了。
+box and I can do that in the colour green … there we go.
+
+125
+00:08:45,649 --> 00:08:54,350
+对于2号blob，我可以用绿色绘制其边界框。
+For blob number 2, I can plot its bounding box in green.
+
+126
+00:08:54,350 --> 00:09:02,029
+我也可以绘制物体的质心，我将用蓝色绘制，我会绘制
+I can also plot the centroid of the object and I will plot that in blue and I’ll draw
+
+127
+00:09:02,029 --> 00:09:03,410
+那里有一个星号。
+an asterisk there.
+
+128
+00:09:03,410 --> 00:09:07,389
+blob还有许多参数或属性。
+The blobs have also got a number of parameters or attributes.
+
+129
+00:09:07,389 --> 00:09:12,390
+因此，例如，对于第1号blob，我可以说它的区域是什么。
+So, for instance, for blob number 1 I can say what is its area.
+
+130
+00:09:12,390 --> 00:09:18,639
+我们可以看看那个特定blob的颜色;我们使用class属性，看看
+We can look at the colour of that particular blob; we use the class attribute, and see
+
+131
+00:09:18,639 --> 00:09:22,949
+它包含值为1的像素。
+that it is comprising pixels with a value of 1.
+
+132
+00:09:22,949 --> 00:09:27,750
+我们可以使用p属性查看质心，我们在这里看到一个包含的向量
+We can look at the centroid using the p attribute and we see a vector here, which contains the
+
+133
+00:09:27,750 --> 00:09:29,980
+你和它的质心的坐标。
+u and v coordinates of its centroid.
+
+134
+00:09:29,980 --> 00:09:34,730
+我们可以得到单个元素，uc是质心的u坐标。
+We can get the individual elements, uc is the u coordinate of the centroid.
+
+135
+00:09:34,730 --> 00:09:41,939
+我们甚至发现时刻已经被隐藏起来，所以那个特殊的0,1时刻
+We even find the moments have been stashed away, so the 0,1 moment of that particular
+
+136
+00:09:41,939 --> 00:09:44,609
+blob有这个特殊的价值。
+blob has got this particular value.
+

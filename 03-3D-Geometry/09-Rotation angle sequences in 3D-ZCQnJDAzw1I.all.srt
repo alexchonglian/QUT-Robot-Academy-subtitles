@@ -1,0 +1,650 @@
+1
+00:00:03,280 --> 00:00:08,320
+考虑这两个坐标框架，框架A和框架B.它们都是右撇子
+Consider these two coordinate frames, frame A and frame B. They are both right-handed
+
+2
+00:00:08,320 --> 00:00:09,920
+坐标框架。
+coordinate frames.
+
+3
+00:00:09,920 --> 00:00:13,589
+我们试图解决的问题是如何描述框架B的旋转
+And the problem we’re trying to solve is how do we describe the rotation of frame B
+
+4
+00:00:13,589 --> 00:00:19,200
+关于框架A.想象一下，我们可以拿起框架A并在空间中旋转它
+with respect to frame A. Imagine we could pick up frame A and rotate it in space so
+
+5
+00:00:19,200 --> 00:00:23,870
+它的轴与框架B的轴平行。我们怎么做？
+that its axes were parallel to those of frame B. How do we do that?
+
+6
+00:00:23,870 --> 00:00:29,560
+好吧，一位非常着名的瑞士数学家LeonhardEuler提出了所谓的旋转
+Well, a very famous Swiss mathematician, Leonhard Euler, came up with what’s called the Rotation
+
+7
+00:00:29,560 --> 00:00:30,560
+定理。
+Theorem.
+
+8
+00:00:30,560 --> 00:00:36,280
+它指出两个三维坐标系由一系列基本相关
+It states that two three-dimensional coordinate frames are related by a sequence of elementary
+
+9
+00:00:36,280 --> 00:00:40,550
+旋转，例如关于x轴，y轴，z轴的旋转。
+rotations such as those about the x-axis, the y-axis, the z-axis.
+
+10
+00:00:40,550 --> 00:00:45,460
+我们需要应用不超过三个，但这个顺序的旋转需要
+We need to apply no more than three of those, but the rotations in this sequence need to
+
+11
+00:00:45,460 --> 00:00:50,719
+关于不同的轴;那就是我们围绕x轴旋转，然后旋转y轴，然后旋转
+be about different axes; that is we’d rotate about x-axis, then the y-axis, then maybe
+
+12
+00:00:50,719 --> 00:00:53,260
+x轴再次或可能绕z轴。
+the x-axis again or maybe about the z-axis.
+
+13
+00:00:53,260 --> 00:00:59,370
+因此，任何旋转都可以表示为不超过三次旋转
+So any rotation can be expressed in terms of no more than three rotations as long as
+
+14
+00:00:59,370 --> 00:01:04,780
+这三个旋转连续地围绕不同的轴。
+those three rotations are consecutively about different axes.
+
+15
+00:01:04,780 --> 00:01:07,530
+让我们来演示这个旋转定理。
+Let’s demonstrate this Rotation Theorem.
+
+16
+00:01:07,530 --> 00:01:12,460
+在这里，我有我的世界参考框架，在这里我有一个坐标框架
+Here, I have my world reference frame and here I have a coordinate frame that has got
+
+17
+00:01:12,460 --> 00:01:14,310
+空间中的任意方向。
+an arbitrary orientation in space.
+
+18
+00:01:14,310 --> 00:01:19,270
+因此，旋转定理说我应该能够采用这个坐标框架
+And so, the Rotation Theorem says that I should be able to take this coordinate frame and
+
+19
+00:01:19,270 --> 00:01:23,640
+只需三次基本旋转即可实现这样的定位。
+with simply three elementary rotations achieve an orientation like this.
+
+20
+00:01:23,640 --> 00:01:27,039
+所以，我将采用该世界参考框架的副本。
+So, I’m going to take a copy of that world reference frame.
+
+21
+00:01:27,039 --> 00:01:30,290
+而且，我要做的第一件事是围绕x轴旋转一点。
+And, first thing I’m going to do is to rotate it a little bit around the x-axis.
+
+22
+00:01:30,290 --> 00:01:34,350
+然后，我将围绕y轴旋转一点，然后我要去
+Then, I’m going to rotate it a little bit around the y-axis, and then I’m going to
+
+23
+00:01:34,350 --> 00:01:36,549
+绕z轴旋转一下。
+rotate it a bit around the z-axis.
+
+24
+00:01:36,549 --> 00:01:40,770
+如果我选择这个轴并把它放在这里，我们会看到它现在有一个大致的
+And if I pick this axis up and put it in here, we’ll see that it now has a roughly the
+
+25
+00:01:40,770 --> 00:01:44,200
+与我开始使用的蓝框相同的方向。
+same orientation as the blue frame that I started with.
+
+26
+00:01:44,200 --> 00:01:51,039
+所以，让我们写下所有可能的旋转序列，我们应用这个警告
+So, let’s write down all the possible sequences of rotation, where we apply this caveat that
+
+27
+00:01:51,039 --> 00:01:55,340
+没有两个连续的旋转是围绕同一轴。
+no two successive rotations are about the same axis.
+
+28
+00:01:55,340 --> 00:01:58,700
+事实上，有两个，我把它们写在这里。
+In fact, there are two of them and I’ve written them all down here.
+
+29
+00:01:58,700 --> 00:02:03,590
+这些旋转分为两组，这里显示的组称为欧拉
+These rotations fall into two groups and the group shown here are referred to as Euler
+
+30
+00:02:03,590 --> 00:02:04,590
+角。
+angles.
+
+31
+00:02:04,590 --> 00:02:08,869
+并且，它们是围绕同一轴旋转两次的那些。
+And, they are the ones where there are two rotations about the same axis.
+
+32
+00:02:08,869 --> 00:02:12,530
+第一个是绕X旋转，然后旋转Y，然后再旋转X.
+The first one is rotation about X, then Y, then X again.
+
+33
+00:02:12,530 --> 00:02:16,890
+好吧，这一个是Y，然后是Z，然后是Y.
+Well, this one over here is Y, then Z, then Y again.
+
+34
+00:02:16,890 --> 00:02:24,030
+因此，在欧拉角度组中，特定轴将出现两次，但不会连续出现两次。
+So, in the Euler angle group, a particular axis will appear twice, but not twice consecutively.
+
+35
+00:02:24,030 --> 00:02:29,250
+这个特殊的群体;围绕Z旋转，然后围绕Y，然后围绕Z是相当的
+This particular group; rotation around Z, then around Y, and then around Z is quite
+
+36
+00:02:29,250 --> 00:02:34,250
+通常称为欧拉角，但实际上有六个欧拉角。
+commonly called Euler angles, but in fact there are six Euler angles.
+
+37
+00:02:34,250 --> 00:02:38,470
+因此，当我们谈论角度序列时，我们需要非常非常小心。
+So, we need to be very, very careful when we talk about an angle sequence.
+
+38
+00:02:38,470 --> 00:02:41,010
+事实上，仅仅说欧拉角就不够好了。
+It’s in fact not good enough just to say Euler angles.
+
+39
+00:02:41,010 --> 00:02:46,299
+我们应该非常具体并说出ZYZEuler角度。
+We should be very specific and say ZYZ Euler angles.
+
+40
+00:02:46,299 --> 00:02:51,040
+不同的工程社区使用不同的约定，ZYZ惯例很漂亮
+Different engineering communities use different conventions, and the ZYZ convention is pretty
+
+41
+00:02:51,040 --> 00:02:55,269
+常见于机器人和航空航天领域，但还有其他工程学科
+common in robotics and in aerospace, but there are other engineering disciplines where they
+
+42
+00:02:55,269 --> 00:02:57,110
+使用不同的约定。
+use different conventions.
+
+43
+00:02:57,110 --> 00:03:00,810
+当你谈到欧拉角时要非常非常小心。
+Be very, very careful when you just talk about Euler angles.
+
+44
+00:03:00,810 --> 00:03:05,870
+让我们进行实验，在这里我们讨论的是ZYZ序列欧拉角。
+Let’s experiment and here we’re talking about ZYZ sequence Euler angles.
+
+45
+00:03:05,870 --> 00:03:13,989
+我将使用工具箱函数eul2r，它采用三个角度参数，三个
+I’m going to use the Toolbox function eul2r, which takes three angular arguments, the three
+
+46
+00:03:13,989 --> 00:03:14,989
+欧拉角。
+Euler angles.
+
+47
+00:03:14,989 --> 00:03:17,459
+而且，我只是给它们简单的值：0.1,0。
+And, I’m just going to give them simple values: 0.1, 0.
+
+48
+00:03:17,459 --> 00:03:20,430
+分别为2和0.3弧度。
+2 and 0.3 radians respectively.
+
+49
+00:03:20,430 --> 00:03:25,780
+并且，这是产生的旋转矩阵，其对应于三个欧拉角。
+And, here is the resulting rotation matrix that corresponds to the three Euler angles.
+
+50
+00:03:25,780 --> 00:03:31,590
+因此，您可以将此视为坐标方向的两种替代表示
+So you can think of this as two alternative representations for orientation of the coordinate
+
+51
+00:03:31,590 --> 00:03:32,590
+帧。
+frame.
+
+52
+00:03:32,590 --> 00:03:37,549
+我们可以将它表示为3乘3正交矩阵，或者我们可以用三个数字表示它
+We can represent it as a 3 by 3 orthogonal matrix or we can represent it by three numbers
+
+53
+00:03:37,549 --> 00:03:40,129
+这是欧拉角。
+which are the Euler angles.
+
+54
+00:03:40,129 --> 00:03:41,909
+我可以执行逆操作。
+I can perform the inverse operation.
+
+55
+00:03:41,909 --> 00:03:45,180
+我可以将旋转矩阵转换为欧拉角。
+I can convert a rotation matrix to Euler angles.
+
+56
+00:03:45,180 --> 00:03:53,930
+为此，我使用函数tr2eul，然后传入我们的旋转矩阵
+To do that, I use the function tr2eul and I pass in the rotation matrix which we’ve
+
+57
+00:03:53,930 --> 00:03:55,010
+刚刚计算出来
+just computed.
+
+58
+00:03:55,010 --> 00:03:57,790
+在这里我们有欧拉角。
+And here we have the Euler angles.
+
+59
+00:03:57,790 --> 00:04:02,959
+所以我可以将欧拉角转换为旋转矩阵，将旋转矩阵转换回欧拉角。
+So I can convert Euler angles to a rotation matrix, a rotation matrix back to Euler angles.
+
+60
+00:04:02,959 --> 00:04:08,790
+让我们来看一个稍微不同的情况，其中中欧拉角是负的
+Let’s have a look at a slightly different case where the middle Euler angle is a negative
+
+61
+00:04:08,790 --> 00:04:11,590
+数字和结果是旋转矩阵。
+number and the result is rotation matrix.
+
+62
+00:04:11,590 --> 00:04:15,550
+它与我们以前的旋转矩阵不同，因为它是不同的
+It’s a different rotation matrix to the one we had before because it’s a different
+
+63
+00:04:15,550 --> 00:04:16,750
+欧拉角集。
+set of Euler angles.
+
+64
+00:04:16,750 --> 00:04:21,160
+现在我将这个旋转矩阵转换回欧拉角。
+Now I’ll convert this rotation matrix back to Euler angles.
+
+65
+00:04:21,160 --> 00:04:26,389
+我们将看到我们最终得到的欧拉角不是欧拉角
+And we’ll see that the Euler angles that we end up with are not the Euler angles that
+
+66
+00:04:26,389 --> 00:04:27,840
+我们一开始。
+we started with.
+
+67
+00:04:27,840 --> 00:04:32,830
+因此，当我们考虑表示方向时，这是另一个重要的考虑因素
+So this is another important consideration when we look at representing orientation in
+
+68
+00:04:32,830 --> 00:04:38,940
+这三个角度序列的术语：它们不是唯一的，但它们是两个不同的
+terms of these three-angle sequences: that they are not unique, but they are two different
+
+69
+00:04:38,940 --> 00:04:43,870
+欧拉角的集合导致完全相同的旋转矩阵。
+sets of Euler angles which result in exactly the same rotation matrix.
+
+70
+00:04:43,870 --> 00:04:48,470
+只是为了验证是这种情况，我将转换这个不同的集合
+And just to verify that that is the case, I’m going to convert this different set
+
+71
+00:04:48,470 --> 00:04:51,840
+欧拉角与旋转矩阵的关系。
+of Euler angles to a rotation matrix.
+
+72
+00:04:51,840 --> 00:04:57,520
+我将通过该答案，我们可以看到生成的旋转矩阵。
+I’m going to pass that answer in and we can see the resulting rotation matrix.
+
+73
+00:04:57,520 --> 00:05:01,620
+我们可以看到它与这里的完全相同。
+And we can see that it is exactly the same as this one here.
+
+74
+00:05:01,620 --> 00:05:06,780
+所以有两组欧拉角，它们的方向完全相同
+So there are two sets of Euler angles which result in exactly the same orientation in
+
+75
+00:05:06,780 --> 00:05:12,240
+空间，相同的旋转矩阵。
+space, the same rotation matrix.
+
+76
+00:05:12,240 --> 00:05:16,700
+另一组旋转序列通常称为万向角。
+The other group of rotation sequences are commonly called Cardan angles.
+
+77
+00:05:16,700 --> 00:05:21,840
+这些都是以一位着名的，或臭名昭着的意大利人的名字命名的，他是一名医生，一名占星师
+These are named after a very famous, or infamous, Italian character who was a doctor, an astrologer
+
+78
+00:05:21,840 --> 00:05:25,350
+和一个赌徒，并在监狱中度过了一段异端邪说。
+and a gambler and spent some time in jail for heresy.
+
+79
+00:05:25,350 --> 00:05:30,610
+但他是一个非常非常有创造力的人，他发明了组合锁并发明了通用
+But a very, very inventive person, he invented the combination lock and he invented the universal
+
+80
+00:05:30,610 --> 00:05:35,160
+关节，将扭矩从汽车前部的发动机传递到车轮
+joint, the thing that transmits torque from an engine in the front of the car to the wheels
+
+81
+00:05:35,160 --> 00:05:36,770
+在车的后面。
+at the back of the car.
+
+82
+00:05:36,770 --> 00:05:41,600
+他还广泛发表概率论，是最早解决立方数的人之一
+He also published widely on probability and was one of the first people to solve cubic
+
+83
+00:05:41,600 --> 00:05:43,289
+和四次多项式方程。
+and quartic polynomial equations.
+
+84
+00:05:43,289 --> 00:05:45,789
+所以一个非常非常聪明的人。
+So a very, very bright person.
+
+85
+00:05:45,789 --> 00:05:50,199
+万向角涉及围绕不同轴的旋转。
+The Cardan angles involve rotations around different axes.
+
+86
+00:05:50,199 --> 00:05:54,440
+所以在旋转序列中没有重复的字母。
+So no letter is repeated in the rotation sequence.
+
+87
+00:05:54,440 --> 00:05:58,680
+它们中的两个通常被称为滚动角，俯仰角和偏航角。
+The two of them are often referred to as roll, pitch and yaw angles.
+
+88
+00:05:58,680 --> 00:06:03,680
+这是序列XYZ或序列ZYX。
+That’s the sequence XYZ or the sequence ZYX.
+
+89
+00:06:03,680 --> 00:06:08,479
+哪个特定的用作滚动，俯仰，偏航角度取决于上下文
+And which particular one is used as roll, pitch, yaw angles depends a bit on the context
+
+90
+00:06:08,479 --> 00:06:09,479
+这个问题。
+of the problem.
+
+91
+00:06:09,479 --> 00:06:16,319
+滚动，俯仰，偏航角度是三维物体定向的常见惯例
+Roll, pitch, yaw angles are a really common convention for orientation of bodies in three-dimensional
+
+92
+00:06:16,319 --> 00:06:17,319
+空间。
+space.
+
+93
+00:06:17,319 --> 00:06:22,520
+我们使x轴指向前方，因此滚动角度围绕x轴旋转。
+We have the x-axis pointing forward and so the roll angle is rotation around the x-axis.
+
+94
+00:06:22,520 --> 00:06:24,960
+这是我们做的第一次轮换。
+So that’s the first rotation that we do.
+
+95
+00:06:24,960 --> 00:06:29,380
+现在我们围绕y轴执行旋转，这称为俯仰。
+Now we perform a rotation around the y-axis and that’s referred to as pitch.
+
+96
+00:06:29,380 --> 00:06:31,069
+这就是这种动作。
+So that’s this sort of motion.
+
+97
+00:06:31,069 --> 00:06:36,069
+然后在旋转之后，我们围绕z轴进行旋转，我们将其称为
+And then after that rotation, we do a rotation around the z-axis and we refer to that as
+
+98
+00:06:36,069 --> 00:06:37,069
+偏航运动。
+yaw motion.
+
+99
+00:06:37,069 --> 00:06:42,470
+因此，滚动，俯仰，偏航对姿态的描述是围绕x轴旋转，然后是围绕
+So roll, pitch, yaw description of attitude is a rotation around the x-axis, then around
+
+100
+00:06:42,470 --> 00:06:45,700
+y轴，然后绕z轴。
+the y-axis, and then around the z-axis.
+
+101
+00:06:45,700 --> 00:06:50,319
+证明这种连续三次旋转原理的方法是用这种机制，
+A way to demonstrate this principle of three consecutive rotations is with this mechanism,
+
+102
+00:06:50,319 --> 00:06:52,550
+一种称为万向节机制的东西。
+a thing called a Gimbal mechanism.
+
+103
+00:06:52,550 --> 00:06:54,410
+所以，这里有两个坐标框架。
+So, there are two coordinate frames here.
+
+104
+00:06:54,410 --> 00:06:57,720
+我们这里有世界参考坐标系，大红框。
+We have the world reference coordinate frame here, the big red frame.
+
+105
+00:06:57,720 --> 00:07:00,620
+而且，我们这里的中间有一个较小的坐标系。
+And, we have a smaller coordinate frame in the middle here.
+
+106
+00:07:00,620 --> 00:07:07,520
+现在，我们可以围绕x轴旋转，这是一个这样的运动。
+Now, we can make a rotation around the x-axis, which is a motion like this.
+
+107
+00:07:07,520 --> 00:07:11,600
+我们可以围绕y轴旋转，这是一个像这样的旋转。
+We can rotate around the y-axis, which is a rotation like this.
+
+108
+00:07:11,600 --> 00:07:14,110
+而且，我们可以围绕z轴旋转。
+And, we can rotate around the z-axis.
+
+109
+00:07:14,110 --> 00:07:19,860
+所以，我可以将这个内部坐标框架放在我喜欢的任何方向和万向节上
+So, I can put this inner coordinate frame at any orientation that I like and the gimbals
+
+110
+00:07:19,860 --> 00:07:23,330
+会找到合适的角度来实现这一点。
+will find the appropriate angles to allow that to happen.
+
+111
+00:07:23,330 --> 00:07:28,849
+因此，这非常清楚地表明可以实现该内框架的任何方向
+So this demonstrates very clearly shows that any orientation of this inner frame can be achieved
+
+112
+00:07:28,849 --> 00:07:35,160
+通过围绕x，y和z轴任意选择三个旋转角度。
+by arbitrary choice of three rotation angles around the x, y, and z-axis.
+
+113
+00:07:35,160 --> 00:07:39,449
+让我们来看看实际中的一些滚动，俯仰，偏航角度。
+Let’s have a look at some roll, pitch, yaw angles in practice.
+
+114
+00:07:39,449 --> 00:07:46,699
+这是美国宇航局从60年代末到70年代初期的月球模块的示意图。
+This is a schematic diagram of NASA’s lunar module from the late ’60s and early ’70s.
+
+115
+00:07:46,699 --> 00:07:49,440
+我们可以看到这里指出的坐标框架。
+We can see the coordinate frames indicated on here.
+
+116
+00:07:49,440 --> 00:07:55,009
+我们可以看到它们将滚动定义为围绕z轴的旋转，该旋转朝向前方
+We can see that they define roll as rotation around the z-axis which is toward the front
+
+117
+00:07:55,009 --> 00:08:00,870
+对于车辆而言，它们将偏航定义为围绕x轴（垂直方向）
+of the vehicle and they have defined yaw as being around the x-axis which is the vertical
+
+118
+00:08:00,870 --> 00:08:04,130
+该特定车辆的轴。
+axis for this particular vehicle.
+
+119
+00:08:04,130 --> 00:08:08,620
+滚动，俯仰，偏航角度的MATLAB函数与Euler非常相似
+The MATLAB functions for roll, pitch, yaw angles are very similar to those for Euler
+
+120
+00:08:08,620 --> 00:08:09,620
+角。
+angles.
+
+121
+00:08:09,620 --> 00:08:14,430
+我们使用函数rpy2r，我们传递滚动，俯仰，偏航角度。
+We used the function rpy2r and we pass in the roll, pitch, yaw angles.
+
+122
+00:08:14,430 --> 00:08:16,550
+我刚刚在这里编写了一些简单的数字。
+I’ve just made up some simple numbers here.
+
+123
+00:08:16,550 --> 00:08:17,660
+滚动角为0.1
+The roll angle is 0.1
+
+124
+00:08:17,660 --> 00:08:18,660
+弧度。
+radians.
+
+125
+00:08:18,660 --> 00:08:20,690
+俯仰角为0.2弧度。
+The pitch angle is 0.2 radians.
+
+126
+00:08:20,690 --> 00:08:23,700
+偏航角为0.3弧度。
+And the yaw angle is 0.3 radians.
+
+127
+00:08:23,700 --> 00:08:27,480
+这是产生的正交旋转矩阵。
+And this is the resulting orthogonal rotation matrix.
+
+128
+00:08:27,480 --> 00:08:31,340
+再一次，有一个反函数。
+Once again, there is an inverse function.
+
+129
+00:08:31,340 --> 00:08:39,150
+所以tr2rpy，我传递旋转矩阵，结果是滚动，俯仰，偏航角度，
+So tr2rpy, and I pass in the rotation matrix and the result are roll, pitch, yaw angles,
+
+130
+00:08:39,150 --> 00:08:41,010
+和我开始时的那些一样。
+the same as those that I started with.
+

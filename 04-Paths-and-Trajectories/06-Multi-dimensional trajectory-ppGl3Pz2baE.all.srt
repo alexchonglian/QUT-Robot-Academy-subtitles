@@ -1,0 +1,580 @@
+1
+00:00:03,649 --> 00:00:08,139
+许多机器和机器人都有多个运动轴。
+Many machines and robots have got multiple axis of motion.
+
+2
+00:00:08,139 --> 00:00:14,150
+工业机器人通常具有六个关节，并且它们必须平稳且协调地移动
+An industrial robot typically has six joints and they have to move smoothly and in a coordinated
+
+3
+00:00:14,150 --> 00:00:15,150
+时尚。
+fashion.
+
+4
+00:00:15,150 --> 00:00:19,620
+我们可以用来帮助我们的技术是线性插值。
+A technique we can use to help us is linear interpolation.
+
+5
+00:00:19,620 --> 00:00:25,619
+考虑这个简单的函数，其中s的x是初始值的函数
+Consider this simple function here where x of s is a function of an initial value of
+
+6
+00:00:25,619 --> 00:00:27,619
+x和最终值x。
+x and a final value of x.
+
+7
+00:00:27,619 --> 00:00:30,009
+并且，s从0到1不等。
+And, s varies from 0 to 1.
+
+8
+00:00:30,009 --> 00:00:34,120
+在这种情况下，那么s的x是某种中间值。
+In this case, then, x of s is some sort of intermediate value.
+
+9
+00:00:34,120 --> 00:00:41,520
+X为0是初始值，x为1为最终值，x为0.5为中间值
+X of 0 is the initial value, x of 1 is the final value, and x of 0.5 is halfway in between
+
+10
+00:00:41,520 --> 00:00:43,580
+初始值和最终值。
+the initial and final value.
+
+11
+00:00:43,580 --> 00:00:48,140
+现在，x可以是一个使多维情况非常简单的向量。
+Now, x could be a vector which makes the multi-dimensional case quite straightforward.
+
+12
+00:00:48,140 --> 00:00:54,270
+例如，它可能是某种机器或简单机器人的xyz位置。
+For instance, it could be the xyz position of some sort of machine or simple robot.
+
+13
+00:00:54,270 --> 00:00:59,420
+因此，x是具有三个元素xyz的向量，我们可以在它们之间线性插值
+So, x is a vector with the three elements xyz and we can interpolate linearly between
+
+14
+00:00:59,420 --> 00:01:04,330
+初始位置，初始xyz和最终xyz。
+an initial position, an initial xyz and a final xyz.
+
+15
+00:01:04,330 --> 00:01:08,190
+S是一个从0到1变化的标量。
+S is a scalar which varies from 0 to 1.
+
+16
+00:01:08,190 --> 00:01:09,540
+那么，什么是s？
+So, what is s?
+
+17
+00:01:09,540 --> 00:01:13,500
+嗯，S是一个从0到1平滑变化的标量。
+Well, S is a scalar that varies smoothly from 0 to 1.
+
+18
+00:01:13,500 --> 00:01:19,680
+并且，如果S是时间的平滑函数，则x将是时间的平滑函数
+And, if S is a smooth function of time, then x will be a smooth function of time since
+
+19
+00:01:19,680 --> 00:01:26,100
+x只是S的线性函数。我们已经知道如何使函数平滑变化
+x is simply a linear function of S. We already know how to make a smoothly varying function
+
+20
+00:01:26,100 --> 00:01:27,100
+时间
+of time.
+
+21
+00:01:27,100 --> 00:01:31,909
+它可以是时间的多项式函数，也可以是梯形速度分布
+It can be a polynomial function of time or it could be a trapezoidal velocity profile
+
+22
+00:01:31,909 --> 00:01:33,310
+时间的功能。
+function of time.
+
+23
+00:01:33,310 --> 00:01:35,960
+我们来看一个二维的例子。
+Let’s look at a two-dimensional example.
+
+24
+00:01:35,960 --> 00:01:40,960
+我们想要在xy平面上移动，我有一个起点和终点。
+We want to move in the xy plane and I’ve got a starting point and an ending point.
+
+25
+00:01:40,960 --> 00:01:44,720
+现在，我想从头到尾直线前进。
+Now, I want to move in a straight line from the start to the end.
+
+26
+00:01:44,720 --> 00:01:49,110
+我将为开始和结束分配一些任意坐标。
+I’m going to assign some arbitrary coordinates to the start and the end.
+
+27
+00:01:49,110 --> 00:01:54,370
+我们回到MATLAB中，现在我们的第一点是矢量，而不是标量。
+We’re back in MATLAB and now our first point is a vector, not a scalar.
+
+28
+00:01:54,370 --> 00:02:03,560
+所以，第一个点是坐标10,20，我们的最后一个点是矢量30,10。
+So, the first point is the coordinate 10, 20, and our last point is a vector 30, 10.
+
+29
+00:02:03,560 --> 00:02:10,069
+而这次，我将使用函数jtraj，代表联合插值轨迹。
+And this time, I’m going to use the function jtraj, stands for joint interpolated trajectory.
+
+30
+00:02:10,069 --> 00:02:18,170
+我将在50个时间步骤中从第一点移动到最后一点，我们看到了
+I’m going to move from the first point to the last point in 50 time steps, and we see
+
+31
+00:02:18,170 --> 00:02:19,659
+一切都滚过去了。
+it all scrolling past.
+
+32
+00:02:19,659 --> 00:02:26,630
+如果我们向后滚动，我们会看到第一个点确实得到了矢量值10和
+If we scroll back, we see that the first point has indeed got the vector value of 10 and
+
+33
+00:02:26,630 --> 00:02:31,870
+20，最后一个点的值为30和10。
+20, and the last point has got the value of 30 and 10.
+
+34
+00:02:31,870 --> 00:02:39,079
+让我们将x绘制为时间的函数，我们可以看到我们的第一个轴已移动
+Let’s plot x as a function of time and we can see here that our first axis has moved
+
+35
+00:02:39,079 --> 00:02:44,340
+从10到30，第二轴从20下降到10。
+from 10 up to 30, second axis has moved from 20 down to 10.
+
+36
+00:02:44,340 --> 00:02:46,859
+此功能也返回速度。
+This function also returns the velocity.
+
+37
+00:02:46,859 --> 00:02:50,959
+所以，我可以添加它作为额外的输出参数，XD。
+So, I can add that as an extra output argument, XD.
+
+38
+00:02:50,959 --> 00:02:59,629
+现在，我们也看到x速度，我可以绘制XD与时间的关系，我们可以看到
+And now, we see x velocity as well and I can plot XD versus time, and we can see that the
+
+39
+00:02:59,629 --> 00:03:05,389
+每个轴的速度从0开始和结束，并且在它们之间具有有限值。
+velocity of each axis starts and ends at 0 and has a finite value in between.
+
+40
+00:03:05,389 --> 00:03:12,260
+该功能还允许我指定轨迹的初始和最终速度。
+The function also allows me to specify an initial and final velocity for the trajectory.
+
+41
+00:03:12,260 --> 00:03:17,280
+所以，如果我要求初始速度为0，这是默认条件，如果我问
+So, if I ask for the initial velocity to be 0 which is the default condition, if I ask
+
+42
+00:03:17,280 --> 00:03:19,640
+最终速度等于10。
+for the final velocity to be equal to 10.
+
+43
+00:03:19,640 --> 00:03:26,080
+现在，如果我绘制轨迹与时间的关系，我们可以看到在轨迹的最后，
+Now, if I plot the trajectory versus time, we can see that at the end of a trajectory,
+
+44
+00:03:26,080 --> 00:03:32,310
+一条线的斜率不等于0，那是因为它正在实现其目的地
+the slopes of a line are not equal to 0 and that’s because it is achieving its destination
+
+45
+00:03:32,310 --> 00:03:36,959
+按我们的指定以有限的速度定位。
+position at a finite velocity as we specified.
+
+46
+00:03:36,959 --> 00:03:40,329
+让我们考虑一个更复杂的二维示例。
+Let’s consider a more complex two-dimensional example.
+
+47
+00:03:40,329 --> 00:03:43,579
+我将在XY平面的这一点开始和结束。
+I’m going to start and end at this point in the XY plane.
+
+48
+00:03:43,579 --> 00:03:48,909
+我要转到这一点，这一点，这一点，回到我开始的地方。
+I’m going to move to this point, this point, this point, and back to where I started from.
+
+49
+00:03:48,909 --> 00:03:51,849
+所以，现在有三个通过点。
+So, there are now three via points.
+
+50
+00:03:51,849 --> 00:03:55,010
+我可以为它们分配一些任意坐标。
+I can assign some arbitrary coordinates to these.
+
+51
+00:03:55,010 --> 00:03:59,109
+为了顺利通过过孔点，我们需要引入混合物和我们
+In order to move smoothly through the via points, we need to introduce blends and we
+
+52
+00:03:59,109 --> 00:04:02,060
+在上一节中谈到了混合。
+talked about blends in a previous section.
+
+53
+00:04:02,060 --> 00:04:08,189
+在这里，我们想要应用这种混合的概念，在这个例子中，它是为标量显示的
+Here, we want to apply this idea of blends which, in this example, is shown for a scalar
+
+54
+00:04:08,189 --> 00:04:09,189
+变量x。
+variable x.
+
+55
+00:04:09,189 --> 00:04:13,560
+我们想将它应用于多维案例，因为现在我们谈论的是一个机器人
+We want to apply it to a multi-dimensional case because now we’re talking about a robot
+
+56
+00:04:13,560 --> 00:04:16,630
+在xy平面上移动。
+moving in the xy plane.
+
+57
+00:04:16,630 --> 00:04:22,120
+所以现在，每个位置XI都是向量而不是标量。
+So now, each of the positions XI is a vector rather than a scalar.
+
+58
+00:04:22,120 --> 00:04:27,460
+现在，我们将看一下轨迹上的点是矢量的情况，
+Now, we’re going to look at a scenario where points on the trajectory are vector quantities,
+
+59
+00:04:27,460 --> 00:04:30,860
+在这种情况下，两个向量，我们有通过点。
+two-vector in this case, and we have via points.
+
+60
+00:04:30,860 --> 00:04:34,069
+让我们在MATLAB中做这个方形轨迹。
+Let’s do this square trajectory in MATLAB.
+
+61
+00:04:34,069 --> 00:04:45,780
+我们的起始坐标是40,50，并且通孔点是60,30，这是一行的
+Our starting coordinate is 40, 50 and the via points are 60, 30 which is one row of
+
+62
+00:04:45,780 --> 00:04:54,039
+矩阵，40,10是矩阵的另一行，20,30，我们在那里完成
+the matrix, 40, 10 which is another row of the matrix, 20, 30 and we finish where we
+
+63
+00:04:54,039 --> 00:04:55,039
+开始。
+started.
+
+64
+00:04:55,039 --> 00:04:57,800
+而且，那是通过点的列表。
+And, that’s the list of via points.
+
+65
+00:04:57,800 --> 00:05:01,550
+现在，我使用工具箱函数mstraj。
+Now, I use the Toolbox function, mstraj.
+
+66
+00:05:01,550 --> 00:05:05,150
+我传入了via点列表。
+I pass in the list of via points.
+
+67
+00:05:05,150 --> 00:05:09,379
+通过我们将沿着路径移动的速度，段的时间
+Passing the speed at which we’re going to move along the path, the time of the segments
+
+68
+00:05:09,379 --> 00:05:10,710
+是默认的。
+is default.
+
+69
+00:05:10,710 --> 00:05:13,970
+现在，开始坐标。
+Now, start coordinate.
+
+70
+00:05:13,970 --> 00:05:19,599
+时间步长，0.1秒和加速时间，我将考虑公正
+The time step, 0.1 seconds and the acceleration time, which I'm going to consider to be just
+
+71
+00:05:19,599 --> 00:05:21,509
+1秒。
+1 second.
+
+72
+00:05:21,509 --> 00:05:25,430
+而且，我在工作空间变量x中创建了。
+And, I’ve created in the workspace variable x.
+
+73
+00:05:25,430 --> 00:05:32,979
+它有435行，这意味着轨迹需要435个时间步骤才能执行
+It’s got 435 rows, so that means that the trajectory took 435 time steps to execute
+
+74
+00:05:32,979 --> 00:05:35,120
+每次步数0.1秒。
+each time steps 0.1 seconds.
+
+75
+00:05:35,120 --> 00:05:38,199
+执行时间为43.5秒。
+That’s 43.5 second to execute.
+
+76
+00:05:38,199 --> 00:05:45,180
+我可以绘制x与时间的关系，我们可以看到第一和第二坐标的轨迹
+I can plot x versus time and we can see the trajectory of the first and second coordinates
+
+77
+00:05:45,180 --> 00:05:48,680
+与时间的第一个坐标以蓝色显示。
+versus time first coordinate shown in blue.
+
+78
+00:05:48,680 --> 00:05:53,840
+如果我将第一个坐标绘制在第二个坐标上，那么可以是x
+If I plot the first coordinate against the second coordinate, so that could be the x
+
+79
+00:05:53,840 --> 00:05:57,060
+坐标，可以是y坐标。
+coordinate and that could be the y coordinate.
+
+80
+00:05:57,060 --> 00:05:58,729
+我有这样的情节。
+I have a plot like this.
+
+81
+00:05:58,729 --> 00:06:04,470
+因此，这显示了点在xy平面上的运动，实际上，它具有正方形
+So, this shows the motion of the point on the xy plane and, indeed, it has the square
+
+82
+00:06:04,470 --> 00:06:08,830
+我们正在寻找的配置文件，但由于我们已经指定，它有圆角
+profile that we are looking for, but it’s got rounded corners because we have specified
+
+83
+00:06:08,830 --> 00:06:11,310
+有限的加速时间。
+a finite acceleration time.
+
+84
+00:06:11,310 --> 00:06:14,620
+让我们现在考虑一个额外的难度。
+Let’s consider now an extra degree of difficulty.
+
+85
+00:06:14,620 --> 00:06:18,599
+让我们考虑机器能够在x方向上以每秒2米的速度移动，
+Let’s consider that the machine is capable of moving at 2 meters a second in the x direction,
+
+86
+00:06:18,599 --> 00:06:22,520
+但在y方向上每秒只有1米。
+but only 1 meter per second in the y direction.
+
+87
+00:06:22,520 --> 00:06:27,310
+当我们计算出机器人的轨迹时，我们需要考虑到这一点。
+We need to take this in to account when we figure the trajectory for the robot.
+
+88
+00:06:27,310 --> 00:06:31,030
+再次考虑这个二维示例，这是我们想要的路径
+Consider again this two-dimensional example and this is the path that we want from the
+
+89
+00:06:31,030 --> 00:06:33,750
+从头到尾，这是我们理想的道路。
+start to the end, that’s our desired path.
+
+90
+00:06:33,750 --> 00:06:39,199
+但是如果机器人能够在x方向上比在y方向上移动得更快，
+But if the robot is capable of moving more quickly in the x direction than in the y direction,
+
+91
+00:06:39,199 --> 00:06:41,439
+路径可能看起来像这样。
+the path might look something like this.
+
+92
+00:06:41,439 --> 00:06:46,030
+它将在x方向上非常快速地移动并且在y方向上移动一点点。
+It will go very, very quickly in the x direction and also move a little bit in the y direction.
+
+93
+00:06:46,030 --> 00:06:50,370
+但是，x轴将实现其目标，因此它将停止移动。
+But then, the x-axis will have achieved its goal, so it will stop moving.
+
+94
+00:06:50,370 --> 00:06:55,479
+但是，移动得更慢的y轴必须继续前进，所以我们最终会这样做
+But, the y-axis which is moving more slowly has to keep on going, and so we end up with
+
+95
+00:06:55,479 --> 00:06:59,099
+这条狗腿路径而不是我们想要的路径。
+this dogleg path instead of our desired path.
+
+96
+00:06:59,099 --> 00:07:04,180
+如果我在像平板仿形机这样的东西上切割材料，那么我就是
+If I was cutting material on something like a flatbed profiling machine, then I’d be
+
+97
+00:07:04,180 --> 00:07:08,379
+如果我有这条道路而不是想要的道路，我会感到很沮丧。
+rather upset if I had this path rather than the desired one.
+
+98
+00:07:08,379 --> 00:07:14,430
+因此，为了达到理想的路径，我们需要考虑到速度
+So in order to achieve the desired path, we need to take in to account the velocity of
+
+99
+00:07:14,430 --> 00:07:15,930
+每个轴。
+each of the axes.
+
+100
+00:07:15,930 --> 00:07:21,490
+我们需要计算出最慢的轴到达下一个通过点所需的时间。
+We need to work out how long the slowest axis requires to get to the next via point.
+
+101
+00:07:21,490 --> 00:07:26,719
+然后，我们缩放其他轴的速度，使它们全部同时到达
+And then, we scale the velocity of the other axes so that they all arrive at the same time
+
+102
+00:07:26,719 --> 00:07:31,550
+在通过点，然后他们都再次出发到下一个通过点。
+at the via point, and then they all set off again to the next via point.
+
+103
+00:07:31,550 --> 00:07:33,729
+我们无限期地重复这个过程。
+We repeat this process indefinitely.
+
+104
+00:07:33,729 --> 00:07:40,669
+现在，我们将重复这个轨迹，但这次我们将指定
+Now, we’re going to repeat the trajectory, but this time we are going to specify the
+
+105
+00:07:40,669 --> 00:07:43,530
+轴的速度不同。
+velocities of the axis being different.
+
+106
+00:07:43,530 --> 00:07:48,930
+因此，以前，速度在x和y方向上为每秒2个单位。
+So, previously, the velocity was 2 units per second in the x and y direction.
+
+107
+00:07:48,930 --> 00:07:56,909
+现在，我将指定一个非常慢的x轴，每秒只有1个单位，以及一个快速的y轴。
+Now, I’m going to specify a very slow x-axis, only 1 unit per second, and a fast y-axis.
+
+108
+00:07:56,909 --> 00:08:02,819
+如果我们现在查看工作空间中的轨迹级别，我们会看到它有835行，
+If we now look at the trajectory level in our workspace, we see it’s got 835 rows,
+
+109
+00:08:02,819 --> 00:08:08,409
+0.1秒的时间步，这意味着轨迹现在需要83秒，几乎是两倍。
+0.1 second time step, so that means the trajectory now takes 83 seconds, almost twice as long.
+
+110
+00:08:08,409 --> 00:08:14,259
+并且，这是可以预料的，因为现在，轨迹正在以最慢的速度进行
+And, that’s to be expected because, now, the trajectory is being paced by the slowest
+
+111
+00:08:14,259 --> 00:08:15,259
+轴。
+axis.
+
+112
+00:08:15,259 --> 00:08:18,570
+最慢的轴现在每秒只能移动1个单位。
+The slowest axis now can only move at only 1 unit per second.
+
+113
+00:08:18,570 --> 00:08:24,330
+以前，它是每秒2个单位，所以现在我们受限于一半的轴
+Previously, it was 2 units per second, so we are limited now by an axis which is half
+
+114
+00:08:24,330 --> 00:08:30,449
+原始速度，轨迹大约需要两倍的执行时间。
+the original speed, the trajectory has taken roughly twice as long to execute.
+
+115
+00:08:30,449 --> 00:08:34,169
+我可以绘制x与时间的关系。
+I can plot x versus time.
+
+116
+00:08:34,169 --> 00:08:40,870
+我们可以看到835个时间步长，我可以绘制x与y的关系。
+We can see the 835 time steps and I can plot x versus y.
+

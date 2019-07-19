@@ -1,0 +1,680 @@
+1
+00:00:04,170 --> 00:00:09,090
+我们现在要描述一些略微数学概念，但它们非常有用，
+We’re now going to describe some slightly mathematical concepts but they’re very useful,
+
+2
+00:00:09,090 --> 00:00:11,650
+所以忍受我。
+so bear with me.
+
+3
+00:00:11,650 --> 00:00:15,080
+到目前为止，当我们谈论机器人时，我们一直在谈论关节
+So far, when we’ve been talking about robots, we’ve been talking a lot about the joint
+
+4
+00:00:15,080 --> 00:00:16,080
+角。
+angles.
+
+5
+00:00:16,080 --> 00:00:21,480
+我们现在要做的是概括这个概念，我们将参考
+What we’re going to do now is to generalize that concept and we’re going to refer to
+
+6
+00:00:21,480 --> 00:00:23,869
+概括联合坐标。
+generalize joint coordinates.
+
+7
+00:00:23,869 --> 00:00:29,779
+现在，对于关节旋转的大多数机器人来说，就是它们的旋转时间关节，
+Now, for most robots where the joints are revolute, that is their rotating time joints,
+
+8
+00:00:29,779 --> 00:00:33,900
+那么它们的广义联合坐标就是联合角度。
+then their generalize joint coordinate is simply the joint angle.
+
+9
+00:00:33,900 --> 00:00:40,030
+但是，对于那些有滑动关节的少数机器人也被称为棱柱形
+But, for those small number of robots that have got a sliding joint also known as a prismatic
+
+10
+00:00:40,030 --> 00:00:44,949
+关节，则广义关节坐标则为长度，即长度
+joint, then the generalize joint coordinate then would be a length, the length of that
+
+11
+00:00:44,949 --> 00:00:46,400
+滑动关节。
+sliding joint.
+
+12
+00:00:46,400 --> 00:00:52,309
+因此，概括联合坐标只是我们可以处理机器人关节的一种方式
+So, generalize joint coordinate is simply a way that we can deal with robot joints that
+
+13
+00:00:52,309 --> 00:00:54,299
+旋转或滑动。
+either rotate or slide.
+
+14
+00:00:54,299 --> 00:01:00,670
+因此，机器人的所有关节坐标的集合我们称为关节配置。
+So, the set of all joint coordinates for the robot we referred to as the joint configuration.
+
+15
+00:01:00,670 --> 00:01:06,590
+它是一个向量，通常用符号Q表示。并且，向量的长度是
+It’s a vector and typically denoted by the symbol Q. And, the length of the vector is
+
+16
+00:01:06,590 --> 00:01:09,270
+N和N是关节的数量。
+N and N is the number of joints.
+
+17
+00:01:09,270 --> 00:01:15,490
+因此，关节配置Q是长度为N的向量，并且该向量的元素也是
+So, joint configuration Q is a vector of length N and the elements of that vector are either
+
+18
+00:01:15,490 --> 00:01:18,409
+角度或长度。
+an angle or a length.
+
+19
+00:01:18,409 --> 00:01:23,479
+关节角度向量属于空间，空间C。
+The joint angle vector belongs to a space, the space C.
+
+20
+00:01:23,479 --> 00:01:26,329
+我们将此称为配置空间。
+We refer to this as the configuration space.
+
+21
+00:01:26,329 --> 00:01:34,659
+关节配置属于集合C，C是所有可能的关节配置的集合。
+The joint configurations belong to the set C and C is the set of all possible joint configurations.
+
+22
+00:01:34,659 --> 00:01:40,420
+现在，C是N维实数空间的子集。
+Now, C is a subset of the N dimensional real number space.
+
+23
+00:01:40,420 --> 00:01:44,950
+当我们谈论机器人时，另一个非常重要的空间就是空间
+The other space that’s really important when we’re talking about robots is the space
+
+24
+00:01:44,950 --> 00:01:52,390
+所有可能的末端效应器姿势，我们用符号T来指代。我们这样说
+of all possible end effector poses and we refer to this by the symbol T. We say that
+
+25
+00:01:52,390 --> 00:01:59,150
+末端效应器姿势ksiE属于集合T，即所有可能的末端效应器的集合
+the end effector pose ksi E belongs to the set T, the set of all possible end effector
+
+26
+00:01:59,150 --> 00:02:00,150
+构成。
+poses.
+
+27
+00:02:00,150 --> 00:02:06,350
+在二维中，T是所有可能的平移和旋转的子集。
+In two dimensions, T is a subset of all possible translations and rotations.
+
+28
+00:02:06,350 --> 00:02:11,240
+而且，它是一个子集的原因是机器人只有有限的范围。
+And, the reason that it’s a subset is that the robot has only got finite reach.
+
+29
+00:02:11,240 --> 00:02:12,879
+它无法触及地平线。
+It can’t reach out to the horizon.
+
+30
+00:02:12,879 --> 00:02:21,220
+例如，因此T是二维中所有可能位置和方向的子集。
+For example, so T is a subset of all possible positions and orientations in two dimensions.
+
+31
+00:02:21,220 --> 00:02:25,110
+例如，我们已经看过简单描述末端执行器姿势的机器人
+For example, we’ve looked at robots where the end effector pose is simply described
+
+32
+00:02:25,110 --> 00:02:27,420
+通过坐标X和Y.
+by the coordinates X and Y.
+
+33
+00:02:27,420 --> 00:02:32,530
+我们还看了一些机器人，其中末端效应器的姿势由位置描述
+We’ve also looked at some robots where the end effector pose is described by the position
+
+34
+00:02:32,530 --> 00:02:36,170
+X和Y以及方向Theta。
+X and Y and by the orientation Theta.
+
+35
+00:02:36,170 --> 00:02:43,090
+在三个维度中，我们会说T是SE3的子集，即所有可能位置的集合
+In three dimensions, we would say that T is a subset of SE3, the set of all possible positions
+
+36
+00:02:43,090 --> 00:02:46,030
+和三维空间中的方向。
+and orientations in three dimensional space.
+
+37
+00:02:46,030 --> 00:02:52,299
+并且，我们再次查看描述末端效应器姿势的一些具体示例
+And, we’ve, again, look at some specific examples where the end effector pose is described
+
+38
+00:02:52,299 --> 00:02:57,239
+就其位置X，Y和Z而言，一些机器人是末端执行器所构成的
+just in terms of its position, X, Y and Z, some robots where the end effector pose is
+
+39
+00:02:57,239 --> 00:03:01,650
+由位置X，Y和Z以及单个俯仰角描述。
+described by position X, Y and Z and a single pitch angle.
+
+40
+00:03:01,650 --> 00:03:05,760
+我们还研究了一些机器人，它们的末端执行器可以用来描述
+We’ve also looked at some robots whose end effector can be described in terms of the
+
+41
+00:03:05,760 --> 00:03:13,120
+例如，位置X，Y和Z以及定向滚动，俯仰和偏转角度。
+position X, Y and Z and orientation roll, pitch and yaw angles for example.
+
+42
+00:03:13,120 --> 00:03:15,239
+这些都是SE3的子集。
+These are all subsets of SE3.
+
+43
+00:03:15,239 --> 00:03:20,879
+接下来重要的考虑因素是这些不同空间的尺寸
+The next important consideration then is the dimensions of these different spaces, the
+
+44
+00:03:20,879 --> 00:03:26,390
+任务空间，我们描述末端执行器姿势的空间，以及配置
+task space, the space in which we describe the pose of the end effector, and the configuration
+
+45
+00:03:26,390 --> 00:03:30,950
+我们描述机器人关节坐标的空间。
+space in which we describe the joint coordinates of the robot.
+
+46
+00:03:30,950 --> 00:03:35,410
+我们说机器人有很多自由度，而且数量相等
+We say that a robot has got so many degrees of freedom and that’s equal to the number
+
+47
+00:03:35,410 --> 00:03:40,189
+机器人具有的关节，这是其配置空间的尺寸。
+of joints the robot has and that’s the dimension of its configuration space.
+
+48
+00:03:40,189 --> 00:03:46,230
+所以，如果一个机器人有三个关节，那么我们就说它的配置空间已经到了
+So, if a robot has got three joints, then we say that its configuration space has got
+
+49
+00:03:46,230 --> 00:03:47,730
+三个维度。
+three dimensions.
+
+50
+00:03:47,730 --> 00:03:52,440
+同样，我们可以谈论任务空间中的自由度
+Similarly, we could talk about the degrees of freedom in the task space and that’s
+
+51
+00:03:52,440 --> 00:03:59,790
+等于任务空间T的尺寸。考虑一个简单的平面机器人的姿势。
+equal to the dimension of the task space T. Consider the pose of a simple planar robot.
+
+52
+00:03:59,790 --> 00:04:05,120
+它的末端执行器姿势简单地由两个坐标X和Y描述。
+Its end effector pose is described simply by the two coordinates X and Y.
+
+53
+00:04:05,120 --> 00:04:08,209
+在这种情况下，任务空间的维度为2。
+In this case, the dimension of a task space is 2.
+
+54
+00:04:08,209 --> 00:04:12,830
+如果它是具有三个关节的平面机器人，则可以描述末端执行器姿势
+If it’s a planar robot with three joints, then the end effector pose can be described
+
+55
+00:04:12,830 --> 00:04:17,079
+通过X和Y位置以及方向Theta。
+by the X and Y position and the orientation Theta.
+
+56
+00:04:17,079 --> 00:04:21,310
+在这种情况下，我们会说任务空间的维度是3。
+In this case, we would say that the dimension of a task space is 3.
+
+57
+00:04:21,310 --> 00:04:24,450
+它由三维矢量描述。
+It’s described by a three-dimensional vector.
+
+58
+00:04:24,450 --> 00:04:29,720
+对于三维机器人，其末端执行器姿势由位置，坐标描述
+For a three-dimensional robot whose end effector pose is described by the position, coordinates
+
+59
+00:04:29,720 --> 00:04:35,160
+X，Y和Z，其任务空间的维度也是3。
+X, Y and Z, the dimension of its task space is also 3.
+
+60
+00:04:35,160 --> 00:04:40,060
+具有X，Y，Z位置以及俯仰角度，任务尺寸的机器人
+The robot that has got X, Y, Z position and also a pitch angle, dimension of its task
+
+61
+00:04:40,060 --> 00:04:41,360
+空间是4。
+space is 4.
+
+62
+00:04:41,360 --> 00:04:46,650
+并且，对于类似工业机器人的东西，其末端执行器姿势由位置描述
+And, for something like an industrial robot whose end effector pose is described by position
+
+63
+00:04:46,650 --> 00:04:52,110
+X，Y，Z和方向可用三个角度描述，例如滚动，俯仰，
+X, Y, Z and orientation which could be described by three angles, for instance, roll, pitch,
+
+64
+00:04:52,110 --> 00:04:55,710
+偏航角，其任务空间的维数为6。
+yaw angles, the dimension of its task space is 6.
+
+65
+00:04:55,710 --> 00:04:59,320
+在我们生活的三维世界和机器人居住的世界里，事实并非如此
+In the three-dimensional world in which we live and which the robots live, it’s not
+
+66
+00:04:59,320 --> 00:05:03,740
+可以给出任务空间维度6。
+possible to have a task space dimension be given 6.
+
+67
+00:05:03,740 --> 00:05:09,880
+现在，真正重要的约束是，为了达到所有的任务空间，
+Now, the really important constraint is that in order to reach all of the task space, the
+
+68
+00:05:09,880 --> 00:05:14,940
+配置空间的尺寸应大于或等于尺寸
+dimension of the configuration space should be greater than or equal to the dimension
+
+69
+00:05:14,940 --> 00:05:17,050
+任务空间。
+of the task space.
+
+70
+00:05:17,050 --> 00:05:20,550
+为了使这个具体，让我们再看看我们应该的2自由度臂
+To make this concrete, let’s look again at the 2-degree freedom arm which we should
+
+71
+00:05:20,550 --> 00:05:22,390
+现在非常熟悉。
+be quite familiar with by now.
+
+72
+00:05:22,390 --> 00:05:28,100
+末端效应器姿势是任务空间的一个元素，任务空间是一个子集
+The end effector pose is an element of the task space and the task space is a subset
+
+73
+00:05:28,100 --> 00:05:31,380
+实数的二维空间。
+of the two-dimensional space of real numbers.
+
+74
+00:05:31,380 --> 00:05:35,680
+末端效应器姿势可以用一对两个实数来描述。
+End effector pose can be described by a pair of two real numbers.
+
+75
+00:05:35,680 --> 00:05:41,580
+该机器人的配置空间是包含Q1和Q2的矢量，两者
+The configuration space for this robot is a vector that comprises Q1 and Q2, the two
+
+76
+00:05:41,580 --> 00:05:43,030
+关节角度。
+joint angles.
+
+77
+00:05:43,030 --> 00:05:48,470
+配置空间也是实数二维空间的子集
+The configuration space is also a subset of the two-dimensional space of real numbers
+
+78
+00:05:48,470 --> 00:05:54,030
+因为关节配置可以用一对实数来描述，即Q1和
+because the joint configuration can be described by a pair of real numbers, that is Q1 and
+
+79
+00:05:54,030 --> 00:05:55,390
+Q2。
+Q2.
+
+80
+00:05:55,390 --> 00:06:01,590
+对于3自由度臂，末端执行器姿势由三个数字X，Y和表示
+For the 3-degree of freedom arm, the end effector pose is described by three numbers, X, Y and
+
+81
+00:06:01,590 --> 00:06:02,590
+西塔。
+Theta.
+
+82
+00:06:02,590 --> 00:06:07,970
+所以，我们现在说任务空间是所有可能位置集合的子集
+So, we say now that the task space is a subset of the set of all possible positions and the
+
+83
+00:06:07,970 --> 00:06:13,690
+我们用S表示的所有可能方向的子集。配置空间是
+subset of all possible orientations which we denote by S. The configuration space is
+
+84
+00:06:13,690 --> 00:06:20,110
+包含Q1，Q2和Q3的矢量，并且是三维空间的子集
+a vector comprising Q1, Q2 and Q3 and that is a subset of the three dimensional space
+
+85
+00:06:20,110 --> 00:06:21,540
+实数。
+of real numbers.
+
+86
+00:06:21,540 --> 00:06:23,530
+到现在为止，我相信你已经掌握了这一点。
+By now, I’m sure you’re getting the hang of this.
+
+87
+00:06:23,530 --> 00:06:29,150
+在这种情况下，任务空间是r立方体的一个子集，是三维真实的集合
+In this case, the task space is a subset of r cubed, the set of three-dimensional real
+
+88
+00:06:29,150 --> 00:06:30,150
+数字。
+numbers.
+
+89
+00:06:30,150 --> 00:06:35,910
+并且，配置空间也是实数的三维空间的子集。
+And, the configuration space is also a subset of three-dimensional space of real numbers.
+
+90
+00:06:35,910 --> 00:06:41,760
+笛卡尔龙门机器人是一种特殊情况，因为关节坐标直接映射
+A Cartesian Gantry robot is a special case because the joint coordinates directly map
+
+91
+00:06:41,760 --> 00:06:44,680
+到最后的效应器姿势。
+on to the end effector pose.
+
+92
+00:06:44,680 --> 00:06:48,890
+关节坐标实际上是长度X，Y和Z.
+The joint coordinates are in fact the lengths X, Y and Z.
+
+93
+00:06:48,890 --> 00:06:55,630
+4自由度SCARA机器人手臂具有由位置描述的末端执行器姿势
+A 4-degree of freedom SCARA robot arm has an end effector pose described by a position
+
+94
+00:06:55,630 --> 00:06:58,340
+X，Y和Z以及偏航角。
+X, Y and Z and a yaw angle.
+
+95
+00:06:58,340 --> 00:07:04,160
+所以，我们会说它的任务空间是r立方体的一个子集，所有可能的集合
+So, we would say that its task space is a subset of r cubed, the set of all possible
+
+96
+00:07:04,160 --> 00:07:08,290
+位置，以及所有可能方向的集合。
+positions, and the set of all possible orientations.
+
+97
+00:07:08,290 --> 00:07:15,130
+它的配置空间是四维数量，它包括三个旋转
+Its configuration space is a four-dimensional quantity and it comprises the three rotational
+
+98
+00:07:15,130 --> 00:07:19,060
+关节角度和工具的垂直位移。
+joint angles and a vertical displacement of the tool.
+
+99
+00:07:19,060 --> 00:07:24,700
+4自由度并联连杆机器人同样具有四维任务空间。
+A 4-degree of freedom parallel link robot, again, has a four-dimensional task space.
+
+100
+00:07:24,700 --> 00:07:31,110
+它能够控制末端执行器的位置和方向，并且具有四维效果
+It’s able to control the position and orientation of the end effector and it has a four-dimensional
+
+101
+00:07:31,110 --> 00:07:32,600
+配置空间。
+configuration space.
+
+102
+00:07:32,600 --> 00:07:38,540
+底座上有四个电机通过连接到末端执行器的连接。
+There are four motors located at the base connected by links to the end effector.
+
+103
+00:07:38,540 --> 00:07:44,620
+我们之前看过的四个联合教育机器人有一个四维任务空间
+The four joint educational robot that we looked at before has a four-dimensional task space
+
+104
+00:07:44,620 --> 00:07:49,920
+这可以通过位置X，Y，Z和俯仰角及其配置来描述
+which can be described by a position X, Y, Z and a pitch angle, and its configuration
+
+105
+00:07:49,920 --> 00:07:55,340
+也是四维的，因为这个机器人有四个旋转关节。
+is also four-dimensional because there are four rotational joints in this robot.
+
+106
+00:07:55,340 --> 00:07:59,560
+同样的事情适用于NAO机器人的手臂。
+The same thing applies for an arm of the NAO robot.
+
+107
+00:07:59,560 --> 00:08:06,260
+对于如此处所示的6自由度臂，任务空间是SE3的子集，即
+For a 6-degree of freedom arm such as shown here, the task space is a subset of SE3, the
+
+108
+00:08:06,260 --> 00:08:12,190
+三维空间中所有可能位置的集合以及所有可能方向的集合
+set of all possible positions in three-dimensional space and the set of all possible orientations
+
+109
+00:08:12,190 --> 00:08:14,170
+在三维空间。
+in three-dimensional space.
+
+110
+00:08:14,170 --> 00:08:18,260
+所有这些机器人的配置空间也是六维的。
+The configuration space of all these robots is also six-dimensional.
+
+111
+00:08:18,260 --> 00:08:21,470
+它们都有六个关节或6个自由度。
+They all have six joints or 6 degrees of freedom.
+
+112
+00:08:21,470 --> 00:08:26,650
+工业机器人和航天飞机臂有六个旋转关节。
+The industrial robot and the space shuttle arm have got six rotational joints.
+
+113
+00:08:26,650 --> 00:08:32,330
+然而，斯坦福大学的手臂有五个旋转关节和一个滑动关节。
+Whereas, the Stanford arm has got five rotational joints and one sliding joint.
+
+114
+00:08:32,330 --> 00:08:33,390
+这是一个非常特殊的情况。
+This is a very special case.
+
+115
+00:08:33,390 --> 00:08:37,830
+这是一个具有大量旋转关节的机器人。
+This is a robot with a very large number of rotational joints.
+
+116
+00:08:37,830 --> 00:08:43,240
+该机器人的任务空间与上一张幻灯片上的机器人完全相同。
+The task space of this robot is exactly the same as the robots on the previous slide.
+
+117
+00:08:43,240 --> 00:08:47,279
+末端执行器姿势由其位置和方向描述。
+The end effector pose is described by its position and by its orientation.
+
+118
+00:08:47,279 --> 00:08:49,199
+它有六个维度。
+It’s got six dimensions.
+
+119
+00:08:49,199 --> 00:08:53,459
+但是，像这样的机器人的配置空间可能非常庞大。
+But, the configuration space for a robot like this could be quite massive.
+
+120
+00:08:53,459 --> 00:08:57,700
+我实际上并不知道这个机器人有多少关节，但我猜它是
+I don’t actually know how many joints this robot’s got, but I’m guessing that it’s
+
+121
+00:08:57,700 --> 00:08:58,769
+有一百个关节。
+got a hundred joints.
+
+122
+00:08:58,769 --> 00:09:04,540
+所以，我要说它的配置空间是100维空间的一个子集
+So, I’m going to say that its configuration space is a subset of the 100-dimensional space
+
+123
+00:09:04,540 --> 00:09:05,839
+实数。
+of real numbers.
+
+124
+00:09:05,839 --> 00:09:12,350
+因此，在这种情况下，配置空间的维度大于该维度
+So, in this case, the dimension of the configuration space is greater than the dimension of the
+
+125
+00:09:12,350 --> 00:09:13,920
+任务空间。
+task space.
+
+126
+00:09:13,920 --> 00:09:16,330
+我们称之为冗余机器人。
+We call this a redundant robot.
+
+127
+00:09:16,330 --> 00:09:21,370
+冗余机器人的一个优点是刀尖可以实现任何位置和
+An advantage of the redundant robot is that the tool-tip can achieve any position and
+
+128
+00:09:21,370 --> 00:09:26,580
+方向就像一个6自由度的工业机器人，但它的附加
+orientation just like a 6-degree of freedom industrial robot does, but with its additional
+
+129
+00:09:26,580 --> 00:09:30,800
+自由度，它还可以控制手臂的形状。
+degrees of freedom, it can also control the shape of the arm.
+
+130
+00:09:30,800 --> 00:09:35,709
+因此，它可以控制末端执行器的姿势和手臂的形状。
+So, it can control the pose of the end effector and the shape of the arm.
+
+131
+00:09:35,709 --> 00:09:41,740
+只有六个关节的工业机器人只能控制末端执行器的姿势。
+An industrial robot with only six joints can only control the pose of the end effector.
+
+132
+00:09:41,740 --> 00:09:46,579
+它不能选择其手臂的任意配置形状。
+It can’t choose an arbitrary configurational shape of its arm.
+
+133
+00:09:46,579 --> 00:09:52,279
+我们描述机器人手臂的另一种方式是配置字符串和这个
+Another way that we describe robot arms is in terms of a configuration string and this
+
+134
+00:09:52,279 --> 00:09:58,040
+是一串字符，每个关节一个字符，字符是Rfor
+is a string of characters, one character per joint and the character is either an R for
+
+135
+00:09:58,040 --> 00:10:02,259
+用于棱柱或滑动接头的旋转接头或P.
+a rotational joint or P for a prismatic or sliding joint.
+
+136
+00:10:02,259 --> 00:10:07,860
+所以，在这里我们可以看到三种截然不同的机器人的配置字符串。
+So, here we can see the configuration strings for three quite different sorts of robot.
+

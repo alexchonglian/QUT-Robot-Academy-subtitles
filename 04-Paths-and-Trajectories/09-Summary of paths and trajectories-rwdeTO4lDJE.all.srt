@@ -1,0 +1,300 @@
+1
+00:00:03,720 --> 00:00:07,480
+让我们总结一下我们在本次讲座中学到的一些主要观点。有
+Let’s summarize some of the main ideas that we have learned in this lecture. There is
+
+2
+00:00:07,480 --> 00:00:12,910
+路径和轨迹之间的重要区别。路径是空间构造
+an important distinction between a path and a trajectory. A path is a spatial construct
+
+3
+00:00:12,910 --> 00:00:19,839
+并告诉我们如何通过世界从A到B。轨迹是路径加上时间表。
+and tells us how we get from A to B through the world. A trajectory is a path plus a schedule.
+
+4
+00:00:19,839 --> 00:00:24,400
+它告诉我们我们应该多快地沿着这条路走，我们应该在什么时候做什么
+It tells us how quickly we should move along the path, at what time we should be at what
+
+5
+00:00:24,400 --> 00:00:30,019
+沿着路径指向。轨迹与位置和方向一样重要
+point along the path. It’s important with trajectories that the position and orientation
+
+6
+00:00:30,019 --> 00:00:34,710
+与时间顺利变化。我们这样做有很多原因。我们希望减少最大值
+vary smoothly with time. We do this for a number of reasons. We want to reduce the maximum
+
+7
+00:00:34,710 --> 00:00:39,540
+机器人加速，允许我们减小电机的尺寸，它可能会减少
+acceleration on the robot, allows us to reduce the size of the motors, and it perhaps reduces
+
+8
+00:00:39,540 --> 00:00:44,190
+在机器人结构中引起的振动。平滑的意思是什么意思
+vibrations induced in the structure of the robot. What the smooth mean would mean that
+
+9
+00:00:44,190 --> 00:00:49,730
+作为时间的函数，位置是连续的，并且速度是连续的函数
+the position is continuous as a function of time and velocity is continuous as a function
+
+10
+00:00:49,730 --> 00:00:55,120
+时间而且，我们希望加速是连续的，也许是混蛋是连续的
+of time. And, we would hope that the acceleration is continuous and perhaps the jerk is continuous
+
+11
+00:00:55,120 --> 00:01:00,480
+等等通过高阶导数。在机器人技术中，一种常见的生成技术
+and so on up through higher-order derivatives. In robotics, a common technique for generating
+
+12
+00:01:00,480 --> 00:01:07,100
+轨迹是使用多项式，通常是具有六个系数的五次多项式
+a trajectory is to use a polynomial, typically, a quintic polynomial which has got six coefficients
+
+13
+00:01:07,100 --> 00:01:13,170
+这让我们可以独立指定六个边界条件，即初始和最终位置，
+which lets us independently specify six boundary conditions, the initial and final position,
+
+14
+00:01:13,170 --> 00:01:19,030
+初始和最终速度，初始和最终加速度。而且，我们可以写这么简单
+initial and final velocity, initial and final acceleration. And, we can write this simple
+
+15
+00:01:19,030 --> 00:01:24,930
+矩阵关系给出了系数值作为轨迹时间的函数，
+matrix relationship which gives us the coefficient values as a function of the trajectory time,
+
+16
+00:01:24,930 --> 00:01:31,490
+资本T和边界条件。然而，多项式存在性能问题
+capital T, and the boundary conditions. There is, however, a performance problem with polynomial
+
+17
+00:01:31,490 --> 00:01:37,520
+轨迹，即峰值速度几乎是平均速度的两倍，我们就是这样
+trajectories and that is that the peak velocity is almost twice the average velocity and we’re
+
+18
+00:01:37,520 --> 00:01:41,870
+浪费电机性能，有效地花费两倍的时间来到达我们想要的地方
+wasting motor performance and effectively taking twice as long to get where we want
+
+19
+00:01:41,870 --> 00:01:45,260
+到达，得到。所谓的更有效的轨迹
+to get to. A more efficient trajectory is what’s called
+
+20
+00:01:45,260 --> 00:01:51,140
+梯形轮廓，我们有一些加速阶段，然后是滑行
+the trapezoidal profile where we have some acceleration phase followed by a coasting
+
+21
+00:01:51,140 --> 00:01:57,330
+或恒速阶段，然后是减速阶段。有点不利
+or constant velocity phase, followed by a deceleration phase. A slight disadvantage
+
+22
+00:01:57,330 --> 00:02:03,260
+梯形曲线的二阶导数，加速度是不连续的，
+of the trapezoidal profile is that the second derivative, the acceleration is discontinuous,
+
+23
+00:02:03,260 --> 00:02:08,670
+但它有很多很多其他的优点，非常常用于机器人和机器
+but it has many, many other virtues and very, very commonly used in robotics and machine
+
+24
+00:02:08,670 --> 00:02:14,110
+工具控制。如果我们想通过一些中间点从一个点移动到另一个点
+tool control. If we want to move from one point to another through a few intermediate
+
+25
+00:02:14,110 --> 00:02:20,590
+我们通过点或路点呼叫的点，然后为了实现连续性
+points which we call via points or way points, then in order to achieve continuity in the
+
+26
+00:02:20,590 --> 00:02:25,650
+路径，我们需要介绍所谓的混合，它们在这里以红色显示。我们
+path, we need to introduce what are called blends and they are shown here in red. We
+
+27
+00:02:25,650 --> 00:02:30,330
+引入一个加速周期，从速度前进到例如，
+introduce an acceleration period to transition from the velocity heading towards, for instance,
+
+28
+00:02:30,330 --> 00:02:35,880
+第2点指向我们需要朝向第3点的速度。缺点是我们
+point 2 in to the velocity we need to head towards point 3. The disadvantage being we
+
+29
+00:02:35,880 --> 00:02:38,940
+从来没有真正达到我们前进的目的。
+never actually get to the point that we’re heading for.
+
+30
+00:02:38,940 --> 00:02:43,860
+如果加速时间很短，我们会非常接近通孔点，但加速度
+If the acceleration time is small, we get very close to the via points, but the acceleration
+
+31
+00:02:43,860 --> 00:02:49,580
+在机器上很高。加速时间很长，然后是机器人的加速度
+on the machine is high. Acceleration time is large, then the acceleration of the robot
+
+32
+00:02:49,580 --> 00:02:55,349
+很低，但我们错过了更多的通过点。我们介绍了插值的概念
+is low, but we miss the via points by a larger amount. We introduced the notion of interpolating
+
+33
+00:02:55,349 --> 00:03:01,239
+在基于标量S的初始值和最终值之间，其在0之间变化
+between an initial value and a final value based on a scalar S which varies between 0
+
+34
+00:03:01,239 --> 00:03:07,260
+和0给出了初始值，1给出了最终值，0.5是中间值
+and 1. 0 gives us the initial value, 1 gives us the final value, and 0.5 is halfway in
+
+35
+00:03:07,260 --> 00:03:13,790
+之间。X可以是矢量。并且，如果S是时间的平滑函数，那么X也是如此。
+between. X can be a vector. And, if S is a smooth function of time, then so is X.
+
+36
+00:03:13,790 --> 00:03:19,830
+我们讨论了如何不将这种简单的插值方案应用于旋转矩阵。
+We talked about how we cannot apply this simple interpolation scheme to rotation matrices.
+
+37
+00:03:19,830 --> 00:03:24,599
+旋转矩阵是特殊的。它们是正交矩阵。所以，将其中两个加在一起
+Rotation matrices are special. They are orthogonal matrices. So, adding two of them together
+
+38
+00:03:24,599 --> 00:03:31,030
+不会导致另一个正交矩阵。所以，我们不对旋转矩阵这样做。
+does not result in another orthogonal matrix. So, we don’t do this to rotation matrices.
+
+39
+00:03:31,030 --> 00:03:37,160
+相反，我们可以做的是将旋转转换为一组角度。它可能是欧拉角，
+Instead, what we can do is convert our rotation to a set of angles. It could be Euler angles,
+
+40
+00:03:37,160 --> 00:03:43,090
+它可以是滚动，俯仰，偏航角度，我们可以插入它们。我们介绍了方向
+it could be roll, pitch, yaw angles, and we can interpolate those. We introduced the direction
+
+41
+00:03:43,090 --> 00:03:47,709
+问题。当我们插入从初始值到最终值的角度时，它就是
+problem. When we’re interpolating an angle from an initial value to a final value, it’s
+
+42
+00:03:47,709 --> 00:03:53,239
+重要的是要记住，我们可以通过两种方式绕圈子旅行。我们可以旅行
+important to remember that there are two ways we can travel around the circle. We can travel
+
+43
+00:03:53,239 --> 00:03:58,030
+这里用蓝色显示的长路，或用红色显示的短路
+the long way which is shown here in blue, or the short way which is shown here in red
+
+44
+00:03:58,030 --> 00:04:04,640
+通过Theta的值等于pi。我们可以插入四元数。我们需要一个更复杂的
+through the value of Theta equals pi. We can interpolate quaternions. We need a more complex
+
+45
+00:04:04,640 --> 00:04:09,629
+这样做的公式。再次插值是S和S的函数变化
+formula in which to do this. Interpolation, once again, is a function of S and S varies
+
+46
+00:04:09,629 --> 00:04:14,780
+从0到1.并且，该插值中的一个重要参数是确定的Theta
+from 0 to 1. And, an important parameter in this interpolation is Theta which is determined
+
+47
+00:04:14,780 --> 00:04:20,699
+从初始和最终四元数的参数。四元数插值提供
+from the parameters of the initial and final quaternion. Quaternion interpolation provides
+
+48
+00:04:20,699 --> 00:04:25,370
+两个方向之间最短和最直接的路径。
+the shortest and most direct path between two orientations.
+
+49
+00:04:25,370 --> 00:04:30,850
+该图显示了正在经历不同的矢量尖端的位置
+This figure shows the position of the tip of a vector which is undergoing different
+
+50
+00:04:30,850 --> 00:04:36,900
+旋转插补的类型。白色路径是由四元数插值引起的，
+types of rotational interpolation. The white path is due to quaternion interpolation and,
+
+51
+00:04:36,900 --> 00:04:41,560
+如上所述，它是最短，最直接的路径。我们可以看到欧拉
+as just mentioned, it’s the shortest and most direct path. We can see that the Euler
+
+52
+00:04:41,560 --> 00:04:46,810
+角度和滚动，俯仰，偏航角插补路径偏离。这意味着他们
+angle and roll, pitch, yaw angle interpolation paths deviate from that. That means that they
+
+53
+00:04:46,810 --> 00:04:54,460
+在两个方向之间采取更长，更间接的路径。最后，我们来了
+take a longer and more indirect path between the two orientations. Finally, we come to
+
+54
+00:04:54,460 --> 00:05:01,340
+姿势插值，通常称为笛卡尔插值。我们有两个姿势，姿势0和
+pose interpolation, often referred to as Cartesian interpolation. We have two poses, pose 0 and
+
+55
+00:05:01,340 --> 00:05:07,160
+姿势1，每个由旋转矩阵和平移向量表示。我们可以转换
+pose 1, which each represented by a rotation matrix and a translation vector. We can convert
+
+56
+00:05:07,160 --> 00:05:13,560
+旋转矩阵到四元数。插值翻译非常简单。我们应用线性
+the rotation matrix to a quaternion. Interpolating the translation is very simple. We apply linear
+
+57
+00:05:13,560 --> 00:05:19,060
+插值到平移分量，然后我们应用四元数插值
+interpolation to the translational component, and then we apply quaternion interpolation
+
+58
+00:05:19,060 --> 00:05:25,000
+到旋转组件。我们可以将插值的四元数转换回旋转
+to the rotation component. We can convert the interpolated quaternion back to a rotation
+
+59
+00:05:25,000 --> 00:05:28,440
+矩阵，将其与插值翻译相结合
+matrix, combine it with the interpolated translation
+
+60
+00:05:28,500 --> 00:05:32,420
+如果这就是我们想要的，那就重建一个同质的转变。
+to rebuild a homogeneous transformation if that’s what we want.
+

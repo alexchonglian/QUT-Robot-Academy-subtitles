@@ -1,0 +1,70 @@
+1
+00:00:03,149 --> 00:00:06,589
+对点对应问题说一点是有用的。
+It's going to be useful to say a little bit more about the point correspondence problem.
+
+2
+00:00:06,589 --> 00:00:11,910
+在这里，我们再次看到了我们三角形物体的初始视图，在这里我们得到了最终的
+Here we have again the initial view of our triangular object and here we have the final
+
+3
+00:00:11,910 --> 00:00:16,270
+我们的三角形对象的视图或所需的视图。
+view, or the desired view, of our triangle object.
+
+4
+00:00:16,270 --> 00:00:20,400
+当点在图像平面中移动时，它们可以像这样和这样移动
+When the points move in the image plane it's possible for them to move like this and this
+
+5
+00:00:20,400 --> 00:00:25,039
+是我们刚刚看过的例子。但这也有可能得分
+is the example that we just looked at a moment ago. But it's also possible for the points
+
+6
+00:00:25,039 --> 00:00:31,390
+像这样移动，如果他们这样做那么对象的运动是三维的
+to move like this and if they did that then the motion of the object in three dimensional
+
+7
+00:00:31,390 --> 00:00:37,219
+空间将变得更加复杂。它几乎要求物体翻转
+space is going to be much more complex. It's almost going to require the object to flip
+
+8
+00:00:37,219 --> 00:00:40,260
+在三维世界里。
+around in the three-dimensional world.
+
+9
+00:00:40,260 --> 00:00:45,649
+我们可以定义对应关系的另一种方式就是这样，它又涉及不同的方式
+Another way we could define the correspondence is like this and again it involved a different
+
+10
+00:00:45,649 --> 00:00:48,440
+一种三维运动。
+kind of three-dimensional motion.
+
+11
+00:00:48,440 --> 00:00:54,579
+最后我们可以让这种特殊的点在图像平面上移动。
+And finally we could have this particular way of point moving on the image plane.
+
+12
+00:00:54,579 --> 00:01:00,379
+将黄点与红点相关联的每种不同方式将导致a
+Each different way of associating a yellow dot with a red dot is going to result in a
+
+13
+00:01:00,379 --> 00:01:05,979
+三维世界中的不同运动。最终结果将是相同的
+different motion in the three-dimensional world. The net result will be the same in
+
+14
+00:01:05,979 --> 00:01:10,090
+图像平面但实际的三维运动会有所不同。
+the image plane but the actual three-dimensional motion will be different.
+

@@ -1,0 +1,490 @@
+1
+00:00:03,750 --> 00:00:08,540
+让我们来研究图像强度如何沿着我在这里用红色显示的线条变化
+Let’s investigate how image intensity varies along the line that I have shown here in red
+
+2
+00:00:08,540 --> 00:00:14,330
+特别是，让我们关注P尾部发生的事情。如果我们看一下
+and, in particular, let’s focus on what happens here at the tail of the P. If we look
+
+3
+00:00:14,330 --> 00:00:19,529
+在这里的强度分布和这些像素值，这些灰度值是双倍的
+at the intensity profile here and these pixel values, these grey scale values are double
+
+4
+00:00:19,529 --> 00:00:25,109
+黑色和白色之间的精度值在零之间变化，我们看到它
+precision values that vary between zero for black and one for white, and we see that it
+
+5
+00:00:25,109 --> 00:00:29,340
+以0.2左右的低值开始。而在黑漆-背景
+starts off with a low value of around 0.2. Whereas on the black paint — the background
+
+6
+00:00:29,340 --> 00:00:35,170
+标志-当我们穿过白色涂料时，它们上升到大约0.8的值
+of the sign — they rise up to a value of around 0.8 and when we cross the white paint, which
+
+7
+00:00:35,170 --> 00:00:39,930
+是P的尾部，然后再次下降到低背景值
+is the tail of the P, and then fall off again to low background values
+
+8
+00:00:39,930 --> 00:00:46,140
+回到黑漆上。我们可能有兴趣看水平梯度和
+back onto the black paint. We might be interested in looking at the horizontal gradient and
+
+9
+00:00:46,140 --> 00:00:51,000
+我们可以将梯度近似为左侧像素与其邻居之间的差异
+we can approximate the gradient as the difference between a pixel and its neighbour on the left-hand
+
+10
+00:00:51,000 --> 00:00:56,250
+side-梯度的简单数值近似。但是，这不是非常对称的
+side — a simple numerical approximation to the gradient. However, this is not a very symmetrical
+
+11
+00:00:56,250 --> 00:01:01,289
+想一想的方法。所以我们可以用这种方式表示它：强度
+way to think about this. So instead we can represent it this way: the intensity in the
+
+12
+00:01:01,289 --> 00:01:07,210
+像素U的水平方向是其右侧的邻居之间的差
+horizontal direction of pixel U is the difference between its neighbour on the right-hand side
+
+13
+00:01:07,210 --> 00:01:13,970
+和它在左侧的邻居除以2.这将代表水平梯度。
+and its neighbour on the left-hand side, divided by 2. This would represent the horizontal gradient.
+
+14
+00:01:14,840 --> 00:01:17,460
+现在我们以这种形式表达了渐变
+Now the gradient expressed in this form we
+
+15
+00:01:17,470 --> 00:01:24,890
+可以写为内核-它是一个由1乘3矩阵表示的小内核。如果我们申请
+can write as a kernel — it is a small kernel represented by a 1 by 3 matrix. If we apply
+
+16
+00:01:24,890 --> 00:01:30,750
+这个内核到输入图像的结果将是一个像素包含的输出图像
+this kernel to the input image the result would be an output image whose pixels comprise
+
+17
+00:01:30,750 --> 00:01:34,869
+相应点的水平梯度。
+the horizontal gradient at the corresponding point.
+
+18
+00:01:34,869 --> 00:01:39,579
+这是一个类似于我们以前见过的动画;在红色，我们看到输入窗口
+Here is an animation similar to ones we have seen before; in red, we see the input window
+
+19
+00:01:39,579 --> 00:01:44,229
+从左到右，从上到下穿过图像。因为它正在移动我们
+marching across the image from left to right and from top to bottom. As it is moving we
+
+20
+00:01:44,229 --> 00:01:49,490
+计算输出值并将它们放入输出图像。再次注意
+are computing the output values and dropping them into the output image. Note again that
+
+21
+00:01:49,490 --> 00:01:52,640
+我们不计算左手边缘和右手边缘
+we are not computing the left-hand edge and right-hand edge of the
+
+22
+00:01:52,640 --> 00:01:59,310
+输出图像，因为这是输入窗口从输入图像中掉落的地方。我们可以看到
+output image because this is where the input window falls off the input image. We can see
+
+23
+00:01:59,310 --> 00:02:04,259
+在计算梯度时，我们可以看到温和的水平梯度区域
+the gradient being computed, we can see areas of gentle horizontal gradient, we can see
+
+24
+00:02:04,259 --> 00:02:09,110
+水平梯度更强的区域，我们有这种连续性，我们可以看到
+the areas of much stronger horizontal gradient where we have this continuity and we can see
+
+25
+00:02:09,110 --> 00:02:16,280
+梯度为负的区域。让我们将它应用于我们的形象
+areas where the gradient is negative. Let’s apply this to the image that we were
+
+26
+00:02:16,280 --> 00:02:22,980
+看一下之前，我们可以很简单地使用工具箱功能iconv。
+looking at earlier and we can do that quite simply using the tool box function iconv.
+
+27
+00:02:22,980 --> 00:02:27,950
+我们传入第一个参数，即内核，第二个参数，即
+We pass in the first argument, which is the kernel, and the second argument, which is
+
+28
+00:02:27,950 --> 00:02:31,810
+图片。我们在这里看到的是左手
+the image. What we can see here is that the left-hand
+
+29
+00:02:31,810 --> 00:02:36,069
+字母的边缘编码为蓝色;这意味着它们具有正梯度
+edges of the letters are coded blue; that means they have positive gradient that is
+
+30
+00:02:36,069 --> 00:02:41,450
+强度从背景的黑暗变为字母的白色。
+where the intensity is changing from the dark of the background to the white of the letters.
+
+31
+00:02:41,450 --> 00:02:45,470
+在字母的右侧，强度从白色下降到
+On the right-hand side of the letters where the intensity falls from white down to the
+
+32
+00:02:45,470 --> 00:02:50,720
+深色背景它有一个负值，这显示为红色。那么内核是什么
+dark background it has got a negative value and this is shown as red. So what this kernel
+
+33
+00:02:50,720 --> 00:02:56,760
+正在做的是突出显示场景中的垂直线，因为有垂直线
+is doing is highlighting vertical lines within the scene because vertical lines have got
+
+34
+00:02:56,760 --> 00:03:03,379
+强烈的水平梯度。我用下标u（Iu）表示这个图像。
+a strong horizontal gradient. I denote this image as I subscript u (Iu).
+
+35
+00:03:03,379 --> 00:03:07,790
+这是表示图像渐变的常用方法。下标代表方向
+This is a common way to denote image gradients. The subscript represents the direction in
+
+36
+00:03:07,790 --> 00:03:13,819
+正在计算梯度。现在我们可以通过旋转做一个非常相似的事情
+which the gradient is being computed. Now we can do a very similar thing by rotating
+
+37
+00:03:13,819 --> 00:03:19,670
+内核，现在我们可以计算垂直方向的渐变。所以内核现在
+the kernel and now we can compute the gradient in the vertical direction. So the kernel now
+
+38
+00:03:19,670 --> 00:03:24,659
+是我们用来计算水平梯度的内核的转置。它会允许
+is the transpose of the kernel we used to compute horizontal gradient. It will allow
+
+39
+00:03:24,659 --> 00:03:27,220
+我们计算垂直梯度。
+us to compute vertical gradient.
+
+40
+00:03:27,220 --> 00:03:32,580
+现在，我们可以将它应用到我们的企鹅标志，这就是内核的样子和这个
+Now, we can apply that to our penguin sign, this is what the kernel looks like and this
+
+41
+00:03:32,580 --> 00:03:38,180
+是输出的样子。它与我们之前看到的有些相似之处。和我们一样
+is what the output looks like. It has some similarities to what we saw before. As we
+
+42
+00:03:38,180 --> 00:03:43,409
+在列中向下移动，我们看到字母的顶部是蓝色的，这表明
+move down in a column, we see that the tops of letters are blue and this indicates that
+
+43
+00:03:43,409 --> 00:03:48,560
+他们有一个强烈的正梯度。请记住，在图像中垂直坐标
+they have got a strong positive gradient. Remember that in images the vertical coordinate
+
+44
+00:03:48,560 --> 00:03:54,659
+向下增加。所以在一封信的顶部，我们正从黑暗的背景移动到
+increases downwards. So at the top of a letter we are moving from the dark background onto
+
+45
+00:03:54,659 --> 00:03:59,870
+白漆，所以我们有一个强烈的正梯度。在那里的字母的底部
+the white paint and so we have a strong positive gradient. On the bottom of the letters there
+
+46
+00:03:59,870 --> 00:04:05,340
+如果你从白色油漆上掉落到黑色背景上，则是一个强烈的负梯度。
+is a strong negative gradient if you fall off the white paint down onto the black background.
+
+47
+00:04:05,340 --> 00:04:10,970
+因此垂直渐变图像突出显示了图像中的水平线。我们
+So the vertical gradient image has highlighted the horizontal lines within the image. We
+
+48
+00:04:10,970 --> 00:04:16,440
+可以使用几乎与之前相同的函数在MATLAB中进行计算，除非我们进行了转置
+can compute this in MATLAB using almost the same function as before except we have transposed
+
+49
+00:04:16,440 --> 00:04:22,410
+内核。内核是一个1乘3的矩阵，我们使用MATLAB的转置运算符
+the kernel. The kernel is a 1 by 3 matrix and we use MATLAB’s transpose operator the
+
+50
+00:04:22,410 --> 00:04:28,110
+引号用于将该内核转换为3×1矩阵。
+quote symbol in order to transpose that kernel into a 3 by 1 matrix.
+
+51
+00:04:28,110 --> 00:04:33,960
+在图像处理中使用的一个非常常见的内核称为Sobel内核，它有一些
+A very common kernel used in image processing is called the Sobel kernel, and it has some
+
+52
+00:04:33,960 --> 00:04:39,030
+与我们之前使用的简单内核相似。我想要考虑这个内核
+similarities to the simple kernel that we used before. I like to think of this kernel
+
+53
+00:04:39,030 --> 00:04:44,440
+计算当前行上的水平梯度并将其与水平线平均
+as computing the horizontal gradient on the current line and averaging that with the horizontal
+
+54
+00:04:44,440 --> 00:04:50,389
+在上面和下面的线上的渐变。我们可以获得这个内核的价值
+gradient on the line above and on the line below. We can obtain the value of this kernel
+
+55
+00:04:50,389 --> 00:04:57,370
+使用工具箱功能ksobel。如果我将此功能应用于我的企鹅图像，我可以获得
+using the tool box function ksobel. If I apply this function to our penguin image I can obtain
+
+56
+00:04:57,370 --> 00:05:02,060
+这里显示的水平渐变图像看起来非常类似于水平
+a horizontal gradient image that is shown here, which looks quite similar to the horizontal
+
+57
+00:05:02,060 --> 00:05:07,120
+渐渐我们只是看着。函数isobel，我们传递一个图像，它返回一个
+gradient we just looked at. The function isobel, we pass it an image and it returns both a
+
+58
+00:05:07,120 --> 00:05:10,770
+水平梯度图像和垂直梯度图像。
+horizontal gradient image and a vertical gradient image.
+
+59
+00:05:10,770 --> 00:05:15,710
+图像中非常重要的特征-人造图像中非常常见的特征
+A really important feature in an image — a very common feature in images of man-made
+
+60
+00:05:15,710 --> 00:05:21,800
+场景-我们称之为边缘。我要做的是加载我们拥有的图像
+scenes — are what we call edges. What I am going to do is to load an image that we have
+
+61
+00:05:21,800 --> 00:05:29,410
+之前看过并展示过，这里有关于企鹅的标志，还有什么
+seen before and to display that, and here is the sign about penguins again, and what
+
+62
+00:05:29,410 --> 00:05:36,320
+我要做的是沿着大致水平线观察强度分布
+I am going to do is to look at an intensity profile along roughly a horizontal line from
+
+63
+00:05:36,320 --> 00:05:44,840
+在这里，我们看到的是强度从一开始就具有较低的价值
+here to there, and what we see is the intensity has got a low value to start with and then
+
+64
+00:05:44,840 --> 00:05:50,479
+当我们穿过标志上的每一块白色油漆时，我们看到强度上升。
+as we cross each of the pieces of white paint on the sign we see the intensity goes up.
+
+65
+00:05:50,479 --> 00:05:56,940
+现在让我们放大一点，它有点太忙了。我要扩大
+Now let’s zoom in a little bit on that, it is a little bit too busy. I am going to expand
+
+66
+00:05:56,940 --> 00:06:02,630
+这个地区，这是“看”这个词的开头，也是我们看到的
+this region here, which is the beginning of the word ‘look’, and what we see quite
+
+67
+00:06:02,630 --> 00:06:08,910
+这里显然是像素具有相当低的值，小于0.2，这是背景。
+clearly here is that the pixels have got quite a low value, less than 0.2 which is the background.
+
+68
+00:06:08,910 --> 00:06:16,460
+标志的深色背景移动到0.6左右，0.7左右。我们穿过的白色油漆
+The dark background of the sign moves up to around 0.6, 0.7. The white paint as we cross
+
+69
+00:06:16,460 --> 00:06:22,949
+字母L-down再次变为0.2，然后像素值随着我们交叉而增加
+the letter L—down again to a value of 0.2, and then pixel value increases as we cross
+
+70
+00:06:22,949 --> 00:06:29,110
+剩下的信件。我们可以看到，当我们从黑暗走向光明时
+the remaining letters. What we can see is that as we move from the dark to the light
+
+71
+00:06:29,110 --> 00:06:33,979
+强度增长很快。然后它在另一边迅速下降
+the intensity increases quite rapidly. Then it falls quite rapidly on the other side of
+
+72
+00:06:33,979 --> 00:06:39,380
+这个角色，所以我们将探索这种渐变或变化率的想法
+the character, so we are going to explore this idea of gradient or the rate of change
+
+73
+00:06:39,380 --> 00:06:43,690
+当我们在标志上水平移动时，在灰度级。
+at the grey level as we move horizontally across the sign.
+
+74
+00:06:43,690 --> 00:06:47,789
+通常在图像处理中，我们感兴趣的是有很多图像的区域
+Often in image processing we are interested in areas of the image where there is a lot
+
+75
+00:06:47,789 --> 00:06:51,590
+渐变。我们不关心它是水平的还是垂直的;我们不在乎
+of gradient. We don’t care whether it is horizontal or vertical; we don’t care whether
+
+76
+00:06:51,590 --> 00:06:55,720
+这是积极的还是消极的。我们只想知道哪里有很多渐变。
+it is positive or negative. We just want to know where there is a lot of gradient.
+
+77
+00:06:55,720 --> 00:06:59,849
+这可以通过计算平方和的平方根来计算得非常简单
+And this is computed quite simply by computing the square root of the sum of the squares
+
+78
+00:06:59,849 --> 00:07:04,310
+水平和垂直渐变的结果，并产生这样的图像。
+of the horizontal and vertical gradients and results in an image like this.
+
+79
+00:07:04,310 --> 00:07:08,319
+大多数是黑色的，因为背景上没有太多的渐变。那里
+Most of it is black because there isn’t much gradient over the background. Where there
+
+80
+00:07:08,319 --> 00:07:12,669
+在字母边缘有很多渐变，这个函数有很高的价值。所以
+is a lot of gradient around the edges of letters this function has got a very high value. So
+
+81
+00:07:12,669 --> 00:07:17,509
+这是一个很好的操作符，用于突出显示场景中对象的边缘。和我们
+this is a great operator for highlighting the edges of objects within a scene. And we
+
+82
+00:07:17,509 --> 00:07:22,830
+可以使用函数isobel获得这样的图像，没有输出参数。
+can obtain an image like this using the function isobel with no output arguments.
+
+83
+00:07:22,830 --> 00:07:28,229
+我们可能也对最大梯度的方向感兴趣;在这个图像像素
+We might also be interested in the direction of maximum gradient; in this image pixels
+
+84
+00:07:28,229 --> 00:07:33,380
+在水平方向上每个像素增加10个值，每个像素增加5个
+are increasing by a value of 10 every pixel in the horizontal direction and by 5 every
+
+85
+00:07:33,380 --> 00:07:39,710
+像素垂直。因此，最大梯度变化的方向是在这个方向上，26°
+pixel vertically. So the direction of maximum gradient change is in this direction, 26°
+
+86
+00:07:39,710 --> 00:07:45,860
+关于水平。现在我们可以应用相同的技术
+with respect to horizontal. Now we can apply that same technique to the
+
+87
+00:07:45,860 --> 00:07:50,530
+我们之前计算过的索贝尔图像。我们可以计算一个渐变图像，即弧形
+Sobel image that we computed before. We can compute a gradient image and that is the arc
+
+88
+00:07:50,530 --> 00:07:57,319
+垂直梯度图像元素的切线明智地除以水平梯度图像。
+tangent of the vertical gradient image element wise divided by the horizontal gradient image.
+
+89
+00:07:57,319 --> 00:08:01,669
+它看起来有点太忙了，所以让我们放大字母P.
+It looks a little bit too busy, so let’s zoom in on the letter P.
+
+90
+00:08:01,669 --> 00:08:07,389
+如果我们观察P的左边缘的梯度方向，我们就会看到它
+And if we look at the gradient direction on the left-hand edge of the P, we see that it
+
+91
+00:08:07,389 --> 00:08:12,539
+梯度方向值为0.它被编码为白色。
+has got a gradient direction value of 0. It’s coded as white.
+
+92
+00:08:12,539 --> 00:08:17,310
+因此，如果我们查看此处的颜色条，我们可以看到0对应于零梯度
+So if we look at the colour bar over here, we can see that 0 corresponds to zero gradient
+
+93
+00:08:17,310 --> 00:08:23,430
+角度，我们期望这封信的这一面;渐变在增加
+angle and we expect this on this side of the letter; the gradient is increasing in the
+
+94
+00:08:23,430 --> 00:08:29,430
+水平方向从左到右。在字母的另一边渐变
+horizontal direction from left to right. On the other side of the letter the gradient
+
+95
+00:08:29,430 --> 00:08:34,380
+实际上是从右到左增加，因为正是在这一点上我们正在追随
+is, in fact, increasing from right to left because it is at this point that we are following
+
+96
+00:08:34,380 --> 00:08:40,310
+从高白值到暗值。所以渐变是从右到左
+from the high white value down to the dark value. So the gradient is right to left and
+
+97
+00:08:40,310 --> 00:08:44,390
+我们可以在字母的这一边看到渐变角度加上π，哪个
+we can see on this side of the letter the gradient angles are either plus π, which
+
+98
+00:08:44,390 --> 00:08:49,490
+显示为深蓝色或负π，显示为深红色。
+are shown as dark blue or negative π, which is shown as dark red.
+

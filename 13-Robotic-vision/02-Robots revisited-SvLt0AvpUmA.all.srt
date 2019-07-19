@@ -1,0 +1,110 @@
+1
+00:00:03,740 --> 00:00:07,680
+在我们开始讨论机器人视觉之前，重新访问它将非常有用
+Before we start talking about robotic vision, it’s going to be very useful just to revisit
+
+2
+00:00:07,680 --> 00:00:13,259
+机器人的一些基本原理，特别是机器人的定义。
+some fundamentals of robots, and in particular, definitions of what a robot is.
+
+3
+00:00:13,259 --> 00:00:18,720
+对于那些参加过第一个在线课程的人，我们提出了这个定义
+For those of you who participated in the first online course, we presented this definition
+
+4
+00:00:18,720 --> 00:00:24,029
+机器人是什么：它是一个可以感知，计划和行动的目标导向的机器。和
+of what a robot is: It’s a goal-oriented machine that can sense, plan and act. And
+
+5
+00:00:24,029 --> 00:00:28,210
+重要的关键字在这里用红色突出显示。
+the important keywords are highlighted here in red.
+
+6
+00:00:28,210 --> 00:00:32,619
+我们为机器人引入的一个更随意的定义是它是一台机器
+A more casual definition that we introduced for a robot is that it’s a machine that
+
+7
+00:00:32,619 --> 00:00:40,340
+可以移动-或者移动自己或者可能是它的手-从A位移到B位。所以我们可以移动它的手
+can move—either itself or perhaps its hand—from place A to place B. So we might move its hand
+
+8
+00:00:40,340 --> 00:00:45,330
+在A处拾取一个物体，并将其放在B处;或者它可能会移动整个
+to pick up an object at place A, and put it down at place B; or it might move its entire
+
+9
+00:00:45,330 --> 00:00:50,180
+身体。它可能沿走廊中的A位走廊移动到B处
+body. It might move along a corridor from place A in the corridor to place B in the
+
+10
+00:00:50,180 --> 00:00:54,040
+走廊。现在让我们看一下中的一些关键字
+corridor. Let’s now look at some of the keywords in
+
+11
+00:00:54,040 --> 00:00:59,850
+第一个更详细的定义，其中一个关键概念是感知。
+the first, more detailed definition, and one of the key concepts is sensing.
+
+12
+00:00:59,850 --> 00:01:04,580
+机器人从根本上讲是一种能够感知其环境的机器。各种各样的事情
+A robot fundamentally is a machine that can sense its environment. The sorts of things
+
+13
+00:01:04,580 --> 00:01:09,119
+它可能想要感知的是：它需要操作的对象在哪里-在哪里
+that it might want to sense is: where is the object that it needs to manipulate—where
+
+14
+00:01:09,119 --> 00:01:13,659
+是它需要接受的东西。它可能想要感知的另一件事是在哪里
+is the thing that it needs to pick up. Another thing that it might want to sense is where
+
+15
+00:01:13,659 --> 00:01:18,840
+是机器人本身。走廊情况下的移动机器人;走廊里的下落是
+is the robot itself. A mobile robot in a corridor situation; whereabouts in the corridor is
+
+16
+00:01:18,840 --> 00:01:23,930
+机器人？这是经典的'我在哪里？'移动机器人问题。
+the robot? This is the classical ‘where am I?’ problem of mobile robotics.
+
+17
+00:01:23,930 --> 00:01:28,890
+机器人需要做的另一件事是计划。因此，从它的传感器，它知道它在哪里;
+Another thing a robot needs to do is to plan. So from its sensors it knows where it is;
+
+18
+00:01:28,890 --> 00:01:33,081
+它知道它需要使用的东西在哪里;它有一个目标，一个东西
+it knows where the things that it needs to work with are; it has got a goal, a thing
+
+19
+00:01:33,081 --> 00:01:37,909
+它想要实现。因此，它制定了从当前状态转移到何处的计划
+that it wants to achieve. So it makes a plan of where to move from its current state to
+
+20
+00:01:37,909 --> 00:01:42,140
+它的目标国家。而这个过程的最后一部分就是随身携带
+its goal state. And the final part of the process is to carry
+
+21
+00:01:42,140 --> 00:01:47,659
+一些行动。鉴于我有一个计划，现在我必须执行计划的步骤。
+out some action. Given that I’ve got a plan, now I have to carry out the step of the plan.
+
+22
+00:01:47,659 --> 00:01:52,459
+我抓住了这个物体，或者我把自己从A地搬到了B处。
+I grab the object or I move myself from place A to place B.
+

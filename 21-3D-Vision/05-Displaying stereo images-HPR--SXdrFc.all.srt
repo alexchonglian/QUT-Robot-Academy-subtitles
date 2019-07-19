@@ -1,0 +1,385 @@
+1
+00:00:03,220 --> 00:00:08,440
+如果我们有立体声对，则对应于左眼的图像和对应的图像
+If we have a stereo pair, an image that corresponds to the left eye and an image that corresponds
+
+2
+00:00:08,440 --> 00:00:13,920
+在右眼，如果我们能够提出一种机制来指导这两者
+to the right eye, if we can come up with a mechanism for directing those two slightly
+
+3
+00:00:13,920 --> 00:00:20,980
+不同的图像到各自的眼睛，然后我们有一个非常，非常生动的三维感
+different images to the respective eyes, then we have a very, very vivid sense of the three-dimensionality
+
+4
+00:00:20,980 --> 00:00:26,599
+这是3D电影，3D电视等的基本原理。
+of the scene and this is the underlying principle of 3D movies, 3D television and so on.
+
+5
+00:00:26,599 --> 00:00:31,240
+这是人类最长时间着迷的东西。我真的很喜欢这个
+It's something human beings have been fascinated with for the longest time. I really love this
+
+6
+00:00:31,240 --> 00:00:36,399
+这部电影的海报来自1950年代的电影院。它向我们展示了那里
+movie poster in this scene from a cinema back in the 1950's. It shows us that there’s
+
+7
+00:00:36,399 --> 00:00:41,969
+这种长期的人类对3D电影的迷恋。这不是最近的现象。技术
+this long term human fascination with 3D movies. It's not a recent phenomenon. The technology
+
+8
+00:00:41,969 --> 00:00:47,539
+不断变化，但基本原则完全相同。根本问题
+keeps changing, but the underlying principle is exactly the same. The fundamental problem
+
+9
+00:00:47,539 --> 00:00:52,160
+我们需要解决的是如何将不同的图像分成左眼和右眼？
+we need to address is how do we get different image into our left eye and our right eye?
+
+10
+00:00:52,160 --> 00:00:56,030
+让我们来看看多年来开发的一些技术。
+Let’s have a look at some of the technologies that have been developed over the years.
+
+11
+00:00:56,030 --> 00:01:01,559
+为了再现我们在日常生活中获得的真实生动的3D感知，我们
+In order to reproduce the really vivid 3D perception that we get in everyday life, we
+
+12
+00:01:01,559 --> 00:01:07,030
+需要使用一些相当精细的机制来人为地重建这种效果。
+need to use some rather elaborate mechanisms to recreate that effect artificially.
+
+13
+00:01:07,030 --> 00:01:14,790
+所以第一个可能是从上个世纪初回来的，这个设备的作用是什么
+So the first one is back from probably early last century and what this device does is
+
+14
+00:01:14,790 --> 00:01:19,950
+拍摄对应于来自左眼的图像和拍摄的另一图像的图像
+takes an image which corresponds to an image from the left eye and another image taken
+
+15
+00:01:19,950 --> 00:01:22,720
+从对应于右眼的位置。
+from a position that corresponds to the right eye.
+
+16
+00:01:22,720 --> 00:01:28,180
+然后这个镜头机制将左图像发送到我的左眼和右图像
+Then this lens mechanism here sends the left image into my left eye and the right image
+
+17
+00:01:28,180 --> 00:01:33,990
+进入我的右眼所以如果我把它拿到脸上，我会看到一个非常生动的立体感
+into my right eye. So if I hold this up to my face, I see a really vivid three-dimensional
+
+18
+00:01:33,990 --> 00:01:38,790
+100多年前拍摄的场景的代表。
+representation of the scene that was captured more than 100 years ago.
+
+19
+00:01:38,790 --> 00:01:42,439
+这是第一种立体镜，这些东西真的很受欢迎
+This is the first kind of stereoscope and these things were really, really popular in
+
+20
+00:01:42,439 --> 00:01:49,210
+20世纪初。因此，该技术的稍微更现代的版本是来自
+the early 1900s. So a slightly more modern version of that technology is something from
+
+21
+00:01:49,210 --> 00:01:54,729
+20世纪60年代，这一个在一小块纸板上有许多立体图像对
+the 1960s and this one has a number of stereo image pairs on a little piece of cardboard
+
+22
+00:01:54,729 --> 00:01:59,009
+还有一点点击，所以我可以更方便地从一张图片移动到另一张图片。
+and a little clicker so I can move from one picture to the other much more conveniently.
+
+23
+00:01:59,009 --> 00:02:05,509
+如果我再次把握住这一点，我会对我正在看的场景产生非常生动的3D感知。
+If I hold this up to my head, again, I get a very vivid 3D perception of the scene that I’m looking at.
+
+24
+00:02:06,600 --> 00:02:10,739
+另一种为左眼和右眼提供不同图像的方法是什么
+Another approach to providing different images into the left and right hand eyes, what’s
+
+25
+00:02:10,739 --> 00:02:15,129
+称为浮雕技术，你看红色和蓝色的立体图像
+called the Anaglyph Technique and you look at an anaglyph image through red and blue
+
+26
+00:02:15,129 --> 00:02:20,870
+眼镜。会发生什么是左图像以红色和右手图像打印
+glasses. What happens is that the left image is printed in red and the right-handed image
+
+27
+00:02:20,870 --> 00:02:26,340
+用蓝色印刷，戴上这些过滤后的眼镜，左边的图像就会出现
+is printed in blue and by putting on these filtered glasses, the left image comes through
+
+28
+00:02:26,340 --> 00:02:30,930
+红色滤镜进入我的左眼。它不通过蓝色滤镜。所以我的右眼
+the red filter into my left eye. It does not pass though the blue filter. So my right eye
+
+29
+00:02:30,930 --> 00:02:35,480
+没有看到。对于右手图像，以蓝色打印的图像通过
+doesn't see that. For the right-hand image, the one that’s printed in blue, comes through
+
+30
+00:02:35,480 --> 00:02:40,140
+蓝色过滤到我的右眼，但没有进入我的左眼。所以，如果我把它放在和
+the blue filter into my right eye but not into my left eye. So if I put this on and
+
+31
+00:02:40,140 --> 00:02:45,430
+查看网页上的印刷立体图像或立体图像，例如，NASA有
+look at a printed anaglyph image or an anaglyph image on a webpage, for instance, NASA has
+
+32
+00:02:45,430 --> 00:02:50,700
+很多火星的立体图像，我们得到一个非常非常生动的3D感觉。
+lots of anaglyph images of Mars, we get a very, very vivid 3D sensation.
+
+33
+00:02:50,700 --> 00:02:56,970
+这只是NASA收集的3D立体图像的一张图片。最近的火星
+This is just one image from NASA’s collection of 3D anaglyph images. The most recent Mars
+
+34
+00:02:56,970 --> 00:03:02,000
+流浪者都携带相当复杂的立体视觉系统，图像被传回
+Rovers all carry quite sophisticated stereovision systems and the images are transmitted back
+
+35
+00:03:02,000 --> 00:03:08,000
+到地球，由美国国家航空航天局处理并变成浮雕形式，并通过他们的网站提供。
+to Earth, processed by NASA and turned into anaglyph form and made available through their website.
+
+36
+00:03:08,010 --> 00:03:12,330
+我们没有得到的是一个非常完整的颜色表示，因为我们是
+What we don’t get though is a very full representation of the colour because we’re
+
+37
+00:03:12,330 --> 00:03:16,659
+通过红色和蓝色眼镜看着它。所以它看起来有点单色但是3D
+looking at it through red and blue glasses. So it looks a bit monochromatic but the 3D
+
+38
+00:03:16,659 --> 00:03:21,300
+感知真的很生动。如果你有一副立体眼镜，
+perception is really quite vivid. If you’ve got access to a pair of anaglyph glasses,
+
+39
+00:03:21,300 --> 00:03:25,920
+这些是配有红色和蓝色镜片的眼镜，你可能有兴趣抓住它们，放上它们
+these are glasses with the red and blue lenses, you might be interested to grab them, put them
+
+40
+00:03:25,920 --> 00:03:31,680
+然后看看下面几张图片。它们包含一些非常生动的三维内容。
+on and have a look at these next few images. They contain some very vivid three-dimensional content.
+
+41
+00:03:31,680 --> 00:03:38,080
+绘制3D坐标框架的工具箱功能具有立体模式。如果我们打电话给
+The toolbox function that draws 3D coordinate frames has an anaglyph mode. If we call the
+
+42
+00:03:38,240 --> 00:03:45,920
+我们之前见过的trplot函数，它将以90度的旋转传递
+trplot function which we've seen before, it will pass in a rotation of 90 degrees around
+
+43
+00:03:45,920 --> 00:03:52,320
+X轴，这是我们想要显示的坐标系。我们通过3D图
+the X axis so that’s the coordinate frame that we want to display. We pass the 3D plot
+
+44
+00:03:52,480 --> 00:03:58,720
+选项，如果我通过我的立体眼镜看到这一点，我会得到一个非常逼真的3D印象。
+option and if I view this through my anaglyph glasses, I get a very realistic 3D impression.
+
+45
+00:03:58,720 --> 00:04:02,560
+我实际上看到Z轴有点出现在屏幕外面。
+I actually see that Z axis coming out of the screen somewhat.
+
+46
+00:04:03,520 --> 00:04:09,760
+另一种技术和你在3D电影中看到的技巧，你可以看到重力或阿凡达，霍比特人的东西
+Another technique and one you see in 3D movies, you can see Gravity or Avatar, Hobbit, something
+
+47
+00:04:09,760 --> 00:04:15,360
+像这样，你戴上这样的眼镜，剧院里发生的事情就是左手
+like that, and you put on glasses like this, what happens in the theatre is the left-hand
+
+48
+00:04:15,360 --> 00:04:20,480
+图像是用光投射的，但它可能在垂直方向上也是偏振的
+image is projected with light but it’s polarized perhaps in the vertical direction and that
+
+49
+00:04:20,480 --> 00:04:25,760
+光线通过这个滤光片，让偏振光进入我的右眼
+light goes through this filter which lets through polarized light into my right eye
+
+50
+00:04:25,920 --> 00:04:30,880
+但是没有进入我的左眼，因为这个滤镜在水平方向上是偏振的。
+but not into my left eye because this filter is polarized in the horizontal direction.
+
+51
+00:04:31,200 --> 00:04:37,760
+右手图像是通过此滤镜进行垂直偏振投影的
+The right-hand image is projected with a vertical polarization comes through this filter but
+
+52
+00:04:37,760 --> 00:04:42,880
+不要进入这个过滤器。所以当我把它放在电影院的头上时，我看到了一个非常好的
+not into this filter. So when I put this on my head in the cinema, I see a really wonderful
+
+53
+00:04:42,880 --> 00:04:48,640
+被拍摄的场景的3D五颜六色的表示法。
+3D colourful representation of the scene that was filmed.
+
+54
+00:04:48,800 --> 00:04:54,560
+对于家庭使用，使用三维电视，技术有点不同。
+For home use, with three-dimensional TV’s, the technology is a little bit different.
+
+55
+00:04:54,560 --> 00:05:00,000
+我们使用的是这些液晶快门眼镜。现在发生的是电视
+What we use are these liquid crystal shutter glasses. What happens now is that the television
+
+56
+00:05:00,000 --> 00:05:07,040
+每秒约100次呈现左右图像。我们留下了图像，
+presents the left and right images sequentially about 100 times per second. We have left image,
+
+57
+00:05:07,040 --> 00:05:12,000
+右图像，左图像，右图像和这些眼镜中的镜头同步
+right image, left image, right image and the lenses in these glasses are synchronized with
+
+58
+00:05:12,000 --> 00:05:16,960
+电视，所以当投影左图像时，这个镜头变得清晰，正确，这个
+the TV so when the left image is projected, this lens becomes clear and the right, this
+
+59
+00:05:17,120 --> 00:05:23,520
+一，是不透明的。所以我只看到左眼的左图。然后1/100秒，
+one, is opaque. So I only see the left image in my left eye. Then 1/100th of a second later,
+
+60
+00:05:23,520 --> 00:05:28,320
+正确的图像投射在电视上;这个镜头变黑了，这个很清楚。所以
+the right image is projected on the TV; this lens goes black and this one goes clear. So
+
+61
+00:05:28,320 --> 00:05:33,600
+有了这些，我得到了一个非常生动，又多彩，三维的表现形式
+with these on my head, I get a very vivid, again colourful, and three-dimensional representation
+
+62
+00:05:33,600 --> 00:05:36,960
+通过电视的场景。
+of the scene through the TV.
+
+63
+00:05:37,120 --> 00:05:44,640
+最后的方法是不要试图使用彩色眼镜，过滤眼镜和
+The final approach is to do away with trying to use colour glasses, filtered glasses, and
+
+64
+00:05:44,640 --> 00:05:49,440
+戴在我头上的眼镜，将左右图像直接投射到我的眼睛里。
+shuttered glasses on my head and to project the left and right image directly into my eyes.
+
+65
+00:05:49,440 --> 00:05:55,200
+因此，在某些方面，它是像这样的旧立体观众的高科技模拟
+So in some ways it’s a high-tech analog of the old stereoscopic viewers like this
+
+66
+00:05:55,200 --> 00:06:00,960
+一个和这一个。所以这里是最先进的头戴式显示器。如果我把它放在我的身上
+one and this one. So here is the state-of-the-art head-mounted display. If I put this on my
+
+67
+00:06:01,280 --> 00:06:05,120
+头部，左侧图像通过这个镜头直接投射到我的左眼和眼睛
+head, the left image is projected through this lens directly into my left eye and the
+
+68
+00:06:05,120 --> 00:06:09,760
+右手图像通过这个镜头直接投射到我的右眼。
+right-hand image is projected through this lens directly into my right eye.
+
+69
+00:06:09,760 --> 00:06:13,280
+我们所看到的所有技术都要求我们在头上戴上东西
+All of the techniques that we’ve looked at require us to wear something on our head
+
+70
+00:06:13,280 --> 00:06:17,760
+这并不总是很方便。也许我们没有特定的眼镜
+and that’s not always very convenient. Maybe we don’t have the particular glasses to
+
+71
+00:06:17,920 --> 00:06:22,720
+手或者我们发现它妨碍了我们的日常生活。
+hand or maybe we find that it gets in the way of our everyday life.
+
+72
+00:06:22,720 --> 00:06:28,160
+所以在尝试创建立体声效果时需要做很多工作
+So there’s been quite a bit of work in trying to create the stereo effect without needing
+
+73
+00:06:28,320 --> 00:06:33,440
+你有什么想法，所以最近的一项创新就是所展示的技术
+to have anything on your head, so one fairly recent innovation is the technology shown
+
+74
+00:06:33,440 --> 00:06:37,920
+这里有图解。它要求你的头部距离大约正确
+diagrammatically here. It requires that your head is approximately the right distance away
+
+75
+00:06:37,920 --> 00:06:43,840
+从屏幕上看，有一个透镜系统折射左手的光线
+from the screen and there is a system of lenses which refract the light from the left-hand
+
+76
+00:06:43,840 --> 00:06:48,800
+左眼大致方向的图像和右手图像被折射
+image in the general direction of your left eye and the right-hand image is refracted
+
+77
+00:06:48,800 --> 00:06:51,680
+在你的右眼的大方向。
+in the general direction of your right eye.
+

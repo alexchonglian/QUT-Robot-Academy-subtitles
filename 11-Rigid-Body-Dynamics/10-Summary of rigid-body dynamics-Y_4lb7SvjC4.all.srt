@@ -1,0 +1,370 @@
+1
+00:00:03,530 --> 00:00:07,310
+在这个特别的讲座中，我们已经介绍了很多内容，所以让我们总结一下
+We've covered an awful lot of ground in this particular lecture, so let's summarise some
+
+2
+00:00:07,310 --> 00:00:10,080
+最重要的一点。
+of the most important points.
+
+3
+00:00:10,080 --> 00:00:14,249
+在上一讲中，我们考虑了一个非常简单的控制案例。我们称之为独立
+In the last lecture, we considered a very simplistic control case. We called it independent
+
+4
+00:00:14,249 --> 00:00:19,350
+联合控制，我们忽略了像重力这样的事实，但在一个真正的机器人，如PUMA机器人，
+joint control and we ignored facts like gravity, but in a real robot such as the PUMA robot,
+
+5
+00:00:19,350 --> 00:00:23,770
+在这个特定的配置中，我们可以想象必须要求的扭矩
+shown here in this particular configuration, we can imagine the torque that must be required
+
+6
+00:00:23,770 --> 00:00:30,770
+在肩关节和肘关节处，以阻止机器人在重力作用下塌陷。
+at the shoulder joint and at the elbow joint in order to stop the robot collapsing under the effect of gravity.
+
+7
+00:00:31,060 --> 00:00:36,780
+所以这是我们对独立控制案例的机器人联合控制，我们进行了修改
+So this was the robot joint control we had for the independent control case and we modified
+
+8
+00:00:36,780 --> 00:00:41,379
+那。我们引入了扰动扭矩，这可能是由于非线性摩擦造成的
+that. We introduced the disturbance torque, and this might be due to non-linear friction
+
+9
+00:00:41,379 --> 00:00:46,140
+或者可能是由于引力。这是干扰力TD。
+or it might be due to gravity. This is the disturbance force TD.
+
+10
+00:00:46,140 --> 00:00:50,210
+然后我们研究了扰动扭矩对关节位置的影响
+And then we looked at the effect that the disturbance torque has on the joint position
+
+11
+00:00:50,210 --> 00:00:55,219
+它可能很重要，所以我们需要处理它。
+and it can be significant, so it's something that we need to deal with.
+
+12
+00:00:55,219 --> 00:01:00,519
+然后我们考虑了一个非常简单的情况：连接到链路的单个电机，链接有
+We then considered a very simple case: a single motor attached to a link, and the link has
+
+13
+00:01:00,519 --> 00:01:05,350
+得到了质量。如果关节由PD控制器控制，则是一种非常典型的控制器
+got mass. If a joint is controlled by a PD controller, a pretty typical sort of controller
+
+14
+00:01:05,350 --> 00:01:11,130
+对于机器人关节，我们看到引力的作用是偏转关节，引入
+for a robot joint, then we saw that the effect of gravity is to deflect the joint, introducing
+
+15
+00:01:11,130 --> 00:01:16,700
+定位错误。关节角度不是所需的关节角度。和金额
+a positioning error. The joint angle is not the desired joint angle. And the amount of
+
+16
+00:01:16,700 --> 00:01:22,219
+该误差与控制器增益P成反比，所以如果我们想做的话
+that error is inversely proportional to the controller gain P, so if we want to make the
+
+17
+00:01:22,219 --> 00:01:28,000
+误差很小，我们需要使用非常高的增益。但我们看到有一些后果
+error very small, we need to use a very high gain. But we saw that there is some consequences
+
+18
+00:01:28,000 --> 00:01:33,979
+随着增益的增加，尤其是我们的联合控制系统中的超调量增加。
+with increasing the gain, in particular, increased overshoot in our joint control system.
+
+19
+00:01:33,979 --> 00:01:38,759
+因此，我们看到的另一个策略是引入一个完整的术语。这是
+So another strategy that we looked at then is to introduce an integral term. This is
+
+20
+00:01:38,759 --> 00:01:43,479
+在存在定位误差的情况下斜坡上升，增加关节中的扭矩
+a term that ramps up while there is a positioning error, increasing the torque in the joint
+
+21
+00:01:43,479 --> 00:01:46,770
+直到错误被消除。
+until the error is eliminated.
+
+22
+00:01:46,770 --> 00:01:51,189
+我们研究的另一个策略是前馈控制。在这里，我们假设我们可以估计
+Another strategy we looked at is feedforward control. And here, we assume that we can estimate
+
+23
+00:01:51,189 --> 00:01:55,829
+干扰扭矩和重力情况下，情况肯定是这样。所以，
+the disturbance torque and in the case of gravity, that's most certainly the case. So,
+
+24
+00:01:55,829 --> 00:02:01,289
+我们估计应该是什么引力并将其乘以增益并将其引入输出中
+we estimate what gravity should be and multiply it by a gain and introduce it into the output
+
+25
+00:02:01,289 --> 00:02:04,539
+我们的控制器，取消了实际的干扰。
+of our controller, and that cancels out the actual disturbance.
+
+26
+00:02:04,539 --> 00:02:10,310
+即使我们的估计不太精确，这种技术也能很好地运作。部分取消
+This is a technique that works well even if our estimate is not too precise. Partial cancellation
+
+27
+00:02:10,310 --> 00:02:14,450
+干扰总比没有取消好。
+of disturbance is better than no cancellation at all.
+
+28
+00:02:14,450 --> 00:02:19,290
+接下来我们考虑了串行链路机械手的动态参数。
+Next we considered the dynamic parameters of a serial link manipulator.
+
+29
+00:02:19,290 --> 00:02:22,530
+我们在研究运动学时更早地看过这个简单的机器人。
+We've looked at this simple robot earlier when we were studying kinematics.
+
+30
+00:02:22,530 --> 00:02:24,760
+现在我们想了解这种动态。
+Now we want to understand the dynamics of this.
+
+31
+00:02:24,760 --> 00:02:29,040
+所以我们已经指出了每个链接的质心，我们描述了这个位置
+So we've indicated the center of mass of each of the links, and we described the position
+
+32
+00:02:29,040 --> 00:02:34,040
+每个链节的质心相对于链节坐标框架和惯性的关系
+of the center of mass of each link with respect to the link coordinate frame and the inertia
+
+33
+00:02:34,040 --> 00:02:40,599
+每个链接。质量是一个标量，质心的位置是一个三元素向量，
+of each link. The mass is a scalar, the position of the center of mass is a three-element vector,
+
+34
+00:02:40,599 --> 00:02:45,440
+而惯性是一个三乘三的矩阵，它是一个对称矩阵，所以它实际上有
+and the inertia is a three by three matrix, it's a symmetric matrix, so it actually has
+
+35
+00:02:45,440 --> 00:02:52,299
+只有六个独特元素。因此，每个链接由十个动态参数描述。
+only six unique elements. So each link is therefore described by ten dynamic parameters.
+
+36
+00:02:52,299 --> 00:02:56,299
+运动物体的动力学由许多数学技术描述。和
+The dynamics of moving bodies is described by a number of mathematical techniques. And
+
+37
+00:02:56,299 --> 00:03:02,099
+我们使用牛顿第二定律的组合，F等于MA和Euler的旋转方程
+we used a combination of Newton's second law, F equals MA and Euler's equation for rotational
+
+38
+00:03:02,099 --> 00:03:05,620
+运动。我们一起称之为Newton-Euler方法。
+motion. Together, we call this a Newton-Euler method.
+
+39
+00:03:05,620 --> 00:03:11,230
+然后我们描述了一种非常有效的计算机算法，即递归Newton-Euler算法，
+And we then described a very efficient computer algorithm, the recursive Newton-Euler algorithm,
+
+40
+00:03:11,230 --> 00:03:18,720
+我们可以在MATLAB中使用它来计算作为Q，Q点和Q双点函数的联合会话。
+which we can use in MATLAB to compute joint talks as a function of Q, Q dot, and Q double dot.
+
+41
+00:03:18,720 --> 00:03:23,269
+我们没有详细介绍递归Newton-Euler方法。你可以找到细节
+We didn't go into the details of the recursive Newton-Euler method. You can find the details
+
+42
+00:03:23,269 --> 00:03:28,360
+在许多教科书中，您可以查看Toolbox提供的代码。
+in many textbooks and you can look at the code provided with Toolbox.
+
+43
+00:03:28,360 --> 00:03:34,360
+机器人关节对话的表达式是Q，Q点和Q双点的函数
+The expressions for robot joint talk as a function of Q, Q dot, and Q double dot are
+
+44
+00:03:34,360 --> 00:03:39,000
+实际上相当复杂，但它们可以分解并以非常简洁的方式表达
+actually quite complicated but they can be factorised and expressed in a very concise
+
+45
+00:03:39,000 --> 00:03:45,970
+矩阵方程。因此施加到关节的扭矩包括惯性项，即科里奥利
+matrix equation. So the torque applied to the joint comprises an inertial term, a Coriolis
+
+46
+00:03:45,970 --> 00:03:51,459
+和向心项和重力项。然后我们花一点时间调查
+and centripetal term and gravity term. We then spend a little bit of time investigating
+
+47
+00:03:51,459 --> 00:03:55,360
+详细说明这些术语。
+in detail each of these terms.
+
+48
+00:03:55,360 --> 00:04:00,040
+当谈到控制特定的机器人关节时，事情要复杂得多
+When it comes to control of a particular robot joint, things are much more complicated than
+
+49
+00:04:00,040 --> 00:04:04,819
+他们处于独立的联合控制状态。然后，我们只需要处理
+they were in the independent joint control situation. Then, we had only to deal with
+
+50
+00:04:04,819 --> 00:04:08,790
+前两个学期。现在我们必须处理由于所有加速而产生的扭矩
+the first two terms. Now we have to deal with torques that are due to acceleration of all
+
+51
+00:04:08,790 --> 00:04:14,900
+另一个机器人的关节，所有机器人的其他关节的速度，以及重力的影响。
+the other robot's joints, the velocity of all the robot's other joints, and the influence of gravity.
+
+52
+00:04:14,900 --> 00:04:20,000
+通过一些数学操作，我们可以将其归结为一个相当简洁的等式，
+With some mathematical manipulation, we can get this down to a fairly concise equation,
+
+53
+00:04:20,000 --> 00:04:24,570
+看起来像这样。最重要的是机器人关节的惯性是
+which looks like this. And the bottom line is that the inertia of the robot joint is
+
+54
+00:04:24,570 --> 00:04:29,910
+作为整个机器人配置的一个功能，它不再是一个常数。
+a function of the configuration of the entire robot, it's no longer a constant.
+
+55
+00:04:29,910 --> 00:04:34,810
+我们有粘性摩擦项，我们有干扰扭矩项，这是应该的
+We have the viscous friction term and we have the disturbance torque term, which is due
+
+56
+00:04:34,810 --> 00:04:40,560
+所有其他机器人关节的加速度和速度。时变惯性是一个
+to acceleration and velocity of all the other robot's joints. Time varying inertia is a
+
+57
+00:04:40,560 --> 00:04:44,340
+有点问题，因为它很难调整控制系统以获得最佳效果
+bit of a problem because it makes it hard to tune the control system to get the best
+
+58
+00:04:44,340 --> 00:04:47,580
+可能的稳定时间和过冲。
+possible settling time and overshoot.
+
+59
+00:04:47,580 --> 00:04:51,220
+扰动转矩意味着对关节控制器的更多工作。它必须非常高
+The disturbance torque means more work for the joint controller. It has to be very high
+
+60
+00:04:51,220 --> 00:04:57,699
+性能使其能够抑制干扰扭矩并执行精确的路径跟踪。
+performance so that it can reject the disturbance torque and perform accurate path following.
+
+61
+00:04:57,699 --> 00:05:02,860
+一些技术有助于消除这些刚体动力效应，其他引入变速箱。
+Some techniques to help eliminate these rigid body dynamic effects other introduce a gearbox.
+
+62
+00:05:02,860 --> 00:05:07,889
+它减少了与配置相关的惯性，使惯性几乎独立
+It reduces the configuration-dependent inertia, which makes the inertia almost independent
+
+63
+00:05:07,889 --> 00:05:13,880
+机器人配置，它大大减弱了干扰扭矩。变速箱很便宜
+of robot configuration and it greatly attenuates the disturbance torque. A gearbox is a cheap
+
+64
+00:05:13,880 --> 00:05:21,200
+技巧和大多数机器人无论如何都包括一个变速箱来放大高速电动机的扭矩。
+trick and most robots include a gearbox anyway to amplify the torque of high-speed electric motors.
+
+65
+00:05:21,800 --> 00:05:28,460
+我们还可以应用称为扭矩前馈控制或计算的计算技术
+We can also apply a computational technique called torque feedforward control or computed
+
+66
+00:05:28,460 --> 00:05:33,169
+扭矩控制。实际上，我们在这里所做的是交易机械复杂性和
+torque control. Effectively, what we're doing here is trading mechanical complexity and
+
+67
+00:05:33,169 --> 00:05:37,410
+成本-例如，增加一个齿轮箱-计算。计算是
+cost - for instance, the addition of a gear box - with computation. The computation is
+
+68
+00:05:37,410 --> 00:05:41,050
+每年越来越便宜和便宜。
+getting cheaper and cheaper year on year.
+
+69
+00:05:41,050 --> 00:05:46,360
+我们可以将刚体运动方程重新排列成这种形式。我们可以得到一个表达
+We can rearrange the rigid body equations of motion into this form. We can get an expression
+
+70
+00:05:46,360 --> 00:05:52,240
+对于Q点点-连接加速度-就我应用于机器人的扭矩而言。
+for Q dot dot - the join acceleration - in terms of the torque that I applied to a robot.
+
+71
+00:05:52,240 --> 00:05:56,800
+我可以整合加速度以获得速度，再次集成以获得位置，现在
+I can integrate the acceleration to get velocity, integrated again to get position, and now
+
+72
+00:05:56,800 --> 00:06:01,370
+我所拥有的是机器人机械手的前进动力学。这是一个功能
+what I have is the forward dynamics of the robot manipulator. This is a function which
+
+73
+00:06:01,370 --> 00:06:06,289
+给我机器人的动作作为扭矩的函数。这真的很有用
+gives me the motion of the robot as a function of torque. And this is really useful when
+
+74
+00:06:06,289 --> 00:06:12,430
+我想用我设计的控制器模拟真实世界环境中的机器人运动。
+I want to simulate the robot motion in a real world setting with a controller that I design.
+

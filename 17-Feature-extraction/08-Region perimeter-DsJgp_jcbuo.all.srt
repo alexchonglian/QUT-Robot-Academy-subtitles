@@ -1,0 +1,145 @@
+1
+00:00:03,379 --> 00:00:09,160
+我们可以通过查看周边来找到描述物体形状的其他信息，
+We can find additional information to describe the shape of an object by looking at its perimeter,
+
+2
+00:00:09,160 --> 00:00:12,950
+通过观察它的边界。在这里，我们有一个非常简单的黑暗场景
+by looking at its boundary. Here we have a very simple scene with a dark
+
+3
+00:00:12,950 --> 00:00:18,560
+反对白色背景的对象。计算周长的最简单方法
+object against a white background. The simplest way to compute the length of the perimeter
+
+4
+00:00:18,560 --> 00:00:24,259
+该对象的目的是简单地跟踪对象的外部。所以线条也是
+of the object is to simply trace around the outside of the object. So the lines are either
+
+5
+00:00:24,259 --> 00:00:29,859
+垂直或水平，这是一种称为裂缝编码的技术。我们测量长度
+vertical or horizontal, and this is a technique called crack coding. We measure the length
+
+6
+00:00:29,859 --> 00:00:36,360
+这条蓝色的道路。它告诉我们一些关于物体周长的信息。
+of this blue path. It tells us something about the length of the perimeter of the object.
+
+7
+00:00:36,360 --> 00:00:40,270
+测量物体周长的另一种方法是首先考虑所有物体
+Another way of measuring the perimeter of the object is to first of all consider all
+
+8
+00:00:40,270 --> 00:00:45,250
+位于对象边缘的像素，并且这些像素都标有
+of the pixels that sit on the edge of the object, and those pixels are all marked with
+
+9
+00:00:45,250 --> 00:00:50,080
+一个红点。那些红点是位于边缘的像素的中心
+a red dot. Those red dots are the centres of the pixels that are on the edge of the
+
+10
+00:00:50,080 --> 00:00:55,950
+宾语。另一种技术是加入点的中心。这就是所谓的
+object. And an alternative technique is to join the centres of the dots. This is called
+
+11
+00:00:55,950 --> 00:01:02,350
+一个8邻居的链码。因此，该路径的长度可以被认为是长度
+an 8-neighbour chain code. So the length of this path can be considered to be the length
+
+12
+00:01:02,350 --> 00:01:05,829
+对象的边界。我们可以看到会有一些
+of the boundary of the object. We can see that there are going to be some
+
+13
+00:01:05,829 --> 00:01:11,859
+差异在这里。破解代码可能会高估其边界
+differences here. The crack code is perhaps going to overestimate the boundary of the
+
+14
+00:01:11,859 --> 00:01:17,530
+宾语。链码可能会低估对象的边界，
+object. The chain code is going to perhaps underestimate the boundary of the object,
+
+15
+00:01:17,530 --> 00:01:23,630
+但是当对象的边缘不是时，链码会做得更好
+but the chain code does a much better job when the object has got sides that are neither
+
+16
+00:01:23,630 --> 00:01:28,770
+垂直也不水平。当对象上有倾斜的段时，链码可能也是如此
+vertical nor horizontal. When there are sloped segments on the object, chain code can perhaps
+
+17
+00:01:28,770 --> 00:01:33,850
+给出一个稍微更现实的估计。在这种情况下，与非常小的对象的差异
+give a slightly more realistic estimate. In this case with very small objects the difference
+
+18
+00:01:33,850 --> 00:01:38,229
+这两种方法之间的关系非常重要。当物体非常大时
+between the two approaches is going to be quite significant. When objects are very large
+
+19
+00:01:38,229 --> 00:01:42,729
+有数百或数千个像素，差异就不那么显着了。
+with hundreds or thousands of pixels, the difference is much less significant.
+
+20
+00:01:42,729 --> 00:01:47,789
+现在，如果我们使用上面提到的任何一种技术计算周长，我们就会调用
+Now if we compute the perimeter using either of the techniques just mentioned, and we call
+
+21
+00:01:47,789 --> 00:01:53,679
+周长p，我们可以计算一个我们称之为圆度的度量
+that the perimeter length p, we can compute a measure that we call circularity and this
+
+22
+00:01:53,679 --> 00:02:00,459
+是一种与紧凑性相关的度量。所以我们取4xπ，乘以面积
+is a measure that is related to compactness. So we take 4x π, multiplied by the area of
+
+23
+00:02:00,459 --> 00:02:06,149
+这个物体来自第0个时刻，我们把它除以周长的平方。
+the object, which comes from the zeroth moment, and we divide it by the perimeter squared.
+
+24
+00:02:06,149 --> 00:02:10,590
+所以这是一个无量纲的数量。分子包含已经获得的区域
+So this is a non-dimensional quantity. The numerator contains the area, which has got
+
+25
+00:02:10,590 --> 00:02:16,620
+像素单位平方。我们除以长度，其中有像素的平方单位。
+units of pixels squared. We divided by the length, which has got units of pixels squared.
+
+26
+00:02:16,620 --> 00:02:20,530
+所以这个无量纲的数量没有单位。
+So this non-dimensional quantity has got no units.
+
+27
+00:02:20,530 --> 00:02:25,860
+对于圆的情况，圆度的值为1...1表示它是圆。
+For the case of the circle, circularity has got a value of 1 … 1 means it’s a circle.
+
+28
+00:02:25,860 --> 00:02:31,440
+小于1意味着它不是一个圆圈，并且它接近一条长线
+For less than 1 it means that it’s not a circle, and for a long line it approaches
+
+29
+00:02:31,440 --> 00:02:37,040
+0，所以它不能大于1，它可以小于1.1如果它是一个圆圈。
+0, so it cannot be bigger than 1, it can be less than 1. 1 if it’s a circle.
+

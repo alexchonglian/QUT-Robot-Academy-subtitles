@@ -1,0 +1,555 @@
+1
+00:00:03,620 --> 00:00:09,280
+现在让我们将翻译带入图片中。坐标框架A，坐标框架B
+Now let's bring translation into the picture. Coordinate frame A, Coordinate frame B which
+
+2
+00:00:09,280 --> 00:00:14,969
+相对于坐标框架A和点P进行平移和旋转。我们可以表示
+is translated and rotated with respect to coordinate frame A and a point P. We can represent
+
+3
+00:00:14,969 --> 00:00:20,410
+关于帧B的矢量的点P和该矢量可以用术语来描述
+the point P by a vector with respect to frame B and that vector can be described in terms
+
+4
+00:00:20,410 --> 00:00:25,059
+其组件沿XB和YB轴。
+of its components along the XB and YB axis.
+
+5
+00:00:25,059 --> 00:00:30,989
+现在我们可以将该矢量旋转到新帧，坐标框架V和坐标框架V.
+Now we can rotate that vector into a new frame, coordinate frame V, and coordinate frame V
+
+6
+00:00:30,989 --> 00:00:36,010
+具有与坐标框架A平行的轴。我们已经讨论了如何操作
+has axes which are parallel to coordinate frame A. We've already talked about how to
+
+7
+00:00:36,010 --> 00:00:42,280
+使用旋转矩阵将矢量从一个坐标系旋转到另一个坐标系。并作为
+rotate a vector from one coordinate frame to another using a rotation matrix. And as
+
+8
+00:00:42,280 --> 00:00:46,710
+我们正确地写了这个表达式的健全性检查，我们注意到这两个B是
+a sanity check that we've written this expression correctly, we noticed that these two Bs are
+
+9
+00:00:46,710 --> 00:00:49,649
+彼此相邻。这是好事。
+next to each other. That's a good thing.
+
+10
+00:00:49,649 --> 00:00:55,569
+现在让我们描述坐标系V相对于坐标系A的原点
+Now let's describe the origin of coordinate frame V with respect to coordinate frame A
+
+11
+00:00:55,569 --> 00:01:03,019
+我们用矢量做到了。这是从A到V的向量。现在我们可以添加向量
+and we do that with a vector. That's a vector from A to V. Now we're allowed to add vectors
+
+12
+00:01:03,019 --> 00:01:09,650
+所以我们可以将这个矢量ATV添加到矢量VP，以获得描述该矢量的矢量
+so we can add this vector ATV to the vector VP to obtain the vector that describes the
+
+13
+00:01:09,650 --> 00:01:15,510
+相对于坐标系A的点P.我们可以这样做，因为这两个向量是
+point P with respect to coordinate frame A. We can do that because these two vectors are
+
+14
+00:01:15,510 --> 00:01:20,970
+关于其轴彼此平行的坐标框描述。一世
+described with respect to coordinate frames whose axes are parallel to one another. I
+
+15
+00:01:20,970 --> 00:01:26,470
+可以用一个方程代替另一个方程并写出来。再次因为这两个
+can substitute one equation into the other and write this. And again because these two
+
+16
+00:01:26,470 --> 00:01:30,700
+坐标框架是平行的我可以写这个。
+coordinate frames are parallel I can write this.
+
+17
+00:01:30,700 --> 00:01:35,220
+让我们在这个表达式中展开向量和矩阵，并根据它们来编写它们
+Let's expand the vectors and matrix in this expression and write them in terms of their
+
+18
+00:01:35,220 --> 00:01:40,230
+元素。现在我可以拉一点技巧，现在就像这样写。如果你是
+elements. Now I can pull a little bit of a trick and now write it like this. If you're
+
+19
+00:01:40,230 --> 00:01:45,470
+不确定这个步骤，扩展矩阵并说服自己，他们是完全一样的。
+unsure about this step, expand out the matrix and convince yourself that they are exactly the same.
+
+20
+00:01:46,310 --> 00:01:53,200
+现在这个表达式有一个双元素向量和一个三元素向量。
+Now this expression has got a two-element vector and a three-element vector over here.
+
+21
+00:01:53,200 --> 00:01:57,650
+让我们把事情做得更加对称，然后像这样写。我们现在做了什么
+Let's make things a little bit more symmetric and write it like this. What we've done now
+
+22
+00:01:57,650 --> 00:02:05,720
+将一些零和一些零添加到矩阵的底行。以前我们有2x2
+is added some zeros and some ones to the bottom row of the matrix. Previously we had a 2x2
+
+23
+00:02:05,720 --> 00:02:12,659
+旋转矩阵。现在我们看到它嵌入到3x3矩阵的左上角。
+rotation matrix. Now we see that that's embedded into the top left corner of a 3x3 matrix.
+
+24
+00:02:12,659 --> 00:02:17,980
+而我们过去拥有2个元素的向量现在有三个元素。我们可以写这个
+And our vectors which used to have 2 elements now have three elements. We can write this
+
+25
+00:02:17,980 --> 00:02:24,129
+在这种形式下更简洁。符号，波浪线，小p上方表示
+even more succinctly in this form. The notation, the tilde, above the little p indicates that
+
+26
+00:02:24,129 --> 00:02:28,650
+它是一个同质的向量。它有三个元素而不是两个，我们将讨论这个问题
+it is a homogeneous vector. It has got three elements not two, and we'll talk about that
+
+27
+00:02:28,650 --> 00:02:33,709
+过了一会儿。关于坐标系A通过均匀来描述该点
+in just a moment. The point is described with respect to coordinate frame A by a homogeneous
+
+28
+00:02:33,709 --> 00:02:39,079
+我们可以从关于坐标的点的均匀矢量获得的矢量
+vector which we can obtain from the homogeneous vector of the point with respect to coordinate
+
+29
+00:02:39,079 --> 00:02:43,139
+帧B乘以该矩阵。
+frame B multiplied by this matrix.
+
+30
+00:02:43,139 --> 00:02:48,819
+矩阵的元素包括旋转矩阵，它是方向的函数;
+The elements of the matrix include the rotation matrix, which is the function of the orientation;
+
+31
+00:02:48,819 --> 00:02:54,859
+Theta，以及坐标系A的原点和坐标系之间的平移
+Theta, and the translation between the origin of coordinate frame A and coordinate frame
+
+32
+00:02:54,859 --> 00:03:01,249
+B.我们在二维平面中有一个熟悉的矢量表示，两个数字
+B. We have the familiar representation of a vector in a 2-dimensional plane, two numbers
+
+33
+00:03:01,249 --> 00:03:07,439
+A和B.均匀向量中有三个元素。它有A和B以及额外的
+A and B. The homogeneous vector has got three elements in it. It's got A and B and an additional
+
+34
+00:03:07,439 --> 00:03:15,040
+设置为1的元素。这称为均匀变换。这是一个3x3
+element which is set to 1. This we refer to as a homogeneous transformation. It is a 3x3
+
+35
+00:03:15,040 --> 00:03:22,459
+矩阵。均匀变换矩阵T包括2×2的旋转矩阵
+matrix. The homogeneous transformation matrix T comprises a rotation matrix which is 2x2
+
+36
+00:03:22,459 --> 00:03:27,989
+和一个2x1矩阵的平移向量，用一对零和一个填充。
+and a translation vector which is a 2x1 matrix padded out with a couple of zeros and a one.
+
+37
+00:03:27,989 --> 00:03:33,579
+该矩阵描述了相对姿势。它描述了关于姿势的姿势B.
+This matrix describes a relative pose. It describes the pose B with respect to the pose
+
+38
+00:03:33,579 --> 00:03:39,499
+所有这些都是在这个单一的3x3矩阵中编码的。一位数学家会说
+of A. All of that is encoded in this single 3x3 matrix. A mathematician would say that
+
+39
+00:03:39,499 --> 00:03:46,079
+齐次变换属于维数2的特殊欧几里得群。符号上
+homogeneous transformation belongs to the special Euclidian group of dimension 2. Symbolically
+
+40
+00:03:46,079 --> 00:03:51,419
+我们可以说矩阵T属于集合SE（2）。
+we would say matrix T belongs to the set SE(2).
+
+41
+00:03:51,419 --> 00:03:58,209
+最后，是时候开始使这些抽象概念成为现实。姿势只是一个矩阵。哪里
+Finally it's time to start making these abstract concepts real. Pose is just a matrix. Where
+
+42
+00:03:58,209 --> 00:04:04,809
+在我们可以替换这个3x3齐次变换矩阵之前，我们有符号ksi。
+we had the symbol ksi before we can substitute this 3x3 homogeneous transformation matrix.
+
+43
+00:04:04,809 --> 00:04:11,129
+当我们谈论使用O+算子将两个姿势复合或连接在一起时，
+When we talk about compounding or joining two poses together using the O+ operator,
+
+44
+00:04:11,129 --> 00:04:17,139
+这与乘以这两个齐次变换完全相同。我们用的是
+that is exactly the same as multiplying these two homogeneous transformations. We use the
+
+45
+00:04:17,139 --> 00:04:23,780
+O-运算符表示相对姿势的否定，这只是反过来
+O- operator to indicate the negation of a relative pose, and that is simply the inverse
+
+46
+00:04:23,780 --> 00:04:29,449
+均匀变换矩阵我之前提到过旋转的倒数
+of a homogeneous transformation matrix. I mentioned earlier that the inverse of a rotation
+
+47
+00:04:29,449 --> 00:04:34,550
+矩阵等于它的转置。对于均匀转换，情况并非如此
+matrix is equal to its transpose. That is not the case for a homogeneous transformation
+
+48
+00:04:34,550 --> 00:04:41,389
+矩阵。您需要执行适当的矩阵逆：反转3x3矩阵。
+matrix. You need to perform a proper matrix inverse: invert a 3x3 matrix.
+
+49
+00:04:41,389 --> 00:04:47,780
+我们引入了一个点运算符，它将矢量从一个坐标系转换为另一个坐标系。
+We introduced a dot operator which transforms a vector from one coordinate frame to another.
+
+50
+00:04:47,780 --> 00:04:55,550
+这仅仅是均匀变换矩阵和所表示的矢量的乘积
+And that is simply the product of the homogeneous transformation matrix and the vector represented
+
+51
+00:04:55,550 --> 00:05:01,970
+以同质的形式。请记住，均匀向量是从原始向量获得的
+in homogeneous form. Remember that the homogeneous vector is obtained from the original vector
+
+52
+00:05:01,970 --> 00:05:08,550
+P，两个向量，我们增加或附加一个元素，以形成一个三元素
+P, the two vector and we augment or append a one element to that to form a three element
+
+53
+00:05:08,550 --> 00:05:08,979
+向量。
+vector.
+
+54
+00:05:08,979 --> 00:05:14,289
+这里我们在MATLAB中，我们将试验这些二维齐次变换
+Here we are in MATLAB and we're going to experiment with these 2-dimensional homogeneous transformation
+
+55
+00:05:14,289 --> 00:05:19,879
+矩阵。所以我要做的是引入一个名为transl2的函数来创建一个
+matrices. So what I’m going to do is introduce a function called transl2 which creates a
+
+56
+00:05:19,879 --> 00:05:25,860
+同质转换代表纯粹的翻译，即翻译
+homogeneous transformation representing a pure translation, that is a translation of
+
+57
+00:05:25,860 --> 00:05:30,919
+x方向为1，y方向为2。
+1 in the x direction and 2 in the y direction.
+
+58
+00:05:30,919 --> 00:05:36,849
+之前我们已经看到了如何创建一个二维旋转矩阵，例如旋转
+Previously we saw how to create a 2-dimensional rotation matrix, for instance a rotation of
+
+59
+00:05:36,849 --> 00:05:45,669
+像这样创建30度。我们看到这个旋转矩阵只有2x2比较
+30 degrees is created like this. We see that this rotation matrix is only 2x2 compared
+
+60
+00:05:45,669 --> 00:05:52,840
+到3x3齐次变换矩阵。所以我可以创建一个同质的转换
+to the 3x3 homogeneous transformation matrix. So I can create a homogeneous transformation
+
+61
+00:05:52,840 --> 00:06:00,490
+通过前缀字母T来表示此旋转的矩阵。此函数返回一个
+matrix equivalent of this rotation by prefixing with the letter T. This function returns a
+
+62
+00:06:00,490 --> 00:06:06,000
+3x3齐次变换矩阵。我们可以看到旋转矩阵部分在
+3x3 homogeneous transformation matrix. We can see the rotation matrix part up in the
+
+63
+00:06:06,000 --> 00:06:12,120
+左上角。我们可以看到该矩阵的平移部分等于零。这个
+top left corner. We can see that the translation part of this matrix is equal to zero. This
+
+64
+00:06:12,120 --> 00:06:16,820
+均匀变换矩阵表示纯旋转。
+homogeneous transformation matrix represents a pure rotation.
+
+65
+00:06:17,400 --> 00:06:31,420
+现在我们可以将这两者相乘。transl2，乘以旋转部分-30度。
+Now we can multiply these two together. transl2, Multiply it by the rotation part - 30 degrees.
+
+66
+00:06:31,420 --> 00:06:38,100
+现在我所拥有的是一个代表姿势的同质转换。
+And now what I have is a homogeneous transformation which represents a pose.
+
+67
+00:06:38,110 --> 00:06:41,790
+它有一个旋转组件，它有一个平移组件。
+It's got a rotational component and it's got a translational component.
+
+68
+00:06:41,790 --> 00:06:45,470
+现在工具箱有一个简写功能来实现这一目标。
+Now the toolbox has got a shorthand function to achieve this.
+
+69
+00:06:45,600 --> 00:06:50,539
+我传入x和y平移部分;旋转部分和选项
+I pass in the x and y translational parts; the rotational part and the option
+
+70
+00:06:50,539 --> 00:06:55,739
+说这个角度是以度为单位指定的。我们这里有完全相同的矩阵。
+to say that that angle is specified in units of degrees. We have exactly the same matrix here.
+
+71
+00:06:56,720 --> 00:07:02,840
+现在让我们绘制这个特定的姿势并看看它的样子。要做到这一点，我要去
+Now let's plot this particular pose and see what it looks like. And to do that I'm going
+
+72
+00:07:02,849 --> 00:07:09,219
+创建一个绘制轴的轴，x将从0-5变化，y将变为
+to create an axis in which to plot, and x is going to vary from 0-5 and y is going to
+
+73
+00:07:09,219 --> 00:07:16,129
+从0-5不等。我需要设置宽高比，以便一切看起来都合理，所以我就是
+vary from 0-5. I need to set the aspect ratio so that everything looks reasonable, so I'm
+
+74
+00:07:16,129 --> 00:07:24,039
+要设置轴，使宽高比为正方形。我要坚持因为
+going to set the axis so that the aspect ratio is square. I'm going to put a hold on because
+
+75
+00:07:24,039 --> 00:07:29,250
+我要画一些姿势。我将要绘制的第一个姿势我要投入工作区
+I'm going to plot a few poses. The first pose I'm going to plot I'm going to put into workspace
+
+76
+00:07:29,250 --> 00:07:34,919
+变量T1，它是我刚才看到的姿势：x方向1，
+variable T1 and it is the pose that I looked at just a moment ago: 1 in the x direction,
+
+77
+00:07:34,919 --> 00:07:40,680
+2在y方向上旋转30度。有一个同质的转变
+2 in the y direction and the rotation of 30 degrees. There is a homogeneous transformation
+
+78
+00:07:40,680 --> 00:07:43,669
+矩阵。现在我要描绘一下。
+matrix. Now I'm going to plot that.
+
+79
+00:07:43,669 --> 00:07:50,009
+为了绘制我使用函数trplot2。2后缀意味着它是2维的
+To plot that I use the function trplot2. The 2 suffix means that it's for 2-dimensional
+
+80
+00:07:50,009 --> 00:07:57,039
+构成。传递由均匀变换表示的姿势。我要去画情节
+poses. Pass in the pose represented by the homogeneous transformation. I'm going to plot
+
+81
+00:07:57,039 --> 00:08:03,960
+它作为一个名为1的框架，我将以蓝色绘制它。有很多
+it as a frame named 1, and I'm going to plot it in the color blue. There are quite a few
+
+82
+00:08:03,960 --> 00:08:11,539
+那里的选择。在那里我们看到了姿势。我们可以看到它确实有翻译
+options there. And there we see the pose plotted. We can see that it does indeed have a translational
+
+83
+00:08:11,539 --> 00:08:17,090
+零件;x方向1，y方向2。并且它是相对旋转的
+component; 1 in the x direction, 2 in the y direction. And it is rotated with respect
+
+84
+00:08:17,090 --> 00:08:19,719
+到世界坐标框架。
+to the world coordinate frame.
+
+85
+00:08:19,719 --> 00:08:26,229
+我可以很容易地创建另一个姿势。我可以创建一个偏移量为的姿势
+I can create another pose quite easily. I can create a pose that has got an offset of
+
+86
+00:08:26,229 --> 00:08:32,469
+在x方向上2。在y方向上1并且没有旋转。这就是同质的
+2 in the x direction. 1 in the y direction and no rotation. That's what the homogeneous
+
+87
+00:08:32,469 --> 00:08:37,469
+转型看起来像。现在我要描绘一下。我将使用函数trplot2
+transformation looks like. Now I'm going to plot that. I'm going to use the function trplot2
+
+88
+00:08:37,469 --> 00:08:42,649
+再次，传入齐次变换矩阵，我将把它绘制成一个帧
+again, pass in the homogeneous transformation matrix, and I’m going to plot it as a frame
+
+89
+00:08:42,649 --> 00:08:49,440
+标记2.为了与众不同，我将把它描绘成一个红色的框架，我们在这里看到
+labeled 2. To be different I'm going to plot it as a red colored frame, and here we see
+
+90
+00:08:49,440 --> 00:08:56,950
+第二个姿势。它没有轮换。它有一个翻译组件。
+the second pose. It's got no rotation. It has got a translational component.
+
+91
+00:08:56,950 --> 00:09:03,600
+现在我可以构成其中的2个姿势。我要说姿势3等于姿势1复合
+Now I can compose 2 of these poses. I’m going to say pose 3 is equal to pose 1 compounded
+
+92
+00:09:03,600 --> 00:09:10,450
+有姿势2.这就是转换矩阵的样子。我能描绘一下。我要去
+with pose 2. That's what the transformation matrix looks like. I can plot that. I'm going
+
+93
+00:09:10,450 --> 00:09:20,160
+绘制一个trplot2，在矩阵中传递，将会有一个框架，称为3和
+to plot that one, trplot2, pass in the matrix, there's going to be a frame, called 3 and
+
+94
+00:09:20,160 --> 00:09:26,000
+我要给那个绿色上色。因此，如果我复合那两个姿势，我最终得到了
+I'm going to color that one green. So if I compound those 2 poses I end up with the
+
+95
+00:09:26,000 --> 00:09:31,230
+这里显示的姿势是3.我们想到这一点的方式是我们从世界框架中移开
+pose shown here as 3. The way we can think about this is we moved from the world frame
+
+96
+00:09:31,230 --> 00:09:38,700
+从框架1旋转2，然后在框架1中，我们然后在x方向上移动2
+2 from frame 1 which is rotated, and then in frame 1 we then moved 2 in the x direction
+
+97
+00:09:38,700 --> 00:09:45,320
+和y方向1。但是X和Y方向是第1帧，而不是世界框架
+and 1 in the y direction. But X and Y direction are frame 1, not on the world frame, and that
+
+98
+00:09:45,320 --> 00:09:50,160
+将我们带到标记为第3帧的框架。
+gets us to the frame labeled as frame 3.
+
+99
+00:09:50,160 --> 00:09:56,740
+我可以按相反的顺序复合姿势。我要创建一个新姿势T4和
+I could compound the poses in the opposite order. I'm going to create a new pose T4 and
+
+100
+00:09:56,740 --> 00:10:05,420
+这将是姿势2与姿势1的复合。我们可以看到它是同质的
+it's going to be pose 2 compounded with pose 1. We can see that's what the homogeneous
+
+101
+00:10:05,420 --> 00:10:12,110
+转换矩阵看起来像是与T3不同。我可以这样画。我可以通过
+transformation matrix looks like and it's different to T3. I can plot this. I can pass
+
+102
+00:10:12,110 --> 00:10:21,130
+在T4。我可以将它绘制为标记为4的框架，我将以青色显示它。
+in T4. I can plot it as a frame labeled 4 and I'm going to plot it in the color cyan.
+
+103
+00:10:21,130 --> 00:10:31,260
+在这里，我们可以看到框架4，它是由复合姿势2和后1组成的。现在我是
+Here we can see the frame 4 which has resulted from compounding pose 2 with post 1. Now I'm
+
+104
+00:10:31,260 --> 00:10:36,570
+要在情节中引入一点。我要在坐标处引入一个点
+going to introduce a point into the plot. I'm going to introduce a point at a coordinate
+
+105
+00:10:36,570 --> 00:10:44,360
+3,2。我需要转置它，使它成为列向量。它就是。我可以
+3, 2. I need to transpose that so that it becomes a column vector. There it is. I can
+
+106
+00:10:44,360 --> 00:10:53,040
+情节。绘制点P，我将把它绘制成星号。在那里我们看到它
+plot that. Plot point P, and I'm going to plot it as an asterisk. There we see it in
+
+107
+00:10:53,040 --> 00:10:59,360
+我们的数字。如果我想确定相对于第1帧的点的坐标那么
+our figure. If I want to determine the coordinate of the point with respect to frame 1 then
+
+108
+00:10:59,360 --> 00:11:08,990
+我需要做的是使用相对姿势1的倒数，即，并乘以
+what I need to do is to use the inverse of the relative pose 1, which is that, and multiply
+
+109
+00:11:08,990 --> 00:11:14,910
+它由均匀形式的点坐标组成。我会拿点P，我要追加
+it by the points coordinate in homogeneous form. I'll take point P and I'm going to append
+
+110
+00:11:14,910 --> 00:11:22,649
+1到它。我现在拥有的是星号的齐次坐标
+a 1 to it. What I have now is the homogeneous coordinate of the asterisk with respect to
+
+111
+00:11:22,649 --> 00:11:24,260
+坐标框架1。
+the coordinate frame 1.
+

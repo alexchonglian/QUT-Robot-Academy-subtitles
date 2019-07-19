@@ -1,0 +1,75 @@
+1
+00:00:03,290 --> 00:00:08,940
+我们在之前的讲座中谈过透视投影。这是转型
+We've talked in earlier lectures about perspective projection. This is the transformation of
+
+2
+00:00:08,940 --> 00:00:14,150
+将三维世界中的点分成二维图像。并涉及损失
+points in a three-dimensional world into a two-dimensional image. And involves the loss
+
+3
+00:00:14,150 --> 00:00:19,980
+它会导致诸如在三维中平行的线条等人工制品的尺寸
+of a dimension it leads to artefacts such as lines which are parallel in the three-dimensional
+
+4
+00:00:19,980 --> 00:00:26,019
+世界似乎聚集在二维图像或三维投影中
+world appearing to converge in the two-dimensional image or projection of that three-dimensional
+
+5
+00:00:26,019 --> 00:00:26,820
+世界。
+world.
+
+6
+00:00:26,820 --> 00:00:32,390
+这里的另一个例子是一堆平行线，平行的三个树干似乎会聚
+Another example here a bunch of parallel lines, parallel three trunks which appear to converge
+
+7
+00:00:32,390 --> 00:00:38,719
+在某一点上。我们早就谈到了针孔成像模型。我们有一个三维的
+at a point. We talked early on about the pinhole imaging model. We have a three-dimensional
+
+8
+00:00:38,719 --> 00:00:45,980
+场景和它投射成二维图像。透视没有独特的反转
+scene and it projects into a two-dimensional image. There is no unique inverse of the perspective
+
+9
+00:00:45,980 --> 00:00:54,050
+投影。任何数量的不同三维模型都将导致完全相同的二维模型
+projection. Any number of different three-dimensional models will lead to exactly the same two-dimensional
+
+10
+00:00:54,050 --> 00:01:00,910
+投影。缺乏独特的逆是透视投影的重要结果。
+projection. The lack of a unique inverse is really important consequence of the perspective projection.
+
+11
+00:01:01,300 --> 00:01:06,119
+对于机器人来说，了解三维世界非常重要。机器人需要
+For robotics, knowledge of the three-dimensional world is really important. A robot needs to
+
+12
+00:01:06,119 --> 00:01:11,189
+知道它想要掌握的物体有多远。移动机器人需要知道是否
+know how far away is the object that it wants to grasp. A mobile robot needs to know whether
+
+13
+00:01:11,189 --> 00:01:15,710
+它前面的空间可以自由驱动，或者那里是否有障碍物。
+the space in front of it is free to be driven in or whether there is an obstacle there.
+
+14
+00:01:15,710 --> 00:01:20,110
+因此，我们在本次讲座中可以发现的重要话题是我们如何恢复第三个问题
+So the important topic that we can uncover in this lecture is how do we recover the third
+
+15
+00:01:20,110 --> 00:01:25,610
+尺寸。当我们捕获图像时，在透视投影过程中丢失了这一点。
+dimension. That’s been lost in the perspective projection process when we capture an image.
+

@@ -1,0 +1,415 @@
+1
+00:00:04,819 --> 00:00:09,769
+我们在之前的讲座中看到了这个简单的双连杆机器人关于正向运动学。
+We saw this simple two-link robot in the previous lecture about forward kinematics.
+
+2
+00:00:09,769 --> 00:00:14,700
+这个机器人的工具提示姿势简单地由两个数字描述，坐标x和
+The tooltip pose of this robot is described simply by two numbers, the coordinates x and
+
+3
+00:00:14,700 --> 00:00:17,550
+y相对于世界坐标系。
+y with respect to the world coordinate frame.
+
+4
+00:00:17,550 --> 00:00:23,010
+所以，这里的问题是给定x和y，我们想确定连接角度Q1
+So, the problem here is that given x and y, we want to determine the joined angles, Q1
+
+5
+00:00:23,010 --> 00:00:24,150
+和Q2。
+and Q2.
+
+6
+00:00:24,150 --> 00:00:27,890
+我们将在这个特定部分中遵循的解决方案是几何
+The solution that we’re going to follow in this particular section is a geometric
+
+7
+00:00:27,890 --> 00:00:28,890
+一。
+one.
+
+8
+00:00:28,890 --> 00:00:30,660
+我们将从一个简单的结构开始。
+We’re going to start with a simple piece of construction.
+
+9
+00:00:30,660 --> 00:00:34,580
+我们要在机器人顶部覆盖红色三角形。
+We’re going to overlay the red triangle on top of our robot.
+
+10
+00:00:34,580 --> 00:00:39,730
+我们知道终点坐标是x，y，所以三角形的垂直高度
+We know that the end point coordinate is x, y, so the vertical height of the triangle
+
+11
+00:00:39,730 --> 00:00:42,250
+是y，水平宽度是x。
+is y, the horizontal width is x.
+
+12
+00:00:42,250 --> 00:00:48,800
+并且，使用毕达哥拉斯定理，我们可以写r平方等于x平方加y平方。
+And, using Pythagoras theorem, we can write r squared equals x squared plus y squared.
+
+13
+00:00:48,800 --> 00:00:50,399
+到目前为止，这么容易。
+So far, so easy.
+
+14
+00:00:50,399 --> 00:00:55,660
+现在，我们将以红色显示此处突出显示的三角形，我们想确定
+Now, we’re going to look at this triangle highlighted here in red and we want to determine
+
+15
+00:00:55,660 --> 00:00:57,680
+角度α。
+the angle alpha.
+
+16
+00:00:57,680 --> 00:01:00,230
+为此，我们需要使用余弦规则。
+In order to do that, we need to use the cosine rule.
+
+17
+00:01:00,230 --> 00:01:04,970
+并且，如果你对余弦规则有点生疏，这里有点复习。
+And, if you’re a little rusty on the cosine rule, here is a bit of a refresher.
+
+18
+00:01:04,970 --> 00:01:06,649
+我们有一个任意三角形。
+We have an arbitrary triangle.
+
+19
+00:01:06,649 --> 00:01:10,540
+我们不必在其中有任何直角，我们将标记长度
+We don’t have to have any right angles in it and we’re going to label the length of
+
+20
+00:01:10,540 --> 00:01:15,180
+这个边缘作为A和与边缘相对的角度，我们将标记为小a。
+this edge as A and the angle opposite that edge, we’re going to label as little a.
+
+21
+00:01:15,180 --> 00:01:21,000
+并且，我们对此边缘和此角度以及此边缘和此角度执行相同操作。
+And, we do the same for this edge and this angle, and this edge and this angle.
+
+22
+00:01:21,000 --> 00:01:27,030
+所以，一起，两侧都标有大写字母A，B和C，角度标记很小
+So, all together, the sides are labelled capitals A, B and C, and the angles are labelled little
+
+23
+00:01:27,030 --> 00:01:28,280
+a，小b和小c。
+a, little b, and little c.
+
+24
+00:01:28,280 --> 00:01:33,010
+所以，余弦规则就是这里的关系。
+So, the cosine rule is simply this relationship here.
+
+25
+00:01:33,010 --> 00:01:37,640
+这有点像毕达哥拉斯定理，除了这个额外的术语与cos
+It’s a bit like Pythagoras’ theorem except for this extra term on the end with the cos
+
+26
+00:01:37,640 --> 00:01:38,729
+一个在里面。
+a in it.
+
+27
+00:01:38,729 --> 00:01:43,250
+现在，让我们将余弦规则应用于我们看过的特定三角形
+Now, let’s apply the cosine rule to the particular triangle we looked at a moment
+
+28
+00:01:43,250 --> 00:01:44,250
+前。
+ago.
+
+29
+00:01:44,250 --> 00:01:47,689
+写下这种特殊的关系非常简单。
+It’s pretty straightforward to write down this particular relationship.
+
+30
+00:01:47,689 --> 00:01:52,020
+我们可以隔离术语cosalpha，它给出了我们感兴趣的角度alpha
+We can isolate the term cos alpha which gives us the angle alpha that we’re interested
+
+31
+00:01:52,020 --> 00:01:53,020
+在。
+in.
+
+32
+00:01:53,020 --> 00:01:58,450
+并且，它是根据常量链路长度A1和A2以及的位置来定义的
+And, it’s defined in terms of the constant link lengths, A1 and A2 and the position of
+
+33
+00:01:58,450 --> 00:02:01,329
+末端效应器，x和y。
+the end effector, x and y.
+
+34
+00:02:01,329 --> 00:02:05,579
+我们可以在角度α和Q2之间写出这种简单的关系。
+We can write this simple relationship between the angles alpha and Q2.
+
+35
+00:02:05,579 --> 00:02:11,500
+并且，我们从余弦函数的形状知道Q2的cos必须等于负
+And, we know from the shape of the cosine function that cos of Q2 must be equal to negative
+
+36
+00:02:11,500 --> 00:02:12,510
+cosalpha。
+of cos alpha.
+
+37
+00:02:12,510 --> 00:02:18,240
+这一次，我们只写一个连接角Q2的余弦的表达式。
+This time, let’s just write an expression for the cosine of the joined angle Q2.
+
+38
+00:02:18,240 --> 00:02:22,750
+现在，我们将绘制另一个红色三角形，我们将应用一些简单的东西
+Now, we’re going to draw yet another red triangle and we’re going apply some simple
+
+39
+00:02:22,750 --> 00:02:24,250
+三角学在这里。
+trigonometry here.
+
+40
+00:02:24,250 --> 00:02:29,270
+如果我们知道Q2，那么我们知道这个长度和红色三角形的长度。
+If we know Q2, then we know this length and this length of the red triangle.
+
+41
+00:02:29,270 --> 00:02:32,970
+我们可以为连接角Q2的正弦值编写这种关系。
+We can write this relationship for the sine of the joined angle Q2.
+
+42
+00:02:32,970 --> 00:02:39,700
+现在，我们可以考虑这个更大的三角形，其角度是β，这个边长
+Now, we can consider this bigger triangle whose angle is beta and this side length of
+
+43
+00:02:39,700 --> 00:02:41,820
+这里的三角形是蓝色的。
+the triangle is given here in blue.
+
+44
+00:02:41,820 --> 00:02:45,070
+并且，三角形另一边的长度是这个。
+And, the length of the other side of the triangle is this.
+
+45
+00:02:45,070 --> 00:02:51,560
+那么，现在我们可以在这里根据这些参数编写角度beta的表达式。
+So, now we can write an expression for the angle beta in terms of these parameters here.
+
+46
+00:02:51,560 --> 00:02:56,260
+回到我们之前绘制的红色三角形，我们可以建立一种关系
+Going back to the red triangle that we drew earlier, we can establish a relationship between
+
+47
+00:02:56,260 --> 00:02:59,050
+Q1和角度β。
+Q1 and the angle beta.
+
+48
+00:02:59,050 --> 00:03:03,790
+介绍另一个角度，这一个伽马和我们可以写一个关系
+Introduce yet another angle, this one gamma and we can write a relationship between the
+
+49
+00:03:03,790 --> 00:03:08,669
+角度伽玛和工具提示坐标x和y。
+angle gamma and the tooltip coordinates x and y.
+
+50
+00:03:08,669 --> 00:03:12,910
+现在，我们可以在我们构造的角度之间写出一个简单的关系，即gamma
+Now, we can write a simple relationship between the angles that we’ve constructed, gamma
+
+51
+00:03:12,910 --> 00:03:16,400
+和beta和我们感兴趣的联合角度是Q1。
+and beta and the joined angle we’re interested in which is Q1.
+
+52
+00:03:16,400 --> 00:03:19,680
+并且，总关系看起来像这样。
+And, the total relationship looks something like this.
+
+53
+00:03:19,680 --> 00:03:25,180
+相当复杂的关系，它给了我们加入的角度，这就是Q1
+Quite a complex relationship, it gives us the angle of joined one, that’s Q1 in terms
+
+54
+00:03:25,180 --> 00:03:31,260
+末端效应器坐标y和x，以及一串常数a1和a2，它是
+of the end effector coordinates y and x, and a bunch of constants, a1 and a2, and it’s
+
+55
+00:03:31,260 --> 00:03:35,480
+也是第二关节角度Q2的函数。
+also a function of the second joint angle, Q2.
+
+56
+00:03:35,480 --> 00:03:39,870
+那么，让我们总结一下我们在这里得到的东西。
+So, let’s summarize what it is that we have derived here.
+
+57
+00:03:39,870 --> 00:03:44,750
+我们有Q2的余弦表达式，我们有Q1的表达式。
+We have an expression for the cosine of Q2 and we have an expression for Q1.
+
+58
+00:03:44,750 --> 00:03:48,690
+现在，余弦函数关于0对称。
+Now, the cosine function is symmetrical about 0.
+
+59
+00:03:48,690 --> 00:03:54,030
+那么，如果我们知道Q2的余弦值，那么有两种可能的解决方案，
+So, if we know the value of the cosine of Q2, then there are two possible solutions,
+
+60
+00:03:54,030 --> 00:03:57,180
+正角度和负角度。
+a positive angle and a negative angle.
+
+61
+00:03:57,180 --> 00:04:01,780
+我们将明确选择正角度，这意味着我可以编写这个表达式
+We’re going to explicitly choose the positive angle, which means that I can write this expression
+
+62
+00:04:01,780 --> 00:04:02,780
+这里。
+here.
+
+63
+00:04:02,780 --> 00:04:07,880
+而现在，我们拥有了这种双连杆机器人的逆运动学解决方案。
+And now, we have what we call the inverse kinematic solution for this two-link robot.
+
+64
+00:04:07,880 --> 00:04:13,040
+我们根据末端执行器姿势表示两个连接角度Q1和Q2
+We have an expression for the two joined angles, Q1 and Q2 in terms of the end effector pose
+
+65
+00:04:13,040 --> 00:04:16,120
+x和y，以及一堆常量。
+x and y, and a bunch of constants.
+
+66
+00:04:16,120 --> 00:04:18,510
+您注意到这两个方程不是独立的。
+You notice that the two equations are not independent.
+
+67
+00:04:18,510 --> 00:04:23,540
+事实上，Q1的等式取决于Q2的解决方案。
+The equation for Q1, in fact, depends on the solution for Q2.
+
+68
+00:04:23,540 --> 00:04:28,940
+在这种情况下，Q2为负，我们将为Q2编写解决方案，为负数
+In this case, Q2 is negative and we’re going to write the solution for Q2 with a negative
+
+69
+00:04:28,940 --> 00:04:31,440
+在反余弦前面签字。
+sign in front of the inverse cosine.
+
+70
+00:04:31,440 --> 00:04:36,310
+现在，我们需要解决Q1，所以我们将介绍这个特殊的红色三角形，
+Now, we need to solve for Q1, so we’re going to introduce this particular red triangle,
+
+71
+00:04:36,310 --> 00:04:42,250
+我们之前解决的角度β，以及用术语定义的角度伽玛
+the angle beta that we solved previously, and the angle gamma which is defined in terms
+
+72
+00:04:42,250 --> 00:04:43,440
+y和x。
+of y and x.
+
+73
+00:04:43,440 --> 00:04:48,470
+现在，我们在Q1，gamma和beta之间写出一个略有不同的关系，与之不同
+Now, we write a slightly different relationship between Q1, gamma and beta, different to what
+
+74
+00:04:48,470 --> 00:04:49,470
+我们以前有过。
+we had before.
+
+75
+00:04:49,470 --> 00:04:50,780
+涉及的标志发生了变化。
+There’s a change of sign involved.
+
+76
+00:04:50,780 --> 00:04:55,180
+然后，我们可以替换所有前面的等式并得出这个表达式
+Then, we can substitute all that previous equation and come up with this expression
+
+77
+00:04:55,180 --> 00:04:56,180
+对于Q1。
+for Q1.
+
+78
+00:04:56,180 --> 00:04:58,400
+同样，这里有一个符号的变化。
+Again, there is a change of sign here.
+
+79
+00:04:58,400 --> 00:05:00,430
+以前，这是一个负面的迹象。
+Previously, this was a negative sign.
+
+80
+00:05:00,430 --> 00:05:05,470
+并且，这里总结形式是我们的双链路的逆运动学的解决方案
+And, here in summary form is the solution for the inverse kinematics of our two-link
+
+81
+00:05:05,470 --> 00:05:10,480
+机器人处于这种特殊配置时，Q2为负。
+robot when it is in this particular configuration, where Q2 is negative.
+
+82
+00:05:10,480 --> 00:05:16,070
+让我们比较两种解决方案，即Q2为正的情况和Q2的情况
+Let’s compare the two solutions, the case where Q2 is positive and the case where Q2
+
+83
+00:05:16,070 --> 00:05:16,820
+是否定的。
+is negative.
+

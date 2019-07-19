@@ -1,0 +1,210 @@
+1
+00:00:03,850 --> 00:00:08,049
+让我们总结一下我们在这个特定讲座中学到的一些重要概念。
+Let's summarize some of the important concepts that we've learned in this particular lecture.
+
+2
+00:00:08,049 --> 00:00:12,760
+在之前的讲座中，我们已经介绍了正向运动学和反向运动学的概念。
+In previous lectures we've covered the concept of forward kinematics and inverse kinematics.
+
+3
+00:00:12,760 --> 00:00:17,520
+这是关节角度与末端执行器姿势之间的关系。在这个讲座中
+This is the relationship between joint angles and the end effector pose. In this lecture
+
+4
+00:00:17,520 --> 00:00:21,780
+我们谈到的内容谈到了速度变换。那是两者之间的关系
+what we talked about talked about the velocity transform. That's the relationship between
+
+5
+00:00:21,780 --> 00:00:27,830
+关节的速度和末端执行器的速度。我们已经谈过了
+the velocity of the joints and the velocity of the end effector pose. We've talked about
+
+6
+00:00:27,830 --> 00:00:33,180
+姿势的衍生物，我们讨论了无形术语可能意味着什么。它
+the derivative of the pose and we discussed intangible terms what that might mean. It
+
+7
+00:00:33,180 --> 00:00:39,489
+可能是末端效应器的平移速度xdot和ydot。如果机器人有三度
+might be the end effector translational velocity xdot and ydot. If the robot's got three degrees
+
+8
+00:00:39,489 --> 00:00:46,249
+对于自由，那么末端效应器的姿势速度是xdotydot和thetadot。
+of freedom, then the end effector pose velocity is xdot ydot and theta dot.
+
+9
+00:00:46,249 --> 00:00:50,760
+在这个讲座中，我们介绍了这个符号，希腊字母nu代表我们所说的
+In this lecture, we introduced this symbol, the Greek letter nu to represent what we call
+
+10
+00:00:50,760 --> 00:00:57,520
+末端执行器的空间速度。这是姿势相对于时间的变化率。
+the spatial velocity of the end effector. That is the rate of change of pose with respect to time.
+
+11
+00:00:57,780 --> 00:01:03,949
+我们已经介绍了机器人关节速度和空间速度之间的这种关系
+We've introduced this relationship between the robot joint velocity and the spatial velocity
+
+12
+00:01:03,949 --> 00:01:09,130
+机器人的末端执行器或工具提示。这两个量与雅可比人有关
+of the robot's end effector or tooltip. These two quantities are related by the Jacobian
+
+13
+00:01:09,130 --> 00:01:14,920
+矩阵。雅可比矩阵是由...表示的联合配置的函数
+matrix. The Jacobian matrix is a function of the joint configuration represented by
+
+14
+00:01:14,920 --> 00:01:21,380
+向量Q.对于双连杆机器人的情况，空间速度只是xdot
+the vector Q. For the case of the two-linked robot, the spatial velocity is simply xdot
+
+15
+00:01:21,380 --> 00:01:28,590
+和ydot和关节速度是矢量Q1dot和Q2dot。对于三连平原
+and ydot and the joint velocity is the vector Q1dot and Q2dot. For the three-linked plain
+
+16
+00:01:28,590 --> 00:01:36,409
+操纵器，关节速度Q1dotQ2dotQ3dot和空间速度现在有一个平移
+manipulator, the joint velocities Q1dot Q2dot Q3dot and the spatial velocity now has a translational
+
+17
+00:01:36,409 --> 00:01:43,820
+分量xdot和ydot以及旋转速度分量Qdot。所以，如果我们想到机器人
+component xdot and ydot and a rotational velocity component Q dot. So if we think of the robot
+
+18
+00:01:43,820 --> 00:01:49,159
+末端效应器作为坐标系的一个姿势，这是一个起源的速度
+end effector as a pose of a coordinate frame, this is a speed at which the origin of the
+
+19
+00:01:49,159 --> 00:01:54,710
+坐标框架移动和坐标框架旋转的速度。
+coordinate frame moves and the speed in which the coordinate frame rotates.
+
+20
+00:01:54,710 --> 00:01:59,399
+雅可比矩阵有时可以是单数或接近单数。这是它的决定
+The Jacobian matrix can sometimes be singular or close to singular. That is its determine
+
+21
+00:01:59,399 --> 00:02:04,289
+非常接近0或其条件数非常大。这就是如何做到的
+very close to 0 or its condition number is very large. And this is something about how
+
+22
+00:02:04,289 --> 00:02:11,350
+某些笛卡尔运动会容易或尴尬。我们将通过谈话来量化这一点
+easy or awkward certain Cartesian motions will be. We will quantify this a bit by talking
+
+23
+00:02:11,350 --> 00:02:17,580
+关于机械手的速度椭圆。我们所做的是绘制一组速度
+about the velocity ellipse of the manipulator. What we did was to map a set of velocities
+
+24
+00:02:17,580 --> 00:02:23,920
+它位于关节速度空间中的圆上，位于笛卡尔空间的椭圆上
+that lie on a circle in the joint velocity space to an ellipse on the space of the Cartesian
+
+25
+00:02:23,920 --> 00:02:29,030
+机器人工具的速度;在这种特殊情况下xdot和ydot。而我们可以看到
+velocity of the robot tool; xdot and ydot in this particular case. And what we can see
+
+26
+00:02:29,030 --> 00:02:33,440
+我们有一个椭圆，表示机器人能够在这种情况下移动
+is we have an ellipse which indicates that the robot is capable of moving in this case
+
+27
+00:02:33,440 --> 00:02:38,860
+在y方向上相当快，但在x方向上更慢。这个的形状
+quite quickly in the y direction but more slowly in the x direction. The shape of this
+
+28
+00:02:38,860 --> 00:02:46,030
+椭圆是关节角度Q的函数。逆雅可比矩阵非常有用
+ellipse is a function of the joint angles Q. The inverse Jacobian is very useful to
+
+29
+00:02:46,030 --> 00:02:52,070
+我们。它允许我们根据笛卡尔坐标指定刀尖的空间速度
+us. It allows us to specify the spatial velocity of a tool tip in terms of Cartesian coordinates
+
+30
+00:02:52,070 --> 00:02:56,900
+并确定我们为实现这一目标所需的联合速度。这是非常的
+and determine the joint velocities that we need in order to achieve that. This is very
+
+31
+00:02:56,900 --> 00:03:00,960
+在我们可能希望机器人末端执行器移动的实际应用中很有用
+useful in real world applications where we might want the robot end effector to move
+
+32
+00:03:00,960 --> 00:03:04,480
+以确定的速度在一条直线上。
+in a straight line at a determined velocity.
+
+33
+00:03:04,480 --> 00:03:09,140
+因此，对于双连杆机械手，我们根据笛卡尔坐标定义末端执行器速度
+So for a two link manipulator, we define the end effector velocity in terms of its Cartesian
+
+34
+00:03:09,140 --> 00:03:15,070
+速度分量xdot和ydot并计算适当的关节角速度。和
+velocity components xdot and ydot and compute the appropriate joint angle velocities. And
+
+35
+00:03:15,070 --> 00:03:19,700
+对于三自由度机器人，我们不仅可以指定平移
+again for the three degree freedom robot, we can specify not only the translational
+
+36
+00:03:19,700 --> 00:03:26,150
+velocityxdot和ydot我们也可以指定坐标系的旋转速度
+velocity xdot and ydot we can also specify the rotational velocity of a coordinate frame
+
+37
+00:03:26,150 --> 00:03:31,460
+附在机器人的尽头。这对于笛卡尔运动非常有用。还有这个
+attached to the end of the robot. This is really useful for Cartesian motion. And this
+
+38
+00:03:31,460 --> 00:03:36,290
+技术被称为解决率运动控制。
+technique is referred to as resolved rate motion control.
+
+39
+00:03:36,290 --> 00:03:41,510
+最后，我们讨论了如何转换相对于一个坐标定义的速度
+Finally we talked about how we can translate a velocity defined with respect to one coordinate
+
+40
+00:03:41,510 --> 00:03:47,790
+相对于不同坐标系的帧速度。这两种速度是相关的
+frame to a velocity with respect to a different coordinate frame. The two velocities are related
+
+41
+00:03:47,790 --> 00:03:54,560
+另一个雅可比矩阵雅可比矩阵是旋转部分的函数
+by another Jacobian matrix. And that Jacobian matrix is a function of the rotational part
+
+42
+00:03:54,560 --> 00:03:57,960
+两个坐标系之间的相对姿势。
+of the relative pose between the two coordinate frames.
+

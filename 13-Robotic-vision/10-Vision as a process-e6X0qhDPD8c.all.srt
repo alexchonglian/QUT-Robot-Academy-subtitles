@@ -1,0 +1,205 @@
+1
+00:00:03,270 --> 00:00:08,870
+我们看世界的方式实际上非常复杂。我们的眼睛不像相机那样
+The way we see the world is actually quite complex. Our eyes are not like a camera that
+
+2
+00:00:08,870 --> 00:00:15,289
+拍摄我们然后去处理的图像。当我们看一个场景时，我们的眼睛不断移动
+takes an image that we then go and process. As we look at a scene our eye moves continuously
+
+3
+00:00:15,289 --> 00:00:21,011
+在场景中的不同点，以提高其对内容的理解
+to different points in the scene in order to improve its understanding of what is in
+
+4
+00:00:21,011 --> 00:00:26,130
+它的前面。所以看到实际上是一个非常活跃的过程。
+front of it. So seeing is actually a very active process.
+
+5
+00:00:26,130 --> 00:00:30,869
+因此，研究人员开发出的技术可以让我们研究人类的位置
+So researchers have developed technology that allows us to study where a human being is
+
+6
+00:00:30,869 --> 00:00:36,320
+看着;涉及一个摄像机，它可以看到被摄体的眼睛，也许还有一个照明
+looking; involves a camera which looks at the subject’s eyes, and perhaps an illumination
+
+7
+00:00:36,320 --> 00:00:42,790
+系统。因此，通过这种方式，我们可以持续，实时地在人类正在寻找的地方进行锻炼。
+system. So with this we can work out continuously and in real time where a human being is looking.
+
+8
+00:00:42,790 --> 00:00:50,899
+现在这幅画被用于一项非常着名的研究，该研究于1967年进行
+Now this painting was used in a very famous study that was conducted back in 1967 into
+
+9
+00:00:50,899 --> 00:00:56,640
+人类主体的凝视如何取决于他们被问到的特定问题。
+how a human subject’s gaze depends on the particular question that they were asked.
+
+10
+00:00:56,640 --> 00:01:01,550
+所以他们能做的就是拿一个主题，问他们一个问题，然后跟踪他们的位置
+So what they could do is take a subject, ask them a question and then track where their
+
+11
+00:01:01,550 --> 00:01:07,890
+眼睛看着画里。所以这是一个例子：这是一个跟踪，一个主题
+eye looked within the painting. So here is an example: here is one trace, one subject
+
+12
+00:01:07,890 --> 00:01:14,859
+跟踪。你可以看到他们的目光在房间里四处移动。在这三个问题中，
+trace. You can see that their gaze is moving all around the room. So of these three questions,
+
+13
+00:01:14,859 --> 00:01:20,310
+您认为哪个问题导致了这种特殊的凝视模式
+which question do you think was asked that led to this particular gaze pattern by that
+
+14
+00:01:20,310 --> 00:01:23,759
+人类主体。我会让你暂时考虑一下。
+human subject. I will let you think about that for a moment.
+
+15
+00:01:23,759 --> 00:01:29,020
+这是答案。提出的问题是：'什么是物质情况
+And here is the answer. The question that was asked is: ‘What are the material circumstances
+
+16
+00:01:29,020 --> 00:01:32,539
+这个家庭？'所以为了回答这个问题，人类
+of the family?’. So in order to answer this question, the human
+
+17
+00:01:32,539 --> 00:01:37,649
+主体已经将目光投向了特定家庭的财产。所以他们是
+subject has directed their gaze towards the possessions of the particular family. So they’re
+
+18
+00:01:37,649 --> 00:01:43,020
+检查家具，他们正在检查墙上的画作，等等。所以
+checking out the furniture, they are checking out the paintings on the wall and so on. So
+
+19
+00:01:43,020 --> 00:01:49,569
+给一个主题一个特定的问题，我们的眼睛以特定的方式在场景中移动
+given a specific question to a subject, our eye moves over the scene in a particular way
+
+20
+00:01:49,569 --> 00:01:53,889
+以便最好地回答这个问题。这不仅仅是拍照的问题
+so as to best answer the question. It’s not just a matter of taking a picture and
+
+21
+00:01:53,889 --> 00:02:00,209
+处理它：我们的眼睛主动在场景中移动，以便最好地回答问题。
+processing it: our eye actively moves around the scene in order to best answer the question.
+
+22
+00:02:00,209 --> 00:02:09,330
+这是另一个实验。看看你是否可以找出问题。
+Here is another experiment. See if you can work out which question has been asked.
+
+23
+00:02:09,330 --> 00:02:15,220
+我们可以看到凝视特别是检查特定人的面部区域
+We can see that the gaze is checking out particularly the facial regions of the particular people
+
+24
+00:02:15,220 --> 00:02:21,130
+这里。所以被问到的问题是：“这幅画中的人物年龄是多少？”。
+here. So the question that was asked is: ‘What are the ages of the figures in the painting?’.
+
+25
+00:02:21,130 --> 00:02:25,480
+很明显，看一看人们的面孔是有用的，以便弄清楚他们的想法
+So clearly it is useful to look at the faces of the people in order to work out what their
+
+26
+00:02:25,480 --> 00:02:29,310
+年龄是。第三，在这种特殊情况下，这是
+age is. Third one, in this particular case this is
+
+27
+00:02:29,310 --> 00:02:34,430
+这个主题的凝视是做什么的。我们可以看到他检查面孔，它也是
+what the subject’s gaze did. We can see him checking out the faces, and it is also
+
+28
+00:02:34,430 --> 00:02:42,100
+在这幅画中检查每个人类主体的整个身体。问题
+checking out the whole body of each of the human subjects in this painting. And the question
+
+29
+00:02:42,100 --> 00:02:46,100
+有人问：“这个家庭穿什么类型的衣服？”。
+that was asked is: ‘What type of clothes are the family wearing?’.
+
+30
+00:02:46,100 --> 00:02:50,810
+因此，如果主题回答了这个特定的问题，那么他们的目光只是集中注意力
+So given the subject was answering that particular question, then their gaze is focused just
+
+31
+00:02:50,810 --> 00:02:54,830
+在每个人的脸和衣服上。它不是在看家具;
+on the faces and the clothes of each of the people. It is not looking at the furniture;
+
+32
+00:02:54,830 --> 00:02:57,790
+它不是在看画作;它看不到窗外。
+it is not looking at the paintings; it’s not looking out the window.
+
+33
+00:02:57,790 --> 00:03:04,380
+重要的是要了解视觉是一个非常活跃的过程。现在它被驱动了
+It is important to understand that seeing is a very active process. Now it is driven
+
+34
+00:03:04,380 --> 00:03:10,180
+也许是人体内一些运动最快的肌肉。所以人眼能够
+by perhaps some of the fastest moving muscles in the human body. So the human eye is able
+
+35
+00:03:10,180 --> 00:03:14,710
+以每秒高达六百度的速度旋转，并具有惊人的加速度，
+to rotate at up to six hundred degrees per second, and has a phenomenal acceleration,
+
+36
+00:03:14,710 --> 00:03:21,630
+像每秒35000º的平方，所以惊人的肌肉能够指向眼睛
+something like 35000º per second squared, so amazing muscles are able to point the eye
+
+37
+00:03:21,630 --> 00:03:27,500
+很快在眼睛视野范围内的任何地方。
+very quickly anywhere within the field of view of the eyes.
+
+38
+00:03:27,500 --> 00:03:33,340
+因此，我非常喜欢这位非常有名的早期视觉研究员大卫
+So this lovely quote that I like very much by a very famous early vision researcher David
+
+39
+00:03:33,340 --> 00:03:38,790
+马尔。他说视觉是“从图像中发现存在的东西的过程
+Marr. And he says vision is ‘the process of discovering from images what is present
+
+40
+00:03:38,790 --> 00:03:44,660
+在世界和它的所在地。因此，愿景是一个过程。我认为这是非常重要的
+in the world and where it is’. So vision is a process. I think that is a very important
+
+41
+00:03:44,660 --> 00:03:48,819
+当我们开始思考机器人可能会看到的时候，我们会把这个消息带走。
+message to take away when we start to think about how robots might see.
+

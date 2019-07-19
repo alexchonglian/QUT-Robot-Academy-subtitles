@@ -1,0 +1,330 @@
+1
+00:00:04,099 --> 00:00:09,059
+今天我们完全理所当然地认为我们知道在任何可能的时间我们在哪里
+Today we take it completely for granted that we know where we are at all possible times
+
+2
+00:00:09,059 --> 00:00:13,970
+这要归功于嵌入各种设备的GPS技术;在里面
+and that's thanks to GPS technology that's embedded into all sorts of devices; it's in
+
+3
+00:00:13,970 --> 00:00:19,590
+我的手机，它在汽车的导航系统等等，但它并不总是这样。
+my phone, it's in navigation systems in cars and so on, but it wasn’t always like this.
+
+4
+00:00:19,590 --> 00:00:23,460
+GPS实际上是一种相当新的现象。
+GPS is actually a fairly recent phenomenon.
+
+5
+00:00:23,460 --> 00:00:29,460
+GPS通过大量卫星星座，24颗太空卫星，发射无线电
+GPS works by a large constellation of satellites, 24 satellites in space, sending down radio
+
+6
+00:00:29,460 --> 00:00:35,640
+由嵌入所有这些设备的小型GPS接收器芯片接收的信号。
+signals which are received by the little GPS receiver chips embedded into all these devices.
+
+7
+00:00:35,640 --> 00:00:41,260
+现在，这些卫星非常非常复杂，它们包含原子钟，它们绝对是
+Now, these satellites are very, very complex they contain atomic clocks and they are absolutely
+
+8
+00:00:41,260 --> 00:00:46,539
+巨大的。现在，这项技术最初是由美国军方开发的，以帮助他们
+massive. Now, this technology was originally developed by the US military to help them
+
+9
+00:00:46,539 --> 00:00:51,219
+找出他们所有资产的地方以及所有士兵在哪里
+work out where all their assets and where all their soldiers were at any particular
+
+10
+00:00:51,219 --> 00:00:57,289
+时间点，真正关键的战争业务能力，知道一切都在哪里。
+point in time, really key ability in the business of war fighting to know where everything is.
+
+11
+00:00:57,289 --> 00:01:01,880
+它对平民和驾驶等特别有用，但它不是
+It’s also particularly useful for civilians and driving and so on, but it was not the
+
+12
+00:01:01,880 --> 00:01:05,580
+首次应用GPS;这是严格的军事。
+first application of GPS; it was strictly military.
+
+13
+00:01:05,580 --> 00:01:13,380
+现在，在2000年，克林顿总统签署了一项令GPS高精度的订单
+Now, in the year 2000, President Clinton signed an order which made the high accuracy GPS
+
+14
+00:01:13,380 --> 00:01:19,259
+这个星球上每个人都可以使用的功能。以前，只有高精度才可用
+capability available to everybody on the planet. Previously, the high accuracy was only available
+
+15
+00:01:19,259 --> 00:01:24,579
+据军方用户和其他所有人说，这项服务是故意降级的
+to military users and for everybody else the service was deliberately degraded, so it told
+
+16
+00:01:24,579 --> 00:01:29,820
+你大概在哪里，但准确度为100米或类似的东西。
+you roughly where you were, but with an accuracy of 100 meters or something like that.
+
+17
+00:01:29,820 --> 00:01:35,990
+所以，这是一场革命，而且他做出这个命令，关掉了这个故事
+So, this was a revolution and the fact that he made this order, turned off this deliberate
+
+18
+00:01:35,990 --> 00:01:42,780
+GPS准确度的稀释正是这种基于位置的服务的巨大变革的原因
+dilution of GPS accuracy is what’s enabled this great revolution in location based services
+
+19
+00:01:42,780 --> 00:01:48,649
+今天我们理所当然。所以，这是一个相当新的现象，很重要
+that today we take for granted. So, it is a fairly recent phenomenon, important to keep
+
+20
+00:01:48,649 --> 00:01:49,780
+记住了。
+that in mind.
+
+21
+00:01:49,780 --> 00:01:55,310
+现在，其他国家不想依赖美国的GPS系统，创造
+Now, other countries who don’t want to be reliant on the US-based GPS system, create
+
+22
+00:01:55,310 --> 00:02:02,039
+他们自己的卫星导航系统和欧洲，俄罗斯和中国都在推出
+their own satellite based navigation systems and Europe, Russia, and China are all putting
+
+23
+00:02:02,039 --> 00:02:07,900
+到位或有替代GPS系统的替代品。所以，有很多卫星
+in place or have in place alternatives to the GPS system. So, there are lots of satellites
+
+24
+00:02:07,900 --> 00:02:12,810
+在那里提供导航信号，允许地面上的接收器准确地知道
+up there providing navigation signals that allow receivers on the ground to know exactly
+
+25
+00:02:12,810 --> 00:02:14,100
+他们在哪里。
+where they are.
+
+26
+00:02:14,100 --> 00:02:18,690
+现在，很久以前有GPS的问题是你怎么知道在哪里
+Now, a long time ago before there was GPS was the problem with how did you know where
+
+27
+00:02:18,690 --> 00:02:23,670
+你是，这在冷战期间是一个特别重要的问题。你怎么发送
+you were and this was a particularly important problem during the Cold War. How do you send
+
+28
+00:02:23,670 --> 00:02:28,330
+你的核轰炸机到另一个国家，如果你无法解决问题，可以提供有偿负担
+your nuclear bombers to another country to deliver pay loads if you can’t work out
+
+29
+00:02:28,330 --> 00:02:32,800
+它们在哪里，特别准确，它也是水下的真正问题，因为
+where they are, particularly accurately, and it’s also a real problem under water because
+
+30
+00:02:32,800 --> 00:02:35,230
+这些GPS信号不会穿透水。
+these GPS signals don’t penetrate water.
+
+31
+00:02:35,230 --> 00:02:40,220
+所以，如果你是水面下的潜艇，那么你可以在那里锻炼身体
+So, if you’re a submarine under the water surface, working out where you are is quite
+
+32
+00:02:40,220 --> 00:02:46,880
+复杂;你当然不能依靠GPS导航。如果你想去月球
+complex; you certainly can’t rely on GPS navigation. If you want to go to the moon
+
+33
+00:02:46,880 --> 00:02:52,010
+我们确实去过月球，很久以前就把人送到了月球，你是如何导航的
+and we did go to the moon, sent men to the moon a long time ago, how do you navigate
+
+34
+00:02:52,010 --> 00:02:56,970
+在没有GPS系统的月球周围？那时候，周围没有GPS系统
+around the moon where there is no GPS system? And back then, there was no GPS system around
+
+35
+00:02:56,970 --> 00:03:02,380
+行星地球，当然月球周围没有GPS导航系统。
+planet Earth and certainly there was no GPS navigation system around the moon.
+
+36
+00:03:02,380 --> 00:03:08,040
+所以，你这样做的方式就是所谓的惯性导航，这是一种技术
+So, the way you do that is what’s called inertial navigation, and this is a technique
+
+37
+00:03:08,040 --> 00:03:14,900
+这位绅士CharlesStarkDraper在20世纪50年代和60年代开创了先河，
+that was pioneered by this gentleman, Charles Stark Draper, back in the 1950s and the 1960s,
+
+38
+00:03:14,900 --> 00:03:21,700
+事实上，他因其对工程学的贡献而在1961年被宣布为年度最佳时间人物
+and he was in fact declared Time Man of the Year in 1961 for his contributions to engineering
+
+39
+00:03:21,700 --> 00:03:24,820
+知识，特别是这种惯性导航技术。
+knowledge, particularly this inertial navigation technology.
+
+40
+00:03:24,820 --> 00:03:30,980
+因此，惯性导航技术依赖于连续测量加速度
+So, inertial navigation technology relies on measuring continuously the acceleration
+
+41
+00:03:30,980 --> 00:03:35,660
+身体，所以，如果我有我的传感器测量我的加速度和其他传感器
+of the body, so if I had the sensors on me that measured my acceleration and other sensors
+
+42
+00:03:35,660 --> 00:03:41,090
+称为陀螺仪，用于测量我的旋转。通过处理加速信号和
+called gyroscopes which measure my rotation. By processing the accelerating signal and
+
+43
+00:03:41,090 --> 00:03:46,060
+旋转信号，结合一些非常聪明的算法，我可以解决
+the rotation signal, combining them with some pretty clever algorithms, I can work out at
+
+44
+00:03:46,060 --> 00:03:52,250
+我所处的任何时间点。这项技术是由冷战推动的先驱
+any point in time where I am. This technology was pioneered, was driven by the Cold War
+
+45
+00:03:52,250 --> 00:03:57,030
+那个特定时间点存在的。
+that existed at that particular point in time.
+
+46
+00:03:57,030 --> 00:04:01,720
+这是第一个惯性导航系统;这是一个巨大的工具包，它能够
+This is the first inertial navigation system; it was a massive piece of kit and it was able
+
+47
+00:04:01,720 --> 00:04:08,140
+从东海岸到美国西海岸的导弹轰炸机非常非常
+to a guide bomber from the east coast to the west coast of the United States, very, very
+
+48
+00:04:08,140 --> 00:04:14,259
+大件的设备，并有一个水下版本，这是用来准确
+big piece of equipment, and there was an underwater version of this which was used to accurately
+
+49
+00:04:14,259 --> 00:04:19,199
+在水下长时间导航潜艇，这样他们就可以准确地从中潜水
+navigate submarines for long periods of time underwater, so they could accurately get from
+
+50
+00:04:19,199 --> 00:04:23,719
+一个地方到另一个地方只使用这种导航技术。
+one place to another just using this navigation technology.
+
+51
+00:04:26,000 --> 00:04:30,760
+这种惯性导航技术的另一个例子就是阿波罗太空船
+Another instance of this inertial navigation technology is what got the Apollo space craft
+
+52
+00:04:30,760 --> 00:04:35,470
+到了月球，这样他们就能够使这个巨大的惯性导航系统小型化
+to the moon, so that they’re able to miniaturize this massive inertial navigation system and
+
+53
+00:04:35,470 --> 00:04:40,820
+将它缩小到一个大约一英尺的立方体，这就是车辆的原因
+shrink it down to a box that was about one foot, cubed, and that’s what got the vehicle
+
+54
+00:04:40,820 --> 00:04:45,530
+到了月球轨道，然后从月球轨道上下来
+to the orbit around the moon and also got the vehicle then from the lunar orbit down
+
+55
+00:04:45,530 --> 00:04:50,670
+在月球表面再次回来，这是在1968年。
+on to the surface of the moon and back up again, and this was in 1968.
+
+56
+00:04:50,670 --> 00:04:58,380
+因此，从一个想法到一个巨大的传感器到一个相对的现象技术进步
+So, phenomenal technological progress from an idea to a massive sensor through to a relatively
+
+57
+00:04:58,380 --> 00:05:03,690
+小型传感器，可用于登陆月球上的人。
+small sensor that could be used for landing men on the moon.
+
+58
+00:05:03,690 --> 00:05:09,050
+今天惯性导航系统几乎是一种商品。它缩小到了
+Today inertial navigation system is almost a commodity. It’s reduced to the size of
+
+59
+00:05:09,050 --> 00:05:14,300
+单个芯片和这些惯性导航芯片，包含加速度计和陀螺仪
+a single chip, and these inertial navigation chips, which contain accelerometers and gyroscopes
+
+60
+00:05:14,300 --> 00:05:18,530
+被嵌入到我们手机等设备中;这就是我们的手机知道它是不是
+are embedded into devices like our phones; this is how our phone knows whether it’s
+
+61
+00:05:18,530 --> 00:05:24,260
+在纵向模式或横向模式下。这就是我们如何通过移动来玩游戏
+in portrait mode or in landscape mode. It’s how we use it to play games just by moving
+
+62
+00:05:24,260 --> 00:05:29,900
+手机周围，这些都是通过惯性导航技术完成的。智能玩具，
+the phone around, these are all done with inertial navigation technology. Smart toys,
+
+63
+00:05:29,900 --> 00:05:35,889
+像这里的四旋翼飞行器一样，使用惯性导航传感器来保持车辆在太空中的平衡
+like this quadrotor here, use inertial navigation sensors to keep the vehicle balanced in space
+
+64
+00:05:35,889 --> 00:05:37,450
+并保持稳定。
+and to keep it stable.
+
+65
+00:05:37,450 --> 00:05:44,240
+它们被用于许多，许多，许多技术和许多应用中。所以，在这个特别的
+They’re used in many, many, many, many technologies and many, many applications. So, in this particular
+
+66
+00:05:44,240 --> 00:05:47,810
+讲座，我们将讨论惯性测量系统的工作原理。
+lecture, we’re going to talk about how inertial measurement systems work.
+

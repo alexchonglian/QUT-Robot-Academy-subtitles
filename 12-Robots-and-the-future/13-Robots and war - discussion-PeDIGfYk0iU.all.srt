@@ -1,0 +1,350 @@
+1
+00:00:03,610 --> 00:00:07,670
+彼得：令人遗憾的是，人类有一种令人震惊的冲突倾向。它的
+Peter: It's a sad fact that human beings have a shocking propensity for conflict. It’s
+
+2
+00:00:07,670 --> 00:00:12,910
+据估计，在上个世纪，有230万人在战争中死亡，其中大多数人死亡
+estimated in the last century, 230 something million people were killed in war and most
+
+3
+00:00:12,910 --> 00:00:19,199
+他们是非战斗人员。许多富裕国家现在正在努力推动机器人技术的发展
+of them were non-combatants. Many rich countries now are pushing really hard into robotic technology
+
+4
+00:00:19,199 --> 00:00:24,830
+减少士兵的伤亡率，并开发所谓的智能武器，这将减少
+to reduce soldier casualty rates, and developing so called smart weapons, which will reduce
+
+5
+00:00:24,830 --> 00:00:30,110
+非战斗人员的死亡。所以，现在，这些机器人并非完全自主。那里
+the deaths of non-combatants. So, right now, these robots are not fully autonomous. There
+
+6
+00:00:30,110 --> 00:00:36,340
+是一个人类负责实际射击武器并造成伤害或死亡
+is a human being responsible for actually firing the weapon and causing harm or death
+
+7
+00:00:36,340 --> 00:00:41,980
+对另一个人。但是，接受这种人类的压力似乎越来越大
+to another human being. But there seems to be a growing pressure to take that human being
+
+8
+00:00:41,980 --> 00:00:48,210
+离开发射循环，并实际让机器人做出是否自主决定
+out of the firing loop, and to actually have robots making autonomous decisions about whether
+
+9
+00:00:48,210 --> 00:00:54,070
+他们杀人还是不杀人。那么，伦理学对这种情况有什么看法呢？
+they kill human beings or not. So, what is ethics have to say about this situation?
+
+10
+00:00:54,070 --> 00:01:05,110
+道格：我认为道德机构这个词在这里很重要。道德机构是什么，是那个机器人
+Doug: I think the term moral agency is important here. What moral agency is, is does that robot
+
+11
+00:01:05,110 --> 00:01:11,140
+或者那个人有能力做出是对还是错的决定。
+or that individual have the capacity to make a decision whether it's right or wrong.
+
+12
+00:01:11,140 --> 00:01:16,700
+彼得：好的，但是人类正在努力解决这个问题。那么，我们怎么能期望机器能够做到这一点？
+Peter: Okay but human beings struggle with this. So, how would we expect the machine to be able to do that?
+
+13
+00:01:16,710 --> 00:01:24,950
+道格：嗯，可能，他们没有。他们现在还没有。那么，没有道德代理，那么
+Doug: Well, probably, they don't. They don't at this point. So, without moral agency, then
+
+14
+00:01:24,950 --> 00:01:32,799
+在这种情况下，道德不适用于机器。所以，这台机器既不道德也不道德。
+ethics isn't applied in this context against the machine. So, the machine is neither ethical nor unethical.
+
+15
+00:01:32,799 --> 00:01:34,770
+彼得：因为它说不出是非？
+Peter: Because it cannot tell right from wrong?
+
+16
+00:01:34,770 --> 00:01:39,040
+道格：它没有道德代理，但这意味着，如果那是机器
+Doug: It has no moral agency but what that means though is that if that's the machine
+
+17
+00:01:39,040 --> 00:01:45,799
+没有道德代理，那么我们回到运行或编程机器的人。
+without moral agency, then we come back to the person running or programming the machine.
+
+18
+00:01:45,799 --> 00:01:51,750
+他们对这个道德机构负有责任。所以，它只是回落。所以个人，
+They become liable for that moral agency. So, it just falls back. And so that individual,
+
+19
+00:01:51,750 --> 00:01:57,880
+那些工程师或机器人设计师是有道德责任的人。
+those engineers or that robot designer is the one that has the ethical responsibility.
+
+20
+00:01:57,880 --> 00:02:02,130
+彼得：好的，因为他们创造的机器，没有这个......
+Peter: Okay because of the machine that they have created, does not have this…
+
+21
+00:02:02,130 --> 00:02:03,590
+道格：没有道德机构，没错。
+Doug: There's not have moral agency, correct.
+
+22
+00:02:03,590 --> 00:02:07,860
+彼得：......责任在于创造或部署它的人。
+Peter: …the responsibility is back on the person who either created it or deployed it.
+
+23
+00:02:07,860 --> 00:02:13,340
+道格：是的。我刚刚在此发现了很多文献。他们是机器人道德
+Doug: Yes. There's quite a literature I just discovered on this. They are robot ethics
+
+24
+00:02:13,340 --> 00:02:18,790
+和机器伦理......在这方面有相当多的争论回到这一点
+and machine ethics… there's quite a bit out there on this that debates this back and
+
+25
+00:02:18,790 --> 00:02:23,370
+如你所知。我们已经谈过这个了。那么，对我来说，就是这样
+forth as you well know. We've talked about this a little bit. So, for me, that is the
+
+26
+00:02:23,370 --> 00:02:25,690
+定义构造。这是道德机构。
+defining construct. It's moral agency.
+
+27
+00:02:25,690 --> 00:02:31,540
+彼得：我知道这是一个主题，在机器人社区，我们谈论它。
+Peter: I know it's a topic that in the robotics community, we talk a little bit about it.
+
+28
+00:02:31,540 --> 00:02:37,160
+我认为我们几乎没有谈到这个问题，但这才是真正的问题
+I don't think we talked about it nearly enough but this is the one that really seems to get
+
+29
+00:02:37,160 --> 00:02:44,060
+人们兴奋或愤怒，这是机器人在战争中的想法。它已经开始引起了
+people excited or angry, is this idea of robots in warfare. It already starting to cause a
+
+30
+00:02:44,060 --> 00:02:44,950
+很多争论。
+lot of contention.
+
+31
+00:02:44,950 --> 00:02:50,129
+道格：这并不让我感到惊讶。当然，好莱坞刚刚创造了奇迹，
+Doug: That doesn't surprise me. And Hollywood, of course, has just done wonders with that,
+
+32
+00:02:50,129 --> 00:02:54,540
+随着阿诺德施瓦辛格系列，机器人占领了世界。它已经
+with the Arnold Schwarzenegger series, with the robots taking over the world. It's been
+
+33
+00:02:54,540 --> 00:02:56,080
+多年来的共同主题。
+a common theme for ages.
+
+34
+00:02:56,080 --> 00:03:00,129
+彼得：当然。这是所有机器人电影中反复出现的主题。
+Peter: Absolutely. It's the recurring theme in all robot movies.
+
+35
+00:03:00,129 --> 00:03:07,099
+道格：是的。在这里，我们刚刚讨论过Asimov，IsaacAsimov和他1942年的短篇小说。
+Doug: Yes. Here, we've just discussed beforehand Asimov, Isaac Asimov and his 1942 short story.
+
+36
+00:03:07,099 --> 00:03:14,209
+短篇小说叫做Runaround。
+The short story is called Runaround.
+
+37
+00:03:14,209 --> 00:03:17,849
+彼得：当然。这带来了他着名的机器人角色，是吗？
+Peter: Absolutely. This brings in his famous roles of robotics, yes?
+
+38
+00:03:17,849 --> 00:03:18,660
+道格：没错。我要读它们吗？
+Doug: Exactly. Shall I read them?
+
+39
+00:03:18,660 --> 00:03:19,260
+彼得：是的。
+Peter: Yes.
+
+40
+00:03:19,260 --> 00:03:24,379
+我最近发现了这个。所以，他有四条法律。刚刚增加了一项新法律。
+I discovered just this recently. So, he's got four laws. A new law was just added.
+
+41
+00:03:24,379 --> 00:03:25,660
+彼得：第零法则。
+Peter: The zeroth law.
+
+42
+00:03:25,660 --> 00:03:30,400
+道格：是的。根据这些，所有机器人都应该了解所有情况并遵守
+Doug: Yes. According to these, all robots should understand all circumstances and obey
+
+43
+00:03:30,400 --> 00:03:36,060
+这些法律。1.机器人不得伤害人类，或
+these laws. 1. A robot may not injure a human being, or
+
+44
+00:03:36,060 --> 00:03:39,620
+通过无所作为，让人类受到伤害。
+through inaction, allow a human being to be harmed.
+
+45
+00:03:39,620 --> 00:03:46,790
+2.机器人必须服从人类收到的命令，除非此类命令发生冲突
+2. A robot must obey orders it receives from human beings, except when such orders conflict
+
+46
+00:03:46,790 --> 00:03:51,010
+有了这个第一定律。是的，那个人很伤心。
+with this first law. Yes, that one's harming.
+
+47
+00:03:51,010 --> 00:03:59,019
+3.只要这种保护不冲突，机器人就必须保护自己的存在
+3. A robot must protect its own existence as long as such protection does not conflict
+
+48
+00:03:59,019 --> 00:04:03,319
+与第一或第二法律。换句话说，伤害人类。还有另一个
+with the first or second law. In other words, harming humans. There's another
+
+49
+00:04:03,319 --> 00:04:09,680
+一。阿西莫夫补充说。没有机器人可能会危害人类或通过
+one. Asimov added the fourth. 4. No robot may harm humanity, or through
+
+50
+00:04:09,680 --> 00:04:17,650
+不作为，让人类受到伤害。因此，这为一些机器设定了基础
+inaction, allow humanity to come to harm. So, this sets the basis for some of the machine
+
+51
+00:04:17,650 --> 00:04:22,369
+道德讨论，这很有趣，但我回到道德机构。
+ethics discussion, which is fascinating but I go back to moral agency.
+
+52
+00:04:22,369 --> 00:04:30,509
+彼得：那么，如果一台机器在其控制计算机中编码了这些规则，那就是那个机器人
+Peter: So, if a machine had these rules encoded in its control computer, would that robot
+
+53
+00:04:30,509 --> 00:04:31,559
+有道德代理？
+have moral agency?
+
+54
+00:04:31,559 --> 00:04:33,800
+道格：如果可以做出那个决定，是的。
+Doug: If it could make that decision, yes.
+
+55
+00:04:33,800 --> 00:04:34,449
+彼得：好的。
+Peter: Okay.
+
+56
+00:04:34,449 --> 00:04:43,150
+道格：是的，好的一点。它会。那时，我们就有道德或不道德的行为。
+Doug: Yes, good point. It would. And at that point, then we have ethical or unethical behavior.
+
+57
+00:04:43,150 --> 00:04:48,719
+彼得：今天的机器人目前缺乏的是能够制造......的第一个机器人
+Peter: What robots today currently lack is the ability to be able to make… first of
+
+58
+00:04:48,719 --> 00:04:52,330
+所有，充分了解世界上正在发生的事情，但我认为也应该理解
+all, sufficiently well understand what's going on in the world but I think also, to understand
+
+59
+00:04:52,330 --> 00:04:57,180
+他们行动的后果，预测未来。'如果我这样做，那么它
+the consequences of their actions, to predict into the future. ‘If I did this, then it
+
+60
+00:04:57,180 --> 00:04:59,309
+会对人类造成伤害或伤害。
+would cause harm or injury to a human being’.
+
+61
+00:04:59,309 --> 00:04:59,639
+道格：是的。
+Doug: Yes.
+
+62
+00:04:59,639 --> 00:05:06,020
+彼得：我们距机器人技术还有很长的路要走。我们需要那种
+Peter: We're a long, long way off that in robotics. We would need to have that kind
+
+63
+00:05:06,020 --> 00:05:10,039
+为了实现像机器人这些法则这样的能力。
+of capability in order to implement something like these laws of robotics.
+
+64
+00:05:10,039 --> 00:05:15,210
+道格：当然，是的。让我感到惊讶的是，彼得和你们所有人的速度有多快
+Doug: Absolutely, yes. What surprises me is how fast we’ve come Peter, and you of all
+
+65
+00:05:15,210 --> 00:05:21,879
+人们会知道这一点。你们在机器人技术方面的速度是惊人的。
+people would know that. The speed of what you guys are doing in terms of robotics is staggering.
+
+66
+00:05:21,879 --> 00:05:27,080
+彼得：我们走了很长的路，但我认为我们还有很长的路要走。我认为
+Peter: We have come a long way but I think we have got an awfully long way to go. I think
+
+67
+00:05:27,080 --> 00:05:32,710
+就感知世界状况而言，我们在那里做了很多工作。在
+just in terms of perceiving the state of world we’ve got a lot of work to do there. In
+
+68
+00:05:32,710 --> 00:05:40,729
+为了弄清楚我们的行为的后果，机器人，是的，我认为这是一个
+order to figure out the consequences of our actions, robotically, yes I think that's a
+
+69
+00:05:40,729 --> 00:05:43,219
+那里还有大量的工作要做。
+huge body of work yet to be done there.
+
+70
+00:05:43,219 --> 00:05:44,079
+道格：是的。是的我同意。
+Doug: Yes. Yes, I agree.
+

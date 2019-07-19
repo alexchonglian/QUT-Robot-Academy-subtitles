@@ -1,0 +1,185 @@
+1
+00:00:03,379 --> 00:00:08,050
+在之前的讲座中，我们谈了很多关于物体的位置和方向
+In previous lectures, we talked a lot about the position and orientation of objects in
+
+2
+00:00:08,050 --> 00:00:13,210
+世界。在这个讲座中，我们将讨论位置的变化率
+the world. In this lecture, we're going to talk about the rate of change of position
+
+3
+00:00:13,210 --> 00:00:18,170
+和取向的变化率。我们要谈论速度。
+and the rate of change of orientation. We're going talk about velocities.
+
+4
+00:00:18,170 --> 00:00:22,029
+在这张照片中，我们可以看到一个球在空中移动。在我们说什么之前
+In this picture, we can see a ball moving through the air. Before we can say anything
+
+5
+00:00:22,029 --> 00:00:26,730
+关于球的速度或位置有意义，我们需要引入一个参考
+meaningful about the velocity or position of the ball, we need to introduce a reference
+
+6
+00:00:26,730 --> 00:00:32,640
+坐标框架。到目前为止，这是我们熟悉的概念。
+coordinate frame. By now this is a familiar concept to us.
+
+7
+00:00:32,640 --> 00:00:37,040
+现在我可以谈论球的速度，我用这个蓝色矢量来描述
+Now I can talk about the velocity of the ball and I describe that by this blue vector which
+
+8
+00:00:37,040 --> 00:00:43,060
+我标记为V.所以V是速度矢量，它描述了方向和幅度
+I've labeled V. So V is the velocity vector and that describes the direction and the magnitude
+
+9
+00:00:43,060 --> 00:00:49,320
+在这个特定时刻的球的运动或球的位置变化率。
+of the motion or the rate of change of position of the ball at this particular moment in time.
+
+10
+00:00:49,320 --> 00:00:51,840
+这张照片拍摄的那一刻。
+The moment when this photograph was taken.
+
+11
+00:00:51,840 --> 00:00:57,670
+现在速度是矢量。它有3个组件相对于坐标定义
+Now velocity is a vector quantity. It's got 3 components defined with respect to the coordinate
+
+12
+00:00:57,670 --> 00:01:03,180
+框架，这是X坐标的变化率，即x点。变化率
+frame and that is the rate of change of the X coordinate, that's x dot. The rate of change
+
+13
+00:01:03,180 --> 00:01:07,409
+Y坐标和Z坐标的变化率。
+of the Y coordinate and the rate of change of the Z coordinate.
+
+14
+00:01:07,409 --> 00:01:11,630
+现在我们可以考虑飞盘在空中飞行的更复杂的运动
+Now we can consider the rather more complex motion of a Frisbee flying through the air
+
+15
+00:01:11,630 --> 00:01:15,859
+再一次，我们可以说出有关位置或速度的任何有意义的事情
+and once again before we can say anything meaningful about the position or velocity
+
+16
+00:01:15,859 --> 00:01:20,520
+对象，我们需要定义一个参考坐标系。现在飞盘已经到了
+of this object, we need to define a reference coordinate frame. Now the Frisbee has got
+
+17
+00:01:20,520 --> 00:01:25,380
+速度的平移。它正在从投掷它的人的空气中移动
+a translational of velocity. It's moving through the air from the person who threw it to the
+
+18
+00:01:25,380 --> 00:01:30,689
+它要降落的地方，但飞盘也旋转，我们说飞盘已经到了
+place where its going to land but the Frisbee also spins and we say the Frisbee has got
+
+19
+00:01:30,689 --> 00:01:36,469
+一个角速度，这里用红色矢量表示我称之为欧米茄。
+an angular velocity and that's denoted here by the red vector that I've called omega.
+
+20
+00:01:36,469 --> 00:01:42,369
+平移速度V和角速度ω再次连续变化
+Once again the translational velocity V and the angular velocity omega change continually
+
+21
+00:01:42,369 --> 00:01:48,049
+当物体在移动。所以这些矢量代表平移和角速度
+as the object is moving. So these vectors represent translational and angular velocity
+
+22
+00:01:48,049 --> 00:01:53,009
+在这张照片拍摄的那一刻。角速度，即红色矢量
+at the instant that this picture was taken. The angular velocity, that's the red vector
+
+23
+00:01:53,009 --> 00:01:58,999
+在这里，有一个方向，这是身体在此旋转的轴
+here, has got a direction and that is the axis about which the body is rotating at this
+
+24
+00:01:58,999 --> 00:02:04,599
+特别是时间瞬间，这个向量的大小是周围的旋转速度
+particular instant in time and the magnitude of this vector is the rate of rotation around
+
+25
+00:02:04,599 --> 00:02:08,960
+那个轴。如果物体旋转得非常快，那么角速度矢量
+that axis. If the object was spinning very quickly, then the angular velocity vector
+
+26
+00:02:08,960 --> 00:02:13,860
+会很长。再次，角速度矢量有3个分量，所以我们
+would be very long. Once again, the angular velocity vector has got 3 components so we
+
+27
+00:02:13,860 --> 00:02:20,000
+可以采用这个红色矢量，我们可以描述关于X，Y和Z的组件
+can take this red vector and we can describe components with respect to the X, Y, and Z
+
+28
+00:02:20,000 --> 00:02:22,660
+参考坐标系的轴。
+axis of a reference coordinate frame.
+
+29
+00:02:22,660 --> 00:02:27,840
+现在不仅仅是飞盘和球具有平移和旋转速度。
+Now it's not just Frisbee and balls that have got translational and rotational velocity.
+
+30
+00:02:27,840 --> 00:02:34,210
+机器人手臂的末端执行器通常具有平移速度和角速度
+The end effector of a robot arm has a translational velocity and an angular velocity and often
+
+31
+00:02:34,210 --> 00:02:40,060
+我们需要指定这些是什么，实际上命令机器人关节，以便我们得到
+we need to specify what these are and in fact command the robot joints so that we get the
+
+32
+00:02:40,060 --> 00:02:44,980
+期望的机器人末端执行器的平移和角速度。
+desired translational and angular velocity of the robot’s end effector.
+
+33
+00:02:44,980 --> 00:02:51,420
+通常我们堆叠平移速度的元素，元素VX，VY和VZ以及
+Typically we stack the elements of the translational velocity, the elements VX, VY and VZ and the
+
+34
+00:02:51,420 --> 00:02:57,130
+角速度的元素，欧米茄x，欧米茄y和欧米茄z成为一个向量。
+elements of the angular velocity, omega x, omega y and omega z into one vector.
+
+35
+00:02:57,130 --> 00:03:02,640
+这是六个元素长，我们称之为空间速度或扭曲
+That's six elements long and we refer to this as the spatial velocity or the twist of the
+
+36
+00:03:02,640 --> 00:03:08,270
+宾语。我们使用希腊字母nu看起来有点像V来表示这个特殊的数量，
+object. We use the greek letter nu which looks a bit like a V to denote this special quantity,
+
+37
+00:03:08,270 --> 00:03:13,510
+这个空间速度或扭曲有6个元素。这是一个六元素矢量。
+this spatial velocity or twist which has got 6 elements. It's a six element vector.
+

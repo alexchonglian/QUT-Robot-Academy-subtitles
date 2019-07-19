@@ -1,0 +1,425 @@
+1
+00:00:04,660 --> 00:00:09,300
+现在我们将看一种称为图像变形的非常通用的技术。
+Now we’re going to look at a very general technique called image warping.
+
+2
+00:00:09,300 --> 00:00:14,090
+图像变形可用于对图像执行大量操作，我们就是这样
+Image warping can be used to perform a large number of operations on an image and we’re
+
+3
+00:00:14,090 --> 00:00:19,150
+首先考虑一些非常简单的例子。但它们都可以组合在一起
+going to consider some very simple examples first. But they can all be combined together
+
+4
+00:00:19,150 --> 00:00:23,230
+允许非常复杂的图像变换。
+to allow for quite complex image transformations.
+
+5
+00:00:23,230 --> 00:00:28,470
+当我们讨论单应性时，我们在上一次讲座中触及了图像变形
+We did touch on image warping in the last lecture when we were discussing homographies
+
+6
+00:00:28,470 --> 00:00:34,090
+和观点整改。让我们首先考虑图像缩放的情况。
+and perspective rectification. Let’s consider first the case of image scaling.
+
+7
+00:00:34,090 --> 00:00:40,379
+在这里，我们有一个蒙娜丽莎的输入图像，我想缩小她的一个因素
+Here we have an input image of the Mona Lisa and I want to shrink her by a factor of perhaps
+
+8
+00:00:40,379 --> 00:00:46,370
+每个方向一半。因此，如果输出图像与输入图像的大小相同
+a half in each direction. So if the output image is the same size as the input image
+
+9
+00:00:46,370 --> 00:00:53,660
+然后萎缩的蒙娜丽莎坐在左上角。你会在这里注意到
+then the shrunken Mona Lisa sits up in the top left-hand corner. You’ll note here that
+
+10
+00:00:53,660 --> 00:00:57,770
+输出图像中有大量像素为红色。那是
+there are a large number of pixels in the output image which are colored red. That’s
+
+11
+00:00:57,770 --> 00:01:03,910
+因为对于这些像素，我们不知道它们的价值应该是多少。我们已经缩放了
+because for these pixels we don’t have any idea what their value should be. We’ve scaled
+
+12
+00:01:03,910 --> 00:01:08,740
+蒙娜丽莎的面积是她以前尺寸的四分之一，但我们已将她放在输出图像中
+the Mona Lisa to a quarter of her previous size but we’ve placed her in an output image
+
+13
+00:01:08,740 --> 00:01:13,950
+与输入大小相同，因此有很多像素我们无法使用其值
+the same size as the input so there are a whole lot of pixels whose value we are unable
+
+14
+00:01:13,950 --> 00:01:14,950
+估计。
+to estimate.
+
+15
+00:01:14,950 --> 00:01:18,479
+这是我们将在本节末尾回顾的主题。
+This is a topic we’ll come back to at the end of this section.
+
+16
+00:01:18,479 --> 00:01:23,610
+现在我想结合缩放和移位。所以我们采用原始输入图像，我们就是
+Now I want to combine scaling and shifting. So we take our original input image and we’re
+
+17
+00:01:23,610 --> 00:01:28,790
+要收缩她。我们要把她放到输出图像的中间位置
+going to shrink her. We’re going to put her into the middle of the output image so
+
+18
+00:01:28,790 --> 00:01:35,229
+她的尺寸缩小了，然后偏移到了蒙娜丽莎的左上角
+she’s been reduced in size and then offset so that the top left corner of the Mona Lisa
+
+19
+00:01:35,229 --> 00:01:40,579
+图片不在输出图像的左上角。
+picture is not in the top left corner of the output image.
+
+20
+00:01:40,579 --> 00:01:45,799
+我可以考虑轮换。为了旋转图像，我首先需要确定这一点
+I can consider rotation. In order to rotate the image, I first need to decide the point
+
+21
+00:01:45,799 --> 00:01:50,600
+关于我将轮换。所以我们将在她的下巴下旋转一点
+about which I will rotate. So we’ll rotate about a point here just underneath her chin
+
+22
+00:01:50,600 --> 00:01:54,619
+我们将旋转45度。
+and we will rotate by something like 45 degrees.
+
+23
+00:01:54,619 --> 00:02:00,479
+当我们将这个旋转的图像放入一个与输入图像大小相同的帧时，
+When we place this rotated image into a frame which is the same size as the input image,
+
+24
+00:02:00,479 --> 00:02:04,759
+我们看到了一些有趣的事情。我们首先看到有一些角落
+we see a couple of interesting things. We see firstly that there are some corners of
+
+25
+00:02:04,759 --> 00:02:07,049
+输出图像仍然是红色的。
+the output image which is still colored red.
+
+26
+00:02:07,049 --> 00:02:14,209
+那是没有有效像素的地方。我们也看到了蒙娜丽莎的角落
+That’s where there are no valid pixels. We also see that the corners of the Mona Lisa
+
+27
+00:02:14,209 --> 00:02:19,520
+在图像外面粘贴的东西必须被砍掉。所以通过旋转
+which stick outside the image are going to have to be chopped off. So by rotating the
+
+28
+00:02:19,520 --> 00:02:25,430
+蒙娜丽莎，我们丢失了原始图像的一些角落，并且输出中有一些角落
+Mona Lisa, we lose some corners of the original image and there are some corners of the output
+
+29
+00:02:25,430 --> 00:02:28,510
+未设置的图像。
+image which are unset.
+
+30
+00:02:28,510 --> 00:02:36,930
+那么我们就可以将移位，缩放和旋转结合在一起进行一次整体转换，
+So then we can combine shifting, scaling and rotation all together into one overall transformation,
+
+31
+00:02:36,930 --> 00:02:43,379
+输入图像到输出图像。为了形式化，我们将定义
+the input image to the output image. In order to formalize this, we’re going to define
+
+32
+00:02:43,379 --> 00:02:48,209
+输入图像中像素的坐标使用符号U和V，就像我们已经完成的那样
+the coordinate of a pixel in the input image using the notation U and V as we’ve done
+
+33
+00:02:48,209 --> 00:02:53,400
+通过这个课程。我们将定义相应的坐标
+all through this course. We’re going to define the coordinate of the corresponding
+
+34
+00:02:53,400 --> 00:02:59,420
+在输出图像中指向，我将用U-prime和V-prime表示那些。所以
+point in the output image and I’m going to denote those by U-prime and V-prime. So
+
+35
+00:02:59,420 --> 00:03:05,650
+我们可以编写一个非常通用的函数，U-prime，作为两个输入坐标的函数
+we can write a very general function, U-prime, as a function of the two input coordinates
+
+36
+00:03:05,650 --> 00:03:10,200
+和V-prime作为两个输入坐标的函数。
+and V-prime as a function of the two input coordinates.
+
+37
+00:03:10,200 --> 00:03:17,790
+所以在这两个通用函数fU和fV中，我们可以描述缩放，移位，旋转，
+So in these two general functions fU and fV, we can describe scaling, shifting, rotating,
+
+38
+00:03:17,790 --> 00:03:22,980
+这些以及许多其他非常有趣的扭曲的各种组合。您
+various combinations of those and many other kinds of very interesting distortions. You
+
+39
+00:03:22,980 --> 00:03:26,720
+可以做funhouse镜面效果等。
+can do funhouse mirror effects and so on.
+
+40
+00:03:26,720 --> 00:03:33,430
+让我们看一下缩放和移位的具体例子，我们实际上是如何做的
+Let’s look at a concrete example of scaling and shifting, how we actually go about doing
+
+41
+00:03:33,430 --> 00:03:38,610
+那。我们将在输入图像中定义一个像素，坐标U，V，它是正确的
+that. We’re going to define a pixel in the input image, coordinates U, V and it’s right
+
+42
+00:03:38,610 --> 00:03:44,319
+在蒙娜丽莎眼中。我们将定义相应的点
+in the middle of the Mona Lisa’s eye. We’re going to define the corresponding point in
+
+43
+00:03:44,319 --> 00:03:50,909
+输出图像及其坐标IU-prime和V-prime。此输出图像是四分之一
+the output image and its coordinates I U-prime and V-prime. This output image is one quarter
+
+44
+00:03:50,909 --> 00:03:57,180
+输入图像的大小，水平偏移100，垂直偏移200。所以我们
+the size of the input image and it’s offset 100 horizontally and 200 vertically. So we
+
+45
+00:03:57,180 --> 00:04:03,599
+可以在U-prime和U之间以及V-prime和V之间写出一个非常简单的关系。
+can write a very simple relationship between U-prime and U and between V-prime and V.
+
+46
+00:04:03,599 --> 00:04:10,459
+现在我们要做的是尽可能考虑输出图像中的每个像素
+Now what we’re going to do is to consider every pixel in the output image, every possible
+
+47
+00:04:10,459 --> 00:04:16,500
+U-prime和V-prime的值。对于我们所看到的U-prime和V-prime的每个值
+value of U-prime and V-prime. For every value of U-prime and V-prime that we look at in
+
+48
+00:04:16,500 --> 00:04:22,229
+在输出图像中，我们可以计算出输入图像中U和V的值。
+the output image, we can compute what will be the value of U and V in the input image.
+
+49
+00:04:22,229 --> 00:04:27,280
+因此，我们查看输出图像中的每个像素，然后我们计算它的来源
+So we look at every pixel in the output image and we work out where it comes from in the
+
+50
+00:04:27,280 --> 00:04:32,570
+输入图像。所以我们实际上必须反转我们之前写的那些一般方程，
+input image. So we have to in fact invert those general equations that we wrote earlier,
+
+51
+00:04:32,570 --> 00:04:39,229
+fU和fV。在这里，我们将它们颠倒过来，以便我们现在有了U和V.
+the fU and the fV. Here we have inverted them so that we’ve got U and V now in terms of
+
+52
+00:04:39,229 --> 00:04:43,139
+输出像素坐标，U-prime和V-prime。
+the output pixel coordinates, U-prime and V-prime.
+
+53
+00:04:43,139 --> 00:04:50,800
+让我们用一个例子来说明这一点。让我们选择输出像素
+Let’s use an example to make this very tangible. Let’s choose for example the output pixel
+
+54
+00:04:50,800 --> 00:04:59,639
+在坐标303和269.鉴于此，很容易计算出坐标
+at coordinate 303 and 269. Given that, it’s very easy to work out the coordinate of the
+
+55
+00:04:59,639 --> 00:05:01,150
+输入图像中的像素。
+pixel in the input image.
+
+56
+00:05:01,150 --> 00:05:07,210
+有趣的是，输入图像中的像素是分数。我们正在寻找像素
+Interestingly, the pixel in the input image is fractional. We’re looking for the pixel
+
+57
+00:05:07,210 --> 00:05:16,470
+在50.75和17.25，这有点问题，因为像素有整数坐标;
+at 50.75 and 17.25 and this is a bit problematic because pixels have got integer coordinates;
+
+58
+00:05:16,470 --> 00:05:21,479
+到目前为止我们看过的U和V一直是整数值。那我们怎么走
+U and V that we’ve looked at so far have always been integer values. So how do we go
+
+59
+00:05:21,479 --> 00:05:26,889
+关于在输入图像中找到这个小数像素值？
+about finding this fractional pixel value in the input image?
+
+60
+00:05:26,889 --> 00:05:33,289
+让我们考虑一下我们在这里显示的输入图像的一小块补丁
+Let’s consider that we’ve got a little patch of the input image shown here in a very
+
+61
+00:05:33,289 --> 00:05:38,690
+放大时尚。所以我们正在寻找的特定像素实际上就是这样
+zoomed-in fashion. So the particular pixel that we’re looking for would actually lay
+
+62
+00:05:38,690 --> 00:05:46,080
+在我们的像素值网格中的某处。我们可以使用一些策略
+somewhere here in our grid of pixel values. There are a few strategies that we can use
+
+63
+00:05:46,080 --> 00:05:52,120
+确定此处所示的此特定坐标处的像素的虚值
+to determine the imaginary value of the pixel at this particular coordinate shown here by
+
+64
+00:05:52,120 --> 00:05:53,340
+黄点。
+the yellow dot.
+
+65
+00:05:53,340 --> 00:05:58,919
+我们可以做的第一件事是获取最接近的像素的值，所以黄色
+The first thing we can do is to take the value of the pixel that’s closest, so the yellow
+
+66
+00:05:58,919 --> 00:06:06,229
+dot位于此处显示的像素范围内，其值为115.所以我们可以
+dot lies within the bounds of the pixel shown here that’s got a value of 115. So we can
+
+67
+00:06:06,229 --> 00:06:13,289
+只是说像素值等于115.但它位于该特定的底部
+just say the pixel value is equal to 115. But it’s in the bottom corner of that particular
+
+68
+00:06:13,289 --> 00:06:19,940
+像素，所以你认为隔壁的117，它下面的123实际上可能会提升
+pixel so you’d think that the 117 next door, the 123 beneath it might actually elevate
+
+69
+00:06:19,940 --> 00:06:25,080
+那里的价值。一个更复杂的方法是采取加权平均值
+the value there. A more sophisticated approach then is to take a weighted average of the
+
+70
+00:06:25,080 --> 00:06:31,569
+相邻像素和权重与像素中心之间的距离成比例
+neighboring pixel and the weights are proportional to the distance between the pixel center and
+
+71
+00:06:31,569 --> 00:06:37,580
+这里标有黄点。这是一种被称为双线性插值的技术。
+the yellow dot marked here. This is the technique that’s referred to as bilinear interpolation.
+
+72
+00:06:37,580 --> 00:06:45,240
+它也可以被认为是适合这四个点的平面。像素值代表
+It can also be thought of as fitting a plane to these four points. The pixel values represent
+
+73
+00:06:45,240 --> 00:06:51,069
+表面的高度。我们可以将飞机安装到这四个点然后我们可以确定
+the height of the surface. We can fit a plane to those four points and then we can determine
+
+74
+00:06:51,069 --> 00:06:56,690
+该平面在黄点的U，V坐标处的高度。
+the height of that plane at the U, V coordinate of the yellow dot.
+
+75
+00:06:56,690 --> 00:07:04,449
+现在让我们考虑如果我在这里选择一个像素会发生什么。所以这个输出像素，这个
+Let’s consider now what happens if I choose a pixel down here. So this output pixel, this
+
+76
+00:07:04,449 --> 00:07:11,449
+U-prime和V-prime的特定值位于输出中的MonaLisa图像之外
+particular value of U-prime and V-prime, lays outside the Mona Lisa image in the output
+
+77
+00:07:11,449 --> 00:07:18,250
+图片。这里发生了什么？如果我们取这个特定的输出像素坐标，500，
+image. What’s going on here? If we take this particular output pixel coordinate, 500,
+
+78
+00:07:18,250 --> 00:07:24,919
+300，我们将它映射到输入图像中的坐标，我们发现它在外面
+300 and we map it to the coordinate in the input image, we find that it lays way outside
+
+79
+00:07:24,919 --> 00:07:31,849
+输入图像。所以我们可以使用一些非常简单的逻辑来表示输入图像坐标
+the input image. So we can use some pretty simple logic to say that an input image coordinate
+
+80
+00:07:31,849 --> 00:07:36,530
+像1600,400在输入图像的边界之外。
+like 1600, 400 lays outside the bounds of the input image.
+
+81
+00:07:36,530 --> 00:07:42,360
+因此，我们没有在该特定点放入输出图像的值。
+Therefore, we don’t have a value to put into the output image at that particular point.
+
+82
+00:07:42,360 --> 00:07:47,460
+如果这是一个双精度输出图像，我们可能会使用非常特殊的双精度
+If this was a double-precision output image, we might use the very special double-precision
+
+83
+00:07:47,460 --> 00:07:55,520
+值不是数字或NaN来表示我们无法确定其值的像素。
+value known as not a number or NaN to represent pixels whose value we are unable to determine.
+
+84
+00:07:55,520 --> 00:08:00,190
+如果它是整数输出图像，我们可能会保留一个特定的整数值
+If it was an integer output image, we might reserve a particular integer value, perhaps
+
+85
+00:08:00,190 --> 00:08:06,940
+零，可能是255，表示我们无法确定其值的像素。
+zero, perhaps 255, to represent the pixels whose value we are unable to determine.
+

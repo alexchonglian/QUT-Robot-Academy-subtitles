@@ -1,0 +1,115 @@
+1
+00:00:03,960 --> 00:00:07,100
+在这个讲座中，我们将讨论机器人手臂。
+In this lecture, we are going to talk about robot arms.
+
+2
+00:00:07,100 --> 00:00:10,900
+特别是，我们将讨论机器人关节之间的关系
+In particular, we are going to talk about the relationship between the joints in a robot's
+
+3
+00:00:10,900 --> 00:00:14,250
+手臂和机器人末端执行器的姿势。
+arm and the pose of the robot end effector.
+
+4
+00:00:14,250 --> 00:00:18,550
+因此，当我用自己的手臂移动各种关节时，我们可以说是结束的姿势
+So as I've moved the various joints in my own arm we can say that the pose of the end
+
+5
+00:00:18,550 --> 00:00:20,169
+我的手臂变了，对吗？
+of my arm changes, right?
+
+6
+00:00:20,169 --> 00:00:24,710
+所以我们要做的是如何对通常包含的机器人手臂起作用
+So what we're going to do is how this works for a robot arm which typically comprises
+
+7
+00:00:24,710 --> 00:00:26,520
+一些关节。
+a number of joints.
+
+8
+00:00:26,520 --> 00:00:31,489
+在机器人的手臂中，它们变化，它们具有不同数量的关节，一些机器人手臂可能具有
+In a robot's arm, they vary, they have different numbers of joints, some robot arms might have
+
+9
+00:00:31,489 --> 00:00:36,120
+只有3个关节，一些机器人手臂可能有6个关节，有些可能有10个关节，可能有
+only 3 joints, some robot arms might have 6 joints and some might have 10 joints, could have
+
+10
+00:00:36,120 --> 00:00:37,449
+100个关节。
+a 100 joints.
+
+11
+00:00:37,449 --> 00:00:40,800
+机器人手臂还有两种不同类型的关节。
+There are also two different sorts of joints that robot arms have.
+
+12
+00:00:40,800 --> 00:00:43,410
+有些关节被称为棱柱关节。
+There are joints that are called Prismatic joints.
+
+13
+00:00:43,410 --> 00:00:45,980
+这些是滑动或伸长的关节。
+These are joints that slide or elongate.
+
+14
+00:00:45,980 --> 00:00:50,920
+并且有关节是旋转关节，就像我自己手臂上的关节一样。
+And there are joints that are rotating joints, like the joints that I have in my own arm.
+
+15
+00:00:50,920 --> 00:00:55,260
+所以我们称这种旋转关节为旋转关节和滑动或伸缩
+So we call these sort of rotating joints Revolute joints and the sliding or telescoping
+
+16
+00:00:55,260 --> 00:00:57,510
+我们称之为棱柱关节。
+joints we called Prismatic joints.
+
+17
+00:00:57,510 --> 00:01:02,130
+因此，这里有一些存在的不同类型的机器人手臂的照片。
+So here are some pictures of a number of different types of robot arms that exist.
+
+18
+00:01:02,130 --> 00:01:07,330
+这只是存在于其中的非常大量机器人手臂的非常小的样本
+This is just a very small sample of a very very large number of robot arms that exist within
+
+19
+00:01:07,330 --> 00:01:08,330
+世界。
+the world.
+
+20
+00:01:08,330 --> 00:01:12,000
+我们将研究其中的一些示例，查看它们，查看数字
+We are going to work through some of these examples, look at them, look at the number
+
+21
+00:01:12,000 --> 00:01:16,549
+他们拥有的关节，他们拥有的不同类型的关节，然后继续工作
+of joints that they have, the different types of joints that they have and then work on
+
+22
+00:01:16,549 --> 00:01:22,100
+数学描述，关节角度与数学关系
+the mathematical description, the mathematical relationship between the joint angles and
+
+23
+00:01:22,100 --> 00:01:24,120
+机器人末端效应器的姿势。
+the robot end effector pose.
+

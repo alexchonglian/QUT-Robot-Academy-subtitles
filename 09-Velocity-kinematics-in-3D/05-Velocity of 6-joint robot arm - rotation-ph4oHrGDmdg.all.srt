@@ -1,0 +1,270 @@
+1
+00:00:03,340 --> 00:00:08,260
+我们将回过头来考虑这个矩阵导数的旋转部分。
+We're going to go back to considering the rotational part of this matrix derivative.
+
+2
+00:00:08,260 --> 00:00:12,519
+我们将重新排列其表达式并隔离偏斜对称矩阵。这意味着
+We're going to rearrange its expression and isolate the skew-symmetric matrix. That means
+
+3
+00:00:12,519 --> 00:00:17,769
+我们必须将旋转矩阵移到等式的另一边。我们要
+we have to take the rotation matrix over to the other side of the equation. We need to
+
+4
+00:00:17,769 --> 00:00:23,269
+计算它的逆，但我们知道旋转度量，逆与其转置相同。
+compute its inverse but we know for a rotation metrics that the inverse is the same as its transpose.
+
+5
+00:00:23,270 --> 00:00:28,730
+所以现在我们根据旋转矩阵的导数得到了斜对称矩阵
+So now we have the skew-symmetric matrix in terms of the derivative of the rotation matrix
+
+6
+00:00:28,730 --> 00:00:34,930
+关于Q1，这是我们在这里以红色突出显示的近似值。该
+with respect to Q1 and that's the approximation that we've got highlighted here in red. The
+
+7
+00:00:34,930 --> 00:00:39,399
+旋转矩阵转置和机器人关节角度的变化率。我们可以
+rotation matrix transpose and the rate of change of the robot's joint angle. We can
+
+8
+00:00:39,399 --> 00:00:45,059
+用数值计算这个，我们最终得到这个矩阵，它应该是一个斜对称矩阵。
+compute this numerically and we end up with this matrix which should be a skew-symmetric matrix.
+
+9
+00:00:45,060 --> 00:00:49,460
+让我们更详细地看一下它。我们知道有一个偏斜对称矩阵
+Let's have a look at it in a bit more detail. We know that a skew-symmetric matrix has got
+
+10
+00:00:49,460 --> 00:00:54,700
+这样的形式，让我们检查这是否是一个斜对称矩阵和
+a form something like this so let's check whether this is a skew-symmetric matrix and
+
+11
+00:00:54,700 --> 00:00:57,789
+如果是的话，角速度的值是多少？
+if it is, what are the values of the angular velocity?
+
+12
+00:00:57,789 --> 00:01:02,480
+一开始，如果我们看一下对角线，我们可以看到它们是零或非常，
+At the start if we look at the diagonals we can see that they are either zero or very,
+
+13
+00:01:02,480 --> 00:01:07,039
+非常接近零，并记住这是一个近似值，所以我会说手
+very close to zero and remember that this is an approximation so I'm going to say hand
+
+14
+00:01:07,039 --> 00:01:12,200
+在心脏上，这些是对角线上的零。它看起来像一个斜对称矩阵
+on heart that these are zeroes on the diagonal. It's looking like a skew-symmetric matrix
+
+15
+00:01:12,200 --> 00:01:17,329
+对我来说。让我们看一下与OmegaX相对应的元素。在这种情况下，它们都是零
+to me. Let's look at the elements that correspond to Omega X. In this case they're both zero
+
+16
+00:01:17,329 --> 00:01:23,240
+所以我们可以写出OmegaX大约等于Q1dot的零次。我们来看看吧
+so we can write that Omega X is approximately equal to zero times Q1dot. Let's look at the
+
+17
+00:01:23,240 --> 00:01:27,880
+OmegaY元素和它们都相同，所以我很高兴地说Omega
+Omega Y elements and they are both identically equal to zero so I'm happy to say that Omega
+
+18
+00:01:27,880 --> 00:01:30,409
+Y大约等于Q1dot的零次。
+Y is approximately equal to zero times Q1dot.
+
+19
+00:01:30,409 --> 00:01:36,169
+现在让我们来看看OmegaZ，这与OmegaZ大致相当
+Let's look now at Omega Z and this is pretty consistent with Omega Z being approximately
+
+20
+00:01:36,169 --> 00:01:42,689
+等于Q1dot的1倍。所以我们所做的就是匹配精确偏斜对称的元素
+equal to 1 times Q1dot. So what we've done is match the elements in an exact skew-symmetric
+
+21
+00:01:42,689 --> 00:01:48,139
+矩阵和近似的斜对称矩阵并写出一些关系
+matrix and are approximate skew-symmetric matrix and written some relationships between
+
+22
+00:01:48,139 --> 00:01:54,819
+机器人末端执行器的角速度和第一个的变化率的组成部分
+the components of the robot end-effector angular velocity and the rate of change of the first
+
+23
+00:01:54,819 --> 00:01:56,399
+Q1dot的关节角度。
+joint angle that's Q1dot.
+
+24
+00:01:56,399 --> 00:02:02,429
+所以我现在可以用这样的矩阵形式来编写它，这里再次表达了这个表达式
+So I can write it now in matrix form like this, and here's that expression again and
+
+25
+00:02:02,429 --> 00:02:06,919
+带回我们之前为机器人的过渡速度计算的表达式
+to bring back the expression we computed earlier for the transitional velocity of the robot's
+
+26
+00:02:06,919 --> 00:02:11,969
+最终的效应。我可以通过叠加两个向量并将其结合起来来组合这两个
+end-effector. And I can combine these two by stacking up the two vectors and bringing
+
+27
+00:02:11,969 --> 00:02:13,909
+排除Q1dot的常用术语。
+out the common term Q1dot.
+
+28
+00:02:13,909 --> 00:02:18,860
+而我现在在机器人的末端执行器的空间速度之间存在这种关系
+And I now have this relationship between the spatial velocity of the robot's end-effector
+
+29
+00:02:18,860 --> 00:02:23,650
+和机器人的第一个关节角度的速度。所以这就是我们的表达方式
+and the velocity of the robot's first joint angle. So here's the expression that we just
+
+30
+00:02:23,650 --> 00:02:30,110
+计算出来，我们可以为关节2和关节3一直做到同样的事情，一直到关节6。
+computed and we can do the same thing for joint 2 and joint 3 all the way up to joint 6.
+
+31
+00:02:30,300 --> 00:02:35,379
+您会注意到矩阵顶部和向量的向量中的数字是
+You'll notice that the numbers in the vectors at the top and the columns of the matrix are
+
+32
+00:02:35,379 --> 00:02:40,510
+略有不同，那是因为顶部的向量是近似值
+slightly different and that's because the vectors at the top are an approximation to
+
+33
+00:02:40,510 --> 00:02:43,989
+真正的导数，而带矩阵的列是真正的导数。这里的
+the true derivative while the columns with the matrix are the true derivative. Here's
+
+34
+00:02:43,989 --> 00:02:49,379
+再次矩阵，它将空间速度与机器人的关节速度联系起来
+the matrix again and it relates the spatial velocity to the robot's joint velocity by
+
+35
+00:02:49,379 --> 00:02:54,769
+中间的这个矩阵是雅可比矩阵的另一个实例。这是一个6x6
+this matrix in the middle which is another instance of a Jacobian matrix. It's a 6 x 6
+
+36
+00:02:54,769 --> 00:03:00,319
+矩阵和它被称为操纵器雅可比矩阵。我们可以写这个表达式
+matrix and it’s referred to as the manipulator Jacobian matrix. We can write this expression
+
+37
+00:03:00,319 --> 00:03:01,900
+更加简洁。
+much more succinctly.
+
+38
+00:03:01,900 --> 00:03:06,900
+我们使用希腊字母'nu'来表示空间速度和
+We use the Greek letter ‘nu’ as we have done previously to represent spatial velocity and
+
+39
+00:03:06,900 --> 00:03:12,859
+我们通过Qdot表示联合速度。我用大写字母J代表操纵者
+we represent joint velocity by Qdot. I've used capital J to represent the manipulator
+
+40
+00:03:12,859 --> 00:03:18,269
+Jacobian和我已经表明它是Q的函数。雅可比矩阵的元素
+Jacobian and I've indicated that it is a function of Q. The elements of the Jacobian matrix
+
+41
+00:03:18,269 --> 00:03:21,170
+取决于关节角度。
+depend on the joint angles.
+
+42
+00:03:21,170 --> 00:03:26,980
+现在我们要为Puma560机器人计算精确的雅可比行列式，我已经装好了
+Now we're going to compute the exact Jacobian for the Puma 560 robot and I've already loaded
+
+43
+00:03:26,980 --> 00:03:31,459
+机器人进入我工作区的模型。我要把雅可比人放到工作区
+a model of the robot into my workspace. I'm going to put the Jacobian into the workspace
+
+44
+00:03:31,459 --> 00:03:37,999
+对于变量J和我的机器人对象称为P560和我要调用的方法
+for variable J and my robot object is called P560 and the method that I'm going to invoke
+
+45
+00:03:37,999 --> 00:03:43,549
+被称为雅可比行列式，我传入的唯一论证是关节角度的集合。
+is called Jacobian and the only argument that I've passed in is the set of joint angles.
+
+46
+00:03:43,549 --> 00:03:48,499
+这里是雅可比矩阵，它是针对关节角集合计算的
+And here is the Jacobian matrix and that's being computed for the set of joint angles
+
+47
+00:03:48,499 --> 00:03:54,450
+QN，这就是它在弧度上的样子，这是一套机器人配置
+QN and this is what it looks like in radians and this is a robot configuration a set of
+
+48
+00:03:54,450 --> 00:04:00,200
+机器人关节角度，将机器人的末端执行器置于其有用工作空间的中间位置。
+robot joint angles that puts the robot’s end-effector somewhere in the middle of its useful workspace.
+
+49
+00:04:00,200 --> 00:04:05,999
+考虑雅可比矩阵的一种有用方法是根据各列的内容
+A useful way to think about the Jacobian matrix is in terms of what the individual columns
+
+50
+00:04:05,999 --> 00:04:11,519
+意思。雅可比矩阵的第一列乘以第一列的变化率
+mean. The first column of the Jacobian matrix multiplied by the rate of change of the first
+
+51
+00:04:11,519 --> 00:04:16,400
+关节给了我对末端效应器空间速度的贡献。
+joint gives me a contribution to the end-effector’s spatial velocity.
+
+52
+00:04:16,400 --> 00:04:22,550
+此列给出了由Q2引起的末端效应器速度的一个组成部分。这是组件
+And this column gives me a component of end-effector velocity due to Q2. This is the component
+
+53
+00:04:22,550 --> 00:04:31,590
+由于Q3，Q4，Q5和Q6。然后我们根据每个关节添加组件以获得总和
+due to Q3, Q4, Q5 and Q6. And we add the components due to each of these joints to get the sum
+
+54
+00:04:31,590 --> 00:04:34,290
+总末端执行器空间速度。
+total end-effector spatial velocity.
+

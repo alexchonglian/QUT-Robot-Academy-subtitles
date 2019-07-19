@@ -1,0 +1,345 @@
+1
+00:00:03,360 --> 00:00:08,740
+建造机器看起来有一种长期的人类兴趣或着迷
+There’s been a long-term human interest or fascination in building machines that look
+
+2
+00:00:08,740 --> 00:00:14,619
+并像我们一样行事。早在18世纪和19世纪，人们就开始建造机器了
+and act like we do. Back in the 18th and 19th centuries, people were building machines that
+
+3
+00:00:14,619 --> 00:00:19,140
+他们称之为Automata，这里展示了一些例子。基本上，他们是
+they called Automata, and some examples of them are shown here. Essentially, they’re
+
+4
+00:00:19,140 --> 00:00:24,350
+非常巧妙的时钟工作机器充满齿轮和凸轮等。
+very ingenious, clock-work machines filled with gears and cams and so on.
+
+5
+00:00:24,350 --> 00:00:29,500
+这位右侧显示的作家起草人的例子能够表演
+The example the writer draftsman shown here on the right hand side, was able to perform
+
+6
+00:00:29,500 --> 00:00:35,590
+非常非常精细的图纸。这里举一个例子，显示了一只绵羊的图画。早一点
+very, very elaborate drawings. An example here, a drawing of a sheep is shown. An earlier
+
+7
+00:00:35,590 --> 00:00:41,570
+而这一类机器的非常着名的例子就是消化鸭子了
+and very famous example of machines of this class is the digesting duck and once again
+
+8
+00:00:41,570 --> 00:00:46,010
+这是一台钟表机。你用这只鸭子做的是用小食物喂它
+it is a clock-work machine. What you’d do with this duck is you would feed it with small
+
+9
+00:00:46,010 --> 00:00:50,660
+它看起来像吃的颗粒，它们会通过消化道
+pellets which it would appear to eat and they would pass through the digestive tracts of
+
+10
+00:00:50,660 --> 00:00:53,100
+鸭子最终排出体外。
+the duck and be eventually excreted.
+
+11
+00:00:53,100 --> 00:00:58,440
+他们能够建造一个看起来像生命一样的机器，它会吃掉它会
+They’re able to build a machine that appeared to be life-like, it would eat and it would
+
+12
+00:00:58,440 --> 00:01:05,110
+排泄。活着的东西的两个重要功能。那个时候，这个
+excrete. Two of the important functions of something that is alive. At that time, this
+
+13
+00:01:05,110 --> 00:01:09,950
+被认为是非常精彩的，技术进步的一个例子，他们是如何做到的
+was considered quite wonderful, an example of technological progress, how they were able
+
+14
+00:01:09,950 --> 00:01:15,080
+制造非常非常逼真的机器。当然，按照今天的标准来看
+to build machines that were very, very life-like. Of course by today’s standards, it looks
+
+15
+00:01:15,080 --> 00:01:19,240
+非常，非常原始，但那时，这是一个了不起的成就。
+very, very primitive but at that time, it was an amazing achievement.
+
+16
+00:01:19,240 --> 00:01:25,190
+现在，设计这个的绅士Vaucanson继续做了一些更有用的事情。他
+Now, the gentleman who designed this, Vaucanson, went on to do some more useful things. He
+
+17
+00:01:25,190 --> 00:01:31,470
+参与丝绸织造过程的自动化。编织技术是
+got involved in automating the process of silk weaving. The technology of weaving was
+
+18
+00:01:31,470 --> 00:01:37,400
+由Jacquard进一步推进，他介绍了控制编织图案的创新
+advanced further by Jacquard and he introduced the innovation of controlling the weave pattern
+
+19
+00:01:37,400 --> 00:01:44,920
+通过一系列打孔木卡。所以，这是一种自动化机器和
+by means of a series of punched wooden cards. So, this was a form of automated machine and
+
+20
+00:01:44,920 --> 00:01:49,479
+它是可编程的。出来的图案取决于打孔的图案
+it was programmable. The pattern that came out depended on the patterns of holes punched
+
+21
+00:01:49,479 --> 00:01:51,930
+在那些木牌里。
+in those wooden cards.
+
+22
+00:01:51,930 --> 00:01:57,830
+CharlesBabbage在怀孕期间接受了打卡控制的概念
+The notion of punch card control was picked up by Charles Babbage, when he was conceiving
+
+23
+00:01:57,830 --> 00:02:04,229
+19世纪后期的机械计算引擎。那时他没有技术
+a mechanical computing engine in the late 1800s. At that time he didn't have the technology
+
+24
+00:02:04,229 --> 00:02:10,039
+实际构建这台机器，但他介绍了一个非常重要的通用概念
+to actually build this machine but he introduced the really important notion of a general-purpose
+
+25
+00:02:10,039 --> 00:02:15,650
+计算引擎及其执行的计算由程序决定。在
+computing engine and the computation that it performed is dictated by a program. In
+
+26
+00:02:15,650 --> 00:02:19,500
+他的情况，输入打孔卡。
+his case, input on punched cards.
+
+27
+00:02:19,500 --> 00:02:25,090
+该机器所体现的思想影响了后来的电子计算设备。为
+The ideas embodied in this machine influenced later electronic computing devices. For an
+
+28
+00:02:25,090 --> 00:02:29,790
+例如，在第二次世界大战期间和该机器制造的ENIAC计算机，
+instance, the ENIAC Computer that was built during World War II and from that machine,
+
+29
+00:02:29,790 --> 00:02:35,560
+我们可以追踪我们每天使用的计算机，我们的笔记本电脑和移动设备
+we can trace a lineage to the computers we use every day, in our laptops and in our mobile
+
+30
+00:02:35,560 --> 00:02:42,390
+当然，手机和计算机是我们今天构建的机器人系统的关键组成部分。
+phones, and computers of course, are a critical component of robot systems that we build today.
+
+31
+00:02:42,390 --> 00:02:48,069
+我们或许可以将机器人视为可以为物理世界做事的计算机。
+We can perhaps think of a robot as a computer that can do things to the physical world.
+
+32
+00:02:48,069 --> 00:02:53,230
+正如我们今天所知，导致机器人技术的另一个非常重要的创新就是这个
+The other really important innovation that led to robotics as we know them today is this
+
+33
+00:02:53,230 --> 00:02:58,379
+第二次世界大战后在美国阿贡国家实验室完成的工作
+work that was done after World War II at the Argonne National Laboratory in the United
+
+34
+00:02:58,379 --> 00:03:04,840
+状态。在那里，他们面临着组装核武器的问题。这需要
+States. In there, they were faced by a problem of assembling nuclear weapons. This required
+
+35
+00:03:04,840 --> 00:03:11,510
+他们处理，操纵放射性物质。这是一项任务
+them to handle, to manipulate pieces of material that were radioactive. This was a task that
+
+36
+00:03:11,510 --> 00:03:16,019
+不能由人类承担，因为它会伤害或杀死那些做过的人
+couldn't be undertaken by human beings because it would injure or kill the people who did
+
+37
+00:03:16,019 --> 00:03:22,140
+那工作。我们需要有机器来处理这种材料，但问题是
+that work. We needed to have machines to handle that material instead but the problem was
+
+38
+00:03:22,140 --> 00:03:27,730
+为了操纵这种放射性物质，我们需要大量的技能和智慧，
+that we need a lot of skill and intelligence in order to manipulate this radioactive material,
+
+39
+00:03:27,730 --> 00:03:31,209
+所以，他们提出了一个名为远程操作的概念。
+so, they came up with a concept called teleoperation.
+
+40
+00:03:31,209 --> 00:03:35,629
+白大衣的人坐在所谓的主操纵臂上
+The people in white coats are sitting with what are called the master manipulator arms
+
+41
+00:03:35,629 --> 00:03:41,159
+所以他们会用手抓住那些武器，然后移动它们。双臂在这里
+so they would grab those arms with their hands and they would move them. The arms over here
+
+42
+00:03:41,159 --> 00:03:47,190
+被称为奴隶武器。它们以模仿动作的方式移动
+are referred to as the slave arms. They move in such a way as to mimic the motion of the
+
+43
+00:03:47,190 --> 00:03:52,129
+主臂。所以，那些正在进行装配和控制大师的人
+master arm. So, the people who were doing the assembly work and controlling the master
+
+44
+00:03:52,129 --> 00:03:58,440
+武器，奴隶武器在远程房间里进行放射性物质的工作。
+arms, the slave arms are in a remote room performing work on the radioactive material.
+
+45
+00:03:58,440 --> 00:04:03,250
+放射性房间发生的事情的视频会传回给人们
+Video of what’s going on in the radioactive room is transmitted back to the people doing
+
+46
+00:04:03,250 --> 00:04:08,510
+与主臂一起工作，这样他们就可以看到电视显示器上发生了什么。他们搬家了
+the work with the master arm so they can see what’s happening on a TV monitor. They move
+
+47
+00:04:08,510 --> 00:04:14,970
+主臂，从属臂同步移动并远程执行任务。这是一种技术
+the master arms, the slave arms move in synchronism and perform the task remotely. This is a technique
+
+48
+00:04:14,970 --> 00:04:19,919
+称为远程操作。它不是真正的机器人。在某些方面，你可以把它想象成一个非常复杂的，
+called teleoperation. It’s not really robotic. In some ways, you can think of it as a very-sophisticated,
+
+49
+00:04:19,919 --> 00:04:25,869
+遥控技术。在这方面完成这项具体任务非常重要
+remote-controlled technology. It was really important to achieve this specific task at
+
+50
+00:04:25,869 --> 00:04:27,860
+阿贡国家实验室。
+the Argonne National Laboratory.
+
+51
+00:04:27,860 --> 00:04:33,259
+该技术是现代制造机器人的重要先驱。我们所做的
+This technology is an important precursor to modern manufacturing robots. What we do
+
+52
+00:04:33,259 --> 00:04:38,059
+我们是在主臂和从臂之间切断导线而不是主导线
+is we cut the wire between the master arm and the slave arm and instead of the master
+
+53
+00:04:38,059 --> 00:04:43,400
+我们将命令发送到从属臂，我们将计算机放在那里。所以，电脑
+arm sending the commands to the slave arm, we put a computer there instead. So, the computer
+
+54
+00:04:43,400 --> 00:04:48,199
+将命令发送到将根据信号移动的从属臂
+is sending commands to the slave arm which is going to move in accordance to the signals
+
+55
+00:04:48,199 --> 00:04:53,909
+走出电脑。当然，计算机是无限可重编程设备
+coming out of the computer. Of course, the computer is an infinitely reprogrammable device
+
+56
+00:04:53,909 --> 00:04:58,740
+因此，我们可以让奴隶臂做任何我们喜欢的事情，现在，那里
+so therefore we can make the slave arm do anything that we like at all and now, there
+
+57
+00:04:58,740 --> 00:05:03,059
+不再涉及任何人类。我们创造了一个机器人。
+are no longer any human beings involved. We've created a robot.
+
+58
+00:05:03,059 --> 00:05:07,589
+也许这个想法最初出现的人是乔治·德沃尔，这位绅士表现出来
+And perhaps the person that this idea first occurred to is George Devol, the gentleman shown
+
+59
+00:05:07,589 --> 00:05:14,050
+在这里，一位多产的美国发明家最近才去世。他有创造的想法
+here, a prolific American inventor who died only recently. He had the idea of creating
+
+60
+00:05:14,050 --> 00:05:19,039
+他称之为Unimation的通用自动化。那就是
+what he called universal automation which was contracted to Unimation. That was the
+
+61
+00:05:19,039 --> 00:05:24,930
+他与JosephEngelberger于1956年创立的公司名称。他们创立了
+name of the company that he founded in 1956 with Joseph Engelberger. They founded the
+
+62
+00:05:24,930 --> 00:05:30,199
+该公司生产最终将在通用汽车公司工作的工业机器人
+company to produce industrial robots that would eventually go to work in General Motors
+
+63
+00:05:30,199 --> 00:05:35,719
+植物。这里展示了1961年安装的第一台机器人。这是什么
+plants. The first of their robots which was installed in 1961 is shown here. What this
+
+64
+00:05:35,719 --> 00:05:40,369
+机器人做的是从压铸机上卸下铸件。
+robot did was to unload castings from a die-casting machine.
+
+65
+00:05:40,369 --> 00:05:46,300
+这是制造业中机器人革命的开始。Unimation公司，
+This was the start of the revolution of robots working in the manufacturing industry. Unimation,
+
+66
+00:05:46,300 --> 00:05:51,369
+公司是第一家制造机器人的公司。他们是先驱者。他们是
+Inc. was the first company to build manufacturing robots. They were the pioneers. They’re
+
+67
+00:05:51,369 --> 00:05:56,080
+不再是商业和现在，有许多公司建立制造业
+no longer in business and today, there are many, many companies that build manufacturing
+
+68
+00:05:56,080 --> 00:06:01,389
+机器人，但他们中的大多数可以追溯他们的祖先，他们的想法，甚至可能追溯到人们
+robots, but most of them can trace their ancestry, their ideas or perhaps even the people back
+
+69
+00:06:01,389 --> 00:06:06,749
+这家小公司成立于1956年，位于美国康涅狄格州。
+to this little company founded in 1956 in Connecticut in the United States.
+

@@ -1,0 +1,265 @@
+1
+00:00:03,659 --> 00:00:08,270
+彼得：机器人汽车即将到来。最近我们看到自动化水平提高了
+Peter: Robotic cars are coming. We’ve seen increased levels of automation in recent times
+
+2
+00:00:08,270 --> 00:00:15,500
+在普通乘用车。我们已经看到过系统，如支持警报，自动停车和
+in regular passenger cars. We’ve seen systems like backing alarms, automatic parking and
+
+3
+00:00:15,500 --> 00:00:21,430
+等等，自适应巡航控制。最近谷歌特别引人注目
+so on, adaptive cruise control. Google particularly, recently, have got a really high profile in
+
+4
+00:00:21,430 --> 00:00:26,949
+这个空间，但我知道大多数主要汽车制造商都有项目在寻找
+this space, but I know that most of the major auto manufacturers have got projects looking
+
+5
+00:00:26,949 --> 00:00:32,619
+在开发完全自动驾驶的汽车和大量的人数
+at developing fully self-driving cars and the number that gets bandied around a lot
+
+6
+00:00:32,619 --> 00:00:38,399
+是这项技术将在2020年前上路。
+is that this technology is going to be on the roads by the year 2020.
+
+7
+00:00:38,399 --> 00:00:42,660
+很多人担心围绕这个问题的法律问题。那如果有自驾车
+Lots of people worry about the legal issues around this. That if there is a self-driving
+
+8
+00:00:42,660 --> 00:00:48,270
+汽车，如果它导致事故，它杀了一个人，谁的错？但你已经
+car and if it causes an accident, it kills somebody, whose fault is that? But you’ve
+
+9
+00:00:48,270 --> 00:00:53,250
+得到了我想平衡与人类是可怕的司机的事实。一切
+got to I guess balance that against the fact that human beings are terrible drivers. Every
+
+10
+00:00:53,250 --> 00:00:56,980
+一年，有一百万人遇难，也许还有一亿人受伤
+year, a million people are killed, and maybe a hundred million people are injured on the
+
+11
+00:00:56,980 --> 00:01:03,559
+道路，由人类司机。所以，如果我们有机器人汽车，他们可能会造成一些伤害，
+road, by human drivers. So if we had robot cars, and they perhaps do cause some injuries,
+
+12
+00:01:03,559 --> 00:01:08,940
+但也许是我们现在受伤的人数的百分之一，道德要说的是什么
+but perhaps 100th of the number of injuries we have now, what does ethics have to say
+
+13
+00:01:08,940 --> 00:01:14,979
+关于那个？机器人汽车是偶然的，这是件好事还是坏事
+about that? Is that a good thing or a bad thing that robot cars would be accidentally
+
+14
+00:01:14,979 --> 00:01:18,970
+杀人？没有那么多，但也许还有一些？
+killing people? Not as many, but perhaps still some?
+
+15
+00:01:18,970 --> 00:01:27,300
+道格：超过50岁，我总是回顾过去，回答未来，我在想
+Doug: Being over 50, I always look to the past to answer the future and I’m thinking
+
+16
+00:01:27,300 --> 00:01:32,140
+好吧，让我们想一想过去的汽车设计。所以你和我都成长了
+all right, let’s think of the design of cars in the past. So you and I were raised
+
+17
+00:01:32,140 --> 00:01:36,239
+在没有安全带的时候。当我们还是孩子的时候，我们都会跳到后面
+at the time when there were no seatbelts. When we were kids, we all jump in the back
+
+18
+00:01:36,239 --> 00:01:45,069
+座位上，我们有五个人，我们就像仓鼠或兔子一样回到那里。我们有一个1964年
+seat, there were five of us and we’re back there like hamsters or rabbits. We had a 1964
+
+19
+00:01:45,069 --> 00:01:51,649
+克莱斯勒萨拉托加。这些车的设计完全不是为了安全。
+Chrysler Saratoga. The cars were designed not for safety at all.
+
+20
+00:01:51,649 --> 00:01:53,640
+它们的设计看起来很好......
+They were designed to look good…
+
+21
+00:01:53,649 --> 00:01:55,910
+彼得：那时他们做了。
+Peter: And they did at that time.
+
+22
+00:01:55,910 --> 00:02:01,170
+道格：是的，他们很精彩。而且它们的设计目标很快。我们有383V8和它
+Doug: Yeah, and they were wonderful. And they’re designed to go fast. We had a 383 V8 and it
+
+23
+00:02:01,170 --> 00:02:10,270
+飞走了。那些日子里的心态并不是因为油耗
+just flew. The mindset in those days was not around efficiency because fuel consumption
+
+24
+00:02:10,270 --> 00:02:17,050
+不是问题，因为石油很便宜。安全车不是为安全而设计的。
+wasn’t an issue because the oil was cheap. Safety- cars weren’t designed for safety.
+
+25
+00:02:17,050 --> 00:02:23,120
+在那些日子里你遇到了一个意外，因为事实并非存在，所以你在车里乱成一团
+You got into an accident in those days, you were scrambled inside the car because it wasn’t
+
+26
+00:02:23,120 --> 00:02:28,930
+设计友好。梅赛德斯-奔驰，沃尔沃，你知道这个故事。汽车开始设计
+design friendly. Mercedes-Benz, Volvo, you know the story. Automobile started to design
+
+27
+00:02:28,930 --> 00:02:34,700
+围绕安全进入后期的60年代和70年代。这成了一个重大问题。引擎
+around safety into the later ‘60s and into the ‘70s. It became a major issue. Engines
+
+28
+00:02:34,700 --> 00:02:37,760
+被设计为下拉，他们有安全带......
+were designed to drop-down, they had seatbelts…
+
+29
+00:02:37,760 --> 00:02:39,080
+彼得：安全气囊......
+Peter: Airbags…
+
+30
+00:02:39,080 --> 00:02:50,010
+道格：安全气囊出现然后刹车。随着安全成为一个标准，一切都改变了。
+Doug: Airbags came along and then the brakes. It all changed as safety became a criteria.
+
+31
+00:02:50,010 --> 00:02:54,130
+汽车死亡是大多数第一世界国家的最大杀手。他们很大
+Automobile deaths are the biggest killer in most first world countries. They are a big
+
+32
+00:02:54,130 --> 00:02:56,680
+毫无疑问，在暴力死亡方面，毫无疑问。
+killer, there’s no doubt about it, in terms of violent death.
+
+33
+00:02:56,680 --> 00:02:57,520
+彼得：是的。
+Peter: Yeah.
+
+34
+00:02:57,520 --> 00:03:06,680
+道格：所以，争论的焦点是，事实上，道德上是汽车制造
+Doug: So the argument would be that, in fact, ethically are automobiles being manufactured
+
+35
+00:03:06,680 --> 00:03:14,390
+即使在今天，在最严格的安全感下保护人类生命？因为道德会
+even today under the strictest sense of safety to preserve human life? Because ethics would
+
+36
+00:03:14,390 --> 00:03:19,420
+认为他们应该是，你应该设计这辆车，所以它就是
+argue that they should be, that you should be designing this car, so that it’s the
+
+37
+00:03:19,420 --> 00:03:26,420
+在经济约束的范围内，最安全的汽车。所以，如果你从过去争论
+safest car possible within sort of the economic constraints. So if you argue from the past
+
+38
+00:03:26,420 --> 00:03:34,819
+展望未来，看看这种机器人技术的构造，减少死亡，制造道路
+to the future and look at this construct of robotics making less death, making the road
+
+39
+00:03:34,819 --> 00:03:41,540
+更安全，我认为它在使用机器人方面完全符合道德标准。
+safer, I would argue that it’s completely ethically founded in terms of using robotics.
+
+40
+00:03:41,540 --> 00:03:43,970
+我完全没问题。
+I have no problem with that at all.
+
+41
+00:03:43,970 --> 00:03:46,610
+彼得：所以从更好的意义上说，这太棒了。
+Peter: So in a greater good sense, it’s fantastic.
+
+42
+00:03:46,610 --> 00:03:49,880
+道格：在目的论意义上，绝对是的，是的。
+Doug: In a teleological sense, absolutely, yeah.
+
+43
+00:03:49,880 --> 00:03:56,280
+彼得：但是对于那个伴随着机器人车辆被杀的人来说，他们是
+Peter: But for the individual whose partner was killed by a robotic vehicle, they’re
+
+44
+00:03:56,280 --> 00:03:59,030
+不会幸福。但我想如果他们被杀，他们就不会高兴
+not going to be happy. But I guess they’re not going to be happy if they’re killed
+
+45
+00:03:59,030 --> 00:04:00,959
+通过人力驱动的车辆。
+by a human-driven vehicle either.
+
+46
+00:04:00,959 --> 00:04:08,790
+道格：是的，再说一次，有什么区别？你是对的。它变成了一个案例
+Doug: Yeah, so again, what’s the difference? You’re right. It becomes a case then of
+
+47
+00:04:08,790 --> 00:04:17,720
+法律，谁被起诉，如何。它是否会落在汽车制造商那里被起诉
+law, who gets sued and how. Does it fall back onto the car manufacturer to be sued in that
+
+48
+00:04:17,720 --> 00:04:24,280
+案件而不是失去执照或被判入狱的个人的错误？
+case rather than the fallibility of the individual who lose their license or get a jail term for causing that?
+
+49
+00:04:24,280 --> 00:04:28,400
+彼得：那么它成为一个法律问题而不再是道德问题？
+Peter: So then it becomes a legal issue and no longer a moral issue?
+
+50
+00:04:28,400 --> 00:04:29,440
+道格：那是我的信念，是的。
+Doug: That’s my belief, yes.
+
+51
+00:04:29,440 --> 00:04:34,310
+彼得：好的，所以这里更高或更道德的考虑是我们可以大大减少
+Peter: Okay, so the higher or the moral consideration here is that we could dramatically reduce
+
+52
+00:04:34,310 --> 00:04:38,690
+在道路上遇害的人数，这是一件好事。
+the number of people killed on the roads and that’s a good thing.
+
+53
+00:04:38,690 --> 00:04:39,720
+道格：当然，彼得。我相信。是啊。
+Doug: Absolutely, Peter. I believe that. Yeah.
+

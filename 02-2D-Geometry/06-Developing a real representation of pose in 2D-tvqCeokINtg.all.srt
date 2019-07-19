@@ -1,0 +1,35 @@
+1
+00:00:03,340 --> 00:00:09,520
+现在是时候开始使这些概念真实。这是什么？这封信是什么？
+Now it's time to start making these concepts real. What is this thing? What is this letter ksi?
+
+2
+00:00:10,060 --> 00:00:14,480
+我们将通过分离旋转和翻译来做到这一点。
+We're going to do this by separating rotation and translation.
+
+3
+00:00:14,490 --> 00:00:19,390
+在这里，我们有两种不同姿势的汽车。我们可以用术语来描述第二个姿势
+Here we have the car at two different poses. And we can describe the second pose in terms
+
+4
+00:00:19,390 --> 00:00:27,609
+从这里到那里的相对姿势。现在为了帮助我们理解和发展
+of a relative pose from here to there. Now in order to aid our understanding and development
+
+5
+00:00:27,609 --> 00:00:34,160
+这个概念，我们将把它分成两部分。翻译后跟着
+of the concept, we're going to split this into two parts. A translation followed by
+
+6
+00:00:34,160 --> 00:00:39,730
+轮换。我们首先要处理旋转部件，因为它实际上更复杂
+a rotation. We're going to deal with the rotational part first because it's actually more complex
+
+7
+00:00:39,730 --> 00:00:43,859
+比翻译和概念上更难理解。
+than translation and conceptually more difficult to understand.
+

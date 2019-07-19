@@ -1,0 +1,45 @@
+1
+00:00:03,440 --> 00:00:07,220
+在上一节课中，我们讨论了针孔摄像机和摄像机的图像形成
+In the last lecture we talked about image formation for pinhole cameras and cameras
+
+2
+00:00:07,220 --> 00:00:10,220
+用镜片，我们几何处理它。
+with lenses and we treated it geometrically.
+
+3
+00:00:10,220 --> 00:00:14,769
+在这个讲座中，我们将再次看一下图像形成，但这次我们要走了
+In this lecture we're going to look at image formation again but this time we're going
+
+4
+00:00:14,769 --> 00:00:19,590
+更正式地，更加数学地对待它。我们将使用两种数学工具
+to treat it more formally, more mathematically. We're going to use two mathematical tools
+
+5
+00:00:19,590 --> 00:00:24,800
+帮助我们做到这一点。第一个是线性代数，这都是关于矩阵和向量的，
+to help us do this. The first is linear algebra and that's all about matrices and vectors,
+
+6
+00:00:24,800 --> 00:00:30,579
+你应该非常熟悉的话题。第二个主题是你可能更少
+a topic you should be quite familiar with. The second topic is one you are perhaps less
+
+7
+00:00:30,579 --> 00:00:33,550
+熟悉并且它是齐次坐标。
+familiar with and it's homogeneous coordinates.
+
+8
+00:00:33,550 --> 00:00:38,250
+所以我们将介绍齐次坐标，然后我们将用它来帮助我们进行数学计算
+So we'll introduce homogeneous coordinates and then we'll use it to help us with a mathematical
+
+9
+00:00:38,250 --> 00:00:40,500
+形象形成主义。
+formalism of image formation.
+

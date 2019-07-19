@@ -1,0 +1,275 @@
+1
+00:00:03,520 --> 00:00:10,110
+我早些时候曾谈到过世界人口增长带来的交通挑战。更多的人，
+I talked earlier about the challenges of transportation as the world population grows. More people,
+
+2
+00:00:10,110 --> 00:00:14,299
+更多的汽车，更多的材料来支持那些需要从生产地出发的人
+more cars, more material to support those people needing to go from where it’s produced
+
+3
+00:00:14,299 --> 00:00:16,740
+它被消费的地方。
+to where it is consumed.
+
+4
+00:00:16,740 --> 00:00:21,040
+汽车是一项很棒的技术。他们彻底改变了我们的生活方式，但他们
+Motorcars are a wonderful technology. They have revolutionized the way we live, but they
+
+5
+00:00:21,040 --> 00:00:26,190
+是非常危险的机器。每年有超过一百万人被汽车撞死
+are very dangerous machines. Every year, over one million people are killed by motorcars
+
+6
+00:00:26,190 --> 00:00:29,710
+这个数字超过一百倍受伤。
+and more than a hundred times that number are injured.
+
+7
+00:00:29,710 --> 00:00:36,210
+从全球来看，这每年耗费近五万亿美元。适合高收入人群
+Globally, this is costing the planet nearly half a trillion dollars every year. For high-income
+
+8
+00:00:36,210 --> 00:00:41,540
+这些国家占其国民生产总值的近2％。在低收入或中等收入
+countries, that’s nearly 2% of their gross national product. In low or middle-income
+
+9
+00:00:41,540 --> 00:00:46,620
+国家，这个数字较小，但它正在增长。这是一个发展成本
+countries, that number is smaller, but it’s growing. And it is a cost of development is
+
+10
+00:00:46,620 --> 00:00:52,300
+通过交通伤害损失了大部分国民生产总值
+that a larger proportion of your gross national product is being lost through traffic injuries
+
+11
+00:00:52,300 --> 00:00:57,980
+和死亡。如果我们看看2002年的10个主要死因，道路交通伤害
+and fatalities. If we look at the 10 leading causes of death in 2002, road traffic injuries
+
+12
+00:00:57,980 --> 00:00:59,610
+排名第10。
+were at number 10.
+
+13
+00:00:59,610 --> 00:01:04,649
+到2030年，它预计它们将增长到第八位。所以，虽然我们已经
+By the year 2030, it’s predicted they will have grown to number eight. So while we’ve
+
+14
+00:01:04,649 --> 00:01:09,819
+为孕妇的健康做了很多事情并减少了结核病的发病率，
+done great things for the health of pregnant women and reduced the incidence of tuberculosis,
+
+15
+00:01:09,819 --> 00:01:14,409
+道路交通伤害，汽车将在地球上杀死越来越多的人
+the road traffic injuries, the car is going to kill more and more people on the planet
+
+16
+00:01:14,409 --> 00:01:16,810
+这是一件令人伤心的事情。
+and that’s a sad thing.
+
+17
+00:01:16,810 --> 00:01:22,279
+以下是一些统计数据，按地区显示国民生产总值的百分比
+Here is some more statistics, which show by region the percentage of gross national product
+
+18
+00:01:22,279 --> 00:01:26,880
+由于交通伤害和死亡而丢失。
+that is lost due to traffic injuries and fatalities.
+
+19
+00:01:26,880 --> 00:01:32,719
+现在，汽车是由人类驱动的，人类是人类的主要原因
+Now, motorcars are driven by human beings and human beings are the primary cause for
+
+20
+00:01:32,719 --> 00:01:38,219
+美国的机动车事故和1000万起事故的死亡人数
+the motor-vehicle accidents and the fatalities of 10 million accidents in the United States
+
+21
+00:01:38,219 --> 00:01:44,109
+每年。这些事故中有一百五十万是由于司机的过错造成的。
+each year. Nine and a half million of those accidents are due to the fault of the drivers.
+
+22
+00:01:44,580 --> 00:01:46,380
+我喜欢这里的引用。
+I rather like the quote here.
+
+23
+00:01:47,840 --> 00:01:53,960
+有趣的是，大多数司机估计自己的能力。我特别喜欢这句话。
+Interestingly, most drivers over estimate their own ability. I particularly like this quote.
+
+24
+00:01:53,960 --> 00:01:59,720
+这表明大多数美国学生，其中93％的人认为他们高于平均水平
+It suggests that most American students, 93% of them believe that they are above average drivers
+
+25
+00:01:59,720 --> 00:02:01,780
+当然，这是不可能的。
+and of course, that’s an impossibility.
+
+26
+00:02:02,919 --> 00:02:07,419
+底线是人类即使他们相信他们也不是很好的驱动因素
+The bottom line is human beings are not very good drivers even if they believe that they
+
+27
+00:02:07,419 --> 00:02:14,970
+是。人类会导致事故，导致大量伤亡。
+are. Human beings cause accidents which lead to a large number of injuries and deaths.
+
+28
+00:02:14,970 --> 00:02:20,250
+此图表显示了每万辆车的死亡人数
+This graph here shows the number of fatalities per 10 thousand vehicles as a function of
+
+29
+00:02:20,250 --> 00:02:26,390
+时间和我们可以看到，在过去的50年里，一直在稳步改善
+time and we can see that over the last 50 years, there’s been steady improvement in
+
+30
+00:02:26,390 --> 00:02:32,760
+减少每辆车的死亡人数，这是由于汽车设计的改进，
+reducing the number of fatalities per car and it’s due to improvements in car design,
+
+31
+00:02:32,760 --> 00:02:37,140
+运动阻止人们在酒精的影响下驾驶，引进
+campaigns to stop people driving under the influence of alcohol, the introduction of
+
+32
+00:02:37,140 --> 00:02:44,120
+安全带和安全气囊等。虽然总的改进很受欢迎，但是
+seatbelts and airbags and so on. While the general improvement is quite welcome, the
+
+33
+00:02:44,120 --> 00:02:50,050
+可悲的是，有这个高原，改善的变化率确实下降了
+sad thing is that there is this plateau, the rate of change of improvement has really fallen
+
+34
+00:02:50,050 --> 00:02:55,560
+我们被困在这个楼层。它不是零。这个数量有限
+off and so we’re stuck on this floor. It’s not at zero. There is this finite number of
+
+35
+00:02:55,560 --> 00:03:01,000
+这些事故将发生在道路上车辆数量的一小部分。
+accidents that’s going to happen as a fraction of the number of vehicles on the road.
+
+36
+00:03:01,000 --> 00:03:07,260
+人类驾驶员不完美的一个后果就是人驾车的方式
+One consequence of the imperfection of human drivers is the way that the human-driven cars
+
+37
+00:03:07,260 --> 00:03:12,100
+彼此互动。该系统的动力学非常非常复杂并且已经研究过
+interact with one another. The dynamics of this system is very, very complex and studied
+
+38
+00:03:12,100 --> 00:03:17,620
+由数学家和交通工程师。随着我们增加道路上汽车的密度，
+by mathematicians and traffic engineers. As we increase the density of cars on the road,
+
+39
+00:03:17,620 --> 00:03:23,440
+流量实际上开始下降，这是我们亲身经历过的情况。
+the flow rate actually starts to fall off and this is a situation that we’ve all experienced personally.
+
+40
+00:03:23,620 --> 00:03:29,200
+如果我从办公室窗户向外看，我看到一条繁忙的高速公路，这是一个景色
+If I look out and down from my office window, I see a busy expressway and this is a view
+
+41
+00:03:29,210 --> 00:03:33,810
+当高速公路实际上非常拥挤并且没有特别快地移动时
+of the expressway when it’s actually quite congested and not moving particularly quickly.
+
+42
+00:03:33,810 --> 00:03:37,970
+因此，在这种情况下的司机认为交通不流动，即
+So the drivers in this situation are thinking that the traffic is not flowing, that the
+
+43
+00:03:37,970 --> 00:03:43,060
+道路被堵塞，但从我的鹰眼来看，我可以看到有很多道路
+road is jammed up, but from my eagle eye view, I can see that there’s an awful lot of road
+
+44
+00:03:43,060 --> 00:03:48,090
+这是没有车的，这是人类司机的另一个问题，因为他们是
+that’s got no cars on it and this is another problem with human drivers, because they’re
+
+45
+00:03:48,090 --> 00:03:52,900
+不太好，他们的反应时间非常慢，我们需要留下很大的差距
+not very good, they’ve got quite slow reaction times really, we need to leave large gaps
+
+46
+00:03:52,900 --> 00:03:57,730
+在汽车之间。如果我们可以装载更多的汽车将会更有效率
+in between the cars. It would be much more efficient if we could pack more cars into
+
+47
+00:03:57,730 --> 00:04:02,709
+所有这些空白的空间。反应时间很短的人意味着我们不能
+all of that empty space. Human beings with a poor reaction times mean that we can’t
+
+48
+00:04:02,709 --> 00:04:07,400
+去做。如果我们这样做，我们就会发生更多事故。但也许，如果人类
+do that. If we did that, we’ll just have tons more accidents. But perhaps, if human
+
+49
+00:04:07,400 --> 00:04:11,730
+如果我们有自动驾驶汽车或机器人汽车等，众生不会开车
+beings weren’t driving the cars, if we have self-driving cars or robotic cars such as
+
+50
+00:04:11,730 --> 00:04:17,000
+这里描述的是一款谷歌自动驾驶汽车，那么事情可能会更好。
+depicted here by one of the Google self-driving cars, then perhaps things could be better.
+
+51
+00:04:17,000 --> 00:04:21,599
+自动驾驶汽车正在采取一些平稳措施的情况如何？那
+What would be the situation for autonomous cars that were doing some plateauing. That
+
+52
+00:04:21,599 --> 00:04:25,629
+我们是否有一组八辆汽车非常紧密地一起行驶并向下移动
+is we have a groups of eight cars travelling very closely together and moving down the
+
+53
+00:04:25,629 --> 00:04:31,080
+道路，通过这种技术，我们将能够在路上安装更多的汽车。
+road, with this sort of technology, we will be able to fit a lot more cars on the road.
+
+54
+00:04:31,080 --> 00:04:35,930
+他们旅行更顺利。他们旅行得更快。我们可以减少现有的汽车数量
+They travel more smoothly. They travel more quickly. We could get more cars down existing
+
+55
+00:04:35,930 --> 00:04:38,410
+道路，而不必使它们更宽。
+roads without having to make them any wider.
+

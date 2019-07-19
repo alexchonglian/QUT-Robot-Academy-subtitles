@@ -1,0 +1,580 @@
+1
+00:00:03,300 --> 00:00:08,519
+回顾一下，我们有一个摄像头，它正在观察三维空间中的物体。我们可以
+Just to recap we have a camera, which is observing an object in three-dimensional space. We can
+
+2
+00:00:08,519 --> 00:00:13,160
+将3D空间中对象的位置投影到具有坐标的图像平面中
+project the position of the object in 3D space into the image plane where it has a coordinate
+
+3
+00:00:13,160 --> 00:00:19,910
+U，V。假设相机能够移动并且具有平移速度和旋转
+U, V. Assume that the camera is able to move and it has translational velocity and rotational
+
+4
+00:00:19,910 --> 00:00:24,340
+速度。图像平面上的点的速度与相机空间有关
+velocity. The velocity of the point on the image plane is related to the camera spatial
+
+5
+00:00:24,340 --> 00:00:27,710
+速度由图像雅可比。
+velocity by the image Jacobian.
+
+6
+00:00:27,710 --> 00:00:33,210
+我们可以非常简单地证明这一原则。如果我把头移到右边那么机器人
+We can demonstrate this principle very simply. If I move my head to the right then the robot
+
+7
+00:00:33,210 --> 00:00:39,390
+世界上的其他一切似乎都向左移动了。相反，我转动我的头
+and everything else in the world appears to move to the left. If instead I rotate my head
+
+8
+00:00:39,390 --> 00:00:44,059
+在右边，那么世界上的一切也往往向左移动。
+towards the right then everything in the world also tends to move to the left.
+
+9
+00:00:44,059 --> 00:00:49,579
+移动我的脑袋之间有一种模棱两可的态度;纯粹的翻译到右边和
+So there's an ambiguity between moving my head; pure translation to the right and the
+
+10
+00:00:49,579 --> 00:00:54,590
+把头转到右边。视觉外观有点类似。
+rotation of my head to the right. The visual appearance is somewhat similar.
+
+11
+00:00:54,590 --> 00:01:01,660
+我们需要注意两个重要的概念。第一个问题是明显的。
+There are two important concepts that we need to be aware of. The first issue is perceptibly.
+
+12
+00:01:01,660 --> 00:01:05,979
+通常，当相机移动时，图像平面上的点也会移动。
+In general as the camera moves, points on the image plane move as well.
+
+13
+00:01:05,979 --> 00:01:10,619
+因此在某些情况下，相机会在图像平面中移动一些点
+So there are some cases where with the camera moving some points in the image plane will
+
+14
+00:01:10,619 --> 00:01:16,570
+似乎没动。在那种情况下，我们说运动是不可察觉的。看着这个形象
+not appear to move. In that case we say the motion is imperceptible. Looking at the image
+
+15
+00:01:16,570 --> 00:01:20,350
+我们无法判断相机是否在移动。
+we are not able to tell whether the camera is moving or not.
+
+16
+00:01:20,350 --> 00:01:26,860
+另一个重要的问题是我们所谓的歧义，有时是完全不同的相机
+Another important issue is what we call ambiguity and that is at sometimes quite different camera
+
+17
+00:01:26,860 --> 00:01:31,950
+速度会导致图像发生相同的变化。我们将举一些具体的例子
+velocities cause the same change in the image. And we will give some concrete examples of
+
+18
+00:01:31,950 --> 00:01:37,240
+这两种影响很快就会出现。考虑相机正向移动的情况
+both of these effects shortly. Consider the case where the camera is moving in the positive
+
+19
+00:01:37,240 --> 00:01:42,159
+Z方向我们先前介绍了这种光流辐射模式。
+Z direction we have this radiating pattern of optical flow that we introduced earlier.
+
+20
+00:01:42,159 --> 00:01:47,159
+让我们考虑在图像平面的中间有一个图像平面点。我们
+Let's consider we have an image plane point right in the middle of the image plane. We
+
+21
+00:01:47,159 --> 00:01:52,470
+可以看出，当我们离开中心时，光流向量会变大。在
+can see that the optical flow vectors get larger as we move away from the centre. In
+
+22
+00:01:52,470 --> 00:01:57,570
+事实上在正中心没有明显的速度。但是，如果我直接前往
+fact at the very centre there is no apparent velocity. But, if I am heading directly towards
+
+23
+00:01:57,570 --> 00:02:02,930
+一个物体，它似乎没有向侧面或向上或向下移动;它停留了
+an object it doesn't appear to be moving to the side or upwards or downwards; it's stays
+
+24
+00:02:02,930 --> 00:02:04,259
+到底在哪里。
+exactly where it is.
+
+25
+00:02:04,259 --> 00:02:08,970
+如果我继续沿正Z方向移动，这就是我要击中的东西。
+This is the thing that I am going to hit if I keep moving in the positive Z direction.
+
+26
+00:02:08,970 --> 00:02:13,010
+所以如果我只看一下图像平面中间的一个点;这是不可能的
+So if I just look at a point in the middle of the image plane; it's not possible for
+
+27
+00:02:13,010 --> 00:02:16,129
+我要确定我是否正在前进。
+me to determine whether I am moving forwards or not.
+
+28
+00:02:16,129 --> 00:02:21,129
+不可察觉的运动的另一个例子是相机旋转的情况
+Another example of imperceptible motion is the case where the camera is rotating around
+
+29
+00:02:21,129 --> 00:02:26,760
+它的光轴。因此，如果我考虑图像平面中的一个点，则没有明显的
+its optical axis. So again if I consider a point in the image plane there is no apparent
+
+30
+00:02:26,760 --> 00:02:30,319
+相机旋转时在此特定点的速度。
+velocity at this particular point with the camera rotating.
+
+31
+00:02:30,319 --> 00:02:34,150
+显然，如果我考虑朝向图像边缘的点，则存在显着的速度
+Clearly if I consider a point toward the edge of the image there is a significant velocity
+
+32
+00:02:34,150 --> 00:02:38,550
+由于相机旋转而产生的分量。但是，在图像的中心没有和
+component due to the camera rotation. But, in the centre of the image there is none and
+
+33
+00:02:38,550 --> 00:02:44,650
+我看不出我的相机是否围绕光轴旋转，我无法分辨。
+I cannot tell by looking at a point there whether my camera is rotating around the optical axis or not.
+
+34
+00:02:45,730 --> 00:02:49,780
+让我们计算一下雅可比视觉效果，但这次我们将关注这一点
+Let's compute the visual Jacobian but, this time we are going to do it about the point
+
+35
+00:02:49,780 --> 00:02:57,319
+它位于图像的中心。那是在坐标512,512处，这是主要的点。
+which is in the centre of the image. And that is at coordinate 512, 512 that is the principal point.
+
+36
+00:02:57,319 --> 00:03:01,430
+那是光轴穿透图像平面的地方，我们可以在这里看到它
+That's where the optical axis pierces the image plane and we can see that up here in
+
+37
+00:03:01,430 --> 00:03:03,920
+摄像机对象的参数。
+the parameters of the camera object.
+
+38
+00:03:03,920 --> 00:03:08,390
+我们将在这个特定点计算视觉雅可比，现在让我们来看看
+We will compute the visual Jacobian at this particular point, now let's take a look at
+
+39
+00:03:08,390 --> 00:03:15,970
+当我们移动相机并再次以“X”方向运动时会发生什么。我们
+what happens when we move the camera and start again with motion in the "X" direction. We
+
+40
+00:03:15,970 --> 00:03:24,400
+转置它，我们再次看到这个点在负“U”方向以每秒160像素的速度移动。
+transpose that and we see again that this point moves at 160 pixels per second in the negative "U" direction.
+
+41
+00:03:24,400 --> 00:03:30,390
+现在让我们看看如果我们向“Z”方向移动会发生什么，我们现在看到这个特别的
+Now let's see what happens if we move in the "Z" direction and we see now that this particular
+
+42
+00:03:30,390 --> 00:03:32,489
+点将具有零速度。
+point is going to have a zero velocity.
+
+43
+00:03:32,489 --> 00:03:37,250
+所以我的相机以每秒一米的速度向前移动，直到那一点，
+So my camera is moving forward at a meter per second and as far as that particular point,
+
+44
+00:03:37,250 --> 00:03:42,400
+它的投影图像平面;它根本不动。同样的事情发生在
+its projection image plane; it's not moving at all. And the same thing happens in the
+
+45
+00:03:42,400 --> 00:03:51,470
+围绕光轴旋转的情况。我们再次看到，这一点已经得到了解决
+case of rotation around the optical axis. We see again, this particular point has got
+
+46
+00:03:51,470 --> 00:03:53,720
+图像平面上的零运动。
+zero motion on the image plane.
+
+47
+00:03:53,720 --> 00:04:00,909
+运动模糊是一件有趣的事情。如果我们看光流场是由于
+Motion ambiguity is an interesting thing. If we look at the optical flow field due to
+
+48
+00:04:00,909 --> 00:04:05,720
+在“X”方向上的正速度;我们看到所有的光流向量
+positive velocity in the "X' direction; we see that all that all the optical flow vectors
+
+49
+00:04:05,720 --> 00:04:07,260
+指向左边。
+point towards the left.
+
+50
+00:04:07,260 --> 00:04:12,599
+如果我要围绕“Y”轴以正方向旋转相机，我们就可以获得流量
+If I were to rotate the camera in a positive direction around the "Y" axis we get the flow
+
+51
+00:04:12,599 --> 00:04:16,900
+右侧显示的字段。我们可以看到它们看起来很相似。他们是
+field shown here on the right. And we can see that they look quite similar. They are
+
+52
+00:04:16,900 --> 00:04:21,930
+当然在图像的中间行非常相似，但我们可以看到顶部和
+certainly very similar in the middle rows of the image, but we can see at the top and
+
+53
+00:04:21,930 --> 00:04:27,610
+在图像的底部，对于相机旋转情况，出现光流向量
+the bottom of the image that for the camera rotation case the optical flow vectors appear
+
+54
+00:04:27,610 --> 00:04:35,470
+为了略微弯曲，它们并非全部平行，因为它们是在“X”方向上的纯速度的情况。
+to be slightly curved, they are not all parallel as they are in the case of pure velocity in the "X" direction.
+
+55
+00:04:35,470 --> 00:04:40,979
+翻译和轮换之间存在某种模糊性。如果我翻译相机或
+There is some sort of ambiguity between translation and rotation. If I translate the camera or
+
+56
+00:04:40,979 --> 00:04:46,000
+我旋转相机，我们得到一些类似的光流场。让我们来探讨一下
+I rotate the camera we get somewhat similar optical flow fields. Let's explore this in
+
+57
+00:04:46,000 --> 00:04:47,610
+一点点细节。
+a little bit more detail.
+
+58
+00:04:47,610 --> 00:04:52,880
+在左侧，我们看到由于纯粹的相机转换导致的光流。在右边
+On the left we see the optical flow due to pure camera translation. On the right hand
+
+59
+00:04:52,880 --> 00:04:58,320
+我们有相机围绕“Y”轴旋转的情况。上图显示了
+side we have the case for the camera rotating around the "Y" axis. The top graph shows the
+
+60
+00:04:58,320 --> 00:05:03,970
+相机配有焦距较大的镜头时的情况。这对应于长焦
+case when the camera has a lens with a large focal length. This corresponds to a telephoto
+
+61
+00:05:03,970 --> 00:05:09,130
+或变焦镜头。在这种情况下，我们看到光流模式非常非常相似
+or a zoom lens. And we see in this case that the optical flow patterns are very, very similar
+
+62
+00:05:09,130 --> 00:05:14,699
+确实。但是，如果我们使用的焦距小的镜头对应于宽视场
+indeed. However, if we use a lens with a small focal length that corresponds to a wide field
+
+63
+00:05:14,699 --> 00:05:20,169
+我们看到光流模式现在与模式非常非常不同
+of view we see that the optical flow pattern now is very, very different to the pattern
+
+64
+00:05:20,169 --> 00:05:26,400
+由于纯粹的“X”翻译。这种模糊性实际上取决于焦距
+due to pure "X" translation. This ambiguity in fact depends on the focal length of the
+
+65
+00:05:26,400 --> 00:05:32,520
+镜片。我们可以通过查看雅可比矩阵图像结构的一些细节来解释这一点。
+lens. We can explain this by looking in some detail at the structure of the image Jacobian matrix.
+
+66
+00:05:32,530 --> 00:05:37,889
+考虑相机在“X”方向上具有平移速度的情况。然后那个速度
+Consider the case where the camera has translation velocity in the "X" direction. Then that velocity
+
+67
+00:05:37,889 --> 00:05:44,840
+乘以雅可比图像的这一列。旋转周围会发生模棱两可的情况
+multiplies this column of the image Jacobian. The ambiguous case occurs with rotation around
+
+68
+00:05:44,840 --> 00:05:50,229
+“Y”轴和欧米茄“Y”乘以雅各比矩阵的这一列。
+the "Y" axis and omega "Y" multiplies this column of Jacobian matrix.
+
+69
+00:05:50,229 --> 00:05:55,380
+对于“F”非常大，焦距长的情况;那么这两个词就变成了
+For the case where "F" is very large, a long the focal length; then these two terms become
+
+70
+00:05:55,380 --> 00:05:59,960
+非常相似。那么在这种情况下会发生什么，因为“F”非常大，它在“U”中占主导地位
+quite similar. So what happens in this case because "F" is very large it dominates "U'
+
+71
+00:05:59,960 --> 00:06:06,500
+平方。所以结果实际上是一个常数。它不再是“U”的功能，而是相同的
+squared. So the result is effectively a constant. It's no longer a function of "U" and the same
+
+72
+00:06:06,500 --> 00:06:10,910
+对于第一列，相应的术语不是“U”的函数。所以这两个
+for the first column the corresponding term it is not a function of "U". So these two
+
+73
+00:06:10,910 --> 00:06:13,759
+术语成为类似的功能。
+terms become similar functions.
+
+74
+00:06:13,759 --> 00:06:18,650
+如果我们看第二行，我们可以看到它有“F”，变得非常大，它就在
+If we look at the second row we can see that it has "F", becomes very large and it is in
+
+75
+00:06:18,650 --> 00:06:24,160
+分母。该术语将接近零，并再次变得非常相似
+the denominator. This term will approach zero and again becomes very similar to the corresponding
+
+76
+00:06:24,160 --> 00:06:28,090
+图像雅可比矩阵的第一列中的元素。
+elements in the first column of the image Jacobian matrix.
+
+77
+00:06:28,090 --> 00:06:33,050
+我们可以采用直观的方法解决这个问题。在这里，我们有一个非常广泛的领域
+We can take an intuitive approach to this problem. Here we have a very wide field of
+
+78
+00:06:33,050 --> 00:06:37,919
+查看通过一个非常小的焦距镜头对应的大教堂的图像。和
+view image of a cathedral that corresponds through a very small focal length lens. And
+
+79
+00:06:37,919 --> 00:06:43,750
+在这里，我们看到同一个大教堂的狭窄视野图像，并且对应于一个大的
+here we see a narrow field of view image of same cathedral and that corresponds to a large
+
+80
+00:06:43,750 --> 00:06:48,600
+焦距镜头;如果您愿意，可以使用大变焦镜头，长焦镜头。
+focal length lens; a big zoom lens, a telephoto lens if you'd like.
+
+81
+00:06:48,600 --> 00:06:55,780
+现在，大焦距镜头对应于这个广阔领域的中心部分
+Now that large focal length lens corresponds to the central part of this wide field of
+
+82
+00:06:55,780 --> 00:07:00,669
+看图。所以在宽视野图像的这个中心部分，其中“U”和
+view image. So in this central part of the wide field of view image where the "U" and
+
+83
+00:07:00,669 --> 00:07:06,270
+“V”坐标很小，我们得到这种运动模糊。我们无法判断相机是否合适
+"V" coordinates are small we get this motion ambiguity. We can't tell whether the camera
+
+84
+00:07:06,270 --> 00:07:12,449
+正在旋转或翻译。但是，即使在U和V很大的图像周边，
+is rotating or translating. But, even in the periphery of the image where U and V are large,
+
+85
+00:07:12,449 --> 00:07:17,900
+动议一点也不含糊。相机旋转和相机转换非常原因，
+the motion is not ambiguous at all. Camera rotation and camera translation cause very,
+
+86
+00:07:17,900 --> 00:07:25,100
+光流现象非常不同。这种模糊性肯定与焦距有关。
+very different optical flow phenomenon. This ambiguity is very definitely related to the focal length.
+
+87
+00:07:25,100 --> 00:07:30,020
+显然，旋转运动和平移运动是非常非常不同的。但是，什么
+Clearly rotational motion and translational motion are very, very different. But, what
+
+88
+00:07:30,030 --> 00:07:35,810
+我们刚才说的是使用图像传感器;就像我们的眼睛一样，这是不可能的
+we've just been saying is that using an image sensor; just like our eye that it is not possible
+
+89
+00:07:35,810 --> 00:07:41,970
+让我们一般地说出一些旋转运动和一些平移运动之间的区别。
+for us to tell in general the difference between some rotational motions and some translational motions.
+
+90
+00:07:42,360 --> 00:07:48,100
+当然，这将成为使用视觉来控制机器人的一个障碍。而且有点儿
+Surely this would be a showstopper for using vision to control robots. And it is a bit
+
+91
+00:07:48,110 --> 00:07:53,849
+问题和解决问题的一种方法是使用单独的传感器来测量旋转。
+of a problem and one way to get around that is to use a separate sensor to measure rotation.
+
+92
+00:07:53,849 --> 00:07:59,349
+这是一张旋转测量单元的图片，里面有陀螺仪传感器
+So this is a picture of a rotational measurement unit which has got gyroscope sensors in it
+
+93
+00:07:59,349 --> 00:08:05,690
+它可以独立测量机器人的旋转，我们可以使用这些额外的信息
+which can measure independently the rotation of a robot and we can use this extra information
+
+94
+00:08:05,690 --> 00:08:10,160
+消除我们从视觉传感器获得的信息的歧义。
+to disambiguate the information that we get from our visual sensor.
+
+95
+00:08:10,160 --> 00:08:16,720
+但是，我们呢？我们有眼睛，清楚地告诉我们，我们可以很容易地确定我们是否在旋转
+But, what about us? We have our eyes and clearly for us we can easily determine if we are rotating
+
+96
+00:08:16,720 --> 00:08:23,810
+或者我们是否正在翻译。是的，我们可以，但为此，我们也使用惯性传感器。
+or whether we are translating. Yes we can, but to do that we also use inertial sensors.
+
+97
+00:08:23,810 --> 00:08:29,129
+我们实际上有旋转传感器。在我们的内耳中有这三个
+We actually have rotational sensors in our head. In our inner ear there are these three
+
+98
+00:08:29,129 --> 00:08:34,680
+半圆形运河，它们测量我们头部的角速度，我们有三个
+semi-circular canals and they measure the angular velocity of our head and we have three
+
+99
+00:08:34,680 --> 00:08:40,000
+我们左耳的传感器和右耳的三个传感器。而我们的大脑融合了
+sensors in our left ear and three sensors in our right ear. And our brain fuses the
+
+100
+00:08:40,000 --> 00:08:44,920
+来自我们内耳的旋转信息和我们的光流信息
+rotational information that comes from our inner ear with our optical flow information
+
+101
+00:08:44,920 --> 00:08:46,320
+来自我们的眼睛。
+that comes from our eyes.
+
+102
+00:08:46,320 --> 00:08:52,370
+它融合在我们的大脑中，它为我们提供了一个关于我们运动的非常明确的信息
+It is fused in our brain it gives us a very unambiguous information about our motion whether
+
+103
+00:08:52,370 --> 00:08:55,320
+我们正在轮换或是否正在翻译。
+we're rotating or whether we are translating.
+
+104
+00:09:06,900 --> 00:09:09,060
+这是一种非常强大的错觉。
+This is a very very powerful illusion.
+
+105
+00:09:09,060 --> 00:09:14,600
+我在旋转的鼓里面，我的眼睛可以检测到这个鼓的运动。
+I am inside a rotating drum, and my eye can detect the motion of this drum.
+
+106
+00:09:14,600 --> 00:09:20,400
+我的眼睛和大脑正在计算我们所谓的光流和光流
+My eye and my brain are computing what we call optical flow, and this optical flow
+
+107
+00:09:20,400 --> 00:09:26,280
+由旋转鼓引起的是与我以这种方式旋转头部时相同的光学流动，
+that’s caused by that rotating drum is the same sort of optical flow that I get if I rotate my head this way,
+
+108
+00:09:26,280 --> 00:09:28,500
+或者我这样转动我的头。
+or I rotate my head that way.
+
+109
+00:09:28,500 --> 00:09:32,620
+而这种特殊的幻觉让我感到有点不安，
+And this particular illusion causes me to feel a little bit uneasy,
+
+110
+00:09:32,620 --> 00:09:36,080
+因为我用眼睛得到的信息-光流-
+because the information that I get with my eyes — the optical flow —
+
+111
+00:09:36,080 --> 00:09:38,620
+告诉我，我的头在左右移动，
+tells me that my head is moving from side to side,
+
+112
+00:09:38,620 --> 00:09:43,580
+但我耳朵里的陀螺仪传感器告诉我，这种情况并没有发生。
+but the gyroscopic sensors in my ears tell me that’s not happening.
+
+113
+00:09:43,580 --> 00:09:48,400
+因此，我的耳朵告诉我的态度之间存在脱节，
+So there’s a disconnect between what my ears are telling me about my attitude,
+
+114
+00:09:48,400 --> 00:09:51,020
+我的眼睛告诉我的动作是什么，
+and what my eyes are telling me about my motion,
+
+115
+00:09:51,020 --> 00:09:56,580
+这会导致晕船或轻微恶心的感觉，
+and that leads to the sensation of seasickness or a slight nausea,
+
+116
+00:09:56,600 --> 00:09:59,760
+这就是我坚持这些铁轨的原因。
+which is why I’m holding on very tightly to these rails.
+

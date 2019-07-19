@@ -1,0 +1,490 @@
+1
+00:00:03,800 --> 00:00:08,570
+如果我对同一场景有两个视图，但视点有很大的变化，
+If I have two views of the same scene but there is a very large change in the viewpoint,
+
+2
+00:00:08,570 --> 00:00:13,950
+我的相机的位置或方向，然后是模式的非常大的变化
+a very large change in either the position or orientation of my camera, then the pattern
+
+3
+00:00:13,950 --> 00:00:19,250
+围绕这些兴趣点中的每一个的像素将是不同的。
+of pixels that surrounds each of these interest points will be different.
+
+4
+00:00:19,250 --> 00:00:24,589
+例如，如果一个图像中拐角特征​​周围的像素图案看起来像这样
+For instance, if the pattern of pixels around a corner feature in one image looks like this
+
+5
+00:00:24,589 --> 00:00:30,259
+如果我的第二个观点更倾向于那个特定的部分
+and in the case where my second view looks more obliquely at that particular part of
+
+6
+00:00:30,259 --> 00:00:35,920
+那个世界，然后会给那个特定部分带来一些透视扭曲
+the world, then that will introduce some perspective distortion to that particular part of the
+
+7
+00:00:35,920 --> 00:00:40,210
+图像和那两个窗口不匹配特别好。
+image and those two windows will not match particularly well.
+
+8
+00:00:40,210 --> 00:00:44,850
+同样，如果我的相机远离场景移动，那么图像将会改变
+Similarly, if my camera moves a long way away from the scene, then the image will change
+
+9
+00:00:44,850 --> 00:00:50,840
+在规模和我们使用的简单图像匹配技术也将失败。
+in scale and the simple image matching techniques that we used will also fail.
+
+10
+00:00:50,840 --> 00:00:55,940
+而且，如果我旋转相机，图像相似性测量将再次失败。
+And also, if I rotate the camera, again the image similarity measures will fail.
+
+11
+00:00:55,940 --> 00:01:01,999
+所以，我们需要的是一些方法来匹配一个兴趣点周围的区域
+So, what we need is some way to match the region around an interest point that is in
+
+12
+00:01:01,999 --> 00:01:05,000
+缩放和旋转的变体。
+variant to scale and to rotation.
+
+13
+00:01:05,000 --> 00:01:10,050
+现在，这是一个巨大的研究领域，今天有一些很棒的算法
+Now, this is a huge area of research and there is some wonderful algorithms available today
+
+14
+00:01:10,050 --> 00:01:12,120
+提供此功能。
+that provide this functionality.
+
+15
+00:01:12,120 --> 00:01:18,730
+也许，其中最着名的是DavidLowe的SIFT探测器在2004年倒退。
+Perhaps, one of the best known is the SIFT Detector by David Lowe bended back in 2004.
+
+16
+00:01:18,730 --> 00:01:23,080
+并且，它提供类似的输出。
+And, it provides output something like this.
+
+17
+00:01:23,080 --> 00:01:27,450
+这是我们之前看过的建筑物的图像，并覆盖在那里
+Here is the image of the building that we looked at before and overlaid on that are
+
+18
+00:01:27,450 --> 00:01:31,990
+许多被称为SIFT功能的东西。
+a number of what are referred to as SIFT features.
+
+19
+00:01:31,990 --> 00:01:36,140
+每个圆圈的中心代表一个兴趣点，一个足够明显的点
+Centre of each circle represents an interest point, a point that’s distinct enough to
+
+20
+00:01:36,140 --> 00:01:38,080
+找到另一张图片。
+find in another image.
+
+21
+00:01:38,080 --> 00:01:43,580
+位于每个兴趣点顶部的圆圈的大小表示某种东西
+The size of the circle sitting on top of each of those interest points indicates something
+
+22
+00:01:43,580 --> 00:01:45,340
+关于功能的规模。
+about the scale of the feature.
+
+23
+00:01:45,340 --> 00:01:51,100
+因此，围绕要素的圆圈中的所有像素都用于描述
+So, all of the pixels that are in the circle around the feature are used to describe that
+
+24
+00:01:51,100 --> 00:01:52,100
+特征。
+feature.
+
+25
+00:01:52,100 --> 00:01:54,050
+所以，我们可以看到一些功能非常小。
+So, we can see that some features are very small.
+
+26
+00:01:54,050 --> 00:01:57,700
+它们包含大量密集纹理，分布在少量像素上。
+They contain a lot of dense texture spread over a small number of pixels.
+
+27
+00:01:57,700 --> 00:02:02,230
+虽然，其他一些功能非常大，但它们涵盖了建筑物的整个角落。
+While, some other features are very large, they encompass the whole corner of a building.
+
+28
+00:02:02,230 --> 00:02:07,660
+这些功能还可以对图像中要素的方向进行编码
+These features also encode something about the orientation of the feature in the image
+
+29
+00:02:07,660 --> 00:02:10,819
+这是由径向线表示的。
+and that’s indicated by the radial line.
+
+30
+00:02:10,819 --> 00:02:16,030
+我们将使用相同的图像快速查看这些比例不变和特征变换
+We will have a quick look at these scale invariant and feature transform using the same image
+
+31
+00:02:16,030 --> 00:02:25,830
+我们在看Harris角落功能时使用过。
+we used when we were looking at the Harris corner feature.
+
+32
+00:02:25,830 --> 00:02:28,250
+在这里。
+And here it is.
+
+33
+00:02:28,250 --> 00:02:38,500
+现在计算SIFT功能我使用工具箱函数isift，我解析图像
+Now to compute the SIFT features I use the toolbox function isift, I parse in the image
+
+34
+00:02:38,500 --> 00:02:43,920
+和我们用于Harris角落功能的非常相似的论点，我要去
+and very similar arguments as we used for the Harris corner function and I am going
+
+35
+00:02:43,920 --> 00:02:45,710
+选择200个角落功能。
+to select 200 corner features.
+
+36
+00:02:45,710 --> 00:02:52,810
+只需要一两分钟来计算，现在在工作区中我们有一个200SIFT的向量
+Just take a minute or two to compute and now in the workspace we have a vector of 200 SIFT
+
+37
+00:02:52,810 --> 00:02:54,430
+点功能。
+point features.
+
+38
+00:02:54,430 --> 00:02:56,010
+我们来看看其中一个功能。
+Let's have a look at one of these features.
+
+39
+00:02:56,010 --> 00:02:58,440
+我们来看看向量中的第一个。
+Let's have a look at the first one in the vector.
+
+40
+00:02:58,440 --> 00:03:05,130
+它被称为289.9和805.4的坐标，它有许多额外的属性，如
+It's called a coordinate of 289.9 and 805.4 it has a number of additional attributes like
+
+41
+00:03:05,130 --> 00:03:09,940
+哈里斯的角落里有一种力量，表明这个特征有多么独特
+the Harris corner it's got a strength which indicates how distinctive that feature is
+
+42
+00:03:09,940 --> 00:03:16,040
+但与Harris角落特征不同的是，它还具有方向，θ值以及
+but unlike the Harris corner feature, it also has an orientation, a theta value and also
+
+43
+00:03:16,040 --> 00:03:18,120
+比例值。
+a scale value.
+
+44
+00:03:18,120 --> 00:03:20,860
+我们来看看图像中的这个特殊功能。
+Let's have a look at this particular feature in the image.
+
+45
+00:03:20,860 --> 00:03:26,000
+我们通过调用它的绘图方法来做到这一点，我们将用黄色绘制它，我要去
+We do that by calling the plot method on it, we are going to plot it in yellow, I am going
+
+46
+00:03:26,000 --> 00:03:29,080
+夸大它的规模，所以它更容易看到。
+to exaggerate it's scale so it's a bit easier to see.
+
+47
+00:03:29,080 --> 00:03:35,070
+我会将比例夸大16倍，我将以时钟格式显示它
+I will exaggerate the scale by a factor of 16 and I am going to display it in clock format
+
+48
+00:03:35,070 --> 00:03:37,440
+我会在片刻解释一下。
+and I will explain that in just a moment.
+
+49
+00:03:37,440 --> 00:03:39,520
+我们看到了这个功能。
+There we see the feature.
+
+50
+00:03:39,520 --> 00:03:44,990
+围绕它绘制一个圆圈，圆圈表示特征的比例和
+Drawn a circle around it and the circle indicates something about the scale of the feature and
+
+51
+00:03:44,990 --> 00:03:50,090
+作为时钟之手的线是时钟选项的意思
+the line which is the hand of the clock it's what the clock option is about says something
+
+52
+00:03:50,090 --> 00:03:53,660
+关于特定功能的方向。
+about the orientation of the particular feature.
+
+53
+00:03:53,660 --> 00:03:58,190
+现在我们可以显示整个图像的SIFT功能。
+Now we can display the SIFT features for the whole image.
+
+54
+00:03:58,190 --> 00:04:06,290
+要做到这一点，我将重新显示原始场景，使它更暗，然后我
+To do that, I am going to redisplay the original scene draw it a little darker and then I am
+
+55
+00:04:06,290 --> 00:04:11,900
+将绘制白色的所有功能，我们夸大了这个规模
+going to plot all of the features in white and we exaggerate the scale a bit less this
+
+56
+00:04:11,900 --> 00:04:15,209
+时间，我将它们显示为时钟。
+time and I am going to display them as clocks.
+
+57
+00:04:15,209 --> 00:04:16,840
+在那里我们看到它。
+And there we see it.
+
+58
+00:04:16,840 --> 00:04:20,090
+每个要素都有一个坐标，即图像中的一个点。
+Each feature has a coordinate, a point within the image.
+
+59
+00:04:20,090 --> 00:04:25,349
+对于每个特征，我们围绕它绘制一个圆圈，圆圈的大小表示某些东西
+For each feature we draw a circle around it and the size of the circle indicates something
+
+60
+00:04:25,349 --> 00:04:27,350
+关于功能的规模。
+about the scale of the feature.
+
+61
+00:04:27,350 --> 00:04:33,610
+一个小圆圈表示一个非常小的像素模式
+A small circle indicates a pattern of pixels that's quite distinct across that very small
+
+62
+00:04:33,610 --> 00:04:35,349
+图像中的空间尺度。
+spatial scale within the image.
+
+63
+00:04:35,349 --> 00:04:41,599
+所以它可能是一片叶子，它可能是阳台的一个小角落或窗户
+So it might be a single leaf, it might be a small corner of a balcony or a window in
+
+64
+00:04:41,599 --> 00:04:42,599
+图片。
+the image.
+
+65
+00:04:42,599 --> 00:04:46,290
+大圆对应于大规模特征。
+A large circle corresponds to a large scale feature.
+
+66
+00:04:46,290 --> 00:04:52,580
+所以这可能是一个特别大的特殊尺度
+So that's something that is distinctive at a much larger special scale so it might be
+
+67
+00:04:52,580 --> 00:04:58,901
+一个明亮的建筑的总体思路，沿着底部边缘的一些黑暗的树木包围。
+the general idea of a bright building surrounded by some dark trees along the bottom edge.
+
+68
+00:04:58,901 --> 00:05:05,270
+功能的位置也有很多信息。
+There is a lot of information in the position of the feature also in its scale.
+
+69
+00:05:05,270 --> 00:05:11,870
+每个圆都有一条径向线，对应于圆的方向
+Each circle has got a single radial line and that corresponds to the orientation of the
+
+70
+00:05:11,870 --> 00:05:16,910
+该功能正在说明像素模式是如何定位的
+feature that is saying something about how that pattern of pixels is oriented within
+
+71
+00:05:16,910 --> 00:05:17,910
+图片。
+the image.
+
+72
+00:05:17,910 --> 00:05:21,559
+想象一下，现在我有点戏剧性地移动相机。
+Imagine now I move my camera somewhat dramatically.
+
+73
+00:05:21,559 --> 00:05:26,889
+也许我把它旋转了90度，或者我离建筑物更远了。
+Perhaps I rotated it by 90 degrees or perhaps I moved much further away from the building.
+
+74
+00:05:26,889 --> 00:05:32,229
+SIFT功能的巨大优势在于它可以让我在两者之间进行匹配
+The great advantage of the SIFT feature is that it will allow me to match features between
+
+75
+00:05:32,229 --> 00:05:35,030
+这两种截然不同的观点。
+these two very different views.
+
+76
+00:05:35,030 --> 00:05:39,289
+尽管场景中像素图案的方向虽然不同
+Although the orientation of the pattern of pixels in the scene will be different although
+
+77
+00:05:39,289 --> 00:05:44,529
+像素模式的比例会有所不同，SIFT算法能够看到
+the scale of the pattern of pixels will be different, the SIFT algorithm is able to see
+
+78
+00:05:44,529 --> 00:05:45,529
+通过那个。
+through that.
+
+79
+00:05:45,529 --> 00:05:50,220
+你会在两个截然不同的观点中找到同样有趣的观点。
+And you will find the same interesting point in each of the two very, very different views.
+
+80
+00:05:50,220 --> 00:05:56,050
+但我们会报告方向已更改或功能的规模
+But we will report that the orientation has changed or that the scale of the feature has
+
+81
+00:05:56,050 --> 00:05:57,069
+改变。
+changed.
+
+82
+00:05:57,069 --> 00:06:03,279
+除了具有位置，方向和比例之外，SIFT特征还具有描述符
+In addition to having a position and an orientation and a scale the SIFT feature also has a descriptor
+
+83
+00:06:03,279 --> 00:06:07,960
+我们可以看一下第一个特征的描述符。
+and we can have a look at the descriptor for feature number one.
+
+84
+00:06:07,960 --> 00:06:16,669
+我们可以在工作区中看到新变量D，它是一个128元素向量。
+And we can see here in the workspace the new variable D and it is a 128 element vector.
+
+85
+00:06:16,669 --> 00:06:22,069
+SIFT算法描述了圆圈内的像素模式，我们称之为
+The SIFT algorithm describes the pattern of pixels within the circle, what we call the
+
+86
+00:06:22,069 --> 00:06:25,830
+128元素向量支持区域。
+support region by 128 element vector.
+
+87
+00:06:25,830 --> 00:06:29,800
+所以这是对该特定像素模式的全面描述。
+So that's quite a comprehensive description of that particular pattern of pixels.
+
+88
+00:06:29,800 --> 00:06:36,210
+如果我们对同一场景有两个非常非常不同的视图，即使是方向
+If we have two these very, very diverse views of the same scene even though the orientation
+
+89
+00:06:36,210 --> 00:06:38,440
+而且规模可能非常非常不同。
+and the scale might be very, very different.
+
+90
+00:06:38,440 --> 00:06:43,729
+与两个场景中的兴趣点相关联的描述符将非常非常
+The descriptors associated with the interest points in the two scenes will be very very
+
+91
+00:06:43,729 --> 00:06:48,659
+类似，我们可以简单地评估这两个场景之间的点的相似性
+similar and we can evaluate the similarity of points between these two scenes simply
+
+92
+00:06:48,659 --> 00:06:53,210
+通过比较他们的两个描述性向量，通常是在欧几里德式中完成的
+by comparing their two descriptive vectors and typically that's done in the Euclidian
+
+93
+00:06:53,210 --> 00:06:57,059
+通过两个方差之差的平方和的平方根感
+sense by the square root of the sum of the squares of the difference between the two
+
+94
+00:06:57,059 --> 00:06:58,360
+描述性载体。
+descriptive vectors.
+
+95
+00:06:58,360 --> 00:07:03,389
+现在，这是对SIFT功能概念的一个非常粗略的介绍。
+Now this has been a very cursory introduction to the idea of SIFT features.
+
+96
+00:07:03,389 --> 00:07:07,520
+不幸的是，在这个入门课程中，计算机视觉非常重要，
+The very very important in computer vision unfortunately in this introductory course,
+
+97
+00:07:07,520 --> 00:07:09,520
+我不可能对此有更多的说法。
+it's not possible to say very much more about this.
+
+98
+00:07:09,540 --> 00:07:14,180
+有很多文献，你会在许多计算机视觉教科书中找到它们。
+There is a lot of literature and you will find mention of them in many computer vision text books.
+

@@ -1,0 +1,515 @@
+1
+00:00:03,870 --> 00:00:08,800
+以前我们已经研究过使用数学形态学和元素中的结构
+Previously we have looked at using mathematical morphology and the structuring in the elements
+
+2
+00:00:08,800 --> 00:00:14,620
+我们使用的是正方形或矩形，我们展示了如何使用形态学
+that we used were either squares or rectangles and we showed how we could use morphological
+
+3
+00:00:14,620 --> 00:00:20,710
+处理技术以从输入图像中选择特定形状。我们可以用
+processing technique to select particular shapes out of an input image. We could use
+
+4
+00:00:20,710 --> 00:00:25,519
+一个正方形的结构元素，我们只选择输入图像中的方块
+a square structuring element and we would select only the squares from the input image
+
+5
+00:00:25,519 --> 00:00:29,150
+当我们可以消除矩形，反之亦然。
+when we can eliminate rectangles and vice versa.
+
+6
+00:00:29,150 --> 00:00:34,550
+现在让我们考虑一下我们想要找到不仅仅是正方形或形状的形状的问题
+Let's now consider the problem where we want to find shapes that are not just squares or
+
+7
+00:00:34,550 --> 00:00:40,570
+矩形。数学形态学允许我们这样做，但我们需要做一些小的
+rectangles. Mathematical morphology allows us to do this but we need to make some small
+
+8
+00:00:40,570 --> 00:00:43,570
+调整我们之前谈到的技术。
+adjustments to the technique that we talked about previously.
+
+9
+00:00:43,570 --> 00:00:48,950
+我们现在考虑试图找到这个特定的对角线段的问题
+Let's consider now the problem of trying to find the diagonal line segments in this particular
+
+10
+00:00:48,950 --> 00:00:54,649
+图片。所以我们想要一个结构元素来选择这些形状，这里以红色显示
+image. So we want a structuring element that will select these shapes here shown in red
+
+11
+00:00:54,649 --> 00:01:00,120
+或者我们可能想要找到所有形状的对角线但是在
+or alternatively we might want to find all the shapes that are a diagonal line but in
+
+12
+00:01:00,120 --> 00:01:01,800
+相反的方向。
+the opposite direction.
+
+13
+00:01:01,800 --> 00:01:08,270
+在最一般的情况下，我们应该能够选择任何特定角度的线。
+In the most general case, we should be able to select a line at any particular angle.
+
+14
+00:01:08,270 --> 00:01:13,210
+为了能够做到这一点，我们需要更改结构元素的定义。
+In order to be able to do this, we need to change a definition of the structuring element.
+
+15
+00:01:13,210 --> 00:01:18,689
+我们将允许结构元素中的单元格具有可能的值
+We are going to allow the cells within the structuring element to have the possible value
+
+16
+00:01:18,689 --> 00:01:20,479
+哪个不在乎。
+which is don't care.
+
+17
+00:01:20,479 --> 00:01:26,729
+这意味着我们在执行形态处理时不会考虑它们。
+That means they are not taken into account when we perform the morphological processing.
+
+18
+00:01:26,729 --> 00:01:33,369
+我们认为那些单元元素的值可以为零，这意味着它们不被考虑
+We consider that those cell elements can have a value of zero which means they are not considered
+
+19
+00:01:33,369 --> 00:01:38,340
+成为结构元素的一部分，或者它们的值可以是1
+to be part of the structuring element or they can have the value of one which means they
+
+20
+00:01:38,340 --> 00:01:42,899
+被认为是结构元素的一部分。
+are considered to be part of the structuring element.
+
+21
+00:01:42,899 --> 00:01:48,909
+让我们考虑一个简单的例子。这里我们有一个包含低分辨率的示例图像
+Let's consider a simple example. Here we have a low resolution example image which contains
+
+22
+00:01:48,909 --> 00:01:54,170
+从左到右向上倾斜的两条线，另一条倾斜的对角线
+two lines which slope upwards from left to right, another diagonal line which slopes
+
+23
+00:01:54,170 --> 00:01:59,310
+从左到右向下和垂直线。我们将选择三乘三
+downward from left to right and a vertical line. We are going to choose a three by three
+
+24
+00:01:59,310 --> 00:02:04,530
+结构元素，它将选择向上倾斜的对角线
+structuring element which will select the diagonal lines which slope upwards looked
+
+25
+00:02:04,530 --> 00:02:06,509
+从左到右。
+at from left to right.
+
+26
+00:02:06,509 --> 00:02:10,679
+我将展示我们之前看过的另一个动画，它就是
+I am going to show another one of the animations that we have looked at previously and it's
+
+27
+00:02:10,679 --> 00:02:15,720
+将在实践中展示数学形态学过程。
+going to show the mathematical morphology process in practice.
+
+28
+00:02:15,720 --> 00:02:20,260
+我们再一次看到我们的结构元素中的活动元素是红色和
+Once again we see the active elements in our structuring element are coloured red and as
+
+29
+00:02:20,260 --> 00:02:25,540
+它们在图像上移动，结果只有在三个红色元素中才会生效
+they move across the image, the result will only be true if the three red elements in
+
+30
+00:02:25,540 --> 00:02:31,349
+结构元素跨越像素，这些像素都被设置或具有值true。
+the structuring element lay across pixels which are all set or have a value of true.
+
+31
+00:02:31,349 --> 00:02:37,480
+当结构元素移过时，我们看到输出图像包含线段
+As the structuring element moves across we see that our output image contains line segments
+
+32
+00:02:37,480 --> 00:02:43,250
+从左到右向上倾斜。很明显，我可以翻转那个结构元素
+which slope upwards from left to right. Clearly I can flip that structuring element around
+
+33
+00:02:43,250 --> 00:02:50,340
+当从左到右看时，我将能够选择向下倾斜的线条。
+and I will be able to select lines which slope downwards when looked at from left to right.
+
+34
+00:02:50,340 --> 00:02:56,450
+我们再一次认为，只保留或保留图像的那些元素
+Once again we have this notion of keeping or retaining only those elements of the image
+
+35
+00:02:56,450 --> 00:03:01,739
+它与结构元素兼容。这是我们的原始图像，输入
+which are compatible with the structuring element. Here is our original image, the input
+
+36
+00:03:01,739 --> 00:03:07,340
+图片。这是数学侵蚀过程的结果。
+image. This is the result of the mathematical erosion process.
+
+37
+00:03:07,340 --> 00:03:12,569
+在这个例子中，结构元素是三乘三矩阵，但只有元素
+In this example, the structuring element was a three by three matrix but only the elements
+
+38
+00:03:12,569 --> 00:03:17,930
+在三对三矩阵的对角线上参与了形态学处理。
+on the diagonal of that three by three matrix took part in the morphological processing.
+
+39
+00:03:17,930 --> 00:03:24,680
+其余的人被设定为不关心的价值，他们没有参加。
+The rest of them were set to the don't care value and they did not participate.
+
+40
+00:03:24,680 --> 00:03:31,629
+我们在这里介绍一个真实的例子。我要加载番茄的图像
+Let's introduce a real example here. I am going to load an image of a tomato and this
+
+41
+00:03:31,629 --> 00:03:36,950
+是我们之前看到过的图像，并且在我要进行伽玛校正的过程中
+is an image that we have seen previously and on the way in I am going to gamma correct
+
+42
+00:03:36,950 --> 00:03:43,159
+图片。我假设图像采用伽马编码，伽玛值为2.2。
+the image. And I am assuming that the image was gamma encoded with a gamma value of 2.2.
+
+43
+00:03:43,159 --> 00:03:49,209
+让我们只显示图像，看看它看起来像什么，我们有它。现在我想要
+Let's just display the image, see what it looks like and there we have it. Now I want
+
+44
+00:03:49,209 --> 00:03:54,819
+找到红色像素。我想要确定番茄果实并做到这一点
+to find just the red pixels. I want to identify just the tomato fruit and to do that I am
+
+45
+00:03:54,819 --> 00:04:01,400
+要使用工具箱功能，执行kmeans分类，我稍后会解释。
+going to use a toolbox function, which performs a kmeans classification, I will explain that in a moment.
+
+46
+00:04:02,170 --> 00:04:10,310
+它有三个输出参数和函数colorkmeans，我传入图像和
+It has three output arguments and the function colorkmeans and I pass in the image and the
+
+47
+00:04:10,310 --> 00:04:15,480
+我传入的下一个参数是我想要场景的不同颜色的数量
+next argument that I pass in are the number of different colors that I want the scene
+
+48
+00:04:15,480 --> 00:04:20,759
+分类为。我将告诉我这个特定图像中有四种颜色。
+classified into. And I am going to tell that there are four colors in this particular image.
+
+49
+00:04:20,759 --> 00:04:24,550
+这对我来说，显然是一堆红色像素，有一堆绿色像素，
+This looks to me that clearly a bunch of red pixels, there is a bunch of green pixels,
+
+50
+00:04:24,550 --> 00:04:29,500
+有一堆非常暗的背景像素，然后还有一些淡淡的
+there is a bunch of quite dark background pixels and then there is also some lightish
+
+51
+00:04:29,500 --> 00:04:35,699
+像素，所以我要告诉它尽力去尝试分割这些像素
+pixels, So I am going to tell it to do it's best effort at trying to segment those pixels
+
+52
+00:04:35,699 --> 00:04:38,540
+分为四个独特的课程。
+into four unique classes.
+
+53
+00:04:38,540 --> 00:04:49,139
+结果就是我们的三个矩阵。其中一个矩阵是变量CLS或类
+The result then is our three matrices. One of the matrices is the variable CLS or class
+
+54
+00:04:49,139 --> 00:04:54,620
+它是一个双倍位置图像，与输入图像的大小相同。这是238像素
+and it is a double position image just the same size as the input image. It's 238 pixels
+
+55
+00:04:54,620 --> 00:04:57,370
+高318像素宽。
+high by 318 pixels wide.
+
+56
+00:04:57,370 --> 00:05:03,419
+然后我们可以看一下班级形象。创建一个新的数字，我将显示
+Then we can have a look at the class image. Create a new figure and I will display the
+
+57
+00:05:03,419 --> 00:05:10,900
+矩阵CLS类，这里是。而我们看到的是它看起来很相似。
+matrix CLS class and here it is. And what we see is it looks quite posterized.
+
+58
+00:05:10,900 --> 00:05:17,310
+如果我点击这里的一些值，我们会看到红番茄果实像素已被分类
+If I click on some values here we see that the red tomato fruit pixels have been classified
+
+59
+00:05:17,310 --> 00:05:19,210
+值为3。
+with a value of three.
+
+60
+00:05:19,210 --> 00:05:24,729
+所以所有的红色像素都被分配为属于3级。这个黑暗的背景
+So all of the red pixels have been assigned to belong to class 3. This dark background
+
+61
+00:05:24,729 --> 00:05:30,410
+被分配了4级，实际上看起来非常明亮。这个背景在这里
+has been assigned class 4, which appears quite bright actually. This background down here
+
+62
+00:05:30,410 --> 00:05:35,840
+已被归类为属于第一类，并且已经有很多绿色材料
+has been classified as belonging to class one and a lot of the green material has been
+
+63
+00:05:35,840 --> 00:05:39,610
+归类为属于第二类。
+classified as belonging to class two.
+
+64
+00:05:39,610 --> 00:05:46,020
+这个算法有一个随机初始化，所以每次你运行它你会得到一个不同的
+This algorithm has got a random initialization in it so every time you run it you get a different
+
+65
+00:05:46,020 --> 00:05:50,820
+课程分配，但在这个特定的运行中，要记住的重要事情是
+class assignment but in this particular run the important thing to remember is that the
+
+66
+00:05:50,820 --> 00:05:57,240
+番茄色的像素都被分配到了3号班。我现在可以创建一个二进制文件
+tomato colored pixels have all been assigned to class number 3. I can create now a binary
+
+67
+00:05:57,240 --> 00:06:02,770
+对属于第3类的所有像素进行图像处理，然后我可以显示该图像。
+image all pixels that belong to class 3 and I can display that image.
+
+68
+00:06:02,770 --> 00:06:10,310
+这是一个二进制图像像素，该番茄的背景为零，1为if
+This is a binary image the pixels with a zero for the background on that tomato and 1 if
+
+69
+00:06:10,310 --> 00:06:16,100
+这属于番茄。我们在这里可以清楚地看到水果不完整。
+the do belong to the tomato. We can clearly see here that the fruit are not complete.
+
+70
+00:06:16,100 --> 00:06:20,410
+底部的水果上有几个洞，这是因为我们看到了一个
+The bottom fruit has got a couple of holes in it and this is because we are seeing a
+
+71
+00:06:20,410 --> 00:06:26,500
+顶部光线的反射正从水果的光泽皮肤上反射出来。
+reflection of an overhead light is being reflected off the shiny skin of the fruit.
+
+72
+00:06:26,500 --> 00:06:32,400
+另一种水果有反射，但它也被一些叶子部分遮挡。
+The other fruit has got reflections but it's also partly obscured by some leaves.
+
+73
+00:06:32,400 --> 00:06:36,229
+其中一个看起来像一个圆形物体，这是我们所期望的，例如我们
+One of them looks like a round object which is what we would expect if for instance we
+
+74
+00:06:36,229 --> 00:06:41,520
+正在建造一个番茄收获机器人，我们将圆形红色的东西作为第二个水果
+were building a tomato harvesting robot we would for round red things the second fruit
+
+75
+00:06:41,520 --> 00:06:48,590
+根本不是很圆。所以我们可以使用一些形态处理操作来修补
+isn't very round at all. So we can use some morphological processing operations to patch
+
+76
+00:06:48,590 --> 00:06:51,569
+这些水果的洞。
+the holes in these fruit.
+
+77
+00:06:51,569 --> 00:06:56,479
+让我们了解一下洞的大小。我将放大这一部分
+Let's get some idea about how big the holes are. I am going to zoom in on this part of
+
+78
+00:06:56,479 --> 00:07:04,750
+这里的水果。现在我们可以看到它们从大约80到105，所以几乎有25个像素
+the fruit here. Now we can see that they go from about 80 to 105 so there almost 25 pixels
+
+79
+00:07:04,750 --> 00:07:07,900
+在果实上这个特别的洞。
+wide this particular hole in the fruit.
+
+80
+00:07:07,900 --> 00:07:12,910
+如果我要有一个结构元素，我将进行形态学关闭
+If I am going to have a structuring element, I am going to perform a morphological closing
+
+81
+00:07:12,910 --> 00:07:16,870
+操作，它需要是一个非常大的核心。
+operation, it needs to be a very large kernal.
+
+82
+00:07:16,870 --> 00:07:23,930
+让我们对这个二进制图像执行形态学关闭操作。我会打电话给结果
+Let's perform a morphological closing operation on this binary image. I will call the result
+
+83
+00:07:23,930 --> 00:07:31,340
+关闭，我将使用iclose函数，我将在二进制图像中传递
+closed and I will use the iclose function I am going to pass in the binary image of
+
+84
+00:07:31,340 --> 00:07:38,080
+番茄和我要通过一个15像素乘15的方形结构元素
+the tomato and I am going to pass in a square structuring element that's 15 pixels by 15
+
+85
+00:07:38,080 --> 00:07:41,000
+像素。而我将计算它。
+pixels. And I am going to compute that.
+
+86
+00:07:41,000 --> 00:07:46,330
+现在让我展示那个特定的图像。在这里，我们看到它肯定已修补
+Now let me display that particular image. Here we see that it has certainly it has patched
+
+87
+00:07:46,330 --> 00:07:51,879
+底部水果的洞，它是顶级水果的东西。但我们看到了
+the holes in the bottom fruit and it's done something to the top fruit. But we see it's
+
+88
+00:07:51,879 --> 00:07:59,020
+介绍了很多锯齿状的边缘让我们看看这里，我们可以看到它
+introduced quite a lot of jagged edges let's have a look in here and we can see that it's
+
+89
+00:07:59,020 --> 00:08:03,470
+介绍了水果形状的一些相当大的步骤。
+introduced some quite big steps into the shape of the fruit.
+
+90
+00:08:03,470 --> 00:08:08,669
+原因是我们使用15×15像素的结构元素
+The reason for this is we use the structuring element that was a square 15 by 15 pixels
+
+91
+00:08:08,669 --> 00:08:14,139
+广场。我们感兴趣的水果是圆形的，所以我们可以使用替代品
+square. The fruit that we are interested in we know is round so we could use an alternative
+
+92
+00:08:14,139 --> 00:08:19,840
+结构元素是一个圆圈，我可以使用工具箱函数kcircle和
+structuring element which is a circle and I can use the toolbox function kcircle and
+
+93
+00:08:19,840 --> 00:08:28,840
+我将创建一个半径为15像素的圆，我可以显示它。和这里
+I am going to create a circle with a radius of 15 pixels and I can display that. And here
+
+94
+00:08:28,840 --> 00:08:33,959
+是一个结构元素，它是一个半径为15且位于其中的磁盘
+is a structuring element that is a disk that has got a radius of 15 and it sits within
+
+95
+00:08:33,959 --> 00:08:36,330
+一个31乘31的矩阵。
+a 31 by 31 matrix.
+
+96
+00:08:36,330 --> 00:08:43,169
+如果我将此矩阵视为结构元素，则显示白色像素
+If I consider this matrix as the structuring element, then the white pixels that are shown
+
+97
+00:08:43,169 --> 00:08:49,240
+这里是结构元素本身的一部分，而黑色或零值像素则不是
+here are part of the structuring element itself and the black or zero value pixels are not
+
+98
+00:08:49,240 --> 00:08:50,769
+结构元素的一部分。
+part of the structuring element.
+
+99
+00:08:50,769 --> 00:08:55,980
+我现在所做的是创建一个结构元素，它是一个圆圈或磁盘。它坐着
+What I have done now is created a structuring element which is a circle or disk. It sits
+
+100
+00:08:55,980 --> 00:09:03,690
+在方阵内。让我们将这个圆形结构元素应用于我们的图像。我也是
+within a square matrix. Let's apply this circular structuring element to our image. So I am
+
+101
+00:09:03,690 --> 00:09:11,370
+计算关闭并传递番茄图像;二进制番茄图像
+going to compute the closure and pass in the tomato image; the binary tomato image
+
+102
+00:09:11,370 --> 00:09:17,980
+我传入圆形结构元素，我将显示它，我们现在看到了
+and I pass in the round structuring element and I will display that and we see now has
+
+103
+00:09:17,980 --> 00:09:22,899
+在修补水果中的洞方面做得稍好一点。
+turned a slightly better job of patching up the hole in a fruit.
+

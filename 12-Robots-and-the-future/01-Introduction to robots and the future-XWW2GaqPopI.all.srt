@@ -1,0 +1,435 @@
+1
+00:00:03,430 --> 00:00:09,100
+欢迎来到我们在线课程“机器人入门”的最后一堂课。祝贺
+Welcome to the very last lecture in our online course, Introduction to Robotics. Congratulations
+
+2
+00:00:09,100 --> 00:00:11,719
+对于那些已经做到这一点的人。
+to those of you who have made it this far.
+
+3
+00:00:11,719 --> 00:00:16,189
+我想在这个特定的讲座中做一些不同的事情，或者说更少
+I want to do something a bit different in this particular lecture and talk perhaps less
+
+4
+00:00:16,189 --> 00:00:22,590
+关于技术和算法，以及软件等，并进入一些可能更大的
+about technology and algorithms, and software and so on, and get into some perhaps bigger
+
+5
+00:00:22,590 --> 00:00:28,860
+关于机器人以及它们适合社会的地方的想法。为何机器人很重要。
+picture ideas about robots and where they fit into society. Why robots are important.
+
+6
+00:00:28,860 --> 00:00:33,539
+现在，就像我说的那样，这是一段相当长的旅程。我们谈过机器人的历史，
+Now, It's been, as I say, quite a journey. We've talked about the history of robots,
+
+7
+00:00:33,539 --> 00:00:40,350
+在这种情况下，人类对生物体形象的建构着迷
+mankind's fascination with building things in the image of living organisms, in this
+
+8
+00:00:40,350 --> 00:00:44,920
+案例，几百年前着名的消化鸭。我们已经谈过了
+case, the famous digesting duck from many hundreds of years ago. We've talked about
+
+9
+00:00:44,920 --> 00:00:51,200
+对自动机的迷恋。这些栩栩如生的机器能够合理地完成
+fascination with automata. These lifelike machines which were able to do reasonably
+
+10
+00:00:51,200 --> 00:00:56,950
+按照当天的标准执行复杂的任务。例如，一个人的小雕像
+complex tasks by the standards of the day. For instance, a figurine of a person with
+
+11
+00:00:56,950 --> 00:01:01,040
+机械内脏能够做很复杂的图纸。例如，绘图
+mechanical innards that was able to do quite complex drawings. For instance, the drawing
+
+12
+00:01:01,040 --> 00:01:05,219
+这是一艘船。这是从1800年代开始的。
+here of a ship. And this is from the 1800's.
+
+13
+00:01:05,219 --> 00:01:10,920
+然后，围绕第二次世界大战的技术开始以非常快的速度发展，并且
+And then, around the Second World War technology started to evolve at a very rapid rate, and
+
+14
+00:01:10,920 --> 00:01:17,770
+这种技术-真的是机器人的先驱。操纵系统允许科学家
+this sort of technology - really the precursor of robots. Manipulation system allowed scientists
+
+15
+00:01:17,770 --> 00:01:24,240
+和工程师在远处操纵放射性物质。这真的，在我的
+and engineers to manipulate radioactive material at the distance. And this is really, in my
+
+16
+00:01:24,240 --> 00:01:28,799
+信念，现代工业机器人的先驱技术。
+belief, the sort of precursor technology to modern industrial robots.
+
+17
+00:01:28,799 --> 00:01:33,820
+第一批工业机器人是由该公司UnimationInc.开发的
+And the first industrial robots were developed by this company Unimation Inc. which was founded
+
+18
+00:01:33,820 --> 00:01:40,780
+1956年，第一批产品在1960年代初投入使用。所以，这种
+in 1956, first products went into service in the very early 1960's. So, this sort of
+
+19
+00:01:40,780 --> 00:01:44,939
+制造机器人，手臂机器人，制造东西，对我们的社会非常非常重要。
+manufacturing robot, the arm robot, builds stuff, very, very important to our society.
+
+20
+00:01:44,939 --> 00:01:48,970
+这是一项非常古老的技术。它正在走向60年。
+It's a very old technology now. It's getting on towards 60 years.
+
+21
+00:01:48,970 --> 00:01:54,759
+所以，我们已经谈到了机器人技术的这种演变，我们也谈到了什么
+So, we've talked about this evolution of robotic technology, and we've also talked about what
+
+22
+00:01:54,759 --> 00:01:59,320
+使这项技术成为现实。我们已经谈到了如何建造机器人。我们已经谈过如何做了
+makes this technology tick. We've talked about how to build robots. We've talked about how
+
+23
+00:01:59,320 --> 00:02:03,799
+我们代表工作空间中物体的姿势。我们谈到了正向运动学，
+we represent the pose of objects in the work space. We've talked about forward kinematics,
+
+24
+00:02:03,799 --> 00:02:09,010
+反向运动学，雅可比行列式和联合控制以及刚体动力学。这些是
+inverse kinematics, and Jacobians and joint control and rigid body dynamics. These are
+
+25
+00:02:09,010 --> 00:02:13,930
+如果你正在建立一个手臂类型，所有基本原则都非常重要
+all the fundamental principles that are really important if you are building an arm type
+
+26
+00:02:13,930 --> 00:02:18,689
+机器人。这些是我们自这项技术以来60年来所学到的东西
+robot. These are the things that we've learnt in this 60 years since this technology was
+
+27
+00:02:18,689 --> 00:02:24,150
+第一个构思。技术首先是理论，我们的数学
+first conceived. The technology came first and the theory, the mathematics that we've
+
+28
+00:02:24,150 --> 00:02:28,040
+得知，后来来了。
+learned about, came later.
+
+29
+00:02:28,040 --> 00:02:31,989
+这些机器人对现代工业非常重要。这是一张这样的照片
+These robots are really important to modern industry. Here’s a picture of this kind
+
+30
+00:02:31,989 --> 00:02:37,540
+机器人，建造汽车，他们还建立计算机和移动包裹
+of robot, building motor cars and they also build computers and move packages around in
+
+31
+00:02:37,540 --> 00:02:44,040
+工厂等。今天有超过一百万的这种臂式机器人在地球上工作。
+factories and so on. There's more than a million of these arm type robot and work on planet Earth today.
+
+32
+00:02:44,700 --> 00:02:49,319
+最近有一类新的机器人。我们称之为服务机器人或现场机器人。
+More recently there is this new class of robots. We call them service robots or field robots.
+
+33
+00:02:49,319 --> 00:02:53,909
+而且，这是服务机器人的一个例子。这是一个为a执行服务的机器人
+And, this is an example of a service robot. It's a robot that performs a service to a
+
+34
+00:02:53,909 --> 00:02:58,939
+人。在这个特殊情况下，这项服务是清洁我的地板。而这些机器人
+human being. And this service in this particular case is cleaning my floor. And these robots
+
+35
+00:02:58,939 --> 00:03:03,799
+已经变得非常受欢迎，超过1000万的这些机器人出售。这些只是
+have become phenomenally popular, more than 10 million of these robots sold. These only
+
+36
+00:03:03,799 --> 00:03:07,989
+已经存在了大约十年。制造机器人几乎已经存在
+have been around for only about a decade. Manufacturing robot had been around for nearly
+
+37
+00:03:07,989 --> 00:03:12,989
+60年。其中只有一百万。在短短10多年里，我们有1000万
+60 years. There's only a million of them. In just 10 over years, we have 10 millions
+
+38
+00:03:12,989 --> 00:03:17,609
+这些。原因是这些机器人比制造机器人便宜得多。
+of these. And the reasons are that these robots are much cheaper than the manufacturing robots.
+
+39
+00:03:17,609 --> 00:03:22,269
+一个人可以买得起的东西，一个人想拥有的东西，因为它提供了
+The sort of thing that a person can afford, a person would like to have, because it provides
+
+40
+00:03:22,269 --> 00:03:28,669
+真正的价值。它在房子周围执行一项非常有用的任务。
+real value. It performs a greatly useful task around the house.
+
+41
+00:03:28,669 --> 00:03:32,889
+所以，这是机器人的未来。会有机器人可以使用
+So, this is very much the future of robots. There's going to be robots that work with
+
+42
+00:03:32,889 --> 00:03:39,159
+我们这是一个低成本和有用的。当然，将来会有很多其他的
+us that are low cost and useful. Of course in the future, there's going to be many other
+
+43
+00:03:39,159 --> 00:03:43,719
+各种机器人。也许是我们将要集体遇到的下一种机器人，我
+sorts of robot. Perhaps the next sort of robot that we are going to encounter en masse, I
+
+44
+00:03:43,719 --> 00:03:48,389
+认为这将是自驾车。谷歌自驾车项目已经实现
+think it's going to be the self driving car. The Google self driving car project has got
+
+45
+00:03:48,389 --> 00:03:54,339
+很多媒体，所有主要的汽车公司都在研究自动驾驶汽车。
+a lot of press, and all of the major automotive companies are working on self driving cars.
+
+46
+00:03:54,339 --> 00:04:00,150
+这是一项有些人认为可能在2020年之前实现的技术。时间
+And this is a technology some people believe it might be with this by the year 2020. Time
+
+47
+00:04:00,150 --> 00:04:07,190
+会告诉。但我相信，这是我们日常遇到的下一个机器人技术。
+will tell. But I believe, this is the next robot technology we all encounter on an everyday basis.
+
+48
+00:04:08,920 --> 00:04:16,900
+那么，机器人为什么呢？在世界上拥有机器人的重要原因是什么？我想
+So, why robots? What's the big picture reason for having robots in the world? And I think
+
+49
+00:04:16,910 --> 00:04:23,439
+如果你看看我们这个星球现在面临的重大问题，主要来自人口
+if you look at the big problems that our planet faces right now, come primarily from population
+
+50
+00:04:23,439 --> 00:04:28,819
+生长。如果我们看看未来几十年人口增长将会发生什么，那又是什么呢
+growth. If we look what population growth is going to do over the coming decades, what
+
+51
+00:04:28,819 --> 00:04:33,949
+你可以在这张幻灯片上看到这是机器人人口的预测。到2020年，
+you can see on this slide here is a prediction of robot population. And by the year 2020,
+
+52
+00:04:33,949 --> 00:04:38,840
+它相信这个星球上将会有一亿个机器人在工作。
+its believed that there will be a hundred million robots at work on the planet.
+
+53
+00:04:38,840 --> 00:04:43,210
+现在，并非所有这些都将成为经典的制造机器人。许多人
+Now, not all of these are going to be the classic manufacturing robots. Many of them
+
+54
+00:04:43,210 --> 00:04:49,199
+将会是机器人汽车，或机器人真空吸尘器，也许是机器人园丁，
+are going to be for instance robot cars, or robot vacuum cleaners, perhaps robot gardeners,
+
+55
+00:04:49,199 --> 00:04:54,379
+机器人女佣，谁知道什么。但这是一种正在兴起的新型机器人
+robot maids, who knows what. But this is the sort of new class of robot that's emerging
+
+56
+00:04:54,379 --> 00:04:58,530
+而且这些数量正在增加，也许是指数增长。
+and the number of these is just going to increase, perhaps exponentially.
+
+57
+00:04:58,530 --> 00:05:05,000
+我现在要做的是谈谈我认为我们需要的大局
+What I want to do now is talk about the big picture reasons why I believe that we need
+
+58
+00:05:05,000 --> 00:05:13,699
+机器人。这张照片说明了现在社会面临的一些重大问题，
+robots. This picture illustrates some of the big problems that are facing society now,
+
+59
+00:05:13,699 --> 00:05:20,389
+并且在未来几十年中越来越我们面临的问题是人口增加
+and increasingly in coming decades. The problems that we face are due to increased human population
+
+60
+00:05:20,389 --> 00:05:24,520
+在这个星球上。这个星球上有更多的人。这意味着，我们需要提供更多
+on the planet. There are more people in the planet. It means, we need to provide more
+
+61
+00:05:24,520 --> 00:05:28,710
+餐饮。这将需要更多的运输要求。会有更多的汽车
+food. This is going to require more transport requirement. There's going to be more cars
+
+62
+00:05:28,710 --> 00:05:33,960
+在路上，更多的人，更多的东西从一个地方到另一个地方。而这个人口
+on the road, more people, more things going from one place to another. And this population
+
+63
+00:05:33,960 --> 00:05:38,539
+我们的年龄越来越大，需要更多的医疗保健。
+of ours gets older there's going to be a need for more health care.
+
+64
+00:05:38,539 --> 00:05:45,979
+随着人口老龄化，我们将会出现年龄比例的不平衡。有
+As the population get's older, we are going to have an imbalance in the age ratios. There's
+
+65
+00:05:45,979 --> 00:05:52,020
+将会有更多老年人和更少年轻人来支持他们。这是一个问题
+going to be more older people and less younger people to support them. And this is a problem
+
+66
+00:05:52,020 --> 00:05:57,909
+这就是今天几乎所有国家都面临的问题。这是一个非常深刻的问题。
+that is confronting almost country on the planet today. And it is very profound problem.
+
+67
+00:05:57,909 --> 00:06:02,930
+我认为我们没有真正处理好的解决方案，而是我们要做的事情
+I think we don't really have handle, a good solution, on what we are going to do about
+
+68
+00:06:02,930 --> 00:06:07,319
+那。但我相信机器人可以在这里发挥重要作用。
+that. But I believe the robots can play an important role here.
+
+69
+00:06:07,319 --> 00:06:12,680
+我们面临的另一个问题是气候变化。随着我们星球的气候变化，
+The other problem that we are facing is climate change. As the climate of our planet changes,
+
+70
+00:06:12,680 --> 00:06:18,169
+它会对人们居住在哪里的水量产生真正的影响
+it's going to have real impacts on where people are able to live where the amount of water
+
+71
+00:06:18,169 --> 00:06:24,099
+那将是可用的，以及我们可以生产的食物量。所以，非常大的图片
+that would be available, and the amount of food that we can produce. So, very big picture
+
+72
+00:06:24,099 --> 00:06:30,780
+问题，非常复杂，所有相互关联。而且我相信机器人可以发挥很大的作用
+problems, very complex and all interrelated. And I believe that robots can play a very
+
+73
+00:06:30,780 --> 00:06:35,479
+在改善其中一些问题方面发挥了积极作用。这就是我想谈的内容
+positive role in ameliorating some of these problems. And that's what I want to talk about
+
+74
+00:06:35,479 --> 00:06:38,610
+在这个特别的讲座中。
+in this particular lecture.
+
+75
+00:06:38,610 --> 00:06:41,349
+我想在本次讲座中讨论另一件事，我认为这很重要
+The other thing that I want to talk about in this lecture, and I think it's an important
+
+76
+00:06:41,349 --> 00:06:46,860
+一，是机器人技术的伦理考虑。现在，我不是一个伦理学家，我是一个
+one, is the ethical considerations around robotics. Now, I'm not an ethicist, I'm a
+
+77
+00:06:46,860 --> 00:06:51,830
+机器人专家。我将在本讲座后期与一位伦理学家交谈并尝试
+roboticist. And I’m going to talk to an ethicist later in this lecture and just try
+
+78
+00:06:51,830 --> 00:06:56,439
+并解开一些适用于机器人技术的道德问题。
+and unpack what are some of the issues about ethics that apply to robotics.
+
+79
+00:06:56,439 --> 00:07:00,580
+我们将进行讨论，我们将做一些道德操守101，学习
+We are going to have a discussion, we’re going to do a bit of an ethics 101, learn
+
+80
+00:07:00,580 --> 00:07:05,120
+一些道德的基本原则，然后看看诸如此类的问题;是否合适
+some fundamental principles of ethics, and then look at issues such as; is it appropriate
+
+81
+00:07:05,120 --> 00:07:09,539
+机器人照顾老人或年轻人;什么是道德问题
+for robots to look after elderly people or young people; what are the ethical issues
+
+82
+00:07:09,539 --> 00:07:16,499
+机器人在我们的道路上驾驶汽车;侵犯隐私的问题是什么？
+with robots driving cars on our roads; what are the issues around invasion of privacy;
+
+83
+00:07:16,499 --> 00:07:21,270
+工作中的机器人怎么样？每当我谈论机器人时，有人会问这个问题，
+what about robots in jobs. Every time I give a talk about robots, somebody asks the question,
+
+84
+00:07:21,270 --> 00:07:25,270
+“机器人不是要带走工作吗？”我不认为这很简单。
+"Aren’t robots going to take away jobs?" I don't think it’s that simple.
+
+85
+00:07:25,270 --> 00:07:29,770
+在本讲座中，我们想解开其中的一些问题，并详细讨论它们。
+And in this lecture, we’d like to unpack some of these issues, talk about them at length.
+
+86
+00:07:29,770 --> 00:07:34,740
+争论，至少给你一些思考的东西。我认为这对我们很重要
+At least give you something to think about, argue about. I think it's important that we
+
+87
+00:07:34,740 --> 00:07:36,669
+有这个特别的对话。
+have this particular conversation.
+

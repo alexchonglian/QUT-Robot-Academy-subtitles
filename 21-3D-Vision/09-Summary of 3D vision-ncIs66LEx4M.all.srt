@@ -1,0 +1,180 @@
+1
+00:00:03,320 --> 00:00:08,510
+让我们总结一下讲座的要点。当我们拍摄场景的图像时，这是一个视角
+Let's summarize the main points from the lecture. When we take an image of a scene, it's a perspective
+
+2
+00:00:08,510 --> 00:00:11,940
+投影，深度信息已丢失。
+projection, and the depth information has been lost.
+
+3
+00:00:11,940 --> 00:00:19,039
+人类使用许多技巧或视觉提示来恢复缺失的深度信息。
+Human beings use a number of tricks or visual cues to reinstate that missing depth information.
+
+4
+00:00:19,039 --> 00:00:23,830
+我们使用的提示取决于环境和距离。它在我们的范围内吗？
+The cue that we use depend on the circumstance and also on the distance. Is it within our
+
+5
+00:00:23,830 --> 00:00:27,550
+个人空间还是走向地平线？
+personal space or is it out towards the horizon?
+
+6
+00:00:27,550 --> 00:00:31,620
+我们使用的一种特别重要的技术，以及许多其他动物也是如此
+A particularly important technique that we use, and so do many other animals, also it
+
+7
+00:00:31,620 --> 00:00:37,100
+将被机器人使用是一种称为双目视差的技术。这依赖于
+will be used by robots is a technique called binocular disparity. And that relies on the
+
+8
+00:00:37,100 --> 00:00:44,210
+从不同的有利位置拍摄的同一场景的图像之间的细微变化。
+small subtle changes between images of the same scene taken from different vantage point.
+
+9
+00:00:44,210 --> 00:00:49,350
+这是一个立体图像对的例子，我们可以看到左手图像和
+Here's an example of a stereo image pair and we can see between the left hand image and
+
+10
+00:00:49,350 --> 00:00:53,629
+右手图像与我们用左眼和右眼看到的相对应
+the right hand image to correspond to what we would see with our left eye and our right
+
+11
+00:00:53,629 --> 00:00:58,359
+眼睛。一般来说，这两个场景看起来非常相似，但如果我们在那里看得更仔细
+eye. In general these two scenes look very similar, but if we look more carefully there
+
+12
+00:00:58,359 --> 00:01:03,680
+它们之间存在一些微妙但重要的差异，这是微妙的差异
+is some subtle but important differences between them, and it's these small subtle differences
+
+13
+00:01:03,680 --> 00:01:08,930
+这允许提取有关这个世界三维结构的信息。
+that allows to extract information about this three dimensional structure of the world.
+
+14
+00:01:08,930 --> 00:01:13,100
+就像我们有两只眼睛一样，我们可以制造这种紧凑型装配的立体相机
+Just as we have two eyes, we can build this stereo camera which is a compact assembly
+
+15
+00:01:13,100 --> 00:01:19,250
+它实际上包含两个独立的摄像头和已知的pi距离。一个重要的
+that contains effectively two independent cameras and known distance of pi. An important
+
+16
+00:01:19,250 --> 00:01:25,890
+立体视觉中的概念是不一致的。如果我们在左图中识别出一个点并找到
+concept in stereovision is disparity. If we identify a point in the left image and find
+
+17
+00:01:25,890 --> 00:01:30,610
+右图中的相同点看​​起来有点偏向左侧，
+the same point in the right image it will appear to have shifted somewhat to the left,
+
+18
+00:01:30,610 --> 00:01:33,869
+而左移我们称之为差距。
+and that leftward shift we refer to as disparity.
+
+19
+00:01:33,869 --> 00:01:39,290
+重要的是，差异是距离的函数。所以对于一个靠近我们的物体，那里
+Importantly, disparity is a function of distance. So for an object that's close to us, there
+
+20
+00:01:39,290 --> 00:01:44,210
+是一个很大的左移，一个很大的差距，在那里很远的地方有一个
+is a large leftward shift, a large disparity, where something that's far away has got a
+
+21
+00:01:44,210 --> 00:01:45,799
+差距较小。
+smaller disparity.
+
+22
+00:01:45,799 --> 00:01:51,759
+因此，如果我们可以产生差异，那么使用立体视觉的几何，我们可以联系起来
+So if we can make the disparity, then using the geometry of stereovision, we can relate
+
+23
+00:01:51,759 --> 00:01:57,250
+与物体距离的差异。使用这两个图像来计算差异，和
+the disparity to the distance to the object. Use the two images to compute disparity, and
+
+24
+00:01:57,250 --> 00:01:59,619
+从那，然后我可以计算Z.
+from that, then I can compute Z.
+
+25
+00:01:59,619 --> 00:02:05,250
+计算差异并非微不足道。对于左手图像中的每个像素，我取一个正方形
+Computing disparity is not trivial. For every pixel in the left hand image, I take a square
+
+26
+00:02:05,250 --> 00:02:10,599
+围绕它的像素窗口，用于搜索右侧相同的像素图案
+window of pixels surrounding it within search for that same pattern of pixels in the right
+
+27
+00:02:10,599 --> 00:02:15,790
+手形图像，这涉及进行大量的图像比较。这是模板匹配
+hand image, and that involves making a lot of image comparisons. It's the template-matching
+
+28
+00:02:15,790 --> 00:02:17,459
+我们之前看过的问题。
+problem that we looked at earlier.
+
+29
+00:02:17,459 --> 00:02:22,160
+因此，给定场景的左图像和右图像，我可以计算每个像素，
+So given a left image and a right image of a scene, I can compute at every single pixel,
+
+30
+00:02:22,160 --> 00:02:27,569
+视差，我可以将其显示为视差图像或视差图
+the disparity, and I can display that as a disparity image or a disparity map, and in
+
+31
+00:02:27,569 --> 00:02:32,510
+一个视差图，如果它们在附近就会很亮，如果它们更远，它们会变暗
+a disparity map, things are bright if they're near and they are darker if they are further
+
+32
+00:02:32,510 --> 00:02:37,690
+远。相反的是，如果我有一个立体声对，两个图像从略有不同
+away. The converse is that if I have a stereo pair, two images taken from slightly different
+
+33
+00:02:37,690 --> 00:02:43,340
+观点，如果我可以将这些图像呈现给我的左眼和右眼，我会有一个非常的
+viewpoints, if I could present those images to my left and right eye, I will have a very
+
+34
+00:02:43,340 --> 00:02:49,360
+生动的场景三维感，非常非常强烈的深度感。
+vivid sense of the three dimensionality of the scene, a very, very strong sense of depth.
+
+35
+00:02:49,360 --> 00:02:53,550
+人类长期以来一直对3D视觉的想法非常着迷
+Human beings have been fascinated with the idea of 3D vision for a long, long time, and
+
+36
+00:02:53,550 --> 00:02:58,000
+我们讨论了一系列可以执行此功能的技术。
+we discussed an array of technologies, which can perform this function.
+

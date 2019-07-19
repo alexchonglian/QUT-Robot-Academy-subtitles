@@ -1,0 +1,305 @@
+1
+00:00:03,330 --> 00:00:07,970
+所有电动机的基本物理原理是磁力。那么我们
+The fundamental physical principle underlying all electric motors is magnetism. So, let’s
+
+2
+00:00:07,970 --> 00:00:11,090
+快速回顾我们对磁铁的了解。
+quickly review what it is we know about magnets.
+
+3
+00:00:11,090 --> 00:00:15,910
+每个磁铁都有一个南极和一个北极，因为北极被吸引了
+Every magnet has a south pole and a north pole, so called because the north pole is attracted
+
+4
+00:00:15,910 --> 00:00:21,590
+到了我们这个星球的北极。如果我像这样把两块磁铁放在一起，我们就知道了
+to the north pole of our planet. If I put two magnets together like this, we know that
+
+5
+00:00:21,590 --> 00:00:27,590
+相反的极点吸引和相似的磁极互相排斥。现在，让我们假设我们拿两个
+opposite poles attract and like poles repel each other. Now, let’s imagine we take two
+
+6
+00:00:27,590 --> 00:00:32,269
+将磁铁放在另一个的顶部并固定它们，使顶部磁铁自由
+magnets and lay one on top of the other and pin them so that the top magnet is free to
+
+7
+00:00:32,269 --> 00:00:38,879
+旋转。然后，会发生类似的磁极排斥而顶部磁铁倾向于旋转
+rotate. Then, what happens is that the similar poles repel and the top magnet tends to rotate
+
+8
+00:00:38,879 --> 00:00:44,099
+使顶部磁铁的北极位于底部磁铁的南极上。
+so that the north pole in the top magnet is lying over the south pole of the bottom magnet.
+
+9
+00:00:44,280 --> 00:00:49,320
+这是旋转电动机的基本原理。让我们重新运行前一个
+This is the underlying principle of rotary electric motors. Let’s re-run the previous
+
+10
+00:00:49,320 --> 00:00:54,440
+例如，顶部磁铁再次旋转。而且，当它几乎处于静止状态时，我们会做什么
+example and the top magnet, once again, rotates. And, when it’s nearly at rest, what we do
+
+11
+00:00:54,440 --> 00:00:57,619
+是我们拉扯技巧，我们扭转底部磁铁。
+is we pull a trick and we reverse the bottom magnet.
+
+12
+00:00:57,619 --> 00:01:02,530
+所以，现在它看起来像这样。现在，顶部磁铁将继续旋转，以便它
+So, now it looks like this. And now, the top magnet is going to keep rotating so that its
+
+13
+00:01:02,530 --> 00:01:06,510
+北极被南极吸引，然后我们再次拉同样的把戏。
+north pole is attracted to the south pole and then we pull the same trick again.
+
+14
+00:01:06,510 --> 00:01:11,690
+因此，通过这种方式，我们可以保持顶部磁铁无限旋转，并且可以参考这个技巧
+So, in this way, we can keep the top magnet rotating endlessly and this trick is referred
+
+15
+00:01:11,690 --> 00:01:17,280
+作为减刑。这是所有电动旋转电机的基本原理。所以这是
+to as commutation. It’s a fundamental principle of all electric rotary motors. So, it’s
+
+16
+00:01:17,280 --> 00:01:21,920
+很像狗追尾。它永远不会到达目的地。
+a lot like a dog chasing its tail. It’s never ever going to get to the destination.
+
+17
+00:01:21,920 --> 00:01:26,220
+当顶部磁铁接近目的地时，我们改变了目的地，我们继续这样做
+When the top magnet gets close to its destination, we change the destination and we keep doing
+
+18
+00:01:26,220 --> 00:01:28,290
+这一遍又一遍。
+this over and over again.
+
+19
+00:01:28,290 --> 00:01:33,290
+这是第一台电动机的照片。它于1827年在匈牙利发明。
+Here is a picture of the first ever electric motor. It was invented in 1827 in Hungary.
+
+20
+00:01:33,290 --> 00:01:39,480
+那是近200年前的事了。现在，这个电动机的主要部件是，首先，
+That’s nearly 200 years ago. Now, the principal components of this electric motor are, firstly,
+
+21
+00:01:39,480 --> 00:01:44,270
+定子。这是固定电磁铁，这里突出显示它已经得到了
+the Stator. That’s the stationary electromagnet that’s highlighted here and it has got the
+
+22
+00:01:44,270 --> 00:01:46,570
+磁场矢量用红色表示。
+magnetic field vector indicated in red.
+
+23
+00:01:46,570 --> 00:01:51,670
+现在，还有另一个电磁铁，这个电磁铁旋转。我们称之为转子，它有
+Now, there is another electromagnet and this one rotates. We call it the rotor and it has
+
+24
+00:01:51,670 --> 00:01:58,310
+由蓝色矢量表示的磁场。磁吸引和排斥定律
+a magnetic field indicated by the blue vector. The laws of magnetic attraction and repulsion
+
+25
+00:01:58,310 --> 00:02:03,560
+使转子旋转，使磁场对齐。当磁场
+cause the rotor to rotate so that the magnetic fields are aligned. When the magnetic fields
+
+26
+00:02:03,560 --> 00:02:08,159
+几乎对齐，换向器反转流过电流的方向
+are almost aligned, the Commutator reverses the direction of current flowing through the
+
+27
+00:02:08,159 --> 00:02:13,910
+转子电磁铁，它反转磁场的方向，使转子保持旋转
+rotor electromagnet that reverses the direction of the magnetic field so the rotor keeps rotating
+
+28
+00:02:13,910 --> 00:02:19,350
+再次尝试将其磁场与定子的磁场对齐，这个过程就是
+to, again, try and align its magnetic field with that of the Stator and this process is
+
+29
+00:02:19,350 --> 00:02:24,620
+无限期地重复。因此，换向器是允许旋转的关键创新
+repeated indefinitely. So, the Commutator is the key innovation that allows a rotary
+
+30
+00:02:24,620 --> 00:02:26,230
+电动马达操作。
+electric motor to operate.
+
+31
+00:02:26,230 --> 00:02:30,630
+如果我们看一下现代电动机，我们会发现它具有完全相同的组件。
+If we look at a modern electric motor, we see that it has exactly the same components.
+
+32
+00:02:30,630 --> 00:02:36,050
+它有固定的电磁铁，我们称之为定子。它有旋转电磁铁
+It has the stationary electromagnet which we call the Stator. It has the rotary electromagnet
+
+33
+00:02:36,050 --> 00:02:41,480
+我们称之为转子。而且，在电机的这一端，我们有了换向器。现代
+which we call the rotor. And, at this end of the motor, we have the Commutator. Modern
+
+34
+00:02:41,480 --> 00:02:47,060
+电动机成本低，结构紧凑，性能可靠。我们可以将它们视为一种设备
+electric motors are low cost, compact and reliable. We can consider them as a device
+
+35
+00:02:47,060 --> 00:02:52,180
+将流入电动机的电流转换为施加到输出的转矩
+that converts a current flowing in to the motor in to a torque applied to the output
+
+36
+00:02:52,180 --> 00:02:57,450
+电动机的轴与这种关系是线性的。另一种考虑方式
+shaft of the motor and this relationship is linear. An alternative way to consider an
+
+37
+00:02:57,450 --> 00:03:02,250
+电动机是将输入电压转换为旋转的装置
+electric motor is that it is a device that converts an input voltage to a rotational
+
+38
+00:03:02,250 --> 00:03:08,349
+速度Ω是电机输出轴的旋转速度。
+velocity omega that is the speed of rotation of the output shaft of the motor.
+
+39
+00:03:08,349 --> 00:03:12,770
+到目前为止我们讨论过的电机是旋转电机。那就是输出是旋转的
+The motors that we have discussed so far are rotary motors. That is the output is rotary
+
+40
+00:03:12,770 --> 00:03:17,880
+运动。但是，经常在实际应用中，我们需要线性运动，而不是旋转运动。
+motion. But, frequently, in real applications, we require linear motion, not rotary motion.
+
+41
+00:03:17,880 --> 00:03:23,430
+我们可以通过两种方式实现这一目标。一种是从旋转转换旋转运动
+There is a couple of ways we can achieve this. One is to convert rotary motion from a rotary
+
+42
+00:03:23,430 --> 00:03:28,129
+电动机采用齿轮齿条机构进行直线运动。另一种选择是
+electric motor to linear motion using a rack and pinion mechanism. An alternative is a
+
+43
+00:03:28,129 --> 00:03:33,620
+线性电动机或线性执行器。并且，在这种类型的装置中，轴移动
+linear electric motor or linear actuator. And, in this type of device, the shaft moves
+
+44
+00:03:33,620 --> 00:03:38,489
+进出执行器的主体，有点像液压和气动执行器
+in and out of the body of the actuator, somewhat like the hydraulic and pneumatic actuators
+
+45
+00:03:38,489 --> 00:03:39,800
+我们之前看过的。
+that we looked at earlier.
+
+46
+00:03:39,800 --> 00:03:45,660
+这是现代电动机的一个例子。这些设备非常有效，非常可靠
+Here is an example of a modern electric motor. These devices are very effective, very reliable
+
+47
+00:03:45,660 --> 00:03:50,940
+非常非常便宜这是一个旋转电机。所以，当我将电流传递到这些电线时，
+and very, very cheap. This is a rotary motor. So, as I pass current in to these wires here,
+
+48
+00:03:50,940 --> 00:03:55,940
+输出轴以顺时针方向或逆时针方向旋转。
+the output shaft rotates in either the clockwise or the anti-clockwise direction.
+
+49
+00:03:55,940 --> 00:04:02,030
+以下是集成电机和编码器组件的示例。所以，有一个直流电机
+Here is an example of an integrated motor and encoder assembly. So, there is a DC motor
+
+50
+00:04:02,030 --> 00:04:06,060
+在前部，这是输出轴。并且，背面是增量
+in the front part and this is the output shaft here. And, on the back is the incremental
+
+51
+00:04:06,060 --> 00:04:11,440
+编码器向控制器发出信号，指示电机的方向和速度
+encoder which gives the signal to the controller about which direction and how fast the motor
+
+52
+00:04:11,440 --> 00:04:16,609
+转身。在这里，我们有一个更加集成的组件。这里有一台电动机。
+is turning. Here we have an even more integrated assembly. This has got an electric motor here.
+
+53
+00:04:16,609 --> 00:04:21,900
+有一个变速箱，这是装配这一端的增量编码器。所以这
+There is a gearbox and here is the incremental encoder on this end of the assembly. So, this
+
+54
+00:04:21,900 --> 00:04:26,930
+在机电一体化系统中的许多机器人中，在集成电机中是相当常见的设备
+is quite a common device in many robots in mechatronics systems, in integrated motor
+
+55
+00:04:26,930 --> 00:04:28,770
+变速箱和编码器组件。
+gearbox and encoder assembly.
+
+56
+00:04:28,770 --> 00:04:32,949
+最后，在这里，我们有一个爱好类伺服电机的例子，这是一个轮子
+Finally, here, we have an example of a hobby class servo motor and this is one of the wheel
+
+57
+00:04:32,949 --> 00:04:37,409
+从我一直在建造的小型机器人开车。这是一个更加整合的
+drives from the small robot that I have been building. This is an even more integrated
+
+58
+00:04:37,409 --> 00:04:42,099
+装配比我们看到的最后一个。它包含一个电动机，一个变速箱，一个
+assembly than the last one we looked at. It contains an electric motor, a gearbox, an
+
+59
+00:04:42,099 --> 00:04:46,689
+编码器和实际控制电机和电机控制的小型计算机
+encoder and a small computer which actually controls the motor and the motor controls
+
+60
+00:04:46,689 --> 00:04:52,419
+通过这种信号，三线电缆提供功率和速度
+signals coming through this, three wire cable which provides power and also the velocity
+
+61
+00:04:52,419 --> 00:04:53,330
+命令信号。
+command signal.
+

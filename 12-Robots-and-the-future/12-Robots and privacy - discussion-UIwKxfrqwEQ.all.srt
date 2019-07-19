@@ -1,0 +1,215 @@
+1
+00:00:03,699 --> 00:00:09,760
+彼得：机器人飞机正在变得无处不在。现在整个班级都非常复杂
+Peter: Robotic aircraft are becoming ubiquitous. There's a whole class now of quite sophisticated
+
+2
+00:00:09,760 --> 00:00:13,870
+玩具你可以去商店购买几百美元。一般来说，有
+toys you can go and buy from the shop for a few hundred bucks. Generally, there are
+
+3
+00:00:13,870 --> 00:00:18,000
+四旋翼机。您可以使用iPhone控制它们。你可以飞起来。您
+quad rotor machines. You can control them with your iPhone. You can fly them up. You
+
+4
+00:00:18,000 --> 00:00:24,180
+可以看出邻居的围栏。你可以看看邻居的窗口。所以，这项技术
+can look out the neighbor's fence. You can look in neighbor's window. So, this technology
+
+5
+00:00:24,180 --> 00:00:30,050
+开始引起人们对隐私的严重关注。道格，什么呢
+is starting to cause people serious concerns with respect to privacy. So Doug, what does
+
+6
+00:00:30,050 --> 00:00:32,270
+关于隐私的道德说法？
+ethics say about privacy?
+
+7
+00:00:32,270 --> 00:00:39,100
+道格：隐私的构建是一种现代的结构。
+Doug: The construct of privacy is a modern construct.
+
+8
+00:00:39,100 --> 00:00:42,360
+彼得：好的。我们没有使用隐私？
+Peter: Okay. We didn't use to have privacy?
+
+9
+00:00:42,360 --> 00:00:45,300
+道格：嗯，这是文化定义的。
+Doug: Well, it's culturally defined.
+
+10
+00:00:45,300 --> 00:00:55,340
+道格：换句话说，我认为今天在21世纪的澳大利亚是私密的，你是什么
+Doug: In other words, what I consider private today in 21st century Australia and what you
+
+11
+00:00:55,340 --> 00:01:04,589
+在1850年的伦敦会考虑私人，这是完全不同的。我们选择的是什么
+would consider private in 1850 London, it's quite different. What we choose in terms of
+
+12
+00:01:04,589 --> 00:01:09,979
+隐私是不同的。它随时间和地点而变化。然而-
+privacy is different. It's contextual over time and place. However--
+
+13
+00:01:09,979 --> 00:01:12,710
+彼得：那么，这不是一个基本的基本原则吗？
+Peter: So, it's not a fundamental underlying principle?
+
+14
+00:01:12,710 --> 00:01:13,310
+道格：不。
+Doug: No.
+
+15
+00:01:13,310 --> 00:01:13,909
+彼得：好的。
+Peter: Okay.
+
+16
+00:01:13,909 --> 00:01:19,299
+道格：不，绝对不是。隐私不是。它建立在自由民主和国家
+Doug: No, absolutely not. Privacy is not. It's founded in liberal democracy and the
+
+17
+00:01:19,299 --> 00:01:27,770
+个人有权选择并拥有自己的空间。美国人是唯一的，
+right of the individual to choose and have their own space. The Americans are the only,
+
+18
+00:01:27,770 --> 00:01:32,679
+我认为他们是唯一拥有财产权的文化。拥有财产权
+I think they're the only culture that has right to property. With the right to property
+
+19
+00:01:32,679 --> 00:01:36,639
+来隐私权。但是，隐私程度当然是正确的
+comes right to privacy. But the degree of privacy, of course, is being argued right
+
+20
+00:01:36,639 --> 00:01:39,759
+现在在澳大利亚获取数据。
+now in Australia in terms of access to data.
+
+21
+00:01:39,759 --> 00:01:40,700
+彼得：当然。
+Peter: Absolutely.
+
+22
+00:01:40,700 --> 00:01:46,039
+道格：是的。因此，在道德方面，它又回到了那些基本职责或者
+Doug: Yes. So, in terms of ethics, it goes back again to those fundamental duties or
+
+23
+00:01:46,039 --> 00:01:52,270
+那些自治的基本概念。因此，我们在自治方面拥有自由度。
+those fundamental concepts of autonomy. So, we have levels of freedom in terms of autonomy.
+
+24
+00:01:52,270 --> 00:02:00,229
+所以，这些级别从自由，当然，从克制到选择的自由，
+So, those levels go from freedom, of course, of restraint down to the freedom of choice,
+
+25
+00:02:00,229 --> 00:02:07,179
+然后通知原因，知情选择，最后，基于认可的选择
+then to informed reason, informed choice and lastly, the choice based on the recognition
+
+26
+00:02:07,179 --> 00:02:14,220
+道德价值观。因此，这些是在道德方面至关重要的自治方面。现在，
+of moral values. So, those are areas in terms of autonomy that are critical in ethics. Now,
+
+27
+00:02:14,220 --> 00:02:25,750
+如果你失去了隐私，就道德而言，这里唯一的道德论点是它如何影响
+if you lose your privacy, in terms of ethics, the only ethical argument here is how it affects
+
+28
+00:02:25,750 --> 00:02:32,650
+你的个人自主权来做出决定。但隐私当然不是道德问题，
+your individual autonomy to make decisions. But privacy is certainly not an ethical issue,
+
+29
+00:02:32,650 --> 00:02:33,780
+这是一个文化问题。
+it's a cultural issue.
+
+30
+00:02:33,780 --> 00:02:38,420
+彼得：所以，如果它压缩你的风格或改变你能做的事情，那么这是一个道德问题。
+Peter: So, if it's cramping your style or it's changing what you can do, then it's an ethical issue.
+
+31
+00:02:38,420 --> 00:02:39,120
+道格：是的。
+Doug: It is.
+
+32
+00:02:39,120 --> 00:02:45,799
+道格：因为它影响了你的选择权。同样，这是一个现代的结构
+Doug: Because it's affecting your power of choice. Again, that's a modern construct is
+
+33
+00:02:45,799 --> 00:02:51,150
+隐私。这是一个现代建筑。这是完全不同的。例如，在罗马时代你
+privacy. It's a modern construct. It's quite different. For example, in Roman times you
+
+34
+00:02:51,150 --> 00:02:55,150
+今天可能会和其他人一起洗澡-或者你不洗澡-和其他人一起洗澡
+may take a shower - or you don't take a shower you take baths - with other people, today
+
+35
+00:02:55,150 --> 00:03:00,360
+我们有自己的浴室。但隐私......当我和五个孩子和两个卧室一起长大...
+we have our own bathrooms. But privacy… when I grew up with five kids and two bedrooms…
+
+36
+00:03:00,360 --> 00:03:03,000
+现在它是一个不同的结构，对吧？
+it's a different construct now, right?
+
+37
+00:03:03,000 --> 00:03:04,349
+彼得：是的。
+Peter: Yes.
+
+38
+00:03:04,349 --> 00:03:05,969
+道格：这是文化决定的。
+Doug: It's culturally determined.
+
+39
+00:03:05,969 --> 00:03:10,409
+彼得：有些人说隐私是一个概念
+Peter: There are some people who say that privacy is a concept that is just going to
+
+40
+00:03:10,409 --> 00:03:12,409
+走开，我们应该习惯它。
+go away and we should just get used to it.
+
+41
+00:03:12,409 --> 00:03:13,099
+道格：是的。
+Doug: Yes.
+
+42
+00:03:13,099 --> 00:03:17,489
+彼得：特别是关于我们的在线存在和身份。
+Peter: Particularly, with respect to our online existence and identities.
+
+43
+00:03:17,489 --> 00:03:22,509
+道格：是的，是的。自治是问题，而不是隐私。
+Doug: Yes, yes. Autonomy is the issue, not privacy.
+

@@ -1,0 +1,250 @@
+1
+00:00:03,720 --> 00:00:09,930
+这里我们有一个熟悉的2link机器人，配置中Q2大于0。
+Here we have our familiar 2link robot in the configuration where Q2 is greater than 0.
+
+2
+00:00:09,930 --> 00:00:16,529
+而且那就是具有相同末端执行器位置的机器人，但Q2现在更少了
+And over laid on that is the robot with the same end effector position but Q2 is now less
+
+3
+00:00:16,529 --> 00:00:22,929
+这是这个机器人的两种可能的解决方案，以实现这一目标
+than 0. These are the two possible solutions for this robot in order to achieve this particular
+
+4
+00:00:22,929 --> 00:00:28,679
+端点姿势。我们可能对机器人从一种配置移动到哪种配置感兴趣
+endpoint pose. We might be interested in how the robot moves from one configuration to
+
+5
+00:00:28,679 --> 00:00:34,110
+另一个。对于机器人来说这是一个有趣的运动，因为终点位置是
+the other. It's an interesting motion for the robot because the end point position is
+
+6
+00:00:34,110 --> 00:00:39,570
+完全相同，但关节角度Q1和Q2需要遵循一些有趣的轨迹
+exactly the same but the joint angles Q1 and Q2 need to follow some interesting trajectory
+
+7
+00:00:39,570 --> 00:00:43,450
+从第一个配置移动到第二个配置。
+to move from the first configuration to the second.
+
+8
+00:00:43,450 --> 00:00:49,140
+这是三个维度中更生动的例子。这显示了PUMA560机器人正在抓住
+Here's a more vivid example in three dimensions. This shows a PUMA 560 robot moving to grab
+
+9
+00:00:49,140 --> 00:00:54,940
+一个球。现在我们可以看到机器人正在左手配置中掌握
+a ball. Now we can see that the robot is making that grasp in either the left hand configuration
+
+10
+00:00:54,940 --> 00:00:59,750
+或右手配置。我们可能会问一个问题，“机器人是如何移动的
+or the right handed configuration. We might ask the question, "How does the robot move
+
+11
+00:00:59,750 --> 00:01:04,869
+从左手配置到右手配置？我们如何计算
+from a left handed configuration to a right handed configuration? How do we compute the
+
+12
+00:01:04,869 --> 00:01:08,820
+允许这种情况发生的轨迹？“
+trajectory that allows that to happen?"
+
+13
+00:01:08,820 --> 00:01:14,760
+我们将再次为PUMA560机器人定义模型。将其加载到工作区中。
+Once again we're going to define a model for our PUMA 560 robot. Load that into the workspace.
+
+14
+00:01:14,760 --> 00:01:21,900
+我们有机器人对象。在这里说工作区变量p560。我要定义一个姿势
+We have the robot object. Say here. The workspace variable p560. I'm going to define a pose
+
+15
+00:01:21,900 --> 00:01:29,580
+我希望我的机器人能够采用。让我们通过这种同质化转变给他
+that I'd like my robot to adopt. And let's give him by this homogeneous transformation
+
+16
+00:01:29,580 --> 00:01:36,920
+矩阵在这里。我将定义一个表示连接角度集的新工作空间变量
+matrix here. I'm going to define a new workspace variable that represents the set of join angles
+
+17
+00:01:36,920 --> 00:01:43,950
+机器人要求在左手配置中采用这种特殊姿势。我用
+required by the robot to adopt this particular pose in the left handed configuration. I use
+
+18
+00:01:43,950 --> 00:01:50,540
+ikine6s方法，传递表示所需姿势的均匀变换
+the ikine6s method, pass in the homogeneous transformation representing the desired pose
+
+19
+00:01:50,540 --> 00:01:56,280
+并且开关L指示机器人将处于左手配置和此状态
+and the switch L to indicate the robot is to be in a left handed configuration and this
+
+20
+00:01:56,280 --> 00:02:02,210
+是所需的关节角度集合。我可以为右手配置做同样的事情。
+is the required set of joint angles. I can do the same thing for a right handed configuration.
+
+21
+00:02:02,210 --> 00:02:07,350
+我将为一个名为QR的变量创建一个新工作区。
+I'm going to create a new workspace for a variable called QR.
+
+22
+00:02:07,350 --> 00:02:12,450
+我们来看看这些特殊的机器人配置。我可以绘制配置
+Let's have a look at these particular robot configurations. I can plot the configuration
+
+23
+00:02:12,450 --> 00:02:19,480
+QL。它在棒图表示中看起来像这样。让我从一个看看
+QL. And it looks like this in stick figure representation. Let me look at that from a
+
+24
+00:02:19,480 --> 00:02:26,310
+不同的有利位置。对于右手配置，它看起来像这样。现在
+different vantage point. And it looks like this for the right handed configuration. Now
+
+25
+00:02:26,310 --> 00:02:30,120
+比我们自己领先一点，我要做的就是创造一条轨迹
+getting a little bit ahead of ourselves, what I'm going to do is to create a trajectory
+
+26
+00:02:30,120 --> 00:02:34,239
+并显示机器人从所有关节角度相等的配置移动
+and show the robot moving from the configuration where all those joint angles are equal to
+
+27
+00:02:34,239 --> 00:02:39,590
+0到左手姿势。这将在50个时间步骤中完成。
+0 to the left handed pose. It's going to do that in 50 time steps.
+
+28
+00:02:39,590 --> 00:02:45,810
+现在是jtraj函数的结果，我们将在后面的讲座中详细讨论这个问题
+Now the result of the jtraj function and we'll talk more about this later in the lecture
+
+29
+00:02:45,810 --> 00:02:52,319
+是一个包含50行和6列的矩阵。每行对应于特定的时间步长。行
+is a matrix with 50 rows and 6 columns. Each row corresponds to particular time step. Row
+
+30
+00:02:52,319 --> 00:02:57,160
+1是轨迹的第一点。第50行是轨迹的最后一点。每
+1 is the first point of the trajectory. Row 50 is the last point of the trajectory. Each
+
+31
+00:02:57,160 --> 00:03:00,700
+列表示特定的关节角度。
+column represents a particular joint angle.
+
+32
+00:03:00,700 --> 00:03:06,660
+现在，机器人工具箱可以轻松处理轨迹。所以我绘制而不是特定的
+Now the robotic tool box can easily deal with trajectories. So I plot but instead of a particular
+
+33
+00:03:06,660 --> 00:03:11,940
+关节角度我绘制一个轨迹。我们看到机器人现在从0角配置移动
+joint angle I plot a trajectory. We see the robot now moving from 0 angle configuration
+
+34
+00:03:11,940 --> 00:03:14,440
+左手配置。
+to a left handed configuration.
+
+35
+00:03:17,360 --> 00:03:20,760
+我可以改变这两个，从0角度配置移动
+I can change this two, move from the 0 angle configuration
+
+36
+00:03:20,770 --> 00:03:26,239
+右手配置，我可以再次绘制。看机器人在做什么
+to the right handed configuration, and once again I can plot that. See the robot doing
+
+37
+00:03:26,239 --> 00:03:34,660
+一个非常复杂的动作。最后我能做的就是展示机器人从哪里移动
+a quite convoluted looking motion. Finally what I can do is show the robot moving from
+
+38
+00:03:34,660 --> 00:03:39,160
+左手配置到右手配置。
+the left handed configuration to the right handed configuration.
+
+39
+00:03:39,160 --> 00:03:44,349
+这是一个有趣的动作，因为机器人开始和结束轨迹
+And this is an interesting motion because the robot starts and ends the trajectory with
+
+40
+00:03:44,349 --> 00:03:49,739
+它的末端效应器具有完全相同的姿势。但在机器人之间将会经历
+its end effector in exactly the same pose. But in between the robot is going to go through
+
+41
+00:03:49,739 --> 00:03:56,739
+一些扭曲，以便从左撇子机器人变为右撇子机器人。
+some contortions in order to change from being a left handed robot to a right handed robot.
+
+42
+00:03:56,739 --> 00:04:01,379
+计算轨迹，然后我们将看一下。有趣的是看
+Compute the trajectory and then we're going to have a look at that. Interesting to see
+
+43
+00:04:01,379 --> 00:04:06,129
+机器人在这做什么。您可以看到动作非常复杂，末端效应器结束
+what the robot does here. You can see that the motion is quite complex and the end effector ends
+
+44
+00:04:06,129 --> 00:04:13,409
+就在它开始的地方。有时在制造场景中，机器人确实需要改变
+up just where it started. Sometimes in a manufacturing scenario, the robot does exactly need to change
+
+45
+00:04:13,409 --> 00:04:18,329
+从左撇子到右撇子。也许它需要访问对象
+from being left handed to being right handed. Perhaps it needs to access objects at the
+
+46
+00:04:18,329 --> 00:04:22,320
+其工作空间的极端和需要改变配置。
+extreme ends of its workspace and needs to change configuration.
+
+47
+00:04:22,320 --> 00:04:28,830
+因此，这些配置改变运动，机器人的所有运动都没有网络
+So these configuration change motions, there is no net over all the motion of the robot
+
+48
+00:04:28,830 --> 00:04:33,979
+但是当它正在进行配置更改时，可能会有一些非常狂野和令人兴奋的事情
+but while it's doing the configuration change, there can be some quite wild and exciting
+
+49
+00:04:33,979 --> 00:04:39,060
+联合议案。当你指挥这样的动作时，你需要有点小心
+joint motions. You need to be a little bit careful when you command such a motion that
+
+50
+00:04:39,060 --> 00:04:42,560
+机器人不会在其工作空间中碰撞任何东西。
+the robot is not going to collide with anything in its workspace.
+

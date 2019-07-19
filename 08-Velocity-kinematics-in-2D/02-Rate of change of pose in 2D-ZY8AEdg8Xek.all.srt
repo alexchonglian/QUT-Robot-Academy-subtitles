@@ -1,0 +1,55 @@
+1
+00:00:03,689 --> 00:00:08,900
+在之前的讲座中，我们谈到了运动学，特别是我们谈到了前进
+In previous lectures we talked about kinematics and in particular we talked about forward
+
+2
+00:00:08,900 --> 00:00:13,919
+运动学。这就是问题：给定机器人的关节角度，一个是
+kinematics. And that's the problem of: given the joint angles of the robot, one is the
+
+3
+00:00:13,919 --> 00:00:19,110
+机器人末端执行器的姿势。然后我们继续前进，我们讨论了反向运动学
+pose of the robots end effector. We then moved on and we talked about inverse kinematic which
+
+4
+00:00:19,110 --> 00:00:25,350
+问题是：鉴于末端效应器的姿势，实现这一目标需要什么样的关节角度？
+is the problem: given the end effector pose, what are the joint angles needed to achieve that?
+
+5
+00:00:25,560 --> 00:00:29,220
+在这个讲座中，我们将谈论速度。我们对此感兴趣
+In this lecture we are going to be talking about velocities. We're interested in the
+
+6
+00:00:29,220 --> 00:00:34,660
+关节角度的速度与末端执行器的速度之间的关系。
+relationship between the velocity of the joint angles and the velocity of the end effector.
+
+7
+00:00:34,660 --> 00:00:39,079
+我们对末端效应器姿势的衍生物感兴趣。
+We're interested in the derivative of the end effector pose.
+
+8
+00:00:39,079 --> 00:00:43,489
+我们要讨论的一个主题是采用衍生产品究竟意味着什么
+And one of the topics we're going to discuss is what exactly does it mean to take the derivative
+
+9
+00:00:43,489 --> 00:00:48,620
+机器人末端执行器的姿势。我们将简单地开始我们的讨论
+of the pose of the end effector of a robot. We're going to start our discussion simply
+
+10
+00:00:48,620 --> 00:00:52,960
+并考虑仅在飞机上操作的机器人。在接下来的讲座中，我们将继续
+and consider robots that operate only in the plane. And in the next lecture we are going
+
+11
+00:00:52,960 --> 00:00:56,789
+为三维内移动的机器人谈论这个问题。
+to talk about this for robots that move within three dimensions.
+

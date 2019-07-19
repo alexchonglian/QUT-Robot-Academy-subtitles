@@ -1,0 +1,405 @@
+1
+00:00:03,530 --> 00:00:07,750
+例如，我们现在要考虑一个在三维空间中移动的物体
+We are now going to consider an object which moves in three-dimensional space, for instance
+
+2
+00:00:07,750 --> 00:00:12,240
+这架飞机可能是一个飞行机器人，它可能是一个水下机器人。
+this airplane but it could be a flying robot, it could be an underwater robot.
+
+3
+00:00:12,240 --> 00:00:14,809
+我想描述它在世界上的位置。
+I want to describe its position within the world.
+
+4
+00:00:14,809 --> 00:00:18,480
+我们将使用与二维相同的过程。
+And we are going to use the same process that we did for two dimensions.
+
+5
+00:00:18,480 --> 00:00:21,820
+我们将介绍一个参考坐标系。
+We’re going to introduce a reference coordinate frame.
+
+6
+00:00:21,820 --> 00:00:25,270
+现在，对于三维情况，这是一个三维坐标系。
+Now, for the three-dimensional case, this is a three-dimensional coordinate frame.
+
+7
+00:00:25,270 --> 00:00:28,470
+它有一个x轴，一个y轴和一个z轴。
+It’s got an x-axis, a y-axis and a z-axis.
+
+8
+00:00:28,470 --> 00:00:32,750
+并且，我将把它放在世界上任意的地方，那将是
+And, I’m going to put it at an arbitrary place in the world and that is going to be
+
+9
+00:00:32,750 --> 00:00:34,570
+我们的参考坐标系。
+our reference coordinate frame.
+
+10
+00:00:34,570 --> 00:00:38,739
+在三个维度中，我们使用了一个看起来像这样的坐标框架，并且有一个
+In three dimensions, we used a coordinate frame that looks like this and there are a
+
+11
+00:00:38,739 --> 00:00:42,489
+与我们在上一讲中看到的2D坐标框架有许多相似之处。
+lot of similarities to the 2D coordinate frame we looked at in the last lecture.
+
+12
+00:00:42,489 --> 00:00:44,079
+有三个轴。
+There are three axes.
+
+13
+00:00:44,079 --> 00:00:50,110
+它们是x，y和z，它们相互成90度角相交。
+They are x, y and z and they meet at angles of 90 degrees to each other.
+
+14
+00:00:50,110 --> 00:00:53,780
+它们都相交的点被称为原点。
+The point where they all intersect is referred to as the origin.
+
+15
+00:00:53,780 --> 00:00:59,409
+因此，这三个轴一起形成我们称之为三维坐标系。
+So, these three axes together form what we call a three-dimensional coordinate frame.
+
+16
+00:00:59,409 --> 00:01:04,400
+现在让我们介绍一个观点，我们想要描述一下这一点
+Let’s introduce a point now and we want to describe the point with respect to the
+
+17
+00:01:04,400 --> 00:01:06,450
+3D坐标框架。
+3D coordinate frame.
+
+18
+00:01:06,450 --> 00:01:11,460
+我们通过将一条线向下放到XY平面并测量位移A来做到这一点
+We do this by dropping a line down to the XY plane and measuring the displacement A
+
+19
+00:01:11,460 --> 00:01:18,469
+沿x轴，沿y轴的位移B和沿着x轴的位移C.
+along the x-axis, the displacement B along the y-axis and the displacement C along the
+
+20
+00:01:18,469 --> 00:01:19,469
+z轴。
+z-axis.
+
+21
+00:01:19,469 --> 00:01:22,250
+所以，我们可以用三个数字来表示这一点。
+So, we can represent the point by three numbers.
+
+22
+00:01:22,250 --> 00:01:26,979
+我们称之为元组，一个三元组，这基本上是一组三个数字，即数字
+We call this a tuple, a 3-tuple, and that’s basically a group of three numbers, the numbers
+
+23
+00:01:26,979 --> 00:01:30,110
+A，B和C，它们是该点的坐标。
+A, B and C and they are the coordinates of the point.
+
+24
+00:01:30,110 --> 00:01:34,930
+因此，我们可以认为一个点是n维空间中的一个位置。
+So, we can consider a point is a location in an n-dimensional space.
+
+25
+00:01:34,930 --> 00:01:39,119
+一位数学家会把它写成P属于实数的集合
+A mathematician would write that as P belonging to the set of real numbers to the power of
+
+26
+00:01:39,119 --> 00:01:40,119
+ñ。
+n.
+
+27
+00:01:40,119 --> 00:01:42,890
+在这种特殊情况下，n等于3。
+And in this particular case, n is equal to three.
+
+28
+00:01:42,890 --> 00:01:47,759
+在最一般意义上，我们可以将坐标表示为n的组或元组
+In the most general sense, we can represent the coordinate as a group or a tuple of n
+
+29
+00:01:47,759 --> 00:01:48,759
+数字。
+numbers.
+
+30
+00:01:48,759 --> 00:01:53,409
+同样，在这种情况下，n等于3，因此它用包括的坐标表示一个点
+Again, in this case, n equals three, so it represents a point by a coordinate which comprises
+
+31
+00:01:53,409 --> 00:01:55,720
+三个数字。
+three numbers.
+
+32
+00:01:55,720 --> 00:02:00,880
+我们可以用三个组件来描述一个向量：一个与之平行的组件A.
+We can describe a vector in terms of three components: a component A parallel to the
+
+33
+00:02:00,880 --> 00:02:06,399
+x轴，平行于y轴的分量B和平行于z轴的分量C.
+x-axis, component B parallel to the y-axis, and a component C parallel to the z-axis.
+
+34
+00:02:06,399 --> 00:02:12,360
+并且，我们使用小写符号p和列向量表示向量P.
+And, we represent the vector P using the lower case symbol p and a column vector.
+
+35
+00:02:12,360 --> 00:02:16,700
+这是一堆数字一个在另一个之上：距离A，距离B和
+That’s a stack of numbers one above the other: the distance A, the distance B and
+
+36
+00:02:16,700 --> 00:02:21,239
+距离C.矢量是n维矢量空间的元素。
+the distance C. A vector is an element of an n-dimensional vector space.
+
+37
+00:02:21,239 --> 00:02:26,480
+一位数学家会说小写p属于一组实数
+A mathematician would say that lower case p belongs to the set of real numbers to the
+
+38
+00:02:26,480 --> 00:02:27,610
+的力量
+power of n.
+
+39
+00:02:27,610 --> 00:02:30,800
+同样，在这种情况下，n等于3。
+Again, in this case, n equals 3.
+
+40
+00:02:30,800 --> 00:02:34,590
+我们还可以通过n个元素列向量表示向量。
+We can also represent a vector by an n element column vector.
+
+41
+00:02:34,590 --> 00:02:38,500
+这是n个数字叠加在另一个之上。
+That’s n numbers stacked one above the other.
+
+42
+00:02:38,500 --> 00:02:41,319
+我们可以将矢量视为相对位移。
+We can consider a vector as a relative displacement.
+
+43
+00:02:41,319 --> 00:02:47,909
+这就是我们从原点，我们的参考点到直线点p的方式。
+That’s how we get from the origin, our reference point, to the point p in a straight line.
+
+44
+00:02:47,909 --> 00:02:52,489
+我们要考虑的所有向量都是从原点开始的，所以我们参考这些向量
+All the vectors that we’re going to consider start at the origin, so we refer to these
+
+45
+00:02:52,489 --> 00:02:54,480
+作为绑定向量。
+as bound vectors.
+
+46
+00:02:54,480 --> 00:02:56,760
+他们有一个特定的起点。
+They have a particular starting point.
+
+47
+00:02:56,760 --> 00:03:01,860
+并且，这意味着此处显示的红色矢量与此处显示的此矢量不同
+And, that means that the vector shown here in red is different to this vector shown here
+
+48
+00:03:01,860 --> 00:03:07,600
+即使它在空间中具有相同的长度和相同的方向。
+even though it has got the same length and the same orientation in space.
+
+49
+00:03:07,600 --> 00:03:12,650
+我们可以描述向量的另一种方式是根据一组正交单位向量。
+Another way we can describe vectors is in terms of a set of orthogonal unit vectors.
+
+50
+00:03:12,650 --> 00:03:16,840
+让我们介绍单位向量，x-hat，y-hat和z-hat。
+Let’s introduce the unit vectors, x-hat, y-hat and z-hat.
+
+51
+00:03:16,840 --> 00:03:22,240
+现在，这些向量中的每一个都具有一个长度，并且它们与坐标平行
+Now, each of these vectors has got a length of one and they are parallel to the coordinate
+
+52
+00:03:22,240 --> 00:03:24,780
+轴，x，y和z。
+axes, x, y and z.
+
+53
+00:03:24,780 --> 00:03:28,739
+现在，我们可以用单位向量表示我们的向量小写p。
+Now, we can represent our vector lower case p in terms of the unit vectors.
+
+54
+00:03:28,739 --> 00:03:32,830
+时间为x-hat，B次为y-hat，加上C次为z-hat。
+A time x-hat, B times y-hat, plus C times z-hat.
+
+55
+00:03:32,830 --> 00:03:39,400
+有一些相似之处，但点和向量之间存在一些重要的差异。
+There are some similarities, but some important differences between points and vectors.
+
+56
+00:03:39,400 --> 00:03:40,439
+点定义一个位置。
+Points define a location.
+
+57
+00:03:40,439 --> 00:03:41,810
+这是不可能的。
+It’s not possible.
+
+58
+00:03:41,810 --> 00:03:45,989
+添加或乘以点没有任何意义。
+It doesn’t make any sense to add or multiply points.
+
+59
+00:03:45,989 --> 00:03:47,349
+向量不定义位置。
+Vectors do not define location.
+
+60
+00:03:47,349 --> 00:03:52,819
+它们指定了如何从一个位置到另一个位置或从一个点到另一个点。
+They specify how to get from one location to another or from one point to another.
+
+61
+00:03:52,819 --> 00:03:57,769
+现在，我们可以添加和减去向量，这是完全有意义的，我们可以乘以a
+Now, we can add and subtract vectors, that makes perfect sense and we can multiply a
+
+62
+00:03:57,769 --> 00:03:58,800
+矢量由标量。
+vector by a scalar.
+
+63
+00:03:58,800 --> 00:04:04,400
+我们可以在保持方向的同时使矢量更长或更短。
+We can make the vector longer or shorter while maintaining its direction.
+
+64
+00:04:04,400 --> 00:04:07,829
+两点之间的差异是矢量。
+The difference between two points is a vector.
+
+65
+00:04:07,829 --> 00:04:13,170
+并且一个点可以被定义为相对于另一个点的向量，并且该点是
+And a point can be defined as a vector with respect to another point and that point is
+
+66
+00:04:13,170 --> 00:04:16,730
+通常是坐标系的原点。
+typically the origin of the coordinate frame.
+
+67
+00:04:16,730 --> 00:04:20,989
+点和向量都由一组n个实数表示。
+Points and vectors are both represented by a group of n real numbers.
+
+68
+00:04:20,989 --> 00:04:25,800
+在我们的例子中，N是三，因为我们谈论的是三维空间。
+N, in our case, is three because we’re talking about three-dimensional space.
+
+69
+00:04:25,800 --> 00:04:31,930
+点通常表示为行向量，括号内的数字列表，
+A point is typically represented as a row vector, a list of numbers inside parenthesis,
+
+70
+00:04:31,930 --> 00:04:36,310
+而矢量通常表示为上面的n个数字的堆栈
+whereas a vector is typically represented as a stack of the n numbers one above the
+
+71
+00:04:36,310 --> 00:04:39,009
+其他，通常在方括号中。
+other and typically in square brackets.
+
+72
+00:04:39,009 --> 00:04:45,199
+现在，我可以描述飞机相对于该坐标系的位置。
+Now, I can describe the position of the airplane with respect to this coordinate system.
+
+73
+00:04:45,199 --> 00:04:48,120
+我需要在飞机上定义一个参考点。
+I need to define a reference point on the airplane.
+
+74
+00:04:48,120 --> 00:04:50,289
+我需要描述一个特定的位置。
+I need to describe one particular location.
+
+75
+00:04:50,289 --> 00:04:53,040
+那么，让我们说一下飞机机头的尖端。
+So, let’s say the tip of the airplane’s nose.
+
+76
+00:04:53,040 --> 00:04:55,350
+现在，我可以测量那个距离。
+Now, I can measure that distance.
+
+77
+00:04:55,350 --> 00:05:02,330
+粗略地说，我会说它在X方向上大约35厘米，它可能是某种东西
+Roughly, I’d say it’s about 35 centimetres in the X direction and it might be something
+
+78
+00:05:02,330 --> 00:05:09,310
+就像在Y方向上的18厘米，它的长度相差13厘米
+like 18 centimetres in the Y direction and it’s something like 13 centimetres in the
+
+79
+00:05:09,310 --> 00:05:10,310
+Z方向。
+Z direction.
+
+80
+00:05:10,310 --> 00:05:15,650
+所以，我可以通过那些来描述这个特定点在三维世界中的位置
+So, I can describe the position of this particular point in the 3-dimensional world by those
+
+81
+00:05:15,650 --> 00:05:17,530
+三个数值坐标。
+three numerical coordinates.
+

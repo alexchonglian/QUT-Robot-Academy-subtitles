@@ -1,0 +1,215 @@
+1
+00:00:04,350 --> 00:00:09,630
+这是关节角速度和末端执行器速度之间的线性关系
+This is the linear relationship between joint angle velocity and end effector velocity that
+
+2
+00:00:09,630 --> 00:00:16,500
+我们刚刚解决了。这里的雅可比矩阵J是一个二乘二矩阵，意思是
+we worked out a moment ago. The Jacobian matrix here J is a two by two matrix and that means
+
+3
+00:00:16,500 --> 00:00:21,610
+反转非常容易，所以我们可以像这样编写表达式。这是什么
+that it's very easy to invert, so we can write the expression like this. And what this is
+
+4
+00:00:21,610 --> 00:00:27,370
+说如果我知道我想要的末端效应器速度，以及我是否可以计算雅可比行列式
+saying is if I know the end effector velocity that I want, and if I can compute the Jacobian
+
+5
+00:00:27,370 --> 00:00:33,300
+矩阵，然后反转它，我可以计算出我需要的关节角度速度
+matrix and then invert it, I can work out what joint angle velocities I need in order
+
+6
+00:00:33,300 --> 00:00:40,000
+实现这种特殊的末端效应器速度，这是一个非常强大的东西。不管
+to achieve this particular end effector velocity and this is a very powerful thing. No matter
+
+7
+00:00:40,000 --> 00:00:45,690
+最终效应器速度是什么，我总能计算出一组关节角速度
+what the end effector velocity is, I can always work out a set of joint angle velocities that
+
+8
+00:00:45,690 --> 00:00:49,120
+会给我那个末端效应器的速度。
+will give me that end effector velocity.
+
+9
+00:00:49,120 --> 00:00:53,999
+我们之前已经研究过Jacobian矩阵对于这个简单的两个连接平面
+We've previously worked out what the Jacobian matrix is for this simple, two link, planar
+
+10
+00:00:53,999 --> 00:00:59,469
+操纵器，因为它只是一个二乘二矩阵，它很容易反转和
+manipulator and because it's only a two by two matrix, it's very easy to invert and the
+
+11
+00:00:59,469 --> 00:01:05,799
+逆看起来像这样。这种逆雅可比行列有一个稍微有问题的方面
+inverse looks like this. There's one slightly problematic aspect of this inverse Jacobian
+
+12
+00:01:05,799 --> 00:01:11,680
+这就是这个术语，当第二个关节角度Q2等于零时，这个是逆的
+and that is this term here, when the second joint angle, Q2 is equal to zero, this inverse
+
+13
+00:01:11,680 --> 00:01:16,119
+雅可比人变得无限。这可能看起来有点不寻常，但有一个漂亮的
+Jacobian becomes infinite. That might seem a little bit unusual but there's a pretty
+
+14
+00:01:16,119 --> 00:01:18,649
+这背后的简单直觉。
+simple intuition behind this.
+
+15
+00:01:18,649 --> 00:01:22,540
+让我们来看看发生这种情况的机器人配置。所以这就是机器人
+Let's have a look at the robot configuration where this occurs. So this is what the robot
+
+16
+00:01:22,540 --> 00:01:27,869
+当Q2等于零时看起来像。而且这种机器人的特殊配置经常是
+looks like when Q2 is equal to zero. And this particular configuration of the robot is often
+
+17
+00:01:27,869 --> 00:01:33,859
+被称为奇异姿态，因为它在雅可比行列中引入了一个奇点
+referred to as a singular pose because it introduces a singularity into the Jacobian
+
+18
+00:01:33,859 --> 00:01:39,950
+机器人矩阵。像这样的机器人配置与a完全相同
+matrix of the robot. A robot configuration like this is really exactly the same as a
+
+19
+00:01:39,950 --> 00:01:44,149
+单链接机器人看起来像这样，所以这是一个只有一个关节的机器人
+single link robot that looks like this, so this is a robot which only a single joint
+
+20
+00:01:44,149 --> 00:01:49,869
+角度。显然，像这样的机器人运动非常非常有限。末端效应器
+angle. And clearly a robot like this has got very, very limited motion. The end effector
+
+21
+00:01:49,869 --> 00:01:56,409
+这里的速度只能与这个蓝色矢量平行。这与之相关
+velocity can only ever be parallel to this blue vector here. That is tangential to the
+
+22
+00:01:56,409 --> 00:02:01,600
+机器人链接的轴。机器人末端执行器不可能在此移动
+axis of the robot's link. It's not possible for the robot end effector to move in this
+
+23
+00:02:01,600 --> 00:02:06,759
+方向，这就是奇点来自的地方。在这个特别的
+direction at all and this is where the term singularity comes from. In this particular
+
+24
+00:02:06,759 --> 00:02:12,270
+机器人的配置，它失去了一定的自由度。机器人中有一个方向
+configuration of the robot, it's lost a degree of freedom. There is a direction in the robot's
+
+25
+00:02:12,270 --> 00:02:17,780
+笛卡尔工作空间，其中末端执行器不可能移动。
+Cartesian workspace, in which it is impossible for the end effector to move.
+
+26
+00:02:17,780 --> 00:02:22,930
+即使关节角度不完全等于零;也许它几乎为零，然后我们
+Even if a joint angle in not exactly equal to zero; perhaps it's nearly zero, then we
+
+27
+00:02:22,930 --> 00:02:28,310
+在机器人能够移动的方向上仍然会有问题。所以一个机器人
+will still have problems in the directions that the robot is able to move. So a robot
+
+28
+00:02:28,310 --> 00:02:34,310
+在这种配置中，将难以在这个特定方向上移动。
+in this sort of configuration will find it difficult to move in this particular direction.
+
+29
+00:02:34,310 --> 00:02:38,510
+我们可以计算雅可比矩阵的行列式，如果它等于零或是否等于零
+We can compute the determinant of the Jacobian matrix and if it's equal to zero or if it's
+
+30
+00:02:38,510 --> 00:02:43,080
+等于小，告诉你机器人有一些运动方向
+equal to small, that tells you that there is some motion direction for the robot that
+
+31
+00:02:43,080 --> 00:02:48,051
+将是困难或尴尬。你可以根据自己的手臂来考虑这一点;那里
+will be difficult or awkward. You can think about this in terms of your own arm; there
+
+32
+00:02:48,051 --> 00:02:53,370
+是一些手臂的配置，你有能力移动几乎相同
+are some configurations of the arm where you have the ability to move with almost equal
+
+33
+00:02:53,370 --> 00:02:56,902
+在许多不同的方向上的速度和你的一些其他配置
+velocity in many different directions and there are some other configurations of your
+
+34
+00:02:56,902 --> 00:03:01,560
+手臂，它真的只能在一个方向上有速度;比如什么时候
+arm, where it's really only possible to have velocity in one direction; for instance when
+
+35
+00:03:01,560 --> 00:03:05,140
+你试图扔球，你把手臂放在你可以拥有的配置中
+you're trying to throw a ball, you put your arm into a configuration where you can have
+
+36
+00:03:05,140 --> 00:03:10,180
+你希望球走的方向的最大速度，但几乎没有速度分量
+maximum velocity in the direction you want the ball to go, but almost no velocity component
+
+37
+00:03:10,180 --> 00:03:13,780
+在与此正交的方向上。
+in direction orthogonal to that.
+
+38
+00:03:13,780 --> 00:03:19,010
+描述这种情况的另一种方式是雅可比的条件数。
+Another way to describe this situation is in terms of the condition number of the Jacobian.
+
+39
+00:03:19,010 --> 00:03:23,230
+条件数是一个标量，我们可以从任何矩阵和条件计算
+The condition number is a scalar that we can compute from any matrix and if the condition
+
+40
+00:03:23,230 --> 00:03:28,980
+数字很​​大表明矩阵接近于单数，这就是它的确定
+number is large it indicates that the matrix is close to being singular, that is it's determine
+
+41
+00:03:28,980 --> 00:03:34,150
+接近于零。您可以考虑雅各比矩阵的这种有问题的情况
+is close to zero. You can consider this problematic situation of the Jacobian matrix in terms
+
+42
+00:03:34,150 --> 00:03:39,570
+它具有小的决定因素或大的条件数。条件号码
+of it having either a small determinant or a large condition number. The condition number
+
+43
+00:03:39,570 --> 00:03:42,819
+可以使用内置函数“cond（）”在MATLAB中计算。
+can be computed in MATLAB using the built in function "cond()".
+

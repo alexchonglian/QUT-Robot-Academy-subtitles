@@ -1,0 +1,385 @@
+1
+00:00:03,429 --> 00:00:07,609
+这是我们之前介绍的串行链路逆动力学表达式
+Here is the expression we introduced earlier for the inverse dynamics of a serial link
+
+2
+00:00:07,609 --> 00:00:13,480
+机器人机械手以矩阵形式表示。我们现在有兴趣考虑这种影响
+robot manipulator expressed in matrix form. We are interested now to consider the effect
+
+3
+00:00:13,480 --> 00:00:18,650
+重力。重力是即使机器人不移动也会作用于机器人的力。所以我们
+of gravity. Gravity is the force that acts on the robot even if it's not moving. So we
+
+4
+00:00:18,650 --> 00:00:24,830
+可以消除与关节加速度和关节速度成比例的项。
+can eliminate the terms that are proportional to the joint acceleration and the joint velocity.
+
+5
+00:00:24,830 --> 00:00:29,840
+这就是这个术语。术语G.这表示重力扭矩
+It's just this term on the end here. The term G. This represents the gravity torque that's
+
+6
+00:00:29,840 --> 00:00:35,370
+作用于机器人机械手的关节。这是抵消重力和扭矩的扭矩
+acting on the joints of the robot manipulator. It's the torque that counteracts gravity and
+
+7
+00:00:35,370 --> 00:00:38,810
+阻止手臂在自重下塌陷。
+stops the arm from collapsing under its own weight.
+
+8
+00:00:38,810 --> 00:00:43,640
+这里我们再次提供了我们的2连杆机器人的符号模型。而我要做的是
+Here again we have a symbolic model of our 2 link robot. And what I'm going to do is
+
+9
+00:00:43,640 --> 00:00:49,579
+使用方法gravload告诉我作用在关节上的扭矩
+to use the method gravload which tells me the torque that is acting on the joints of
+
+10
+00:00:49,579 --> 00:00:57,379
+机器人。gravload的参数是关节角度。我传入一个包含的向量
+the robot. The arguments to gravload are the joint angles. I pass in a vector which contains
+
+11
+00:00:57,379 --> 00:01:02,579
+Q1和Q2;这个象征性的联合变量。这是重力的表达
+Q1 and Q2; this symbolic joint variables. And here's the expression for gravity which
+
+12
+00:01:02,579 --> 00:01:08,720
+作用于机器人的关节。我们看到关节1的术语是相当的
+is acting on the joints of the robot. And we see that the term for joint 1 is quite
+
+13
+00:01:08,720 --> 00:01:14,080
+因为关节2的表达稍微短一些。
+long where as the expression for joint 2 is a little bit shorter.
+
+14
+00:01:14,080 --> 00:01:18,990
+我们可以看到该表达式包含链接长度A1和的运动学参数
+We can see that this expression contains a kinematic parameters the link lengths A1 and
+
+15
+00:01:18,990 --> 00:01:26,650
+A2。质量中心C1和C2的位置，两个关节的质量M1和
+A2. The positions of the centres of mass C1 and C2, the masses of the two joints M1 and
+
+16
+00:01:26,650 --> 00:01:30,939
+M2。我们可以看到这里有很多cos和sine术语。
+M2. And we can see that there are a lot of cos and sine terms in here.
+
+17
+00:01:30,939 --> 00:01:35,420
+到目前为止，我们已经谈到机器人的力量，仅仅是因为它自身的重量。但是有用的
+So far we've talked about the forces on the robot just due to its own weight. But a useful
+
+18
+00:01:35,420 --> 00:01:39,900
+机器人还必须能够携带有效载荷。从这里挑选一个物体并将其放下
+robot also has to be able to carry a payload. Pick an object up from here and put it down
+
+19
+00:01:39,900 --> 00:01:45,909
+在那边。很明显，机器人链条中的最后一个环节必须保持有效载荷。
+over there. So clearly the last link in the chain of the robot has to hold the payload.
+
+20
+00:01:45,909 --> 00:01:50,040
+但是沿着链条传播到机器人的底部。每个关节都在
+But that propagates down the chain towards the base of the robot. Every joint in the
+
+21
+00:01:50,040 --> 00:01:56,590
+机器人必须帮助保持有效载荷，以防止它被重力拉下。
+robot has to help hold up the payload to stop it being pulled down by the force of gravity.
+
+22
+00:01:56,590 --> 00:02:01,810
+那么有效载荷的影响是什么？那么每个关节都有最大可能的扭矩。所以
+So what's the effect of payload? Well every joint has got a maximum possible torque. So
+
+23
+00:02:01,810 --> 00:02:06,870
+让我们想象一下，我们在机器人的末端有一个有效载荷，我们不断增加它的质量。
+let's imagine that we have a payload on the end of the robot and we keep increasing it's mass.
+
+24
+00:02:06,920 --> 00:02:12,800
+我们可以计算每个关节需要施加的扭矩以便保持
+We can work out the torque that each of the Joints needs to exert in order to hold up
+
+25
+00:02:12,809 --> 00:02:17,370
+有效载荷。随着我们增加有效载荷的质量，最终我们会找到那个
+that payload. As we increase the mass of the payload, eventually we will find that one
+
+26
+00:02:17,370 --> 00:02:22,950
+关节将达到其扭矩限制，它将变得超载。这是最大有效载荷
+joint will hit its torque limit it will become overloaded. And that's the maximum payload
+
+27
+00:02:22,950 --> 00:02:24,629
+机器人可以握住。
+that the robot can hold.
+
+28
+00:02:24,629 --> 00:02:29,599
+现在我们知道重力扭矩是机器人配置的函数。
+Now we know that the gravity torque is the function of the configuration of the robot.
+
+29
+00:02:29,599 --> 00:02:33,579
+如果一个机器人持有10公斤，可能会有一些配置特别是在哪里
+If a robot's holding 10 kg there might be some configurations particularly where the
+
+30
+00:02:33,579 --> 00:02:39,349
+10公斤靠近机器人的底座，在那里可以容纳特定的有效载荷。
+10 kg is close to the base of the robot where it's possible to hold that particular payload.
+
+31
+00:02:39,349 --> 00:02:44,279
+但是，如果机器人的手臂完全伸展，它可能无法保持这种特性
+But if the robot has got its arm fully stretched, it may not be able to hold that particular
+
+32
+00:02:44,279 --> 00:02:49,639
+有效载荷。因此，机器人的最大有效负载是扭矩能力的函数
+payload. So the maximum payload of the robot is a function of the torque capabilities of
+
+33
+00:02:49,639 --> 00:02:55,150
+电机但它也是机器人配置的一个功能。
+the motors but it is also a function of the configuration of the robot.
+
+34
+00:02:55,150 --> 00:03:02,249
+我将回到我们的2连杆机器人的数值模型，我加载使用
+I am going to go back to a numerical model of our 2 link robot and I load that using
+
+35
+00:03:02,249 --> 00:03:07,689
+脚本mdl_twolink。
+the script mdl_twolink.
+
+36
+00:03:07,689 --> 00:03:12,760
+我现在要使用gravload方法计算机器人关节的重力负荷。
+I'm going to now compute the gravity load on the robot's joints using the gravload method.
+
+37
+00:03:12,760 --> 00:03:20,189
+我将为关节角度0和0计算出来。这就是我们得到的结果。在
+I'm going to compute that for joint angle 0 and 0. And this is the result we get. In
+
+38
+00:03:20,189 --> 00:03:25,400
+事实上我们使用递归Newton-Euler算法得到的结果相同。
+fact the same result we got a little bit earlier using the recursive Newton-Euler algorithm.
+
+39
+00:03:25,400 --> 00:03:29,949
+实际上，重力加载本身是基于递归的Newton-Euler算法。
+In fact gravity load itself is based on the recursive Newton-Euler algorithm.
+
+40
+00:03:29,949 --> 00:03:37,159
+我们来看看我们机器人的配置。我们打算用它来联合
+Let's just have a look at a configuration of our robot. We're going to plot it for joint
+
+41
+00:03:37,159 --> 00:03:43,739
+角度0和0，这就是它的样子。现在我们假设我们把机器人放进去了
+angles 0 and 0 and this is what it looks like. Now let's imagine that we put the robot into
+
+42
+00:03:43,739 --> 00:03:48,260
+不同的配置。让我们使第一个关节角度等于2弧度的PI
+a different configuration. Let's make the first joint angle equal to PI on 2 radians
+
+43
+00:03:48,260 --> 00:03:52,379
+或90度。但现在我们的机器人指向上方。
+or 90 degrees. But now our robot is pointing straight upwards.
+
+44
+00:03:52,379 --> 00:03:56,659
+那么在这种情况下我们怎么看待关节上的重力负荷呢？嗯，这很容易
+So what do we think the gravity load on the joints would be in this case? Well it's easy
+
+45
+00:03:56,659 --> 00:04:03,619
+足以搞清楚。我们使用twolink对象，gravload方法，我们传入关节
+enough to figure out. We use the twolink object, the gravload method and we pass in the joint
+
+46
+00:04:03,619 --> 00:04:10,699
+角度，PI在2和0上。我们看到关节上的重力负荷几乎相等
+angles, PI on 2 and 0. And we see that the gravity load on the joints is almost equal
+
+47
+00:04:10,699 --> 00:04:15,760
+这里零或一些轻微的数值误差。这是10到减去14.这是什么
+to zero or some slight numerical error here. It's 10 to the minus 14. And this is what
+
+48
+00:04:15,760 --> 00:04:20,609
+我们期望，因为在这种特殊配置中，接头不需要施加任何扭矩
+we expect because in this particular configuration, the joints don't need to exert any torque
+
+49
+00:04:20,609 --> 00:04:26,939
+完全可以让机器人直线上升。事实上，机器人在直立状态下保持平衡
+at all to hold the robot straight up. The robot is in fact balancing in an upright
+
+50
+00:04:26,939 --> 00:04:31,449
+组态。它不稳定，但不需要任何关节扭矩来维持这一点
+configuration. It's not stable but it doesn't require any joint torque to maintain this
+
+51
+00:04:31,449 --> 00:04:34,680
+确切的配置。
+exact configuration.
+
+52
+00:04:34,680 --> 00:04:39,560
+现在我们来看看对有效载荷的影响。我可以将负载添加到我的机器人对象中
+Now we're going to look at the effect on payload. I can add a payload to my robot object very
+
+53
+00:04:39,560 --> 00:04:45,199
+容易。这是我的机器人对象，我使用了有效载荷方法，我将添加一个
+easily. Here is my robot object and I used the payload method and I'm going to add a
+
+54
+00:04:45,199 --> 00:04:51,370
+1千克有效载荷，它将被放置在相对于坐标0,0,0的位置
+1 kg payload, and it's going to be placed at the coordinate 0, 0, 0 with respect to
+
+55
+00:04:51,370 --> 00:04:53,240
+链接2坐标框架。
+the link 2 coordinate frame.
+
+56
+00:04:53,240 --> 00:04:58,800
+所以它实际上是在链接2的末尾。机器人现在有一个有效载荷
+So it's actually going to be right on the end of link 2. The robot now has a payload
+
+57
+00:04:58,800 --> 00:05:05,020
+现在我要计算机器人在配置时的重力负荷
+and now I'm going to compute the gravity load for the robot when it's in the configuration
+
+58
+00:05:05,020 --> 00:05:10,240
+0,0。因此，手臂伸直，水平伸展。
+0,0. So that's with the arm stretched out straight and horizontally.
+
+59
+00:05:10,240 --> 00:05:14,990
+现在我们看到关节，关节1和关节2上的扭矩增加了。那就是
+Now we see that the torque on the joints, on joint 1 and joint 2 is increased. And that's
+
+60
+00:05:14,990 --> 00:05:21,560
+因为机器人试图在这种相当笨拙的配置中保持1公斤的负载。
+because the robot is trying to hold a 1 kg load in this rather awkward configuration.
+
+61
+00:05:21,560 --> 00:05:26,949
+所以机器人关节必须尽可能地努力才能保持
+So the robot joints are going to have to work about as hard as they can in order to keep
+
+62
+00:05:26,949 --> 00:05:30,330
+从机器人的末端拉下1公斤。
+that 1 kg from pulling the end of the robot down.
+
+63
+00:05:30,330 --> 00:05:37,780
+我们现在来看一个复杂的机器人模型。我们介绍了PUMA560机器人的模型。
+Let's look now at a complex robot model. We introduce a model for the PUMA 560 robot.
+
+64
+00:05:37,780 --> 00:05:42,030
+你可以看到我们的工作空间中有一个名为P560的新变量，它是另一个变量
+And you can see that there is a new variable in our workspace called P560, it’s another
+
+65
+00:05:42,030 --> 00:05:45,750
+串行链接对象，可以描述机器人操纵器。
+serial link object which can describe a robot manipulator.
+
+66
+00:05:45,750 --> 00:05:52,110
+我们将为这个机器人使用相同的gravload方法。对于任何更好的事情之一
+We're going to use the same gravload method for this robot. And for one of anything better
+
+67
+00:05:52,110 --> 00:05:58,319
+我将把所有等于零的关节角度放入。这就是重力负荷
+I'm going to put in joint angles all equal to zero. And this is what the gravity load
+
+68
+00:05:58,319 --> 00:06:03,449
+好像。现在我们可以看到PUMA机器人在该特定配置中的样子。
+looks like. Now we can see what the PUMA robot looks like in that particular configuration.
+
+69
+00:06:03,449 --> 00:06:13,210
+0,0,0,0,0,0和具有全零关节角配置的PUMA机器人看起来像
+0, 0, 0, 0, 0, 0. And PUMA robot with a all zero joint angle configuration looks like
+
+70
+00:06:13,210 --> 00:06:18,240
+这个。上臂是水平的，下臂是垂直的。这些是联合
+this. The upper arm is horizontal and the lower arm is vertical. And these are the joint
+
+71
+00:06:18,240 --> 00:06:21,080
+要求这样做的扭矩。
+torques that are required to do that.
+
+72
+00:06:21,080 --> 00:06:24,479
+工具箱机器人对象具有很多功能，是我们可以做到的事情之一
+The toolbox robot object has got a lot of capabilities and one of the things we could
+
+73
+00:06:24,479 --> 00:06:31,780
+做的是改变重力加速度。我们将其更改为0,0,9.81，其中
+do is to change gravitational acceleration. And we change that to 0, 0, 9.81, which
+
+74
+00:06:31,780 --> 00:06:37,540
+是名义地球的引力，将除以6，因为这是重力在月球上的重力。
+is nominal earth’s gravity, going to divide by 6 because that's what the gravity is on the moon.
+
+75
+00:06:38,700 --> 00:06:44,520
+现在我们可以看到机器人的重力负荷，因为它在月球上，它是重力
+Now we can see the gravity load on the robot, given that it's on the moon, it's the gravity
+
+76
+00:06:44,530 --> 00:06:52,069
+加载功能。然后我再次将关节角放入六个零。在这里，我们看到了什么
+load function. And I put in the joint angles six zeros again. And here we see what the
+
+77
+00:06:52,069 --> 00:06:58,829
+重力负荷，这个PUMA机器人的关节上的重力扭矩将是它在月球上工作。
+gravity load, gravity torques on the joints of this PUMA robot would be if it was working on the moon.
+

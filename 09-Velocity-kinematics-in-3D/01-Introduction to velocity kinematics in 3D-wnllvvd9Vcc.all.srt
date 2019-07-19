@@ -1,0 +1,105 @@
+1
+00:00:03,160 --> 00:00:08,680
+在上一讲中，我们讨论了机器人关节速度与关节之间的关系
+In the last lecture, we talked about the relationship between the velocity of a robot's joints and
+
+2
+00:00:08,680 --> 00:00:14,940
+机器人末端执行器的速度，机器人末端执行器的姿势变化率。
+the velocity of the robot end-effector, the rate of change of the pose of the robot end-effector.
+
+3
+00:00:14,940 --> 00:00:20,210
+而且，我们之前谈过这两个机器人问题，即前向运动学问题
+And, we talked previously about these two robotic problems, the forward kinematic problem
+
+4
+00:00:20,210 --> 00:00:25,670
+和逆运动学问题，然后我们介绍了这个速度变换问题。
+and the inverse kinematic problem and then we introduced this velocity transform problem.
+
+5
+00:00:25,670 --> 00:00:30,019
+在我们的上一次演讲中，我们在二维空间中做了一切。我们已经看过了
+In our last lecture, we did everything in two-dimensional space. This we have seen a
+
+6
+00:00:30,019 --> 00:00:34,230
+通过本课程的次数。在两个方面，事情很容易。他们得到
+number of times through this course. Things are pretty easy in two dimensions. They get
+
+7
+00:00:34,230 --> 00:00:39,350
+三维复杂得多。在本讲座中，我们将分三个部分进行
+much more complex in three dimensions. In this lecture, we are going to do it in three
+
+8
+00:00:39,350 --> 00:00:42,670
+尺寸。所以现在，我们将定义它是什么
+dimensions. So now, we are going to define what does it
+
+9
+00:00:42,670 --> 00:00:49,190
+意思是，这个psi点，就三维姿态随时间变化而言。所以，首先，我们是
+mean, this psi dot, in terms of three-dimensional pose changing with time. So, first, we’re
+
+10
+00:00:49,190 --> 00:00:53,880
+将描述这个psi点是什么数学对象，然后我们将继续努力
+going to describe what mathematical object this psi dot is and then we’re going to work on
+
+11
+00:00:53,880 --> 00:00:59,020
+关节角度与姿势率之间的关系。
+the relationship between joint angle rates and pose rate.
+
+12
+00:00:59,020 --> 00:01:04,610
+现在，正如我们这样做，有一些先进的概念，如果你不是特别的话
+Now, as we do this, there are some advanced concepts and, if you are not particularly
+
+13
+00:01:04,610 --> 00:01:09,050
+在数学方面很强，你没有差分微积分的背景，你不太舒服
+strong at maths, you don’t have background in differential calculus, your not too comfortable
+
+14
+00:01:09,050 --> 00:01:13,500
+线性代数我们已经完成了一些线性代数。我们使用矩阵和
+with linear algebra and we've done a bit of linear algebra already. We used matrices and
+
+15
+00:01:13,500 --> 00:01:18,209
+向量，但这可能是在更高级别使用的矩阵和向量。
+vectors, but this is going to be perhaps matrix and vector used at a more advanced level.
+
+16
+00:01:18,209 --> 00:01:22,830
+如果你对这些概念不太满意，你可能会对这个特殊方面感到困惑
+If you are not too comfortable with these concepts, you might struggle with this particular
+
+17
+00:01:22,830 --> 00:01:26,950
+演讲。所以，你的选择只是尝试和浏览讲座，观察
+lecture. So, your options are just to try and skim through the lecture, observe the
+
+18
+00:01:26,950 --> 00:01:31,920
+即使你没有得到所有的细节，我想说的是要点。也许看
+gist of what I’m trying to say even if you don’t get all of the details. Maybe look
+
+19
+00:01:31,920 --> 00:01:38,110
+在一些，一些额外的教科书。做一些阅读以获得，先决条件
+at some, some additional textbooks. Do some more reading to get the, the prerequisites
+
+20
+00:01:38,110 --> 00:01:42,640
+你需要了解这一点。所以，只是一点点，之前的警告
+that you are going need to understand that. So, just a little bit of a, of a warning before
+
+21
+00:01:42,640 --> 00:01:44,360
+我们深入了解它的细节。
+we get in to the details of it.
+

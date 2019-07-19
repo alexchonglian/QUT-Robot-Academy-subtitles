@@ -1,0 +1,80 @@
+1
+00:00:03,360 --> 00:00:07,540
+在上一课中，我们学习了如何将数字图像导入计算机，我们学到了很多东西
+In the last lecture we learned how to import a digital image into a computer and we learned
+
+2
+00:00:07,550 --> 00:00:11,769
+计算机内的图像只是一大堆数字。更确切地说，它是
+that an image inside a computer is just a big bunch of numbers. More precisely it's
+
+3
+00:00:11,769 --> 00:00:17,650
+一个矩形的数字数组，我们可以认为它是一个矩阵。现在得到图像
+a rectangular array of numbers which we can consider to be a matrix. Now getting the image
+
+4
+00:00:17,650 --> 00:00:22,070
+进入电脑只是第一步。我们需要以各种方式操纵这个图像
+into the computer is just the first step. We need to manipulate this image in various
+
+5
+00:00:22,070 --> 00:00:27,550
+方法，以便我们可以从该图像中提取足以提供的信息
+ways so that we can extract the information from that image which is sufficient to hand
+
+6
+00:00:27,550 --> 00:00:33,870
+穿过一个机器人，让它完成它的工作。所以在这个讲座和下一个讲座中，我们都是
+across to a robot to allow it to do its job. So in this lecture and the next one, we're
+
+7
+00:00:33,870 --> 00:00:38,969
+去了解一些转换图像的基本方法，以帮助我们
+going to learn about some fundamental ways to transform images so as to help us in the
+
+8
+00:00:38,969 --> 00:00:41,670
+提取意义的过程。
+process of extracting meaning.
+
+9
+00:00:41,670 --> 00:00:47,480
+这些技术属于一种称为图像处理的类别，这就是我们的方式
+These techniques fall into a category which is called image processing, which is how we
+
+10
+00:00:47,480 --> 00:00:53,310
+拍摄一张图像并将其转换为不同的图像，这有助于我们完成提取任务
+take one image and transform it into a different image which helps us in our task of extracting
+
+11
+00:00:53,310 --> 00:00:57,850
+那个意思。所以我们有兴趣考虑的各种转换
+that meaning. So the sorts of transformations that we would be interested in considering
+
+12
+00:00:57,850 --> 00:01:02,500
+是;我们如何增强图像的对比度？我们如何降低分辨率
+are; how do we enhance the contrast of an image? How do we reduce the resolution of
+
+13
+00:01:02,500 --> 00:01:07,979
+一个图像？我们如何突出显示图像中的水平线条或如何突出显示垂直线条
+an image? How do we highlight horizontal lines in an image or how do we highlight vertical
+
+14
+00:01:07,979 --> 00:01:12,770
+图像中的线条？或者我们如何突出显示红色或绿色或者绿色的东西
+lines in an image? Or how do we highlight things that are red or that are green or that
+
+15
+00:01:12,770 --> 00:01:18,380
+是蓝色的。所以这些是一些基本技术，可以帮助我们完成装备之旅
+are blue. So these are some fundamental techniques that will help us in our journey of equipping
+
+16
+00:01:18,380 --> 00:01:19,790
+有远见的机器人。
+robots with vision.
+

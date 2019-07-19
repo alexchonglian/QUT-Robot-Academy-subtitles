@@ -1,0 +1,850 @@
+1
+00:00:03,220 --> 00:00:07,720
+现在，我们将讨论关于干扰的联合控制。而最明显的干扰，
+Now, we are going to talk about joint control with disturbances. And the most obvious disturbance,
+
+2
+00:00:07,720 --> 00:00:13,451
+机器人手臂上最常见的干扰是重力引起的干扰。想像
+the most common disturbance on a robotic arm is the disturbance due to gravity. Imagine
+
+3
+00:00:13,451 --> 00:00:18,359
+这种特殊配置的PUMA机器人操纵器。它的手臂伸展了
+a PUMA robot manipulator in this particular configuration. It’s got its arm stretched
+
+4
+00:00:18,359 --> 00:00:23,519
+横向水平，你能想象手臂的重量很大。所以，有一个很大的
+out horizontally and can you imagine that arm weighs quite a lot. So, there is a large
+
+5
+00:00:23,519 --> 00:00:28,359
+肩关节扭矩，肘关节也有很大的扭矩
+torque on the shoulder joint and there’s also a large torque on the elbow joint that
+
+6
+00:00:28,359 --> 00:00:32,980
+是必需的，以保持手臂处于水平姿势。
+are required in order to keep the arm in that horizontal pose.
+
+7
+00:00:32,980 --> 00:00:37,510
+我们可以看一下该特定场景的更简化版本。考虑一下我们
+We can look at a more simplified version of that particular scenario. Consider here we
+
+8
+00:00:37,510 --> 00:00:42,480
+有一个连接到水平杆的电动机。酒吧设有一个中心
+have an electric motor which is connected to a horizontal bar. The bar has a centre
+
+9
+00:00:42,480 --> 00:00:48,080
+质量和质心是距电动机轴的距离r。和酒吧
+of mass and the centre of mass is a distance r from the axis of the motor. And the bar
+
+10
+00:00:48,080 --> 00:00:55,010
+有一个m的质量和杆有一个重力，这是由于重力作用力
+has got a mass of m and the bar has a weight force, that’s the force due to gravity acting
+
+11
+00:00:55,010 --> 00:01:00,770
+在质心上，这是mg向下作用的力。
+on the centre of mass and that is a force of mg acting in the downward direction.
+
+12
+00:01:00,770 --> 00:01:07,770
+现在，具有杠杆臂长度r的mg力导致作用在电动机上的扭矩
+Now, a force of mg with a lever arm length of r results in a torque acting on the motor
+
+13
+00:01:07,770 --> 00:01:11,960
+轴和扭矩的大小由质量乘以重力给出
+shaft and the magnitude of that torque is given by the mass times the gravitational
+
+14
+00:01:11,960 --> 00:01:17,810
+加速度乘以质心距电机轴的距离。在这
+acceleration times the distance of the centre of mass from the axis of the motor. In this
+
+15
+00:01:17,810 --> 00:01:21,800
+在特定情况下，扭矩以逆时针方向作用。中心
+particular case, the torque is acting in a counter clockwise direction. The centre of
+
+16
+00:01:21,800 --> 00:01:27,320
+质量想要垂直向下移动。如果我们真的为我们看的情况做数学计算
+mass wants to move vertically downward. If we actually do the maths for the case we looked
+
+17
+00:01:27,320 --> 00:01:32,520
+刚才，PUMA机器人用它的手臂处于水平配置，扭矩大小
+at a moment ago, the PUMA robot with its arm in a horizontal configuration, the torque
+
+18
+00:01:32,520 --> 00:01:37,790
+在肩关节是14牛顿米。如果我认为我的手臂长一米，
+on the shoulder joint is 14 Newton meters. If I assume that my arm is one meter long,
+
+19
+00:01:37,790 --> 00:01:42,450
+这相当于我的手臂伸出四公斤;那太漂亮了
+that’s equivalent to holding four kilograms with my arm outstretched; that’s a pretty
+
+20
+00:01:42,450 --> 00:01:46,810
+虽然在肩关节上有很多扭矩，但是很难做到
+difficult thing to do, though there’s a lot of torque acting on the shoulder joint
+
+21
+00:01:46,810 --> 00:01:52,260
+PUMA机器人。显然，这将对肩部的控制产生影响
+of the PUMA robot. And clearly, this is going to have an effect on the control of the shoulder
+
+22
+00:01:52,260 --> 00:01:58,010
+联合。那么，现在让我们来看看我们的机器人关节控制器的更多细节。这是
+joint. So, let’s look now in some more detail at our robot joint controller. And this is
+
+23
+00:01:58,010 --> 00:02:02,920
+我们在上一课中介绍的方框图。这是一个反馈控制器。该
+a block diagram we introduced in the last lecture. It’s a feedback controller. The
+
+24
+00:02:02,920 --> 00:02:07,980
+机器人关节控制器的输入是所需的位置，θ星。和输出
+input to the robot joint controller is the desired position, theta star. And the output
+
+25
+00:02:07,980 --> 00:02:13,640
+联合控制器的实际关节位置是由θ表示的。正如我们讨论的那样
+of the joint controller is the actual joint position denoted by theta. And as we discussed
+
+26
+00:02:13,640 --> 00:02:18,430
+在上一节课中，我正在使用许多这些变量的拉普拉斯变换;所以没有
+in the last lecture, I’m using the Laplace transform of many of these variables; so not
+
+27
+00:02:18,430 --> 00:02:23,730
+他们在时域中的反应，但他们在拉普拉斯域的反应。我表示
+their response in the time domain but their response in the Laplace domain. And I denote
+
+28
+00:02:23,730 --> 00:02:28,050
+拉普拉斯域使用大写字母。所以，这就是我使用资本theta的原因
+the Laplace domain by using capital letters. So, that’s why I’ve used capital theta
+
+29
+00:02:28,050 --> 00:02:34,310
+在这里和这里。现在在这个控制循环中，我们有一个控制律，它可能是一个比例
+here and here. Now within this control loop, we have a control law, it might be a proportional
+
+30
+00:02:34,310 --> 00:02:38,790
+衍生控制器，它可能是一个比例积分微分控制器，称为a
+derivative controller, it might be a proportional integral derivative controller known as a
+
+31
+00:02:38,790 --> 00:02:44,200
+PID控制器，我们有电机驱动器的增益，我们有传感器的增益
+PID controller and we have the gain of the motor driver and we have the gain of the sensor
+
+32
+00:02:44,200 --> 00:02:49,810
+我们有执行器的传递功能，即驱动的电动机
+and we have the transfer function of the actuator, that’s the electric motor which is driving
+
+33
+00:02:49,810 --> 00:02:55,370
+关节。并且它具有诸如电动机转矩常数KM之类的参数;惯性，
+the joint. And that has parameters such as the motor torque constant, KM; the inertia,
+
+34
+00:02:55,370 --> 00:03:01,410
+焦耳;和粘性摩擦，B;而S当然是拉普拉斯算子。现在这是一个
+J; and the viscous friction, B; and S is of course the Laplace operator. Now this is a
+
+35
+00:03:01,410 --> 00:03:08,150
+非常理想化的表现。不存在诸如重力所表示的干扰
+very idealistic representation. There is no disturbance such as the force of gravity represented
+
+36
+00:03:08,150 --> 00:03:11,410
+在这个框图中。那么，让我们为此做些什么。
+in this block diagram. So, let’s do something about that.
+
+37
+00:03:11,410 --> 00:03:16,879
+我所做的就是将电机转矩从执行器转换中移出
+What I’ve done is I’ve moved the motor torque constant out of the actuator transfer
+
+38
+00:03:16,879 --> 00:03:22,160
+功能，并使其成为一个明确的增益块，你可以在这里看到。那个的输出
+function and made it an explicit gain block which you can see here. The output of that
+
+39
+00:03:22,160 --> 00:03:26,310
+增益阻塞是实际的电机转矩。现在我所做的实际上是分开的
+gain block is the actual motor torque. Now what I’ve done is actually separated
+
+40
+00:03:26,310 --> 00:03:31,260
+电机分为两个部分。我有一个产生扭矩的组件，我有另一个
+the motor into two components. I have a component which generates a torque and I have another
+
+41
+00:03:31,260 --> 00:03:35,480
+代表电动机惯性和粘性摩擦的部件。
+component which represents the inertia and viscous friction of the motor.
+
+42
+00:03:35,480 --> 00:03:40,270
+现在，我将介绍另一个求和点，这是我们注入干扰的地方
+Now, I’m going to introduce another summing junction which is a where we inject the disturbance
+
+43
+00:03:40,270 --> 00:03:45,410
+扭矩。因此，在这个特定的求和点处，我们得到了电机的转矩之和
+torque. So at this particular summing junction, we have the sum of the torque which the motor
+
+44
+00:03:45,410 --> 00:03:50,319
+创造并增加了来自干扰源的扭矩。它
+creates and I add to that the torque which is coming from the disturbance source. It
+
+45
+00:03:50,319 --> 00:03:55,230
+可能是由于引力。这可能是由于我们谈到的像库仑摩擦之类的东西
+might be due to gravity. It might be due to something like Coulomb friction which we talked
+
+46
+00:03:55,230 --> 00:04:02,769
+在上一讲中，TD是该干扰扭矩的拉普拉斯变换。
+about in the last lecture and TD is the Laplace transform of that disturbance torque.
+
+47
+00:04:02,769 --> 00:04:07,099
+引入干扰，即使是持续干扰，也会引起误差
+The introduction of a disturbance, even a constant disturbance, will cause an error
+
+48
+00:04:07,099 --> 00:04:13,060
+在里面。如果我们现在看一下简化原理图的增益，我们就得到了实际的角度
+in the. If we now look a gain at that simplified schematic, we have the actual angle of the
+
+49
+00:04:13,060 --> 00:04:18,030
+机器人链接，我们有机器人链接所需的角度。我们可以看到实际的
+robot link and we have the desired angle of the robot link. And we can see that the actual
+
+50
+00:04:18,030 --> 00:04:22,550
+角度有点不同，它是向下的，因为重力拉动它
+angle is a little bit different, it’s downwards because the force of gravity is pulling it
+
+51
+00:04:22,550 --> 00:04:27,830
+向下并且马达控制器没有完全反对那个重力。控制器
+downwards and the motor controller hasn’t fully opposed that force of gravity. The controller
+
+52
+00:04:27,830 --> 00:04:32,660
+我们刚刚使用的是比例加微分控制器，通常称为PD控制器
+that we just used is a proportional-plus-derivative controller often known as a PD controller
+
+53
+00:04:32,660 --> 00:04:38,010
+它在机器人系统中非常常用。因此PD产生的扭矩
+and it’s very very commonly used in robotic systems. So the torque produced by the PD
+
+54
+00:04:38,010 --> 00:04:43,470
+控制器是增益P乘以我想要关节角度之间的误差，
+controller is a gain P multiplied by the error between where I want the joint angle to be,
+
+55
+00:04:43,470 --> 00:04:49,669
+theta星，实际的关节角度θ加上另一个增益称为D乘以
+theta star, and the actual joint angle theta plus another gain termed D multiplied by the
+
+56
+00:04:49,669 --> 00:04:54,630
+θ点的关节速度。如果我们考虑稳态的情况
+velocity of the joint that’s theta dot. If we consider the steady state case where
+
+57
+00:04:54,630 --> 00:04:58,729
+关节没有移动，它被重力向下偏转;但它没有动
+the joint is not moving, it’s deflected downwards by gravity; but it’s not moving
+
+58
+00:04:58,729 --> 00:05:03,180
+任何进一步向下;它处于平衡状态;那么theta点将等于零。所以，
+any further downwards; it’s in equilibrium; then theta dot will be equal to zero. So,
+
+59
+00:05:03,180 --> 00:05:08,030
+我们可以消除那个词。如果关节处于平衡状态，则产生扭矩
+we can eliminate that term. And if the joint is in equilibrium, then the torque generated
+
+60
+00:05:08,030 --> 00:05:13,370
+通过电动机及其控制器必须等于重力引起的扭矩。所以，我们可以写
+by the motor and its controller must be equal to the torque due to gravity. So, we can write
+
+61
+00:05:13,370 --> 00:05:18,479
+这种关系。如果我们做一些重新排列，我们可以看到错误
+this relationship. And if we do a little bit of rearrangement, we can see that the error
+
+62
+00:05:18,479 --> 00:05:23,030
+在我们想要关节的位置和关节实际位置之间，等于MGR
+between where we want the joint to be and where the joint actually is, is equal to MGR
+
+63
+00:05:23,030 --> 00:05:28,030
+除以P，我们的比例增益。现在，有一些非常有趣的后果
+divided by P, our proportional gain. Now, there are some very interesting consequences
+
+64
+00:05:28,030 --> 00:05:32,940
+那个。一个是如果我们想要减少这个错误，我们需要增加价值
+of that. And one is it if we want to reduce this error, we need to increase the value
+
+65
+00:05:32,940 --> 00:05:38,130
+P.如果P更大，因为它在分母中，那么它会产生很大的误差
+of P. If P is bigger because it’s in the denominator, then it makes the error much
+
+66
+00:05:38,130 --> 00:05:41,840
+小多了。我们将重新审视机器人关节模型
+much smaller. We are going to revisit the robot joint model
+
+67
+00:05:41,840 --> 00:05:46,780
+我们在上一课中在Simulink中构建的。我们已经把一些参数的值
+that we built in Simulink in the last lecture. We’ve put the values of some of the parameters
+
+68
+00:05:46,780 --> 00:05:53,009
+进入工作区，这是我们的模型，我们将带来有用的调色板
+into the workspace and this is our model and we’re going to bring in my palette of useful
+
+69
+00:05:53,009 --> 00:05:59,020
+Simulink对象也是如此。我要做的第一件事就是移动所有这些东西
+Simulink objects as well. The first thing I’m going to do is to move all of this stuff
+
+70
+00:05:59,020 --> 00:06:04,270
+在这里，我将介绍一个新的增益块，我将要介入
+across here and I’m going to introduce a new gain block which I’m going to drop in
+
+71
+00:06:04,270 --> 00:06:11,419
+这里。而我要做的是从分子中删除称为KM的增益
+here. And what I’m going to do is to remove the gain termed KM from the numerator of the
+
+72
+00:06:11,419 --> 00:06:17,840
+传递函数，我将把它放在这个块中。所以功能上，这个
+transfer function and I’m going to put it into this block here. So functionally, this
+
+73
+00:06:17,840 --> 00:06:25,430
+是完全一样的。我们有一个增益KM乘以这个传递函数。的输出
+is exactly the same. We have a gain KM multiplying this transfer function here. The output of
+
+74
+00:06:25,430 --> 00:06:29,750
+该增益块是施加到电动机电枢的转矩。
+this gain block is the torque that’s applied to the armature of the electric motor.
+
+75
+00:06:29,750 --> 00:06:35,900
+现在我要做的是引入扰动力矩。要做到这一点，我需要
+Now what I’m going to do is to introduce a disturbance torque. To do that, I need to
+
+76
+00:06:35,900 --> 00:06:43,169
+找到一个求和点，并且有一个求和点，我将编辑这个
+find a summing junction and there’s a summing junction and I’m going to edit this so that
+
+77
+00:06:43,169 --> 00:06:49,550
+在向上的方向上有一个加分。我认为这样就可以了，我要去了
+it has got a plus in the upward direction. I think that will do the trick and I’m going
+
+78
+00:06:49,550 --> 00:06:58,120
+要移除那根电线，将求和点放在这里，从那里画一根电线到那里。
+to remove that wire, put the summing junction in here, draw a wire from there to there.
+
+79
+00:06:58,120 --> 00:07:09,990
+干扰力将来自阶梯函数，这就是源。
+And the disturbance force is going to come from a step function, that’s the source.
+
+80
+00:07:09,990 --> 00:07:18,110
+开始了。我希望我的步骤在模拟中的第5时间发生。模拟
+Here we go. And I want my step to occur at time five in the simulation. The simulation
+
+81
+00:07:18,110 --> 00:07:22,860
+运行10秒钟，因此干扰将在5秒钟发生。因此，它有一个
+runs for 10 seconds, so the disturbance will occur at five seconds. Hence, it has got a
+
+82
+00:07:22,860 --> 00:07:26,789
+价值一。所以，我将把它连接到求和中
+value of one. So, I’m going to connect that into the summing
+
+83
+00:07:26,789 --> 00:07:32,480
+结。好吧，我们现在所拥有的是一个像以前一样的模型。但现在，
+junction. All right, so what we have now is a model like what we had before. But now,
+
+84
+00:07:32,480 --> 00:07:38,770
+我可以引入干扰扭矩，该扭矩也作用在电枢的电枢上
+I can introduce a disturbance torque which also acts on the armature of the electric
+
+85
+00:07:38,770 --> 00:07:43,350
+发动机。现在有两个扭矩作用在电枢上。有产生的扭矩
+motor. There are now two torques acting on the armature. There is the torque generated by
+
+86
+00:07:43,350 --> 00:07:48,449
+控制器和外部干扰有扭矩。现在让我们跑吧
+the controller and there is the torque by this external disturbance. Now let’s run
+
+87
+00:07:48,449 --> 00:07:54,800
+那。我将把范围纳入视野，所以我们可以看到，只是一点点，
+that. I’ll bring the scope into view, so we can see that, just across a little bit,
+
+88
+00:07:54,800 --> 00:08:00,889
+并运行我的模拟。结果看起来像这样。让我们放大一点，让我们
+and run my simulation. And the result looks like this. Let’s zoom in a little bit, let's
+
+89
+00:08:00,889 --> 00:08:05,789
+自动调整，我们可以看到电机一直跟随方波移动
+auto-scale that and we can see that the motor has been following the square wave moving
+
+90
+00:08:05,789 --> 00:08:10,740
+介于减1和加1之间。但是当应用外部干扰时，我们就会看到
+between minus one and plus one. But when the external disturbance is applied, we see that
+
+91
+00:08:10,740 --> 00:08:14,669
+这对电机的位置产生了很大的影响。我们可以看到它
+that has got a really big influence on the position of the motor. We could see that it
+
+92
+00:08:14,669 --> 00:08:20,460
+已经向上移动，现在正在3-1/2和5-1/2之间移动。很明显这是外在的
+has moved up and is now moving between the 3-1/2 and 5-1/2. So clearly this external
+
+93
+00:08:20,460 --> 00:08:25,590
+力对电机控制器的性能产生了很大的影响，而且还没有
+force has had a really big impact on the performance of the motor controller and it’s not doing
+
+94
+00:08:25,590 --> 00:08:29,880
+我们希望它做的工作。所以，我们已经看到有一些后果
+the job that we want it to do. So, we’ve seen that there are some consequences
+
+95
+00:08:29,880 --> 00:08:35,300
+增加比例增益P.我们可以使用的另一种策略是添加积分
+of increasing the proportional gain P. Another strategy that we can use is to add an integral
+
+96
+00:08:35,300 --> 00:08:40,639
+术语和将我们的控制器变成比例积分和微分控制器
+term and that turns our controller into a proportional integral and derivative controller
+
+97
+00:08:40,639 --> 00:08:46,170
+通常称为PID控制器，我们在这里添加的是积分项。
+very commonly known as a PID controller and what we’ve added here is the integral term.
+
+98
+00:08:46,170 --> 00:08:51,579
+我们有另一个增益I，即积分增益，它乘以时间积分
+We have another gain I which is the integral gain and that multiplies the time integral
+
+99
+00:08:51,579 --> 00:08:57,290
+位置误差，θ星减去theta。从直觉的角度来看，这意味着是否存在
+of the position error, theta star minus theta. What this means, in intuitive terms, is if there
+
+100
+00:08:57,290 --> 00:09:02,350
+是一个位置误差，积分随着时间的推移逐渐增加，增加了
+is a position error, the integral gradually increases over time and that increases the
+
+101
+00:09:02,350 --> 00:09:07,550
+施加在关节上的扭矩，以抵消该特定误差。
+torque that’s applied to the joint so as to counter that particular error.
+
+102
+00:09:07,550 --> 00:09:11,040
+现在我们要做的是增加系统的比例增益并看看
+Now what we are going to do is to increase the proportional gain of the system and see
+
+103
+00:09:11,040 --> 00:09:16,550
+如果我们可以改进，那么这里是控制器的参数。比例
+if we can improve things, so here are the parameters of our controller. The proportional
+
+104
+00:09:16,550 --> 00:09:21,529
+增益等于一。我要加倍。我要把它等于两个。
+gain is equal to one. I’m going to double that. I’m going to make it equal to two.
+
+105
+00:09:21,529 --> 00:09:26,939
+关闭它，我们将再次运行我们的模拟，看看步骤响应会发生什么。
+Close that and we’ll run our simulation again and see what happens to the step response.
+
+106
+00:09:26,939 --> 00:09:33,459
+现在我们看到干扰的影响已经减弱。我们现在可以看到了
+And now we see that the effect of the disturbance has been attenuated. We can see now that the
+
+107
+00:09:33,459 --> 00:09:37,790
+干扰的影响较小，因为我们增加了比例增益。
+effect of the disturbance is less because we’ve increased the proportional gain.
+
+108
+00:09:37,790 --> 00:09:44,559
+让我们再增加一些。我要把它增加到4，运行它
+Let’s increase it some more. I’m going to increase it to a value of four, run that
+
+109
+00:09:44,559 --> 00:09:50,879
+再次模拟。现在我们看到扰动的影响甚至进一步减少了
+simulation again. Now we see that the effect of disturbance is even further reduced, but
+
+110
+00:09:50,879 --> 00:09:55,959
+我们也注意到我们的方波响应的射击量很大，
+we’ve also noticed that the amount over shoot on our square wave response is much,
+
+111
+00:09:55,959 --> 00:10:01,610
+更高，这是增加比例增益的结果，我们可以绕过
+much higher and this is a consequence of increasing the proportional gain and we can get around
+
+112
+00:10:01,610 --> 00:10:06,720
+在某种程度上，通过增加衍生术语的数量，增加数量
+that to some extent by increasing the amount of derivative term, increase the amount of
+
+113
+00:10:06,720 --> 00:10:11,100
+阻尼会减少过冲量。但除此之外还有其他后果。
+damping that will reduce the amount of overshoot. But there are other consequences besides.
+
+114
+00:10:11,100 --> 00:10:18,549
+我要做的是在此图表中添加另一个范围。并在此引入范围
+What I am going to do is to add another scope to this diagram. And bring in the scope here
+
+115
+00:10:18,549 --> 00:10:26,050
+它将要做的是显示电机产生的扭矩
+and what it’s going to do is to show the torque that’s generated by the motor and
+
+116
+00:10:26,050 --> 00:10:33,031
+让我们运行这个。所以，我有一个新的范围，让我们打开它
+let’s run this. So, I have a new scope, let's open that up
+
+117
+00:10:33,031 --> 00:10:40,529
+我们在这里看到的是我们要求电机产生的扭矩。现在，我们可以
+and what we see here is the torque that we're asking the motor to generate. Now, we can
+
+118
+00:10:40,529 --> 00:10:46,399
+看到大约加五到五牛顿米之间的扭矩有尖峰
+see that there is spikes in the torque between about plus five to minus five newton meters
+
+119
+00:10:46,399 --> 00:10:51,230
+要求电动机产生的扭矩。随着我们增加比例增益，
+of torque for asking the motor to produce. As we increase the proportional gain, the
+
+120
+00:10:51,230 --> 00:10:54,920
+我们要求电机生产的最大扭矩将不断增加。
+maximum torque that we ask the motor to produce will keep increasing.
+
+121
+00:10:54,920 --> 00:11:00,899
+任何真正的电动机都具有有限的扭矩能力。它不能产生无限大的扭矩。
+Any real motor has got a finite torque capability. It can't produce an infinite amount of torque.
+
+122
+00:11:00,899 --> 00:11:05,670
+现在，最终，这就是增加比例增益的策略
+Now, ultimately, this is where the strategy of increasing the proportional gain will come
+
+123
+00:11:05,670 --> 00:11:10,839
+粘住。因此，增加比例增益，我们要求电机提供更大的扭矩
+unstuck. So, increase the proportional gain we’re asking the motor provide more torque
+
+124
+00:11:10,839 --> 00:11:14,910
+最终，我们要求它产生比实际更大的扭矩。
+and eventually, we’re be asking it to produce more torque than it actually can do.
+
+125
+00:11:14,910 --> 00:11:19,559
+所以，我们已经看到了增加比例增益的效果。我们已经看到了这种效果
+So, we’ve seen the effects of increasing the proportional gain. We’ve seen the effect
+
+126
+00:11:19,559 --> 00:11:25,399
+添加一个整数项。所以，第三种策略，通常用来消除这种
+of adding an integral term. So, third strategy, that’s often use to eliminate this kind
+
+127
+00:11:25,399 --> 00:11:29,259
+错误，这是介绍所谓的前馈术语。
+of error and that’s to introduce what’s called a feed forward term.
+
+128
+00:11:29,259 --> 00:11:34,189
+这是我们之前的框图，我们将介绍前馈控制
+Here's our block diagram from earlier and we are going to introduce a feed forward control
+
+129
+00:11:34,189 --> 00:11:39,259
+术语。前馈控制的关键部分是，在很多情况下，我们实际上可以计算
+term. And the key part of feed forward control, is that in many cases, we actually can compute
+
+130
+00:11:39,259 --> 00:11:44,220
+干扰力将是什么。因此，在重力的情况下，如果我们知道关节
+what the disturbance force will be. So, in the case of gravity, if we know the joint
+
+131
+00:11:44,220 --> 00:11:48,569
+角度，我们可以计算每个关节的重力。
+angles, we can compute what the gravity force is on each of the joints.
+
+132
+00:11:48,569 --> 00:11:53,179
+因此，我们可以估算出重力干扰是什么，并得到了它
+So, we can come up with an estimate of what the gravity disturbance is and this is got
+
+133
+00:11:53,179 --> 00:11:57,290
+对我们真的很有帮助。这是我们应该对干扰的额外了解
+to be really helpful to us. This is extra knowledge about the disturbance in we should
+
+134
+00:11:57,290 --> 00:12:01,999
+能够用它来消除干扰。我们这样做的方式是我们添加另一个
+be able to use it to cancel the disturbance out. The way we do that is we add another
+
+135
+00:12:01,999 --> 00:12:06,700
+总结我们的控制法的结合，它有一个负面的迹象，所以，这
+summing junction into our control law and it's got a negative sign on it and so, this
+
+136
+00:12:06,700 --> 00:12:12,429
+有一个负增益或它是一个减法。然后使其完成所有工作，平衡
+has got a negative gain or it's a subtraction. And then to make it to all work, to balance
+
+137
+00:12:12,429 --> 00:12:17,720
+我们必须在这里增加收益。这是KdKm的一个收益。
+out, we have to add a gain in here. This is a gain of one on KdKm.
+
+138
+00:12:17,720 --> 00:12:23,290
+如果你考虑一下，如果我们在这里得到估计的扭矩，我们在这里除以KD和KM。
+If you think about it, if we have our estimated torque here, we divided by KD and KM here.
+
+139
+00:12:23,290 --> 00:12:30,220
+我们在这里乘以KD和KM。所以，总体收益现在是1，然后我们将其添加到
+We multiply by KD and KM here. So, the overall gain is now one and then we add that to the
+
+140
+00:12:30,220 --> 00:12:35,519
+实际的干扰和由于这里的负号，干扰被抵消了。
+actual disturbance and because of the negative sign here, the disturbance is cancelled out.
+
+141
+00:12:35,519 --> 00:12:41,209
+这是前馈控制的本质。这是一个非常巧妙的技巧。
+This is the essence of feed forward control. It is a really neat trick.
+
+142
+00:12:41,209 --> 00:12:45,899
+我们可以采用的另一种策略是增加此刻的积分增益等于
+Another strategy that we can adopt is to increase the integral gain at the moment is equal to
+
+143
+00:12:45,899 --> 00:12:50,699
+零。所以，我要把比例增益放回一个，我会增加
+zero. So, I’m going to put the proportional gain back to one and I’m going to increase
+
+144
+00:12:50,699 --> 00:12:56,589
+积分增益值为1。我们将模拟它，看看会发生什么。
+the integral gain to a value of one. We are going to simulate that and see what happens.
+
+145
+00:12:56,589 --> 00:13:01,121
+我们看到的是，方波响应的过度射击已经减少。它的
+What we see is that the over shoot on the square wave response has been reduced. It's
+
+146
+00:13:01,121 --> 00:13:05,139
+当我们将比例增益等于1时，回到之前的状态。
+back to what it was previously when we had the proportional gain equal to one.
+
+147
+00:13:05,139 --> 00:13:10,589
+在这里，我们可以看到积分项的影响发挥作用。当外部干扰
+And here we can see the effect of the integral term coming into play. When the external disturbance
+
+148
+00:13:10,589 --> 00:13:16,899
+在时间5应用，控制系统中的错误增加。然后将其整合
+is applied at time five, the error in the control system increases. That is then integrated
+
+149
+00:13:16,899 --> 00:13:22,779
+随着时间的推移产生一个随时间增加的扭矩，从而推动误差
+over time to produce a torque which increases over time so as to push the error towards
+
+150
+00:13:22,779 --> 00:13:28,509
+零。我们可以在这里看到整合术语的影响。它正在推动这个错误
+zero. We can see here the effect of the integrated term ramping up. It’s pushing the error
+
+151
+00:13:28,509 --> 00:13:32,769
+下。从我们可以看到的是经过一段时间后，整合的向上
+down. From what we can see is an after short amount of time, the upward of the integrated
+
+152
+00:13:32,769 --> 00:13:38,639
+已经变得等于外部干扰的价值。它已经有效取消了
+has become equal to the value of the external disturbance. And it has effectively cancelled
+
+153
+00:13:38,639 --> 00:13:40,929
+出来。因此，我们可以看到追踪的末尾
+it out. So, we can see towards the end of the trace
+
+154
+00:13:40,929 --> 00:13:46,179
+方波响应几乎是我们想要的。外部干扰
+that the square wave response is pretty much what we want it to be. The external disturbance
+
+155
+00:13:46,179 --> 00:13:50,689
+被拒绝了。让我们总结一下。我们研究了许多不同的技术
+has been rejected. Let’s summarize. We've looked at a number of different techniques
+
+156
+00:13:50,689 --> 00:13:56,260
+减少干扰对机器人关节位置的影响。我们开始了
+to reduce the effect of disturbance on the position of a robot joint. We started off
+
+157
+00:13:56,260 --> 00:14:01,369
+看一个非常标准的比例导数，通常称为PD控制器
+looking at a very standard proportional derivative typically known as a PD controller which got
+
+158
+00:14:01,369 --> 00:14:06,699
+像这样的控制律，比例增益乘以位置误差加上导数
+a control law like this, a proportional gain multiplied by the position error plus a derivative
+
+159
+00:14:06,699 --> 00:14:12,239
+增益乘以速度，有助于在关节移动时控制射击。
+gain multiplied by the velocity which helps to control over shoot when the joint is moving.
+
+160
+00:14:12,239 --> 00:14:17,509
+我们看到误差量与增益P成反比。现在，我们可以增加
+We saw that the amount of error is inversely proportional to the gain P. Now, we can increase
+
+161
+00:14:17,509 --> 00:14:22,579
+P减少错误，但是有一些不利后果如增加
+P to reduce the error, but that has a number of adverse consequences such as increasing
+
+162
+00:14:22,579 --> 00:14:27,549
+过度拍摄或向电机提供无法实现的信号。
+over shoot or providing signals to the motor that it cannot possibly achieve.
+
+163
+00:14:27,549 --> 00:14:31,699
+然后我们看了一个增加一个完整的术语。直觉是，随着不断的错误，
+We then looked at an adding an integral term. The intuition is that, with the constant error,
+
+164
+00:14:31,699 --> 00:14:36,249
+积分随着时间的推移是一个斜坡上升的信号，增加了扭矩以便相反
+the integral over time is a signal that ramps up which increases the torque so as to oppose
+
+165
+00:14:36,249 --> 00:14:39,519
+首先引起干扰的扭矩。
+the torque that’s causing the disturbance in the first place.
+
+166
+00:14:39,519 --> 00:14:43,949
+我们研究的第三种方法是前馈控制，它试图预测或估计
+The third approach, we looked at, is feed forward control which attempts to predict or estimate
+
+167
+00:14:43,949 --> 00:14:48,129
+干扰然后取消它。前馈控制的一大优势是
+the disturbance and then cancel it out. A great advantage of feed forward control is
+
+168
+00:14:48,129 --> 00:14:53,579
+即使你对干扰是什么有一个不完美的估计，也有一些取消
+even if you have a not perfect estimate of what the disturbance is, some cancellation
+
+169
+00:14:53,579 --> 00:14:58,689
+肯定比没有取消更好。在实践中，我们经常使用混合物
+is certainly better than no cancellation at all. In practice, we often use a mixture of
+
+170
+00:14:58,689 --> 00:15:03,809
+反馈和前馈控制。它们各有特殊的优势和优势。
+feedback and feed forward control. They each have particular strengths and advantages.
+

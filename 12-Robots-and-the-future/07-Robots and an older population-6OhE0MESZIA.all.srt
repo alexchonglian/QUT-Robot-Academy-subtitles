@@ -1,0 +1,390 @@
+1
+00:00:04,069 --> 00:00:10,449
+现在让我们看看世界人口的年龄特征。你在这里看到的是一个数字
+Let's look now at the age profile of the world population. What you can see here are a number
+
+2
+00:00:10,449 --> 00:00:16,090
+曲线，称为人口金字塔。我在这里有六个他们六个
+of curves, which are referred to as population pyramids. I've got six of them here for six
+
+3
+00:00:16,090 --> 00:00:20,730
+不同的国家，你可以看到他们有不同的形状。在左边
+different countries and you can see that they have quite different shapes. On the left hand
+
+4
+00:00:20,730 --> 00:00:26,519
+每个金字塔的一侧，我们都有男性年龄的分布。在右手侧，
+side of each pyramid, we have a distribution of the age of males. On the right hand side,
+
+5
+00:00:26,519 --> 00:00:30,039
+我们有女性的年龄分布。
+we have the age distribution of females.
+
+6
+00:00:30,039 --> 00:00:35,100
+让我们来看看澳大利亚的人口金字塔。我们可以看到的可能是超过这个时代
+Let's look at the population pyramid for Australia. What we can see is that perhaps past the age
+
+7
+00:00:35,100 --> 00:00:40,829
+六十，男性和女性的人口开始逐渐减少，基本上，
+of sixty, the population of both males and females starts to taper off and that's essentially,
+
+8
+00:00:40,829 --> 00:00:46,390
+人们死于老年的影响。你可以看到大约三十到三十岁
+the effect of people dying of old age. You can see that around the age of thirty to thirty
+
+9
+00:00:46,390 --> 00:00:52,149
+五，人口中有一点冲击，这将反映出人口的飙升
+five, there is a bit of a bump in the population and that would reflect either a spike in the
+
+10
+00:00:52,149 --> 00:00:57,920
+三十到三十五年前的出生率或者也许是移民涌入该国。
+birth rate thirty to thirty five years ago or perhaps, a surge in immigration into the country.
+
+11
+00:00:57,920 --> 00:01:01,920
+如果我们看一下日本的人口金字塔，我们会发现它有一个非常非常不同的东西
+If we look at the population pyramid for Japan, we see that it has a very, very different
+
+12
+00:01:01,920 --> 00:01:06,550
+形状确实。我们可以看到这里逐渐减少，这表明诞生了
+shape indeed. We can see a taper down here and what that indicates is that the birth
+
+13
+00:01:06,550 --> 00:01:13,540
+该国的税率正在下降。我们还可以看到日本人的生活很长。
+rate in the country is falling off. We can also see that the Japanese are very long lived.
+
+14
+00:01:13,540 --> 00:01:18,720
+八十岁以上的人比澳大利亚人多得多。我们也可以看到
+There are many more people aged above eighty than there are in Australia. We can also see
+
+15
+00:01:18,720 --> 00:01:26,070
+有效的四十五岁以上人口很多。这意味着
+that there is this large area of people aged above effectively forty-five. This means that
+
+16
+00:01:26,070 --> 00:01:31,360
+他们社会中有相当大比例的老年人并没有太多
+they have quite a large proportion of elderly people in their society with not too many
+
+17
+00:01:31,360 --> 00:01:34,110
+年轻人进来取代他们。
+young people coming in to replace them.
+
+18
+00:01:34,110 --> 00:01:38,100
+德国的曲线，你可以看到它也是完全不同的。它有这个巨大的膨胀
+The curve for Germany, you can see it's also quite different. It's got this big bulge in
+
+19
+00:01:38,100 --> 00:01:43,729
+五十到六十的范围表明几乎开始的人口繁荣
+the range fifty to sixty which indicates something about a population boom that started nearly
+
+20
+00:01:43,729 --> 00:01:45,619
+六十年前。
+sixty years ago.
+
+21
+00:01:45,619 --> 00:01:49,909
+中国的人口金字塔有许多非常有趣的肿块和颠簸，
+The population pyramid for China has got a number of quite interesting lumps and bumps,
+
+22
+00:01:49,909 --> 00:01:54,310
+这可能反映了该国历史上的许多事件。
+which probably reflect many events in the history of that country.
+
+23
+00:01:54,310 --> 00:01:59,640
+印度的人口金字塔也具有非常独特的形状，并且有效地代表着
+The population pyramid for India also has a very unique shape and effectively, represents
+
+24
+00:01:59,640 --> 00:02:04,380
+事实上，印度的预期寿命远低于其他国家的预期寿命
+the fact that the life expectancy in India is much less than it is in countries such
+
+25
+00:02:04,380 --> 00:02:07,240
+如澳大利亚，德国，美国或日本。
+as Australia, Germany, United States or Japan.
+
+26
+00:02:07,240 --> 00:02:12,930
+现在，我要做的是突出一个年龄段，年龄在二十岁到二十岁之间
+Now, what I'm going to do is to highlight a band of ages, the ages between twenty and
+
+27
+00:02:12,930 --> 00:02:19,320
+六十。这些是在这些社会中工作的老年人。所以，不到二十的人
+sixty. These are working aged people in these societies. So, people less than twenty are
+
+28
+00:02:19,320 --> 00:02:25,260
+一般得到父母的支持。他们通常在学校或大学。
+generally being supported by their parents. They're typically at school or at university.
+
+29
+00:02:25,260 --> 00:02:31,199
+60岁以上的人已退休，并得到国家或子女的支持。
+Those above sixty have retired and are being supported either by the state or by their children.
+
+30
+00:02:31,199 --> 00:02:37,419
+因此，理解群体的一个非常重要的概念就是所谓的依赖
+So, a really important concept in understanding populations is what’s called the dependency
+
+31
+00:02:37,419 --> 00:02:43,169
+比;这是受抚养人数量，即儿童和老年人的比例
+ratio; that's the ratio of the number of dependents, that's children and older people to the number
+
+32
+00:02:43,169 --> 00:02:50,229
+工人，赚取工资，工作和支持年轻人和老年人的人。
+of workers, the people who are earning a salary, doing a job and supporting the young and the old people.
+
+33
+00:02:50,229 --> 00:02:55,380
+对于抚养比，低值是好的。此处绘制的依赖率
+For dependency ratio, a low value is good. The dependency ratios that are plotted here
+
+34
+00:02:55,380 --> 00:03:00,500
+对于澳大利亚而言，我们可以看到他们在2010年取得了最低成绩
+are for Australia and we can see that they achieved a minimum in the year 2010, that's
+
+35
+00:03:00,500 --> 00:03:06,169
+当抚养比率达到最佳时，它可能是最好的。随着我们及时前进，
+when the dependency ratio was the best it could possibly be. As we move forward in time,
+
+36
+00:03:06,169 --> 00:03:12,010
+抚养比增长。事实上，它变得更糟，这意味着有更多的老人
+the dependency ratio grows. In fact, it gets worse, that means that there are more elderly
+
+37
+00:03:12,010 --> 00:03:18,650
+少数劳动老年人支持人和年轻人。所以，
+people and young people to be supported by a smaller number of working aged people. So,
+
+38
+00:03:18,650 --> 00:03:24,190
+我们能够以同样的方式保持社会运作的唯一方式是我们需要每个人
+the only way we can keep our society working the same way as it has is we need each individual
+
+39
+00:03:24,190 --> 00:03:30,880
+人变得更有生产力，或者我们可以为社会增加机器人工人，增加
+person to become more productive or we could add robotic workers to the society, to increase
+
+40
+00:03:30,880 --> 00:03:35,570
+在不需要更多人的情况下完成的工作量。
+the amount of work that's going to be done without requiring more human beings.
+
+41
+00:03:35,570 --> 00:03:40,440
+最重要的是，如果我们希望拥有相同的护理标准
+The bottom line is that in the future, if we want to have the same standard of care
+
+42
+00:03:40,440 --> 00:03:45,790
+对于年轻人和老年人而言，它将由少数人提供
+for young people and elderly people and it's going to be provided by a smaller number of
+
+43
+00:03:45,790 --> 00:03:50,690
+老年人工作，那些工作老年人需要更高效。每一个
+working aged people, then those working aged people need to be more productive. Each one
+
+44
+00:03:50,690 --> 00:03:54,470
+那些人需要做的工作比人们今天要做的更多。
+of those people needs to do more work than people have to do today.
+
+45
+00:03:54,470 --> 00:03:58,930
+所以，这就是我们必须期待的。每个工作年龄的人都要做更多
+So, that's what we have to look forward to. Each working aged person having to do more
+
+46
+00:03:58,930 --> 00:04:04,190
+工作比几年前的人做的多。替代方案是我们引入
+work than people did a few years ago. The alternative for that is we introduce into
+
+47
+00:04:04,190 --> 00:04:09,100
+混合，机器人技术意味着我们引入机器人工人。所以，他们要么
+the mix, robotic technology that means we introduce robotic workers. So, they either
+
+48
+00:04:09,100 --> 00:04:14,630
+自己做一些工作，或者帮助人类工人提高工作效率。
+do some of the work themselves or they help the human workers to become more productive.
+
+49
+00:04:14,630 --> 00:04:19,549
+让我们看一下医疗保健与年龄的关系，我们可以清楚地看到这一点
+Let's look here at health care versus age and what we can see quite clearly is that
+
+50
+00:04:19,549 --> 00:04:25,230
+对于非常年轻的人来说，他们需要一定程度的健康干预，然后才能
+for very young people, they require certain amount of health intervention and then for
+
+51
+00:04:25,230 --> 00:04:29,470
+他们生命的早年，也许是五到四十岁，他们也不需要
+the early years of their life, perhaps from five through forty, they don't require too
+
+52
+00:04:29,470 --> 00:04:34,830
+很多健康干预但超过四十岁，人们需要个人，
+much health intervention but above the age of forty, people need on an individual basis,
+
+53
+00:04:34,830 --> 00:04:39,890
+更多的健康干预措施。这基本上意味着老年人需要更多的医疗保健。
+more health interventions. It basically means elderly people require more health care.
+
+54
+00:04:39,890 --> 00:04:45,170
+因此，随着我们的人口老龄化，这样的图表会变得更加极端
+So, as our population gets older, graphs like this are going to get much, much more extreme
+
+55
+00:04:45,170 --> 00:04:50,960
+这对我们这个提供医疗保健的社会提出了真正的挑战
+and that presents a real challenge to us as a society to provide the health care that
+
+56
+00:04:50,960 --> 00:04:55,880
+需要提供。如果您去过医院，您会发现它们非常令人难以置信
+needs to be provided. If you've ever visited a hospital, you know that they are incredibly
+
+57
+00:04:55,880 --> 00:05:00,850
+繁忙的地方。有各种各样的工作正在进行中。有工作从一个病房搬家
+busy places. There’s all sorts of work going on. There is work moving people from one ward
+
+58
+00:05:00,850 --> 00:05:04,860
+到另一个。有外科医生在进行手术。有人洗衣服。
+to another. There are surgeons performing operations. There are people doing laundry.
+
+59
+00:05:04,860 --> 00:05:09,840
+有人在做饭。医院里发生的各种活动都是雇用的
+There are people doing cooking. All sorts of activities happening in a hospital employ
+
+60
+00:05:09,840 --> 00:05:12,960
+很多人，这使它变得昂贵。
+a lot of people and that make it expensive.
+
+61
+00:05:12,960 --> 00:05:18,680
+或许，机器人技术可以在这里发挥作用。机器人已经做得很好了
+So perhaps, robot technology has a role to play here. Robotics is already making quite
+
+62
+00:05:18,680 --> 00:05:24,560
+对手术领域产生重大影响。事实上，它在技术上更像是远程操作。
+a significant impact in the area of surgery. In fact, it's more technically teleoperation.
+
+63
+00:05:24,560 --> 00:05:30,690
+我们在这里看到的是一些外科医生，远程操作或控制内部的小型机器人工具
+What we can see here are some surgeons, teleoperating or controlling small robotic implements inside
+
+64
+00:05:30,690 --> 00:05:35,250
+病人的身体在这里。因此，这些是正在进行工作的机器人手臂
+the body of a patient over here. So, these are the robot arms that are doing the work
+
+65
+00:05:35,250 --> 00:05:40,300
+在人体内部。这些人正在控制那些机器人手臂。
+inside the human body. These people here are controlling those robotic arms.
+
+66
+00:05:40,300 --> 00:05:44,230
+做这种手术的好处是外科医生可以更高效
+The advantage of doing this sort of surgery is that the surgeons can be more productive
+
+67
+00:05:44,230 --> 00:05:49,200
+因为我们在患者身上做了非常小的切口，所以他们恢复得更快
+and because we make very small incisions in the patients, they recover much more quickly
+
+68
+00:05:49,200 --> 00:05:54,580
+不得不花更少的时间在医院，这对医疗保健系统是一个净收益。
+having to spend less time in hospital and that's a net benefit to the health care system.
+
+69
+00:05:54,580 --> 00:05:59,530
+为医院提出的其他类型的机器人技术包括仪器
+Other sorts of robotic technology that are being proposed for hospitals include instruments
+
+70
+00:05:59,530 --> 00:06:04,430
+将自己从一个病房自动移动到另一个病房，以及可以接人的机器人
+that move themselves automatically from one ward to another and robots that can pick people
+
+71
+00:06:04,430 --> 00:06:09,300
+也许，将他们从轮椅上升到床上或从床上升到轮椅上。很多
+up, perhaps lift them from a wheelchair into a bed or from a bed into a wheelchair. A lot
+
+72
+00:06:09,300 --> 00:06:14,570
+医院的手术涉及将人们从一个地方转移到另一个地方。人很重
+of operations in hospital involve moving people from one place to another. People are heavy
+
+73
+00:06:14,570 --> 00:06:18,650
+并且需要相当强壮的人才能让患者四处移动。
+and will require quite strong people just to move patients around.
+
+74
+00:06:24,000 --> 00:06:28,980
+像这里所示的Asimo这样的人形机器人可能能够为老年人提供帮助
+Humanoid robots such as Asimo shown here, might be able to provide assistance to elderly
+
+75
+00:06:28,980 --> 00:06:34,130
+人们在自己的家中。如果我们能够让人们在家中保持健康和快乐
+people in their own homes. If we can keep people healthy and happy in their homes for
+
+76
+00:06:34,130 --> 00:06:38,460
+在更长的时间内，我们减少了他们需要花费的时间
+a longer period of time, then we reduce the amount of time that they need to spend in
+
+77
+00:06:38,460 --> 00:06:44,220
+老年人护理，这是对社会的净利益。也许，机器人助手在
+elderly care and that is a net advantage to society. So perhaps, robotic helpers in the
+
+78
+00:06:44,220 --> 00:06:48,010
+家可以帮助人们长时间呆在家里。
+home can assist people staying in their homes for longer.
+

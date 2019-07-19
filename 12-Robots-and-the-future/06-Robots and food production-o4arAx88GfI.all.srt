@@ -1,0 +1,235 @@
+1
+00:00:03,820 --> 00:00:08,670
+让我们来看看食物的更多细节，这是人类生活的基本要求。
+Let’s look in a bit more detail at food, a fundamental requirement for human life.
+
+2
+00:00:08,670 --> 00:00:14,320
+联合国预测，到2050年，我们将需要增加70％的粮食
+The United Nations predicts that by the year 2050, we will need a 70% increase in food
+
+3
+00:00:14,320 --> 00:00:21,240
+生产。并非所有这一切都是由于人口增加。很多是由于要求
+production. Not all of this is due to increase population. A lot of it is due to the requirements
+
+4
+00:00:21,240 --> 00:00:25,039
+我们星球上的许多人拥有的食物比他们目前所拥有的更多
+of many of the people on our planet to have more food than they’re currently getting
+
+5
+00:00:25,039 --> 00:00:30,869
+也许更高质量的食物，更高热值的食物。所以，增加的一个很大的要求
+and perhaps higher quality food, higher calorific value food. So, a big requirement to increase
+
+6
+00:00:30,869 --> 00:00:37,710
+食品生产和70％是在30年内实现的大幅增长。
+food production and 70% is a massive increase to be achieved in something like 30 years.
+
+7
+00:00:37,710 --> 00:00:42,739
+很明显，我们需要食物供人们食用。我们还需要动物食物
+It’s pretty obvious that we need food for people to eat. We also need food for animals
+
+8
+00:00:42,739 --> 00:00:47,210
+去吃。它们是我们食物链的一部分。所以，我们生产的很多食物都被吃掉了
+to eat. They are part of our food chain. So, a lot of the food that we produce is eaten
+
+9
+00:00:47,210 --> 00:00:50,800
+通过动物，反过来，我们许多人吃这些动物。
+by animals and in turn, many of us eat those animals.
+
+10
+00:00:50,800 --> 00:00:55,910
+对食物来说有点令人惊讶的用途就是把它放在汽车里。有一个很大的运动
+A somewhat surprising use for food is putting it in cars. There’s quite a movement to
+
+11
+00:00:55,910 --> 00:01:01,719
+将食品，尤其是玉米转化为乙醇，我们将乙醇加入气体中
+turn food product, particularly corn into ethanol and we put the ethanol into the gas
+
+12
+00:01:01,719 --> 00:01:06,550
+我们汽车的坦克。因此，我们生产的食品竞争很激烈。
+tanks of our cars. So, there’s a lot of competition for the food that we produce.
+
+13
+00:01:06,550 --> 00:01:10,390
+当然，我们想要人们吃的食物，但也需要食物
+Absolutely, we want food for people to eat but there’s also food that’s required
+
+14
+00:01:10,390 --> 00:01:14,299
+喂养动物，还有喂养汽车所需的食物。
+to feed animals and there’s also food that’s required to feed cars.
+
+15
+00:01:14,299 --> 00:01:18,860
+随着人口的增长，我们城市的规模也在增长。城市变大了;他们
+As our population grows, so too does the size of our cities. The cities get larger; they
+
+16
+00:01:18,860 --> 00:01:23,960
+侵占生产性农田。他们把这块土地从粮食生产中拿走了，因为我们
+encroach on productive farmland. They take that land out of food production because we
+
+17
+00:01:23,960 --> 00:01:29,130
+在它上面建造房屋和公寓，这意味着我们可以减少种植粮食的土地。
+build houses and apartments on it, so that means we have less land on which to grow food.
+
+18
+00:01:29,130 --> 00:01:33,470
+现在，这是一个问题，因为总的来说我们需要种植更多的食物而我们正在消除
+Now, this is a problem because overall we need to grow more food and we’re removing
+
+19
+00:01:33,470 --> 00:01:37,810
+土地是粮食生产的必需资源。
+land which is the essential resource when it comes to food production.
+
+20
+00:01:37,810 --> 00:01:43,100
+另一个问题是农民作为一个人口正在变老。这个统计数据来自
+Another issue is that farmers as a population are getting older. This statistic is from
+
+21
+00:01:43,100 --> 00:01:47,719
+我的国家，澳大利亚，我们在这里查看这个直方图，它显示了平均值
+my country, Australia, and we look at this histogram here and it shows that the average
+
+22
+00:01:47,719 --> 00:01:53,740
+农民的年龄远远超过50岁。没有年轻人从事农业作为一种职业
+age of farmers is well above 50. There's not young people moving into farming as a profession
+
+23
+00:01:53,740 --> 00:01:58,860
+或作为一种生活方式。我国澳大利亚的一个非常可怕的统计数据是下一个
+or as a lifestyle. A very scary statistic in my country, Australia, is that in the next
+
+24
+00:01:58,860 --> 00:02:04,340
+十年来，有一半的农民将要退休。那么，谁将在陆地上做这项工作
+decade, half of the farmers are going to retire. So, who’s going to do the work on the land
+
+25
+00:02:04,340 --> 00:02:06,310
+生产我们需要的食物？
+to produce the food that we need?
+
+26
+00:02:06,310 --> 00:02:11,670
+因此，机器人技术的一个机会是帮助和解决这种食品生产
+So, one of the opportunities for robotics is to help and solve this food production
+
+27
+00:02:11,670 --> 00:02:17,990
+问题。一种应用是转换这些用于工业的大型机器
+problem. One application is to convert these large machines which are used in industrial
+
+28
+00:02:17,990 --> 00:02:22,830
+规模粮食生产。而不是驾驶它的机器上有人，
+scale food production. Instead of having a human being on board the machine driving it,
+
+29
+00:02:22,830 --> 00:02:29,580
+我们把它变成一个机器人车辆，这样它可以一周7天，每天24小时独自驾驶。
+we turn it into a robotic vehicle so it can drive all by itself, 24 hours a day, seven days a week.
+
+30
+00:02:29,580 --> 00:02:34,500
+我们可以做的另一件事是更换用于喷洒农作物的人力驱动机器
+Another thing we can do is to replace human-driven machines which are used to spray crops in
+
+31
+00:02:34,500 --> 00:02:41,800
+田地和我们喷洒农作物，以消除昆虫和杂草害虫。而不是做不分青红皂白
+the field and we spray the crops to eliminate insect and weed pests. Rather than doing indiscriminate
+
+32
+00:02:41,800 --> 00:02:46,390
+如你所见，喷涂我们可以拥有更智能的机器人系统
+spraying as you see here, we can have much more intelligent, robotic systems which move
+
+33
+00:02:46,390 --> 00:02:51,270
+或许通过作物更慢，并使用识别昆虫害虫的视觉传感器
+perhaps more slowly through the crop and use vision sensors which identify insects pests
+
+34
+00:02:51,270 --> 00:02:56,670
+或者我们称之为杂草的不良植物，并将适当的化学物质施用于其中
+or undesirable plants which we call weeds and apply the appropriate chemical to just
+
+35
+00:02:56,670 --> 00:03:02,050
+这种情况不是随处可见，而不是无处不在。这是一个巨大的环境
+where that occurrence is, not indiscriminately, not everywhere. That’s got huge environmental
+
+36
+00:03:02,050 --> 00:03:07,150
+由于我们可以减少化学品的数量，因此它也带来了巨大的成本效益
+benefits and it’s also got huge cost benefits because we can reduce the amount of chemical
+
+37
+00:03:07,150 --> 00:03:09,390
+需要应用。
+that needs to be applied.
+
+38
+00:03:09,390 --> 00:03:15,040
+使用化学除草剂来控制杂草导致了意想不到的结果
+The use of chemical herbicides to control weeds has led to an unexpected outcome and
+
+39
+00:03:15,040 --> 00:03:20,810
+也就是说，许多杂草物种现在已经进化出对这些标准除草剂的抗性。
+that is that many weed species have now evolved a resistance to these standard herbicides.
+
+40
+00:03:20,810 --> 00:03:24,940
+这对已经发展起来的农业系统提出了特殊的挑战
+That presents a particular challenge to an agricultural system which has developed over
+
+41
+00:03:24,940 --> 00:03:31,040
+几十年，并且非常依赖于使用除草剂来控制杂草。所以，也许吧
+decades and become incredibly reliant on the use of herbicides for weed control. So, perhaps
+
+42
+00:03:31,040 --> 00:03:36,970
+智能机器人可以识别土壤中的杂草并将其机械破坏，如图所示，
+smart robots could identify weeds in the soil and destroy them mechanically as shown here,
+
+43
+00:03:36,970 --> 00:03:40,620
+实际上是打扰了杂草周围的土壤来破坏杂草。
+actually disturb the soil around the weed to destroy the weed.
+
+44
+00:03:40,620 --> 00:03:45,630
+这是我们在QUT的实验室研究项目中开发的机器人视频。
+Here’s a video of a robot we’ve developed in a research project in my lab here at QUT.
+
+45
+00:03:45,630 --> 00:03:51,270
+这是我们的杂草喷涂机器人的早期原型。这是一台非常小的机器。它的
+This is an early prototype of our weed spraying robot. It’s a very small machine. It’s
+
+46
+00:03:51,270 --> 00:03:56,720
+由相机和其他类型的传感器引导。它可以沿着裁剪行导航并应用
+guided by cameras and other sorts of sensors. It can navigate along crop rows and apply
+
+47
+00:03:56,720 --> 00:03:59,000
+除草剂只在需要的地方。
+herbicide only where it’s required.
+

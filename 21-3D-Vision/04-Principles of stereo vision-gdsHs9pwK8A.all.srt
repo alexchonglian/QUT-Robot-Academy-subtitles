@@ -1,0 +1,240 @@
+1
+00:00:03,310 --> 00:00:07,879
+我们来谈谈双目视差。正如我之前提到的，这是一种技术
+Let's talk some more about binocular disparity. As I mentioned before it’s a technique that's
+
+2
+00:00:07,879 --> 00:00:13,349
+通过动物非常普遍，它也是一种用于机器人的技术。
+very widespread through animals and it's also a techniques that's used in robotics.
+
+3
+00:00:13,349 --> 00:00:17,020
+尝试理解双眼视差原理的一个好方法就是看看这个
+A good way to try and understand the principle of binocular disparity is to look at this
+
+4
+00:00:17,020 --> 00:00:22,859
+非常老式的立体照片。这是一对相同场景的照片但是
+very old-fashioned stereo photograph. It's a pair of photographs of the same scene but
+
+5
+00:00:22,859 --> 00:00:27,150
+每个图像都是从略微不同的视角拍摄的，这对应于
+each image is being taken from a slightly different viewpoint and this corresponds to
+
+6
+00:00:27,150 --> 00:00:30,289
+我们的左眼和右眼的观点。
+the viewpoint from our left eye and our right eye.
+
+7
+00:00:30,289 --> 00:00:35,450
+它相隔8到10厘米，它们会给你一个非常不同的
+This is separated by that 8 to 10 centimetres and they give you a very slightly different
+
+8
+00:00:35,450 --> 00:00:40,149
+世界观。对这张立体照片的初步检查表明没有
+view of the world. Initial inspection of this stereo photograph indicates that there's not
+
+9
+00:00:40,149 --> 00:00:44,860
+差别很大。如果我们放大这里的几个区域，我们会在左侧看到
+much difference. If we zoom in on a couple of areas here, we see that in the left
+
+10
+00:00:44,860 --> 00:00:49,989
+手形图像，有相当大的差距，实际上右手图像没有间隙。
+hand image, there's quite a gap and there's in fact no gap in the right hand image.
+
+11
+00:00:49,989 --> 00:00:54,250
+如果我们看一下图片的另一面，我们会看看这个板凳。它非常接近
+If we look on the other side of the picture, we look at this bench. It's quite close to
+
+12
+00:00:54,250 --> 00:00:59,050
+左图中图像的边缘，边缘之间有一点间隙
+the edge of the image in the left picture and there is a bit of a gap between the edge
+
+13
+00:00:59,050 --> 00:01:03,399
+和右手图像中的板凳。这是图像中非常微妙的差异
+and the bench in the right hand image. It's this very subtle differences in the image
+
+14
+00:01:03,399 --> 00:01:09,220
+从这两个观点中可以看出，这些观点为我们提供了非常生动的三维感知
+taken from these 2 viewpoints that gives us this very vivid 3-dimensional perception of
+
+15
+00:01:09,220 --> 00:01:12,350
+我们周围的世界。
+the world that's around us.
+
+16
+00:01:12,350 --> 00:01:18,560
+立体视差的基本原理是图像取决于相机位置
+The fundamental principle of stereo disparity is that the image depends on the camera position
+
+17
+00:01:18,560 --> 00:01:24,520
+我们可以很容易地证明这一点。如果我移动我的头，如果我翻译我的头
+and we can demonstrate that pretty easily. If I move my head, if I translate my head
+
+18
+00:01:24,520 --> 00:01:30,200
+从右到左，世界上的一切似乎都转移到了世界
+from the right through to the left then, everything that's in the world appears to move to the
+
+19
+00:01:30,200 --> 00:01:35,530
+对，但重要的是，像我这样的机器人在我身边的东西似乎在移动
+right but importantly, things that are close to me like this robot here, appear to move
+
+20
+00:01:35,530 --> 00:01:41,100
+在我做这种转变时，图像中有很多。而像书柜那样遥远的东西，
+a lot in the image as I do that shift. Whereas things that are far away like the bookcase,
+
+21
+00:01:41,100 --> 00:01:43,180
+似乎行动少得多。
+appear to move much less.
+
+22
+00:01:44,740 --> 00:01:49,920
+人们一直很想拍摄立体照片很长一段时间。
+The people have been interested in capturing stereo photographs for a very very long time.
+
+23
+00:01:49,930 --> 00:01:55,979
+这是我从1950年代发现的商用立体胶片相机的可爱照片。更多
+This is a lovely picture I found of a commercial stereo film camera from the 1950's. A more
+
+24
+00:01:55,979 --> 00:02:00,899
+现代版的立体相机，这是一种这种类型的数字立体相机
+modern version of a stereo camera, this is a digital stereo camera of this type that's
+
+25
+00:02:00,899 --> 00:02:03,820
+广泛用于机器人系统。
+quite widely used for robotic systems.
+
+26
+00:02:03,820 --> 00:02:07,719
+现在让我们试着了解左手之间究竟有什么区别
+Let's now try and understand what precisely are the differences between the left hand
+
+27
+00:02:07,719 --> 00:02:12,770
+图像和同一场景的右手图像。这是一对高分辨率的数码相机
+image and the right hand image of the same scene. This is a pair of high-resolution digital
+
+28
+00:02:12,770 --> 00:02:15,310
+一堆岩石的图像。
+images of a pile of rocks.
+
+29
+00:02:15,310 --> 00:02:19,720
+我要从图像的左边画一条线到一个相当独特的线
+I'm going to draw a line from the left hand edge of the image to a fairly distinctive
+
+30
+00:02:19,720 --> 00:02:24,410
+在其中一块岩石上划线，我将在右手绘制相同的长度线
+blotch on one of the rocks and I'm going to draw the same length line in the right hand
+
+31
+00:02:24,410 --> 00:02:28,379
+图片。黄线已经走得太远，事实上，我们需要回去
+image. The yellow line has gone too far to the right and in fact, we need to go back
+
+32
+00:02:28,379 --> 00:02:33,040
+为了达到岩石上这个独特标志的距离。
+the distance in order to get to this distinctive mark on the rock.
+
+33
+00:02:33,040 --> 00:02:36,099
+让我们在这里选择另一个与众不同的特色。所以，我要走了
+Let's pick another distinctive feature at the back of the scene here. So, I'm going
+
+34
+00:02:36,099 --> 00:02:42,340
+从左边缘到其中一个大块的边缘画一条黄线
+to draw a yellow line from the left hand edge to the edge of one of the large blocks at
+
+35
+00:02:42,340 --> 00:02:46,860
+背部。我在右手图像中绘制了相同的线条，我们再次看到它超出了
+the back. I draw the same line in the right hand image and again, we see that it's overshot,
+
+36
+00:02:46,860 --> 00:02:53,620
+相应的点，我需要回到距离，以达到相应的点。
+the corresponding point and I need to go back the distance in order to get to that corresponding point.
+
+37
+00:02:53,640 --> 00:02:59,380
+我们注意到两件重要的事情首先，我们注意到右手图像中的点
+We noticed 2 important things. First of all, we noticed that points in the right hand image
+
+38
+00:02:59,390 --> 00:03:04,819
+这个水平位移被称为向左移动并且这个位移
+are shifted somewhat to the left and this shift, this horizontal displacement is referred
+
+39
+00:03:04,819 --> 00:03:11,419
+差距。我们还注意到，对于远离相机的点，移位较少。
+to as disparity. We also note that the shift is less for points that are further away from the camera.
+
+40
+00:03:11,430 --> 00:03:16,620
+所以，在这里我们有一个立体相机，它正在观察一个物体，一个球，然后是
+So, here we have a stereo camera and it's observing an object, a ball and that is at
+
+41
+00:03:16,620 --> 00:03:21,190
+距离相机的距离为Z.我们指的是立体相机的基线，那就是
+distance Z away from the camera. We refer to the base line of the stereo camera, that's
+
+42
+00:03:21,190 --> 00:03:26,989
+镜头中心与F之间的距离是镜头的焦距。我们
+the distance between the centre of the lenses and F is the focal length of the lens. We
+
+43
+00:03:26,989 --> 00:03:29,569
+假设两个镜头具有相同的焦距。
+assume that both lenses have the same focal length.
+
+44
+00:03:29,569 --> 00:03:34,390
+现在，这是这些数量之间非常简单的关系，也就是差异
+Now, this is a very simple relationship between these quantities and that is that the disparity
+
+45
+00:03:34,390 --> 00:03:40,230
+与焦距和基线除以距离成比例。所以，如果我们知道的话
+is proportional to the focal length and base line divided by the distance. So, if we know
+
+46
+00:03:40,230 --> 00:03:45,250
+焦距，我们知道基线，然后我们知道图像中的差异，我们
+the focal length, we know the base line and we know the disparity in the image then, we
+
+47
+00:03:45,250 --> 00:03:50,680
+可以估计Z.这是机器人立体视觉的基本原理，
+could estimate Z. This is the fundamental underlying principle of robotic stereovision,
+
+48
+00:03:50,680 --> 00:03:57,320
+有时它被称为计算立体声，而且隐含地，它就是我们自己的视觉系统中发生的事情。
+sometimes it's called computational stereo and implicitly, it's what happens in our own visual system.
+

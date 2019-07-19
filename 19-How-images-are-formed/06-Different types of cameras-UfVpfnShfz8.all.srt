@@ -1,0 +1,130 @@
+1
+00:00:03,439 --> 00:00:09,990
+到目前为止，我们只考虑了透视投影的情况。这是形成的那种形象
+So far we've just considered the case of perspective projection. It's the sort of image that is formed
+
+2
+00:00:09,990 --> 00:00:16,070
+通过简单的镜头和我们自己眼中的相同光学系统。但是这里有
+by a simple lens and the same sort of optics as we have in our own eyes. But there are
+
+3
+00:00:16,070 --> 00:00:19,840
+许多不同种类的相机和不同种类的镜头。
+many many different sorts of cameras and different sorts of lenses.
+
+4
+00:00:19,840 --> 00:00:24,529
+它们不一定执行透视投影。在这个特殊情况下，我们是
+They don't necessarily perform perspective projection. In this particular case, we're
+
+5
+00:00:24,529 --> 00:00:30,099
+看着鱼眼镜头图像。这里的鱼眼镜头有一个非常广阔的领域
+looking at a fish eye lens image. A fish eye lens here has got a very very wide field of
+
+6
+00:00:30,099 --> 00:00:35,899
+视图。如果我们看一下鱼眼镜头拍摄的图像，我们会注意到一些事情。
+view. If we look at the image captured by the fish eye lens, we notice a few things.
+
+7
+00:00:35,899 --> 00:00:41,410
+最重要的是，我们注意到线的直线性没有保留。所以我们看到了顶部
+Most importantly we note that the straightness of line is not preserved. So we see on top
+
+8
+00:00:41,410 --> 00:00:45,910
+在焦炭一侧的笔记本电脑，这些不再是直线。他们出现了
+of the laptop on the side of the coke can, these are no longer straight lines. They appear
+
+9
+00:00:45,910 --> 00:00:52,570
+是曲线，因为这不是透视投影。镜片通过折射工作。
+to be curves because this is not a perspective projection. Lenses work by refraction.
+
+10
+00:00:52,570 --> 00:00:56,050
+那就是他们弯曲穿过它们的光线。
+That is they bend the rays of light that are passing through them.
+
+11
+00:00:56,050 --> 00:01:01,280
+我们能做到这一点的另一种方式是通过反思。我们使用曲面镜而不是镜头
+Another way we can do this is by reflection. We use curved mirrors instead of lenses in
+
+12
+00:01:01,280 --> 00:01:06,470
+为了弯曲光线。以下是艾萨克的图画再次举例
+order to bend the light rays. Here is an example again from the drawings of Isaac
+
+13
+00:01:06,470 --> 00:01:12,150
+牛顿的早期反射望远镜。实际上有时非常大的镜头
+Newton of his early reflecting telescope. Sometimes very very big lenses are actually
+
+14
+00:01:12,150 --> 00:01:16,759
+由成型镜子和镜片组合而成。
+made by combinations of shaped mirrors and lenses.
+
+15
+00:01:16,759 --> 00:01:23,549
+这些混合成像系统被称为心脏病学。这源于
+These sort of hybrid imaging systems are referred to as catadioptrics. This is derived from
+
+16
+00:01:23,549 --> 00:01:29,750
+希腊词dioptricsforrefraction和catoptricsforreflection。
+the Greek word dioptrics for refraction and catoptrics for reflection.
+
+17
+00:01:29,750 --> 00:01:35,570
+另一种类型的成像系统在该折反射模型上再次是全景镜头。您
+Another type of imaging system again on this catadioptric model is a panoramic lens. You
+
+18
+00:01:35,570 --> 00:01:40,950
+在这里可以清楚地看到它。我们最底层的是相当标准的相机
+can see it quite clearly here. What we have down the bottom is a fairly standard camera
+
+19
+00:01:40,950 --> 00:01:46,829
+在它前面有一个镜头。然后有一个拿着抛物面镜子的茎。
+with a lens in front of it. And then there is a stalk which holds a parabolic mirror.
+
+20
+00:01:46,829 --> 00:01:50,369
+所以相机实际上是在看抛物面镜。
+So the camera is actually looking at the parabolic mirror.
+
+21
+00:01:50,369 --> 00:01:55,340
+这种安排允许我们创建全景图。所以原始的全景，相机实际上是什么
+This arrangement allows us to create panoramas. So the raw panorama, what the camera actually
+
+22
+00:01:55,340 --> 00:02:02,490
+看到了，这里显示在右下方。我们看到一个非常扭曲的世界观。
+sees, is shown here on the bottom right. We see a very very distorted view of the world.
+
+23
+00:02:02,490 --> 00:02:08,069
+因为我们知道这个图像形成过程的数学，所以我们可以解开图像
+Because we know the mathematics of this image formation process we can unwrap the image
+
+24
+00:02:08,069 --> 00:02:12,330
+这就是我们用来创建顶部显示的全景图。
+and that is what we use to create the panorama shown at the top.
+
+25
+00:02:12,330 --> 00:02:17,890
+我们再次注意到这个全景图像是直线不被保留。
+What we note with this panoramic image once again is that straight lines are not preserved.
+
+26
+00:02:17,890 --> 00:02:21,260
+他们似乎非常严重扭曲。
+They appear to be very very seriously distorted.
+

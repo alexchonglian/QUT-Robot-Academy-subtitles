@@ -1,0 +1,305 @@
+1
+00:00:03,730 --> 00:00:09,420
+我们现在将更多地讨论如何访问矩阵的元素
+We are going to talk now a little bit more about how we access the elements of the matrix
+
+2
+00:00:09,420 --> 00:00:13,860
+它表示来自MATLAB环境内部的图像。而我们将会这样做
+which represents an image from inside the MATLAB environment. And we are going to do
+
+3
+00:00:13,860 --> 00:00:20,390
+这是从命令行工具交互式地进行的。我们将首先加载一个图像
+this interactively from the command line tool. We will start by loading an image, one that
+
+4
+00:00:20,390 --> 00:00:26,849
+我们之前见过几次。这是蒙娜丽莎的形象，有PNG扩展，和
+we have seen a few times before. It is the Mona Lisa image, has a PNG extension, and
+
+5
+00:00:26,849 --> 00:00:31,019
+我们要将它从颜色转换为灰度，因为我们还没有真正谈过
+we are going to convert it from colour to grey scale because we have not really talked
+
+6
+00:00:31,019 --> 00:00:38,039
+关于颜色呢。我们已将图像加载到工作区中，我可以使用工具箱
+about colour yet. And we have loaded the image into our workspace, and I can use the toolbox
+
+7
+00:00:38,039 --> 00:00:41,890
+命令，告诉我们关于那个特定图像的更多信息。
+command about, to tell us a bit more about that particular image.
+
+8
+00:00:41,890 --> 00:00:47,530
+它告诉我们图像变量的类型为uint8，宽度为700像素
+It tells us that the image variable is of the type uint8, that it is 700 pixels wide
+
+9
+00:00:47,530 --> 00:00:52,829
+和677像素高，占用470千字节的内存。
+and 677 pixels tall, and occupies 470 kilobytes of memory.
+
+10
+00:00:52,829 --> 00:00:57,309
+我现在要做的是显示图像，这些命令应该很漂亮
+What I am going to do now is to display the image and again these commands should be pretty
+
+11
+00:00:57,309 --> 00:01:02,339
+你很熟悉还有蒙娜丽莎的形象。正如我们之前讨论的那样，我们可以
+familiar to you. And there is the Mona Lisa image. And as we discussed before, we can
+
+12
+00:01:02,339 --> 00:01:06,110
+四处移动，我们可以点击像素，我们可以查看灰度值。我们可以点击
+move around, we can click pixels and we can look at the grey scale value. And we can click
+
+13
+00:01:06,110 --> 00:01:10,750
+那里有一个像素，在她的眼睛中间。它的价值相当低。就是这样
+a pixel there, in the middle of her eye. And it has got quite a low value. It is in that
+
+14
+00:01:10,750 --> 00:01:16,500
+她眼睛的黑暗部分。现在，我们直接从中访问该变量
+dark part of her eye. Now, we access that variable directly from
+
+15
+00:01:16,500 --> 00:01:24,470
+在MATLAB环境中，我将选择垂直的行坐标
+the MATLAB environment, and I am going to choose the row coordinate which is the vertical
+
+16
+00:01:24,470 --> 00:01:29,600
+图像中的坐标，即194，以及作为水平坐标的列坐标
+coordinate in the image, that is 194 and the column coordinate which is a horizontal coordinate
+
+17
+00:01:29,600 --> 00:01:36,160
+那么请记住我们之前谈过这个问题：我们必须改变坐标
+276. So remember we talked about this before: we have to reverse the coordinates from the
+
+18
+00:01:36,160 --> 00:01:42,580
+u，v符号，水平和垂直坐标系统到MATLAB的行和列索引
+u,v notation, horizontal and vertical coordinate system to MATLAB’s row and column index
+
+19
+00:01:42,580 --> 00:01:49,340
+对于矩阵，我们看到相同的值26，即低灰度值，暗
+for matrices, and there we see that same value, 26, that is a low grey scale value, a dark
+
+20
+00:01:49,340 --> 00:01:54,050
+表示她眼中像素强度的值。
+value which represents the intensity of that pixel within her eye.
+
+21
+00:01:54,050 --> 00:01:58,170
+我们用MATLAB做的另一件事是不仅可以访问单个像素，而且实际上可以访问
+Another thing we can do with MATLAB is to access not just a single pixel, but in fact
+
+22
+00:01:58,170 --> 00:02:05,560
+一块像素，我们使用MATLAB的冒号运算符。所以让我们选择所有行
+a block of pixels, and we do that using MATLAB’s colon operator. So let’s choose all rows
+
+23
+00:02:05,560 --> 00:02:15,709
+180到210之间，所有列从260开始，最多290.当我点击进入时，我们是
+between 180 and 210, and all columns starting at 260, up to 290. When I hit enter, we are
+
+24
+00:02:15,709 --> 00:02:19,840
+将看到大量像素值滚动过去。所以我可以回头看看
+going to see a large number of pixel values scroll past. So I can roll back up and look
+
+25
+00:02:19,840 --> 00:02:24,319
+他们都在那里。所以它已经返回，在这种情况下是一个矩阵。
+at all of them there. So it has returned, in this case a matrix.
+
+26
+00:02:24,319 --> 00:02:29,180
+一个小矩阵;原始图像的子矩阵。
+A small matrix; a sub-matrix of the original image.
+
+27
+00:02:29,180 --> 00:02:34,689
+我们实际上将它放入工作空间变量中，我将通过返回来实现
+Let’s actually put that into a workspace variable, and I will do that by coming back
+
+28
+00:02:34,689 --> 00:02:39,430
+并编辑该命令行。我们走了。所以我创建了一个新变量
+and editing that command line. There we go. So I have created a new variable
+
+29
+00:02:39,430 --> 00:02:49,120
+工作空间称为im2，它是一个31x31像素的图像。我可以显示出来。和我们
+workspace called im2 and it is a 31 by 31 pixel image. And I can display that. And we
+
+30
+00:02:49,120 --> 00:02:54,379
+看一个图像，这实际上是蒙娜丽莎的眼睛。
+see an image, which is actually the eye of the Mona Lisa.
+
+31
+00:02:54,379 --> 00:02:58,590
+这次不是选择一个像素块，而是选择一行像素。
+This time instead of selecting a block of pixels, I am going to choose a line of pixels.
+
+32
+00:02:58,590 --> 00:03:04,569
+我将把结果放入一个名为lin的变量中，这样就可以了
+I am going to do that by putting the result into a variable called lin, and this is the
+
+33
+00:03:04,569 --> 00:03:13,889
+包含原始图像的MATLAB变量。我将选择第190行和所有
+MATLAB variable that contains the original image. I am going to select row 190 and all
+
+34
+00:03:13,889 --> 00:03:22,180
+在260和290之间的列中的像素。在这里，它们是像素值
+pixels in columns between 260 and 290. And here they are, these are the pixel values
+
+35
+00:03:22,180 --> 00:03:27,849
+沿着蒙娜丽莎图像的一个短水平段。我可以用它来描绘。
+along a short horizontal segment of the Mona Lisa image. And I can plot that.
+
+36
+00:03:27,849 --> 00:03:35,980
+在这里我们看到强度曲线。开始很轻，从中间落下
+And here we see an intensity profile. Starts off quite light, falls down the middle as
+
+37
+00:03:35,980 --> 00:03:40,719
+我们经历了蒙娜丽莎眼中的黑暗部分，然后去了更大的灰度值
+we go through the dark part of the Mona Lisa’s eye, and then go to larger greyscale values
+
+38
+00:03:40,719 --> 00:03:45,639
+当我们回到构成她脸部的像素时。
+as we move back onto the pixels that comprise her face.
+
+39
+00:03:45,639 --> 00:03:49,529
+我们可以使用冒号运算符执行许多其他有趣且有用的技巧。
+There are a number of other interesting and useful tricks we can do with a colon operator.
+
+40
+00:03:49,529 --> 00:03:54,420
+我要创建另一个输出图像。这次我打算把它称为im3和什么
+I am going to create another output image. This time I am going to call it im3 and what
+
+41
+00:03:54,420 --> 00:04:00,439
+我要做的是再次选择蒙娜丽莎的形象，我将选择所有的
+I am going to do is select again the Mona Lisa image and I am going to choose all the
+
+42
+00:04:00,439 --> 00:04:07,409
+行从1开始以4为步骤结束，这是一个特殊的MATLAB变量，代表
+rows starting at 1 in steps of 4 up to end, which is a special MATLAB variable which represents
+
+43
+00:04:07,409 --> 00:04:14,029
+矩阵中最大的行号。并从中开始再次选择所有列
+the largest row number in the matrix. And select all the columns again, starting at
+
+44
+00:04:14,029 --> 00:04:20,570
+1步骤4到最大列号并创建一个名为的新工作空间变量
+1 in steps of 4 up to the largest column number and create a new workspace variable called
+
+45
+00:04:20,570 --> 00:04:26,180
+im3，我将显示该图像。开始了。
+im3 and I am going to display that image. Here we go.
+
+46
+00:04:26,180 --> 00:04:31,470
+我们现在可以看到的是，这张图片的分辨率要低得多，我们可以看到
+And what we can see now is that this image has much lower resolution, we can see the
+
+47
+00:04:31,470 --> 00:04:37,600
+像素的块状，我们可以看到那里的水平和垂直方向
+blockiness of the pixels, we can see in the horizontal and vertical directions that there
+
+48
+00:04:37,600 --> 00:04:42,930
+这个图像中的像素远远少于原始像素，这是因为什么
+are far fewer pixels in this image than there are in the original and that is because what
+
+49
+00:04:42,930 --> 00:04:47,710
+我们所做的是从水平方向和中间每四个像素中选择一个
+we have done is chosen every fourth pixel from both the horizontal direction and in
+
+50
+00:04:47,710 --> 00:04:52,540
+垂直方向。我们降低了图像的分辨率。所以这很快
+the vertical direction. We have reduced the resolution of the image. So that is a quick
+
+51
+00:04:52,540 --> 00:04:57,750
+使用冒号运算符可以使用MATLAB。
+trick you can do with MATLAB, using the colon operator.
+
+52
+00:04:57,750 --> 00:05:00,750
+关于结肠操作符的最后一点是有用的-我要创建
+The final thing that is useful to know about the colon operator—I am going to create
+
+53
+00:05:00,750 --> 00:05:05,190
+又一个图像，这次我要做的是我要选择行
+yet another image, and this time what I am going to do is I am going to choose the rows
+
+54
+00:05:05,190 --> 00:05:11,910
+从最后开始，从最大可能的行号开始，向下步进-1，
+starting at end, starting at the biggest possible row number, going in steps of -1 working downwards,
+
+55
+00:05:11,910 --> 00:05:17,160
+直到我进入第1行，然后我将从一个选择所有列
+until I get to row 1, and then I am going to choose all of the columns from one up to
+
+56
+00:05:17,160 --> 00:05:21,770
+结束。你可以想象这是怎么回事
+end. You can probably imagine what this is going
+
+57
+00:05:21,770 --> 00:05:25,090
+去做。我们去了-我们已经翻了Mona
+to do. And there we go—we have flipped the Mona
+
+58
+00:05:25,090 --> 00:05:33,120
+丽莎颠倒了。最后一个快速提示是我们输入的最后一个命令;我们实际上可以
+Lisa upside down. One final quick tip is that the last command that we typed; we can actually
+
+59
+00:05:33,120 --> 00:05:40,210
+让它更简洁一点。我们需要写出我们说所有列的最后一部分
+make it a bit more concise. We need to write that last part where we say all of the columns
+
+60
+00:05:40,210 --> 00:05:45,440
+从1到结束，我们可以非常简单地将其写成冒号。所以无论你有什么
+from 1 to end, we can write that down very simply just as colon. So where ever you have
+
+61
+00:05:45,440 --> 00:05:54,340
+冒号表示矩阵的列或行，表示全部。我们可以将其视为外卡运营商。
+colon to represent a column or row of a matrix, it means all. We can think of it as a wild card operator.
+

@@ -1,0 +1,395 @@
+1
+00:00:03,860 --> 00:00:08,519
+让我们回顾一下我们在本次讲座中学到的一些重要事项。在上一讲中
+Let's recap some of the big things that we've learned in this lecture. In the previous lecture
+
+2
+00:00:08,519 --> 00:00:14,249
+我们讨论了正向运动学函数;这就是K的功能。它的论点是Q和
+we discussed the forward kinematic function; that's the function K. Its argument is Q and
+
+3
+00:00:14,249 --> 00:00:19,430
+这是关节角度的矢量，它的长度为N的向量，其中N是关节的数量
+that's the vector of joint angles, its vector of length N, where N is the number of joints
+
+4
+00:00:19,430 --> 00:00:25,690
+机器人有。正向运动功能的结果是机器人的姿势
+that the robot has. The result of the forward kinematic function is the pose of the robots
+
+5
+00:00:25,690 --> 00:00:31,850
+末端效应器，我称之为ksiN。正向运动学采用关节角度并给出
+end effector, which I call here ksiN. Forward kinematics takes the joint angles and gives
+
+6
+00:00:31,850 --> 00:00:35,000
+我们机器人末端效应器的姿势。
+us the robot end effector pose.
+
+7
+00:00:35,000 --> 00:00:39,340
+在这个讲座中，我们讨论了逆运动学函数，这里显示为K.
+In this lecture we've discussed the inverse kinematic function that's shown here as K
+
+8
+00:00:39,340 --> 00:00:46,050
+到负一号。它在机器人末端执行器姿势上运行并告诉我们关节角度
+to the minus one. It operates on the robot end effector pose and tells us the joint angles
+
+9
+00:00:46,050 --> 00:00:52,450
+要达到那个姿势。逆是不唯一的。对于特定的机器人端
+required to achieve that pose. The inverse is not unique. For a particular robot end
+
+10
+00:00:52,450 --> 00:00:58,120
+效应器姿势，可以有多组关节角度来实现这一点
+effector pose, there can be multiple sets of joint angles which will achieve that particular
+
+11
+00:00:58,120 --> 00:01:02,930
+姿势，对于我们的小二连杆机器人，这里显示了两种可能的配置。
+pose, for our little two link robot, there are two possible configurations shown here.
+
+12
+00:01:02,930 --> 00:01:07,610
+对于我们的六连环Puma机器人，它在三维空间中运行，实际上
+For our six link Puma robot, which operates in three dimensional space, there are in fact
+
+13
+00:01:07,610 --> 00:01:09,820
+六种可能的解决方
+six possible solutions.
+
+14
+00:01:09,820 --> 00:01:14,060
+有几种方法可以解决特定的逆运动学问题
+There are several approaches to solving the inverse kinematic problem for a particular
+
+15
+00:01:14,060 --> 00:01:19,369
+机器人。对于像两个链接示例这样的简单机器人，我们使用几何解决方案
+robot. For a simple robot like the two link example, we use a geometric solution and that
+
+16
+00:01:19,369 --> 00:01:25,290
+需要一些直觉和一些见解，它涉及定义特定的三角形，
+requires some intuition and some insight, it involves defining particular triangles,
+
+17
+00:01:25,290 --> 00:01:30,299
+引入新的角度并按顺序应用许多简单的三角关系
+introducing new angles and applying a number of simple trigonometric relationships in order
+
+18
+00:01:30,299 --> 00:01:36,570
+解决我们感兴趣的关节角度，在这种情况下Q1和Q2作为函数
+to solve for the joint angles we're interested in, in this case Q1 and Q2 as a function of
+
+19
+00:01:36,570 --> 00:01:44,820
+末端执行器姿势XY和机器人的恒定链路长度A1和A2。我们就这么做了
+the end effector pose XY and the robot's constant link lengths A1 and A2. We right down the
+
+20
+00:01:44,820 --> 00:01:49,729
+正向运动学方程，这里给出了末端效应器姿势X和Y
+forward kinematic equations, which here give us the end effector pose X and Y in terms
+
+21
+00:01:49,729 --> 00:01:54,250
+关节角度然后与大量的操纵再次与一些
+of the joint angles and then with a large amount of manipulation and again with some
+
+22
+00:01:54,250 --> 00:02:00,180
+洞察力和直觉，我们可以写出给我们机器人关节角度的方程式。
+insight and intuition, we can write down equations which give us the robot joint angles.
+
+23
+00:02:00,180 --> 00:02:04,960
+机器人逆运动学分析解决方案涉及的步骤涉及到
+The steps involved in the analytic solution for robot inverse kinematics involves the
+
+24
+00:02:04,960 --> 00:02:09,819
+以下步骤;首先我们需要一个机器人模型，我们需要知道位置和
+following steps; firstly we need a model of the robot, we need to know the position and
+
+25
+00:02:09,819 --> 00:02:13,780
+关节相对于链节的方向。我们需要知道它的长度
+orientation of the joints with respect to the links. We need to know the lengths of
+
+26
+00:02:13,780 --> 00:02:19,150
+链接等。从那里我们提取了许多方程式，我们试图解决
+the links and so on. From that we extract a number of equations and we attempt to solve
+
+27
+00:02:19,150 --> 00:02:24,700
+对于未知的关节变量。正如我之前所说，它需要一些人类的洞察力
+for the unknown joint variables. As I said before, it requires some human insight, although
+
+28
+00:02:24,700 --> 00:02:29,989
+对于特定的机器人或特定机器人，它可以使用计算机代数技术自动化
+it can be automated using computer algebra techniques for particular robots or particular
+
+29
+00:02:29,989 --> 00:02:31,849
+机器人类。
+classes of robots.
+
+30
+00:02:31,849 --> 00:02:38,069
+分析解决方案的巨大优势在于它明确地向您显示了多种配置
+The great advantages of the analytic solution is it explicitly shows you the multiple configurations
+
+31
+00:02:38,069 --> 00:02:42,730
+机器人，让您选择将为您提供配置的关节角度
+of the robot and lets you choose the joint angles that will give you the configuration
+
+32
+00:02:42,730 --> 00:02:48,709
+你要的那个。对于Puma560机器人，它允许您明确选择左手配置
+that you want. For the Puma 560 robot it allows you to explicitly choose a left handed configuration
+
+33
+00:02:48,709 --> 00:02:54,650
+或右手配置或肘部向上或肘部向下。另一个优点是
+or a right handed configuration or the elbow up or the elbow down. Another advantage is
+
+34
+00:02:54,650 --> 00:03:00,349
+解决方案非常紧凑，执行速度快。你可以得到结果方程
+that the solutions are very compact and fast to execute. You can take the resulting equations
+
+35
+00:03:00,349 --> 00:03:03,800
+并且您可以使用您喜欢的编程语言对它们进行编码，然后执行它们
+and you can code them up in your favorite programming language and they will execute
+
+36
+00:03:03,800 --> 00:03:09,050
+非常非常快然而，分析方法越来越难以作为数量
+very, very quickly. However the analytic approach is increasingly difficult as the number of
+
+37
+00:03:09,050 --> 00:03:14,860
+对于六连杆机器人来说，关节增加并且需要做很多工作。幸好
+joints increases and takes quite a lot of work to do it for a six link robot. Fortunately
+
+38
+00:03:14,860 --> 00:03:19,300
+许多聪明人已经在很多，几十年的时间里研究过这个问题和解决方案
+a lot of smart people have looked at this problem over many, many decades and solutions
+
+39
+00:03:19,300 --> 00:03:25,060
+因为几乎所有的机器人都已经衍生出来并在文献的某个地方出版。
+for almost all robots have been derived and are published somewhere in the literature.
+
+40
+00:03:25,060 --> 00:03:29,610
+分析解决方案的替代方案是数值解决方案，这是适用的
+An alternative to the analytic solution is the numerical solution and that's applicable
+
+41
+00:03:29,610 --> 00:03:34,129
+当分析解决方案不存在或分析解决方案太难以解决时
+when the analytic solution doesn't exist or the analytic solution is just too hard to
+
+42
+00:03:34,129 --> 00:03:38,980
+弄清楚。它依赖于我们总能确定正向运动学的事实
+figure out. It relies on the fact that we can always determine the forward kinematics
+
+43
+00:03:38,980 --> 00:03:43,239
+机器人，这是相对简单的，我们在前面讨论过
+of the robot, that’s relatively straightforward to do and we talked about that in the previous
+
+44
+00:03:43,239 --> 00:03:46,530
+演讲。我们知道我们希望机器人结束的姿势
+lecture. We know the pose that we want the robot end
+
+45
+00:03:46,530 --> 00:03:51,560
+效应器实现哪个被称为ksi*，但我们需要做的就是调整关节
+effector to achieve which is called ksi*, but all we need to do is adjust the joint
+
+46
+00:03:51,560 --> 00:03:58,470
+角度Q直到ksi与ksi*匹配，我们可以在数学上将其作为优化
+angles Q until ksi matches ksi* and we can pose this mathematically as an optimization
+
+47
+00:03:58,470 --> 00:04:03,379
+这里写的问题非常正式。我们展示了如何使用MATLAB和机器人技术
+problem written very formally here. And we showed how we can use MATLAB and the robotics
+
+48
+00:04:03,379 --> 00:04:09,450
+工具箱确定双链机器人和六连杆机器人的数值解。
+toolbox to determine the numerical solution for a two link robot and for a six link robot.
+
+49
+00:04:09,450 --> 00:04:13,879
+数值解有一些缺点。你需要小心选择
+There are some disadvantages with the numerical solution. You need to be careful about choosing
+
+50
+00:04:13,879 --> 00:04:19,629
+用于优化器的初始关节角度集。你无法保证
+the initial set of joint angles that you use for your optimizer. You can't guarantee that
+
+51
+00:04:19,629 --> 00:04:24,909
+优化器将找到您感兴趣的特定机器人配置。如果
+the optimizer will find the particular robot configuration that you're interested in. If
+
+52
+00:04:24,909 --> 00:04:30,309
+你想要一个左撇子配置，你不能保证优化器会找到它
+you wanted a left handed configuration, you can't guarantee the optimizer will find that
+
+53
+00:04:30,309 --> 00:04:36,259
+特殊配置，取决于您选择的初始关节角度。它也可以
+particular configuration, it depends on your choice of initial joint angles. It can also
+
+54
+00:04:36,259 --> 00:04:41,639
+计算上很昂贵。这是一个迭代算法，迭代次数取决于
+be computationally expensive. It's an iterative algorithm and the number of iterations depends
+
+55
+00:04:41,639 --> 00:04:48,479
+关于你的初始关节角度有多好以及计算费用可能不合适
+on how good your initial set of joint angles is and that computational expense maybe inappropriate
+
+56
+00:04:48,479 --> 00:04:53,939
+在一个硬的实时系统中，你需要在一个小的内部计算反向运动学
+in a hard, real time system where you need to compute inverse kinematics within a small
+
+57
+00:04:53,939 --> 00:04:59,729
+和有限的时间。我们讨论了如何为机器人端创建平滑路径
+and finite amount of time. We talked about how to create smooth paths for the robot end
+
+58
+00:04:59,729 --> 00:05:05,069
+效应器从一个姿势移动到另一个姿势，我们介绍了两种方法。
+effector moving from one pose to another and we introduced two approaches to doing this.
+
+59
+00:05:05,069 --> 00:05:10,249
+第一个是所谓的“联合插值路径”。我们采取最初的姿势和决赛
+The first is what's called a "Joint Interpolated Path." We take the initial pose and final
+
+60
+00:05:10,249 --> 00:05:16,550
+姿势，我们使用反向运动学来确定关节角度的初始和最终集合，
+pose and we use inverse kinematics to determine the initial and final sets of joint angles,
+
+61
+00:05:16,550 --> 00:05:21,819
+然后我们在这两组关节角度之间进行平滑插值，这是相对的
+then we smoothly interpolate between those two sets of joint angles and that's relatively
+
+62
+00:05:21,819 --> 00:05:23,639
+直截了当。
+straightforward to do.
+
+63
+00:05:23,639 --> 00:05:28,469
+这样做的缺点是我们不能保证机器人会沿着直线前进
+The disadvantage of this is we can't guarantee that the robot will follow a straight line
+
+64
+00:05:28,469 --> 00:05:34,330
+三维空间中的路径。我们也无法保证末端效应器的定位
+path in three dimensional space. We also can't guarantee that the end effector orientation
+
+65
+00:05:34,330 --> 00:05:41,069
+在这条道路上的每一点都是我们理想的价值;然而是联合插值路径
+will be our desired value at every point along that path; however joint interpolated paths
+
+66
+00:05:41,069 --> 00:05:46,740
+计算相对便宜，因为我们只是插入关节角度向量
+are relatively cheap to compute because we're only interpolating joint angle vectors at
+
+67
+00:05:46,740 --> 00:05:52,729
+永远的一步。另一种方法是计算笛卡尔插值路径以及我们的路径
+ever time step. An alternative is to compute a Cartesian interpolated path and what we
+
+68
+00:05:52,729 --> 00:05:58,419
+这里是针对沿着轨迹的每个点，我们在初始和最终之间进行插值
+do here is for every point along the trajectory we interpolate between the initial and final
+
+69
+00:05:58,419 --> 00:06:04,110
+末端效应器的姿势。对于每个插值姿势，我们然后计算逆运动学
+end effector pose. For each interpolated pose we then compute the inverse kinematics to
+
+70
+00:06:04,110 --> 00:06:08,279
+找到适合该特定时间步长的关节角度。
+find the joint angles that are appropriate at that particular time step.
+
+71
+00:06:08,279 --> 00:06:12,759
+这种技术的优点是它允许三维直线路径
+The advantage of this technique is that it allows for straight line paths in three dimensional
+
+72
+00:06:12,759 --> 00:06:17,779
+空间。它还确保末端执行器在每个点都具有所需的方向
+space. It also ensures that the end effector has got the desired orientation at every point
+
+73
+00:06:17,779 --> 00:06:19,619
+沿着轨道。
+along the trajectory.
+
+74
+00:06:19,619 --> 00:06:24,860
+缺点是计算上它更昂贵。我们需要插值
+The disadvantage is that computationally it's much more expensive. We need to interpolate
+
+75
+00:06:24,860 --> 00:06:29,710
+姿势和涉及内插平移分量和旋转
+poses and that involves interpolating the translational component and the rotational
+
+76
+00:06:29,710 --> 00:06:35,529
+组件，实际上可能涉及从旋转矩阵转换为四元数插值
+component and that might in fact involve converting from rotation matrix to a quaternion interpolating
+
+77
+00:06:35,529 --> 00:06:40,339
+四元数然后将其转换回旋转矩阵，然后我们必须
+the quaternion and then transforming that back to a rotation matrix, then we have to
+
+78
+00:06:40,339 --> 00:06:46,589
+在每个时间步执行逆运动学。涉及更多的计算，
+perform the inverse kinematics at every single time step. So much more computation involved,
+
+79
+00:06:46,589 --> 00:06:50,989
+好处是我们可以保证三维空间中的直线路径。
+upside is that we can guarantee straight line paths in three dimensional space.
+

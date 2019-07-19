@@ -1,0 +1,210 @@
+1
+00:00:03,510 --> 00:00:07,310
+这是我们刚看到的右侧数字图像之一
+Here is one of the digital images that we have just been looking at and on the right
+
+2
+00:00:07,310 --> 00:00:13,270
+我们可以看到它的一些相关细节。现在我们可以确定总字节数
+we can see some of its pertinent details. Now we can determine the total number of bytes
+
+3
+00:00:13,270 --> 00:00:19,070
+在图像中，将图像宽度乘以图像高度三。三号
+in the image by multiplying the image width by the image height by three. The number three
+
+4
+00:00:19,070 --> 00:00:23,050
+来自这样一个事实：对于图像中的每个像素，我们需要表示数量
+comes from the fact that for every pixel in the image we need to represent the amount
+
+5
+00:00:23,050 --> 00:00:27,940
+红色，绿色和蓝色。每个都由一个字节表示。什么时候
+of red, green and blue. And each of those is represented by a single byte. And when
+
+6
+00:00:27,940 --> 00:00:32,949
+我们计算这个产品，我们看到有2100万字节的信息
+we compute this product we see that something like 21 million bytes of information is in
+
+7
+00:00:32,949 --> 00:00:40,359
+这个图片。但是，在磁盘上，映像只占用3.7兆字节，因此字节数
+this image. However, on disk the image only occupies 3.7 megabytes, so the number of bytes
+
+8
+00:00:40,359 --> 00:00:45,659
+在磁盘上的数量少于原始图像中的彩色像素数。
+on disk is way less then the number of colour pixels that there are in the original image.
+
+9
+00:00:45,659 --> 00:00:50,489
+如果我们取这两个数字的比例，我们就会看到所需的字节数
+If we take the ratio of these two numbers, we see that the number of bytes required to
+
+10
+00:00:50,489 --> 00:00:56,920
+将映像存储在磁盘上的文件中只占总字节数的一小部分
+store the image in the file on disk is a very small fraction of the total number of bytes
+
+11
+00:00:56,920 --> 00:01:02,619
+需要表示图像中的所有彩色像素，这是因为
+required to represent all the coloured pixels in the image, and this comes about because
+
+12
+00:01:02,619 --> 00:01:08,650
+此图片已被压缩。现在所有图像都包含大量像素
+this image has been compressed. Now all images contain a large number of pixel
+
+13
+00:01:08,650 --> 00:01:13,290
+数据，我们希望尽可能减小文件大小。那意味着
+data and we want to make the file size as small as we possibly can. That means then
+
+14
+00:01:13,290 --> 00:01:19,350
+我们可以将更多图像放入相同数量的磁盘中。有两个根本不同
+we can fit more images into the same amount of disk. There are two fundamentally different
+
+15
+00:01:19,350 --> 00:01:25,220
+图像压缩的方法。首先是无损压缩，以及它的作用
+approaches to image compression. The first is Lossless compression, and what this does
+
+16
+00:01:25,220 --> 00:01:30,360
+利用图像中的冗余或重复模式，并非常有效地编码它们，
+is exploit redundancy or recurring patterns in the image and codes them very efficiently,
+
+17
+00:01:30,360 --> 00:01:37,070
+所以他们需要更少的空间。这与Lossy压缩形成鲜明对比，
+so they require overall less space. And this is in stark contrast to Lossy compression,
+
+18
+00:01:37,070 --> 00:01:43,950
+最常见的例子是JPEG压缩。有损压缩的作用是什么
+the most common example of which is JPEG compression. And what lossy compression does is exploit
+
+19
+00:01:43,950 --> 00:01:48,700
+人类视觉系统远非完美，而且有一些信息
+the fact that the human vision system is far from perfect, and that there is some information
+
+20
+00:01:48,700 --> 00:01:54,100
+您可以以人类观察者不注意的方式从图像中删除
+that you can remove from the image in such a way that the human observer does not notice
+
+21
+00:01:54,100 --> 00:01:58,590
+非常改变。因此人类视觉系统的一些问题是我们不是
+very much change. So some of the problems with the human vision system is we are not
+
+22
+00:01:58,590 --> 00:02:03,150
+非常擅长注意细节。我们不善于解决分歧
+very good at noticing very fine detail. We are not as good at resolving the differences
+
+23
+00:02:03,150 --> 00:02:09,009
+因为我们正在解决不同强度之间的差异。
+between colours as we are at resolving the differences between different intensities.
+
+24
+00:02:09,009 --> 00:02:12,879
+我们的色彩灵敏度实际上取决于我们正在寻找的各种颜色
+And our colour sensitivity actually depends on the sorts of colours that we are looking
+
+25
+00:02:12,879 --> 00:02:18,819
+在。因此，我们可以利用人类视觉系统中的这些错误来删除信息
+at. So we can exploit these bugs in the human visual system in order to remove information
+
+26
+00:02:18,819 --> 00:02:23,319
+反正我们不会注意到并使文件更小。
+that we wouldn’t notice anyway and make the files much smaller.
+
+27
+00:02:23,319 --> 00:02:30,189
+这是我们最喜欢的机器人的图像，在磁盘上这个图像占用480千字节。
+Here is an image of our favourite robot and on disk this image occupies 480 kilobytes.
+
+28
+00:02:30,189 --> 00:02:35,799
+如果我们观察机器人中的这个小区域，我们就可以放大我们可以看到的东西
+If we observe this little region within the robot and we zoom in on that what we can see
+
+29
+00:02:35,799 --> 00:02:42,889
+它看起来很不错，我们可以看到边缘相当尖锐，并且有一些
+is that it looks pretty good, we can see the edges are fairly sharp, and there is some
+
+30
+00:02:42,889 --> 00:02:47,799
+那里有趣的色彩渐变。现在这个图像只是适度压缩了
+interesting colour gradations there. Now this image has only been modestly compressed, it
+
+31
+00:02:47,799 --> 00:02:55,109
+是原始图像大小的82％。但是如果我们开始增加压缩量，
+is 82% of the original image size. But if we start to increase the amount of compression,
+
+32
+00:02:55,109 --> 00:03:00,930
+我们丢掉了额外的信息，我们看到图像开始变得非常严肃
+we are throwing away additional information, we see the image starts to become quite seriously
+
+33
+00:03:00,930 --> 00:03:07,389
+当我们放大并仔细观察它时会降级。因此具有非常高的压缩水平
+degraded when we zoom in and look at it very closely. So with the very high level of compression
+
+34
+00:03:07,389 --> 00:03:12,200
+图像只占原始存储的12％，所以我们已经做了大量的
+the image is only occupying twelve per cent of the original storage, so we have made massive
+
+35
+00:03:12,200 --> 00:03:17,529
+节省了所需的磁盘空间，但是当图像开始看起来相当差
+savings in the disk space required, but the image is starting to look fairly poor when
+
+36
+00:03:17,529 --> 00:03:23,389
+我们放大它。如果我们进一步放大，我们可以看到它变得非常块状，
+we zoom in on it. And if we zoom in even further we can see that it has become quite blocky,
+
+37
+00:03:23,389 --> 00:03:28,430
+量子化很多，这里的颜色比原来的要少很多
+quite quantised, and there are many fewer colours here than there are in the original
+
+38
+00:03:28,430 --> 00:03:32,669
+图片。所有这些图像都具有相同的数量
+image. All of these images have the same number of
+
+39
+00:03:32,669 --> 00:03:38,879
+像素，但实际文件大小各不相同。我们之前提到的这个图像是3.7兆字节
+pixels, but the actual file size varies. This image as we mentioned before is 3.7 megabytes
+
+40
+00:03:38,879 --> 00:03:44,159
+长。这条鳄鱼只有2.9兆字节。鸟图片
+long. This crocodile is only 2.9 megabytes long. The bird picture
+
+41
+00:03:44,159 --> 00:03:49,529
+3.8兆字节。压缩后的图像大小是如何计算的
+3.8 megabytes. The size of an image after it has been compressed is a function of how
+
+42
+00:03:49,529 --> 00:03:51,879
+很多信息都在那张图片中。
+much information is in that image.
+

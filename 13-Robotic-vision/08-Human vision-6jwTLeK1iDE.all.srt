@@ -1,0 +1,395 @@
+1
+00:00:03,429 --> 00:00:08,370
+我们来讨论人类视觉系统。现在我不是生物学家，所以我要付出代价
+Let’s discuss the human vision system. Now I am not a biologist, so I am going to give
+
+2
+00:00:08,370 --> 00:00:13,730
+你是工程师对人类视觉系统如何运作的印象。
+you an engineer’s impression of how the human vision system works.
+
+3
+00:00:13,730 --> 00:00:18,600
+首先，我们拥有自己的眼睛，并且看着眼睛也许是最明显的特征
+Firstly we have the eye itself, and looking at an eye perhaps the most obvious feature
+
+4
+00:00:18,600 --> 00:00:25,930
+是白色部分，称为巩膜，虹膜。现在巩膜是纤维组织，
+is the white part, which is called the sclera, and the iris. Now the sclera is fibrous tissue,
+
+5
+00:00:25,930 --> 00:00:32,050
+这是眼睛结构和某些动物巩膜的重要组成部分
+which is an important part of the structure of the eye and some kinds of animals the sclera
+
+6
+00:00:32,050 --> 00:00:37,800
+实际上它里面有骨质成分，在这个化石中你可以看到一个骨头环，
+actually has bony components in it and in this fossil here you can see a ring of bone,
+
+7
+00:00:37,800 --> 00:00:42,860
+这实际上是该动物眼睛巩膜的一部分。
+which is actually part of the sclera of that animal’s eye.
+
+8
+00:00:42,860 --> 00:00:48,660
+如果我们在这里看右眼的横截面，我们可以看到巩膜
+If we look at the cross section of the eye on the right here, we can see that the sclera
+
+9
+00:00:48,660 --> 00:00:54,820
+它是围绕眼球本身的膜的一部分。我们可以看到虹膜和
+which is part of the membrane that surrounds the eyeball itself. We can see the iris and
+
+10
+00:00:54,820 --> 00:01:00,770
+瞳孔调节进入眼睛的光线。我们可以看到镜头，这是
+the pupil which regulates the light going into the eye. We can see the lens, which is
+
+11
+00:01:00,770 --> 00:01:06,390
+透明的结晶蛋白质结构，将光线聚焦在视网膜上
+a transparent, crystalline protein structure which focuses the light onto the retina on
+
+12
+00:01:06,390 --> 00:01:11,290
+眼睛后面。眼睛里面充满了公平
+the back of the eye. The inside of the eye is filled with a fairly
+
+13
+00:01:11,290 --> 00:01:16,729
+透明的液体，在眼睛的后部，我们有一个被称为的表面
+transparent fluid, and at the back of the eye we have a surface which is called the
+
+14
+00:01:16,729 --> 00:01:23,150
+视网膜，一个包含光感受器的曲面，即光敏感的
+retina, a curved surface which contains the photoreceptors, that is, the light sensitive
+
+15
+00:01:23,150 --> 00:01:30,090
+眼睛的一部分。然后通过这个大神经束-视神经-连接到大脑。
+part of the eye. And that is then connected by this big nerve bundle—the optic nerve—to the brain.
+
+16
+00:01:30,090 --> 00:01:34,909
+事实上，我们实际上可以将眼睛视为大脑的一部分。它
+In fact, we can actually think of the eye as being a part of the brain. It
+
+17
+00:01:34,909 --> 00:01:40,729
+通过显着的神经束连接，然后眼睛基本上是感觉
+is connected by a significant nerve bundle, and then the eye is essentially a sensory
+
+18
+00:01:40,729 --> 00:01:44,479
+大脑的一部分位于我们的头脑中。
+part of the brain located in the front of our heads.
+
+19
+00:01:44,479 --> 00:01:50,220
+现在让我们在眼睛的视网膜上更详细地看一下。因此，如果我们采取横断面，我们会移动
+Let’s now look in more detail at the retina of the eye. So if we take a transect, we move
+
+20
+00:01:50,220 --> 00:01:55,950
+从眼睛内侧到眼睛外侧，我们经过的箭头方向
+from inside the eye to outside of the eye along the direction of that arrow we pass
+
+21
+00:01:55,950 --> 00:02:00,670
+通过许多层细胞和血管等等。现在这一切都在
+through a number of layers of cells and blood vessels and whatever. Now this is all on a
+
+22
+00:02:00,670 --> 00:02:06,189
+相当小的规模;这种总结构厚约500微米。
+pretty small scale; this total structure is about 500 microns thick.
+
+23
+00:02:06,189 --> 00:02:10,950
+光敏电池位于该结构的底部。所以他们不在
+The light sensitive cells are at the bottom of this structure. So they are not on the
+
+24
+00:02:10,950 --> 00:02:17,279
+在视网膜表面，它们实际上在视网膜表面下方约500微米处。
+surface of the retina, they are actually about 500 microns below the surface of the retina.
+
+25
+00:02:17,279 --> 00:02:22,829
+因此，光必须穿过-通过这些细胞和血管扩散
+So the light has to pass through—diffuse through—these cells and blood vessels before
+
+26
+00:02:22,829 --> 00:02:26,790
+它到达光敏细胞。现在你可能听过有人说话了
+it gets to the light sensitive cells. Now you’ve probably heard people talking
+
+27
+00:02:26,790 --> 00:02:32,139
+关于杆和锥体。杆细胞和锥细胞是光敏元件。
+about rods and cones. The rods cells and the cone cells are the light sensitive elements.
+
+28
+00:02:32,139 --> 00:02:39,749
+它们是我们眼中的光感受器。杆细胞是这些意大利面形状的结构。
+They are the photoreceptors in our eye. The rod cells are these spaghetti shaped structures.
+
+29
+00:02:39,749 --> 00:02:45,599
+他们有点瘦。而且它们对低光照水平很敏感。所以我们使用杆细胞
+They are kind of thin. And they are sensitive to low light levels. So we use the rod cells
+
+30
+00:02:45,599 --> 00:02:53,169
+当我们在光线很弱的环境中工作时。锥形细胞是这些奇怪的，凹凸不平的形状
+when we are working in a very low light environment. The cone cells are these strange, stumpy shaped
+
+31
+00:02:53,169 --> 00:02:58,279
+细胞;它们有点圆锥形，有点蹲，不像杆那么高。还有这些
+cells; they are a little bit conical, kind of squat, not as tall as the rods. And these
+
+32
+00:02:58,279 --> 00:03:02,669
+细胞对颜色敏感。并且有三种不同类型的锥体细胞：那里
+cells are sensitive to colour. And there are three different types of cones cells: there
+
+33
+00:03:02,669 --> 00:03:07,219
+有些是对红光敏感的，有些是对绿光敏感而有些是敏感的
+are some that are sensitive to red light, some sensitive to green light and some sensitive
+
+34
+00:03:07,219 --> 00:03:13,679
+蓝灯。但他们共同的特点是它们有点像圆锥形。
+to blue light. But the characteristic they all share is that they are this somewhat conical shape.
+
+35
+00:03:15,280 --> 00:03:18,260
+我们可以考虑眼睛的另一种方式是
+Another way we can consider the eye is to
+
+36
+00:03:18,260 --> 00:03:24,930
+看看光纤连接视网膜的位置，并在视网膜上形成一个区域
+look at where the optic fibre joins the retina and that creates an area on the retina which
+
+37
+00:03:24,930 --> 00:03:29,729
+被称为光盘，其中实际上没有光敏细胞。所以有一部分
+is called the optic disk where there are actually no light sensitive cells. So there is a part
+
+38
+00:03:29,729 --> 00:03:34,919
+对视网膜无反应的视网膜还有视网膜的另一部分
+of the retina that does not respond to light. And there is another part of the retina where
+
+39
+00:03:34,919 --> 00:03:40,959
+我们有一个巨大的光敏细胞集中，这个区域被称为
+we have an enormous concentration of light sensitive cells and that area is called the
+
+40
+00:03:40,959 --> 00:03:46,040
+小窝。中央凹与视神经分开一段距离。
+fovea. The fovea and the optic nerve are separated by some distance.
+
+41
+00:03:46,040 --> 00:03:51,870
+所以在这张图中，我们将看到的是感光细胞的密度，
+So in this graph here what we are going to see is the density of photoreceptor cells,
+
+42
+00:03:51,870 --> 00:03:57,669
+并且在该区域中每平方毫米的锥形细胞数量存在巨大的峰值
+and there is a huge peak in the number of cone cells per square millimetre in this area
+
+43
+00:03:57,669 --> 00:04:05,069
+我们称之为中央凹。因此，我们在这一小部分区域内拥有精致的分辨率。其余的部分
+we call the fovea. So we have exquisite resolution in this one small area of our eye. The rest
+
+44
+00:04:05,069 --> 00:04:11,739
+在眼睛方面，我们的分辨率要低得多，不知不觉中我们的眼睛不断移动，
+of the eye, we have much less resolution and unconsciously our eye is continually moving,
+
+45
+00:04:11,739 --> 00:04:16,900
+聚焦在场景的不同部分，将中央凹指向这些不同的部分。
+focusing, on different parts of the scene, directing the fovea to these different parts.
+
+46
+00:04:16,900 --> 00:04:22,310
+因此，我们通过指导高分辨率中央凹来建立高分辨率的图像
+So we build up a high resolution of the image by directing the high resolution fovea all
+
+47
+00:04:22,310 --> 00:04:28,520
+我们正在看的场景。现在使用棒状细胞它们有很大不同
+over the scene we are looking at. Now with the rod cells they have a quite different
+
+48
+00:04:28,520 --> 00:04:35,330
+空间密度模式。中央凹区域的杆状细胞很少，但有
+spatial density pattern. There are very few rod cells in the fovea area, but there’s
+
+49
+00:04:35,330 --> 00:04:40,530
+我们称之为周边视觉的更多杆细胞;远离我们眼睛的方向
+many more rod cells in what we call our peripheral vision; away from the direction that our eye
+
+50
+00:04:40,530 --> 00:04:46,310
+指着。这在夜间非常有用，这些细胞也有些运动敏感。
+is pointing. This is very useful at night and these cells are also somewhat motion sensitive.
+
+51
+00:04:46,310 --> 00:04:53,169
+它们使我们能够看到从我们眼角移动的东西。
+They are what give us the ability to see something moving out of the corner of our eye.
+
+52
+00:04:53,169 --> 00:04:58,710
+那么真正有趣的是视神经进入视网膜的这项业务
+So what is really interesting then is this business of the optic nerve entering the retina
+
+53
+00:04:58,710 --> 00:05:04,050
+并创造我们称之为盲点的东西。现在我们可以真正发现我们的盲点
+and creating what we call the blind spot. Now we can actually detect our blind spot
+
+54
+00:05:04,050 --> 00:05:11,000
+使用模式，像这样的东西。所以你做的就是闭上你的右眼并盯着看
+using a pattern, something like this. So what you do is close your right eye and stare at
+
+55
+00:05:11,000 --> 00:05:17,520
+加号。然后绝对地将你的头朝向和远离屏幕移动
+the plus sign. And then move your head toward and away from the screen making absolutely
+
+56
+00:05:17,520 --> 00:05:23,270
+确保你用左眼看着加号。当你移动你的头
+sure that you are looking with your left eye at the plus sign. As you move your head in
+
+57
+00:05:23,270 --> 00:05:30,449
+然后，这里的圆圈会在某个点落到视网膜上的视盘上
+and out, the circle here will at some point fall onto the optic disk on your retina and
+
+58
+00:05:30,449 --> 00:05:34,580
+令人惊讶的是，它会从视野中消失。所以你可以有一些
+it will, quite surprisingly, it will just disappear from view. So you can have some
+
+59
+00:05:34,580 --> 00:05:39,919
+通过这样的测试，您可以在线找到其他人。玩一玩，看看你能不能找到
+fun with a test like this, you can find others online. Have a play and see if you can find
+
+60
+00:05:39,919 --> 00:05:43,949
+你的盲点。令人惊讶的是，在日常生活中我们没有注意到我们
+your blind spot. It is quite surprising that in everyday life we don’t notice that we
+
+61
+00:05:43,949 --> 00:05:49,129
+有一个盲点。我们遇到了一些麻烦，我们实际上可以发现它就在那里。
+have got a blind spot. We go to a bit of trouble, we can actually detect that it is there.
+
+62
+00:05:49,129 --> 00:05:53,740
+现在，如果我们看一下大脑的水平横截面。我们可以看到
+Now if we look at, for instance, our horizontal cross section of the brain. We can see the
+
+63
+00:05:53,740 --> 00:05:59,949
+眼睛位于头部前方，视神经束带有视觉信息
+eyes located at the front of the head and the optic nerve bundles carry the visual information
+
+64
+00:05:59,949 --> 00:06:05,090
+通过大脑到大脑的后部，我们拥有视觉皮层。和
+through the brain to the back part of the brain, where we have our visual cortex. And
+
+65
+00:06:05,090 --> 00:06:09,719
+这就是我们所有真正令人兴奋的视觉处理正在进行的地方。那就是
+that is where we have all the really exciting visual processing going on. That is where
+
+66
+00:06:09,719 --> 00:06:15,400
+我们大脑的一部分负责识别人和物体以及运动等。但
+part of our brain is responsible for recognising people and objects and motion and so on. But
+
+67
+00:06:15,400 --> 00:06:21,139
+人脑是一个非常复杂的结构。它的重量约为1.5公斤
+the human brain is a very complex structure. It weighs something like 1.5 kilograms and
+
+68
+00:06:21,139 --> 00:06:28,400
+那里约有1011个神经元。这是一个非常多的计算和内存功能。
+is about 1011 neurons in there. So an awful lot of computation and memory capability.
+
+69
+00:06:28,400 --> 00:06:34,199
+其中近三分之一用于处理视觉信息。
+Nearly a third of that is devoted to processing visual information.
+
+70
+00:06:34,199 --> 00:06:39,590
+早些时候我们使用的论点是眼睛已经被进化发明了很多次
+Earlier we used the argument that the eye has been invented so many times by evolution
+
+71
+00:06:39,590 --> 00:06:46,409
+它必须是一种非常有效的动物传感器。但这种感觉是有代价的
+that it must be a very effective sensor for animals. But there is a cost for the sense
+
+72
+00:06:46,409 --> 00:06:51,919
+在人类的情况下，其中一个成本是我们的三分之一
+of vision, and in the case of human beings one of those costs is that a third of our
+
+73
+00:06:51,919 --> 00:06:57,340
+大脑致力于处理这种视觉信息。所以是的，这是非常有效的
+brain is devoted to processing this visual information. So yes, it is a very effective
+
+74
+00:06:57,340 --> 00:07:03,920
+传感器，作为一个有机体，我们为运行该传感器付出了相当大的代价。
+sensor that as an organism we pay quite a cost in order to run that sensor.
+
+75
+00:07:03,920 --> 00:07:07,900
+额外的费用与眼睛本身有关。
+Additional costs are associated with the eyes themselves.
+
+76
+00:07:07,909 --> 00:07:13,520
+它们是非常精致的结构，所以我们进化出保护眼睛的机制。
+They are very delicate structures, so we evolved mechanisms to protect the eye.
+
+77
+00:07:13,520 --> 00:07:19,200
+例如，我们的眼睑和睫毛，用泪管清洁眼睛的机制等等，
+For instance, our eyelids and eyelashes, mechanisms to clean the eyes with tear ducts and so on,
+
+78
+00:07:19,200 --> 00:07:25,340
+并且一些非常高性能的肌肉也会使眼睛在头部内移动。
+and the eyes are also moved within the head by some very high performance muscles.
+
+79
+00:07:25,340 --> 00:07:31,360
+因此，有很多辅助机制参与维持视觉。
+So there is a lot of auxiliary machinery involved in maintaining the sense of vision.
+

@@ -1,0 +1,410 @@
+1
+00:00:03,510 --> 00:00:07,729
+让我们看看这个简单的例子。当你和我看到我们可以看到一个
+Let’s look at this simple example. When you and I look at that we can see an
+
+2
+00:00:07,729 --> 00:00:13,050
+鲨鱼的形象。但就计算机视觉系统而言，它只是一个矩阵
+image of the shark. But as far as a computer vision system is concerned, it is just a matrix
+
+3
+00:00:13,050 --> 00:00:20,440
+满满的数字。事实上，这500×500像素的图像包含25万个数字。
+full of numbers. In fact this 500 by 500 pixel image contains a quarter of a million numbers.
+
+4
+00:00:20,440 --> 00:00:25,640
+但是看着这个人的人看到了一个独特的对象。所以挑战是我们如何找到
+But human beings looking at this see a distinct object. So the challenge is how do we find
+
+5
+00:00:25,640 --> 00:00:30,210
+这个场景中的对象。我们希望能够做的就是找到一个地区
+the object in this scene. All we want to be able to do is find a region
+
+6
+00:00:30,210 --> 00:00:35,530
+在这个场景中。我们将一个区域定义为一组连接的像素
+within this scene. We’re going to define a region as a group of pixels that are connected
+
+7
+00:00:35,530 --> 00:00:40,269
+相互之间（也就是说，它们彼此相邻）都具有相同的颜色。
+to each other (that is, they are next to each other) that have all got the same colour.
+
+8
+00:00:40,269 --> 00:00:44,710
+因此，如果我们能够做到这一点，如果对于这个场景中的所有白色像素，我们可以以某种方式
+So if we could do that, if for all of the white pixels in this scene we could somehow
+
+9
+00:00:44,710 --> 00:00:50,219
+将它们聚集在一起，然后我们就能找到这个连贯的区域;这个对象。
+clump them together, then we would be able to find this coherent region; this object.
+
+10
+00:00:50,219 --> 00:00:56,459
+然后我们就可以开始描述它的外观和内在的位置
+And then we could begin the process of describing what it looks like and where it is within
+
+11
+00:00:56,459 --> 00:01:00,659
+图片。让我们付诸实践。我们将加载
+the image. Let’s put this into practice. We will load
+
+12
+00:01:00,659 --> 00:01:09,140
+一个图像;鲨鱼的形象。将它放入工作区im，我们将显示它。这些
+an image; the shark image. Put it into the workspace im, and we will display it. These
+
+13
+00:01:09,140 --> 00:01:13,540
+对我们来说都是非常熟悉的命令。我们将看一些像素值
+are all very familiar commands to us by now. And we’ll have a look at some pixel values
+
+14
+00:01:13,540 --> 00:01:18,500
+在这里。黑色的值为0，白色的值为0
+in here. The black ones have got a value of 0, and the white ones have got a value of
+
+15
+00:01:18,500 --> 00:01:24,010
+我们称之为二进制图像或逻辑图像。这些是带有值的黑色像素
+1. We call this a binary image or a logical image. These are black pixels with a value
+
+16
+00:01:24,010 --> 00:01:28,390
+没有;可以被MATLAB视为假。这些可以由MATLAB考虑
+of nought; could be considered by MATLAB as false. These could be considered by MATLAB
+
+17
+00:01:28,390 --> 00:01:33,530
+是的。该图像只有两个可能的像素值。
+as true. This image has got only two possible pixel values.
+
+18
+00:01:33,530 --> 00:01:38,430
+现在我们要做的第一件事是制作所有像素的列表
+Now the first thing that we’re going to do is to make a list of all of the pixels
+
+19
+00:01:38,430 --> 00:01:44,600
+在图像中，我们将使用MATLAB的内置“查找”来做到这一点
+within the image, and we’re going to do that using MATLAB’s built-in ‘find’
+
+20
+00:01:44,600 --> 00:01:49,570
+功能。而我们要做的就是找到所有有价值的像素
+function. And what we’re going to do is find all of the pixels who’ve got a value
+
+21
+00:01:49,570 --> 00:01:56,530
+大于0;这将是白色的。对于它找到的每个像素，每个元素
+greater than 0; that will be the white ones. For every pixel that it finds, every element
+
+22
+00:01:56,530 --> 00:02:03,810
+它找到的矩阵，它将返回行坐标和列坐标
+of the matrix that it finds, it will return the row coordinate and the column coordinate
+
+23
+00:02:03,810 --> 00:02:11,260
+进入那两个向量v和u。所以我们看到那些载体有7827
+into those two vectors v and u. So we see that those vectors have got 7827
+
+24
+00:02:11,260 --> 00:02:19,790
+在它们中的行，所以这个图像中有7827个像素大于0.所以让我们
+rows in them, so there are 7827 pixels in this image that are greater than 0. So let’s
+
+25
+00:02:19,790 --> 00:02:26,920
+看看这些坐标是什么。我要展示它们并且非常大
+have a look at what these coordinates are. I’m going to display them and a very large
+
+26
+00:02:26,920 --> 00:02:31,090
+数字滚过去。那么让我们来看看其中的一些数字。它是什么
+number of numbers rolls past. So let’s have a look at some of these numbers. What it’s
+
+27
+00:02:31,090 --> 00:02:38,670
+例如，说是坐标243处的像素，170是属于的白色像素
+saying is, for instance, a pixel at coordinate 243, 170 is a white pixel that belongs to
+
+28
+00:02:38,670 --> 00:02:45,659
+鲨鱼。坐标244,169处的像素是属于鲨鱼的白色像素。
+the shark. The pixel at coordinate 244, 169 is a white pixel that belongs to the shark.
+
+29
+00:02:45,659 --> 00:02:50,400
+我们有一个很长的白色像素坐标列表。我们可以用这些做什么？
+We have a long list of the coordinates of the white pixels. What can we do with these?
+
+30
+00:02:50,400 --> 00:02:55,799
+我们能做的一件事就是找出u坐标的最小值，即
+Well one thing we can do is find what is the smallest value of the u coordinate, that’s
+
+31
+00:02:55,799 --> 00:03:02,749
+该组白色像素中的最小u坐标，这将是最大的u坐标;
+the smallest u coordinate in that set of white pixels, and this will be the largest u coordinate;
+
+32
+00:03:02,749 --> 00:03:09,359
+这是245.所以这是关于那套白色的最小u坐标的说法
+it’s 245. So this is saying something about the smallest u coordinate of that set of white
+
+33
+00:03:09,359 --> 00:03:14,480
+像素，也是最大的。我们可以在垂直方向上做同样的事情;说最小的
+pixels, and the largest. We can do the same in the vertical direction; say the smallest
+
+34
+00:03:14,480 --> 00:03:21,450
+垂直坐标和最大垂直坐标。所以这四个数字本质上是
+vertical coordinate and the largest vertical coordinate. So these four numbers essentially
+
+35
+00:03:21,450 --> 00:03:28,669
+绑定那个鲨鱼形物体。所以让我们在场景上绘制一个方框，就是这样
+bound that shark-shaped object. So let’s plot a box on the scene, and it’s
+
+36
+00:03:28,669 --> 00:03:36,249
+一个左上角为umin和vmin的盒子，右下角为umax
+a box whose top left corner is u min and v min, and its bottom right corner is u max
+
+37
+00:03:36,249 --> 00:03:42,499
+和vmax，我们将它绘制成绿色。我们现在所做的就是放置什么
+and v max, and we’ll plot it in the colour green. What we’ve done now is to place what
+
+38
+00:03:42,499 --> 00:03:46,569
+我们在这组白色像素周围调用一个边界框。
+we call a bounding box around that set of white pixels.
+
+39
+00:03:46,569 --> 00:03:51,669
+所以我们现在可以对这组像素说些什么。我们能够说点什么
+So we’re able now to say something about this set of pixels. We’re able to say something
+
+40
+00:03:51,669 --> 00:03:57,719
+关于这些像素在图像中的位置。我们可以做的另一件事就是说在哪里
+about where these pixels are within the image. Another thing that we can do is to say where
+
+41
+00:03:57,719 --> 00:04:03,079
+是这组像素的中心。这样做的一个简单方法就是说中心
+is the centre of this group of pixels. And a simple way of doing this is to say the centre
+
+42
+00:04:03,079 --> 00:04:09,449
+我们可以认为是最小和最大坐标的平均值。所以
+we could think of as being the average of the minimum and maximum coordinates. So in
+
+43
+00:04:09,449 --> 00:04:16,359
+水平方向就是那个数字。在垂直方向上就是这样
+the horizontal direction it’s that number. In the vertical direction it will be this
+
+44
+00:04:16,359 --> 00:04:20,840
+数。现在我们能做的就是为此绘制一个观点
+number. Now what we can do is plot a point at that
+
+45
+00:04:20,840 --> 00:04:24,980
+使用plot_point函数的特定坐标：传递u坐标，v
+particular coordinate using the plot_point function: pass in the u coordinate, the v
+
+46
+00:04:24,980 --> 00:04:32,220
+坐标...并且它期望列向量，我们将在该位置放置一个星号。
+coordinate … and it expects the column vector, and we’ll put an asterisk at that location.
+
+47
+00:04:32,220 --> 00:04:37,230
+现在我们已经提出了一个观点，它在某些方面是该对象的中心。其实，
+And now we have drawn a point, which in some ways is the centre of that object. Actually,
+
+48
+00:04:37,230 --> 00:04:42,660
+它是盒子的中心，大致是那组白色像素的中心。好
+it’s the centre of the box and is roughly the centre of that set of white pixels. We’ll
+
+49
+00:04:42,660 --> 00:04:47,050
+很快就能做得更好。一种非常有用的技术
+be able to do better than that shortly. A technique that’s going to be really helpful
+
+50
+00:04:47,050 --> 00:04:52,490
+对我们来说，这项工作就是计算出所谓的图像瞬间。时刻
+for us in this endeavour is to compute what are called moments of the image. The moments
+
+51
+00:04:52,490 --> 00:04:57,600
+由这个等式给出，当前有两个参数，p和q。所以
+are given by this equation, and there are two parameters to the moment, p and q. So
+
+52
+00:04:57,600 --> 00:05:04,740
+我们指的是图像的'p-qth时刻'。所以这一刻只是所有的总和
+we refer to the ‘p-qth moment’ of an image. So the moment is simply the sum of all of
+
+53
+00:05:04,740 --> 00:05:10,480
+图像中的像素，该像素的u坐标与p的幂，即v坐标
+the pixels in the image, of the u coordinate of that pixel to the power of p, the v coordinate
+
+54
+00:05:10,480 --> 00:05:17,480
+q的幂，乘以该特定坐标处的像素值。
+to the power of q, multiplied by the value of the pixel at that particular coordinate.
+
+55
+00:05:17,480 --> 00:05:22,090
+目前我们正在处理二进制图像，因此像素值为0或1。
+At the moment we’re dealing with binary images, so the pixel value is either 0 or 1.
+
+56
+00:05:22,090 --> 00:05:24,680
+一个特别有趣的时刻是
+A particularly interesting moment is when
+
+57
+00:05:24,680 --> 00:05:31,590
+p等于q等于0.我们称之为图像的第0个时刻，因为p和q是
+p equals q equals 0. We call this the zeroth moment of the image, and because p and q are
+
+58
+00:05:31,590 --> 00:05:38,980
+零，我们只是从总和中删除它们。0,0时刻只是像素的总和
+zero, we simply remove them from the summation. The moment 0,0 is simply the sum of the pixel
+
+59
+00:05:38,980 --> 00:05:46,880
+值。现在，如果像素对于背景为0或对象为1，则为像素值
+values. Now if pixels are either 0 for background or 1 for the object, then the sum pixel values
+
+60
+00:05:46,880 --> 00:05:51,900
+将成为该地区的一部分。它将是内部明亮像素的数量
+is going to be the area of the region. It’s going to be the number of bright pixels within
+
+61
+00:05:51,900 --> 00:05:56,920
+我们刚才看到的鲨鱼。另一组非常有用的时刻是
+the shark that we were just looking at. Another set of very useful moments are the
+
+62
+00:05:56,920 --> 00:06:03,060
+第一时间。这些是片刻1,0和片刻0,1。他们的方程是
+first moments. And these are the moments 1,0 and the moment 0,1. And their equations are
+
+63
+00:06:03,060 --> 00:06:09,230
+这里显示。我们可以将这些视为u和v坐标的加权平均值，加权
+shown here. We can think of these as weighted averages of the u and v coordinates, weighted
+
+64
+00:06:09,230 --> 00:06:16,240
+通过像素的颜色。所以，如果我们采取当下1,0的比例
+by the colour of the pixels. So if we take the ratio of the moment 1,0 by the moment
+
+65
+00:06:16,240 --> 00:06:21,620
+0,0-这是第一个除以面积的时刻-这给了我们坐标
+0,0—that’s the first moment divided by the area—this gives us the coordinates of
+
+66
+00:06:21,620 --> 00:06:27,470
+对象的质心，这非常有用。现在我们找到了几何中心
+the centroid of the object, and this is really useful. Now we’ve found the geometric centre
+
+67
+00:06:27,470 --> 00:06:31,030
+这个鲨鱼形物体。我们开始了
+of this shark-shaped object. We’re beginning to
+
+68
+00:06:31,030 --> 00:06:35,900
+能够描述它。让我们继续我们之前的会议。
+be able to describe it. Let’s continue the session that we had earlier.
+
+69
+00:06:35,900 --> 00:06:42,620
+首先，我们将使用mpq函数计算场景的第0个时刻。我们会过去的
+First, we’ll computer the zeroth moment of the scene using the mpq function. We’ll pass
+
+70
+00:06:42,620 --> 00:06:49,030
+在图像中：我们想要0，第0时刻。第零个时刻是区域或总数
+in the image: we want the 0, zeroth moment. The zeroth moment is the area or the total
+
+71
+00:06:49,030 --> 00:06:55,300
+图像中的1个像素数。这是我们之前获得的价值。我们
+number of 1 pixels in the image. And it’s the value that we obtained previously. We
+
+72
+00:06:55,300 --> 00:07:01,520
+计算时刻1,0，我们再次使用mpq函数;传递图像，
+compute the moment 1,0, and we do that again using the mpq function; pass in the image,
+
+73
+00:07:01,520 --> 00:07:10,509
+因此，我们得到了相当大的数字。计算0,1...mpq的时刻
+1 and 0. So we have this rather large number as a result. Compute the moment 0,1 … mpq
+
+74
+00:07:10,509 --> 00:07:18,200
+...图像...0和1.我们再次拥有一个非常大的数字。现在我们要做的就是计算
+… image … 0 and 1. Again we have a very large number. Now what we’ll do is compute
+
+75
+00:07:18,200 --> 00:07:28,460
+该地区的质心。所以我们将使用的u坐标ucen等于m，1,0divide
+the centroid of the region. So the u coordinate we’ll use, ucen, is equal to m,1,0 divided
+
+76
+00:07:28,460 --> 00:07:38,230
+由m，0,0。并且质心的v坐标是0,1除以第0个时刻，
+by m,0,0. And the v coordinate of the centroid is the moment 0, 1 divided by the zeroth moment,
+
+77
+00:07:38,230 --> 00:07:42,290
+那是质心的垂直坐标。
+and that is the vertical coordinate of the centroid.
+
+78
+00:07:42,290 --> 00:07:49,400
+让我们在图像上绘制;我们使用plot_point函数。传递你的u坐标
+Let’s plot that on the image; we use the plot_point function. Pass in the u coordinate
+
+79
+00:07:49,400 --> 00:07:53,810
+和垂直坐标，将其转换为列向量，我们将指出这一点
+and the vertical coordinate, turn it into a column vector, and we’ll indicate this
+
+80
+00:07:53,810 --> 00:08:02,280
+一个带圆形标记。在这里，我们有所有白色像素的质心
+one with a circular marker. And here we have the centroid of all of the white pixels within
+
+81
+00:08:02,280 --> 00:08:06,520
+鲨鱼形物体。你可以看到它非常非常靠近中心
+the shark-shaped object. You can see that it’s very, very close to the centre of the
+
+82
+00:08:06,520 --> 00:08:11,700
+框，这说明了这个鲨鱼对象相当对称的事实。
+box, and that says something about the fact that this shark object is fairly symmetrical.
+

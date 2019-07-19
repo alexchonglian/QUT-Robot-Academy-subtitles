@@ -1,0 +1,300 @@
+1
+00:00:03,879 --> 00:00:08,189
+现在我要为我之前向你展示过的机器人添加第二个关节
+Now I'm going to add a second joint to the robot that I've shown you before and this
+
+2
+00:00:08,189 --> 00:00:14,740
+机器人有点有趣，因为末端执行器可以达到任何特定
+robot is a little bit interesting in that the end effector can reach any particular
+
+3
+00:00:14,740 --> 00:00:22,529
+由此描述的外部最大圆内的点，就像一个容易适应的位置
+point within an outer maximum circle described by this, like an easily adaptive position
+
+4
+00:00:22,529 --> 00:00:28,819
+像这样，像这样的自适应位置。我的两自由度机器人可以适应
+like this, like an adaptive position like that. My two-degree of freedom robot can adapt
+
+5
+00:00:28,819 --> 00:00:34,720
+最大圆圈内的任何xy坐标。
+any x-y coordinate within the maximum circle.
+
+6
+00:00:34,720 --> 00:00:40,070
+有了这个两自由度机器人，虽然我们可以调整其内部的任何xy坐标
+With this two-degree of freedom robot, although we can adapt any x-y coordinate within its
+
+7
+00:00:40,070 --> 00:00:45,710
+工作空间，它不能适应任意方向。所以，如果机器人想要在
+working space, it can’t adapt an arbitrary orientation. So if the robot wants to be at
+
+8
+00:00:45,710 --> 00:00:51,210
+这个特殊的xy坐标，机器人的这个链接没有其他方向
+this particular xy coordinate, there is no other orientation of this link of the robot
+
+9
+00:00:51,210 --> 00:00:56,940
+这是可能的，因为方向和位置是高度耦合的。
+that's possible because orientation and position are highly coupled.
+
+10
+00:00:56,940 --> 00:01:02,370
+让我们按照类似的程序来确定这两个链接的末端效应器的姿势
+Let's follow a similar procedure to determine the pose of the end effector of these two-link
+
+11
+00:01:02,370 --> 00:01:09,890
+机器人。我要记录机器人，并指出它的两个链接的长度，并指出
+robot. I'm going to notate the robot and indicate the length of its two links and indicate the
+
+12
+00:01:09,890 --> 00:01:17,630
+两个关节角度。接下来，我们将以良好的Q1旋转出良好的坐标系。
+two joint angles. Next, we're going to rotate out well coordinate frame by an amount Q1.
+
+13
+00:01:17,630 --> 00:01:23,039
+因此，世界参考框架现在成为此处显示的灰色坐标框架。接下来我
+So a world reference frame now becomes this grey coordinate frame shown here. Next I'm
+
+14
+00:01:23,039 --> 00:01:28,600
+要将该坐标框架与机器人的第一个链接一起翻译，现在就是这样
+going to translate that coordinate frame along with the first link of the robot so now it's
+
+15
+00:01:28,600 --> 00:01:34,350
+这里。我们现在已经在x方向上应用距离A1的变换。现在我
+here. We've applied now a transformation in the x direction by the distance A1. Now I'm
+
+16
+00:01:34,350 --> 00:01:39,899
+要将帧旋转数量Q2，坐标框现在看起来像这样。
+going to rotate the frame by the amount Q2, the coordinate frame now looks like this.
+
+17
+00:01:39,899 --> 00:01:46,350
+最后，我将在x方向上将其转换为A2。这给了我们
+Finally, I'm going to translate it in the x direction by the amount A2. This gives us
+
+18
+00:01:46,350 --> 00:01:52,179
+连接到机器人末端执行器的坐标系，末端执行器姿势。
+the coordinate frame attached to the end effector of the robot, the end effector pose.
+
+19
+00:01:52,179 --> 00:01:58,060
+现在我可以扩展这个表达式并将这些矩阵和结果中的每一个相乘
+Now I can expand out this expression and multiply together each of these matrices and the result
+
+20
+00:01:58,060 --> 00:02:04,759
+这是。再一次，我们可以看一下这个齐次变换矩阵的平移路径。
+is this. Once again, we can look at the translational path of this homogeneous transformation matrix.
+
+21
+00:02:04,759 --> 00:02:10,860
+这些元素在这里拔出，现在我有一个x和y坐标的表达式
+These elements here pulling out, and now I have an expression for the x and y coordinate
+
+22
+00:02:10,860 --> 00:02:16,580
+我的双连杆机器人的末端执行器。再一次，我们可以看到旋转
+of the end effector of my two-link robot. Once again we can see that the rotational
+
+23
+00:02:16,580 --> 00:02:22,070
+该变换矩阵的路径也表示末端执行器的方向
+path of this transformation matrix which indicates the orientation of the end effector is also
+
+24
+00:02:22,070 --> 00:02:29,700
+Q1和Q2的功能。实际上它是Q1+Q2的功能。所以我们可以再次使用
+a function of Q1 and Q2. In fact it’s a function of Q1+Q2. So once again, we can use
+
+25
+00:02:29,700 --> 00:02:37,170
+Q1和Q2独立控制x和y但我们无法独立控制方向
+Q1 and Q2 to independently control x and y but we can't independently control the orientation
+
+26
+00:02:37,170 --> 00:02:43,410
+最后的效应器。如果我们使用Q1和Q2来选择x和y，那么方向就是
+of the end effector. If we use Q1 and Q2 to choose x and y, then the orientation of the
+
+27
+00:02:43,410 --> 00:02:48,030
+末端效应器已经确定，可以独立选择。
+end-effector is already determined and can be independently chosen.
+
+28
+00:02:48,030 --> 00:02:54,540
+双连杆机械手的一个有趣之处在于有两种关节角度配置
+An interesting thing with a two-link manipulator is that there are two joint angle configurations
+
+29
+00:02:54,540 --> 00:03:00,100
+这将使末端执行器处于所需位置。这是一个配置
+that will put the end effector at a desired position. Here is one configuration of the
+
+30
+00:03:00,100 --> 00:03:05,980
+机器人，这里是机器人的另一种配置，导致相同的结束
+robot, and here is an alternative configuration of the robot that results in the same end
+
+31
+00:03:05,980 --> 00:03:09,240
+效应器位置。
+effector position.
+
+32
+00:03:09,240 --> 00:03:13,530
+对于双链机器人，我已经创建了一些基于工作的变量来表示
+For the two-link robot, I've already created some works based variables to represent the
+
+33
+00:03:13,530 --> 00:03:18,710
+链接长度，即变量A1和A2，并代表两个关节角度Q1
+link lengths, that's the variables A1 and A2 and to represent the two joint angles Q1
+
+34
+00:03:18,710 --> 00:03:25,160
+和Q2。你可以在这里看到他们的数值。确定末端效应器姿势
+and Q2. And you can see their numeric values over here. To determine the end effector pose
+
+35
+00:03:25,160 --> 00:03:31,610
+我需要将一些基本的同质变换链接在一起，所以我要去
+I need to chain together a number of elementary homogeneous transformations so I am going
+
+36
+00:03:31,610 --> 00:03:39,290
+通过Q1进行旋转，然后进行平移，使x方向旋转A1，然后进行旋转
+to have a rotation by Q1 followed by translation and the x direction by A1 followed by a rotation
+
+37
+00:03:39,290 --> 00:03:47,760
+Q2的长度，然后是链接2的长度在x方向上的平移。
+of Q2, followed by a translation in the x direction by the length of link 2.
+
+38
+00:03:47,760 --> 00:03:57,040
+而且我将通过两个关节角度，Q1和Q2。这里我们有一个同质的转变
+And I'm going to pass in the two joint angles, Q1 and Q2. Here we have a homogeneous transformation
+
+39
+00:03:57,040 --> 00:04:03,900
+表示双连杆机器人末端执行器的姿势和位置
+representing the pose of the end effector of a two-link robot and the position of the
+
+40
+00:04:03,900 --> 00:04:09,520
+末端效应器由这两个数字给出，这里的2X2矩阵表示
+end effector is given by these two numbers here and this 2X2 matrix here represents the
+
+41
+00:04:09,520 --> 00:04:12,900
+末端执行器的方向。
+orientation of the end effector.
+
+42
+00:04:12,900 --> 00:04:19,750
+现在我们可以用符号代替这些数值，所以我定义了符号Q1和Q2
+Now we can substitute these numeric values by symbols so I defined symbol Q1 and Q2 and
+
+43
+00:04:19,750 --> 00:04:26,380
+A1和A2的符号。我们现在可以在工作区中看到这些东西是符号对象
+symbols for A1 and A2. We can see in the workspace now these things are symbolic objects as far
+
+44
+00:04:26,380 --> 00:04:33,350
+就MATLAB而言。我可以重复这个trchain2函数，我现在拥有的是一个
+as MATLAB is concerned. And I can repeat this trchain2 function and what I have now is a
+
+45
+00:04:33,350 --> 00:04:39,250
+这种双连杆机器人机械手姿势的象征性表示。
+symbolic representation of the pose of this two-link robot manipulator.
+
+46
+00:04:43,440 --> 00:04:51,150
+我可以导入一个双链接机械手的模型作为函数mdl_planar2的工具箱，和
+I can import a model of a two-link manipulator as the tool box of function mdl_planar2, and
+
+47
+00:04:51,150 --> 00:04:57,330
+在工作中创建一个名为P2的新对象，它代表了这个机器人操纵器。
+creates a new object in the works based called P2 which represents this robot manipulator.
+
+48
+00:04:57,330 --> 00:05:02,980
+我能做的是我可以再次调用教学方法，在这里我们看到一个双连杆机器人操纵器
+What I can do is I can invoke the teach method again and here we see a two-link robot manipulator
+
+49
+00:05:02,980 --> 00:05:09,550
+我可以调整它的关节角度，看看它是如何移动的。在这里，我们有x和y
+and I can adjust its joint angles and see how it moves. Up here we have the x and y
+
+50
+00:05:09,550 --> 00:05:15,150
+机器人末端执行器的坐标，我们看到在我调整关节角度时更新。
+coordinates of the robot end effector and we see that that updates as I adjust the joint angles.
+
+51
+00:05:15,350 --> 00:05:20,040
+双连杆机械手的一个有趣的事情是有两组关节角度
+An interesting thing with the two-link manipulator is that there are two sets of joint angles
+
+52
+00:05:20,040 --> 00:05:24,900
+这导致相同的末端执行器位置。我将使用情节方法，我要去
+which result in the same end effector position. I'm going to use the plot method and I'm going
+
+53
+00:05:24,900 --> 00:05:31,560
+将机器人移动到一个配置，其中关节一个角度为零并且关节
+to move the robot to a configuration where joint one has got an angle of zero and joint
+
+54
+00:05:31,560 --> 00:05:34,860
+2在两个弧度上具有pi角。
+2 has an angle of pi on two radians.
+
+55
+00:05:34,860 --> 00:05:39,860
+在这里，我们看到了特定配置中的机器人。现在我要把它画进去
+And here we see a robot in that particular configuration. Now I'm going to plot it in
+
+56
+00:05:39,860 --> 00:05:45,030
+一个不同的配置，这个角度将是两个pi，这个角度将是
+a different configuration, that angle is going to be pi on two and this angle is going to
+
+57
+00:05:45,030 --> 00:05:46,660
+在两个上减去pi。
+be minus pi on two.
+
+58
+00:05:46,660 --> 00:05:52,160
+我们看到的是机器人末端执行器具有完全相同的位置。机器人有
+What we see is that the robot end effector has got exactly the same position. Robot has
+
+59
+00:05:52,160 --> 00:05:57,389
+在不同的配置中，末端执行器具有不同的方向但位置
+a different configuration, the end effector has got a different orientation but the position
+
+60
+00:05:57,389 --> 00:05:58,759
+是完全一样的。
+is exactly the same.
+

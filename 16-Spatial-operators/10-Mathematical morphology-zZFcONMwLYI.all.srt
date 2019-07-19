@@ -1,0 +1,330 @@
+1
+00:00:03,409 --> 00:00:08,360
+在本节中，我们将考虑另一个空间图像处理操作
+In this section we are going to consider another spatial image processing operation, goes by
+
+2
+00:00:08,360 --> 00:00:14,110
+数学形态学的相当标题。现在，形态词意味着
+the rather confronting title of mathematical morphology. Now the word morphology means
+
+3
+00:00:14,110 --> 00:00:19,939
+形状，所以这是一种敏感的空间图像处理操作
+shape, so this is a type of spatial image processing operation that is sensitive to
+
+4
+00:00:19,939 --> 00:00:25,460
+形状。输出图像包含与结构元素兼容的形状
+shape. The output image contains shapes that are compatible with a structuring element
+
+5
+00:00:25,460 --> 00:00:32,540
+S.现在，结构元素是一种表示其中像素子集的模式
+S. Now the structuring element is a pattern which represents a subset of pixels within
+
+6
+00:00:32,540 --> 00:00:38,680
+我们希望考虑的输入窗口。一个例子就是说清楚：我们有一个
+the input window that we wish to consider. An example will make that clear: we have a
+
+7
+00:00:38,680 --> 00:00:45,700
+这里设计的例子，简单的二进制场景，黑色像素和包含的白色像素
+contrived example here, simple binary scene, black pixels and white pixels that contain
+
+8
+00:00:45,700 --> 00:00:51,770
+不同大小的正方形和矩形。与之前的动画一样，我们看到了输入
+squares and rectangles of different sizes. As in previous animations, we see the input
+
+9
+00:00:51,770 --> 00:00:56,730
+此处显示的窗口以红色从左到右，从上到下穿过图像。什么
+window shown here in red marching across the image left to right and top to bottom. What
+
+10
+00:00:56,730 --> 00:01:01,800
+在这种情况下不同的是，只有下面的所有像素输出才为真
+is different in this case is that the output is only true if all of the pixels underneath
+
+11
+00:01:01,800 --> 00:01:06,940
+红色的窗口是真的。到目前为止还没有。在一瞬间，我们将看到......这一个
+the red window are true. So far none have been. In a moment we will see… this one
+
+12
+00:01:06,940 --> 00:01:13,410
+特殊情况现在......输出图像包含一个像素。这就是所有的
+particular case now… where the output image contains one pixel. That is where all of the
+
+13
+00:01:13,410 --> 00:01:20,179
+红色行进窗口下面的像素都已设置。你会注意到大部分
+pixels underneath the red marching window were all set. You will notice that most of
+
+14
+00:01:20,179 --> 00:01:24,929
+输入图像中的形状消失了，矩形全部消失了，
+the shapes that were in the input image have disappeared, the rectangles have all disappeared,
+
+15
+00:01:24,929 --> 00:01:30,539
+小广场消失了;唯一保留的形状是大广场。
+the little square has disappeared; the only shape that was retained was the big square.
+
+16
+00:01:30,539 --> 00:01:37,080
+请注意，大方块的形状与红色行进窗口的形状相同。我们只说
+Note that the big square was the same shape as the red marching window. We say that only
+
+17
+00:01:37,080 --> 00:01:42,720
+保留与结构元素兼容的形状-3x3平方。
+shapes that are compatible with the structuring element — a 3 x 3 square — are retained.
+
+18
+00:01:42,720 --> 00:01:47,300
+这个操作也被称为侵蚀，因为这里发生的是我们的
+This operation is also referred to as erosion, because what has happened here is that our
+
+19
+00:01:47,300 --> 00:01:51,890
+3x3平方，即使它是兼容的，已被侵蚀......像素已经
+3 x 3 square, even though it is compatible, has been eroded away … pixels have been
+
+20
+00:01:51,890 --> 00:01:57,069
+咀嚼它的边缘，直到只剩下中心像素。通常会调用此操作
+chewed off its edges until only the centre pixel is left. This operation is often called
+
+21
+00:01:57,069 --> 00:02:03,720
+腐蚀和这个功能可以使用工具箱函数ierode计算;首先
+erosion and this function can be computed using the tool box function ierode; the first
+
+22
+00:02:03,720 --> 00:02:09,200
+参数是图像，第二个参数是结构元素。在这种情况下
+argument is the image and the second argument is the structuring element. In this case it
+
+23
+00:02:09,200 --> 00:02:15,920
+是一个包含3×3矩阵的矩阵。所以我们可以执行逆向操作，
+is a 3 x 3 matrix containing ones. So we can perform the converse operation,
+
+24
+00:02:15,920 --> 00:02:20,750
+这被称为扩张，我们再次在动画中展示这一点。这是3x3游行
+which is called dilation, and again we show this in animation. Here is the 3 x 3 marching
+
+25
+00:02:20,750 --> 00:02:27,580
+窗口，但现在用于扩张，如果红色正方形下面有任何像素，则输出为真
+window, but now for dilation, the output is true if any pixel underneath the red square
+
+26
+00:02:27,580 --> 00:02:33,100
+是真的。到目前为止还没有。现在我们看到有一堆像素正在运行
+is true. So far none have been. Now we see that there are a bunch of pixels are going
+
+27
+00:02:33,100 --> 00:02:38,180
+被设置为红色窗口越过它们并遇到一个像素。
+to be set as the red window marches across them and encounters a one pixel.
+
+28
+00:02:41,440 --> 00:02:46,860
+这个操作被称为扩张，这显然是因为它已经扩张了一个像素
+This operation is called dilation for the obvious reason that it has taken a single pixel, dilated
+
+29
+00:02:46,860 --> 00:02:53,050
+把它长成3x3的形状;事实上，它恢复到原来的形状。
+it, grown it into a 3 x 3 shape; in fact, it is back to the shape that it was originally.
+
+30
+00:02:53,050 --> 00:02:58,810
+这个功能，这个扩张功能，可以使用工具箱功能idilate计算;
+This function, this dilation function, can be computed using tool box function idilate;
+
+31
+00:02:58,810 --> 00:03:05,220
+第一个参数是输入图像，第二个参数是结构元素。
+the first argument is the input image and the second argument is the structuring element.
+
+32
+00:03:05,220 --> 00:03:11,970
+所以这是我们拥有的原始图像，然后我们将其侵蚀为单个像素
+So this was the original image that we had and we eroded it to a single pixel and then
+
+33
+00:03:11,970 --> 00:03:18,220
+我们扩大它，使单个像素成为3x3像素的块。所以你可以看到什么
+we dilated it so that the single pixel became a block of 3 x 3 pixels. So you can see what
+
+34
+00:03:18,220 --> 00:03:23,130
+在这里发生过，我们拍摄了原始图像，我们已经侵蚀了它，扩张了它
+has happened here, we have taken an original image, we have eroded it, dilated it and the
+
+35
+00:03:23,130 --> 00:03:28,530
+只有3x3方形的形状才能完全成型。矩形有
+only shape that made it all the way through was the 3 x 3 square. The rectangles have
+
+36
+00:03:28,530 --> 00:03:33,560
+消失了，小方块消失了，这是因为只有形状
+disappeared and the little square has disappeared and that is because only the shapes that are
+
+37
+00:03:33,560 --> 00:03:39,120
+与结构元素兼容已得到维护。现在这个操作，这个
+compatible with the structuring element have been maintained. Now this operation, this
+
+38
+00:03:39,120 --> 00:03:45,280
+侵蚀随后扩张的序列通常被称为开放。只有兼容
+sequence of erosion followed by dilation, is often called opening. Only the compatible
+
+39
+00:03:45,280 --> 00:03:51,030
+形状仍然存在，我们可以使用函数iopen在工具箱中执行此操作。
+shapes have remained and we can do this in the tool box using the function iopen.
+
+40
+00:03:51,030 --> 00:03:54,850
+让我们尝试以相反的顺序做事。
+Let’s try doing things in the opposite order.
+
+41
+00:03:54,850 --> 00:04:00,720
+让我们先扩张然后腐蚀，所以在扩张步骤中我们可以动画这个，然后
+Let’s dilate first and then erode, so in the dilation step we can animate this, and
+
+42
+00:04:00,720 --> 00:04:07,020
+对于扩张输出，如果行进窗口下方的任何像素为真，则像素为真
+for dilation output pixels are true if any pixel underneath the marching window is true
+
+43
+00:04:07,020 --> 00:04:15,920
+正如我们所期望的那样，扩张形状会变得更大。但另一个有趣的
+and as we would expect for dilation the shape is going to get bigger. But another interesting
+
+44
+00:04:15,920 --> 00:04:21,540
+这种扩张步骤的好处是形状内的孔将被填充
+benefit of this dilation step is that holes within the shape are going to be filled in
+
+45
+00:04:21,540 --> 00:04:25,620
+它已经变得更大，其中的洞已被关闭。
+and it has got bigger and holes within it have been closed up.
+
+46
+00:04:29,420 --> 00:04:36,260
+现在我们有扩张的图像，现在我们可以侵蚀它。因此侵蚀将被扼杀
+Now we have the dilated image, now we can erode it. So erosion is going to chew off
+
+47
+00:04:36,270 --> 00:04:41,680
+在这个特定物体外面的一个像素的条带;它会
+a strip of one pixels all around the outside of this particular object; it is going to
+
+48
+00:04:41,680 --> 00:04:45,740
+将其恢复到原始大小和形状。
+restore it to something like its original size and shape.
+
+49
+00:04:51,480 --> 00:05:01,340
+现在让我们看一下原始图像。然后它的扩张版本。然后是它的侵蚀版本。
+Now let’s look at the original image. Then its dilated version. And then its eroded version.
+
+50
+00:05:01,340 --> 00:05:07,050
+我们可以看到我们有一些看起来像原始形状的东西，除了内部的洞
+And we can see we have something that looks like the original shape, except the hole within
+
+51
+00:05:07,050 --> 00:05:13,380
+它已被填写。此操作称为关闭操作。它倾向于关闭那些
+it has been filled in. This operation is called a closing operation. It tends to close those
+
+52
+00:05:13,380 --> 00:05:19,320
+物体内的洞。所以任何小于结构元素大小的洞-哪个
+holes within an object. So any hole that is smaller than the size of the structuring element — which
+
+53
+00:05:19,320 --> 00:05:25,930
+是一个3x3像素的块-将被填充。这个关闭操作可以使用
+is a 3 x 3 pixel block — will be filled in. This closing operation can be computed using
+
+54
+00:05:25,930 --> 00:05:32,230
+工具箱功能iclose。所以这给我们带来了兼容性的概念
+the tool box function iclose. So this brings us to the notion of compatibility between
+
+55
+00:05:32,230 --> 00:05:37,340
+结构元素和形状。所以这里的结构元素是红色正方形
+a structuring element and a shape. So here a structuring element is a red square and
+
+56
+00:05:37,340 --> 00:05:43,290
+我打算用大方块和薄矩形来测试它。
+I am going to test it against a large square and a thin rectangle.
+
+57
+00:05:43,290 --> 00:05:48,160
+首先，我们将测试大型广场，基本上它是说如果
+So first of all we are going to test the large square and basically it is saying that if
+
+58
+00:05:48,160 --> 00:05:55,780
+我可以将结构元素放入该形状中，它将在侵蚀操作中存活
+I can fit the structuring element within that shape it will survive in an erosion operation
+
+59
+00:05:55,780 --> 00:06:01,479
+或打开操作，但对于高大的薄矩形，其中没有任何地方
+or an opening operation, but for the tall thin rectangle there is nowhere within that
+
+60
+00:06:01,479 --> 00:06:05,780
+结构元素适合的形状。因此，这种形状将无法生存
+shape that the structuring element will fit. So this shape will not survive, it will be
+
+61
+00:06:05,780 --> 00:06:11,620
+在侵蚀步骤中消除。相反，如果我的结构元素是
+eliminated in the erosion step. Conversely, if my structuring element is a
+
+62
+00:06:11,620 --> 00:06:16,750
+高瘦的矩形我们会发现实际上没有这个高大的薄矩形
+tall thin rectangle we will find that there is actually nowhere that this tall thin rectangle
+
+63
+00:06:16,750 --> 00:06:21,930
+可以放在大广场内。所以如果我的结构元素是一个高大的薄矩形，
+can fit inside the large square. So if my structuring element is a tall thin rectangle,
+
+64
+00:06:21,930 --> 00:06:28,210
+这个广场将消失。然而，那个高大的薄矩形会存活，所以形状
+this square will disappear. However, that tall thin rectangle will survive, so the shape
+
+65
+00:06:28,210 --> 00:06:33,699
+结构元素的控制将控制将保留在输出图像中的形状;
+of the structuring element controls the shapes that will be retained in the output image;
+
+66
+00:06:33,699 --> 00:06:36,079
+它是一个对形状敏感的过滤器。
+it is a filter that is sensitive to shape.
+

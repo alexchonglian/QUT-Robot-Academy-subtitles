@@ -1,0 +1,70 @@
+1
+00:00:03,359 --> 00:00:08,340
+欢迎来到机器人视觉课程的最后一个讲座，感谢您的光临。
+Welcome to the last lecture in the Robotic Vision course and thanks for hanging in there.
+
+2
+00:00:08,340 --> 00:00:12,869
+我们已经谈了很多关于图像形成方式，我们如何改变三维图像的方法
+We've talked a lot about the way that images are formed, how we transform the three-dimensional
+
+3
+00:00:12,869 --> 00:00:19,219
+世界变成了二维图像。所有这一切都有一个潜在的假设
+world into a two dimensional image. And an underlying assumption in all of that has been
+
+4
+00:00:19,219 --> 00:00:23,200
+相机静止不动，物体静止不动。
+that the camera is stationary and the object is stationary.
+
+5
+00:00:23,200 --> 00:00:27,980
+那么现在我们要考虑相机移动的情况。第一件事
+Well now we're going to consider the case where the camera is moving. The first thing
+
+6
+00:00:27,980 --> 00:00:33,930
+我们要看一下当相机在太空中移动时图像是如何变化的。
+we're going to look at then is how does the image change as the camera moves through space.
+
+7
+00:00:33,930 --> 00:00:38,149
+然后我们将翻转并说，让我们说我有一些东西的形象
+And then we're going to flip it around and say, let's say that I've got an image of something
+
+8
+00:00:38,149 --> 00:00:43,350
+在图像中看起来像这样，我希望它在图像中看起来像这样。我们是什么
+that looks like this in the image and I want it to look like this in the image. What we're
+
+9
+00:00:43,350 --> 00:00:48,539
+试图解决的是相机应该如何移动才能改变图像
+going to try to work out is how should the camera move in order to change the image from
+
+10
+00:00:48,539 --> 00:00:49,859
+对此。
+this to this.
+
+11
+00:00:49,859 --> 00:00:54,830
+相机必须改变它的视角，所以我们想直接解决相机的问题
+The camera has to change its viewpoint and so we want to work out directly how the camera
+
+12
+00:00:54,830 --> 00:00:59,909
+应该移动，以实现这一目标。这是一种称为“基于视觉的控制”的技术
+should move in order to make that happen. This is a technique called "Vision Based Control"
+
+13
+00:00:59,909 --> 00:01:03,900
+有时被称为“视觉伺服”，这是我花了很多钱的主题
+sometimes called "Visual Servoing" and is a topic that I've spent a good deal of my
+
+14
+00:01:03,900 --> 00:01:05,180
+生活在思考。
+life thinking about.
+

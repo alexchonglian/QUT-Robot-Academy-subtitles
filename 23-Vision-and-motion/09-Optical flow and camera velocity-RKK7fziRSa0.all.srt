@@ -1,0 +1,285 @@
+1
+00:00:03,419 --> 00:00:08,570
+我们已经讨论过像素速度-或图像平面速度-是如何相关的
+We have already discussed how the pixel velocity — or the image plane velocity — is related
+
+2
+00:00:08,570 --> 00:00:15,370
+通过图像雅可比矩阵得到相机速度。但是，这些数量都是相互关联的。
+to the camera velocity by the image Jacobian matrix. But, these quantities are all interrelated.
+
+3
+00:00:15,370 --> 00:00:21,220
+如果我们知道一些，我们可以使用该信息来估计其他人。雅可比矩阵取决于
+If we know some, we can use that information to estimate others. The Jacobian matrix depends
+
+4
+00:00:21,220 --> 00:00:26,580
+在一个恒定的参数上非常清楚：f-hat-与焦距有关;这取决于
+very clearly on a constant parameter: f-hat — related to the focal length; it depends
+
+5
+00:00:26,580 --> 00:00:33,300
+在点u和v的图像平面坐标上;它还取决于的深度
+on image plane coordinate of a point u and v; and it also depends on the depth of the
+
+6
+00:00:33,300 --> 00:00:38,820
+point-3D空间中点的Z坐标。值得注意的是，有趣的是
+point — the Z coordinate of the point in 3D space. It is interesting to note that the
+
+7
+00:00:38,820 --> 00:00:45,480
+点的深度-资本Z仅出现在图像雅可比矩阵的前三列中。
+depth of the point — Capital Z occurs only in the first three columns of the image Jacobian matrix.
+
+8
+00:00:45,820 --> 00:00:50,520
+假设我们想利用这种相互关系来估计到点的距离。
+Let's say we want to use this interrelationship to estimate the distance to a point.
+
+9
+00:00:50,520 --> 00:00:55,610
+如果我们观察一系列图像中的一个点，我们就可以计算出它的速度
+If we look at a point across a sequence of images we can compute its velocity in the
+
+10
+00:00:55,610 --> 00:01:01,059
+图像平面。我们知道图像平面上的点的坐标，我们可以测量
+image plane. We know the coordinate of the point on the image plane, and we can measure
+
+11
+00:01:01,059 --> 00:01:05,080
+使用像惯性测量单元这样的相机速度，可以说明
+the camera velocity using something like an inertial measurement unit, which would tell
+
+12
+00:01:05,080 --> 00:01:10,630
+我们的旋转速度，也给我们速度。所以，如果我们知道这三个
+us the rotational velocities and also give us the velocity. So if we know these three
+
+13
+00:01:10,630 --> 00:01:16,549
+事情然后，解决到点的距离是相当直接的。
+things then it is reasonably straightforward to solve for the distance to the point.
+
+14
+00:01:16,549 --> 00:01:20,150
+现在考虑我们想要估计相机速度的问题。
+Consider now the problem where we want to estimate the speed of the camera.
+
+15
+00:01:20,150 --> 00:01:24,390
+因此，我们可以通过查看场景中的某些点来再次测量像素速度
+So we can again measure the pixel velocity by looking at some points in a scene across
+
+16
+00:01:24,390 --> 00:01:30,430
+一系列图像。我们知道图像中某点的u和v坐标。在这
+a sequence of images. We know the u and v coordinate of a point in the image. In this
+
+17
+00:01:30,430 --> 00:01:34,619
+我们需要确定到点的距离，我们可以使用类似立体声的东西
+case we need to determine the distance to the point and we can use something like stereo
+
+18
+00:01:34,619 --> 00:01:39,670
+愿意告诉我们一个物体远离相机的距离。一旦我们有这三个
+vision to tell us how far an object is away from the camera. Once we have these three
+
+19
+00:01:39,670 --> 00:01:44,920
+然后我们可以解决相机速度的信息。和像这样的技术
+pieces of information then we can solve for the camera velocity. And a technique like
+
+20
+00:01:44,920 --> 00:01:50,590
+这被称为视觉测距。里程表是移动机器人上的设备
+this is referred to as visual odometry. An odometer is a device on a mobile robot that
+
+21
+00:01:50,590 --> 00:01:55,579
+计算车轮的旋转以确定您移动的距离。视觉
+counts the rotation of the wheels to determine how far it is that you have moved. Visual
+
+22
+00:01:55,579 --> 00:02:01,259
+odometry提供相同的信息，但实际上并不需要车轮和里程表。
+odometry provides the same information, but doesn't actually require a wheel and an odometer.
+
+23
+00:02:01,259 --> 00:02:07,009
+它通过观察世界如何流过相机来估计这一点。
+It estimates this by observing how the world is flowing past the camera.
+
+24
+00:02:07,009 --> 00:02:09,989
+让我们考虑一个视觉测距的简单例子。
+Let's consider a simple example of visual odometry.
+
+25
+00:02:09,989 --> 00:02:14,140
+这是我们以前见过的表达，但我突出了两个子矩阵;他们
+This is an expression that we have seen before, but I have highlighted two sub-matrices; they
+
+26
+00:02:14,140 --> 00:02:21,690
+都是1x3子矩阵。我将把它们中的一个表示为Jsubu，其中一个表示为Jsub
+are both 1x3 sub-matrices. I am going to denote one of them J sub u and one of them as J sub
+
+27
+00:02:21,690 --> 00:02:27,690
+v。我们假设机器人在X，Y平面上移动，并且世界是一个常数
+v. We assume that the robot is moving in the X,Y plane and that the world is a constant
+
+28
+00:02:27,690 --> 00:02:30,540
+离机器人的距离。
+distance away from the robot.
+
+29
+00:02:30,540 --> 00:02:36,310
+我们谈到过光流。在特定的像素坐标处，我们可以确定它的速度
+We've talked about optical flow. At a particular pixel coordinate we can determine it’s velocity
+
+30
+00:02:36,310 --> 00:02:42,940
+在图像平面中，它为我们提供了信息u-dot和v-dot。我们可以使用惯性测量
+in the image plane and that gives us the information u-dot and v-dot. We can use an inertial measurement
+
+31
+00:02:42,940 --> 00:02:48,230
+单元。我们可以使用这个特定传感器测量的瞬时角速度
+unit. We can use the instantaneous angular velocity measured by this particular sensor
+
+32
+00:02:48,230 --> 00:02:53,280
+我们可以将其替换为元素omega-X的空间速度向量，
+and we can substitute that into the spatial velocity vector for the elements omega-X,
+
+33
+00:02:53,280 --> 00:03:00,590
+omega-Y和omega-Z。因为机器人相对于恒定的距离移动
+omega-Y, and omega-Z. Because the robot is moving at a constant distance with respect
+
+34
+00:03:00,590 --> 00:03:07,440
+对于世界，Z是已知的，Z是常数，所以我们可以说vZ是近似的
+to the world then Z is known, and Z is constant, so we can say that the vZ is approximately
+
+35
+00:03:07,440 --> 00:03:12,450
+等于零。雅可比图像中有一些元素并不特别
+equal to zero. There are some elements in the image Jacobian that are not particularly
+
+36
+00:03:12,450 --> 00:03:17,849
+重大。它们的值接近零，所以作为一阶近似，我们可以
+significant. Their value is close to zero, so as a first order approximation we can just
+
+37
+00:03:17,849 --> 00:03:21,830
+把它们留下来结果就是我们可以写一个简化的
+leave them out. The result then is that we can write a simplified
+
+38
+00:03:21,830 --> 00:03:28,450
+根据vX和vY表示u-dot和v-dot，摄像机的速度
+expression for u-dot and v-dot in terms of vX and vY, the velocity of the camera which
+
+39
+00:03:28,450 --> 00:03:33,220
+实际上是我们试图确定的信息，以及物距
+is actually the information that we are trying to determine, as well as the object distance
+
+40
+00:03:33,220 --> 00:03:39,400
+-世界距离，雅可比图像的子矩阵和角速度
+— the world distance, the sub-matrices of the image Jacobian, and the angular velocity
+
+41
+00:03:39,400 --> 00:03:44,030
+相机我们可以重新排列这个以获得表达式
+of the camera. We can rearrange this to get expressions for
+
+42
+00:03:44,030 --> 00:03:49,739
+根据我们能够测量的各种数量，相机的速度。
+the velocity of the camera in terms of various quantities that we are able to measure.
+
+43
+00:03:49,739 --> 00:03:55,019
+所以没有车轮，没有实际的编码器或里程表，我们可以估算
+So without having a wheel and without having an actual encoder or an odometer we can estimate
+
+44
+00:03:55,019 --> 00:03:58,640
+当我们的飞机在空中移动时，它的速度。
+the velocity of our aircraft, as it's moving through the air.
+
+45
+00:03:58,640 --> 00:04:04,489
+视觉里程表非常适合没有传统里程表的机器人。该
+Visual odometry is really well suited to robots that don't have conventional odometers. The
+
+46
+00:04:04,489 --> 00:04:08,170
+传统的里程表要求你有一个轮子和某种计数器
+conventional odometer requires that you have got a wheel and some kind of counter that
+
+47
+00:04:08,170 --> 00:04:12,879
+告诉你车轮转了多少次。如果它是飞行机器人或它是在水下
+tells you how many times the wheel has turned. If it is a flying robot or if it is an underwater
+
+48
+00:04:12,879 --> 00:04:18,739
+机器人，然后它没有轮子，然后视觉里程计是一个非常有用的传感模式。
+robot then it doesn't have wheels and then visual odometry is a really useful sensing modality.
+
+49
+00:04:18,739 --> 00:04:23,540
+所以在这里我们可以看到水下机器人。它正在使用其立体相机来维持
+So here we can see the underwater robot. It is using its stereo cameras to maintain a
+
+50
+00:04:23,540 --> 00:04:28,889
+海床上空恒定的高度。它还计算光流。它正在结合
+constant altitude above the seabed. It is also computing optical flow. And it is combining
+
+51
+00:04:28,889 --> 00:04:32,780
+具有来自立体视觉的高度信息，并结合使用
+that with the height information that comes from the stereo vision, and combined with
+
+52
+00:04:32,780 --> 00:04:37,870
+来自车载陀螺仪的一些信息-它赋予它'角速率-以便
+some information from onboard gyroscopes — which give it its' angular rate — in order to
+
+53
+00:04:37,870 --> 00:04:42,270
+确定它相对于海床的速度。例如，如果有海洋
+determine its velocity with respect to the seabed. If, for example, there is an ocean
+
+54
+00:04:42,270 --> 00:04:47,020
+当前将机器人推向侧面，然后视觉测距会将其拾起。这里将
+current pushing the robot sideways then the visual odometry will pick this up. There will
+
+55
+00:04:47,020 --> 00:04:53,290
+是速度的Y分量，然后机器人上的控制系统可以应用
+be a Y component of velocity and then the control system onboard the robot can apply
+
+56
+00:04:53,290 --> 00:04:59,070
+适当的螺旋桨推力，以对抗。所以视觉测距法告诉机器人
+appropriate propeller thrust in order to counter that. So visual odometry is telling the robot
+
+57
+00:04:59,070 --> 00:05:02,270
+它相对于海床的真实速度。
+its true velocity with respect to the seabed.
+

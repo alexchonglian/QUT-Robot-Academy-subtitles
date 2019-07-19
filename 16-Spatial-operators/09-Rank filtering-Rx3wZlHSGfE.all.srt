@@ -1,0 +1,200 @@
+1
+00:00:03,510 --> 00:00:07,240
+在本节中，我们将讨论不同类型的空间图像处理
+In this section we are going to look at a different type of spatial image processing
+
+2
+00:00:07,240 --> 00:00:12,460
+操作。为了说明这一点，我将采取蒙娜丽莎的形象，我选择了
+operation. To illustrate this I am going to take the Mona Lisa image and I have chosen
+
+3
+00:00:12,460 --> 00:00:17,109
+图像中有大量的随机像素，我将它们设置为0或1。
+a large number of random pixels within the image and I have set them to either 0 or 1.
+
+4
+00:00:17,109 --> 00:00:23,250
+这有时被称为散斑噪声或盐和胡椒噪声。图像现在已损坏;
+This is sometimes called speckle noise or salt and pepper noise. The image now is corrupted;
+
+5
+00:00:23,250 --> 00:00:26,670
+它上面有大量的白色和黑色斑点。
+it has got a large number of white and black spots on it.
+
+6
+00:00:28,940 --> 00:00:34,760
+尝试降低这种噪音影响的一种方法是计算平均值。我们有
+One way to try and reduce the effect of this noise would be to compute an average. We have
+
+7
+00:00:34,760 --> 00:00:41,269
+之前看到平均操作如何趋于模糊并减少精细细节，所以如果
+seen before how the averaging operation tends to blur out and reduce fine detail, so if
+
+8
+00:00:41,269 --> 00:00:48,149
+我计算了这个噪声损坏图像的平均值，我们可以看到这些图像的强度
+I compute the average of this noise-corrupted image we can see that the intensity of these
+
+9
+00:00:48,149 --> 00:00:52,620
+噪声像素已经减少了，但它们也趋向于变得更大。他们有
+noise pixels has got less, but they have also tended to get a little bit bigger. They have
+
+10
+00:00:52,620 --> 00:00:57,989
+被涂抹了，它们现在变得更宽，但它们与背景不同。
+been smeared out, they are now wider, but they are not as distinct from the background.
+
+11
+00:00:57,989 --> 00:01:03,929
+如果我增加用于平均的内核的大小，我们可以看到盐
+If I increase the size of the kernel that we use for averaging we can see that the salt
+
+12
+00:01:03,929 --> 00:01:08,960
+胡椒噪音或许几乎完全消失了，但也有一些抵押品
+and pepper noise has perhaps almost completely disappeared, but there has been some collateral
+
+13
+00:01:08,960 --> 00:01:14,960
+损坏，现在的图像非常模糊。那么有没有办法减少这种盐
+damage, the image now is quite blurry. So is there a way that we can reduce this salt
+
+14
+00:01:14,960 --> 00:01:20,830
+胡椒噪音没有删除我们想要的图像中的细节？
+and pepper noise without removing the fine detail in the image that we want?
+
+15
+00:01:20,830 --> 00:01:25,970
+事实上，这种技术称为秩过滤，所以要看看它是如何工作的
+And indeed there is, the technique called rank filtering, so to look at how this works we
+
+16
+00:01:25,970 --> 00:01:32,050
+将放大原始图像的一个非常小的3×3补丁，我们看到一些
+are going to zoom in on a very small 3 by 3 patch of the original image and we see some
+
+17
+00:01:32,050 --> 00:01:39,350
+此处的灰度值和它们通常在120到130左右-灰度值
+grey level values here and they are typically around 120 to 130 — the grey level values
+
+18
+00:01:39,350 --> 00:01:44,180
+应该在这个特定的区域-我们看到像素的值为0......这个
+that should be at this particular region — and we see that pixel has got a value of 0 … this
+
+19
+00:01:44,180 --> 00:01:48,400
+是一个噪声像素。如果我们计算此窗口的平均值，
+is a noise pixel. If we compute the average over this window,
+
+20
+00:01:48,400 --> 00:01:54,290
+我们看到它的值为110.现在这个值比其他值略低
+we see that it has a value of a 110. Now this value is a bit lower than the other values
+
+21
+00:01:54,290 --> 00:01:58,710
+在这附近;我们可能不会期望这里的值为110。
+that are around here; we probably wouldn’t be expecting a value of a 110 here.
+
+22
+00:01:58,710 --> 00:02:04,210
+而发生的事情是这个0值远离应该的值
+And what has happened is that this value of 0 is so far away from the values that should
+
+23
+00:02:04,210 --> 00:02:09,670
+在这里它已经拉低了平均值，它影响了平均值。
+be here that it has pulled the average down, it’s influenced the average.
+
+24
+00:02:09,670 --> 00:02:14,249
+我们想要一种不同的统计量，实际上就像中值这样的统计量
+We want a different sort of statistic, and a statistic like the median value is actually
+
+25
+00:02:14,249 --> 00:02:21,060
+更有帮助。因此，这个3乘3中位数的中值将是123，那就是
+more helpful. So the median value across this 3 by 3 median would be a 123 and that would
+
+26
+00:02:21,060 --> 00:02:28,409
+或许可以更好地猜测该位置的值应该是多少。我们怎么样
+perhaps be a much better guess at what the value should be at this location. How do we
+
+27
+00:02:28,409 --> 00:02:32,519
+计算中位数？那么计算中位数的最简单方法就是采用所有的方法
+compute the median? Well the simplest way to compute the median is to take all of the
+
+28
+00:02:32,519 --> 00:02:37,819
+在这个3乘3的窗口内的值，并将它们从最大到最小堆叠起来。
+values within this 3 by 3 window and stack them up from the largest through to the smallest.
+
+29
+00:02:37,819 --> 00:02:45,430
+我们将对它们进行排名，排名第1像素是此窗口中的最大值。
+We are going to rank them and rank number 1 pixel is the maximum value within this window.
+
+30
+00:02:45,430 --> 00:02:52,379
+等级9是此窗口中的最小值。等级5是中值和
+Rank 9, is the minimum value within this window. And rank 5 is the median value and
+
+31
+00:02:52,379 --> 00:02:58,019
+它是我们感兴趣的中值。所以让我们将中值滤波器应用于Mona
+it is the median value we are interested in. So let’s apply a median filter to the Mona
+
+32
+00:02:58,019 --> 00:03:04,459
+丽莎形象。在那里，她有盐和胡椒的声音，在这里她就是我们拥有的
+Lisa image. There she is with the salt and pepper noise and here she is after we have
+
+33
+00:03:04,459 --> 00:03:09,760
+使用3乘3中值滤波器-我们可以看到噪声的影响是显着的
+applied a 3 by 3 median filter — we can see that the effect of the noise has been dramatically
+
+34
+00:03:09,760 --> 00:03:14,409
+减少了，但图像中的细节大部分都保留了下来。
+reduced, but the fine detail in the image has been mostly retained.
+
+35
+00:03:14,409 --> 00:03:19,639
+为了计算这个，我们使用工具箱函数irank。第一个参数是输入图像。
+To compute this we use the tool box function irank. First argument is the input image.
+
+36
+00:03:19,639 --> 00:03:25,379
+这种情况下蒙娜丽莎会被噪音破坏，第二个参数是3乘3矩阵
+This case it would be noise corrupted Mona Lisa, the second argument is a 3 by 3 matrix
+
+37
+00:03:25,379 --> 00:03:31,290
+其中，表示我们想要计算中位数的区域的大小。
+of ones, which indicates the size of the region over which we want to compute the median.
+
+38
+00:03:31,290 --> 00:03:36,379
+最后一个参数5是我们想要选择的等级。因为我们已经要求了
+And the last argument 5 is the rank that we want to choose. Because we have asked for
+
+39
+00:03:36,379 --> 00:03:44,629
+中位数超过3乘3的窗口，等级5是其中九个要素的中间值
+median over a 3 by 3 window, rank 5 is the middle value of the nine elements within that
+
+40
+00:03:44,629 --> 00:03:44,650
+窗口。
+window.
+

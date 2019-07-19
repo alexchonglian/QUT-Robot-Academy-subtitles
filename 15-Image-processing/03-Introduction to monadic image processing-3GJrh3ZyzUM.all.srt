@@ -1,0 +1,115 @@
+1
+00:00:03,879 --> 00:00:10,370
+在monadic图像处理中，我们采用输入图像，并将功能应用于每一个
+In monadic image processing we take an input image and we apply a function to every single
+
+2
+00:00:10,370 --> 00:00:15,670
+该图像中的像素。函数的结果应用于特定的
+pixel in that image. The result of the function applied to a particular
+
+3
+00:00:15,670 --> 00:00:22,140
+输入图像中的像素被分配给输出图像中的相应像素，并且
+pixel in the input image is assigned to the corresponding pixel in the output image, and
+
+4
+00:00:22,140 --> 00:00:26,099
+我们对图像中的每个像素使用相同的函数。
+we use the same function for every pixel within the image.
+
+5
+00:00:26,099 --> 00:00:32,539
+让我们来看看这个低分辨率的例子，以了解它在实践中是如何工作的。
+Let’s have a look at this low-resolution example to get an idea of how it works in practice.
+
+6
+00:00:32,540 --> 00:00:35,200
+所以我们有一个函数，我们将其应用于
+So we have a function, which we apply to the
+
+7
+00:00:35,210 --> 00:00:40,460
+第一个像素输入图像，并将结果分配给输出中的第一个像素
+first pixel input image, and the result is assigned to the first pixel in the output
+
+8
+00:00:40,460 --> 00:00:45,930
+图片。然后我们为第二个像素和第三个像素做同样的事情，依此类推，
+image. And then we do the same thing for the second pixel and the third pixel and so on,
+
+9
+00:00:45,930 --> 00:00:49,750
+直到我们处理了图像中的每个像素。
+until we have processed every single pixel within the image.
+
+10
+00:00:49,750 --> 00:00:55,530
+现在这里的演示是连续的;我们将它应用于一个接一个的像素。
+Now the demonstration here is sequential; we have applied it to one pixel after another.
+
+11
+00:00:55,530 --> 00:01:02,040
+如果计算机具有显着的并行处理能力，则可以应用该功能
+If the computer has significant parallel processing power then it is possible to apply the function
+
+12
+00:01:02,040 --> 00:01:04,320
+并行的所有像素。
+to all of the pixels in parallel.
+
+13
+00:01:06,060 --> 00:01:09,520
+那么我们使用的函数f（x）是什么呢？
+So what is this function f(x) that we used
+
+14
+00:01:09,530 --> 00:01:14,710
+在前面的例子中？那么我们可以使用许多非常有用的功能。
+in the previous example? Well there are lots of really useful functions that we could use.
+
+15
+00:01:14,710 --> 00:01:19,960
+第一个也许是我们可以取输入像素的平方根。
+The first is, perhaps, we could take the square root of the input pixel.
+
+16
+00:01:19,960 --> 00:01:24,689
+我们可以做的另一件事是改变输入像素的类型。也许我们可以转换
+Another thing we could do is change the type of the input pixel. Perhaps we could convert
+
+17
+00:01:24,689 --> 00:01:28,819
+无符号整数像素为双像素，反之亦然。
+unsigned integer pixels into double pixels or vice versa.
+
+18
+00:01:28,819 --> 00:01:33,590
+也许我们可以通过对每个图像进行操作来改变图像的亮度或对比度
+Maybe we could change the brightness or the contrast of the image by operating on each
+
+19
+00:01:33,590 --> 00:01:37,670
+像素单独。我们可以执行一个名为直方图的功能
+pixel individually. We could perform a function called histogram
+
+20
+00:01:37,670 --> 00:01:42,069
+归一化，我们将在下一节中讨论这个问题。
+normalisation, and we will talk about that in a following section.
+
+21
+00:01:42,069 --> 00:01:46,319
+我们可以执行一个名为thresholding的操作，我们也将在即将到来的时候讨论
+We could perform an operation called thresholding, which we will also talk about in upcoming
+
+22
+00:01:46,319 --> 00:01:50,569
+部分。我们可以进行艺术性的转型
+section. And we could perform an arty kind of transformation
+
+23
+00:01:50,569 --> 00:01:54,559
+我们将在很短的时间内再次讨论这个问题。
+called posterization, and again we will talk about that very shortly.
+

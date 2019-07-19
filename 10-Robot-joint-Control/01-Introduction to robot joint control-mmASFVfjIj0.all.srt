@@ -1,0 +1,135 @@
+1
+00:00:03,500 --> 00:00:07,470
+在这个讲座中，我们将讨论机器人联合控制。那就是我们的实际情况
+In this lecture, we're going to talk about Robot Joint Control. That's how do we actually
+
+2
+00:00:07,470 --> 00:00:12,920
+使机器人移动。这是一个非常重要的问题。所以，使用一些原则
+make a robot move. It's a really important problem. So, using some of the principles
+
+3
+00:00:12,920 --> 00:00:17,529
+我们已经在本课程中学到了什么，我们在这里有一个机器人，我们会说，
+that we've already learned about in this course, we have a robot here and we're going to say,
+
+4
+00:00:17,529 --> 00:00:22,770
+“我希望机器人末端执行器处于这种特殊姿势。”这是一个约束条件
+"I want the robot end-effector to be at this particular pose." This is a constraint that
+
+5
+00:00:22,770 --> 00:00:26,300
+来自我正在尝试的特定任务。我是一个机器人手臂，我想选择
+comes from the particular task that I'm trying to do. I'm a robot arm and I want to pick
+
+6
+00:00:26,300 --> 00:00:31,690
+然后我知道机器人末端执行器必须达到的姿势。
+up this particular object then I know the pose that the robot end-effector has to achieve.
+
+7
+00:00:31,690 --> 00:00:36,640
+现在，我可以使用反向运动学来告诉我角度应该是什么
+Now, I can use the inverse kinematics to tell me what should be the angles in the
+
+8
+00:00:36,640 --> 00:00:41,960
+机器人手臂的关节，以便手臂的末端达到特定的姿势。
+joints of the robot arm in order for the end of the arm to get to that particular pose.
+
+9
+00:00:41,960 --> 00:00:46,850
+所以，我们已经讨论过如何做到这一点。这是反向运动学问题。挑战
+So, we’ve talked about how to do this. This is the inverse kinematic problem. The challenge
+
+10
+00:00:46,850 --> 00:00:51,460
+我们将在本讲座中讨论的是如何实际联合采用
+that we’re going to talk about in this lecture is how do I actually make the joint adopt
+
+11
+00:00:51,460 --> 00:00:56,050
+一个特定的角度。这个关节有一个马达。它里面有一些传感器。所以我们是
+a particular angle. The joint’s got a motor in it. It’s got some sensors in it. So we’re
+
+12
+00:00:56,050 --> 00:01:01,080
+谈谈使关节具有特定角度的控制系统
+going to talk about the control system that makes the joint have the particular angle
+
+13
+00:01:01,080 --> 00:01:05,450
+我们希望它拥有。这是联合控制问题。
+that we want it to have. This is the joint control problem.
+
+14
+00:01:05,450 --> 00:01:11,659
+现在，这个企业试图控制电机的位置来控制角度
+Now, this business of trying to control the position of a motor to control the angle of
+
+15
+00:01:11,659 --> 00:01:16,920
+机器人关节是机电一体化中非常普遍的问题。有很多很多动作
+a robot joint is a really common problem in mechatronics. There are many, many motion
+
+16
+00:01:16,920 --> 00:01:21,049
+控制系统在我们拥有的各种事物中，我们可能甚至都不知道
+control systems in all sorts of things that we own that we probably don’t even know
+
+17
+00:01:21,049 --> 00:01:25,470
+他们在那里。在喷墨打印机中，有一个非常精确的运动控制系统
+that they’re there. In an ink jet printer, there is a very precise motion control system
+
+18
+00:01:25,470 --> 00:01:27,950
+那就是将打印头移到纸上。
+that’s moving the printing print head across the paper.
+
+19
+00:01:27,950 --> 00:01:33,490
+另一个运动控制系统是将纸张向后和向前移动通过打印机。
+Another motion control system is moving the paper backwards and forwards through the printer.
+
+20
+00:01:33,490 --> 00:01:37,890
+机器人吸尘器有一个运动控制系统来控制每个吸尘器的速度
+A robot vacuum cleaner has got a motion control system to control the speed of each of its
+
+21
+00:01:37,890 --> 00:01:42,810
+轮子使其以适当的速度在地板上移动。
+wheels so that it moves with the appropriate velocity across the floor.
+
+22
+00:01:42,810 --> 00:01:49,100
+在计算机或DVD驱动器的硬盘驱动器中，有一个头部
+Within a hard disk drive in your computer or within DVD drive, there is a head which
+
+23
+00:01:49,100 --> 00:01:57,899
+从旋转磁盘读取信息。它必须精确定位
+reads the information off the spinning disk. It has to be positioned really precisely over
+
+24
+00:01:57,899 --> 00:01:59,299
+磁盘的表面。
+the disk’s surface.
+
+25
+00:01:59,299 --> 00:02:04,759
+这种运动控制系统是现代非常普遍的技术
+This motion control systems are very, very pervasive pieces of technology in the modern
+
+26
+00:02:04,759 --> 00:02:09,380
+世界。因此，我们今天要学习的是一个非常特殊的动作案例
+world. So, what we’re going to learn about today is a very particular case of a motion
+
+27
+00:02:09,380 --> 00:02:14,740
+控制系统。它是一个控制机器人关节角度的运动控制系统。
+control system. It’s a motion control system that’s controlling the angle of a robot’s joint.
+

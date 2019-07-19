@@ -1,0 +1,515 @@
+1
+00:00:03,419 --> 00:00:06,769
+让我们用现实世界的图像将其中的一部分付诸实践。
+Let’s put some of this into practice with a real world image.
+
+2
+00:00:06,769 --> 00:00:15,700
+我将在实验室中加载一个包含一些西红柿的场景图像，
+I am going to load an image of a scene that comprises some tomatoes on a bush in a lab,
+
+3
+00:00:15,700 --> 00:00:21,020
+我将转换图像，以便像素在MATLAB中存储为double
+and I am going to convert the image so that the pixels are stored inside MATLAB as double
+
+4
+00:00:21,020 --> 00:00:22,390
+精确数字。
+precision numbers.
+
+5
+00:00:22,390 --> 00:00:30,720
+所以我们可以看一下广告中的图像：它里面有一些西红柿
+So we can have a look at the image as advertised: it contains some tomatoes on a bush inside
+
+6
+00:00:30,720 --> 00:00:32,050
+实验室-实际上在麻省理工学院。
+a lab — at MIT, actually.
+
+7
+00:00:32,050 --> 00:00:38,149
+如果我点击图像，我们可以看到番茄中的像素已经相当
+If I click around on the image we can see that the pixels in the tomato have got quite
+
+8
+00:00:38,149 --> 00:00:42,809
+大量的红色，65％的红色，绿色不多，蓝色不多。
+a large amount of red, 65 per cent red, not much green, not much blue.
+
+9
+00:00:42,809 --> 00:00:48,829
+现在，叶子，例如茎，含有比红色或蓝色更多的绿色。
+Now the leaves, the stems for instance, contain more green than they do red or blue.
+
+10
+00:00:48,829 --> 00:00:53,920
+番茄图像很有趣;西红柿实际上非常有光泽，如果我点击一下
+The tomato images are interesting; the tomatoes are actually quite shiny and if I click around
+
+11
+00:00:53,920 --> 00:00:58,949
+在这里，我们看到该值实际上更接近白色而不是红色。
+here we see that the value is actually closer to white than it is to red.
+
+12
+00:00:58,949 --> 00:01:03,170
+这个区域在这里我们称之为镜面高光。
+This region here we refer to as a specular highlight.
+
+13
+00:01:03,170 --> 00:01:08,409
+发生的事情是房间内的明亮光线从表面反射出来
+What has happened is that bright light within the room is reflecting off the surface of
+
+14
+00:01:08,409 --> 00:01:14,659
+西红柿是一种镜面而不是淡化的方式，在这种情况下，光没有
+the tomato in a specular rather than a defuse fashion and in this case the light has not
+
+15
+00:01:14,659 --> 00:01:18,140
+拿起水果的颜色，基本上我们在这里看到的是颜色
+picked up the color of the fruit, it is basically what we are seeing here is the color of the
+
+16
+00:01:18,140 --> 00:01:19,659
+光源本身。
+light source itself.
+
+17
+00:01:19,659 --> 00:01:26,619
+我们已经讨论了几次伽玛编码信息的过程
+We have talked a couple of times already about the process of gamma encoding the information
+
+18
+00:01:26,619 --> 00:01:28,579
+在文件中的图像内。
+within an image in a file.
+
+19
+00:01:28,579 --> 00:01:34,359
+但我想要做的是取消伽玛编码;我想应用伽玛
+But what I would like to do is to undo that gamma encoding; I would like to apply a gamma
+
+20
+00:01:34,359 --> 00:01:39,229
+校正或伽玛解码，我可以通过传入iread功能
+correction or gamma decoding and I can do that with the iread function by passing in
+
+21
+00:01:39,229 --> 00:01:44,390
+一个额外的参数，并传递我想要应用的伽玛值
+an extra argument and passing in the gamma value that I would like to have applied to
+
+22
+00:01:44,390 --> 00:01:45,929
+每个像素。
+every pixel.
+
+23
+00:01:45,929 --> 00:01:52,569
+因此，这将消除相机观察到的亮度之间的非线性
+So this will eliminate the non-linearity between the luminance that the camera observed and
+
+24
+00:01:52,569 --> 00:01:57,380
+我在MATLAB工作区中的像素值。
+the pixel values that I have in my MATLAB workspace.
+
+25
+00:01:57,380 --> 00:02:02,170
+如果我显示这个经过伽马校正的图像，我们会发现它看起来很不寻常
+If I display this gamma corrected image we will see that it looks rather unusual, it
+
+26
+00:02:02,170 --> 00:02:06,970
+看起来实际上非常黑暗，正如之前所解释的那样，这里发生了什么
+looks actually quite dark and as explained before what has happened here is that the
+
+27
+00:02:06,970 --> 00:02:09,790
+伽马校正现已应用两次。
+gamma correction has now been applied twice.
+
+28
+00:02:09,790 --> 00:02:14,790
+我已经在软件和我正在查看图像的显示器上应用了一次
+I have applied it once in software and the monitor that I am looking at the image on
+
+29
+00:02:14,790 --> 00:02:17,370
+也正在应用伽马校正。
+is also applying the gamma correction.
+
+30
+00:02:17,370 --> 00:02:21,709
+因此，我工作区中的值现在是线性的，这看起来并不正确
+So it doesn’t look right that the values that I have in my workspace are now linearly
+
+31
+00:02:21,709 --> 00:02:25,709
+与进入镜头镜头的光有关。
+related to the light that went into the lens of the camera.
+
+32
+00:02:25,709 --> 00:02:30,530
+所以接下来我要做的就是显示一个颜色平面
+So the next thing that I would like to do is just to display one of the color planes
+
+33
+00:02:30,530 --> 00:02:31,530
+在这张图片中。
+in this image.
+
+34
+00:02:31,530 --> 00:02:38,070
+所以让我们显示红色的飞机，它就在这里，我们可以看到番茄
+So let’s display the red plane and here it is here, and we can see that the tomato
+
+35
+00:02:38,070 --> 00:02:42,760
+水果在这里看起来很明亮，因为它们反射了大量的红光，而在
+fruits are looking quite bright here because they reflect a lot of red light, whereas in
+
+36
+00:02:42,760 --> 00:02:46,870
+绿色的飞机，我们看到水果看起来非常，非常，黑暗。
+the green plane we see that the fruit looks very, very, dark.
+
+37
+00:02:46,870 --> 00:02:49,000
+我们将颜色值分开。
+Let’s separate out the color values.
+
+38
+00:02:49,000 --> 00:02:55,629
+我将创建一个名为R的新工作区变量，其中包含每行中的像素
+I am going to create a new workspace variable called R which contains pixels in every row
+
+39
+00:02:55,629 --> 00:02:58,599
+以及属于第一个平面的每一列。
+and every column that belong to plane one.
+
+40
+00:02:58,599 --> 00:03:04,060
+我将为绿色飞机做类似的事情，我将做类似的事情
+I am going to do a similar thing for the green plane and I am going to do a similar thing
+
+41
+00:03:04,060 --> 00:03:08,810
+对于蓝色平面，即3号平面。
+for the blue plane, which is plane number 3.
+
+42
+00:03:08,810 --> 00:03:14,640
+所以，例如，我可以再次显示我刚刚计算的绿色平面。
+So, for instance, I can just display again the green plane that I just computed.
+
+43
+00:03:14,640 --> 00:03:18,909
+现在我要做的下一件事是计算色度坐标和
+Now the next thing that I want to do is to compute the chromaticity coordinates and to
+
+44
+00:03:18,909 --> 00:03:23,819
+这样做我需要计算红色和绿色和蓝色的总和，我要去
+do that I need to compute the sum of the red and the green and the blue and I am going
+
+45
+00:03:23,819 --> 00:03:27,870
+把它放入名为Y的局部变量中。
+to put that into the local variable called Y.
+
+46
+00:03:27,870 --> 00:03:33,400
+Y是用于所谓亮度图像的常用符号;这是一张单色图片
+Y is a common symbol used for what is called the luminance image; it’s a monochrome image
+
+47
+00:03:33,400 --> 00:03:34,400
+其实。
+actually.
+
+48
+00:03:34,400 --> 00:03:38,719
+如果我们现在看一下它会看起来像单色或黑白图片
+If we look at this now it will look something like a monochrome or black and white picture
+
+49
+00:03:38,719 --> 00:03:39,719
+现场。
+of the scene.
+
+50
+00:03:39,719 --> 00:03:42,650
+它是所有颜色通道的平均值。
+It is the average of all of the color channels.
+
+51
+00:03:42,650 --> 00:03:48,900
+现在，色度坐标计算出所有像素之间的比率
+Now the chromaticity coordinates computes the ratio between all of the pixels in the
+
+52
+00:03:48,900 --> 00:03:54,849
+红色平面和总和，我可以使用MATLAB计算这个元素明智的划分
+red plane and the sum and I can compute this element wise division by using the MATLAB
+
+53
+00:03:54,849 --> 00:03:59,660
+运算符点斜杠，所以它要做的是计算一个新的图像，调用它
+operator dot slash, so what it is going to do is to compute a new image, call it little
+
+54
+00:03:59,660 --> 00:04:05,719
+R，其尺寸与资本R和资本Y的尺寸相同。
+R, and its dimensions will be the same as the dimensions of capital R and capital Y.
+
+55
+00:04:05,719 --> 00:04:12,219
+图像中的每个元素littleR是大写R中的对应像素除以
+Each element of the image little R is the corresponding pixel in capital R divided by
+
+56
+00:04:12,219 --> 00:04:14,469
+大写字母Y中的相应像素。
+the corresponding pixel in capital Y.
+
+57
+00:04:14,469 --> 00:04:19,440
+让我为绿色色度通道做同样的事情;我们来看一下
+And let me do the same thing for the green chromaticity channel; let’s have a look
+
+58
+00:04:19,440 --> 00:04:20,510
+在这些。
+at these.
+
+59
+00:04:20,510 --> 00:04:25,100
+这些存储在MATLAB工作空间矩阵中，但我当然可以显示矩阵
+These are stored in the MATLAB workspaces matrices, but of course I can display a matrix
+
+60
+00:04:25,100 --> 00:04:32,500
+作为图像和图像被表示为矩阵，所以这里是小R，我可以创建
+as an image and an image is represented as a matrix, so here is little R and I can create
+
+61
+00:04:32,500 --> 00:04:39,670
+另一个图，图二，在图二中，我将显示小G.
+another figure, figure two, and in figure two I am going to display little G.
+
+62
+00:04:39,670 --> 00:04:45,390
+所以这些是色度值，如果我们在这里探讨一些值
+So these are the chromaticity values, and if we poke around some of the values here
+
+63
+00:04:45,390 --> 00:04:51,530
+我们可以看到水果在哪里，它有很大的R值，它有一个非常的
+we can see that where the fruit is, it has got quite a large value of R, it has a very
+
+64
+00:04:51,530 --> 00:04:54,000
+小G.的小值
+small value of little G.
+
+65
+00:04:54,000 --> 00:04:58,560
+如果我们看一下叶子的哪个位置，我们就会看到它们具有适度的值
+If we look at where some of the leaves are we see that they have got a modest value of
+
+66
+00:04:58,560 --> 00:05:07,030
+小R-约0.39-和小G有一个稍大的值，所以这两个图像
+little R—about 0.39—and little G has got a slightly bigger value, so these two images
+
+67
+00:05:07,030 --> 00:05:10,860
+代表这个场景中的颜色：我们已经考虑了强度。
+represent the color in this scene: we have factored out the intensity.
+
+68
+00:05:10,860 --> 00:05:16,721
+现在让我们说我们想制定一个可以选择属于的像素的规则
+So let’s say now that we wanted to make a rule that would select a pixel that belonged
+
+69
+00:05:16,721 --> 00:05:19,890
+对水果而言并不属于任何其他事物。
+to the fruit and didn’t belong to anything else.
+
+70
+00:05:19,890 --> 00:05:25,600
+很明显，我们想要一条规则来说明R似乎很大的事实
+Well clearly we want a rule that said something about the fact that R is quite big, it seems
+
+71
+00:05:25,600 --> 00:05:33,080
+至少大于0.8，大多数是0.9以上，但保守地说，
+to be at least greater than 0.8 and mostly it is above 0.9, but let’s say, conservatively,
+
+72
+00:05:33,080 --> 00:05:40,160
+它必须高于0.8，在这种情况下，我们希望G值必须非常小。
+it has to be above 0.8 and in this case we want the G value has to be quite small.
+
+73
+00:05:40,160 --> 00:05:43,100
+你应该知道，甚至不到0.1。
+Has to be sort of, you know, less than 0.1 even.
+
+74
+00:05:43,100 --> 00:05:46,340
+但保守一点，我们说它必须小于0.2。
+But to be conservative, let’s say it has to be less than 0.2.
+
+75
+00:05:46,340 --> 00:05:52,340
+所以我可以创建一个新变量，它将成为一个逻辑变量，所以我要去
+So I could create a new variable, it is going to be a logical variable, so I am going to
+
+76
+00:05:52,340 --> 00:06:03,380
+如果R大于0.8且G小于0.2，那么它就是真的。
+say anywhere that R is greater than 0.8 and G is less than 0.2 it will be true.
+
+77
+00:06:03,380 --> 00:06:08,790
+所以让我们显示我刚刚创建的名为Tom的图像，我们就拥有了它。
+So let’s display this image I just created called Tom and there we have it.
+
+78
+00:06:08,790 --> 00:06:12,870
+这里的背景，这些值都是零，它们都是假的，在这里它们
+The background here, these values are all zero, they are all false and in here they
+
+79
+00:06:12,870 --> 00:06:17,880
+都具有一个值，这是MATLAB表示真实概念的方式。
+all have values of one, which is MATLAB’s way of representing the concept of true.
+
+80
+00:06:17,880 --> 00:06:23,590
+我们现在创建了一个二进制图像，如果它们是番茄果实，则像素为1
+We have created now a binary image where the pixels are one if they are the tomato fruit
+
+81
+00:06:23,590 --> 00:06:29,420
+如果它不是水果，背景，人和叶子，它们就是零。
+and they are zero if it is not the fruit, background, people and leaves.
+
+82
+00:06:29,420 --> 00:06:34,090
+现在我们有了二进制图像，我们可以做很多我们之前演示过的事情
+Now that we have a binary image we can do a lot of the things that we demonstrated earlier
+
+83
+00:06:34,090 --> 00:06:36,960
+当我们谈论二元视觉时。
+when we were talking about binary vision.
+
+84
+00:06:36,960 --> 00:06:42,960
+所以我可以找到这个图像中的所有blob，所以我应用了iblobs
+So I could look for all of the blobs that are within this image so I apply the iblobs
+
+85
+00:06:42,960 --> 00:06:47,930
+功能到我们刚刚计算的二进制图像，在这里，它有十个blob
+function to the binary image we just computed and here it is, that there are ten blobs in
+
+86
+00:06:47,930 --> 00:06:48,930
+这里。
+here.
+
+87
+00:06:48,930 --> 00:06:52,500
+现在，显然有几个大斑点，我们可以看到那里，有一些斑点
+Now, there are clearly a couple of big blobs and we can see there, there are some blobs
+
+88
+00:06:52,500 --> 00:06:56,940
+面积相当大，周围也有很多非常非常小的斑点
+with quite a large area and there is also a lot of very, very small blobs around the
+
+89
+00:06:56,940 --> 00:06:59,180
+其中一个水果的边缘。
+edge of one of the fruit.
+
+90
+00:06:59,180 --> 00:07:05,010
+现在我们可以回到原始图像，让我们看看图一和那里
+Now we can go back to the original image, let’s have a look at figure one and there
+
+91
+00:07:05,010 --> 00:07:12,870
+我将显示原始图像，然后我将覆盖一些边界框
+I am going to display the original image and then I am going to overlay some bounding boxes
+
+92
+00:07:12,870 --> 00:07:16,340
+然后我将它们覆盖在绿色中。
+and I will overlay them in the color green.
+
+93
+00:07:16,340 --> 00:07:20,720
+因此，我们有它;很简单，我们拍摄了彩色图像，我们已经计算了
+So there we have it; quite simply, we have taken a color image, we have computed the
+
+94
+00:07:20,720 --> 00:07:24,780
+在色度坐标方面，每个像素的基本颜色。
+essential color at each of the pixels in terms of chromaticity coordinates.
+
+95
+00:07:24,780 --> 00:07:28,960
+我们制定了一个非常简单的规则来选择属于水果的像素，而不是
+We have made a very simple rule to choose pixels that belong to the fruit and not to
+
+96
+00:07:28,960 --> 00:07:31,940
+还要别的吗;这导致我们得到一个二进制图像。
+anything else; that led us to a binary image.
+
+97
+00:07:31,940 --> 00:07:35,430
+一旦我们有了二进制图像，那么我们就可以应用我们已经拥有的所有技术
+Once we have a binary image, then we can apply all of the techniques that we have already
+
+98
+00:07:35,430 --> 00:07:40,140
+我学会并以非常快速的方式概述了特定的水果。
+learnt and in very quick fashion I can outline the particular fruit.
+
+99
+00:07:40,140 --> 00:07:45,210
+现在问题在于水果是一种畸形，其中一部分是因为
+Now the problem with this is that the fruit are kind of misshapen, part of that is because
+
+100
+00:07:45,210 --> 00:07:49,900
+我之前提到过的镜面反射，以及一些水果都被模糊了
+of the specular reflection that I mentioned earlier and also some of the fruit is obscured
+
+101
+00:07:49,900 --> 00:07:55,210
+通过树叶和其他任何东西，仍然是一个开始的边界框，我们可以看看
+by leaves and whatever, still the bounding box is a good place to start, we could look
+
+102
+00:07:55,210 --> 00:08:00,360
+在我们之前使用的一些数学形态学技术中，我们可以应用这些技术
+at some of the mathematical morphology techniques that we used before, we could apply the techniques
+
+103
+00:08:00,360 --> 00:08:05,740
+膨胀和侵蚀可能填补了这些水果中一些缺失的部分。
+of dilation and erosion perhaps to fill in some of the missing part of those fruit.
+

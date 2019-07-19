@@ -1,0 +1,245 @@
+1
+00:00:03,669 --> 00:00:06,080
+这里我们有一个冗余机器人的图像。
+Here we have an image of a redundant robot.
+
+2
+00:00:06,080 --> 00:00:09,090
+这是我们在前一讲中介绍的概念。
+And this is a concept that we introduced in the previous lecture.
+
+3
+00:00:09,090 --> 00:00:14,010
+这是一个具有非常大的自由度或关节​​的机器人。
+This is a robot with a very large number of degrees of freedom or joints.
+
+4
+00:00:14,010 --> 00:00:17,840
+我们还介绍了任务空间和配置空间的概念。
+We also introduced the concepts of task space and configuration space.
+
+5
+00:00:17,840 --> 00:00:23,650
+现在，这个机器人的任务空间是SE3的一个子集，这是完全相同的任务空间
+Now the task space of this robot is a subset of SE3 and that's exactly the same task space
+
+6
+00:00:23,650 --> 00:00:29,320
+正如Puma机器人所拥有的那样，它在一个工作体积内，它可以移动到一个特定点
+as the Puma robot has, that is within a working volume, it can move to a particular point
+
+7
+00:00:29,320 --> 00:00:33,500
+并实现特定的末端效应器方向。
+and achieve a particular end effector orientation.
+
+8
+00:00:33,500 --> 00:00:36,940
+然而，这个机器人的配置空间要大得多。
+However the configuration space of this robot is much, much bigger.
+
+9
+00:00:36,940 --> 00:00:42,000
+我们假设这个机器人有一百个关节，那么它的配置空间就是R.
+We're assuming that this robot has got a hundred joints, then its configuration space is R
+
+10
+00:00:42,000 --> 00:00:47,389
+到了100，只有6个关节的Puma机器人，它有一个配置空间
+to the 100, with a Puma robot with only 6 joints, it has got a configuration space of
+
+11
+00:00:47,389 --> 00:00:48,909
+R到6号。
+R to the 6th.
+
+12
+00:00:48,909 --> 00:00:53,000
+任务空间的维度为6，配置空间有维度空间
+The task space has got a dimension of 6, the configuration space has got a dimension space
+
+13
+00:00:53,000 --> 00:00:54,699
+100。
+of 100.
+
+14
+00:00:54,699 --> 00:00:58,969
+因此，我们可以考虑使用这些自由度中的六个来控制位置
+So we could consider that six of those degrees of freedom are used to control the position
+
+15
+00:00:58,969 --> 00:01:00,910
+和末端执行器的方向。
+and orientation of the end effector.
+
+16
+00:01:00,910 --> 00:01:07,990
+其他94个自由度用于定义机器人手臂的任意形状，
+The other 94 degrees of freedom are used to define an arbitrary shape for the robot arm,
+
+17
+00:01:07,990 --> 00:01:12,340
+这样我们就可以独立控制末端执行器的位置和方向
+so that we can independently control the position and orientation of the end effector and the
+
+18
+00:01:12,340 --> 00:01:17,680
+手臂跟随的路径，以便从机器人的基座到达末端执行器。
+path that the arm follows in order to get from the base of the robot to the end effector.
+
+19
+00:01:17,680 --> 00:01:22,310
+当谈到确定逆运动学时，我们遇到了一些问题;有
+When it comes to determining the inverse kinematics then, we have a bit of a problem; there are
+
+20
+00:01:22,310 --> 00:01:29,170
+实际上是无限多组关节角度和无限数量的机器人配置
+in fact an infinite number of sets of joint angles and infinite number of robot configurations
+
+21
+00:01:29,170 --> 00:01:32,950
+这将导致完全相同的末端效应器姿势。
+that will lead to exactly the same end effector pose.
+
+22
+00:01:32,950 --> 00:01:37,640
+在Puma机器人的情况下，有六种配置给出相同的结束
+In the case of the Puma robot, there were six configurations that gave the same end
+
+23
+00:01:37,640 --> 00:01:41,680
+效应器姿势;对于这个机器人，有一个无限的数字。
+effector pose; for this robot there are an infinite number.
+
+24
+00:01:41,680 --> 00:01:47,030
+为了解决逆运动学问题，对于冗余机器人，我们必须依靠数值
+To solve the inverse kinematics then for a redundant robot, we have to rely on a numerical
+
+25
+00:01:47,030 --> 00:01:48,810
+解。
+solution.
+
+26
+00:01:48,810 --> 00:01:54,749
+我们现在要用冗余机器人做一个例子，我们将使用Toolbox模型
+We're going to do an example now with a redundant robot and we're going to use a Toolbox model
+
+27
+00:01:54,749 --> 00:01:57,869
+称为MDLHyper3D。
+called MDL Hyper 3D.
+
+28
+00:01:57,869 --> 00:02:05,289
+所以这是一个超级冗余机器人，有三个维度，我将要求一个20维的机器人。
+So this is a Hyper-redundant robot, in 3 dimensions and I'm going to ask for a robot with 20 dimensions.
+
+29
+00:02:05,289 --> 00:02:09,851
+我们可以看到工作空间中有一个名为H3D的新串行链接对象
+We can see that there is a new serial link object in the workspace called H3D and if
+
+30
+00:02:09,851 --> 00:02:14,200
+我们看一下机器人的参数，我们可以看到它有20个关节，每个关节
+we look at the parameters of the robot, we can see that it has got 20 joints, each joint
+
+31
+00:02:14,200 --> 00:02:17,500
+只有0.05米长。
+is only 0.05 meters long.
+
+32
+00:02:17,500 --> 00:02:23,769
+让我们用数字计算逆运动学，我们将应用ikine方法
+Let's compute the inverse kinematics numerically and we're going to apply the ikine method
+
+33
+00:02:23,769 --> 00:02:27,950
+在那个特定的物体上，我将传递我想要机器人的姿势
+on that particular object and I'm going to pass in the pose that I want the robot to
+
+34
+00:02:27,950 --> 00:02:32,400
+采用，我已经定义了，我将通过最初的关节角度
+adopt, that I have already defined and I'm going to pass in the initial joint angles
+
+35
+00:02:32,400 --> 00:02:37,620
+我将使用工作空间变量QZ，它由创建的脚本定义
+and I'm going to use the workspace variable QZ, that was defined by the script that created
+
+36
+00:02:37,620 --> 00:02:39,810
+我的机器人。
+the robot for me.
+
+37
+00:02:39,810 --> 00:02:41,420
+在这里，我们有解决方案。
+And here we have the solution.
+
+38
+00:02:41,420 --> 00:02:46,510
+我们计算了一个20元素向量，它是这个20所需的关节角度
+We've computed a 20 element vector, which are the joint angles necessary for this 20
+
+39
+00:02:46,510 --> 00:02:50,150
+关节机器人采用姿势T2。
+joint robot to adopt the pose T2.
+
+40
+00:02:50,150 --> 00:02:54,660
+我可以通过计算关节集的正向运动学来测试这种正确性
+I can test the correctness of this by computing the forward Kinematics for the set of joint
+
+41
+00:02:54,660 --> 00:02:59,410
+我刚刚计算出的角度，它就是它的样子，这就是原始的姿势
+angles that I just computed and that's what it looks like and this is the original pose
+
+42
+00:02:59,410 --> 00:03:00,410
+我要求的。
+that I asked for.
+
+43
+00:03:00,410 --> 00:03:02,579
+所以我们可以看到它们是相同的。
+So we can see that they are identical.
+
+44
+00:03:02,579 --> 00:03:07,360
+我可以在由计算出的关节角度集合中绘制机器人的配置
+I can plot the configuration of the robot at the set of joint angles computed by the
+
+45
+00:03:07,360 --> 00:03:13,590
+反向运动学，它看起来像那样。
+inverse kinematics and it looks something like that.
+
+46
+00:03:13,590 --> 00:03:19,530
+坚持下去，我现在可以叠加在我要求的原始姿势上，这是在工作区中
+Hold on so I can overlay on that now the original pose that I asked for, which was in the workspace
+
+47
+00:03:19,530 --> 00:03:20,879
+变量T2。
+variable T2.
+
+48
+00:03:20,879 --> 00:03:24,690
+在那里我们看到末端执行器处于正确位置并且它具有
+And there we see that the end effector is in the correct position and that it has the
+
+49
+00:03:24,690 --> 00:03:26,150
+正确的方向。
+correct orientation.
+

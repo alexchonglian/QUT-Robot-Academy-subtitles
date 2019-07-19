@@ -1,0 +1,115 @@
+1
+00:00:03,590 --> 00:00:08,010
+到目前为止，在本系列讲座中，我们假设存在图像。我们拍了一张照片
+So far in this lecture series, we've assumed the presence of an image. We've taken an image
+
+2
+00:00:08,010 --> 00:00:12,119
+从文件。我们从连接到电脑的相机拍摄了一张照片。我们抓住了一个
+from a file. We've taken an image from a camera attached to our computer. We've grabbed an
+
+3
+00:00:12,119 --> 00:00:17,410
+来自互联网的图像。现在是时候谈谈图像是如何形成的。
+image from the Internet. It's time now to talk about how images are actually formed.
+
+4
+00:00:17,410 --> 00:00:21,829
+图像在相机内形成，它们实际上形成在背面的视网膜上
+Images are formed within cameras and they are actually formed on the retina at the back
+
+5
+00:00:21,829 --> 00:00:28,129
+我们的眼睛。有一个非常迷人的图像形成方面，我们采取三维
+of our eye. There's a really fascinating aspect of image formation, we take the three dimensional
+
+6
+00:00:28,129 --> 00:00:32,800
+我们生活的世界，这对我们来说非常真实，我们将它投射到两个方面。
+world that we live in, that's very real to us and we project it into two dimensions.
+
+7
+00:00:32,800 --> 00:00:36,940
+因此，当我们有一个图像，一张照片或类似的东西时，它是平的，它是唯一的
+So when we have an image, a photograph or something like that, it's flat, it's only
+
+8
+00:00:36,940 --> 00:00:43,280
+二维的。所以我们采取了三维的东西，并将其转化为二维的东西。
+two-dimensional. So we've taken three-dimensional things and transformed it into two-dimensional things.
+
+9
+00:00:43,460 --> 00:00:47,420
+我们只有三个维度，所以我们扔掉了一个，现在我们有两个。
+We only had three dimensions to start with, so we've thrown away one, now we've got two.
+
+10
+00:00:47,420 --> 00:00:51,659
+必须有一些后果。有一些非常有趣的后果
+There's got to be some consequence of that. There are some very interesting consequences
+
+11
+00:00:51,659 --> 00:00:55,900
+尝试将三个维度压缩成两个。
+of trying to crunch three dimensions down into two.
+
+12
+00:00:55,900 --> 00:00:59,869
+但这还有另一个非常有趣的方面。那就是我看一张照片
+But there's another really interesting aspect of this. And that is if I look at a photograph
+
+13
+00:00:59,869 --> 00:01:04,990
+虽然我知道它是扁平的，但对于我来说它看起来是三维的
+of a landscape, it looks three dimensional to me, even though I know it's flat, it's
+
+14
+00:01:04,990 --> 00:01:09,580
+一张照片，我可以用手抚摸它，它是完全平坦的。所以有一些魔力
+a photograph, I can run my hand over it, it is perfectly flat. So there's some magic going
+
+15
+00:01:09,580 --> 00:01:14,990
+在我的脑海里，我正在重建那些实际上并不存在的维度
+on in my head, where I'm reconstructing dimensions that don't actually exist and that just comes
+
+16
+00:01:14,990 --> 00:01:20,640
+从我个人对世界三维性质的体验;我的脑子
+from my own personal experience of the three dimensional nature of the world; my brain
+
+17
+00:01:20,640 --> 00:01:22,860
+填补这个额外的维度。
+fills in this extra dimension.
+
+18
+00:01:22,860 --> 00:01:27,720
+所以这些是我想在这组中谈论的图像形成的方面
+So these are the aspects of image formation that I want to talk about in this group of
+
+19
+00:01:27,720 --> 00:01:32,200
+三个讲座。在本讲座中，我们将了解如何使用针孔形成图像
+three lectures. In this lecture we're going to look out how images are formed using pinhole
+
+20
+00:01:32,200 --> 00:01:37,850
+带镜头的相机和相机以及本讲座中的处理都是几何的;
+cameras and cameras with lenses and the treatment in this lecture is all going to be geometric;
+
+21
+00:01:37,850 --> 00:01:42,600
+这是关于类似的三角形。我们还将看一些不同类型的相机;
+it's about similar triangles. We're also going to look at a few different types of cameras;
+
+22
+00:01:42,600 --> 00:01:47,770
+我们将看看鱼眼摄像机和全景摄像机以及一种非常新型的摄像机
+we're going to look at fisheye cameras and panoramic cameras and a very new type of camera
+
+23
+00:01:47,770 --> 00:01:49,420
+称为“光场相机”。
+called a "Light Field Camera".
+

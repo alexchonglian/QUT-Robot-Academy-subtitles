@@ -1,0 +1,490 @@
+1
+00:00:03,649 --> 00:00:05,630
+我们来谈谈对象特征。
+Let’s talk about object features.
+
+2
+00:00:05,630 --> 00:00:09,000
+我们已经讨论过描述一个物体的位置。
+We’ve already talked about describing the position of an object.
+
+3
+00:00:09,000 --> 00:00:14,369
+我们已经研究了如何描述对象的质心，这是一种有用的描述方式
+We’ve worked out how to describe the centroid of an object, which is a useful way of describing
+
+4
+00:00:14,369 --> 00:00:17,330
+什么东西在图像中。
+where something is within the image.
+
+5
+00:00:17,330 --> 00:00:20,740
+我们还谈到了确定一个物体的大小-它的面积-我们可以
+We’ve also talked about determining the size of an object—its area—and we can
+
+6
+00:00:20,740 --> 00:00:25,300
+从第0个时刻获得这些信息。
+get that information from the zeroth moments.
+
+7
+00:00:25,300 --> 00:00:28,970
+我们可能有兴趣描述一个物体的形状;它看起来像鲨鱼，或者
+We might be interested to describe the shape of an object; does it look like a shark, or
+
+8
+00:00:28,970 --> 00:00:35,390
+三角形，圆形或正方形，我们可能有兴趣描述方向
+a triangle, or a circle, or a square, and we might be interested in describing the orientation
+
+9
+00:00:35,390 --> 00:00:36,390
+对象。
+of the object.
+
+10
+00:00:36,390 --> 00:00:37,390
+这非常重要。
+It’s quite important.
+
+11
+00:00:37,390 --> 00:00:41,200
+鲨鱼是向上，向左还是向右？
+Is the shark pointing upwards, or to the left or to the right?
+
+12
+00:00:41,200 --> 00:00:47,380
+那么让我们来谈谈我们如何计算其中一些额外的对象特性。
+So let’s talk about how we can compute some of these additional object features.
+
+13
+00:00:47,380 --> 00:00:51,060
+我们已经根据边界框和质心描述了这个位置
+Position we’ve already described in terms of the bounding box and the centroid, which
+
+14
+00:00:51,060 --> 00:00:52,570
+源自最初的时刻。
+is derived from first moments.
+
+15
+00:00:52,570 --> 00:00:57,300
+对象的大小;我们也把它称为它的区域，它可以用第0个来描述
+The size of the object; we also call it its area, and it can be described form the zeroth
+
+16
+00:00:57,300 --> 00:00:58,300
+时刻。
+moments.
+
+17
+00:00:58,300 --> 00:01:03,040
+到目前为止我们还没有描述的是形状和方向，所以让我们谈谈这个问题。
+What we haven’t described so far is shape and orientation, so let’s talk about that.
+
+18
+00:01:03,040 --> 00:01:07,330
+我们要做的就是使用一种称为等效椭圆的技术。
+The way we’re going to do this is to use a technique called the equivalent ellipse.
+
+19
+00:01:07,330 --> 00:01:11,990
+因此，对于这些形状中的每一个，我们要做的是考虑一个居中的椭圆
+So for each of these shapes what we’re going to do is to consider an ellipse that is centred
+
+20
+00:01:11,990 --> 00:01:18,110
+在物体的质心处，对于那个质心，它具有相同的惯性矩
+at the object’s centroid, and that has got the same moment of inertia about that centroid
+
+21
+00:01:18,110 --> 00:01:19,700
+原来的形状有。
+as the original shape has.
+
+22
+00:01:19,700 --> 00:01:24,620
+所以这意味着对于这些不同种类的形状，我们将会得到不同的形状
+So this means for these different kinds of shapes we’re going to get different shaped
+
+23
+00:01:24,620 --> 00:01:29,190
+等效的椭圆，他们会告诉我们关于形状和形状的东西
+equivalent ellipses and they’re going to tell us something about the shape and the
+
+24
+00:01:29,190 --> 00:01:31,320
+对象的方向。
+orientation of the object.
+
+25
+00:01:31,320 --> 00:01:34,740
+这是一种非常经典的技术，但它实际上非常有用。
+This is quite a classical technique, but it’s actually quite useful.
+
+26
+00:01:34,740 --> 00:01:37,610
+让我们付诸实践。
+Let’s put it into practice.
+
+27
+00:01:37,610 --> 00:01:39,659
+这是我们的鲨鱼形象。
+Here is our shark image.
+
+28
+00:01:39,659 --> 00:01:41,200
+这是质心。
+Here’s the centroid.
+
+29
+00:01:41,200 --> 00:01:46,400
+我们将定义一组正交轴;穿过的x轴和y轴
+We’re going to define a set of orthogonal axes; an x-axis and a y-axis that pass through
+
+30
+00:01:46,400 --> 00:01:50,070
+鲨鱼的质心，它们与u和v坐标平行。
+the centroid of the shark, and they’re parallel to the u and v coordinates.
+
+31
+00:01:50,070 --> 00:01:55,500
+现在，一旦我有了这个坐标系，就可以很容易地计算出惯性矩阵
+Now once I’ve got this coordinate system, it’s easy to compute the inertia matrix
+
+32
+00:01:55,500 --> 00:01:59,720
+围绕质心的y轴和x轴周围的斑点。
+for the blob around the y and x axes about the centroid.
+
+33
+00:01:59,720 --> 00:02:04,310
+我们通过计算所谓的blob的中心矩来做到这一点：mu，下划线，
+And we do that by computing what are called the central moments of the blob: mu, underscore,
+
+34
+00:02:04,310 --> 00:02:05,310
+P，Q。
+p,q.
+
+35
+00:02:05,310 --> 00:02:11,959
+这与我们之前的表达式非常相似，除了括号内部
+And this is very similar to the moment expression we had earlier, except inside the brackets
+
+36
+00:02:11,959 --> 00:02:15,220
+我们现在减去质心的坐标。
+we now subtract the coordinates of the centroid.
+
+37
+00:02:15,220 --> 00:02:22,389
+因此，如果我们计算这些时刻：mu，2,0，mu，0,2和mu，1,1为blob我们最终得到一个矩阵
+So if we compute these moments: mu,2,0, mu,0,2 and mu,1,1 for the blob we end up with a matrix
+
+38
+00:02:22,389 --> 00:02:25,549
+包含惯性值。
+that contain the inertia values.
+
+39
+00:02:25,549 --> 00:02:30,420
+我们想要找到一个椭圆，它具有与我们从中得到的惯性相同的惯性
+We want to find an ellipse that has got the same inertia as those we derived from the
+
+40
+00:02:30,420 --> 00:02:31,420
+斑点。
+blob.
+
+41
+00:02:31,420 --> 00:02:37,689
+现在，如果这是惯性矩阵，我们可以计算其特征值，并从那些特征值计算
+Now if this is the inertia matrix we can compute its eigenvalues, and from those eigenvalues
+
+42
+00:02:37,689 --> 00:02:42,299
+我们可以计算椭圆的长轴和短轴。
+we can compute the major and minor axis of the ellipse.
+
+43
+00:02:42,299 --> 00:02:48,099
+这基本上是椭圆长轴的一半，也是椭圆短轴的一半。
+That’s basically half the long axis of the ellipse, and half the short axis of the ellipse.
+
+44
+00:02:48,099 --> 00:02:56,970
+这些半径a和b是从矩阵J的特征值导出的.Lambda1是最大的特征值，
+These radii a and b are derived from the eigenvalues of the matrix J. Lambda 1 is the largest eigenvalue,
+
+45
+00:02:56,970 --> 00:02:59,510
+和lambda2是较小的特征值。
+and lambda 2 is the smaller eigenvalue.
+
+46
+00:02:59,510 --> 00:03:04,359
+我们也对椭圆的方向感兴趣;什么是θ的价值。
+We’re also interested in the orientation of the ellipse; what’s the value of θ.
+
+47
+00:03:04,359 --> 00:03:10,370
+并且我们从特征向量的元素中获得对应于最大元素的θ
+And we obtain θ from the elements of the eigenvector that corresponds to the largest
+
+48
+00:03:10,370 --> 00:03:11,390
+特征值。
+eigenvalue.
+
+49
+00:03:11,390 --> 00:03:15,430
+因此我们采用特征向量中的两个元素的比率，即反正切
+So we take the ratio of the two elements in the eigenvector, the arc tangent, and that
+
+50
+00:03:15,430 --> 00:03:16,689
+给我们θ。
+gives us θ.
+
+51
+00:03:16,689 --> 00:03:21,950
+这告诉我们椭圆的方向，椭圆的方向告诉我们
+That tells us the orientation of the ellipse, and the orientation of the ellipse tells us
+
+52
+00:03:21,950 --> 00:03:25,689
+关于物体本身的方向的东西。
+something about the orientation of the object itself.
+
+53
+00:03:25,689 --> 00:03:28,870
+我们可以从等效椭圆得到的另一个有用的参数是
+Another parameter that’s useful that we can derive from the equivalent ellipse is
+
+54
+00:03:28,870 --> 00:03:32,999
+称为宽高比，即b/a。
+called the aspect ratio, that’s b/a.
+
+55
+00:03:32,999 --> 00:03:37,900
+B是短长度，a是长长度，b/a总是小于1。
+B is the short length, a is the long length, b/a is always less than 1.
+
+56
+00:03:37,900 --> 00:03:41,470
+它说明了形状的紧凑性。
+And it says something about the compactness of the shape.
+
+57
+00:03:41,470 --> 00:03:47,370
+例如，这条鲨鱼的比例大约为1，大约是1
+So this shark, for instance, has got a ratio of b over a that’s roughly 1, where this
+
+58
+00:03:47,370 --> 00:03:51,029
+鲨鱼的值b/a比1小得多。
+shark has got a value b/a that’s much smaller than 1.
+
+59
+00:03:51,029 --> 00:03:56,609
+所以b/a说明了形状的紧凑性。
+So b/a says something about the compactness of the shape.
+
+60
+00:03:56,609 --> 00:04:06,329
+让我们加载鲨鱼图像的另一种变体，我们将显示它。
+Let’s load yet another variant of our shark image, and we will display this.
+
+61
+00:04:06,329 --> 00:04:14,859
+在这里，我们看到两条鲨鱼，一条向下倾斜，一条向上倾斜。
+And here we see two sharks, one pitched downwards, and one pitched a little bit upwards.
+
+62
+00:04:14,859 --> 00:04:22,060
+我们将使用熟悉的命令计算这些blob的参数，我们会看到
+We will compute the parameters of these blobs using a familiar command to us, and we see
+
+63
+00:04:22,060 --> 00:04:26,250
+我们发现了三个斑点：两个鲨鱼斑点和一个背景斑点。
+we’ve found three blobs: two shark blobs and one background blob.
+
+64
+00:04:26,250 --> 00:04:30,080
+让我们简化事情并摆脱背景blob，因为我们真的只是
+Let’s simplify things and get rid of the background blob, since we’re really only
+
+65
+00:04:30,080 --> 00:04:32,370
+对鲨鱼对象感兴趣。
+interested in the shark objects.
+
+66
+00:04:32,370 --> 00:04:36,120
+我们再次使用iblobs功能;传递图像。
+We use the iblobs function again; pass in the image.
+
+67
+00:04:36,120 --> 00:04:43,870
+我们只要求那些包含属于1类像素的blob;就这样
+And we ask for just those blobs comprising pixels that belong to class 1; that is, that
+
+68
+00:04:43,870 --> 00:04:48,330
+颜色1它们是场景中的白色像素。
+the colour 1 they are the white pixels within the scene.
+
+69
+00:04:48,330 --> 00:04:55,360
+现在我们有一个blob对象数组，但只有那些在白色内的白色对象
+And now we have an array of blob objects but only those objects that are white within the
+
+70
+00:04:55,360 --> 00:04:57,259
+场景：两条鲨鱼。
+scene: the two sharks.
+
+71
+00:04:57,259 --> 00:05:02,430
+在显示每个blob的地方，我们会看到这些blob的许多参数或属性，
+Where each blob is displayed we see a number of parameters or attributes of those blobs,
+
+72
+00:05:02,430 --> 00:05:04,639
+其中一些现在非常熟悉。
+and some of those are quite familiar to use now.
+
+73
+00:05:04,639 --> 00:05:08,240
+例如，区域和质心。
+For instance, the area and the centroid.
+
+74
+00:05:08,240 --> 00:05:11,830
+参数θ是斑点的方向。
+The parameter θ is the orientation of the blob.
+
+75
+00:05:11,830 --> 00:05:17,870
+方位是以弧度为单位给出的，它是相对于附加的坐标系
+Orientation is given in unit of radians, and it is in respect to a coordinate frame attached
+
+76
+00:05:17,870 --> 00:05:21,139
+到与u轴和v轴平行的鲨鱼。
+to the shark that’s parallel to the u and v axes.
+
+77
+00:05:21,139 --> 00:05:24,860
+顺时针方向的方向为正。
+An orientation is positive in the clockwise direction.
+
+78
+00:05:24,860 --> 00:05:30,289
+我们可以看到一只鲨鱼的θ值为29而另一只鲨鱼的θ值为
+We can see that one shark has got a θ value of 29 and the other shark has a θ value of
+
+79
+00:05:30,289 --> 00:05:36,800
+-2.58，所以这表明它们有不同的方向。
+-2.58, so this suggests that they have different orientations.
+
+80
+00:05:36,800 --> 00:05:42,629
+这里的另一个参数是比率b/a，我们将其称为纵横比。
+Another parameter here is the ratio b/a, and we refer to that as the aspect ratio.
+
+81
+00:05:42,629 --> 00:05:47,360
+这里有趣的是两条鲨鱼的长宽比相同，
+And what’s interesting here is that the two sharks have got the same aspect ratio,
+
+82
+00:05:47,360 --> 00:05:57,259
+大约0.585，或0.586，这是重要和有趣的，因为纵横比是
+around about 0.585, or 0.586 and this is important and interesting because the aspect ratio is
+
+83
+00:05:57,259 --> 00:06:02,180
+即使鲨鱼有不同的位置和不同的方向，所以我们
+the same even though the sharks have got different positions and different orientations, so we
+
+84
+00:06:02,180 --> 00:06:04,639
+将其称为形状不变量。
+refer to this as a shape invariant.
+
+85
+00:06:04,639 --> 00:06:10,240
+它是鲨鱼的一个特征，它独立于它的位置或方向。
+It’s a characteristic of the shark and it’s independent of its position or its orientation.
+
+86
+00:06:10,240 --> 00:06:15,210
+现在我们已经讨论了等效的椭圆，这很容易
+Now we’ve talked a bit before about the equivalent ellipse, and it’s pretty easy
+
+87
+00:06:15,210 --> 00:06:16,949
+情节。
+to plot.
+
+88
+00:06:16,949 --> 00:06:24,740
+我们将绘图椭圆方法应用于鲨鱼斑点的矢量，这将是绘图
+We apply the plot ellipse method to the vector of shark blobs, and what this will do is plot
+
+89
+00:06:24,740 --> 00:06:31,379
+该向量的每个元素的等效椭圆，向量中的所有对象
+an equivalent ellipse for every element of that vector, all of the objects in the vector
+
+90
+00:06:31,379 --> 00:06:36,300
+b，在这里我们看到绘制了两个等效的椭圆。
+b, and here we see the two equivalent ellipses plotted.
+
+91
+00:06:36,300 --> 00:06:42,080
+我们可以使用绘图方法几乎一样容易地绘制质心，应用于每个对象
+We can plot the centroids almost as easily using the plot method, applied to every object
+
+92
+00:06:42,080 --> 00:06:44,469
+在向量b中。
+in the vector b.
+
+93
+00:06:44,469 --> 00:06:47,949
+因此，总结一下我们可以为blob派生的对象特征。
+So to summarise the object features that we can derive for a blob.
+
+94
+00:06:47,949 --> 00:06:51,980
+我们可以用边界框或质心来描述它的位置。
+We can describe its position in terms of bounding box or centroid.
+
+95
+00:06:51,980 --> 00:06:54,639
+我们可以确定它的大小，面积。
+We can determine its size, its area.
+
+96
+00:06:54,639 --> 00:06:59,499
+我们可以看一下它的形状，它来自等效椭圆的纵横比，
+We can look at its shape and that comes from the aspect ratio of the equivalent ellipse,
+
+97
+00:06:59,499 --> 00:07:03,970
+我们可以从等效的方向确定对象的方向
+and we can determine the orientation in the object from the orientation of the equivalent
+
+98
+00:07:03,970 --> 00:07:04,629
+椭圆。
+ellipse.
+

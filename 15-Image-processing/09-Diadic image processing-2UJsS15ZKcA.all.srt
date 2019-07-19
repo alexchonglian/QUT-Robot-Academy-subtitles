@@ -1,0 +1,540 @@
+1
+00:00:04,750 --> 00:00:10,990
+另一类重要的图像处理操作就是我们所说的二元运算。
+Another important class of image processing operations are what we call diadic operations.
+
+2
+00:00:10,990 --> 00:00:17,680
+现在，diadic操作有两个输入参数和一个输出。正如我们讨论过的monadic
+Now diadic operations have got two input arguments and one output. As we discussed for the monadic
+
+3
+00:00:17,680 --> 00:00:22,680
+情况下，我们有一个任意的功能;在这种情况下，它是两个输入变量的函数
+case, we have an arbitrary function; in this case it is a function of two input variables
+
+4
+00:00:22,680 --> 00:00:31,859
+我们称之为x和y。所以它是f（x，y）。并且该功能应用于相应的
+which we will call x and y. So it is f(x,y). And that function is applied to the corresponding
+
+5
+00:00:31,859 --> 00:00:37,690
+来自两个输入图像的像素，并将结果存放在相应的元素中
+pixels from the two input images, and the result is deposited in the corresponding element
+
+6
+00:00:37,690 --> 00:00:44,260
+输出图像。所有三个图像必须完全相同，我们应用
+of the output image. All three images have to be exactly the same size and we apply the
+
+7
+00:00:44,260 --> 00:00:50,410
+对两个输入图像中的每个像素具有相同的功能。
+same function to every pixel in the two input images.
+
+8
+00:00:50,410 --> 00:00:56,449
+那么哪种函数对于二值图像处理有用呢？这是什么功能f
+So what sort of functions are useful for diadic image processing? What is this function f
+
+9
+00:00:56,449 --> 00:01:00,890
+x和y？好吧，我们可以执行算术运算
+of x and y? Well we could perform arithmetic, we could
+
+10
+00:01:00,890 --> 00:01:06,750
+将两个图像一起添加或者我们可以减去两个图像，或者我们可以将两个图像相乘。
+add two images together or we could subtract two images, or we could multiply two images.
+
+11
+00:01:06,750 --> 00:01:12,460
+我们也可以执行更复杂的函数，例如取总和的平方根
+We could also perform more complex functions like perhaps take the square root of the sum
+
+12
+00:01:12,460 --> 00:01:17,750
+广场。当涉及到实施其中一些时
+of the squares. When it comes to implementing some of these
+
+13
+00:01:17,750 --> 00:01:24,799
+diadic操作，MATLAB的内置矢量化能力来帮助我们。
+diadic operations, MATLAB’s inbuilt vectorization capacity comes to our aid.
+
+14
+00:01:24,799 --> 00:01:32,290
+所以，如果我要将两个矩阵一起添加，我使用plus运算符，
+So if I was to add two matrices together, and I do that by using the plus operator,
+
+15
+00:01:32,290 --> 00:01:37,560
+MATLAB将做的是添加每个矩阵的相应元素，存放结果
+what MATLAB will do is add the corresponding elements of each matrix, deposit the result
+
+16
+00:01:37,560 --> 00:01:41,060
+进入输出矩阵的相应元素。
+into the corresponding element of the output matrix.
+
+17
+00:01:41,060 --> 00:01:45,450
+所有这些矩阵的大小都是完全相同的。
+Once again all of these matrices are of exactly the same size.
+
+18
+00:01:45,450 --> 00:01:52,770
+所以我们可以使用任何MATLAB的算术运算符，我们也可以使用任何MATLAB
+So we can use any of MATLAB’s arithmetic operators and we can also use any of MATLAB’s
+
+19
+00:01:52,770 --> 00:01:58,729
+内置逻辑运算符。如果我们使用逻辑运算符会发生什么
+built-in logical operators. If we use the logical operators what happens
+
+20
+00:01:58,729 --> 00:02:05,140
+是使用该逻辑比较输入矩阵的相应元素
+is that the corresponding elements of the input matrices are compared using that logic
+
+21
+00:02:05,140 --> 00:02:10,619
+运算符和结果，无论是真还是假，都存入相应的元素
+operator and the result, either true or false, is deposited into the corresponding element
+
+22
+00:02:10,619 --> 00:02:15,379
+在输出矩阵中。现在你可能会注意到了这个
+in the output matrix. Now you might notice here that amongst the
+
+23
+00:02:15,379 --> 00:02:18,430
+算术运算符有几个不寻常的。
+arithmetic operators there are a couple of unusual ones.
+
+24
+00:02:18,430 --> 00:02:24,110
+一个是。*，这意味着将输入矩阵的相应元素相乘。
+One is .* and that means multiply the corresponding elements of the input matrices together.
+
+25
+00:02:24,110 --> 00:02:31,239
+另一个是./，这意味着划分输入矩阵的相应元素。
+And the other one is ./ which means divide the corresponding elements of the input matrices.
+
+26
+00:02:31,239 --> 00:02:36,459
+在MATLAB中，如果仅使用*运算符，那就是传统的矩阵乘法
+In MATLAB if you use just the * operator, that is a traditional matrix multiplication
+
+27
+00:02:36,459 --> 00:02:42,269
+这是完全不同的。这里我们讨论的是逐个元素的乘法。
+which is quite different. Here we are talking about multiplying element by element.
+
+28
+00:02:42,269 --> 00:02:48,680
+类似地，./表示输入矩阵中相应元素的元素划分，
+Similarly, ./ means element wise division of corresponding elements in the input matrices,
+
+29
+00:02:48,680 --> 00:02:55,410
+其中/指的是乘以矩阵的倒数，这是完全不同的事情。
+where / refers to multiplication by an inverse of a matrix, quite a different thing.
+
+30
+00:02:55,410 --> 00:03:01,489
+让我们来看一个diadic运算符的可能示例，并在此特定
+Let’s have a look at a possible example of a diadic operator and in this particular
+
+31
+00:03:01,489 --> 00:03:06,800
+我们将看一下图像减法-一个图像减去另一个图像。
+case we will look at image subtraction—one image minus another image.
+
+32
+00:03:06,800 --> 00:03:13,019
+所以这是一个从高角度向下俯视的交叉路口的图像。
+So here is an image of an intersection taken from a high vantage point and looking down.
+
+33
+00:03:13,019 --> 00:03:19,909
+这是来自同一序列的另一帧-它实际上是序列中的第四帧。
+And here is another frame from this same sequence—it is actually the fourth frame in the sequence.
+
+34
+00:03:19,909 --> 00:03:24,739
+这些图像看起来非常非常相似。交通流量不是很大
+And these images look very, very similar to each other. The traffic is not moving very
+
+35
+00:03:24,739 --> 00:03:29,060
+很快。但如果我减去这两个图像，我得到了
+quickly at all. But if I subtract these two images, I get
+
+36
+00:03:29,060 --> 00:03:34,269
+一个看起来像这样的图像。它所做的是它向我们展示了行踪
+an image that looks like this. And what it has done is it has shown us whereabouts the
+
+37
+00:03:34,269 --> 00:03:39,489
+两个图像是不同的。它向我们展示了两幅图像之间的差异。什么
+two images are different. It shows us the discrepancy between the two images. And what
+
+38
+00:03:39,489 --> 00:03:46,239
+我们可以看到这里有一些明亮的像素。所以这显示了很明显的下落
+we can see is that there are some bright pixels up here. So this shows quite clearly whereabouts
+
+39
+00:03:46,239 --> 00:03:50,549
+这两个图像是不同的，我们可以看到差异主要在那一列
+the two images are different and we can see that the difference is mostly in that column
+
+40
+00:03:50,549 --> 00:03:54,599
+交通，在框架中开始向下移动。
+of traffic, which is beginning to move downward in the frame.
+
+41
+00:03:54,599 --> 00:03:58,909
+虽然图像看起来非常非常相似，但仅仅是通过区分它真的
+Although the images look very, very similar, simply by taking the difference it really
+
+42
+00:03:58,909 --> 00:04:02,650
+突出显示图像发生变化的位置。
+highlights where the change in the image has occurred.
+
+43
+00:04:02,650 --> 00:04:08,500
+但是，当我们减去像素值时，我们确实需要小心一点
+But we do need to be a little bit careful when we subtract pixel values, particularly
+
+44
+00:04:08,500 --> 00:04:13,739
+如果它们是我们之前使用的无符号整数八种类型。
+if they are of the unsigned integer eight type that we have used previously.
+
+45
+00:04:13,739 --> 00:04:19,080
+考虑这个例子。考虑第一帧中的像素值为55.相应的
+Consider this example. Consider a pixel in frame one has got a value of 55. The corresponding
+
+46
+00:04:19,080 --> 00:04:24,780
+第二帧中的像素值为55.差异：显然为0。
+pixel in frame two has got a value of 55. The difference: clearly 0.
+
+47
+00:04:24,780 --> 00:04:30,630
+现在在这种特殊情况下，第一帧中的像素值为60，它有点大
+Now in this particular case the pixel in frame one has got a value of 60, it is a bit bigger
+
+48
+00:04:30,630 --> 00:04:35,910
+然后是第二帧中像素的值。差异显然是5。
+then the value of the pixel in frame two. The difference is clearly of 5.
+
+49
+00:04:35,910 --> 00:04:40,830
+现在在这种情况下，当帧一个像素的值为55时，帧为两个像素
+Now in this case when the frame one pixel has got a value of 55, the frame two pixel
+
+50
+00:04:40,830 --> 00:04:48,160
+得到的值为60，MATLAB将计算零差异，这是因为我们
+has got a value of 60, MATLAB will compute a difference of zero and this is because we
+
+51
+00:04:48,160 --> 00:04:54,550
+正在减去无符号整数。根据定义，无符号整数不能为负数，
+are subtracting unsigned integers. Unsigned integers cannot be negative by definition,
+
+52
+00:04:54,550 --> 00:05:00,790
+他们没有签名。因此，在这种情况下，我们将得到一个错误的结果。
+they are unsigned. So in this case we are going to get an erroneous result.
+
+53
+00:05:00,790 --> 00:05:07,720
+解决它的方法是将图像转换为不同的数据类型;让他们离开
+The way to get around it is to cast the images to a different data type; move them from being
+
+54
+00:05:07,720 --> 00:05:15,060
+无符号整数，可能是有符号整数，也可能是双精度浮点值。
+unsigned integers, perhaps to being signed integers, or perhaps to being double precision floating point values.
+
+55
+00:05:18,280 --> 00:05:20,220
+让我们为此创造一个切实的例子。
+Let’s create a tangible example of this.
+
+56
+00:05:20,220 --> 00:05:26,220
+我要创建一个相机，一个电影摄影机，这是一种特殊类型的对象打开
+I am going to create a camera, a movie camera, which is a special type of object which opens
+
+57
+00:05:26,220 --> 00:05:32,120
+电影文件并将其作为单个灰度图像返回。
+a movie file and returns the frames of that as individual grey scale images.
+
+58
+00:05:32,120 --> 00:05:38,050
+所以我创建了电影对象;它位于名为cam的工作空间中。这是一部电影
+So I have created the movie object; it is in the workspace called cam. It is a movie
+
+59
+00:05:38,050 --> 00:05:41,919
+宾语。现在我要从那部电影中抓一帧。
+object. And now I am going to grab one frame from that movie.
+
+60
+00:05:41,919 --> 00:05:45,610
+所以我将使用我们之前见过的抓取方法，我将抓住它
+So I am going to use the grab method, which we have seen before and I am going to grab
+
+61
+00:05:45,610 --> 00:05:52,850
+电影中的第一帧。而我将从电影中抓出下一帧，
+the first frame out of the movie. And I am going to grab the next frame out of the movie,
+
+62
+00:05:52,850 --> 00:05:58,680
+所以两个连续的帧。现在我将显示图像差异，我要去了
+so two sequential frames. Now I am going to display the image difference and I am going
+
+63
+00:05:58,680 --> 00:06:04,789
+显示图像，该图像是图像1减去图像2的结果。
+to display the image which is the result of image one minus image two.
+
+64
+00:06:04,789 --> 00:06:09,180
+在这里，我们看到一个灰度图像，它看起来有点不寻常，我们可以看到
+And here we see a grey scale image and it looks a little bit unusual and we can see
+
+65
+00:06:09,180 --> 00:06:14,460
+这里有一些有趣的活动。im1减去im2的结果实际上是一个
+some interesting activity around here. The result of im1 minus im2 is actually a
+
+66
+00:06:14,460 --> 00:06:19,919
+签字数量。图像1中的像素可以小于图像2中的像素。所以
+signed quantity. The pixel in image one could be smaller then the pixel in image two. So
+
+67
+00:06:19,919 --> 00:06:26,350
+使用不同的颜色映射显示它很有用，我将使用该选项
+it is useful to display this with a different colour map and I am going to use the option
+
+68
+00:06:26,350 --> 00:06:32,190
+在这里寄来。它将要做的是显示负像红色的像素
+invsigned here. And what it is going to do is display pixels that are negative as red
+
+69
+00:06:32,190 --> 00:06:38,479
+和蓝色为正像素，背景为0，为白色。
+and pixels that are positive as blue, and the background, where it is 0, is white.
+
+70
+00:06:38,479 --> 00:06:44,460
+所以让我们在这里放大图像的这一部分。我们可以看到的是一些红色像素
+So let’s zoom in on this part of the image up here. And what we can see is some red pixels
+
+71
+00:06:44,460 --> 00:06:49,240
+和一些蓝色像素，这表明我们图像中的像素已经改变
+and some blue pixels and this is showing us where the pixels in the image have changed
+
+72
+00:06:49,240 --> 00:06:55,520
+从一帧到下一帧。所以这就是场景中有动作的地方。
+from one frame to the next. So this is where there is motion in the scene.
+
+73
+00:06:55,520 --> 00:07:00,479
+如果我们回去查看原始电影，我们可以看到这是交通的地方
+If we go back and look at the original movie we can see that this is where the traffic
+
+74
+00:07:00,479 --> 00:07:05,800
+开始穿过十字路口。这些是场景中唯一的像素
+starts to move across the intersection. These are the only pixels in the scene that are
+
+75
+00:07:05,800 --> 00:07:10,330
+改变。我们可以使用这种图像差异机制来确定哪些部分
+changing. We can use this image difference mechanism to determine which parts of the
+
+76
+00:07:10,330 --> 00:07:12,639
+场景已经改变。
+scene have been changed.
+
+77
+00:07:12,639 --> 00:07:18,169
+我们来讨论一个更复杂的图像处理操作。这就是所谓的
+Let’s discuss a more sophisticated image processing operation. It is what is called
+
+78
+00:07:18,169 --> 00:07:24,590
+绿屏效果。我们想要做的是叠加这个抽象场景
+the green screen effect. And what we want to do is to superimpose this abstract scene
+
+79
+00:07:24,590 --> 00:07:30,800
+一个帽子，一个球和一个梯子进入沙漠中的一个道路的场景。
+of a hat, a ball and a ladder into the scene of a road in a desert.
+
+80
+00:07:30,800 --> 00:07:36,889
+我们想要做的是合并这两个图像，我们将使用这些信息来做到这一点
+What we want to do is to merge these two images, and we are going to do that using the information
+
+81
+00:07:36,889 --> 00:07:42,280
+在顶部图像中，那些绿色的像素将被替换为
+in the top image, where those pixels that are green are going to be substituted by the
+
+82
+00:07:42,280 --> 00:07:47,250
+底部图像的背景像素。绿屏效果被广泛使用
+background pixels from the bottom image. The green screen effect is widely used in
+
+83
+00:07:47,250 --> 00:07:53,590
+电视制作，这是我拍摄其中一个介绍作品的形象
+television production and here is an image of me filming one of the introductory pieces
+
+84
+00:07:53,590 --> 00:07:59,490
+对于MOOC。绿色背景中的所有像素都被a替换
+for the MOOC. All of the pixels that are in the green background are substituted by a
+
+85
+00:07:59,490 --> 00:08:02,949
+照片和图形的数量等。
+number of photographs and graphics and so on.
+
+86
+00:08:02,949 --> 00:08:09,229
+这种效果也被新闻阅读者，天气男人用在电视上。当我这样做时，它确实是
+This effect is also used by newsreaders, weather men on TV. When I am doing this it is really
+
+87
+00:08:09,229 --> 00:08:13,520
+重要的是我不穿任何绿色的东西。例如，如果我穿了绿色
+important that I don’t wear anything that is green. If, for instance, I wore a green
+
+88
+00:08:13,520 --> 00:08:19,139
+然后我的身体会消失，然后它会被背景照片取代。
+shirt then my body would just disappear, and it would be replaced by the background photographs.
+
+89
+00:08:19,139 --> 00:08:24,819
+那么让我们来谈谈我们如何做绿屏效果。所以这是两个图像
+So let’s talk about how we do the green screen effect. So here are the two images
+
+90
+00:08:24,819 --> 00:08:30,720
+再次。在顶部，我们有绿色背景和底部的抽象图像
+again. In the top we have our abstract image against the green background and in the bottom
+
+91
+00:08:30,720 --> 00:08:36,240
+我们有想要将抽象图像叠加到的真实场景。
+we have the real scene that we want to superimpose the abstract image into.
+
+92
+00:08:36,240 --> 00:08:42,810
+第一步是确定哪些像素是绿色的，我们通过做出两个决定来做到这一点
+The first step is to determine which pixels are green and we do that by making two decisions
+
+93
+00:08:42,810 --> 00:08:49,050
+我们创建两个逻辑图像。顶部显示所有非绿色像素。
+and we create two logical images. The top one shows all the pixels that are not green.
+
+94
+00:08:49,050 --> 00:08:54,390
+因此白色值表示相应的输入像素不是绿色。最底层的是
+So white value means that the corresponding input pixel is not green. The bottom one is
+
+95
+00:08:54,390 --> 00:09:00,470
+与此相反：白色像素对应于输入图像中的绿色。这些图像
+the opposite of that: the white pixels correspond to green in the input image. These images
+
+96
+00:09:00,470 --> 00:09:04,870
+是逻辑图像。像素只有值true或false。有时这些是
+are logical images. The pixels have only got the value true or false. Sometimes these are
+
+97
+00:09:04,870 --> 00:09:09,040
+称为二进制图像，因为它们只有两个可能的值。有时他们被召唤
+called binary images because they only have two possible values. Sometimes they are called
+
+98
+00:09:09,040 --> 00:09:14,940
+屏蔽图像，因为我们使用它们来屏蔽输入场景的特定区域。
+mask images because we use them to mask out particular regions of the input scene.
+
+99
+00:09:14,940 --> 00:09:21,540
+然后，下一步是将掩模矩阵乘以原始输入图像。和
+The next step then is to multiply the mask matrices by the original input images. And
+
+100
+00:09:21,540 --> 00:09:28,149
+我们在顶行的是一个图像，其中所有绿色像素都设置为黑色，
+what we have in the top line is an image where all of the green pixels have been set to black,
+
+101
+00:09:28,149 --> 00:09:32,410
+剩下的像素是抽象对象。
+and the remaining pixels are the abstract object.
+
+102
+00:09:32,410 --> 00:09:37,830
+我们对底部图像做同样的事情。我们将输入图像乘以掩码和
+We do the same thing for the bottom image. We multiply the input image by the mask and
+
+103
+00:09:37,830 --> 00:09:43,959
+现在我们输入的图像中有一个洞。黑色像素对应于摘要
+now we have the input image with a hole in it. The black pixels correspond to the abstract
+
+104
+00:09:43,959 --> 00:09:47,130
+宾语。请注意，我们已经使用了diadic操作
+object. Notice that we have used the diadic operation
+
+105
+00:09:47,130 --> 00:09:53,649
+这里两次，在每种情况下将掩蔽的矩阵乘以原始彩色图像。
+twice here, in each case to multiply a masked matrix by an original colour image.
+
+106
+00:09:53,649 --> 00:09:59,910
+最后一步是将这两个图像一起添加。这是另一个双向行动，
+The last step then is to add these two images together. And that is yet another diadic operation,
+
+107
+00:09:59,910 --> 00:10:04,660
+然后我们剩下的是一个包含我们抽象对象的图像
+and what we are left with then is an image which contains our abstract object against
+
+108
+00:10:04,660 --> 00:10:07,020
+沙漠场景的背景。
+the background of a desert scene.
+

@@ -1,0 +1,130 @@
+1
+00:00:03,520 --> 00:00:08,200
+让我们总结一下我们学到的一些东西：在这个讲座中我们谈到了空间
+Let’s summarise some of the things we have learned: in this lecture we talked about spatial
+
+2
+00:00:08,200 --> 00:00:10,040
+图像处理运营商。
+image processing operators.
+
+3
+00:00:10,040 --> 00:00:15,500
+这些操作是输出像素是相应周围的函数的地方
+These operations are where the output pixel is a function of the corresponding surrounding
+
+4
+00:00:15,500 --> 00:00:17,900
+输入图像中的区域。
+region in the input image.
+
+5
+00:00:17,900 --> 00:00:22,360
+我们讨论了边缘效应，以及输入窗口从边缘掉落的情况
+We talked about edge effects and this where the input window falls off the edge of the
+
+6
+00:00:22,360 --> 00:00:28,760
+输入图像，我们需要某种策略来处理这个特定的问题。
+input image and we need some sort of strategy to deal with this particular problem.
+
+7
+00:00:28,760 --> 00:00:34,649
+我们谈到了卷积;这是我们应用一个我们称之为内核的矩阵的地方
+We talked about convolution; this is where we apply a matrix which we call a kernel to
+
+8
+00:00:34,649 --> 00:00:37,160
+使用卷积运算符的图像。
+an image using the convolution operator.
+
+9
+00:00:37,160 --> 00:00:42,860
+我们可以使用它来执行一系列非常有用的图像处理功能，例如
+We can use this to perform a raft of really useful image processing functions such as
+
+10
+00:00:42,860 --> 00:00:46,140
+平滑和梯度计算。
+smoothing and gradient calculation.
+
+11
+00:00:46,140 --> 00:00:49,840
+我们研究了许多标准内核，例如Gaussian，它的衍生物
+We looked at a number of standard kernels such as the Gaussian, the derivative of the
+
+12
+00:00:49,840 --> 00:00:53,640
+高斯和高斯拉普拉斯算子。
+Gaussian and the Laplacian of Gaussian.
+
+13
+00:00:53,640 --> 00:00:54,640
+我们还研究了相关性。
+We also looked at the correlation.
+
+14
+00:00:54,640 --> 00:01:00,270
+相关性类似于卷积;等式中的一些符号被改变了
+Correlation is similar to convolution; some of the signs in the equation are changed and
+
+15
+00:01:00,270 --> 00:01:04,220
+如果内核是对称的，它相当于卷积。
+it’s equivalent to convolution if the kernel is symmetric.
+
+16
+00:01:04,220 --> 00:01:09,189
+相关性对于模板匹配等任务非常有用，我们使用此技术进行查找
+Correlation is useful for tasks such as template matching and we used this technique to find
+
+17
+00:01:09,189 --> 00:01:12,509
+机器人班德在一个非常繁忙的人群场景。
+the robot Bender in a very busy crowd scene.
+
+18
+00:01:12,509 --> 00:01:17,960
+我们还讨论了非线性滤波器;我们讨论了排名和中位数过滤器并展示了如何
+We also discussed non-linear filters; we talked about rank and median filters and showed how
+
+19
+00:01:17,960 --> 00:01:21,319
+它们有助于消除极端噪音。
+they are useful for removing extreme noise.
+
+20
+00:01:21,319 --> 00:01:26,279
+我们还讨论了形态学图像处理，这是一种允许我们使用的技术
+We also talked about morphological image processing, and this is a technique that allows us to
+
+21
+00:01:26,279 --> 00:01:30,579
+保留或删除基于其大小和形状的blob。
+keep or remove blobs that are based on their size and shape.
+
+22
+00:01:30,579 --> 00:01:35,240
+如果你有一个小噪声斑点的图像，你可以简单地使用形态滤波器
+If you have an image with small noise blobs you can use a morphological filter to simply
+
+23
+00:01:35,240 --> 00:01:36,709
+删除它们。
+remove them.
+
+24
+00:01:36,709 --> 00:01:41,390
+或者，如果你有一个图像-也许是阈值处理的结果，那么对象有一些小的
+Or if you have an image—perhaps the result of thresholding, the object has got some small
+
+25
+00:01:41,390 --> 00:01:45,990
+你不满意的洞-你可以使用形态处理来填补
+holes in it that you are not happy about—you can use a morphological processing to fill
+
+26
+00:01:45,990 --> 00:01:46,889
+那些洞。
+those holes in.
+

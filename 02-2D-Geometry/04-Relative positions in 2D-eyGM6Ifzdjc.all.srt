@@ -1,0 +1,220 @@
+1
+00:00:03,800 --> 00:00:06,700
+让我们看一个稍微更现实的例子。
+Let's have a look at a slightly more realistic example.
+
+2
+00:00:07,600 --> 00:00:10,400
+在这里，我有一个二维车和
+Here I have a 2-dimensional car and
+
+3
+00:00:10,410 --> 00:00:15,480
+二维坐标系。我已经标记了这个坐标框架W代表
+a 2-dimensional coordinate frame. I've labeled this coordinate frame W and that stands for
+
+4
+00:00:15,480 --> 00:00:21,589
+世界坐标系，这在机器人技术中是一个很常见的东西，有一个参考
+the world coordinate frame and this is quite a common thing in robotics to have one reference
+
+5
+00:00:21,589 --> 00:00:27,230
+关于所有其他参考帧的框架。并表明
+frame that all other reference frames are described with respect to. And to indicate
+
+6
+00:00:27,230 --> 00:00:33,260
+非常非常清楚地，我用下标W标记了x和y轴，所以就是这样
+that very, very clearly, I've labeled the x and y axis with the subscript W, so it's
+
+7
+00:00:33,260 --> 00:00:40,170
+非常非常清楚这是W帧的x轴和W帧的y轴。
+very, very clear that this is the x-axis of the W frame and the y-axis of the W frame.
+
+8
+00:00:40,170 --> 00:00:45,309
+现在让我们来说明这款车的一些兴趣点，左侧座椅：右侧座椅，
+Now let's indicate some points of interest in this car, the left seat: the right seat,
+
+9
+00:00:45,309 --> 00:00:50,210
+其中一个镜子，门把手，也许还有我们加油的地方。我可以描述每个
+one of the mirrors, door handles, and perhaps where we refuel it. I can describe each of
+
+10
+00:00:50,210 --> 00:00:55,489
+这些点由矢量，相对于世界坐标系。
+these points by a vector, with respect to the world coordinate frame.
+
+11
+00:00:55,489 --> 00:01:00,730
+现在让我们想象一下汽车已经移动了，现在它已经结束了，我现在可以描述所有这些了
+Now let's imagine that a car has moved, now it's over here, I could now describe all these
+
+12
+00:01:00,730 --> 00:01:06,900
+相对于世界坐标系的原点，在矢量方面再次指出。
+points again in terms of vectors with respect to the origin of the world coordinate frame.
+
+13
+00:01:06,900 --> 00:01:10,790
+但这有点单调乏味，因为这些要点实际上并没有得到尊重
+But it's a little bit tedious because the points haven't actually moved with respect
+
+14
+00:01:10,790 --> 00:01:15,580
+到了汽车，整辆车已经移动了，现在我必须再次重新定义所有的矢量。
+to the car, the whole car has moved and now I have to redefine all the vectors again.
+
+15
+00:01:15,580 --> 00:01:20,160
+也许，有更好的方法。就是这样，我们将使用坐标框架
+Perhaps, there's a better way. And there it is, we are going to use the coordinate frame
+
+16
+00:01:20,160 --> 00:01:24,120
+想法再次，我们将创建一个新的坐标框架，我将附加它
+idea again and we are going to create a new coordinate frame and I'm going to attach it
+
+17
+00:01:24,120 --> 00:01:30,120
+去车。我把这个框架用C-C标记为汽车。为了清楚起见，我给它贴了标签
+to the car. I labeled this frame C - C for car. And just to be clear, I labeled the
+
+18
+00:01:30,120 --> 00:01:37,110
+轴XC和YC：X和Y轴是连接到汽车的坐标系。现在是
+axis XC and YC: X and Y axis are the coordinate frame that are attached to the car. Now it's
+
+19
+00:01:37,110 --> 00:01:42,710
+在矢量方面描述汽车上所有这些兴趣点的简单问题
+a simple matter to describe all these points of interest on the car in terms of vectors
+
+20
+00:01:42,710 --> 00:01:49,030
+相对于汽车的坐标系。现在，如果我移动汽车，矢量已经改变了
+with respect to the car's coordinate frame. Now if I moved the car, the vectors have changed
+
+21
+00:01:49,030 --> 00:01:54,270
+相对于世界而言，它们并没有改变汽车的坐标框架。
+with respect to the world but they haven't changed with respect to the car's coordinate frame.
+
+22
+00:01:54,850 --> 00:02:00,930
+让我们简化一下，在这里介绍一下姿势。所以介绍另一个
+Let's simplify things a bit and introduce a pose here. So introduce another one of these
+
+23
+00:02:00,930 --> 00:02:05,880
+表示姿势的胖箭头，这是来自世界坐标系的姿势
+fat arrows which represents a pose, and this is the pose from the world coordinate frame
+
+24
+00:02:05,880 --> 00:02:12,410
+到了汽车的坐标框架，所以它是WksiZ.现在让我们看一下一个点
+to the car's coordinate frame so it's W ksi Z. Now let's look at just a single point, one
+
+25
+00:02:12,410 --> 00:02:16,690
+汽车门上的点数。我要标记那个点d并且我们创建了
+of the points on the door of the car. I'm going to label that point d and we created
+
+26
+00:02:16,690 --> 00:02:23,560
+从框架C到这一点d的向量，我们用我们已经讨论过的方式表示
+vector from frame C to this point d, and we denote that in the way we've already discussed
+
+27
+00:02:23,560 --> 00:02:29,020
+我们使用符号P来表示我们正在谈论一个向量。C是参考框架
+we use a symbol P to denote that we're talking about a vector. C is the reference frame so
+
+28
+00:02:29,020 --> 00:02:34,850
+这是关于帧C的向量，因此它从帧C的原点开始
+this is a vector with respect to frame C, so it begins at the origin of frame C and
+
+29
+00:02:34,850 --> 00:02:41,610
+它到了d点。现在让我们考虑一下，我想知道这个向量是什么：
+it goes to the point d. Now let's consider that I want to know what is this vector: the
+
+30
+00:02:41,610 --> 00:02:46,830
+点D相对于世界坐标系。什么以某种简单的方式
+point D with respect to the world coordinate frame. In some sort of simplistic way, what
+
+31
+00:02:46,830 --> 00:02:52,100
+我想要做的是添加这两个箭头。我想继续前进，我想继续前进
+I want to do is to add these 2 arrows. I want to move along here, and I want to move along
+
+32
+00:02:52,100 --> 00:02:59,370
+这里。但它并不那么简单，我们无法添加姿势和矢量。我们不能添加脂肪
+here. But it's not quite that simple, we can't add a pose and a vector. We can't add a fat
+
+33
+00:02:59,370 --> 00:03:03,990
+箭头到一个细箭头。姿势和向量是不同的数学对象，所以我们需要
+arrow to a thin arrow. Poses and vectors are different mathematical objects so we need
+
+34
+00:03:03,990 --> 00:03:06,030
+这样做要小心一点。
+to do this a little bit carefully.
+
+35
+00:03:06,030 --> 00:03:11,900
+我们这样做的方法是引入一个新的运算符，它就是点。在这种形式主义中，我们有
+The way we do it is to introduce a new operator, and it's the dot. In this formalism, we have
+
+36
+00:03:11,900 --> 00:03:17,600
+一个姿势，它在矢量上运行，以便将其转换为不同的坐标
+a pose and it operates on a vector in order to transform it to a different coordinate
+
+37
+00:03:17,600 --> 00:03:23,180
+帧。这就是这个操作符点的作用：它转换了这个描述的向量
+frame. That's what this operator dot does: it transforms this vector which describes
+
+38
+00:03:23,180 --> 00:03:29,110
+关于坐标系C的点d，描述该点的矢量
+the point d with respect to the coordinate frame C, to a vector that describes the point
+
+39
+00:03:29,110 --> 00:03:34,709
+d相对于坐标系W.它执行坐标之间的变换
+d with respect to the coordinate frame W. It performs a transformation between coordinate
+
+40
+00:03:34,709 --> 00:03:39,819
+帧。所有这些都是相当抽象的。我已经介绍了这个操作符点，但我没有
+frames. All of this is rather abstract. I’ve introduced this operator dot, but I haven't
+
+41
+00:03:39,819 --> 00:03:45,130
+实际上告诉你它是什么-你会怎么编码？而且，我们介绍了这个摘要
+told you actually what it is - how would you code it? And, we introduced this abstract
+
+42
+00:03:45,130 --> 00:03:50,170
+由希腊字母ksi描述的姿势-我还没有确切地说那是什么
+pose thing described by the Greek letter ksi - and I haven't said exactly what that is
+
+43
+00:03:50,170 --> 00:03:54,830
+或者你如何编写或实现它。这些是以下内容
+or how you could code that or implement that. These are things would get to in the following
+
+44
+00:03:54,830 --> 00:03:56,370
+本讲座的各节。
+sections in this lecture.
+

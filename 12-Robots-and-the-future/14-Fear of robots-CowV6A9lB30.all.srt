@@ -1,0 +1,310 @@
+1
+00:00:03,520 --> 00:00:08,670
+在本节中，我想谈谈对机器人的恐惧。作为我们可能拥有的机器人专家
+In this section, I would like to talk about fear of Robots. As roboticists we might have
+
+2
+00:00:08,670 --> 00:00:13,959
+对一般人群的机器人的不同看法或观点。我们相信机器人
+a different perception or view of robots to the general population. We believe that robots
+
+3
+00:00:13,959 --> 00:00:19,440
+在未来很有趣和酷，但也许不是每个人都有这种观点。我特别
+are fun and cool in the future but perhaps not everybody shares that view. I particularly
+
+4
+00:00:19,440 --> 00:00:25,390
+喜欢这个广告，是为了道奇充电器，它出现在2013年。我无法告诉你
+like this advertisement, was for Dodge Charger and it came out in 2013. I can’t show you
+
+5
+00:00:25,390 --> 00:00:31,420
+这里所有的视频，但广告正在利用人口普遍的不安
+all of the video here but the advertisement is exploiting a general unease in the population
+
+6
+00:00:31,420 --> 00:00:36,500
+关于机器人的未来，并暗示我们不想要一辆自动驾驶汽车
+about the future of robots and suggesting that we wouldn't want a self-driving car that
+
+7
+00:00:36,500 --> 00:00:39,640
+对人类来说，结局将非常非常糟糕。
+is going to end very, very badly for human kind.
+
+8
+00:00:39,640 --> 00:00:44,950
+但是，有舞蹈机器人，所有人似乎喜欢在这里跳舞人形机器人
+But then, there are dancing robots and everybody seems to love dancing humanoid robots so here
+
+9
+00:00:44,950 --> 00:00:51,360
+我们看到三个简单的人形机器人正在做一些精心设计的舞蹈。所以这是一种
+we see three simple humanoid robots doing some choreographed dancing. So this is a kind
+
+10
+00:00:51,360 --> 00:00:56,680
+机器人通常不会引起普通人群的恐惧和厌恶。
+of robot that generally doesn't invoke fear and loathing in the general population.
+
+11
+00:01:02,380 --> 00:01:06,960
+然后有机器人电影角色，如Wall-e和Eve，它们都没有威胁，
+And then there are robotic movie characters such as Wall-e and Eve, which are quite non-threatening,
+
+12
+00:01:06,969 --> 00:01:10,049
+事实上，非常可爱。
+and in fact, quite endearing.
+
+13
+00:01:10,049 --> 00:01:15,229
+与终结者特许经营这样的机器人相比，实际上相当
+In contrast with robots like this from the Terminator franchise which are actually quite
+
+14
+00:01:15,229 --> 00:01:20,770
+可怕而且令人生畏。在这里，我们有一个拥有大量机器人的场景;这些机器人
+scary and intimidating. Here we have a scene with a large number of robots; these robots
+
+15
+00:01:20,770 --> 00:01:25,529
+在这里，每个人看起来都很温和，他们看起来很人性化，他们很好
+here individually look quite benign, they look quite human like, they have got nice
+
+16
+00:01:25,529 --> 00:01:30,590
+温柔的面部表情，但个人而言，我发现这个场景相当令人不安，我
+gentle facial expressions but personally, I find this scene rather unsettling and I
+
+17
+00:01:30,590 --> 00:01:34,189
+我认为事实上它不仅仅是一个机器人，而是存在排的事实
+think it is the fact that it is not just one robot but it is the fact that there is row
+
+18
+00:01:34,189 --> 00:01:40,319
+一排排机器人，我觉得不安。或许，也因为所有这些
+upon row upon row of robots, which I find unsettling. Perhaps, also because all these
+
+19
+00:01:40,319 --> 00:01:43,499
+机器人看起来完全一样。
+robots look exactly the same.
+
+20
+00:01:43,499 --> 00:01:48,299
+这是一位非常着名的机器人研究员和他的机器人克隆人。有些人可能会
+Here is a very famous robotics researcher with his robotic clone. Some people may have
+
+21
+00:01:48,299 --> 00:01:54,459
+像这样的图像绝对没有问题，但其他人可能会发现这样的场景相当令人不安。
+absolutely no problem with an image like this but other people might find such a scene rather unsettling.
+
+22
+00:01:54,460 --> 00:02:00,679
+这导致我们发现一种被称为UncannyValley的现象。UncannyValley是
+That leads us to a phenomena which is called the Uncanny Valley. The Uncanny Valley is
+
+23
+00:02:00,679 --> 00:02:05,889
+这里的图表和水平访问表示我们有一个指示
+represented by this graph here and on the horizontal access we have an indication of
+
+24
+00:02:05,889 --> 00:02:07,880
+机器人是如何生命的。
+how life-like the robot is.
+
+25
+00:02:07,880 --> 00:02:12,520
+我们可以从完全没有生命的生活变成完全的生活
+We can go from being not life-like at all to completely life-like
+
+26
+00:02:12,520 --> 00:02:18,000
+在垂直轴上，我们发现机器人很有吸引力
+and in the vertical axis we have upwards that we find the robot attractive
+
+27
+00:02:18,000 --> 00:02:21,040
+向下我们发现机器人是令人厌恶的。
+and downwards we find the robots to be repulsive.
+
+28
+00:02:21,060 --> 00:02:27,550
+现在，森林教授和我首先假设了神秘山谷的概念
+Now, the notion of the Uncanny Valley was first hypothesized by Professor Mori and I
+
+29
+00:02:27,550 --> 00:02:33,350
+在2013年的IROS会议上有机会与他见面。
+had the delightful opportunity to meet him at IROS conference in 2013.
+
+30
+00:02:33,350 --> 00:02:39,660
+因此，如果我们考虑UncannyValley假设，我们看到的是与人类的相似性
+So if we consider the Uncanny Valley hypothesis, what we see is that as the likeness to a human
+
+31
+00:02:39,660 --> 00:02:45,910
+随着增加，我们发现机器人越来越有吸引力。但在某一点上，
+being increases, we find the robot to be more and more attractive. But at a certain point,
+
+32
+00:02:45,910 --> 00:02:51,030
+然后我们发现它变得更像生活，我们发现它变得不那么有吸引力了
+we then find that as it becomes more life-like we find it to become less attractive, perhaps
+
+33
+00:02:51,030 --> 00:02:57,710
+甚至变得令人厌恶。现在，它变得更像生活，它再次对我们有吸引力。
+even to become repulsive. Now as it becomes more life-like still, it becomes, again, attractive to us.
+
+34
+00:02:57,710 --> 00:03:03,620
+如果机器人在移动，这种效果会被夸大。这是一个非常简单的人形机器人
+And this effect is exaggerated if the robot is moving. Here is a very simplistic humanoid
+
+35
+00:03:03,630 --> 00:03:08,270
+机器人。它看起来不像人类。它有某种面孔，就是这样
+robot. It doesn’t look much like a human at all. It’s got some sort of face, it’s
+
+36
+00:03:08,270 --> 00:03:12,660
+看起来像眼睛和嘴巴，大多数人对这样的机器人没有任何问题。
+got what look like eyes and a mouth and most people have no problem with a robot like this.
+
+37
+00:03:12,660 --> 00:03:16,490
+它有点可爱;它有点复古。
+It is kind of cute; it is a little bit retro.
+
+38
+00:03:16,490 --> 00:03:21,150
+如果我们有一个看起来像这样的机器人，看起来非常非常逼真，我们大多数人都会发现
+If we had a robot that looks like this, looks very, very life-like, most of us would find
+
+39
+00:03:21,150 --> 00:03:28,030
+这也很有吸引力。但是，如果我们有一个看起来不太正确的机器人，那就是
+that quite attractive as well. But if we have a robot that looks not quite right, something
+
+40
+00:03:28,030 --> 00:03:32,600
+有点偏，也许是眼睛里的东西不对，面部表情
+a little bit off, maybe it is something in the eyes are not right, the facial expression
+
+41
+00:03:32,600 --> 00:03:37,670
+是不是很正确，我们发现像这样的机器人实际上是非常令人厌恶的。这是
+is not quite right, we find a robot like this to be actually quite repellent. This is the
+
+42
+00:03:37,670 --> 00:03:41,850
+有趣的影响被称为UncannyValley。
+interesting affect which is called the Uncanny Valley.
+
+43
+00:03:41,850 --> 00:03:45,900
+所以我现在要做的是推测一下这种对机器人的恐惧
+So what I would like to do now, is to speculate a little bit about where this fear of robots
+
+44
+00:03:45,900 --> 00:03:51,500
+可能来自，特别是对人类机器人的恐惧。我相信很多
+might come from, particularly the fear of robots in human form. I believe a lot of it
+
+45
+00:03:51,500 --> 00:03:57,940
+归咎于文化包袱，尤其是西方犹太教基督教文化;那里
+is down to cultural baggage and particularly in the western Judeo Christian culture; there
+
+46
+00:03:57,940 --> 00:04:03,500
+可能是古代犹太传说中的傀儡的回声。傀儡是一个像人一样的人
+are probably echoes of the ancient Jewish legend of the Golem. The Golem was a human-like
+
+47
+00:04:03,500 --> 00:04:09,730
+由圣人用粘土塑造的生物。Golem将为其创作者服务并保护
+creature fashioned from clay by a Holy man. The Golem would serve its creators and protect
+
+48
+00:04:09,730 --> 00:04:16,160
+但偶尔他们会肆无忌惮地造成巨大的破坏和破坏。所以傀儡
+them but occasionally they would run amok and cause great havoc and damage. So the Golem
+
+49
+00:04:16,160 --> 00:04:20,529
+是一个喜忧参半的祝福，它可以做得很好，但也可能做得很糟糕。
+was a mixed blessing, it could do good but it could also do bad.
+
+50
+00:04:20,529 --> 00:04:26,460
+我相信，最近西方文化的影响来自弗兰肯斯坦的故事，
+A more recent influence in western culture, I believe, comes from the story of Frankenstein,
+
+51
+00:04:26,460 --> 00:04:33,439
+玛丽雪莉1818年的小说，其中的生物打开了它的创造者弗兰肯斯坦博士和
+Mary Shelly’s 1818 novel, in which the creature turns on its creator Dr. Frankenstein and
+
+52
+00:04:33,439 --> 00:04:39,830
+这个关于创造者的创造的故事是许多人的基础
+this story of the creation turning on the creator is the foundation for many, many of
+
+53
+00:04:39,830 --> 00:04:46,569
+我们今天在科幻小说和科幻电影中读到的机器人故事。
+the robot stories that we read today in science fiction books and in science fiction movies.
+
+54
+00:04:46,569 --> 00:04:51,370
+与日本的朋友和同事交谈，我感觉他们不那么害怕，
+Talking to friends and colleagues in Japan, I get a sense that they are less fearful,
+
+55
+00:04:51,370 --> 00:04:57,639
+不那么以人类形式建造的机器吓倒了。我在这里走了一段路，
+less intimidated by machines built in human form. I am going out on a bit of a limb here,
+
+56
+00:04:57,639 --> 00:05:03,229
+但我认为区别在于文化包袱;他们还没有成长起来的文化
+but I think the difference is in the cultural baggage; they haven't grown up with the cultural
+
+57
+00:05:03,229 --> 00:05:10,279
+Golem的传统或Frankenstein故事的文化传统。我想，在他们的
+tradition of the Golem or the cultural tradition of the Frankenstein story. I think, in their
+
+58
+00:05:10,279 --> 00:05:17,399
+宗教信仰他们可以在各种物体中看到生命力，无论它们是有生命的还是无生命的。
+religious beliefs they can see a life force in all sorts of objects whether they are animate or inanimate.
+
+59
+00:05:17,409 --> 00:05:22,289
+所以这完全是我的猜测，但我认为这是文化的差异
+So this is entirely speculation on my part, but I think it is the difference in the cultural
+
+60
+00:05:22,289 --> 00:05:28,150
+西方和东方的遗产也许让日本人更加宽容
+heritage of the West and the East that perhaps makes people from Japan more accommodating
+
+61
+00:05:28,150 --> 00:05:34,779
+类人机器人形式的机器人，当然是技术推动创造人形机器人的地方
+of robots in humanoid form and at certainly where the technological push to create humanoid
+
+62
+00:05:34,779 --> 00:05:41,139
+机器人最初来自。在人形机器人方面，西方确实在追赶。
+robots first came from. The West has really been playing catch up when it comes to humanoid robots.
+

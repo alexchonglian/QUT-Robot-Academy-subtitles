@@ -1,0 +1,30 @@
+1
+00:00:03,990 --> 00:00:08,960
+像这里显示的工业机器人这样的大多数现实世界的机器人都有6个关节。
+Most real world robots like industrial robots shown here have got 6 joints.
+
+2
+00:00:08,960 --> 00:00:12,639
+通常对于工业机器人来说，这些链接都是旋转的。
+And typically for industrial robots, those links are all revolute.
+
+3
+00:00:12,639 --> 00:00:14,379
+这意味着它们是旋转关节。
+That means they are rotating joints.
+
+4
+00:00:14,379 --> 00:00:19,310
+没有像我们之前用斯坦福手臂看到的滑动关节。
+Not sliding joints such as we saw earlier with the Stanford arm.
+
+5
+00:00:19,310 --> 00:00:24,920
+这些机器人也是所有串行链接操纵器，这意味着我们从基地到达
+These robots are also all serial link manipulators and that means that we get from the base to
+
+6
+00:00:24,920 --> 00:00:29,720
+末端执行器由一系列机器人链接和机器人关节组成。
+the end effector by a series of robot links and robot joints.
+

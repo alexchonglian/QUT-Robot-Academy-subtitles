@@ -1,0 +1,275 @@
+1
+00:00:03,980 --> 00:00:07,100
+数学形态学的另一种变化
+Another variation on mathematical morphology
+
+2
+00:00:07,109 --> 00:00:12,889
+就是所谓的命中或未命中变换。现在在这种情况下，结构元素
+is what's called the hit-or-miss transform. Now in this case, the structuring element
+
+3
+00:00:12,889 --> 00:00:18,480
+包含具有三个可能值的像素。该值可以为零，这意味着
+contains pixels which have three possible values. The value could be zero, which means
+
+4
+00:00:18,480 --> 00:00:24,180
+它所在的像素必须为零。它可以是一个，这意味着像素
+that the pixel that it sits over must be zero. It could be one, which means the pixel that
+
+5
+00:00:24,180 --> 00:00:29,359
+它坐在上面必须等于一个或它可以有一个值不关心，所以它没有
+it sits over must be equal to one or it can have a value of don't care, so it doesn't
+
+6
+00:00:29,359 --> 00:00:34,329
+无论下面是什么像素值。让我们用一些简单的例子来说明这一点。
+matter what pixel value is underneath. Let's illustrate this with some simple examples.
+
+7
+00:00:34,329 --> 00:00:40,500
+这是两个输入像素模式，我们将覆盖这个特定的命中和未命中
+Here are two input pixel patterns, and we're going to overlay this particular hit-and-miss
+
+8
+00:00:40,500 --> 00:00:46,469
+在每个人的顶部进行转换。现在在第一种情况下，我们看到结果是真的。
+transform on top of each of them. Now in the first case, we see that the result is true.
+
+9
+00:00:46,469 --> 00:00:52,260
+结构元素中的红色像素位于导入图像中的零像素上
+The red pixels in the structuring element lay over zero pixels in the import image and
+
+10
+00:00:52,260 --> 00:00:56,800
+结构元素中的蓝色像素位于输入像素上，所有输入像素都等于1。
+blue pixels in the structuring element lay over input pixels which are all equal to one.
+
+11
+00:00:56,800 --> 00:01:02,289
+结果是真的。我们在这里不关心其他两个像素，它们的价值是什么
+So the result is true. We don't care about the other two pixels here, what values they
+
+12
+00:01:02,289 --> 00:01:06,960
+有，他们不参加。现在让我们来看看这个例子。
+have, they do not participate. Now let's have a look at this example.
+
+13
+00:01:06,960 --> 00:01:12,100
+结构元素中的红色像素位于像素上，在这种情况下不是
+The red pixels in the structuring element lay over pixels, which in this case are not
+
+14
+00:01:12,100 --> 00:01:17,450
+都等于零。结构化元素中的蓝色像素位于输入像素上
+all equal to zero. The blue pixels in the structuring element lay over input pixels
+
+15
+00:01:17,450 --> 00:01:22,680
+这都是一个，所以这很好。但在这种情况下，结果是错误的，因为
+which are all one, so that's good. But in this case, the result is false because of
+
+16
+00:01:22,680 --> 00:01:28,900
+这一个重要的输入像素在这里。可以使用命中和未命中变换
+this one valued input pixel over here. The hit-and-miss transform can be used for
+
+17
+00:01:28,900 --> 00:01:35,610
+许多非常有用和有趣的应用程序。在这里考虑这个输入图像，它是合成的
+a lot of really useful and interesting applications. Consider this input image here, it's a synthetic
+
+18
+00:01:35,610 --> 00:01:40,509
+我使用位图编辑器创建的图像，但我们可以将其视为天线
+image that I created using a bitmap editor, but we could think of it perhaps as an aerial
+
+19
+00:01:40,509 --> 00:01:47,770
+道路网络的照片或类似的东西。现在，通过应用特定序列
+photograph of a road network or something like that. Now, by applying a particular sequence
+
+20
+00:01:47,770 --> 00:01:53,170
+一次又一次地进行“一次又一次”的转换，可以执行一个名为的操作
+of hit-and-miss transforms over and over again, it's possible to perform an operation called
+
+21
+00:01:53,170 --> 00:01:59,640
+骨架。我们所做的就是转换包含数字的输入图像
+skeletonization. And what we've done is to convert our input image which contains a number
+
+22
+00:01:59,640 --> 00:02:04,750
+任意厚度的线条成为该图像的骨架。
+of lines of arbitrary thickness into a skeleton of that image.
+
+23
+00:02:04,750 --> 00:02:11,379
+包含许多行，每行保证只有一个像素宽。现在
+Contains a number of lines and each line is guaranteed to be only one pixel wide. Now
+
+24
+00:02:11,379 --> 00:02:17,230
+我们可以使用名为ithin的工具箱函数执行此骨架化操作
+we can perform this skeletonization operation using the toolbox function called ithin and
+
+25
+00:02:17,230 --> 00:02:24,200
+你传入二进制图像。现在这个操作非常慢，因为这个命中注定
+you pass into it a binary image. Now this operation is quite slow because this hit-and-miss
+
+26
+00:02:24,200 --> 00:02:29,290
+变换本身就是相对昂贵的计算和骨架化
+transform is relatively expensive to compute in its own right and to do skeletonization
+
+27
+00:02:29,290 --> 00:02:34,160
+我们必须按顺序一次又一次地对命中图像应用“命中-未命中”变换
+we have to apply the hit-and-miss transform over and over again to the image in order
+
+28
+00:02:34,160 --> 00:02:38,400
+获得骨架。另一个非常有趣的应用
+to obtain the skeleton. Another really interesting application of
+
+29
+00:02:38,400 --> 00:02:44,800
+命中和未命中变换是找到交叉点。所以我们假设我们有骨架化
+the hit-and-miss transform is to find intersections. So let's assume that we have the skeletonized
+
+30
+00:02:44,800 --> 00:02:51,239
+在上一张幻灯片中创建的图，我想找到交点。一个十字路口
+figure created in the previous slide and I want to find the intersection points. An intersection
+
+31
+00:02:51,239 --> 00:02:56,980
+我要定义一个三个线段合在一起的地方
+point I'm going to define as a place where three line segments come together at a single
+
+32
+00:02:56,980 --> 00:03:00,519
+点。在这种情况下，有五个交叉点
+point. And in this case, there are five intersection
+
+33
+00:03:00,519 --> 00:03:06,489
+点。所以我想找到这三个单像素宽线的像素坐标
+points. So I want to find the pixel coordinates where these three single pixel wide lines
+
+34
+00:03:06,489 --> 00:03:11,849
+遇到。我想找到这些交叉点，我们可以再次使用
+meet. I want to find these intersections and again we can perform this function using the
+
+35
+00:03:11,849 --> 00:03:17,459
+命中与转换。在右手图像中，我们看到了五个交叉点
+hit-and-miss transform. In the right hand image we see the five intersection points
+
+36
+00:03:17,459 --> 00:03:20,970
+突出显示，每个都只是一个像素。
+highlighted and each of these is just a single pixel.
+
+37
+00:03:20,970 --> 00:03:26,799
+像素设置在这三个线段相交的坐标处，我们可以计算
+The pixel is set at the coordinate where those three line segments meet and we can compute
+
+38
+00:03:26,799 --> 00:03:32,780
+这个交叉点使用工具箱函数itriplepoint。输入是二进制图像
+this intersection using the toolbox function itriplepoint. The input is a binary image
+
+39
+00:03:32,780 --> 00:03:37,830
+包含单像素宽骨架类型图像。
+that contains a single pixel wide skeleton type image.
+
+40
+00:03:37,830 --> 00:03:43,730
+再一次，这个三点函数的执行速度非常慢，因为命中注定
+Once again, this triple point function is quite slow to execute because the hit-and-miss
+
+41
+00:03:43,730 --> 00:03:49,340
+必须迭代地执行变换，直到只有这几个孤立的像素
+transforms have to be executed iteratively until there are only these few isolated pixels
+
+42
+00:03:49,340 --> 00:03:54,230
+剩余。这是我介绍的合成图像
+remaining. Here's the synthetic image that I introduced
+
+43
+00:03:54,230 --> 00:03:58,670
+之前，它已加载到工作区中。这是六百八百逻辑
+to you earlier, it's loaded into the workspace. It’s a six hundred by eight hundred logical
+
+44
+00:03:58,670 --> 00:04:03,939
+图像所以值为零或一，所以我可以创建一个稀疏版本
+image so the values are either zero or one, so I can create a thinned version of this
+
+45
+00:04:03,939 --> 00:04:10,159
+使用工具箱函数ithin的图像，我传入逻辑图像，它将计算
+image using the toolbox function ithin, I pass in the logical image and it will compute
+
+46
+00:04:10,159 --> 00:04:14,540
+很长一段时间，差不多一分钟，就在这里。
+for quite a while, almost a minute, and here it is.
+
+47
+00:04:14,540 --> 00:04:21,829
+如果我在新窗口中显示。显示细化图像，我们可以放大这个
+If I display this in a new window. Display the thinned image, we can zoom in on this
+
+48
+00:04:21,829 --> 00:04:28,860
+图像显示它确实是一个像素宽。再次放大，我们可以看到它
+image to show that it is indeed a single pixel wide. Zoom in again and we can see that it
+
+49
+00:04:28,860 --> 00:04:35,810
+只是一个像素宽的线。一大堆白色块端对端堆叠。
+is just a single pixel wide line. A whole bunch of white blocks stacked end to end.
+
+50
+00:04:35,810 --> 00:04:40,259
+好吧，解开那一个。现在我可以计算三重点和我
+Alright, unzoom that one. Now I can compute the triple points and I
+
+51
+00:04:40,259 --> 00:04:46,990
+从工具箱和这个函数使用itriplepoint函数做到这一点，我将通过
+do that using itriplepoint function from the toolbox and this function and I'm going pass
+
+52
+00:04:46,990 --> 00:04:50,470
+在稀疏的图像中。这个功能比上一个快得多
+in the thinned image. This function's a lot quicker than the last
+
+53
+00:04:50,470 --> 00:04:59,270
+一。这是结果，所以我将把它放在第一个并显示三重点
+one. Here's the result, so I will put that on figure one and display the triple points
+
+54
+00:04:59,270 --> 00:05:07,250
+并且很难看到，这里只设置了单个像素，如果我可以放大那里
+and little hard to see, there are only single pixels are set here and if I can zoom in there's
+
+55
+00:05:07,250 --> 00:05:08,270
+三重点之一。
+one of the triple points.
+

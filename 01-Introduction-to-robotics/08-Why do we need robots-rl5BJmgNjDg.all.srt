@@ -1,0 +1,380 @@
+1
+00:00:04,710 --> 00:00:09,660
+在本节中，我想谈谈为什么机器人很有用。我们为什么需要机器人？
+In this section, I'd like to talk about why robots are useful. Why do we need robots?
+
+2
+00:00:09,660 --> 00:00:14,519
+我将给出的第一个例子是所谓的机器人手术，但这有点儿
+The first example I am going to give is what's called robotic surgery but that is a bit of
+
+3
+00:00:14,519 --> 00:00:19,640
+用词不当。这实际上是机器人手术。训练有素的人类外科医生就是这样
+a misnomer. It's actually robot-enabled surgery. And highly trained human surgeons are the
+
+4
+00:00:19,640 --> 00:00:24,669
+系统的关键部分。系统的机器人部分显示在这里，有一个
+key part of the system. The robot part of the system is shown over here and there are a
+
+5
+00:00:24,669 --> 00:00:29,730
+在患者体内的工具数量。有工具携带
+number of tools which are inside the body of the patient. There are tools which carry
+
+6
+00:00:29,730 --> 00:00:34,420
+非常小的相机和来自这些相机的信息被呈现给外科医生
+very small cameras and the information from those cameras is presented to the surgeon
+
+7
+00:00:34,420 --> 00:00:40,579
+在立体或3D显示器中。外科医生看着这个3D图像并调整什么
+in a stereoscopic or 3D display. The surgeon looks at this 3D imagery and adjusts what
+
+8
+00:00:40,579 --> 00:00:45,839
+我们可以考虑作为一些小操纵杆。那些小操纵杆控制着它的运动
+we could consider as some small joysticks. Those small joysticks control the motion of
+
+9
+00:00:45,839 --> 00:00:49,249
+也在患者体内的工具。
+tools which are also inside the patient's body.
+
+10
+00:00:49,249 --> 00:00:55,649
+所以外科医生正在做所有熟练的工作。他用他的眼睛来解释3D图像。
+So the surgeon is doing all the skilled work. He's using his eyes to interpret the 3D imagery.
+
+11
+00:00:55,649 --> 00:01:00,309
+他正在使用他所知道的关于医学的一切来控制人体内部的工具
+He's using everything he knows about medicine in order to control the tools inside the human
+
+12
+00:01:00,309 --> 00:01:05,480
+身体做需要做的工作。这里的关键创新是外科医生
+body to do the job that needs to be done. The key innovation here is the surgeon is
+
+13
+00:01:05,480 --> 00:01:10,790
+几乎在人体内部。在过去，我们需要做大开口
+virtually inside the human body. In the old days, we needed to make very large openings
+
+14
+00:01:10,790 --> 00:01:15,220
+在人体内，以便外科医生可以让他非常大的手在那里做
+in the human body so that the surgeon could get his very large hands in there to do the
+
+15
+00:01:15,220 --> 00:01:16,659
+需要完成的工作。
+work that needed to be done.
+
+16
+00:01:16,659 --> 00:01:22,200
+通过这种机器人手术技术，我们能够做出许多非常小的切口
+With this robot surgery technology, we are able to make a number of very very small incisions
+
+17
+00:01:22,200 --> 00:01:28,030
+在我们插入这些非常小的工具和相机的患者体内
+in the body of the patient into which we insert these very small tools and cameras so the
+
+18
+00:01:28,030 --> 00:01:34,399
+患者的结果要好得多。所以机器人手术真的是用词不当。它的
+outcomes for the patient are a whole lot better. So robotic surgery is really a misnomer. It's
+
+19
+00:01:34,399 --> 00:01:40,649
+就像我们之前看到的用于执行操作的遥操作系统一样
+like the teleoperation system that we looked at earlier on which was used to perform manipulation
+
+20
+00:01:40,649 --> 00:01:45,960
+放射性物质。这是一种非常类似的技术，用于虚拟放置
+of radioactive material. It's a very similar technology being used here to virtually place
+
+21
+00:01:45,960 --> 00:01:50,469
+一名患者体内的外科医生。
+a surgeon inside the body of a patient.
+
+22
+00:01:50,469 --> 00:01:56,270
+我们还可以使用机器人技术让我们变得更强大。这是一种称为外骨骼的技术。
+We can also use robot technology to make us stronger. This is a technology called an exoskeleton.
+
+23
+00:01:56,270 --> 00:02:02,079
+这是一个可穿戴的机器人。我们把自己绑在上面。它绑在我们的脚踝上，在我们的脚踝上
+It's a wearable robot. We strap ourselves into it. It straps onto our ankles, onto our
+
+24
+00:02:02,079 --> 00:02:07,429
+膝盖，在我们的大腿上和我们的行李箱上。它监控我们的行动方式。它是由...制成的
+knees, onto our thighs and onto our trunk. It monitors how we move. And it's made of
+
+25
+00:02:07,429 --> 00:02:12,750
+非常坚固的材料，它有非常强大的马达。因此，当我们移动时，它随着我们而移动
+very strong materials and it's got very strong motors. So as we move, it moves with us and
+
+26
+00:02:12,750 --> 00:02:15,160
+它的力量增强了我们自己的力量。
+its strength augments our own strength.
+
+27
+00:02:15,160 --> 00:02:20,610
+这是一个外骨骼系统的视频。这是我拍摄的一些视频
+Here is a video of an exoskeleton system at work. This is some video that I took at a
+
+28
+00:02:20,610 --> 00:02:26,010
+机器人展览最近。我们可以看到穿着外骨骼的绅士能够
+robot exhibition recently. We can see the gentleman wearing the exoskeleton is able
+
+29
+00:02:26,010 --> 00:02:29,350
+非常轻松地处理这个巨大的重量。
+to handle this large weight quite effortlessly.
+
+30
+00:02:37,280 --> 00:02:41,320
+我们走了。所以这是一种限制的方式
+There we go. So this is a way that limitations
+
+31
+00:02:41,320 --> 00:02:47,110
+通过机器人技术可以增强人的力量。表演的智慧
+of human strength can be augmented by robot technology. The intelligence in performing
+
+32
+00:02:47,110 --> 00:02:51,310
+动作或表演动作来自人类，但原始力量，
+the motion or performing the action comes from the human being but the raw strength,
+
+33
+00:02:51,310 --> 00:02:54,890
+蛮力来自他穿的机器人。
+the brute strength comes from the robot that he is wearing.
+
+34
+00:02:54,890 --> 00:03:00,770
+今天机器人的另一个非常重要的角色是管理资产，作为一个我们拥有庞大的社会
+Another really important role for robots today is managing assets, as a society we have a massive
+
+35
+00:03:00,770 --> 00:03:06,630
+在电力线，水管线，燃气管道和下水道方面的资产投资
+investment in assets in terms of power lines, water pipe lines, gas pipe lines and sewer
+
+36
+00:03:06,630 --> 00:03:11,080
+系统。为了保持这些资产的健康，他们需要定期
+systems. And in order to maintain the health of those assets, they need to be periodically
+
+37
+00:03:11,120 --> 00:03:17,100
+检查，这是非常劳动密集型的。其中一些检查工作相当不愉快。
+inspected and that's very labor-intensive. And some of these inspection jobs are fairly unpleasant.
+
+38
+00:03:17,110 --> 00:03:22,380
+想象一下，检查下水道系统是否是你的工作。这是黑暗的，它是令人不快的，实际上
+Imagine if it was your job to inspect sewer systems. It's dark, it's unpleasant, and actually
+
+39
+00:03:22,380 --> 00:03:26,970
+有点危险因此人们一直在建造可以放置在管道中的机器人
+a little dangerous. So people have been building robots that can be placed in the pipe lines
+
+40
+00:03:26,970 --> 00:03:31,970
+在不将人类送到那里的情况下进行检查。所以机器人研究人员
+to perform the inspection without sending human beings down there. So robotic researchers
+
+41
+00:03:31,970 --> 00:03:37,070
+一直在开发用于执行此类检查工作的机器人系统。在这里，我们
+have been developing robot systems for performing this kind of inspection work. And here we
+
+42
+00:03:37,070 --> 00:03:42,440
+查看管道检测机器人的示例。它有轮子推动它通过管道，
+see an example of a pipe inspection robot. It's got wheels to propel it through the pipe,
+
+43
+00:03:42,440 --> 00:03:44,000
+它有灯和相机。
+it's got lights and cameras.
+
+44
+00:03:44,000 --> 00:03:48,580
+每年花费大量资金检查电力线，并且有一对
+A massive amount of money is spent each year on inspecting power lines and there's a couple
+
+45
+00:03:48,580 --> 00:03:53,870
+这样做的方法。一种是沿着电力线飞行机器人或者建造
+of approaches to doing this. One is to fly a robot along the power line or else to build
+
+46
+00:03:53,870 --> 00:03:59,720
+一个可以沿着电线爬行的机器人。电力线附近的飞行直升机是危险的
+a robot that can crawl along the power lines. Flying helicopters near power lines is a dangerous
+
+47
+00:03:59,720 --> 00:04:04,880
+商业。每年，直升机坠毁都会导致一些直升机坠毁事故
+business. And each year, a number of helicopter crashes are caused by the helicopter coming
+
+48
+00:04:04,880 --> 00:04:10,140
+太靠近它正在检查的电线。所以这就是那种
+into too close proximity with the wires that it is inspecting. So this is exactly the sort
+
+49
+00:04:10,140 --> 00:04:13,930
+工作，机器人应该做的危险工作。
+of job, a dangerous job that a robot should do.
+
+50
+00:04:13,930 --> 00:04:19,160
+也许我们最重要的资产是我们生活的地球和研究人员正在开发的地球
+Perhaps our most important asset is the planet on which we live and researchers are developing
+
+51
+00:04:19,160 --> 00:04:24,930
+各种机器人检查和监测我们星球的健康状况。其中一些是
+all manner of robots to inspect and monitor the health of our planet. A few of them are
+
+52
+00:04:24,930 --> 00:04:30,090
+看到这里。它们是可以飞入危险天气系统的飞行机器人
+seen here. They are flying robots that could be flown into dangerous weather systems such
+
+53
+00:04:30,090 --> 00:04:36,250
+作为飓风或旋风，可以探索火山口内部的机器人，以飞艇为基础
+as hurricanes or cyclones, robots that can explore the inside of volcanic craters, blimp-based
+
+54
+00:04:36,250 --> 00:04:41,840
+机器人用于监测亚马逊雨林，水下探测机器人的健康状况
+robots for monitoring the health of the Amazon rain forest, underwater exploration robots
+
+55
+00:04:41,840 --> 00:04:47,620
+和南极探险机器人，甚至机器人船监测水质
+and Antarctic exploration robots, and even robotic boats for monitoring the quality of water
+
+56
+00:04:47,620 --> 00:04:51,280
+在为城市提供饮用水的储存库中。
+in the storages that provide drinking water for cities.
+
+57
+00:04:51,280 --> 00:04:56,729
+将人类置于海洋表面之下是一项危险的事情。人类潜水员是
+It's a dangerous business sending humans beneath the surface of our oceans. Human divers are
+
+58
+00:04:56,729 --> 00:05:01,360
+限制在他们可以潜入的深度。他们还需要一个支持船
+limited in the depths that they can dive to. They also require a support vessel on the
+
+59
+00:05:01,360 --> 00:05:06,240
+他们潜水的表面以及他们返回的表面。因为这个限制
+surface from which they dive and for which they return. Because of this limitation on
+
+60
+00:05:06,240 --> 00:05:11,069
+在水下的人类，近几十年来已经进行了大量的研究
+humans under the water, there's been an enormous amount of research over recent decades in
+
+61
+00:05:11,069 --> 00:05:15,909
+建造水下机器人系统。这些是完全自主的。他们有一个号码
+building underwater robot systems. These are completely autonomous. They've got a number
+
+62
+00:05:15,909 --> 00:05:20,659
+船上的传感器，我们可以发送他们做摄影调查的任务
+of sensors on board and we can send them off to do missions like photographic survey of
+
+63
+00:05:20,659 --> 00:05:27,689
+沉船，探索矿物和检查珊瑚礁等资产的健康状况。
+wrecks, exploring for minerals and examining the health of assets such as coral reefs.
+
+64
+00:05:27,689 --> 00:05:32,479
+人类不能去的另一个地方是其他星球。这是一个集合
+Another place that humans cannot go is to other planets. And here is a collection of
+
+65
+00:05:32,479 --> 00:05:37,659
+已被送往火星的机器人。在前面我们有小机器人。旅居者，
+robots that have been sent to Mars. Here in the front we have the small robots. Sojourner,
+
+66
+00:05:37,659 --> 00:05:43,620
+它是在1997年发出的。在它背后是一个机器人，它是精神和机会的副本
+which was sent in 1997. Behind that is a robot which is a copy of Spirit and Opportunity
+
+67
+00:05:43,620 --> 00:05:50,389
+它们于2003年被送往火星。在这里，我们有了这个巨型机器人，好奇号，
+which were sent to Mars in 2003. And over here, we have this giant robot, Curiosity,
+
+68
+00:05:50,389 --> 00:05:55,879
+它是在2012年被送往火星的。以下是一些火星照片的例子
+which was sent to Mars in 2012. Here is an example of some pictures of Mars taken from
+
+69
+00:05:55,879 --> 00:06:01,740
+好奇的流浪者。再次，在这里，我们可以看到好奇号火星车的大小
+the Curiosity rover. And again, here we can see the size of the Curiosity rover with respect
+
+70
+00:06:01,740 --> 00:06:03,300
+对一个人类工程师。
+to a human engineer.
+
+71
+00:06:03,300 --> 00:06:08,460
+这里的重要信息是我们想要学习信息的环境
+The important message here is that there are environments that we want to go to learn information
+
+72
+00:06:08,460 --> 00:06:14,999
+关于健康或环境状况。深海，雨林，火山或火山
+about the health or the state of the environment. The deep oceans, rain forest, volcanoes or
+
+73
+00:06:14,999 --> 00:06:20,340
+其他星球。但它目前要么太昂贵，要么发送人类太危险了
+other planets. But it's currently either too expensive or it's too dangerous to send human
+
+74
+00:06:20,340 --> 00:06:25,330
+到那些地方的人。所以我们在那里发送机器人，他们作为我们的代理
+beings to those places. So we send robots there instead and they serve as our proxies
+
+75
+00:06:25,330 --> 00:06:31,449
+或者我们的代理人，我们使用这些机器人的感官信息来了解这种环境
+or our agents and we use sensory information from those robots to learn about that environment
+
+76
+00:06:31,449 --> 00:06:35,349
+而不是必须将携带乐器的人送到那些地方。
+rather than having to send human beings carrying instruments to those places.
+

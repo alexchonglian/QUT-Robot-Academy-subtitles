@@ -1,0 +1,705 @@
+1
+00:00:03,600 --> 00:00:08,670
+如果你拿起任何有关机器人技术的标准教科书，你会发现参考
+If you pick up any of the standard textbooks about robotics, you will find reference to
+
+2
+00:00:08,670 --> 00:00:14,760
+Denavit和Hartenberg表示法。这是以JacquesDenavit和RichardHartenberg的名字命名的
+Denavit and Hartenberg notation. This is named after Jacques Denavit and Richard Hartenberg
+
+3
+00:00:14,760 --> 00:00:21,850
+他在1955年写了一篇文章，后来写了一本非常非常一般的书
+who in 1955 wrote an article and later, a book which proposed a very, very general way
+
+4
+00:00:21,850 --> 00:00:28,080
+描述串行链接机制，我们看过的大多数机器人都是串行的
+of describing serial link mechanisms and most of the robots that we've looked at are serial
+
+5
+00:00:28,080 --> 00:00:33,550
+链接操纵器。因此，Denavit和Hartenberg符号特别适用于此
+link manipulators. So, the Denavit and Hartenberg notation is particularly applicable for this
+
+6
+00:00:33,550 --> 00:00:35,250
+机制类。
+class of mechanism.
+
+7
+00:00:35,250 --> 00:00:40,620
+现在在大多数标准教科书中。人们开始介绍这一点
+Now in most of the standard textbooks. People start off with introducing this particular
+
+8
+00:00:40,620 --> 00:00:46,440
+符号。就个人而言，我发现这种符号有点复杂而且不是特别直观。
+notation. Personally, I find the notation somewhat complex and not particularly intuitive.
+
+9
+00:00:46,440 --> 00:00:51,870
+所以，我在这个特定的讲座中所做的就是把它留到最后。一个关键方面
+So, what I've done in this particular lecture is left it until the end. A key aspect of
+
+10
+00:00:51,870 --> 00:00:58,399
+Denavit-Hartenberg表示机器人中的每个关节仅由4个参数描述。
+Denavit-Hartenberg notation is that each joint in the robot is described simply by 4 parameters.
+
+11
+00:00:58,399 --> 00:01:02,850
+所以，让我们从一个非常简单的串行链接操作开始，即2个联合机器人
+So, let's start off with a very simple serial link manipulative that 2 joint robot that
+
+12
+00:01:02,850 --> 00:01:08,189
+我们以前见过很多次。每个关节通过前一个链接连接
+we've seen a number of times before. Each joint is attached via a link to the previous
+
+13
+00:01:08,189 --> 00:01:12,299
+联合。所以在这里，我们可以看到连接到连接的链路1的连接1
+joint. So here, we can see joint 1 which is connected to link 1 which is connected to
+
+14
+00:01:12,299 --> 00:01:18,049
+连杆2连接到连杆2.它们的连杆是刚性的，但关节可以移动。他们
+joint 2 which is connected to link 2. Their links are rigid but the joints can move. They
+
+15
+00:01:18,049 --> 00:01:23,490
+这里可以是旋转的例子，也可以是棱柱形或滑动接头
+can be either rotational as an example shown here or they can be prismatic or sliding joints
+
+16
+00:01:23,490 --> 00:01:25,539
+我们以前谈过的。
+that we've talked about before.
+
+17
+00:01:25,539 --> 00:01:30,840
+每个关节连接到链接，每个链接连接到关节，除了第一个和
+Every joint connects to links and every link connects to joints except for the first and
+
+18
+00:01:30,840 --> 00:01:35,890
+最后一个链接第一个链接是不移动的机器人的基础参考那个
+last link. The first link is the base of the robot which does not move refer to that as
+
+19
+00:01:35,890 --> 00:01:42,109
+链接0和最后一个链接是in-defector或附加到机器人的in-defector。
+link 0 and the last link is the in-defector or is attached to the in-defector of the robot.
+
+20
+00:01:42,109 --> 00:01:47,530
+如果一个机器人有n关节，那么它必须有n加1个链接，包括
+If a robot has got n-joints then, it must have n plus 1 links, that's including the
+
+21
+00:01:47,530 --> 00:01:54,759
+第0个链接或基数。Denavit-Hartenberg表示法的基础是我们附加一个坐标框架
+0th link or the base. Fundamental to the Denavit-Hartenberg notation is we attach a coordinate frame to
+
+22
+00:01:54,759 --> 00:02:01,439
+机器人每个环节的远端。所以在这里，我们可以看到链接J显示为蓝色和
+the far end of every link of the robot. So here, we can see link J shown in blue and
+
+23
+00:02:01,439 --> 00:02:07,149
+我们将坐标框架J附加到链接J的远端，即链接的末尾
+we attach the coordinate frame J to the far end of link J that is the end of the link
+
+24
+00:02:07,149 --> 00:02:13,400
+这是最接近机器人工具的。然后，我们描述该链接框架的姿势
+that's closest to the robots tool. Then, we describe the pose of that link frame with
+
+25
+00:02:13,400 --> 00:02:19,170
+尊重前一个关节的链接框架。所以，这是一个相对的姿势和这个
+respect to the link frame of the previous joint. So, this is a relative pose and this
+
+26
+00:02:19,170 --> 00:02:25,040
+是我们现在应该熟悉的概念。这是坐标系的相对姿势
+is a concept we should be familiar with now. This is a relative pose from coordinate frame
+
+27
+00:02:25,040 --> 00:02:28,140
+J-1协调框架J.
+J-1 to coordinate frame J.
+
+28
+00:02:28,140 --> 00:02:34,090
+在Denavit-Hartenberg表示法中，链接变换由齐次表示
+In the Denavit-Hartenberg notation, the link transform is represented by a homogeneous
+
+29
+00:02:34,090 --> 00:02:39,690
+变换矩阵，通常由字母A表示，并且包括数字
+transformation matrix which is typically denoted by the letter A and it comprises a number
+
+30
+00:02:39,690 --> 00:02:45,140
+基本变换它包括围绕Z轴的旋转。翻译
+of elementary transformations. It comprises a rotation around the Z axis. A translation
+
+31
+00:02:45,140 --> 00:02:52,850
+沿Z轴。沿X轴的平移和围绕X轴的旋转。它的
+along the Z axis. A translation along the X axis and a rotation around the X axis. It's
+
+32
+00:02:52,850 --> 00:02:57,540
+非常简洁。它允许我们描述2链接坐标之间的关系
+very concise. It allows us to describe the relationship between the 2 link coordinate
+
+33
+00:02:57,540 --> 00:03:04,310
+只需4个参数，即θ，D，A和alpha。让我们看看它在实践中是如何运作的。
+frames by simply 4 parameters, theta, D, A and alpha. Let's see how that works in practice.
+
+34
+00:03:04,310 --> 00:03:12,990
+所以在这里，我们有红色链接J-1和连接到链接J-1的坐标系。第一件事
+So here, we have in red link J-1 and the coordinate frame attached to link J-1. First thing that
+
+35
+00:03:12,990 --> 00:03:19,120
+我们要做的是围绕Z轴旋转该坐标系的量为theta
+we're going to do is to rotate that coordinate frame around its Z axis by an amount theta
+
+36
+00:03:19,120 --> 00:03:24,760
+J，我们旋转轴。接下来我们要做的就是翻译那个坐标
+J and we rotate the axis. The next thing we're going to do is to translate that coordinate
+
+37
+00:03:24,760 --> 00:03:29,950
+沿Z轴框架的数量为D，然后，我们将沿着它转换它
+frame along the Z axis by an amount D and then, we're going to translate it along the
+
+38
+00:03:29,950 --> 00:03:38,060
+X轴为J，最后，我们将围绕X轴旋转一个角度
+X axis by an amount J and finally, we're going to rotate it around the X axis by an angle
+
+39
+00:03:38,060 --> 00:03:40,170
+alpha和现在，它看起来像这样。
+alpha and now, it looks like this.
+
+40
+00:03:40,170 --> 00:03:48,260
+所以，我们通过应用4个基本变换从框架J-1移动到框架J，
+So, we have moved from the frame J-1 to the frame J by applying 4 elementary transformations,
+
+41
+00:03:48,260 --> 00:03:56,280
+2个翻译和2个轮换。您可能会问我们如何才能使用4来完成此操作
+2 translations and 2 rotations. You're probably asking is how can we do this using only 4
+
+42
+00:03:56,280 --> 00:04:02,160
+参数，因为一个姿势有2个组件。它有一个我们的翻译组件
+parameters because a pose has got 2 components. It's got a translational component which we
+
+43
+00:04:02,160 --> 00:04:08,950
+由3个数字描述，它有一个我们用3个数字描述的旋转。例如，
+described by 3 numbers and it has a rotation which we described by 3 numbers. For example,
+
+44
+00:04:08,950 --> 00:04:14,470
+滚动，俯仰，偏航角或欧拉角。我们如何只用4个数字呢？好吧，
+roll, pitch, yaw angles or Euler angles. How do we do it with just 4 numbers? Well, the
+
+45
+00:04:14,470 --> 00:04:19,900
+这有效的原因是Denavit-Hartenberg符号需要在哪里限制
+reason this works is that the Denavit-Hartenberg notation requires some constraints on where
+
+46
+00:04:19,900 --> 00:04:27,380
+我们放置坐标框架。第一个约束是框架J的X轴相交
+we place the coordinate frames. The first constraint is that the X axis of frame J intersects
+
+47
+00:04:27,380 --> 00:04:35,340
+框架J-1的Z轴。第二个约束是框架J的X轴是垂直的
+the Z axis of frame J-1. The second constraint is that the X axis of frame J is perpendicular
+
+48
+00:04:35,340 --> 00:04:40,940
+到框架J-1的Z轴。虽然，亲戚中只有6个自由度
+to the Z axis of frame J-1. Although, there are only 6 degrees of freedom in a relative
+
+49
+00:04:40,940 --> 00:04:46,550
+姿势。我们引入了2个约束的事实意味着我们只能使用它来描述它
+pose. The fact that we've introduced 2 constraints means that we can describe this using only
+
+50
+00:04:46,550 --> 00:04:51,860
+4个参数。有一个有趣的，往往令人困惑的结果，这意味着
+4 parameters. There's an interesting and often confusing consequence of this and that means
+
+51
+00:04:51,860 --> 00:04:57,220
+链接帧不一定在链接本身上，这就是它
+that the link frames are not necessarily on the link itself and this is something that
+
+52
+00:04:57,220 --> 00:05:02,320
+当人们开始学习Denavit-Hartenberg时，往往会让人感到困惑
+quite often confuses people when they're starting off and learning about Denavit-Hartenberg
+
+53
+00:05:02,320 --> 00:05:03,640
+符号。
+notation.
+
+54
+00:05:03,640 --> 00:05:10,080
+旋转关节的轴必须与该关节坐标的Z轴对齐
+The axis of a rotational joint has to be aligned with the Z axis of that joints coordinate
+
+55
+00:05:10,080 --> 00:05:16,290
+帧。Denavit-Hartenberg符号要求关节轴J平行于
+frame. The Denavit-Hartenberg notation requires that the axis of joint J is parallel to the
+
+56
+00:05:16,290 --> 00:05:21,960
+坐标系的Z轴，但它不是连接到链接J的坐标系
+Z axis of a coordinate frame but it's not the coordinate frame attached to link J. The
+
+57
+00:05:21,960 --> 00:05:28,590
+关节轴J与前一个坐标系的Z轴对齐，即坐标
+axis of joint J is aligned with the Z axis of the previous coordinate frame, that's coordinate
+
+58
+00:05:28,590 --> 00:05:35,000
+框架J-1再次，这对于开始学习的人来说是一个令人困惑的方面
+frame J-1 and again, this is a confusing aspect for people who is starting out learning about
+
+59
+00:05:35,000 --> 00:05:41,300
+这种表示法。对于棱柱形或滑动关节的情况，运动必须同时进行
+this notation. For the case of a prismatic or sliding joint, the motion must be along
+
+60
+00:05:41,300 --> 00:05:47,389
+Z轴。因此，对于旋转关节，围绕前一帧的Z轴旋转
+the Z axis. So, for rotational joint, rotate around the Z axis of the previous frame for
+
+61
+00:05:47,389 --> 00:05:53,160
+一个棱柱形的关节，我们沿着前一帧的Z轴平移。
+a prismatic joint, we translate along the Z axis of the previous frame.
+
+62
+00:05:53,160 --> 00:06:00,030
+从1个链接到下一个链接的帧的相对姿势由4个基本变换描述。
+The relative pose from the frame of 1 link to the next is described by 4 elementary transformations.
+
+63
+00:06:00,030 --> 00:06:05,490
+对于n-link机器人，我们可以堆叠这些基本变换的组和每个
+For an n-link robot, we can stack groups of these elementary transformations and each
+
+64
+00:06:05,490 --> 00:06:10,900
+group包含4个参数，描述了1个链接帧和1之间的关系
+group contains 4 parameters which described the relationship between 1 link frame and
+
+65
+00:06:10,900 --> 00:06:16,850
+下一个。如果机器人已经获得了所有的旋转关节，则关节角度对应于
+the next. If the robot has got all revolute joints then, the joint angles correspond to
+
+66
+00:06:16,850 --> 00:06:22,550
+这里显示的theta值。所以，这些是联合变量。它们随机器人而变化
+the theta values shown here. So, these are the joint variables. They change as the robot
+
+67
+00:06:22,550 --> 00:06:27,470
+移动。所有其他参数，D'，A和alpha都是常数。
+moves. All the other parameters, the D's, the A's and the alpha's are all constant.
+
+68
+00:06:27,470 --> 00:06:33,790
+它们是特定机器人的机械设计的功能。我们考虑一下
+They're a function of the mechanical design of the particular robot. Let's consider a
+
+69
+00:06:33,790 --> 00:06:38,830
+有棱柱关节的机器人。它的第二个关节是棱柱形的。自从第一次
+robot that has got a prismatic joint. Its second joint is prismatic. Since the first
+
+70
+00:06:38,830 --> 00:06:45,520
+联合是旋转的，我们在这里替换Q1。对于棱柱形的第二个关节，我们
+joint is revolute, we substitute Q1 in here. For the second joint which is prismatic, we
+
+71
+00:06:45,520 --> 00:06:52,240
+在这里替换Q2。对于像这样的关节，theta2是一个常数，就像A2和alpha一样
+substitute Q2 in here. For a joint like this, theta 2 is a constant just like A2 and alpha
+
+72
+00:06:52,240 --> 00:06:57,770
+它们是这种特殊机器人的机械设计的功能。
+2. They are the function of the mechanical design of this particular robot.
+
+73
+00:06:57,770 --> 00:07:01,669
+Denavit-Hartenberg符号的巨大优势在于它使我们能够非常简洁
+The great advantage of the Denavit-Hartenberg notation is that it allows us to very concisely
+
+74
+00:07:01,669 --> 00:07:07,530
+描述一个机器人。因此，对于2链路机器人，可以简单地通过这样的表来描述。
+describe a robot. So, for the 2 link robot, it can be described simply by a table like this.
+
+75
+00:07:07,530 --> 00:07:13,669
+我们每个Denavit-Hartenberg参数都有1列，每个关节有一行
+We have 1 column for each of the Denavit-Hartenberg parameters and we have one row for each joint
+
+76
+00:07:13,669 --> 00:07:19,860
+机器人关节变量Q1和Q2位于θ列中，因为它们是旋转的
+of the robot. The joint variables Q1 and Q2 lie in the theta column because they are revolute
+
+77
+00:07:19,860 --> 00:07:25,830
+关节。D值均为0.沿Z轴没有平移，因为此机器人存在
+joints. The D values are all 0. There are no translations along the Z axis because this robot exists
+
+78
+00:07:25,830 --> 00:07:31,840
+在一个平面中，2个链接长度出现在A列中，并且alpha值都等于0。
+in a plane and the 2 link lengths appear in the A column and the alpha values are all equal to 0.
+
+79
+00:07:31,840 --> 00:07:37,050
+因此，这个非常紧凑的表格完整地描述了我们称之为机器人的运动学。
+So, this very compact table completely describes what we call the kinematics of the robot.
+
+80
+00:07:37,050 --> 00:07:43,690
+机器人工具箱设置得很好，可以处理Denavit-Hartenberg符号。
+The robotics toolbox is very well set-up to deal with Denavit-Hartenberg notation.
+
+81
+00:07:43,750 --> 00:07:49,820
+我将创建一个Denavit-Hartenberg矩阵，该矩阵中的每一行代表一个单独的矩阵
+I'm going to create a Denavit-Hartenberg matrix and each row in this matrix represents a single
+
+82
+00:07:49,820 --> 00:07:53,520
+链接。这就像我们刚才看到的桌子一样。现在，我要进入
+link. It's just like the table we looked at a moment ago. Now, I'm going to enter the
+
+83
+00:07:53,520 --> 00:08:01,250
+与该表的列对应的数字;theta，D，A和alpha为第一个
+numbers corresponding to the columns of that table; theta, D, A and alpha for the first
+
+84
+00:08:01,250 --> 00:08:10,300
+对于第二个关节的联合和theta，D，A和alpha以及完成矩阵偏移，我有
+joint and theta, D, A and alpha for the second joint and finish that matrix offset, I have
+
+85
+00:08:10,300 --> 00:08:17,110
+一个简单的2乘4矩阵，包含一个2关节机器人的Denavit-Hartenberg参数。
+a simple 2 by 4 matrix which contains a Denavit-Hartenberg parameters for a 2 joint robot.
+
+86
+00:08:17,110 --> 00:08:21,889
+虽然我可以创建一个机器人对象，但我会将它放入工作空间变量R和
+While I can create a robot object, I'm going to put it into the workspace variable R and
+
+87
+00:08:21,889 --> 00:08:27,199
+我使用工具箱函数串行链接，并传入Denavit-Hartenberg参数
+I use the toolbox function serial link and I pass in the Denavit-Hartenberg parameter
+
+88
+00:08:27,199 --> 00:08:33,709
+矩阵，结果是在我的工作区和串行链接中创建的串行链接对象
+matrix and the result is a serial link object created in my workspace and the serial link
+
+89
+00:08:33,709 --> 00:08:41,110
+对象代表机器人手臂。我们可以在这里看到它显示了Denavit-Hartenberg
+object represents a robot arm. We can see here that it's displayed the Denavit-Hartenberg
+
+90
+00:08:41,110 --> 00:08:45,589
+表格形式的参数。我们将在底部附近有一些额外的参数
+parameters in table form. There are some additional parameters around the bottom which we will
+
+91
+00:08:45,589 --> 00:08:48,209
+很快介绍。
+introduce shortly.
+
+92
+00:08:48,209 --> 00:08:52,869
+一旦我有了这个对象，我可以在它上面执行一些简单的函数我可以绘制
+Once I have this object then, I can perform some simple functions on it I can plot the
+
+93
+00:08:52,869 --> 00:08:59,230
+具有配置的机器人，其中关节角度可能是0.2辐射度和0.3辐射度
+robot with the configuration where the joint angles are perhaps 0.2 radiance and 0.3 radiance
+
+94
+00:08:59,230 --> 00:09:04,860
+这就是它的样子，我也可以制作一个教学吊坠。
+and this is what it looks like and I can also create a teach pendant.
+
+95
+00:09:04,860 --> 00:09:09,850
+所以，这里是教导，带来我们以前见过的滑块允许我
+So, here is the teach pendant, brings up the sliders that we've seen before allows me to
+
+96
+00:09:09,850 --> 00:09:12,970
+移动这个机器人手臂的关节。
+move the joints of this robot arm.
+
+97
+00:09:12,970 --> 00:09:20,660
+机器人对象还具有正向运动学方法。所以，我可以将它应用于机器人
+The robot object also has a forward kinematic method. So, I can apply that to the robot
+
+98
+00:09:20,660 --> 00:09:27,189
+宾语。这是fkine方法，如果我传入，例如，关节角度0.2和
+object. It's the fkine method and if I pass in for instance, the joint angles 0.2 and
+
+99
+00:09:27,189 --> 00:09:36,199
+0.3，它将为我返回一个均匀的变换，表示该机器人的入侵者的姿势。
+0.3, it will return for me a homogeneous transformation representing the pose of the in-defector of that robot.
+
+100
+00:09:36,199 --> 00:09:41,819
+我们在这里可以看到X坐标和Y坐标，这里的矩阵代表
+We can see here the X coordinate and the Y coordinate and this matrix over here represents
+
+101
+00:09:41,819 --> 00:09:48,999
+这个机器人的入侵者的方向。对于像Puma这样更复杂的机器人
+the orientation of the in-defector of this robot. For a more complex robot like the Puma
+
+102
+00:09:48,999 --> 00:09:54,949
+在图560中，可以用这样的表来描述。再次，该表有4列但是
+560, it can be described by a table like this. Once again, the table has got 4 columns but
+
+103
+00:09:54,949 --> 00:10:00,579
+在这种情况下，它有6行，因为有6个关节，因为这个机器人都是旋转的，
+in this case, it's got 6 rows because there are 6 joints, because this robot is all revolute,
+
+104
+00:10:00,579 --> 00:10:05,819
+我们在theta列中找到所有联合动词。在D列和A列中，
+we find all the joint verbals in the theta column. In the D column and the A column,
+
+105
+00:10:05,819 --> 00:10:10,800
+我们找到了许多与Puma机器人的物理长度相对应的数字。
+we find a number of numbers which correspond to physical lengths on the Puma robot.
+
+106
+00:10:10,800 --> 00:10:15,209
+上臂的长度，下臂的长度，一些水平的偏移和
+The length of the upper arm, the length of the lower arm, some horizontal offsets and
+
+107
+00:10:15,209 --> 00:10:21,819
+所以在alpha列中，我们发现了pi或2为负的旋转次数
+so on and the alpha column, we find a number of rotations which either pi on 2 or negative
+
+108
+00:10:21,819 --> 00:10:28,309
+pion2，他们说了一个关节旋转轴和下一个关节的方向
+pi on 2 and they say something about the orientation of 1 joints rotational axis and the next joints
+
+109
+00:10:28,309 --> 00:10:31,369
+旋转轴。
+rotational axis.
+
+110
+00:10:31,369 --> 00:10:35,660
+在我们处理的时候，MATLAB和机器人工具箱真正发挥作用
+Where MATLAB and robotics toolbox really come into their own is when we're dealing with
+
+111
+00:10:35,660 --> 00:10:41,670
+复杂的机器人，有6个或更多关节的机器人。我可以导入古典彪马的模型
+complex robots, those with 6 joints or more. I can import a model of the classical Puma
+
+112
+00:10:41,670 --> 00:10:47,540
+560机器人，它在工作区中创建了一个名为P560的口头语，我可以看看
+560 robot and it's created a verbal in the workspace called P560 and I can have a look
+
+113
+00:10:47,540 --> 00:10:52,929
+在那里，我们在这里看到一个表格，其中包含描述的Denavit-Hartenberg参数
+at that and here, we see a table which contains the Denavit-Hartenberg parameters that described
+
+114
+00:10:52,929 --> 00:10:55,119
+那特定的机器人。
+that particular robot.
+
+115
+00:10:55,119 --> 00:11:00,689
+现在，我可以将该机器人绘制成特定的关节角度配置。现在，我要走了
+Now, I can plot that robot for a particular joint angle configuration. Now, I'm going
+
+116
+00:11:00,689 --> 00:11:06,499
+使用由Puma560中的函数定义的变量QZ。我们可以看到
+to use the variable QZ which was defined by the function in the Puma 560. We can see that
+
+117
+00:11:06,499 --> 00:11:11,959
+在这里工作区。它是一个有6个元素的向量，都等于0，在这里，我们
+over here in the workspace. It's a vector with 6 elements all equal to 0 and here, we
+
+118
+00:11:11,959 --> 00:11:18,819
+在配置中看到机器人，其所有关节角度都等于0.另一种配置
+see the robot in the configuration where all its joint angles are equal to 0. Another configuration
+
+119
+00:11:18,819 --> 00:11:23,290
+定义的是这一个QR，它被称为机器人的准备姿势和这个
+that was defined is this one QR which was referred to the robot's ready pose and this
+
+120
+00:11:23,290 --> 00:11:27,110
+是指手臂指向空中。
+is with the arm pointing straight up into the air.
+
+121
+00:11:27,110 --> 00:11:31,420
+我也可以在这个特殊的机器人上设置一个示教器。在这里，我们看到了它。现在我
+I can also bring up a teach pendant on this particular robot. Here, we see it. Now, I
+
+122
+00:11:31,420 --> 00:11:37,240
+有6个滑块，每个滑块各1个。我可以将它旋转到腰部以上。我可以动了
+have got 6 sliders, 1 for each of its joints. I can rotate it above the waist. I can move
+
+123
+00:11:37,240 --> 00:11:44,610
+肩膀向下。我可以举起肘部。我会向下移动肘部，向下移动一下
+the shoulder down. I can lift the elbow up. I'll move the elbow down, move it down a bit
+
+124
+00:11:44,610 --> 00:11:50,369
+更多，我可以围绕腰部旋转它，所以我们可以看到发生了什么。
+more and I can rotate it around the waist so we can see what's going on.
+
+125
+00:11:50,369 --> 00:11:54,920
+我们可以在那里看到in-defector坐标系，如果我调整了腕关节角度，
+We can see the in-defector coordinate frame there and if I adjust the wrist joint angles,
+
+126
+00:11:54,920 --> 00:12:01,399
+我们可以看到入侵者的方向在变化。该物体具有前向运动学特性
+we can see the orientation of the in-defector changing. The object has got a forward kinematic
+
+127
+00:12:01,399 --> 00:12:06,749
+方法。所以，如果我要求一组关节角度的正向运动学，也许是关节
+method. So, if I asked for the forward kinematics for a set of joint angles, perhaps the joint
+
+128
+00:12:06,749 --> 00:12:13,879
+角度等于0.1,0.2,0.3。我只是在这里编造一些数字。这是同质的
+angles equal 0.1, 0.2, 0.3. I'm just making up some numbers here. This is the homogeneous
+
+129
+00:12:13,879 --> 00:12:21,499
+转换代表这个6轴Puma560机器人的入侵者的姿势。
+transformation which represents the pose of the in-defector of this 6 axis Puma 560 robot.
+
+130
+00:12:21,499 --> 00:12:27,660
+因此，使用非常通用的数学符号，我们可以说是n关节机器人的姿势
+So, to use a very general mathematical notation, we can say that the pose of an n-joint robot
+
+131
+00:12:27,660 --> 00:12:34,300
+我将写作PSIN是一个函数，函数是K，K代表运动学，
+which I'm going to write as PSI N is a function and the function is K and K stands for kinematics,
+
+132
+00:12:34,300 --> 00:12:39,369
+我们将很快简洁地定义一个术语，它是联合配置的一个功能，
+a term that we will define concisely shortly and it's a function of the joint configuration,
+
+133
+00:12:39,369 --> 00:12:42,730
+这是N个联合变量的向量。
+that's the vector of the N joint variables.
+
+134
+00:12:42,730 --> 00:12:47,839
+它们可能是角度，或者在滑动关节的情况下它们可能是链接。矢量
+They might be angles or they might be links in the case of a sliding joint. A vector of
+
+135
+00:12:47,839 --> 00:12:53,670
+关节角度，链接偏移的矢量，链接长度的矢量和什么的矢量
+joint angles, a vector of link offsets, a vector of link lengths and a vector of what
+
+136
+00:12:53,670 --> 00:12:58,429
+被称为链接扭曲和关节类型的向量。
+are called link twists and a vector of joint types.
+
+137
+00:12:58,429 --> 00:13:03,540
+Sigma是一个包含R或P元素的向量，它们表示是否
+Sigma is a vector that contains elements which are either R or P and they indicate whether
+
+138
+00:13:03,540 --> 00:13:09,480
+关节是旋转的或棱柱形的。在旋转关节的情况下，我们替换
+the joint is revolute or prismatic. In the case of a revolute joint, we substitute the
+
+139
+00:13:09,480 --> 00:13:16,179
+从Q的相应元素和棱柱接头的θ的相应元素，我们替代
+corresponding element of theta from the corresponding element of Q and for prismatic joint, we substitute
+
+140
+00:13:16,179 --> 00:13:23,519
+D的相应元素来自Q的相应元素.D的所有其他元素，
+the corresponding element of D from the corresponding element of Q. All the other elements of D,
+
+141
+00:13:23,519 --> 00:13:26,100
+theta，A和alpha是不变的。
+theta, A and alpha are constant.
+

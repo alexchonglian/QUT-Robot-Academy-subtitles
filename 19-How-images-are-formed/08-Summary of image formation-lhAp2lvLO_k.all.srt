@@ -1,0 +1,205 @@
+1
+00:00:03,330 --> 00:00:08,069
+让我们回顾一下我们在这个特定讲座中所涉及的一些重要主题。我们已经
+Let's recap some of the important topics we've covered in this particular lecture. We've
+
+2
+00:00:08,069 --> 00:00:13,130
+谈到了基本的图像形成过程，最简单的情况就是我们所说的
+talked about the fundamental image formation process and the simplest case is what we call
+
+3
+00:00:13,130 --> 00:00:18,380
+“针孔相机”。光线来自光源，在这种情况下，太阳会反射出来
+the "Pinhole Camera." Light comes from a light source, in this case the sun, reflects off
+
+4
+00:00:18,380 --> 00:00:24,119
+在三维物体上的点，那些光线穿过针孔并引起
+points on the three dimensional object, those light rays pass through the pin hole and cause
+
+5
+00:00:24,119 --> 00:00:28,760
+在图像平面上形成非常微弱的倒置图像。
+a very faint inverted image to be formed on the image plane.
+
+6
+00:00:28,760 --> 00:00:33,260
+可以非常简单地解释这种情况的几何形状。它可以用来描述
+The geometry of this situation can be very simply explained. It can be described using
+
+7
+00:00:33,260 --> 00:00:37,600
+类似的三角形，这导致我们三者之间非常简单的关系
+similar triangles and that leads us to the very simple relationship here between three
+
+8
+00:00:37,600 --> 00:00:42,579
+维数世界坐标，大写字母X，大写字母Y，大写字母Z和二维
+dimensional world coordinates, capital X, capital Y, capital Z and the two dimensional
+
+9
+00:00:42,579 --> 00:00:45,840
+图像平面坐标小x和小y。
+image plane coordinates little x and little y.
+
+10
+00:00:45,840 --> 00:00:51,239
+因此，这是从三维到二维的映射或投影
+So this is a mapping or a projection from three dimensions down to two dimensions and
+
+11
+00:00:51,239 --> 00:00:54,219
+这被称为“透视投影”。
+this is called "Perspective Projection."
+
+12
+00:00:54,219 --> 00:00:59,680
+针孔成像模型的一个缺点是许多光线都是
+One of the disadvantages of the pinhole imaging model is that a lot of the light rays are
+
+13
+00:00:59,680 --> 00:01:04,720
+丢失;他们只是碰到了持有针孔的不透明平面。如果我们介绍一个镜头
+lost; they simply hit the opaque plane that holds the pinhole. If we introduce a lens
+
+14
+00:01:04,720 --> 00:01:09,170
+相反，我们能够收集更多离开每个特定点的光线
+instead we're able to gather many more of the rays that leave each particular point
+
+15
+00:01:09,170 --> 00:01:14,270
+在物体上，可以形成更明亮的图像。
+on the object and that allows a brighter image to be formed.
+
+16
+00:01:14,270 --> 00:01:19,250
+透视投影的结果，从三维到下的映射
+A consequence of the perspective projection, the mapping from three dimensions down into
+
+17
+00:01:19,250 --> 00:01:25,680
+二，是不保留一些几何。在这里，我们看到世界上的平行线
+two, is that some of the geometry is not preserved. Here we see that parallel lines in the world
+
+18
+00:01:25,680 --> 00:01:31,159
+不再是图像中的平行线。我们看到世界上有一个大圈子
+are no longer parallel lines in the image. We see that a large circle in the world is
+
+19
+00:01:31,159 --> 00:01:37,360
+不是图像中的圆圈。透视投影只保证这样做，它
+not a circle in the image. And perspective projection guarantees only to do this, it
+
+20
+00:01:37,360 --> 00:01:42,630
+将一条线映射到一条线，但它不一定保持平行，角度是
+will map a line to a line, but it doesn't necessarily retain parallelism, angles are
+
+21
+00:01:42,630 --> 00:01:48,130
+不一定保留，圆锥曲线部分映射到圆锥曲线;这意味着
+not necessarily preserved and conic sections are mapped to conic sections; so that means
+
+22
+00:01:48,130 --> 00:01:53,720
+圆圈可以显示为椭圆，椭圆可以显示为圆形。
+that a circle could appear as an ellipse and an ellipse could appear as a circle.
+
+23
+00:01:53,720 --> 00:01:59,219
+透视投影的一个非常重要的结果是没有独特的逆。
+A really important consequence of the perspective projection is that there is no unique inverse.
+
+24
+00:01:59,219 --> 00:02:05,130
+我们已经失去了一个维度，因此对于特定的图像，存在无限多的可能
+We've lost a dimension, so for a particular image there are an infinite number of possible
+
+25
+00:02:05,130 --> 00:02:10,629
+可能导致该图像的对象。它可能是一个靠近我的小物体
+objects that could have caused that image. It could be a small object close to me or
+
+26
+00:02:10,629 --> 00:02:16,810
+它可能是一个更远的大物体。没有办法，只能从图像几何上得到
+it could be a large object further away. There is no way, just from the image geometry that
+
+27
+00:02:16,810 --> 00:02:17,849
+我们可以告诉你。
+we can tell this.
+
+28
+00:02:17,849 --> 00:02:22,730
+所以在实践中我们使用了一些技巧，这些技巧来自我们成长过程中的经验
+So in practice we use a number of tricks that come from our experience from growing up in
+
+29
+00:02:22,730 --> 00:02:29,520
+一个三维世界，以消除歧义。虽然我们可以欺骗这个。如果我们创造
+a three dimensional world, in order to disambiguate this. Though we can trick this. If we create
+
+30
+00:02:29,520 --> 00:02:34,690
+二维图像;在这里显示为一块街头艺术，它在视网膜上引起
+a two dimensional image; shown here as a piece of street art, which causes on the retina
+
+31
+00:02:34,690 --> 00:02:41,209
+我们的眼睛，与我们从三维世界看到的图像完全相同，
+of our eye, exactly the same image as we would get from looking at a three dimensional world,
+
+32
+00:02:41,209 --> 00:02:47,959
+然后，我们大脑的所有三维解释部分都会启动并导致我们
+then all of the three dimensional interpretation part of our brain kicks in and causes us to
+
+33
+00:02:47,959 --> 00:02:53,970
+感觉，即使理性部分，也将图像解释为三维
+feel, to interpret the image as being three dimensional even though the rational part
+
+34
+00:02:53,970 --> 00:02:59,950
+我们的大脑知道这是一块平坦的街头艺术。印象还是很的，
+of our brain knows that this is a piece of flat street art. The impression is still very,
+
+35
+00:02:59,950 --> 00:03:01,110
+非常生动。
+very vivid.
+
+36
+00:03:01,110 --> 00:03:05,620
+另一种我们可以看到没有唯一逆的结果的方法是在
+Another way we can look at the consequence of there being no unique inverse is in an
+
+37
+00:03:05,620 --> 00:03:10,989
+像这样的错觉，因为克里斯是一个全尺寸的人，但因为他站着
+illusion like this and it's because Chris is a full size person but because he's standing
+
+38
+00:03:10,989 --> 00:03:15,569
+更远的地方，他看起来更小，虽然最初我们对我们感到惊讶
+further away he appears to be smaller and although initially we're surprised when we
+
+39
+00:03:15,569 --> 00:03:19,950
+再看看我们理解三维的大脑的理性部分
+look at that, again the rational part of our brain that understands the three dimensional
+
+40
+00:03:19,950 --> 00:03:25,569
+世界开始并说：“好吧，实际上我们会假设他是一个全尺寸的人，
+world kicks in and says "Okay, actually we will assume that he is a full size person,
+
+41
+00:03:25,569 --> 00:03:27,700
+因此，他必须离得更远。“
+he therefore must be further away."
+

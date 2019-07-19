@@ -1,0 +1,235 @@
+1
+00:00:03,940 --> 00:00:05,859
+让我们回顾一下我们所涉及的一些主题
+Let's recap some of the topics we've covered
+
+2
+00:00:05,859 --> 00:00:11,040
+在这个讲座中。我们首先谈论齐次坐标，一种不同的方式
+in this lecture. We started by talking about homogeneous coordinates, a different way to
+
+3
+00:00:11,040 --> 00:00:16,379
+表示二维平面中的点。我们谈到了转换笛卡儿的方法
+represent points in a 2 dimensional plane. We talked about ways to convert Cartesian
+
+4
+00:00:16,379 --> 00:00:21,460
+坐标到齐次坐标和齐次坐标回到笛卡尔坐标
+coordinates to homogeneous coordinates and homogeneous coordinates back to Cartesian
+
+5
+00:00:21,460 --> 00:00:25,380
+坐标。在数学上，线和点是双重的。
+coordinates. Mathematically, lines and points are duals.
+
+6
+00:00:25,380 --> 00:00:30,769
+这导致了一些非常好的方法来计算两条线或两条线的交点
+This leads to some very nice ways to compute the intersection points at 2 lines or the
+
+7
+00:00:30,769 --> 00:00:36,579
+由2分组成的线。我们讨论了一种不同的透视投影模型
+line that is formed by 2 points. We've discussed a different perspective projection model called
+
+8
+00:00:36,579 --> 00:00:42,270
+中央投影模型和关键区别在于图像平面位于对象之间
+the Central Projection Model and the key difference is that the image plane is between the object
+
+9
+00:00:42,270 --> 00:00:46,379
+原点和它形成一个不倒置的图像。
+and the origin and it forms an image that is not inverted.
+
+10
+00:00:46,379 --> 00:00:52,050
+我们可以使用世界的齐次坐标将其表示为矩阵修改
+We can represent this as a matrix modification using homogeneous coordinates of the world
+
+11
+00:00:52,050 --> 00:00:58,090
+点和图像平面上的点。在真正的数码相机中，图像平面
+point and of the point on the image plane. In a real digital camera, the image plane
+
+12
+00:00:58,090 --> 00:01:03,320
+是一大组光敏元素，它们形成所得图像的像素。
+is a large array of light sensitive elements, which form the pixels of the resulting image.
+
+13
+00:01:03,320 --> 00:01:08,630
+我们需要处理这个图像平面的离散性质，即坐标的事实
+We need to deal with the discrete nature of this image plane, the fact that the coordinates
+
+14
+00:01:08,630 --> 00:01:13,799
+以像素为单位而不是以米为单位进行测量。还有一个起源
+are measured in units of pixels rather than in units of metres. There's also an origin
+
+15
+00:01:13,799 --> 00:01:18,680
+移位涉及而不是像平面的中心，像素坐标中的原点
+shift involved instead of the centre of the image plane, the origin in pixel coordinates
+
+16
+00:01:18,680 --> 00:01:23,630
+在左上角，我们可以通过简单的线性变换来介绍它。
+is in the top left corner and we can introduce that with a simple linear transformation.
+
+17
+00:01:23,630 --> 00:01:28,900
+最终，我们将许多矩阵项组合在一起。前两个我们称之为
+Ultimately, we combine a number of matrix terms together. The first 2 we refer to as
+
+18
+00:01:28,900 --> 00:01:33,680
+相机的内在参数。他们完全按照术语描述了相机
+the intrinsic parameters of a camera. They described the camera entirely in terms
+
+19
+00:01:33,680 --> 00:01:38,860
+它的像素尺寸，主点坐标和焦距
+of the dimensions of its pixels, the coordinate of the principal point and the focal length
+
+20
+00:01:38,860 --> 00:01:42,869
+镜头这些是相机本身的参数。相机在哪里都没关系
+of the lens. These are parameters of the camera itself. It doesn't matter where the camera
+
+21
+00:01:42,869 --> 00:01:47,649
+是或在哪里指向。内在参数对于相机的位置是不变的。
+is or where it's pointing. The intrinsic parameters are invariant to the location of the camera.
+
+22
+00:01:47,649 --> 00:01:52,680
+这个链中的第3个矩阵，我们称之为外在参数，他们描述了
+The 3rd matrix in this chain, we refer to as the extrinsic parameters and they described
+
+23
+00:01:52,680 --> 00:01:58,040
+相机的姿势，它的位置和相对于世界的方向
+the pose of the camera that is its position and its orientation with respect to the world's
+
+24
+00:01:58,040 --> 00:02:03,549
+坐标框架。我们可以将所有这些矩阵组合成一个3乘4的矩阵
+coordinate frame. We can combine all these matrices together into a single 3 by 4 matrix
+
+25
+00:02:03,549 --> 00:02:08,819
+它编码所有信息。因此，从世界点到图像平面的投影
+which encodes all that information. So, the projection from the world point to image plane
+
+26
+00:02:08,819 --> 00:02:14,040
+简单地通过矩阵修改完成点，该矩阵修改为我们提供了齐次坐标
+point is done simply by a matrix modification which gives us the homogeneous coordinates
+
+27
+00:02:14,040 --> 00:02:19,400
+在图像平面上的点和那些同质的之间有一个简单的映射
+of the point on the image plane and there is a simple mapping between those homogeneous
+
+28
+00:02:19,400 --> 00:02:24,599
+坐标和笛卡尔图像平面坐标，我们通常用U和V表示。
+coordinates and the Cartesian image plane coordinates which we typically denote by U and V.
+
+29
+00:02:24,599 --> 00:02:28,360
+该表示是尺度不变的。我们可以乘以相机矩阵
+This representation is scale invariant. We can multiply  the camera matrix
+
+30
+00:02:28,360 --> 00:02:33,970
+通过任意非零常数，投影保持不变。
+by an arbitrary non-zero constant and the projection remains unchanged.
+
+31
+00:02:33,970 --> 00:02:37,360
+该矩阵通常以标准化的方式编写
+This matrix is often written in a normalized
+
+32
+00:02:37,360 --> 00:02:44,580
+元素C34等于1的形式。如果点位于世界的平面上，那么我们
+form where element C34 is equal to 1. If the points lie on a plane in the world, then we
+
+33
+00:02:44,580 --> 00:02:48,950
+可以在平面上的点的坐标和之间写出不同的关系
+can write a different relationship between the coordinate of the point on the plane and
+
+34
+00:02:48,950 --> 00:02:54,000
+图像平面上的点的坐标，我们使用3乘3单应矩阵来做到这一点
+the coordinate of the point on the image plane and we use a 3 by 3 homography matrix to do this
+
+35
+00:02:54,000 --> 00:02:57,959
+Homography矩阵映射平面上的点
+Homography matrix maps points from a plane
+
+36
+00:02:57,959 --> 00:03:04,159
+到另一架飞机。如果我们知道4组相应的，我们就可以计算单应矩阵
+to another plane. We can compute the homography matrix if we know 4 sets of corresponding
+
+37
+00:03:04,159 --> 00:03:09,220
+两架飞机之间的分数。对应表示点P和点Q表示
+points between the 2 planes. Corresponding means that the point P and the point Q refer
+
+38
+00:03:09,220 --> 00:03:12,830
+同一点，世界上同样的特征。
+to the same point, the same feature in the world.
+
+39
+00:03:12,830 --> 00:03:17,900
+单应性的一个应用是计算透视矫正。我们可以计算
+One application of homographies is to compute perspective rectification. We can compute
+
+40
+00:03:17,900 --> 00:03:24,099
+单应性H将点从1个图像中的点P映射到另一个图像中的点Q.
+an homography H which maps points from point P in 1 image to point Q in another image and
+
+41
+00:03:24,099 --> 00:03:30,090
+如果我们正确选择H，我们可以消除透视失真的影响。另一个
+if we choose H correctly, we can undo the effect of perspective distortion. Another
+
+42
+00:03:30,090 --> 00:03:34,730
+单应性的应用是我们可以采用这样的矩形图形并扭曲
+application of homographies is that we can take a rectangular graphic like this and distort
+
+43
+00:03:34,730 --> 00:03:41,000
+它以这样一种方式，似乎完美地放在一个不同的平面上。在这种情况下，
+it in such a way that it appears to lay perfectly into a different plane. In this case, the
+
+44
+00:03:41,000 --> 00:03:45,780
+飞机是游泳池的表面。我们可能的最后一个例子
+plane is the surface of the swimming pool. The final example of how we might be able
+
+45
+00:03:45,780 --> 00:03:52,470
+使用单应性与本课程的项目部分有关，我们可以用它来绘图
+to use an homography is related to the project part of this course and we can use it to map
+
+46
+00:03:52,470 --> 00:03:59,180
+摄像机图像平面中的坐标到机器人上的点的XY坐标
+a coordinate in the image plane of the camera to an XY coordinate of a point on the robots
+
+47
+00:03:59,180 --> 00:04:00,750
+二维工作表。
+2 dimensional worksheet.
+

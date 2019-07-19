@@ -1,0 +1,210 @@
+1
+00:00:03,360 --> 00:00:08,099
+在这里，我有一个高分辨率的图像。图像宽近2000像素
+Here, I have a high resolution image. The image is nearly 2,000 pixels wide and around
+
+2
+00:00:08,099 --> 00:00:13,730
+1600像素高。假设我想生成这个图像的较小版本，也许是一个
+1600 pixels tall. Let's say I wanted to produce a smaller version of this image, perhaps a
+
+3
+00:00:13,730 --> 00:00:20,170
+缩略图。我们想减小它的大小。也许，这是最简单的方法
+thumbnail image. We want to reduce its size. So perhaps, the simplest way to go about doing
+
+4
+00:00:20,170 --> 00:00:26,039
+这只是选择每行和每列中的每个第n个像素，我可以做到
+this is to just select every nth pixel in each row and in each column and I could do
+
+5
+00:00:26,039 --> 00:00:29,410
+这里用MATLAB命令非常简单。
+that very simply with this MATLAB command here.
+
+6
+00:00:29,410 --> 00:00:35,210
+我将在水平方向上取每7个像素，在垂直方向上取每7个像素
+I'm going to take every 7th pixel in the horizontal direction and every 7th pixel in the vertical
+
+7
+00:00:35,210 --> 00:00:41,100
+方向和结果是一个小得多的图像。这个图像只有260像素
+direction and the result is a much smaller image. This image is only 260 something pixels
+
+8
+00:00:41,100 --> 00:00:48,430
+宽220像素高。这是一个称为图像抽取的过程，
+wide and 220 something pixels tall. This is a process that's known as Image Decimation,
+
+9
+00:00:48,430 --> 00:00:54,739
+非常非常简单的计算，但你会注意到这个图像中有一些人工制品。
+very very simple to compute but you'll notice that there are some artefacts in this image.
+
+10
+00:00:54,739 --> 00:01:00,340
+我们在左手图像中非常清楚地看到的平铺屋顶产生了非常明显的效果
+The tiled roof that we see very clearly in the left hand image has resulted in a very
+
+11
+00:01:00,340 --> 00:01:06,210
+右手图像中的奇怪图案。我们可以看到那个平铺的纹理
+strange pattern in the right hand image. We can see that that regular texture of the tiled
+
+12
+00:01:06,210 --> 00:01:11,880
+屋顶已经消失，被一些相当明显的线条取代，实际上并没有
+roof has disappeared and been replaced by some rather obvious lines which don't actually
+
+13
+00:01:11,880 --> 00:01:13,760
+存在于输入图像中。
+exist in the input image.
+
+14
+00:01:13,760 --> 00:01:21,799
+因此，这是一个通过抽取过程引入输出图像的人工制品
+So, this is an artefact that's being introduced into the output image by the process of decimation
+
+15
+00:01:21,799 --> 00:01:26,009
+并且其根本原因是称为混叠的现象。
+and the root cause of this is a phenomenon known as aliasing.
+
+16
+00:01:26,009 --> 00:01:32,200
+考虑混叠的最简单方法是在一维图像强度方面
+The simplest way to think about aliasing is in terms of a 1-dimensional image intensity
+
+17
+00:01:32,200 --> 00:01:36,840
+轮廓。所以，让我们想象一下，我们在图像上绘制了一条线，这就是强度
+profile. So, let's imagine that we've drawn a line across an image and this is the intensity
+
+18
+00:01:36,840 --> 00:01:42,970
+在这种特殊情况下，它在正负1和负1之间变化
+profile and it varies between plus and minus 1 in this particular case and the horizontal
+
+19
+00:01:42,970 --> 00:01:45,990
+轴按像素单位缩放。
+axis is scaled in terms of units of pixels.
+
+20
+00:01:45,990 --> 00:01:53,200
+因此，当我们移动时，我们可以看到图像强度的一些相当高的频率变化
+So, we can see some quite high frequency variation of the image intensity as we move across the
+
+21
+00:01:53,200 --> 00:02:00,439
+轮廓。现在，让我们假设我在每个第二个像素处对此配置文件进行采样。所以，作为一个
+profile. Now, let's imagine that I sample this profile at every 2nd pixel. So, as a
+
+22
+00:02:00,439 --> 00:02:07,759
+在像素0处的样本，像素2的样本，在像素4处等等。现在，鉴于我有
+sample at pixel 0, a sample of pixel 2, at pixel 4 and so on. Now, given that I have
+
+23
+00:02:07,759 --> 00:02:13,420
+通过黑点制作这里显示的样本，我也可以考虑蓝色曲线
+made the sample shown here by the black dots, I could also consider that the blue curve
+
+24
+00:02:13,420 --> 00:02:19,390
+这里显示的是对我在这些值上测量的值的同样好的解释
+that's shown here is equally good explanation of the values that I've measured at these
+
+25
+00:02:19,390 --> 00:02:26,170
+6个样本点。这完全基于一个非常重要的信号处理定理
+6 sample points. This is all based on a really important theorem from signal processing called
+
+26
+00:02:26,170 --> 00:02:28,670
+奈奎斯特采样定理。
+the Nyquist sampling theorem.
+
+27
+00:02:28,670 --> 00:02:35,120
+在这种特殊情况下，我们的采样间隔为2个像素。我们选择了我们的样品
+In this particular case, our sampling interval is 2 pixels. We've chosen our samples to be
+
+28
+00:02:35,120 --> 00:02:41,819
+每隔2个像素，这意味着任何信号的周期都不到两倍。
+every 2nd pixel and that means that any signal that's got a period less than twice that.
+
+29
+00:02:41,819 --> 00:02:48,390
+因此，任何周期小于四个像素的信号都会有别名。会很困惑
+So, any signal with a period that's less than four pixels will be aliased. It will be confused
+
+30
+00:02:48,390 --> 00:02:53,250
+我们采样后用低频信号。
+with a low frequency signal after we have sampled.
+
+31
+00:02:53,250 --> 00:02:58,450
+在问题中消除这个别名的方法是去除高频分量
+The way to eliminate this alias in problem is to remove the high frequency components
+
+32
+00:02:58,450 --> 00:03:03,730
+从图像和我们之前谈过我们如何使用高斯曲线来模糊
+from the image and we've talked before about how we can use a Gaussian curve to blur an
+
+33
+00:03:03,730 --> 00:03:09,530
+图像，也许，为什么我们想要模糊图像是不直观的。我们去
+image and perhaps, it's been unintuitive why we would ever want to blur an image. We go
+
+34
+00:03:09,530 --> 00:03:14,830
+为了让我们的图像清晰明快，看起来很好看，但是很难解决
+to so much trouble to make our images sharp and crisp and nice to look at, but convolving
+
+35
+00:03:14,830 --> 00:03:19,590
+使用高斯内核，我们将删除这些有问题的高频分量。
+with the Gaussian kernel we'll remove these problematic high frequency components.
+
+36
+00:03:19,590 --> 00:03:24,200
+因此，为了正确地对图像进行子采样，我们需要做的是应用高斯
+So in order to properly sub-sample an image, what we need to do is to apply a Gaussian
+
+37
+00:03:24,200 --> 00:03:30,720
+内核然后，子样本或抽取。这两个步骤在工具箱中一起完成
+kernels and then, sub-sample or decimate. These 2 steps are done together in the toolbox
+
+38
+00:03:30,720 --> 00:03:32,200
+功能等级。
+function iscale.
+
+39
+00:03:32,200 --> 00:03:37,440
+所以，iscale函数，我们传入我们的高分辨率输入图像，我们传入
+So, the iscale function, we pass in our high resolution input image and we pass in the
+
+40
+00:03:37,440 --> 00:03:43,140
+比例因子。在这种情况下，我希望图像的大小是输入图像的1/7。
+scale factor. In this case, I want the image to be 1/7th the size of the input image.
+
+41
+00:03:43,140 --> 00:03:48,920
+结果将是右侧显示的低分辨率图像。现在请注意那些
+The result will be the low resolution image shown here on the right. Notice now that those
+
+42
+00:03:48,920 --> 00:03:52,390
+由于混叠而产生的伪像已被消除。
+artifacts due to aliasing have been eliminated.
+

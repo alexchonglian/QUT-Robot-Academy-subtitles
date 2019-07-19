@@ -1,0 +1,115 @@
+1
+00:00:03,259 --> 00:00:08,289
+我们现在来看一些实际问题，其中之一就是可达性。我们的机器人有
+Let's look at some practical issues now and one of these is reachability. Our robot has
+
+2
+00:00:08,289 --> 00:00:14,410
+只有有限的链接。因此，有大量可能的目标位置
+only got finite links. So, there are a large number of possible goal locations that the
+
+3
+00:00:14,410 --> 00:00:20,119
+机器人实际上无法触及。如果该点无法到达那么，
+robot is physically just not going to be able to reach. If the point is unreachable then,
+
+4
+00:00:20,119 --> 00:00:25,830
+它通常会导致我们的反向运动学解决方案出现一些问题。一个数字
+it will generally lead to some problem in our inverse kinematics solution. A numerical
+
+5
+00:00:25,830 --> 00:00:31,670
+算法将无法收敛。对于分析方法，我们可能最终找到
+algorithm will fail to converge. For an analytic approach, we may end up finding
+
+6
+00:00:31,670 --> 00:00:35,489
+我们正在计算负数的平方根，或者我们可能发现我们是
+that we're computing the square root of a negative number or we may find that we're
+
+7
+00:00:35,489 --> 00:00:41,079
+计算幅度大于1的数的反cos符号。
+computing the inverse cos sign of a number whose magnitude is greater than 1.
+
+8
+00:00:41,079 --> 00:00:48,069
+在我们的反向运动学中会出现一些数值问题。另一个问题是奇点
+Some numerical problem will crop up in our inverse kinematics. Another problem is a singularity
+
+9
+00:00:48,069 --> 00:00:51,979
+这与我们看到的万向节锁问题有很多相似之处
+and this has got a lot of similarities to the Gimbal lock problem that we looked at
+
+10
+00:00:51,979 --> 00:00:57,069
+更早。在这里，我们可以看到Prima560的手腕
+much earlier. Here, we can see the wrist of a Prima 560
+
+11
+00:00:57,069 --> 00:01:03,600
+机器人，我们可以看到，在这个特殊的配置中，第4关节的轴是
+robot and we can see that in this particular configuration, the axis of the 4th joint is
+
+12
+00:01:03,600 --> 00:01:09,700
+平行于第6关节的轴。它现在将动画这个机器人，看看是什么
+parallel to the axis of the 6th joint. It would be now animate this robot and look what
+
+13
+00:01:09,700 --> 00:01:15,620
+当我们移动机器人的关节4时发生。整个手腕组件都像这样移动
+happens when we move joint 4 of the robot. The whole wrist assembly moves like this and
+
+14
+00:01:15,620 --> 00:01:20,830
+现在我们要移动机器人的关节6。我们看到它导致完全相同的排序
+now we're going to move joint 6 of the robot. We see that it causes exactly the same sort
+
+15
+00:01:20,830 --> 00:01:26,390
+末端执行器的运动。现在，我们要做的是对抗旋转关节4
+of motion of the end effector. Now, what we're going to do is to counter rotate joints 4
+
+16
+00:01:26,390 --> 00:01:31,750
+因此，如果关节4增加，关节6正在减小，最终结果是关节4
+and joint 6 so if joint 4 is increasing, joint 6 is decreasing, net result being that the
+
+17
+00:01:31,750 --> 00:01:36,750
+结束因素根本不动。所以，就像在GimbalLock案中一样，我们已经输了
+end factor does not move at all. So, just as in Gimbal Lock case, we've lost
+
+18
+00:01:36,750 --> 00:01:42,200
+自由法令。关节4和关节6导致完全相同的运动
+the decree of freedom. Joint 4 and joint 6 result in exactly the same motion that the
+
+19
+00:01:42,200 --> 00:01:47,050
+机器人末端效应器和机器人技术，我们称之为奇点。
+robots end effector and in robotics, we refer to this as a singularity.
+
+20
+00:01:47,050 --> 00:01:52,600
+实际意义上的含义是接头4和接头6的轴线是否对齐
+What it means in practical sense is if the axis of joints 4 and joint 6 are aligned like
+
+21
+00:01:52,600 --> 00:01:58,960
+这就是机器人末端执行器不可能采用某些特定的方向。
+this then it's not possible for the robot end effector to adopt some particular orientations.
+
+22
+00:01:58,960 --> 00:02:03,560
+为了打破这种对齐，摆脱奇点，重要的是
+In order to break that alignment, to move out of singularity, it's important that the
+
+23
+00:02:03,560 --> 00:02:08,840
+第五关节角θ5设定为不等于0的某个值。
+5th joint angle theta 5 is set to some value that's not equal to 0.
+

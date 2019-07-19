@@ -1,0 +1,400 @@
+1
+00:00:04,060 --> 00:00:09,049
+这对我们来说应该是非常熟悉的：标记为A且单个的坐标系
+This should be very familiar to us by now: a coordinate frame labeled A and a single
+
+2
+00:00:09,049 --> 00:00:15,969
+点。我们可以通过关于帧A的向量来描述该点
+point. We can describe the point by a vector with respect to frame A. The leading A in
+
+3
+00:00:15,969 --> 00:00:22,160
+P的前面表示。我可以用它的组件来编写这个向量-它
+front of the P indicates that. I can write this vector in terms of its components - its
+
+4
+00:00:22,160 --> 00:00:32,329
+沿XA轴和YA轴的距离以及单位矢量XA和YA帽。现在，我们来吧
+distances along the XA axis and the YA axis and the unit vectors XA and YA hat. Now, let’s
+
+5
+00:00:32,329 --> 00:00:38,000
+引入一个新的坐标系，框架B，它具有相同的旋转原点
+introduce a new coordinate frame, frame B, and it has got the same origin that’s rotated
+
+6
+00:00:38,000 --> 00:00:44,940
+以角度Theta。我可以通过关于坐标系的向量来描述该点
+by the angle Theta. I can describe the point by a vector with respect to coordinate frame
+
+7
+00:00:44,940 --> 00:00:52,620
+B和我可以用单位矢量XB和YBhat来表示它们并且它们被指示
+B and I can write that in terms of the unit vectors XB and YB hat and they’re indicated
+
+8
+00:00:52,620 --> 00:01:00,440
+这里是红色的。我可以用cosTheta和正弦Theta来编写XBhat的表达式，
+here in red. I can write expressions for XB hat in terms of cos Theta and sine Theta,
+
+9
+00:01:00,440 --> 00:01:06,869
+我可以用正弦Theta和cosTheta来为YB帽子写一个表达式。如果
+and I can write an expression for YB hat in terms of minus sine Theta and cos Theta. If
+
+10
+00:01:06,869 --> 00:01:14,210
+我将这两个方程代入这里，我可以写出这个表达式。然后我可以扩展，
+I substitute these two equations into here, I can write this expression. Then I can expand,
+
+11
+00:01:14,210 --> 00:01:20,729
+重新排列和分解XA帽子和YA帽子。接下来要注意的是因为这些
+rearrange and factor out XA hat and YA hat. The next thing to observe is because these
+
+12
+00:01:20,729 --> 00:01:27,689
+两个坐标系共享一个原点，然后矢量AP和BP实际上完全相同
+two coordinate frames share an origin, then the vector AP and BP are in fact exactly the
+
+13
+00:01:27,689 --> 00:01:35,770
+相同。XAhat的系数必须相同，所以我们可以写出来。而且，系数
+same. The coefficients of XA hat must be the same, so we can write this. And, the coefficients
+
+14
+00:01:35,770 --> 00:01:41,909
+YA帽子必须是相同的，所以我们可以写这个。我们来看看这两个表达式。
+of YA hat must be the same, so we can write this. Let’s take those two expressions.
+
+15
+00:01:41,909 --> 00:01:47,039
+稍微简化一下，我们现在可以用矩阵形式写出来。如果你有点儿
+Simplify things a little bit and we can now write this in matrix form. If you’re a little
+
+16
+00:01:47,039 --> 00:01:50,770
+不确定这个步骤，然后只是将它加倍，你会发现你得到了
+unsure about this step, then just multiply it out and you’ll find that you get the
+
+17
+00:01:50,770 --> 00:01:56,229
+上面的表达。现在，我们更简洁地编写矢量部分。而不是在
+expressions above. Now, we write the vector part more concisely. Instead of in terms of
+
+18
+00:01:56,229 --> 00:02:01,749
+它的各个元素，我们将其写为关于特定坐标的符号P.
+its individual elements, we write it as the symbol P with respect to a particular coordinate
+
+19
+00:02:01,749 --> 00:02:08,400
+帧。因此，该表达式将关于帧B的向量与具有的向量相关联
+frame. So, this expression relates the vector with respect to frame B to the vector with
+
+20
+00:02:08,400 --> 00:02:16,689
+通过将矢量B的分量乘以该2×2来实现
+respect to frame A. It is achieved by multiplying the components of vector B by this 2 x 2
+
+21
+00:02:16,689 --> 00:02:19,709
+矩阵。我们可以使表达更简洁
+matrix. We can make the expression even more concise
+
+22
+00:02:19,709 --> 00:02:25,709
+并写这样的。并且，我们引入符号R来表示旋转矩阵。
+and write it like this. And, we introduce the symbol R to represent a rotation matrix.
+
+23
+00:02:25,709 --> 00:02:32,170
+这是一种非常简洁的方式来表示不同的两个向量之间的关系
+This is a very concise way of representing the relationship between two vectors in different
+
+24
+00:02:32,170 --> 00:02:38,140
+坐标框架，它们通过旋转矩阵R相关。这里我们有相同的
+coordinate frames, and they are related by a rotation matrix R. Here we have the same
+
+25
+00:02:38,140 --> 00:02:44,069
+像以前一样表达，并且要更精确一些，更加小心，我们会添加一些
+expression as before, and to be a bit more precise, a bit more careful, we will add some
+
+26
+00:02:44,069 --> 00:02:51,110
+标签到矩阵R，我们将放置一个前导A和一个尾随B.并且，这表明
+labels to the matrix R and we will put a leading A and a trailing B. And, this indicates that
+
+27
+00:02:51,110 --> 00:02:57,170
+R是一个旋转矩阵，它将矢量从B帧旋转到A帧。这很重要
+R is a rotation matrix that rotates a vector from frame B to frame A. It’s important
+
+28
+00:02:57,170 --> 00:03:03,519
+要注意并且不要混淆：矩阵R取决于框架的旋转角度
+to note and not be confused by this: the matrix R depends on the rotation angle from frame
+
+29
+00:03:03,519 --> 00:03:08,840
+A到框架B.这两件事的顺序是不同的，不会被绊倒
+A to frame B. The order of these two things is different and don’t get tripped up by
+
+30
+00:03:08,840 --> 00:03:12,250
+那。我们来看看旋转矩阵。
+that. Let’s have a look at the rotation matrix.
+
+31
+00:03:12,250 --> 00:03:19,110
+像这样的矩阵被称为正交矩阵或有时称为正交矩阵。
+A matrix like this is referred to as an orthogonal matrix or sometimes an orthonormal matrix.
+
+32
+00:03:19,110 --> 00:03:24,020
+此矩阵中的每一列都是一个单位向量，您可以自己展示它
+Each column in this matrix is a unit vector and you can show that for yourself pretty
+
+33
+00:03:24,020 --> 00:03:29,890
+容易。矩阵中的每列与其他列正交。在这种情况下，那里
+easily. Each column in the matrix is orthogonal to the other columns. In this case, there
+
+34
+00:03:29,890 --> 00:03:35,050
+只有两列，你可以很容易地显示由第一列形成的向量
+are only two columns and you can show, again very easily, that a vector formed by the first
+
+35
+00:03:35,050 --> 00:03:40,530
+列与第二列形成的矢量正交。点的产品
+column is orthogonal to the vector formed by the second column. The dot product of the
+
+36
+00:03:40,530 --> 00:03:46,030
+两列将等于零。正交矩阵的一个非常有用的特性是
+two columns will be equal to zero. A really useful property of an orthogonal matrix is
+
+37
+00:03:46,030 --> 00:03:52,670
+它的反转与它的转置相同。计算矩阵的逆是相反的
+that its inverse is the same as its transpose. Computing the inverse of a matrix is rather
+
+38
+00:03:52,670 --> 00:03:57,110
+复杂，而计算它的转置真的很简单。所以，这太好了
+complex, whereas computing its transpose is really very simple. So, it’s great that
+
+39
+00:03:57,110 --> 00:04:03,280
+我们有一个矩阵，其逆可以通过转置元素来非常简单地计算
+we have a matrix whose inverse can be computed very simply by transposing the elements of
+
+40
+00:04:03,280 --> 00:04:06,859
+矩阵。旋转矩阵的另一个属性是
+the matrix. Another property of the rotation matrix is
+
+41
+00:04:06,859 --> 00:04:13,060
+它的行列式总是等于1.这意味着，如果我乘以任何向量
+that its determinant is always equal to 1. And this means that, if I multiply any vector
+
+42
+00:04:13,060 --> 00:04:17,870
+通过该矩阵，矢量的长度不变。那是一个重要的财产
+by this matrix, the length of the vector is unchanged. That’s an important property
+
+43
+00:04:17,870 --> 00:04:22,620
+旋转矩阵当我将矢量从一个坐标框架旋转到另一个坐标框架时，它会
+of a rotation matrix. When I rotate a vector from one coordinate frame to another, its
+
+44
+00:04:22,620 --> 00:04:28,060
+长度不变。数学家会说像这样的旋转矩阵属于
+length is not changed. A mathematician would say that a rotation matrix like this belongs
+
+45
+00:04:28,060 --> 00:04:33,840
+到二维的特殊正交群。而且，象征性地，我们写下了这一点
+to the special orthogonal group of dimension two. And, symbolically, we’d write that
+
+46
+00:04:33,840 --> 00:04:41,180
+因为R是一个元素-属于-集合SO（2），特殊的正交维度组
+as R is an element of - belongs to - the set SO(2), special orthogonal group of dimension
+
+47
+00:04:41,180 --> 00:04:47,200
+这是上面的表达。并且，如果我将旋转矩阵穿过另一个
+2. Here’s the expression from above. And, if I take the rotation matrix across the other
+
+48
+00:04:47,200 --> 00:04:52,330
+等号的一面，我可以写这个。这表明如果我想旋转一个
+side of the equal sign, I can write this. This indicates that if I want to rotate a
+
+49
+00:04:52,330 --> 00:04:58,759
+从坐标框架A到坐标框架B的向量，我使用了旋转的倒数
+vector from coordinate frame A into coordinate frame B, I use the inverse of the rotation
+
+50
+00:04:58,759 --> 00:05:05,700
+从坐标框架A到坐标框架B的矩阵。并且，请记住，它的倒数
+matrix from coordinate frame A to coordinate frame B. And, remember, that the inverse of
+
+51
+00:05:05,700 --> 00:05:11,419
+旋转矩阵就是它的转置。第一个表达式中的标签A和B.
+a rotation matrix is simply its transpose. The labels A and B in this first expression
+
+52
+00:05:11,419 --> 00:05:16,270
+是完全一般的，我完全适合交换A和B和
+are completely general and it’s completely proper for me to swap the A and the B and
+
+53
+00:05:16,270 --> 00:05:21,340
+现在我可以写这个。这两个方程是等价的。所以，现在我可以写这个了
+now I can write this. These two equations are equivalent. So, now I can write this and
+
+54
+00:05:21,340 --> 00:05:26,479
+这非常重要。它所说的是坐标系的旋转矩阵
+this is really important. What it says is the rotation matrix from coordinate frame
+
+55
+00:05:26,479 --> 00:05:31,610
+B坐标框架A是坐标框架的旋转矩阵的倒数
+B to coordinate frame A is the inverse of
+
+56
+00:05:31,610 --> 00:05:37,960
+A来协调框架B.让我们看一下MATLAB中的一些具体例子。
+A to coordinate frame B. Let’s have a look at some concrete examples of this in MATLAB.
+
+57
+00:05:37,960 --> 00:05:43,800
+首先，我将使用Toolbox命令创建一个二维旋转矩阵
+First of all, I’m going to create a two-dimensional rotation matrix using the Toolbox command
+
+58
+00:05:43,800 --> 00:05:49,819
+rot2用于二维旋转矩阵。而且，我要问一个旋转角度
+rot2 for rotation matrix in two dimensions. And, I’m going to ask for a rotation angle
+
+59
+00:05:49,819 --> 00:05:55,699
+0弧度。并且，这是2x2旋转矩阵，它是单位矩阵。它的
+of 0 radians. And, here is the 2 x 2 rotation matrix and it is the identity matrix. It’s
+
+60
+00:05:55,699 --> 00:06:01,289
+在对角线上得到1，在对角线上得到0。我可以要求相应的轮换
+got 1s on the diagonal and 0s on the off diagonal. I can ask for a rotation that corresponds
+
+61
+00:06:01,289 --> 00:06:06,550
+到一个角度说naught点2弧度，这是旋转矩阵。我还可以
+to an angle say of nought point 2 radians and this is that rotation matrix. I can also
+
+62
+00:06:06,550 --> 00:06:13,020
+以度为单位指定角度。因此，例如，我可以要求角度R为30度
+specify the angle in degrees. So, for instance, I could ask for the angle R of 30 degrees
+
+63
+00:06:13,020 --> 00:06:17,490
+这是相应的旋转矩阵。我要做的就是把结果
+and this is the corresponding rotation matrix. What I’m going to do is to put that result
+
+64
+00:06:17,490 --> 00:06:24,270
+在工作空间变量R中，这里再次旋转矩阵用于旋转
+in to the workspace variable R and here is the rotation matrix again for a rotation of
+
+65
+00:06:24,270 --> 00:06:29,560
+正30度。现在，我们刚才谈到了这个具有数字的旋转矩阵
+positive 30 degrees. Now, we talked a moment ago about this rotation matrix having a number
+
+66
+00:06:29,560 --> 00:06:33,979
+属性，其中一个属性是列是正交的。所以我
+of properties, and one of the properties was that the columns are orthogonal. So, I’m
+
+67
+00:06:33,979 --> 00:06:39,479
+要创建一个代表矩阵第一列的变量，另一个变量
+going to create a variable which represents the first column of a matrix, another variable
+
+68
+00:06:39,479 --> 00:06:44,400
+它对应于矩阵的第二列。而且，如果我看看点积
+which corresponds to the second column of the matrix. And, if I look at the dot product
+
+69
+00:06:44,400 --> 00:06:49,110
+在这两个向量中，我们可以看到它等于0.我们提到的另一个属性
+of those two vectors, we can see that it is equal to 0. Another property that we mentioned
+
+70
+00:06:49,110 --> 00:06:54,490
+是矩阵的行列式等于正1，我们可以很容易地验证
+is that the determinant of the matrix is equal to positive 1 and we can quite easily verify
+
+71
+00:06:54,490 --> 00:06:58,870
+那。我们谈到的另一个属性是矩阵的逆是相同的
+that. Another property we talked about is that the inverse of the matrix is the same
+
+72
+00:06:58,870 --> 00:07:03,660
+作为它的转置。因此，使用MATLAB内置函数计算矩阵的逆矩阵
+as its transpose. So, the inverse of the matrix is computed using the MATLAB built in function
+
+73
+00:07:03,660 --> 00:07:08,770
+inv，并使用引用运算符计算转置，我们可以看到
+inv, and the transpose is computed using the quote operator just like that and we can see
+
+74
+00:07:08,770 --> 00:07:12,629
+很明显，反转等于转置。
+quite clearly that the inverse is equal to the transpose.
+
+75
+00:07:12,629 --> 00:07:18,680
+最后，我们可以将此旋转矩阵可视化为旋转坐标系。要做到这一点，
+Finally, we can visualize this rotation matrix as a rotated coordinate frame. To do that,
+
+76
+00:07:18,680 --> 00:07:23,760
+我使用工具箱函数trplot2。它是二维变换图的缩写。
+I use the Toolbox function, trplot2. It’s a short for transform plot in two dimensions.
+
+77
+00:07:23,760 --> 00:07:28,950
+我传入了我感兴趣的旋转矩阵，并且有一个坐标的表示
+I pass in the rotation matrix that I’m interested in and there is a representation of the coordinate
+
+78
+00:07:28,950 --> 00:07:35,830
+帧。现在，它看起来有点奇怪，因为我需要将轴缩放设置为相等和
+frame. Now, it looks a little bit odd because I need to set the axis scaling to equal and
+
+79
+00:07:35,830 --> 00:07:41,550
+在这里，我们看到一个直角坐标框架显示为蓝色，我们可以看到它
+here we see a right angled coordinate frame shown here in blue and we can see that it
+
+80
+00:07:41,550 --> 00:07:44,669
+相对于世界坐标系旋转。
+is rotated with respect to the world coordinate frame.
+

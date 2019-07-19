@@ -1,0 +1,220 @@
+1
+00:00:03,819 --> 00:00:08,750
+我们之前介绍过高斯核和高斯核非常频繁
+We previously introduced the Gaussian kernel and the Gaussian kernel is very frequently
+
+2
+00:00:08,750 --> 00:00:15,209
+用于图像处理，因为平滑图像的能力降低了图像内部的噪音
+used in image processing because the ability to smooth the image reduces noise within the
+
+3
+00:00:15,209 --> 00:00:16,209
+图片。
+image.
+
+4
+00:00:16,209 --> 00:00:21,280
+特别是如果我们计算图像的导数，噪声可能非常重要。
+And particularly if we are computing the derivative of an image noise can be quite significant.
+
+5
+00:00:21,280 --> 00:00:25,670
+采用导数可以增强图像中的任何噪声，因此这很重要
+Taking a derivative tends to enhance any noise that is within the image, so it is important
+
+6
+00:00:25,670 --> 00:00:31,140
+为了减少噪声，我们可以通过高斯平滑来实现。
+to reduce the noise in advance and we can do that by smoothing with a Gaussian.
+
+7
+00:00:31,140 --> 00:00:36,970
+所以计算图像导数的运算-我们可以表达为导数之间的卷积
+So the operation of computing an image derivative — we can express as a convolution between a derivative
+
+8
+00:00:36,970 --> 00:00:40,200
+内核D和输入图像I.
+kernel D and the input image I.
+
+9
+00:00:40,200 --> 00:00:46,070
+我们将结果表示为∇I;也就是说，我面前的倒三角形：
+And we denote the result as ∇I; that is, the upside down triangle in front of the I:
+
+10
+00:00:46,070 --> 00:00:49,449
+代表图像I的衍生物。
+represents a derivative of the image I.
+
+11
+00:00:49,449 --> 00:00:53,680
+我们希望在将衍生应用到图像之前平滑图像，因此我们代表
+And we want to smooth the image before we apply the derivative to it, so we represent
+
+12
+00:00:53,680 --> 00:00:54,680
+就像这样。
+it like this.
+
+13
+00:00:54,680 --> 00:01:00,461
+我们应用高斯图像;我们将高斯图像标准偏差σ与...进行卷积
+We apply the Gaussian image; we convolve the Gaussian image standard deviation σ with
+
+14
+00:01:00,461 --> 00:01:06,120
+图像I，然后我们将其与衍生内核进行卷积。
+the image I, and then we convolve it with the derivative kernel.
+
+15
+00:01:06,120 --> 00:01:12,670
+使用关联性规则，我们可以重写它，以便我们应用衍生内核
+Using the rules of associativity we can rewrite it so that we apply the derivative kernel
+
+16
+00:01:12,670 --> 00:01:14,290
+高斯。
+to the Gaussian.
+
+17
+00:01:14,290 --> 00:01:18,840
+这两个在一起我们称之为高斯核的导数。
+Those two together we refer to as a derivative of Gaussian kernel.
+
+18
+00:01:18,840 --> 00:01:25,909
+因此，与图像卷积的DoG内核执行平滑和梯度计算
+So convolving DoG kernel with the image performs both smoothing and gradient computation and
+
+19
+00:01:25,909 --> 00:01:30,840
+这就是DoG内核的样子，这是它的分析形式。
+this is what the DoG kernel looks like and this is its analytical form.
+
+20
+00:01:30,840 --> 00:01:37,340
+我们可以使用MATLAB工具箱函数kdgauss计算DoG内核，其中第一个是
+We can compute the DoG kernel using the MATLAB tool box function kdgauss, where the first
+
+21
+00:01:37,340 --> 00:01:42,400
+参数是σ，第二个参数是内核的半宽。
+argument is σ and the second argument is the half width of the kernel.
+
+22
+00:01:42,400 --> 00:01:47,310
+现在有时计算二阶导数是有用的，拉普拉斯算子是一个
+Now sometimes it is useful to compute the second derivative, and the Laplacian is an
+
+23
+00:01:47,310 --> 00:01:49,990
+各向同性二阶导数算子。
+isotropic second derivative operator.
+
+24
+00:01:49,990 --> 00:01:53,951
+它告诉我们渐变的最大值在哪里，它是否是无关紧要的
+It tells us where the gradient has got a maximum value and it doesn’t matter whether it is
+
+25
+00:01:53,951 --> 00:01:56,270
+在U方向或V方向。
+in the U- or V- direction.
+
+26
+00:01:56,270 --> 00:02:01,810
+符号IUU表示U方向的二阶导数。
+The notation IUU indicates the second derivative in the U direction.
+
+27
+00:02:01,810 --> 00:02:06,509
+IVV是V方向的二阶导数。
+IVV is the second derivative in the V direction.
+
+28
+00:02:06,509 --> 00:02:13,880
+我们可以通过将图像与拉普拉斯算子和图像进行卷积来计算二阶导数
+We can compute the second derivative by convolving the image with the Laplacian kernel and the
+
+29
+00:02:13,880 --> 00:02:19,440
+拉普拉斯算子核只是这里所示的对称3乘3矩阵。
+Laplacian kernel is simply a symmetric 3 by 3 matrix shown here.
+
+30
+00:02:19,440 --> 00:02:27,580
+在MATLAB工具箱中，我们可以使用函数klaplace获取此内核的值。
+And in the MATLAB tool box we can obtain a value of this kernel using the function klaplace.
+
+31
+00:02:27,580 --> 00:02:31,190
+计算二阶导数比一阶导数更能提高噪声，
+Computing a secondary derivative is even more noise enhancing then the first derivative,
+
+32
+00:02:31,190 --> 00:02:34,320
+所以我们首先平滑图像更为重要。
+so it is even more important that we smooth the image first.
+
+33
+00:02:34,320 --> 00:02:39,320
+所以我们可以使用与一阶导数相同的技巧，我们在这里写
+So we can pull the same trick that we did with the first derivative, we write here the
+
+34
+00:02:39,320 --> 00:02:43,579
+二阶导数运算作为拉普拉斯算子与输入图像卷积，但是
+secondary derivative operation as the Laplacian kernel convolved with the input image, but
+
+35
+00:02:43,579 --> 00:02:49,299
+如果我们首先用高斯核使用相关性规则来平滑图像，我们
+if we smooth the image first with a Gaussian kernel using the rules of associativity, we
+
+36
+00:02:49,299 --> 00:02:56,350
+可以将其重写为拉普拉斯核与高斯核的卷积，即
+can rewrite this as a convolution of the Laplacian kernel with the Gaussian kernel and that is
+
+37
+00:02:56,350 --> 00:02:58,579
+然后与输入图像卷积。
+then convolved with the input image.
+
+38
+00:02:58,579 --> 00:03:03,820
+拉普拉斯算子和高斯核的卷积被称为拉普拉斯算子
+The convolution of the Laplacian and Gaussian kernels is referred to as the Laplacian of
+
+39
+00:03:03,820 --> 00:03:06,390
+高斯核并在此处显示。
+Gaussian kernel and it is shown here.
+
+40
+00:03:06,390 --> 00:03:10,190
+它的形状通常被称为墨西哥帽子，有时也会被称为墨西哥帽子
+It has a shape that is often referred to as a Mexican hat, sometimes it is referred to
+
+41
+00:03:10,190 --> 00:03:12,050
+即使是墨西哥帽子的功能。
+even as the Mexican hat function.
+
+42
+00:03:12,050 --> 00:03:18,090
+这是一个颠倒的墨西哥帽子;我们可以在这里看到它的分析形式，我们可以计算出来
+It is an upside down Mexican hat; we can see here its analytic form and we can compute
+
+43
+00:03:18,090 --> 00:03:24,699
+这个内核使用工具箱函数klog，其中第一个参数是标准偏差
+this kernel using the tool box function klog, where the first argument is the standard deviation
+
+44
+00:03:24,699 --> 00:03:28,689
+第二个参数是内核的半宽。
+and the second argument is the half width of the kernel.
+

@@ -1,0 +1,225 @@
+1
+00:00:03,500 --> 00:00:08,710
+让我们现在考虑移动机器人末端执行器的重要且非常现实的问题
+Let's now consider the important and very realistic problem of moving a robot end effector
+
+2
+00:00:08,710 --> 00:00:16,020
+从一个姿势到另一个姿势。从A侧到B侧，我们想要顺利地移动它。好吧，我们
+from one pose to another. From side A to side B and we want to move it smoothly. Well we
+
+3
+00:00:16,020 --> 00:00:21,850
+可以确定对应于姿势A的关节角度，我们可以确定关节角度
+can determine the joint angles that correspond to pose A and we can determine the joint angles
+
+4
+00:00:21,850 --> 00:00:27,539
+对应于姿势B，只需应用我们已经存在的逆运动学
+that correspond to pose B, simply by applying the inverse kinematics that we've already
+
+5
+00:00:27,539 --> 00:00:28,300
+研究。
+studied.
+
+6
+00:00:28,300 --> 00:00:32,830
+现在我们已经有了这两组关节角度，初始的关节角度和
+Now that we've got these two sets of joint angles, the initial set of joint angles and
+
+7
+00:00:32,830 --> 00:00:38,190
+最后一组关节角度，我们需要做的就是从一组平稳地移动到一组
+the final set of joint angles, all we need to do is move smoothly from one set to the
+
+8
+00:00:38,190 --> 00:00:45,270
+另外，我们之前已经讨论了如何做到这一点，如何平滑地解释矢量数量。
+other and we've previously discussed how to do this, how to interpret vector quantities smoothly over time.
+
+9
+00:00:45,880 --> 00:00:53,039
+好的，我们回到了MATLAB，首先我要为我的Puma560定义模型
+Okay, we're back in MATLAB and first of all I'm going to define model for my Puma 560
+
+10
+00:00:53,039 --> 00:01:03,000
+机器人。现在我要定义几个姿势，我将指导这个
+robot. And now I'm going to define a couple of poses and I am going to orientate this
+
+11
+00:01:03,000 --> 00:01:09,240
+特别的姿势，使Z轴指向正下方，好像机器人正在工作
+particular pose so that the Z axis is pointing straight down, as if the robot was working
+
+12
+00:01:09,240 --> 00:01:21,560
+在桌子上面。目的地姿势将是这样的，减去0.20而我
+above a table. And the destination pose is going to be like this, minus 0.20 and I'm
+
+13
+00:01:21,560 --> 00:01:31,189
+将它定向为使Z轴平行于XY平面，围绕该平面旋转
+going to orientate it so that the Z axis is parallel to the XY plane, rotated around the
+
+14
+00:01:31,189 --> 00:01:34,409
+X轴由Pi在2上。
+X axis by Pi on 2.
+
+15
+00:01:34,409 --> 00:01:42,470
+现在我可以确定初始姿势ikine6s的关节角度，我将要传入
+Now I can determine the joint angles for the initial pose ikine6s, I'm going to pass in
+
+16
+00:01:42,470 --> 00:01:52,700
+最初的姿势，这是关节角度，最后的姿势，我会做同样的事情
+the initial pose and that's the joint angles and for the final pose I will do the same
+
+17
+00:01:52,700 --> 00:01:59,170
+事情。现在我可以计算出一组从最初的关节角度开始的轨迹
+thing. Now I can compute a trajectory that goes from the initial set of joint angles
+
+18
+00:01:59,170 --> 00:02:03,840
+在50步中最后一组关节角度，在末端放一个半冒号，所以它没有
+to the final set of joint angles in 50 steps, put a semi colon on the end so it doesn't
+
+19
+00:02:03,840 --> 00:02:10,940
+打印，但结果将是一个50乘6矩阵，我们可以看到这里，50行，一行
+print that, but the result will be a 50 by 6 matrix, we can see here, 50 rows, one row
+
+20
+00:02:10,940 --> 00:02:19,230
+每个时间步，每列代表随时间演变的关节角。现在我能
+per time step and each column represents the joint angle evolving over time. Now I can
+
+21
+00:02:19,230 --> 00:02:25,280
+绘制机器人制作特定动作。我可以通过传递轨迹来制作动画
+plot the robot making that particular motion. I can animate it by passing in the trajectory
+
+22
+00:02:25,280 --> 00:02:34,060
+在这里我们看到机器人在做动作;它从左向右移动，工具在旋转。
+and here we see the robot doing the motion; it's moving from left to right and the tool is rotating.
+
+23
+00:02:37,240 --> 00:02:46,180
+如果我开始一个新的数字，我可以绘制关节角度，看看它们是如何随着时间的推移而演变的。
+If I start a new figure I can plot the joint angles and see how they evolved over time.
+
+24
+00:02:46,190 --> 00:02:52,620
+我们可以看到它们在50个时间步长中随时间变化平稳。
+And we can see that they vary smoothly as a function of time over the 50 time steps.
+
+25
+00:02:52,620 --> 00:02:58,640
+现在我们可以看一下关节角度轨迹，我们可以看到关节角度变化
+Now we can look at the joint angle trajectories and we can see that the joint angles vary
+
+26
+00:02:58,640 --> 00:03:03,400
+顺利地沿着轨迹，从必要的关节角度开始实现
+smoothly along the trajectories, starting with the joint angles necessary to achieve
+
+27
+00:03:03,400 --> 00:03:09,610
+姿势A，以实现姿势B和平滑所需的关节角度集合结束
+pose A and ending with the set of joint angles necessary to achieve pose B and this smooth
+
+28
+00:03:09,610 --> 00:03:16,099
+运动发生在两秒钟内。鉴于我每个人都有联合角度
+motion occurs over a period of two seconds. Given that I have the joint angles at every
+
+29
+00:03:16,099 --> 00:03:21,569
+沿着轨迹指向;计算正向运动学相对简单
+point along the trajectory; it's relatively straight forward to compute the forward kinematics
+
+30
+00:03:21,569 --> 00:03:27,769
+对于每组中间关节角度。在这里，我可以绘制最终效应器
+for each of those intermediate sets of joint angles. And here I can plot the end effector
+
+31
+00:03:27,769 --> 00:03:33,659
+笛卡尔位置，它是X，Y和Z坐标作为时间的函数，我们可以
+Cartesian position, that's it's X, Y and Z co-ordinate as a function of time and we can
+
+32
+00:03:33,659 --> 00:03:39,479
+看到这些坐标随着时间的变化而变化很大，这是非常非常可取的。
+see that those co-ordinates vary smoothly as a function of time, which is very, very desirable.
+
+33
+00:03:39,480 --> 00:03:45,959
+但是，如果我在XY平面上绘制路径，我们可以看到它从A开始并转到
+However if I plot the path on the XY plane, we can see that it starts at A and goes to
+
+34
+00:03:45,959 --> 00:03:52,640
+B但它不会在XY平面中以直线移动。当我计算运动学时
+B but it doesn't move in a straight line in the XY plane. When I'm computing the kinematics
+
+35
+00:03:52,640 --> 00:03:58,150
+对于每组中间关节角度，我也可以确定末端执行器方向
+for every set of intermediate joint angles, I can also determine the end effector orientation
+
+36
+00:03:58,150 --> 00:04:02,879
+在这里，我绘制了末端执行器的滚动，俯仰和偏转角度
+and here I've plotted the roll, pitch and yaw angles of the end effector, as it moves
+
+37
+00:04:02,879 --> 00:04:07,450
+从A到B.我们可以看到，在开始时，俯仰和偏航角度为零
+from A to B. We can see that the pitch and yaw angles are zero at the beginning of the
+
+38
+00:04:07,450 --> 00:04:11,260
+轨迹和轨迹的末端，但我们可以在轨迹的中间
+trajectory and at the end of the trajectory, but in the middle of the trajectory we can
+
+39
+00:04:11,260 --> 00:04:16,880
+看到俯仰角不等于零。通过解决这个问题
+see that the pitch angle is not equal to zero. By tackling the problem in this particular
+
+40
+00:04:16,880 --> 00:04:19,080
+形式，我们实际上只应用了两个约束。
+form, we've really only applied two constraints.
+
+41
+00:04:19,080 --> 00:04:22,840
+我们已经说过我们想要在A发生什么以及我们想要在B发生什么，但我们没有
+We've said what we want to happen at A and what we want to happen at B, but we haven't
+
+42
+00:04:22,840 --> 00:04:28,080
+说到两者之间发生的事情。而这种方法的结果就是
+said anything about what happens in between. And the result of this approach is that the
+
+43
+00:04:28,080 --> 00:04:33,070
+末端执行器没有遵循世界上的直线路径和方向
+end effector has not followed a straight line path in the world and the orientation of the
+
+44
+00:04:33,070 --> 00:04:39,210
+末端执行器在轨迹的中点偏离了期望的方向。在里面
+end effector has deviated from the desired orientation in the mid points of the trajectory. In the
+
+45
+00:04:39,210 --> 00:04:41,780
+下一节我们将看看我们可以解决这个问题的方法。
+next section we'll look at a way we can remedy this.
+
